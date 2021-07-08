@@ -51,10 +51,11 @@
   }
   ul {
     display: flex;
-    align-items: flex-start;
-    margin-left: -15px;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     overflow: hidden;
+    flex-wrap: wrap;
 
     li{
       display: inline-block;
@@ -62,16 +63,10 @@
       @include font-sans;
       padding: 5px 10px;
       font-size: 1.2rem;
-      margin-right: 15px;
+      margin: 0 7px;
       a {
         color: #333;
         font-weight: 200;
-      }
-      &::before {
-        content: "•";
-        position: absolute;
-        left: -10px;
-        color: #ccc;
       }
     }
   }
