@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/graphics-svelte-components",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "private": false,
   "homepage": "https://reuters-graphics.github.io/graphics-svelte-components",
