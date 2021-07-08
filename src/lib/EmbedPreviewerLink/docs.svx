@@ -1,0 +1,21 @@
+---
+title: EmbedPreviewerLink
+description: An embed tool for development in graphics-kit.
+slug: embed-previewer-link
+---
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { EmbedPreviewerLink } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<EmbedPreviewerLink />
+```

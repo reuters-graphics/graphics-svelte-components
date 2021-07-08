@@ -1,0 +1,27 @@
+---
+title: Image
+description: A full-width image inside the text well.
+slug: image
+---
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { Image } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<Image
+  src="{'path/to/image.jpg'}"
+  alt="{'Some alt text'}"
+  caption="{'A caption'}"
+  lazy="{true}"
+  wide
+/>
+```

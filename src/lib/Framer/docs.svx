@@ -1,0 +1,21 @@
+---
+title: Framer
+description: An embed tool for development in the graphics kit.
+slug: framer
+---
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { Framer } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<Framer />
+```
