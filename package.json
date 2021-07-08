@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/graphics-svelte-components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "private": false,
   "homepage": "https://reuters-graphics.github.io/graphics-svelte-components",
@@ -10,7 +10,7 @@
     "build": "svelte-kit package && svelte-kit build",
     "postinstall": "husky install",
     "release": "npm run build && npm publish dist",
-    "postversion": "git push origin && git push --tags && npm run release",
+    "postversion": "git push origin && git push origin --tags && npm run release",
     "prepublishOnly": "echo \"Did you mean to run 'yarn release'?\" && exit 1"
   },
   "lint-staged": {
