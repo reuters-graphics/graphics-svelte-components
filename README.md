@@ -41,8 +41,8 @@ slug: my-component
 etc.
 ```
 
-Once you've completed documenting your component, run the build command to build the package and docs:
+Once you've completed documenting your component, commit it and then version the package to release:
 
 ```bash
-yarn release
+npm version patch
 ```
