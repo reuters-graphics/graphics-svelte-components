@@ -1,0 +1,21 @@
+---
+title: Referrals
+description: Add a referrals bar with recent graphics stories.
+slug: referrals
+---
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { Referrals } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<Referrals />
+```

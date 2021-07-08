@@ -1,7 +1,9 @@
 import adapter from '@sveltejs/adapter-static';
 import autoprefixer from 'autoprefixer';
+import componentDocsPlugin from './bin/svelte-kit/plugins/component-docs/index.cjs';
 import dsv from '@rollup/plugin-dsv';
 import fs from 'fs-extra';
+import { mdsvex } from 'mdsvex';
 import svelteKitPagesPlugin from './bin/svelte-kit/plugins/svelte-kit-pages/index.cjs';
 import sveltePreprocess from 'svelte-preprocess';
 import url from 'url';
@@ -19,42 +21,40 @@ const pkg = fs.readJSONSync(new URL('./package.json', import.meta.url));
 process.env.VITE_DATELINE = new Date().toISOString();
 
 export default {
-  preprocess: sveltePreprocess({
-    preserve: ['ld+json'],
-    scss: {
-      includePaths: ['src/', 'node_modules/bootstrap/scss/'],
-      importer: [
-        (url) => {
-          // Redirect tilde-prefixed imports to node_modules
-          if (/^~/.test(url))
-            return { file: `node_modules/${url.replace('~', '')}` };
-          return null;
-        },
-      ],
-    },
-    postcss: {
-      plugins: [autoprefixer],
-    },
-  }),
+  preprocess: [
+    mdsvex(),
+    sveltePreprocess({
+      preserve: ['ld+json'],
+      scss: {
+        includePaths: ['src/', 'node_modules/bootstrap/scss/'],
+        importer: [
+          (url) => {
+            // Redirect tilde-prefixed imports to node_modules
+            if (/^~/.test(url))
+              return { file: `node_modules/${url.replace('~', '')}` };
+            return null;
+          },
+        ],
+      },
+      postcss: {
+        plugins: [autoprefixer],
+      },
+    })
+  ],
+  extensions: ['.svelte', '.svx'],
   kit: {
     appDir: '_app',
     paths: {
       assets:
         process.env.NODE_ENV === 'production'
-          ? getRootRelativePath(
-              process.env.PREVIEW ? pkg.reuters.preview : pkg.homepage
-            ) + '/cdn'
-          : '',
+          ? getRootRelativePath(pkg.homepage) + '/cdn' : '',
       base:
         process.env.NODE_ENV === 'production'
-          ? getRootRelativePath(
-              process.env.PREVIEW ? pkg.reuters.preview : pkg.homepage
-            )
-          : '',
+          ? getRootRelativePath(pkg.homepage) : '',
     },
     adapter: adapter({
-      pages: 'dist',
-      assets: 'dist/cdn',
+      pages: 'docs',
+      assets: 'docs/cdn',
       fallback: null,
     }),
     files: {
@@ -64,8 +64,18 @@ export default {
       template: 'src/template.html',
     },
     target: '#svelte-app',
+    package: {
+      dir: 'dist',
+      exports: {
+				include: ['**'],
+				exclude: ['_*', '**/_*']
+			},
+			files: {
+				include: ['**'],
+				exclude: ['_*', '**/_*', '**/*.svx']
+			}
+    },
     vite: {
-      build: { target: 'es2015' },
       resolve: {
         alias: {
           $utils: '/src/utils',
@@ -79,7 +89,7 @@ export default {
         exclude: ['svelte-fa'],
         include: ['marked', 'lodash-es'],
       },
-      plugins: [dsv(), svelteKitPagesPlugin()],
+      plugins: [dsv(), svelteKitPagesPlugin(), componentDocsPlugin()],
     },
   },
 };

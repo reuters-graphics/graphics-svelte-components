@@ -1,0 +1,21 @@
+---
+title: Sharer
+description: Add share tools to a page.
+slug: sharer
+---
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { Sharer } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<Sharer />
+```

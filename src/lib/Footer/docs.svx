@@ -1,0 +1,21 @@
+---
+title: Footer
+description: Add a bottom footer bar to the page.
+slug: footer
+---
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { Footer } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<Footer />
+```
