@@ -1,9 +1,9 @@
 <script>
 import Fa from 'svelte-fa/src/fa.svelte';
-import { faMinus } from '@fortawesome/free-solid-svg-icons/faMinus.js';
-import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus.js';
-import { faDesktop } from '@fortawesome/free-solid-svg-icons/faDesktop.js';
-import { afterUpdate, onMount } from 'svelte';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faDesktop } from '@fortawesome/free-solid-svg-icons';
+import { onMount } from 'svelte';
 import { browser } from '$app/env';
 import pym from 'pym.js';
 import urljoin from 'proper-url-join';
@@ -28,7 +28,7 @@ const reframe = (embed) => {
     'frame-parent',
     urljoin(window.location.origin, embed)
   );
-}
+};
 
 onMount(() => {
   width = parseInt(localStorage.getItem('previewWidth')) || 600;

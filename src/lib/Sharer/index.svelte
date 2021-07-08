@@ -1,9 +1,9 @@
 <script>
 import classnames from 'classnames';
 import Fa from 'svelte-fa/src/fa.svelte';
-import { faShareAlt } from '@fortawesome/free-solid-svg-icons/faShareAlt.js';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter.js';
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF.js';
+import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import throttle from 'lodash/throttle.js';
 import handleTweet from './utils/twitter';
 import handlePost from './utils/facebook';

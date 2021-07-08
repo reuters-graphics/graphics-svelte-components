@@ -1,6 +1,6 @@
 <script>
 import Fa from 'svelte-fa/src/fa.svelte';
-import { faWindowRestore } from '@fortawesome/free-regular-svg-icons/faWindowRestore.js';
+import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import { dev } from '$app/env';
 </script>
 
