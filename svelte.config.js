@@ -43,7 +43,7 @@ export default {
   ],
   extensions: ['.svelte', '.svx'],
   kit: {
-    appDir: '_app',
+    appDir: 'app',
     paths: {
       assets:
         process.env.NODE_ENV === 'production'
