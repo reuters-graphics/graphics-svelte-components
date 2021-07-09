@@ -2,7 +2,7 @@
   import pkg from '$pkg';
   import { getPath } from '$utils/statics';
   import { page } from '$app/stores';
-  import get from 'lodash/get.js';
+  import { get } from 'lodash-es';
   import imageManifest from '$imgs';
   import urljoin from 'proper-url-join';
   import { browser } from '$app/env';

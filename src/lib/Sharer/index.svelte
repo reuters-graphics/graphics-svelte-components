@@ -4,7 +4,7 @@ import Fa from 'svelte-fa/src/fa.svelte';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import throttle from 'lodash/throttle.js';
+import { throttle } from 'lodash-es';
 import handleTweet from './utils/twitter';
 import handlePost from './utils/facebook';
 import UAParser from 'ua-parser-js';
