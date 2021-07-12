@@ -17,5 +17,10 @@ slug: nav
   import { Nav } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<Nav />
+<Nav
+  link="https://graphics.reuters.com"
+  backgroundColour="#333"
+  lightLogo="{true}"
+  monocolourLogo="{false}"
+/>
 ```
