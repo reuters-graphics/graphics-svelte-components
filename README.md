@@ -4,6 +4,8 @@
 
 Svelte components for graphics pages.
 
+[![npm version](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-svelte-components.svg)](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-svelte-components)
+
 Built with:
 
 <a href="https://kit.svelte.dev/" target="_blank">
