@@ -24,7 +24,9 @@ yarn add @reuters-graphics/graphics-svelte-components
 <Nav />
 ```
 
-[Read the docs](https://reuters-graphics.github.io/graphics-svelte-components/) for details on using all the components included.
+### 📚 [Read the docs...](https://reuters-graphics.github.io/graphics-svelte-components/)
+
+... for details on using all the components included.
 
 ### With SvelteKit/Vite
 
@@ -47,22 +49,22 @@ export default {
 
 If you're using the [graphics kit](https://github.com/reuters-graphics/bluprint_graphics-kit) this config is already included.
 
-## Developing components
+## Adding components
 
 Add your component in a folder one level below `src/lib`, for example:
 
 ```bash
 src/
   lib/
-    MyComponent/
-      index.svelte
+    MyComponent/ 👈
+      index.svelte 👈
 ```
 
 To document your component, add a `docs.svx` file in your component directory:
 
 ```bash
 MyComponent/
-  docs.svx
+  docs.svx 👈
   index.svelte
 ```
 
@@ -82,7 +84,7 @@ slug: my-component
 etc.
 ```
 
-Once you've completed documenting your component, commit it and then version the package to release:
+Once you've completed documenting your component, commit it and then version the package, which will publish the library:
 
 ```bash
 npm version patch
