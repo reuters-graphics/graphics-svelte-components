@@ -1,0 +1,69 @@
+---
+title: Headlne
+description: Titles & bylines & datelines, oh my!
+slug: headline
+---
+
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import Headline from './index.svelte';
+  import { assets } from '$app/paths';
+</script>
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { Headline } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
+</script>
+
+<Headline
+  headline="{'Reuters Graphics Interactive'}"
+  deck="{'The beginning of a beautiful page'}"
+  section="{'Global news'}"
+  sectionColour="{'orange'}"
+>
+  <!-- Use named slots to add a byline... -->
+  <div slot="byline">
+    By <strong><a href="https://...">Peppa Pig</a></strong>
+  </div>
+  <!-- ...and a dateline. -->
+  <div slot="dateline">Published Jan. 1, 2020</div>
+</Headline>
+
+<Headline headline="{'Reuters Graphics Interactive'}">
+  <!-- Add a crown -->
+  <div slot="crown">
+    <img src="{`${assets}/images/crown.png`}" />
+  </div>
+  <div slot="dateline">Published Jan. 1, 2020</div>
+</Headline>
+```
+
+<DemoContainer>
+  <Headline
+    headline={'Reuters Graphics Interactive'}
+    deck={'The beginning of a beautiful page'}
+    section={'Global news'}
+    sectionColour={'orange'}
+  >
+    <div slot="byline">By <strong><a href=".">Peppa Pig</a></strong></div>
+    <div slot="dateline">Published Jan. 1, 2020</div>
+  </Headline>
+
+<hr />
+
+  <Headline headline="{'Reuters Graphics Interactive'}">
+  <div slot="crown">
+    <img src="{`${assets}/images/crown.png`}" />
+  </div>
+  <div slot="dateline">Published Jan. 1, 2020</div>
+</Headline>
+</DemoContainer>
