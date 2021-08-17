@@ -4,6 +4,11 @@ description: A full-width image inside the text well.
 slug: image
 ---
 
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import Image from './index.svelte';
+</script>
+
 <section>
 
 ## {title}
@@ -25,3 +30,13 @@ slug: image
   wide
 />
 ```
+
+<DemoContainer>
+  <Image
+    src="{'images/shark.jpg'}"
+    alt="{'Some alt text'}"
+    caption="{'Duh dum.'}"
+    lazy="{true}"
+    wide
+  />
+</DemoContainer>

@@ -4,6 +4,19 @@ description: End notes section.
 slug: end-notes
 ---
 
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import EndNotes from './index.svelte';
+
+  const markdownText = `### Source
+
+Reuters research.
+
+### Credits
+
+People.`;
+</script>
+
 <section>
 
 ## {title}
@@ -27,3 +40,7 @@ People.`;
 
 <EndNotes text="{markdownText}" />
 ```
+
+<DemoContainer>
+  <EndNotes text="{markdownText}" />
+</DemoContainer>

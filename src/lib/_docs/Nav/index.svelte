@@ -10,6 +10,7 @@
 			</figure>
 		</a>
 	</div>
+	<slot></slot>
 </nav>
 
 <style lang="scss">

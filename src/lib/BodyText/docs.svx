@@ -4,6 +4,17 @@ description: Parse mardown-formatted text.
 slug: body-text
 ---
 
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import BodyText from './index.svelte';
+
+  const markdownText = `Bacon ipsum **dolor amet** cow tongue tri-tip.
+  
+  Biltong turducken ground round kevin [hamburger turkey](https://reuters.com) pig.
+  
+  Venison shoulder *ham hock ham leberkas*. Flank beef ribs fatback, jerky meatball ham hock.`;
+</script>
+
 <section>
 
 ## {title}
@@ -25,3 +36,7 @@ slug: body-text
 
 <BodyText text="{markdownText}" />
 ```
+
+<DemoContainer>
+  <BodyText text="{markdownText}" />
+</DemoContainer>

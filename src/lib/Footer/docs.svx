@@ -4,6 +4,11 @@ description: Add a bottom footer bar to the page.
 slug: footer
 ---
 
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import Footer from './index.svelte';
+</script>
+
 <section>
 
 ## {title}
@@ -19,3 +24,7 @@ slug: footer
 
 <Footer />
 ```
+
+<DemoContainer>
+  <Footer />
+</DemoContainer>

@@ -37,7 +37,11 @@
   hostname="reuters-graphics.github.io"
 />
 
-<Nav />
+<Nav>
+  <div class='breadcrumb font-display'>
+    > <span>{metadata.title}</span>
+  </div>
+</Nav>
 
 <svelte:component this={Docs}>
 </svelte:component>
@@ -48,5 +52,18 @@
   @import '~@reuters-graphics/style-main/scss/fonts/font-faces';
   :global {
     @import '@reuters-graphics/style-theme-eisbaer/scss/main';
+    body {
+      background-color: #eee;
+    }
+  }
+  
+
+  div.breadcrumb {
+    line-height: 43px;
+    padding-left: 10px;
+    font-weight: 200;
+    span{
+      margin-left: 12px;
+    }
   }
 </style>

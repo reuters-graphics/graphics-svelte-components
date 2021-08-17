@@ -4,6 +4,11 @@ description: Add a top-level nav bar to the page.
 slug: nav
 ---
 
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import Nav from './index.svelte';
+</script>
+
 <section>
 
 ## {title}
@@ -24,3 +29,9 @@ slug: nav
   monocolourLogo="{false}"
 />
 ```
+
+<DemoContainer>
+<Nav />
+<Nav lightLogo={false} backgroundColour='#fff' />
+<Nav lightLogo={true} monocolourLogo={true} backgroundColour='purple' />
+</DemoContainer>

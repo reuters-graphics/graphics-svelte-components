@@ -42,6 +42,9 @@
   @import "~@reuters-graphics/style-main/scss/fonts/mixins";
   :global {
     @import '@reuters-graphics/style-theme-eisbaer/scss/main';
+    body {
+      background-color: #eee;
+    }
   }
 
   h1 {
