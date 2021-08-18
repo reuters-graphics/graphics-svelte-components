@@ -102,11 +102,11 @@ slug: hero
   :global {
     section.hero-title {
       figure {
-        margin: 0;
-        width: 100%;
+        margin: 0 !important;
+        width: 100% !important;
       }
       div.title {
-        padding: 0 15px;
+        padding: 0 15px !important;
       }
     }
   }
