@@ -1,6 +1,6 @@
 <script>
-  export let headline = 'Reuters Graphics Interactive';
-  export let deck;
+  export let hed = 'Reuters Graphics Interactive';
+  export let dek;
   export let section;
   export let sectionColour = 'red';
 </script>
@@ -11,9 +11,13 @@
     {#if section}
       <p class={`section-title color-${sectionColour}`}>{section}</p>
     {/if}
-    <h2>{headline}</h2>
-    {#if deck}
-      <p>{deck}</p>
+    {#if $$slots.hed}
+      <slot name="hed"></slot>
+    {:else}
+      <h2>{hed}</h2>
+    {/if}
+    {#if dek}
+      <p>{dek}</p>
     {/if}
   </div>
   {#if ($$slots.byline || $$slots.dateline)}
