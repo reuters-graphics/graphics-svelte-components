@@ -97,13 +97,17 @@ slug: hero
 </Hero>
 </DemoContainer>
 
-<style>
+<style lang="scss">
   /*Fudging some styles for the demo...*/
-  :global(section.hero-title figure){
-    margin: 0;
-    width: 100%;
-  }
-  :global(section.hero-title div.title) {
-    padding: 0 15px;
+  :global {
+    section.hero-title {
+      figure {
+        margin: 0;
+        width: 100%;
+      }
+      div.title {
+        padding: 0 15px;
+      }
+    }
   }
 </style>
