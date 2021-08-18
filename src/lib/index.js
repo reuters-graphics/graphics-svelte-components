@@ -9,3 +9,5 @@ export { default as PymChild } from './PymChild/index.svelte';
 export { default as Referrals } from './Referrals/index.svelte';
 export { default as SEO } from './SEO/index.svelte';
 export { default as Sharer } from './Sharer/index.svelte';
+export { default as Headline } from './Headline/index.svelte';
+export { default as Hero } from './Hero/index.svelte';
