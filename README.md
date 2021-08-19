@@ -62,7 +62,14 @@ src/
       index.svelte 👈
 ```
 
-To document your component, add a `docs.svx` file in your component directory:
+Be sure to export your component from the libraries entry module, `src/lib/index.js`:
+
+```javascript
+// src/lib/index.js
+export { default as MyComponent } from './MyComponent/index.svelte';
+```
+
+To document and demo your component, add a `docs.svx` file in your component directory:
 
 ```bash
 MyComponent/
@@ -70,24 +77,48 @@ MyComponent/
   index.svelte
 ```
 
-Use [Svelte in Markdown](https://mdsvex.com/) syntax to document your component's features in your docs.
+Use [Svelte in Markdown](https://mdsvex.com/) syntax to demo your component and document its features.
 
-**IMPORTANT:** You MUST add some frontmatter data to your docs, including a title, description and slug.
+Note, you **must** add some basic frontmatter data -- a title, description and slug -- to make your demo page discoverable in the demo site.
 
-```markdown
+#### Example
+
+````markdown
 ---
 title: MyComponent
 description: A component that does things.
 slug: my-component
 ---
 
+<script>
+  import { MyComponent } from './index.svelte';
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+</script>
+
 # MyComponent
 
-etc.
+A component that does things.
+
+```svelte
+<script>
+  import { MyComponent } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<MyComponent />
 ```
 
-Once you've completed documenting your component, commit it and then version the package, which will publish the library:
+<DemoContainer>
+  <MyComponent />
+</DemoContainer>
+````
+
+#### Publishing
+
+Once you've completed documenting your component, commit it and then version the package, which will publish the library to npm:
 
 ```bash
+git add .
+git commit -m "my new component added"
+git push origin master
 npm version patch
 ```
