@@ -62,7 +62,7 @@ src/
       index.svelte 👈
 ```
 
-Be sure to export your component from the libraries entry module, `src/lib/index.js`:
+Be sure to export your component from the library's entry module, `src/lib/index.js`:
 
 ```javascript
 // src/lib/index.js
