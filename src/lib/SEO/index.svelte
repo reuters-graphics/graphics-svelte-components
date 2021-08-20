@@ -55,12 +55,12 @@
       '@type': 'WebPage',
       '@id': URL,
     },
-    thumbnailUrl: `https://${hostname}` + getPath(shareImgPath),
+    thumbnailUrl: getPath(shareImgPath),
     image: [
       {
         '@context': 'http://schema.org',
         '@type': 'ImageObject',
-        url: `https://${hostname}` + getPath(shareImgPath),
+        url: getPath(shareImgPath),
         width: get(imageManifest, `${shareImgPath}.width`, 1200),
         height: get(imageManifest, `${shareImgPath}.height`, 600),
       },
@@ -123,7 +123,7 @@
   />
   <meta
     property="og:image"
-    content="{`https://${hostname}` + getPath(shareImgPath)}"
+    content="{getPath(shareImgPath)}"
     itemprop="image"
   />
   <meta property="og:site_name" content="Reuters" />
@@ -136,7 +136,7 @@
   <meta name="twitter:description" content="{shareDescription}" />
   <meta
     name="twitter:image:src"
-    content="{`https://${hostname}` + getPath(shareImgPath)}"
+    content="{getPath(shareImgPath)}"
   />
 
   <meta property="fb:app_id" content="319194411438328" />
