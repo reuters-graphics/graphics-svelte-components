@@ -4,6 +4,7 @@
   import '$lib/_docs/styles/main.scss';
   import { base } from '$app/paths';
   import Cog from '$lib/_docs/Cog/index.svelte';
+  import Menu from '$lib/_docs/Menu/index.svelte';
 
   import components from '@component-docs';
 </script>
@@ -19,6 +20,7 @@
 />
 
 <Nav />
+<Menu {components} />
 
 <article>
   <section>

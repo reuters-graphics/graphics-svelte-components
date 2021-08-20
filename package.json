@@ -44,7 +44,7 @@
     "node": ">= 14.16.0"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@reuters-graphics/style-theme-eisbaer": "^0.3.0",

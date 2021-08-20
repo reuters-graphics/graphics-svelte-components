@@ -12,9 +12,10 @@
 </script>
 
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, afterUpdate } from 'svelte';
   import { SEO } from '$lib';
   import Nav from '$lib/_docs/Nav/index.svelte';
+  import Menu from '$lib/_docs/Menu/index.svelte';
 
   import '$lib/_docs/styles/main.scss';
 
@@ -23,6 +24,9 @@
   let Docs;
 
   onMount(async () => {
+    Docs = (await import(`../../src/lib/${metadata.path}/docs.svx`)).default;
+  })
+  afterUpdate(async () => {
     Docs = (await import(`../../src/lib/${metadata.path}/docs.svx`)).default;
   })
 </script>
@@ -42,6 +46,7 @@
     > <span>{metadata.title}</span>
   </div>
 </Nav>
+<Menu {components} />
 
 <svelte:component this={Docs}>
 </svelte:component>

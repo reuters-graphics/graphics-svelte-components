@@ -122,3 +122,5 @@ git commit -m "my new component added"
 git push origin master
 npm version patch
 ```
+
+(You'll likely want to commit and push again once published to update the docs on GitHub.)
