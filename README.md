@@ -91,7 +91,7 @@ slug: my-component
 ---
 
 <script>
-  import { MyComponent } from './index.svelte';
+  import MyComponent from './index.svelte';
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
 </script>
 
