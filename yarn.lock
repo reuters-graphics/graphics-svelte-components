@@ -452,25 +452,25 @@
   resolved "https://registry.yarnpkg.com/@reuters-graphics/style-color/-/style-color-1.0.0.tgz#35fcf41d1c888b8353a0cb3f274bcdb10eea7d4b"
   integrity sha512-F3b5Rzepia+kWmVDjtKXhqGkp+gcKw8bDLJyn55dq95jJV3CEExNQTvN66CI5QTQnoDmzeXSQv+/vODTGatzJQ==
 
-"@reuters-graphics/style-main@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reuters-graphics/style-main/-/style-main-0.3.0.tgz#97bf6ad8b6ab08bb21afefd96ab505428078208d"
-  integrity sha512-cPzDlzXXYyOT4tzGe7xgdAbcyC1tu/oayo1BV0iTHmSEEBYvEpAnkMd9ACOED/wFFPNwuzywpb4l3bAAEGft6w==
+"@reuters-graphics/style-main@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@reuters-graphics/style-main/-/style-main-0.3.1.tgz#6f0b394650c798418b1ffcfc951d6acb7a56c561"
+  integrity sha512-PMEaDhf/M4t/Rmi0/BiMgbNlVWc0brVkuekTcqrq7LQ9Rb1WvKKfiuAANc6fkEiBCt3Acc9IkNKi9lj+tSsUQA==
   dependencies:
     "@reuters-graphics/style-color" "^1.0.0"
     bootstrap "^4.4.1"
 
-"@reuters-graphics/style-theme-eisbaer@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reuters-graphics/style-theme-eisbaer/-/style-theme-eisbaer-0.3.0.tgz#cfae249e1b4d3d2f7af992f7c492e086c3442ec8"
-  integrity sha512-tTVO9YjRcKGRMjEj5z392hm/dfzPU+FSD5Ixn2AAsJ8k54UGZuX2NpqEj9FlE7oTb+6uv20CZogwG9ZI595VKQ==
+"@reuters-graphics/style-theme-eisbaer@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@reuters-graphics/style-theme-eisbaer/-/style-theme-eisbaer-0.3.4.tgz#b91adf3757132688426068415f2bf8e4735ee2b0"
+  integrity sha512-Ep8AGE9plthHzCFXiF8nlLn4p2TrPQO5iQ7zrffeHIWP6yowHePOXEKPRBN3QOTTUcX4wvGezty3p5Eb5vZJtA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.26"
     "@fortawesome/free-brands-svg-icons" "^5.12.0"
     "@fortawesome/free-solid-svg-icons" "^5.12.0"
     "@fortawesome/react-fontawesome" "^0.1.8"
     "@reuters-graphics/style-color" "^1.0.0"
-    "@reuters-graphics/style-main" "^0.3.0"
+    "@reuters-graphics/style-main" "^0.3.1"
     classnames "*"
     copy-to-clipboard "^3.2.0"
 

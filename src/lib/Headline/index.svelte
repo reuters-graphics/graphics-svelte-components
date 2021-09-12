@@ -41,17 +41,5 @@
 </section>
 
 <style lang="scss">
-  p {
-    margin: 0;
-  }
-  aside.article-metadata {
-    padding: 10px 0;
-    .byline-container {
-      margin-bottom: 0;
-    }
-    .dateline-container {
-      margin-top: 2px;
-    }
-  }
 </style>
 
