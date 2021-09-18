@@ -67,12 +67,12 @@ export default {
     package: {
       dir: 'dist',
       exports: {
-				includes: ['**'],
-				excludes: ['_*', '**/_*']
+				include: ['**'],
+				exclude: ['_docs/**', '**/_*', '**/*.svx']
 			},
 			files: {
-				includes: ['**'],
-				excludes: ['_*', '**/_*', '**/*.svx']
+				include: ['**'],
+				exclude: ['_docs/**', '**/_*', '**/*.svx']
 			}
     },
     vite: {
