@@ -66,6 +66,7 @@ export default {
     target: '#svelte-app',
     package: {
       dir: 'dist',
+      emitTypes: false,
       exports: {
 				include: ['**'],
 				exclude: ['_docs/**', '**/_*', '**/*.svx']
