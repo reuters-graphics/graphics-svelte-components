@@ -20,10 +20,10 @@
   "devDependencies": {
     "@reuters-graphics/eslint-config": "^0.0.2",
     "@reuters-graphics/graphics-bin": "^0.0.17",
-    "@reuters-graphics/graphics-kit-publisher": "^0.0.20",
+    "@reuters-graphics/graphics-kit-publisher": "^0.1.1",
     "@rollup/plugin-dsv": "^2.0.1",
-    "@sveltejs/adapter-static": "1.0.0-next.13",
-    "@sveltejs/kit": "1.0.0-next.120",
+    "@sveltejs/adapter-static": "1.0.0-next.19",
+    "@sveltejs/kit": "1.0.0-next.169",
     "autoprefixer": "^10.2.5",
     "eslint": "^7.24.0",
     "eslint-plugin-svelte3": "^3.2.0",
@@ -33,12 +33,14 @@
     "lint-staged": ">=10",
     "mdsvex": "^0.9.8",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-svelte": "^2.4.0",
     "sass": "^1.0.0",
-    "svelte": "^3.38.3",
-    "svelte-preprocess": "^4.7.3",
-    "vite": "^2.4.1"
+    "svelte": "^3.42.5",
+    "svelte-preprocess": "^4.9.4",
+    "svelte2tsx": "^0.4.6",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.8"
   },
   "engines": {
     "node": ">= 14.16.0"
@@ -47,7 +49,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@reuters-graphics/style-theme-eisbaer": "^0.3.4",
+    "@reuters-graphics/style-theme-eisbaer": "^0.3.5",
     "classnames": "^2.3.1",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",

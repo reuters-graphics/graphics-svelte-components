@@ -23,7 +23,7 @@
       <hr />
       {#each components as component}
         {#if (component.title && component.slug)}
-        <a href="{`${base}/components/${component.slug}/`}" rel="external"><li>{component.title}</li></a>
+        <a href="{`${base}/components/${component.slug}/`}" ><li>{component.title}</li></a>
         {/if}
       {/each}
       

@@ -22,6 +22,7 @@ slug: seo
   seoDescription="{'A description for Google'}"
   shareTitle="{'A title for Twitter/Facebook'}"
   shareDecription="{'A description for Twitter/Facebook'}"
+  shareImgPath="{'images/share.jpg'}"
   lang="{'en'}"
   hostname="{'graphics.reuters.com'}"
 />
