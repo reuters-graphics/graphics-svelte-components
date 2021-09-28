@@ -1,42 +1,40 @@
 ---
-title: BodyText
-description: Parse mardown-formatted text.
-slug: body-text
+title: Ai2svelte
+description: Puts ai2svelte inside <section class='graphic'>. ID specified in google doc must match .ai file name. Can specify well size in google doc using Size: wide/wider/widest/fluid. Title, chatter, source, and note in gogole doc are optional and can be deleted.
+slug: ai2svelte
 ---
 
 <script>
-  import DemoContainer from '../_docs/DemoContainer/index.svelte';
-  import BodyText from './index.svelte';
-
-  const markdownText = `Bacon ipsum **dolor amet** cow tongue tri-tip.
-  
-  Biltong turducken ground round kevin [hamburger turkey](https://reuters.com) pig.
-  
-  Venison shoulder *ham hock ham leberkas*. Flank beef ribs fatback, jerky meatball ham hock.`;
+  import MyComponent from './index.svelte';
+  import Ai2svelte from './index.svelte';
 </script>
-
-<section>
 
 ## {title}
 
 {description}
 
-</section>
-
 ```svelte
 <script>
-  import { BodyText } from '@reuters-graphics/graphics-svelte-components';
-
-  const markdownText = `Bacon ipsum **dolor amet** cow tongue tri-tip.
-  
-  Biltong turducken ground round kevin [hamburger turkey](https://reuters.com) pig.
-  
-  Venison shoulder *ham hock ham leberkas*. Flank beef ribs fatback, jerky meatball ham hock.`;
+  import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<BodyText text="{markdownText}" />
+      <Ai2svelte
+        id="{block.ID}"
+        size="{block.Size}"
+        title="{block.Title ? block.Title : false}"
+        chatter="{block.Chatter ? block.Chatter : false}"
+        source="{block.Source ? block.Source : false}"
+        note="{block.Note ? block.Note : false}"
+      />
 ```
 
 <DemoContainer>
-  <BodyText text="{markdownText}" />
+      <Ai2svelte
+        id="{block.ID}"
+        size="{block.Size}"
+        title="{block.Title ? block.Title : false}"
+        chatter="{block.Chatter ? block.Chatter : false}"
+        source="{block.Source ? block.Source : false}"
+        note="{block.Note ? block.Note : false}"
+      />
 </DemoContainer>
