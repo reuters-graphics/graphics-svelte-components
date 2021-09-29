@@ -1,0 +1,54 @@
+---
+title: Ai2svelte
+description: Puts ai2svelte inside a graphic section. This is powered by archieML. All you need to do is add the necessary block to your google doc and the ai2svelte will show up.
+slug: ai2svelte
+---
+
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import Ai2svelte from './index.svelte';
+</script>
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+
+    import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+
+</script>
+
+      <Ai2svelte path="./ai2html/ai-chart.svelte" id="ai-map" size="normal">
+        <!-- If you don't need title or notes, you can delete the lines below -->
+        <div slot="title" class="title">
+          <h4>Title</h4>
+          <p>Chatter</p>
+        </div>
+        <aside slot="notes">
+          <p class="note">Note: Note</p>
+          <p class="source">Source: Source</p>
+        </aside>
+      </Ai2svelte>
+
+```
+
+<DemoContainer>
+      <Ai2svelte path="./ai2html/_ai-chart.svelte" id="ai-map" size="normal">
+        <!-- If you don't need title or notes, you can delete the lines below -->
+        <div slot="title" class="title">
+          <h4>Optional title</h4>
+          <p>Optional description for your graphic</p>
+        </div>
+        <aside slot="notes">
+          <p class="note">Note: Note</p>
+          <p class="source">Source: Source</p>
+        </aside>
+      </Ai2svelte>
+
+</DemoContainer>

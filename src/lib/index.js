@@ -11,3 +11,4 @@ export { default as SEO } from './SEO/index.svelte';
 export { default as Sharer } from './Sharer/index.svelte';
 export { default as Headline } from './Headline/index.svelte';
 export { default as Hero } from './Hero/index.svelte';
+export { default as Ai2svelte } from './Ai2svelte/index.svelte';
