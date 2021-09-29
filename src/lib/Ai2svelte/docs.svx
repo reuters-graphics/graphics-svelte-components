@@ -1,6 +1,6 @@
 ---
 title: Ai2svelte
-description: Ai2html inside a graphics section
+description: A shortcut for ai2svelte graphics, especially from Google docs.
 slug: ai2svelte
 ---
 
@@ -13,32 +13,97 @@ slug: ai2svelte
 
 ## {title}
 
-Puts ai2svelte inside a graphic section with options to add chart chatter.
+A shortcut for ai2svelte graphics, especially from Google docs.
 
-The props can be passed from an archieML-formatted Google doc. If you're using the graphics kit, this component is already wired in so all you need to do is add the necessary block to your doc and the ai2svelte will show up.
+At minimum, you can pass the component created by [ai2svelte](https://github.com/reuters-graphics/ai2svelte) to this component, which will wrap it in a graphics section tag.
 
 </section>
 
 ```svelte
 <script>
   import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
-
-  import AIchart from './ai2html/ai-chart.svelte';
 </script>
 
-<!-- 
-  Pass in a component filename (w/out the ".svelte" extension)
-  found in your ai2html/ folder... 
--->
-<Ai2svelte componentName="ai-chart" />
-
-<!-- ... or pass in the component directly. -->
 <Ai2svelte component="{AIchart}" />
 ```
 
 <DemoContainer>
   <Ai2svelte componentName="ai-chart.exclude" />
 </DemoContainer>
+
+<section>
+
+But this component is _especially_ useful because it allows you to pass a componentName prop from an [ArchieML](http://archieml.org/)-formatted Google doc, meaning you can layout ai2svelte graphics directly from your doc like this:
+
+</section>
+
+```bash
+# In your Google doc...
+[blocks]
+
+# ...
+Type: ai2svelte
+ComponentName: my-chart
+
+[]
+```
+
+```svelte
+<!-- src/lib/Page.svelte -->
+<script>
+  import content from '$locales/en/content.json';
+  import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+{#each content.blocks as block}
+  <!-- ai2svelte block -->
+  {#if block.Type === 'ai2svelte'}
+    <Ai2svelte componentName="{block.ComponentName}" />
+  {/if}
+{/each}
+```
+
+<section>
+
+This comes with some restrictions, though.
+
+First, you can only use the componentName prop if the component you're writing in is directly next to the ai2html/ folder where ai2svelte outputs your graphic components.
+
+For example, in the Page.svelte component below:
+
+</section>
+
+```bash
+src/
+  lib/
+    ai2html/
+      my-chart.svelte
+    Page.svelte # 👈 Your component must be at the same level as the ai2html folder
+```
+
+<section>
+
+Second, you should pass the name of the component file **without** the file extension ".svelte" to componentName.
+
+</section>
+
+```svelte
+<script>
+  import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<!-- 
+  Pass in a component filename (w/out the ".svelte" extension)
+  found in your ai2html/ folder... 
+-->
+<Ai2svelte componentName="my-chart" />
+```
+
+<section>
+
+You can also add additional chart chatter through slots.
+
+</section>
 
 ```svelte
 <script>
@@ -57,6 +122,13 @@ The props can be passed from an archieML-formatted Google doc. If you're using t
     <p class="source">Source: USGIS</p>
   </aside>
 </Ai2svelte>
+
+<style lang="scss">
+  // You can now style those elements!
+  h4 {
+    color: darkred;
+  }
+</style>
 ```
 
 <DemoContainer>
@@ -72,3 +144,9 @@ The props can be passed from an archieML-formatted Google doc. If you're using t
     </aside>
   </Ai2svelte>
 </DemoContainer>
+
+<style>
+  div.title h4 {
+    color: darkred;
+  }
+</style>
