@@ -55,10 +55,15 @@
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
   @import '~@reuters-graphics/style-main/scss/fonts/font-faces';
+  @import "~@reuters-graphics/style-main/scss/fonts/mixins";
   :global {
     @import '@reuters-graphics/style-theme-eisbaer/scss/main';
     body {
       background-color: #eee;
+    }
+    p {
+      @include font-sans;
+      font-weight: 200;
     }
   }
   

@@ -10,6 +10,16 @@
   let open = false;
 </script>
 
+{#if open}
+<div
+  id='overlay'
+  on:click={() => { open = false; }}
+>
+
+</div>
+   <!-- content here -->
+{/if}
+
 <nav class:open={open}>
   <div class='nav-container'>
     <button
@@ -33,8 +43,17 @@
 
 <style lang="scss">
 @import "~@reuters-graphics/style-main/scss/fonts/mixins";
+
+div#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 nav {
-  background-color: #ddd;
+  background-color: #333;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   position: fixed;
   top: 0px;
@@ -48,8 +67,8 @@ nav {
       button {
         transform: rotate(90deg);
         
-        right: -26px;
-        color: #bbb;
+        right: -25px;
+        color: #999;
         &:hover {
           right: -40px;
         }
@@ -66,7 +85,7 @@ nav {
       transform: rotate(0deg);
       transition: all 0.5s;
       position: absolute;
-      right: -30px;
+      right: -28px;
       top: 59px;
       font-size: 3rem;
       border: 0px;
@@ -79,10 +98,10 @@ nav {
       vertical-align: middle;
       border-radius: 50%;
       background: transparent;
-      color: #dfdfdf;
+      color: #ccc;
       &:hover {
         right: -50px;
-        color: #bbb;
+        color: #999;
       }
     }
   }
@@ -95,10 +114,13 @@ nav {
     letter-spacing: 1px;
     font-weight: 200;
     a {
-        color: #666;
+        color: #ccc;
         text-decoration: none !important;
       }
-
+    
+    hr {
+      border-top: 1px solid #999;
+    }
     li {
       
       transition: all 0.4s;

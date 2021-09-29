@@ -1,6 +1,6 @@
 ---
 title: Ai2svelte
-description: Puts ai2svelte inside a graphic section. This is powered by archieML. All you need to do is add the necessary block to your google doc and the ai2svelte will show up.
+description: Ai2html inside a graphics section
 slug: ai2svelte
 ---
 
@@ -13,42 +13,52 @@ slug: ai2svelte
 
 ## {title}
 
-{description}
+Puts ai2svelte inside a graphic section with options to add chart chatter.
+
+The props can be passed from an archieML-formatted Google doc. If you're using the graphics kit, this component is already wired in so all you need to do is add the necessary block to your doc and the ai2svelte will show up.
 
 </section>
 
 ```svelte
 <script>
-
-    import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
-
+  import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-      <Ai2svelte path="./ai2html/ai-chart.svelte" id="ai-map" size="normal">
-        <!-- If you don't need title or notes, you can delete the lines below -->
-        <div slot="title" class="title">
-          <h4>Title</h4>
-          <p>Chatter</p>
-        </div>
-        <aside slot="notes">
-          <p class="note">Note: Note</p>
-          <p class="source">Source: Source</p>
-        </aside>
-      </Ai2svelte>
-
+<Ai2svelte path="./ai2html/ai-chart.svelte" size="normal" />
 ```
 
 <DemoContainer>
-      <Ai2svelte path="./ai2html/_ai-chart.svelte" id="ai-map" size="normal">
-        <!-- If you don't need title or notes, you can delete the lines below -->
-        <div slot="title" class="title">
-          <h4>Optional title</h4>
-          <p>Optional description for your graphic</p>
-        </div>
-        <aside slot="notes">
-          <p class="note">Note: Note</p>
-          <p class="source">Source: Source</p>
-        </aside>
-      </Ai2svelte>
+  <Ai2svelte path="./ai2html/_ai-chart.svelte" size="normal" />
+</DemoContainer>
 
+```svelte
+<script>
+  import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<Ai2svelte path="./ai2html/ai-chart.svelte" id="ai-map" size="wide">
+  <!-- Add a title and/or notes with slots -->
+  <div slot="title" class="title">
+    <h4>Earthquake in Haiti</h4>
+    <p>A 7.0 magnitude earthquake struck the island on Tuesday.</p>
+  </div>
+  <aside slot="notes">
+    <p class="note">Note: Data current as of Wednesday.</p>
+    <p class="source">Source: USGIS</p>
+  </aside>
+</Ai2svelte>
+```
+
+<DemoContainer>
+  <Ai2svelte path="./ai2html/_ai-chart.svelte" id="ai-map" size="wide">
+    <!-- Add a title and/or notes with slots -->
+    <div slot="title" class="title">
+      <h4>Earthquake in Haiti</h4>
+      <p>A 7.0 magnitude earthquake struck the island on Tuesday.</p>
+    </div>
+    <aside slot="notes">
+      <p class="note">Note: Data current as of Wednesday.</p>
+      <p class="source">Source: USGIS</p>
+    </aside>
+  </Ai2svelte>
 </DemoContainer>

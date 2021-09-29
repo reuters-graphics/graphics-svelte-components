@@ -47,6 +47,10 @@
     body {
       background-color: #eee;
     }
+    p {
+      @include font-sans;
+      font-weight: 200;
+    }
   }
 
   h1 {
