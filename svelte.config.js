@@ -69,11 +69,11 @@ export default {
       emitTypes: false,
       exports: {
 				include: ['**'],
-				exclude: ['_docs/**', '**/_*', '**/*.svx']
+				exclude: ['_docs/**', '**/_*', '**/*.svx', '**/*.exclude.svelte']
 			},
 			files: {
 				include: ['**'],
-				exclude: ['_docs/**', '**/_*', '**/*.svx']
+				exclude: ['_docs/**', '**/_*', '**/*.svx', '**/*.exclude.svelte']
 			}
     },
     vite: {
