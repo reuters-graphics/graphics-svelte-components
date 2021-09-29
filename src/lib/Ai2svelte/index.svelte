@@ -9,7 +9,7 @@
 
   onMount(async () => {
     try {
-      Ai2svelteGraphic = (await import('./ai2html/ai-chart.exclude.svelte')).default;
+      Ai2svelteGraphic = (await import(`./ai2html/${path}.exclude.svelte`)).default;
     } catch (e) {
       console.log(`Unable to load ai2svelte component at: ${path}.`, e);
     }
