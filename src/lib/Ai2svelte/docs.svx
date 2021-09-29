@@ -28,7 +28,7 @@ The props can be passed from an archieML-formatted Google doc. If you're using t
 ```
 
 <DemoContainer>
-  <Ai2svelte path="_ai-chart" size="normal" />
+  <Ai2svelte path="_ai-charty" size="normal" />
 </DemoContainer>
 
 ```svelte
@@ -50,7 +50,7 @@ The props can be passed from an archieML-formatted Google doc. If you're using t
 ```
 
 <DemoContainer>
-  <Ai2svelte path="_ai-chart" id="ai-map" size="wide">
+  <Ai2svelte path="_ai-charty" id="ai-map" size="wide">
     <!-- Add a title and/or notes with slots -->
     <div slot="title" class="title">
       <h4>Earthquake in Haiti</h4>
