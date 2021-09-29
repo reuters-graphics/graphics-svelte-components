@@ -1,5 +1,5 @@
 <script>
-  const assets = '';
+  import { assets } from '$app/paths';
   let width = null;
 </script>
 
@@ -14,7 +14,7 @@
         id="g-_ai-chart-xs-img"
         class="g-aiImg"
         alt=""
-        style="background-image: url(/images/graphics/_ai-chart-xs.png);"
+        style={`background-image: url(${assets}/images/graphics/_ai-chart-xs.png);`}
       ></div>
       <div
         id="g-ai0-1"
@@ -147,7 +147,7 @@
         id="g-_ai-chart-sm-img"
         class="g-aiImg"
         alt=""
-        style="background-image: url(/images/graphics/_ai-chart-sm.png);"
+        style={`background-image: url(${assets}/images/graphics/_ai-chart-sm.png);`}
       ></div>
       <div
         id="g-ai1-1"
@@ -280,7 +280,7 @@
         id="g-_ai-chart-md-img"
         class="g-aiImg"
         alt=""
-        style="background-image: url(/images/graphics/_ai-chart-md.png);"
+        style={`background-image: url(${assets}/images/graphics/_ai-chart-md.png);`}
       ></div>
       <div
         id="g-ai2-1"

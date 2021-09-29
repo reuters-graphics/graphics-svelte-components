@@ -1,17 +1,20 @@
 <script>
   import { onMount } from 'svelte';
 
-  export let path;
+  export let componentName;
+  export let component = null;
   export let id;
   export let size;
 
-  let Ai2svelteGraphic = null;
+  let Ai2svelteGraphic = component;
 
   onMount(async () => {
+    // Allow passing the component directly as a prop
+    if (Ai2svelteGraphic) return;
     try {
-      Ai2svelteGraphic = (await import(`./ai2html/${path}.svelte`)).default;
+      Ai2svelteGraphic = (await import(`./ai2html/${componentName}.svelte`)).default;
     } catch (e) {
-      console.log(`Unable to load ai2svelte component at: ${path}.`, e);
+      console.log(`Unable to load ai2svelte component at: ai2html/${componentName}.svelte.`, e);
     }
   });
 </script>

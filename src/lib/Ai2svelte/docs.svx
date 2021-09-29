@@ -22,13 +22,22 @@ The props can be passed from an archieML-formatted Google doc. If you're using t
 ```svelte
 <script>
   import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+
+  import AIchart from './ai2html/ai-chart.svelte';
 </script>
 
-<Ai2svelte path="./ai2html/ai-chart.svelte" size="normal" />
+<!-- 
+  Pass in a component filename (w/out the ".svelte" extension)
+  found in your ai2html/ folder... 
+-->
+<Ai2svelte componentName="ai-chart" />
+
+<!-- ... or pass in the component directly. -->
+<Ai2svelte component="{AIchart}" />
 ```
 
 <DemoContainer>
-  <Ai2svelte path="ai-chart.exclude" size="normal" />
+  <Ai2svelte componentName="ai-chart.exclude" />
 </DemoContainer>
 
 ```svelte
@@ -36,7 +45,8 @@ The props can be passed from an archieML-formatted Google doc. If you're using t
   import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<Ai2svelte path="./ai2html/ai-chart.svelte" id="ai-map" size="wide">
+<!-- Add an ID and change the default width of your graphic -->
+<Ai2svelte componentName="ai-chart" id="ai-map" size="wide">
   <!-- Add a title and/or notes with slots -->
   <div slot="title" class="title">
     <h4>Earthquake in Haiti</h4>
@@ -50,7 +60,7 @@ The props can be passed from an archieML-formatted Google doc. If you're using t
 ```
 
 <DemoContainer>
-  <Ai2svelte path="ai-chart.exclude" id="ai-map" size="wide">
+  <Ai2svelte componentName="ai-chart.exclude" id="ai-map" size="wide">
     <!-- Add a title and/or notes with slots -->
     <div slot="title" class="title">
       <h4>Earthquake in Haiti</h4>
