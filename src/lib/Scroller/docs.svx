@@ -323,7 +323,7 @@ This pattern comes with some restrictions, though. Be sure your `fetchComponent`
 
 </section>
 
-<DemoContainer>
+<DemoContainer fluid={true}>
   {#await makeSteps(ai2svelteSteps) then steps}
     <Scroller
       steps={steps}
