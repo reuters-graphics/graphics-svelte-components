@@ -209,11 +209,13 @@ Add an ID to your scroller and use SCSS `:global` rules to override any styles.
 ```svelte
 <Scroller steps="{steps}" backgroundSize="widest" id="my-scroller" />
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
   // 👇 Go global!
   :global {
     #my-scroller {
-      .scroller-step-foreground {
+      .step-foreground {
+        max-width: 400px;
         background-color: #333;
         h4,
         p {
@@ -288,10 +290,9 @@ Lorem ipsum...
     const scrollerSteps = [];
     for (const step of steps) {
       const background = await fetchComponent(step.Background);
-      const backgroundProps = { assets };
       scrollerSteps.push({
         background,
-        backgroundProps,
+        backgroundProps: { assets },
         foreground: step.Foreground,
       });
     }
@@ -339,7 +340,8 @@ This pattern comes with some restrictions, though. Be sure your `fetchComponent`
       margin-bottom: 2px;
     }
     #scroller-example-4 {
-      .scroller-step-foreground{
+      .step-foreground{
+        max-width: 400px;
         background-color: #333;
         h4, p {
           color: white;
