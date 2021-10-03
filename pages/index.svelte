@@ -26,6 +26,10 @@
   <section>
     <h1><Cog/> Components</h1>
 
+    <pre>
+      <code>yarn add @reuters-graphics/graphics-svelte-components</code>
+    </pre>
+
     <ul>
       {#each components as component}
         {#if (component.title && component.slug)}
@@ -34,6 +38,7 @@
       {/each}
     </ul>
   </section>
+  
   
 </article>
 
@@ -58,6 +63,16 @@
     font-weight: 200;
     text-transform: uppercase;
   }
+  pre {
+    background-color: #fff;
+    padding: 1em 1.5em;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    color: #666;
+  }
+
   ul {
     display: flex;
     align-items: center;
