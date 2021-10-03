@@ -8,7 +8,7 @@
 Svelte components for graphics pages.
 
 
-### [⚙️ See the components.](https://reuters-graphics.github.io/graphics-svelte-components/)
+### ➡️ [Components demos & docs site](https://reuters-graphics.github.io/graphics-svelte-components/)
 
 
 
@@ -58,7 +58,7 @@ export default {
 
 If you're using the [graphics kit](https://github.com/reuters-graphics/bluprint_graphics-kit) this config is already included.
 
-## Adding components
+## Developing new components
 
 Add your component in a folder one level below `src/lib`, for example:
 
@@ -129,5 +129,3 @@ git commit -m "my new component added"
 git push origin master
 npm version patch
 ```
-
-(You'll likely want to commit and push again once published to update the docs on GitHub.)
