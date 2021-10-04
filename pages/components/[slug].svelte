@@ -61,9 +61,20 @@
     body {
       background-color: #eee;
     }
-    p {
+    p, ul > li, ol > li {
       @include font-sans;
       font-weight: 200;
+    }
+    li {
+      font-size: 1rem;
+    }
+
+    p > code, li > code {
+      background: #ccc;
+      padding: 1px 4px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      font-size: 1rem;
     }
   }
   

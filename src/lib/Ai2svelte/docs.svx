@@ -1,117 +1,73 @@
 ---
 title: Ai2svelte
-description: A shortcut for ai2svelte graphics, especially from Google docs.
+description: A shortcut for ai2svelte graphics.
 slug: ai2svelte
 ---
 
 <script>
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
   import Ai2svelte from './index.svelte';
+  import AiChart from './ai2html/ai-chart.exclude.svelte';
+
+  const fetchComponent = async(componentName) => {
+    return (await import(`./ai2html/${componentName}.exclude.svelte`)).default
+  };
 </script>
 
 <section>
 
 ## {title}
 
-A shortcut for ai2svelte graphics, especially from Google docs.
-
-At minimum, you can pass the component created by [ai2svelte](https://github.com/reuters-graphics/ai2svelte) to this component, which will wrap it in a graphics section tag.
+Pass a component created by [ai2svelte](https://github.com/reuters-graphics/ai2svelte) to this component, which will wrap it in a graphics section tag.
 
 </section>
 
 ```svelte
 <script>
   import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+  import MyAiChart from './some-chart.svelte';
 </script>
 
-<Ai2svelte component="{AIchart}" />
+<Ai2svelte AiGraphic="{MyAiChart}" />
 ```
 
 <DemoContainer>
-  <Ai2svelte componentName="ai-chart.exclude" />
+  <Ai2svelte AiGraphic={AiChart} />
 </DemoContainer>
 
 <section>
 
-But this component is _especially_ useful because it allows you to pass a componentName prop from an [ArchieML](http://archieml.org/)-formatted Google doc, meaning you can layout ai2svelte graphics directly from your doc like this:
+Adjust the size of the graphic by passing a class name corresponding to one of our well widths: `wide`, `wider`, `widest` or `fluid`.
 
 </section>
 
-```bash
-# In your Google doc...
-[blocks]
-
-# ...
-Type: ai2svelte
-ComponentName: my-chart
-
-[]
-```
-
 ```svelte
-<!-- src/lib/Page.svelte -->
 <script>
-  import content from '$locales/en/content.json';
   import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+  import MyAiChart from './some-chart.svelte';
 </script>
 
-{#each content.blocks as block}
-  <!-- ai2svelte block -->
-  {#if block.Type === 'ai2svelte'}
-    <Ai2svelte componentName="{block.ComponentName}" />
-  {/if}
-{/each}
+<Ai2svelte AiGraphic="{MyAiChart}" size="wide" />
 ```
+
+<DemoContainer>
+  <Ai2svelte AiGraphic={AiChart} size='wide' />
+</DemoContainer>
 
 <section>
 
-This comes with some restrictions, though.
-
-First, you can only use the componentName prop if the component you're writing in is directly next to the ai2html/ folder where ai2svelte outputs your graphic components.
-
-For example, in the Page.svelte component below:
-
-</section>
-
-```bash
-src/
-  lib/
-    ai2html/
-      my-chart.svelte
-    Page.svelte # 👈 Your component must be at the same level as the ai2html folder
-```
-
-<section>
-
-Second, you should pass the name of the component file **without** the file extension ".svelte" to componentName.
+Add additional chart chatter through slots.
 
 </section>
 
 ```svelte
 <script>
   import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
-</script>
-
-<!-- 
-  Pass in a component filename (w/out the ".svelte" extension)
-  found in your ai2html/ folder... 
--->
-<Ai2svelte componentName="my-chart" />
-```
-
-<section>
-
-You can also add additional chart chatter through slots.
-
-</section>
-
-```svelte
-<script>
-  import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+  import MyAiChart from './some-chart.svelte';
 </script>
 
 <!-- Add an ID and change the default width of your graphic -->
-<Ai2svelte componentName="ai-chart" id="ai-map" size="wide">
+<Ai2svelte AiGraphic="{MyAiChart}" id="ai-map">
   <!-- Add a title and/or notes with slots -->
   <div slot="title" class="title">
     <h4>Earthquake in Haiti</h4>
@@ -132,7 +88,7 @@ You can also add additional chart chatter through slots.
 ```
 
 <DemoContainer>
-  <Ai2svelte componentName="ai-chart.exclude" id="ai-map" size="wide">
+  <Ai2svelte AiGraphic="{AiChart}" id="ai-map">
     <!-- Add a title and/or notes with slots -->
     <div slot="title" class="title">
       <h4>Earthquake in Haiti</h4>
@@ -150,3 +106,59 @@ You can also add additional chart chatter through slots.
     color: darkred;
   }
 </style>
+
+<section>
+
+You can use this component to layout AI graphics via an [ArchieML](http://archieml.org/)-formatted Google doc by using the following pattern to dynamically import an ai2svelte component:
+
+</section>
+
+```bash
+# In your Google doc...
+[blocks]
+
+# ...
+Type: ai2svelte
+ComponentName: my-chart
+
+[]
+```
+
+```svelte
+<!-- src/lib/Page.svelte -->
+<script>
+  import content from '$locales/en/content.json';
+  import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
+
+  const fetchComponent = async (componentName) => {
+    return (await import(`./ai2html/${componentName}.svelte`)).default;
+  };
+</script>
+
+{#each content.blocks as block}
+  {#if block.Type === 'ai2svelte'}
+    {#await fetchComponent(block.ComponentName)}
+      <div></div>
+    {:then component}
+      <Ai2svelte AiGraphic="{component}" />
+    {:catch error}
+      {console.error(
+        `Error fetching component: ./ai2html/${block.ComponentName}.svelte`,
+        error
+      )}
+    {/await}
+  {/if}
+{/each}
+```
+
+<section>
+
+This comes with some restrictions, though. Be sure your `fetchComponent` function follows [the limits on dynamic imports](https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations).
+
+</section>
+
+<DemoContainer>
+  {#await fetchComponent('ai-chart') then component}
+    <Ai2svelte AiGraphic="{component}" />
+  {/await}
+</DemoContainer>

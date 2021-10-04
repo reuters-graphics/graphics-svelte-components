@@ -1,0 +1,114 @@
+---
+title: LottieScroller
+description: Easy scrolly-telling with lottie
+slug: lottie-scroller
+---
+
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import LottieScroller from './index.svelte';
+  const blurbs = [
+      {
+          "seconds": ".1",
+          "text": "#### Step 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
+          },
+          
+          {
+          "seconds": ".6",
+          "text": "#### Step 2\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+          "seconds": "1",
+          "text": "#### Step 3\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+            {
+          "seconds": "1.5",
+          "text": "#### Step 4\n\nThe lottie animation continues until it's finished even if you don't have blurbs."
+      }
+  ]
+
+</script>
+
+<section>
+
+## {title}
+
+Easy scrolly-telling with lottie, based on [Bodymovin](https://aescripts.com/bodymovin/) and [lotite-web](https://www.npmjs.com/package/lottie-web) and powered by [an ArchieML](http://archieml.org/)-formatted Google doc.
+
+
+
+`props` _for the lottie scroller component, all pulled from your google doc_
+
+- `id` Your lottie filename w/out the ".json" extension
+ **REQUIRED**
+- `blurbs` An array of objects with blurbs and seconds, which controls when the blurbs appear. Blurbs are optional and can be deleted. 
+- If using `blurbs`, use `seconds` to specify when each blurb appears. `seconds` correspond to seconds in your After Effects file.
+- `playbackConst` Controls the length of animation (specifically, it controls the height of the div that wraps around the lottie canvas)
+- `withRatio` Must match the aspect ratio of your AE artboard. 1.78 by default.
+- `fullFrame` Set to true if you always want your graphic to be full width
+- `includeSmall`  Set to true if you have mobile versions. Mobile versions must be named with a '_sm' suffix. I.e. 'yourID_sm.json'
+- `smallWidthRatio`  With ratio of your mobile version. Square (withRatio: 1) is recommended and is the default.
+
+Only `id` is required. All other props are optional and can be deleted from the Google doc, which should be laid out like this:
+
+```bash
+# In your Google doc...
+[blocks]
+
+# ...
+Type: lottie-scroller
+ID: my-lotite-scroller
+PlaybackConst: 75 // optional
+WithRatio:1.78  // optional
+FullFrame: false  // optional
+IncludeSmall: false  // optional
+SmallWidthRatio: 1  // optional
+[.blurbs] // optional
+seconds: .5
+text: \#\#\#\# Step 1
+
+Lorem ipsum...
+:end
+
+seconds: 1
+text: \#\#\#\# Step 2
+
+Lorem ipsum...
+:end
+
+seconds: 1.5
+text: \#\#\#\# Step 3
+
+Lorem ipsum...
+:end
+
+[]
+
+[]
+```
+
+
+
+  
+</section>
+
+```svelte
+<script>
+  import { LottieScroller } from '@reuters-graphics/graphics-svelte-components';
+
+</script>
+
+<LottieScroller id='liberia' blurbs= {blurbs}  />
+```
+
+<DemoContainer>
+  <LottieScroller id='liberia' blurbs = {blurbs} />
+</DemoContainer>
+
+<style lang="scss">
+  :global {
+    li {
+      margin-bottom: 2px;
+    }
+  }
+</style>
