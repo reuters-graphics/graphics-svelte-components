@@ -120,7 +120,8 @@
     margin-bottom: 0;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    margin-left: 0;
     align-items: center;
     position: relative;
   }
@@ -134,7 +135,7 @@
     width: 100%;
   }
   div.foreground.right {
-    width: 50%;
+    width: 100%;
     float: right;
   }
   @media (max-width: 1200px) {
@@ -144,7 +145,7 @@
     }
   }
   div.foreground.left {
-    width: 50%;
+    width: 100%;
     float: left;
   }
   @media (max-width: 1200px) {
