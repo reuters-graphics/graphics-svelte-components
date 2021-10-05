@@ -88,24 +88,22 @@
     justify-content: center;
   }
   div.background.left {
-    width: 50%;
+    width: 100%;
     float: left;
   }
   @media (max-width: 1200px) {
     div.background.left {
       justify-content: center;
-      width: 100%;
       float: initial;
     }
   }
   div.background.right {
-    width: 50%;
+    width: 100%;
     float: right;
   }
   @media (max-width: 1200px) {
     div.background.right {
       justify-content: center;
-      width: 100%;
       float: initial;
     }
   }
@@ -135,7 +133,7 @@
     width: 100%;
   }
   div.foreground.right {
-    width: 100%;
+    width: 50%;
     float: right;
   }
   @media (max-width: 1200px) {
@@ -145,7 +143,7 @@
     }
   }
   div.foreground.left {
-    width: 100%;
+    width: 50%;
     float: left;
   }
   @media (max-width: 1200px) {
