@@ -80,6 +80,7 @@
     margin-bottom: 5rem;
   }
 
+  // Background
   div.background {
     min-height: 100vh;
     position: relative;
@@ -87,26 +88,7 @@
     display: flex;
     justify-content: center;
   }
-  div.background.left {
-    width: 100%;
-    float: left;
-  }
-  @media (max-width: 1200px) {
-    div.background.left {
-      justify-content: center;
-      float: initial;
-    }
-  }
-  div.background.right {
-    width: 100%;
-    float: right;
-  }
-  @media (max-width: 1200px) {
-    div.background.right {
-      justify-content: center;
-      float: initial;
-    }
-  }
+
   div.background div.scroller-graphic-well {
     padding: 0 15px;
     width: 100%;
@@ -118,10 +100,19 @@
     margin-bottom: 0;
     min-height: 100vh;
     display: flex;
-    // justify-content: center;
-    margin-left: 0;
+    justify-content: center;
     align-items: center;
     position: relative;
+
+    &.left {
+      margin-left: 0;
+    }
+    &.right {
+      margin-right: 0;
+    }
+    @media (max-width: 1200px) {
+      margin: auto !important;
+    }
   }
   div.background
     div.scroller-graphic-well
@@ -129,6 +120,7 @@
     margin: 0 0 0 -15px;
   }
 
+  // Foreground
   div.foreground {
     width: 100%;
   }
