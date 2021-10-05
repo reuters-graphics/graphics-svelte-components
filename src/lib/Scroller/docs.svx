@@ -89,7 +89,7 @@ Easy scrolly-telling with layout options, based on [svelte-scroller](https://git
   const backgroundSize = 'wide';
 </script>
 
-<Scroller steps="{steps}" backgroundSize="{backgroundSize}" />
+<Scroller steps="{steps}" backgroundSize="{backgroundSize}" embedded="{embedded}"/>
 ```
 
 <DemoContainer fluid={true}>
@@ -145,6 +145,7 @@ Both text and graphic will revert to the middle when the window drops below 1200
   steps="{steps}"
   foregroundPosition="right opposite"
   backgroundSize="normal"
+  embedded=false
 />
 ```
 
@@ -154,6 +155,7 @@ Both text and graphic will revert to the middle when the window drops below 1200
     foregroundPosition='right opposite'
     backgroundSize='normal'
     id='example2'
+    
   />
 </DemoContainer>
 
@@ -189,7 +191,7 @@ Pass a component to `foreground` and use `backgroundProps` and `foregroundProps`
   ];
 </script>
 
-<Scroller steps="{steps}" backgroundSize="widest" />
+<Scroller steps="{steps}" backgroundSize="widest" embedded=false/>
 ```
 
 <DemoContainer fluid={true}>
@@ -197,6 +199,7 @@ Pass a component to `foreground` and use `backgroundProps` and `foregroundProps`
     steps={basicStepsComponent}
     backgroundSize="widest"
     id='example3'
+    
   />
 </DemoContainer>
 
@@ -232,6 +235,7 @@ Add an ID to your scroller and use SCSS `:global` rules to override any styles.
     steps={basicSteps}
     backgroundSize="widest"
     id='scroller-example-4'
+    
   />
 </DemoContainer>
 
@@ -330,9 +334,28 @@ This pattern comes with some restrictions, though. Be sure your `fetchComponent`
       steps={steps}
       backgroundSize="fluid"
       id='example-5'
+      
     />
   {/await}
 </DemoContainer>
+
+<section>
+
+This component also automatically creates a stacked, embed version of the scroll section. The text goes on top of the graphic by default.
+</section>
+
+<DemoContainer fluid={true}>
+  {#await makeSteps(ai2svelteSteps) then steps}
+    <Scroller
+      steps={steps}
+      backgroundSize="wide"
+      id='example1'
+      embedded=true
+    />
+  {/await}
+</DemoContainer>
+
+
 
 <style lang="scss">
   :global {

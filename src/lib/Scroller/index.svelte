@@ -6,8 +6,10 @@
 
   export let id = '';
   export let steps = [];
+
   // normal, wide, wider, widest or fluid
   export let backgroundSize = 'fluid';
+
   // middle, left, right, left opposite or right opposite
   export let foregroundPosition = 'middle';
   export let preload = 1;
@@ -18,42 +20,59 @@
   export let bottom = 1;
   export let parallax = false;
 
+  // Embed options
+  export let embedded;
+
   let index = 0;
   let offset, progress;
 </script>
 
-<section class="scroller-container fluid" id="{id}">
-  <Scroller
-    bind:index
-    bind:offset
-    bind:progress
-    threshold={threshold}
-    top={top}
-    bottom={bottom}
-    parallax={parallax}
-    query={'section.step-foreground-container'}
-  >
-    <div
-      slot="background"
-      class="background"
-      class:right="{foregroundPosition === 'left opposite'}"
-      class:left="{foregroundPosition === 'right opposite'}"
+{#if !embedded}
+  <section class="scroller-container fluid" id="{id}">
+    <Scroller
+      bind:index
+      bind:offset
+      bind:progress
+      threshold="{threshold}"
+      top="{top}"
+      bottom="{bottom}"
+      parallax="{parallax}"
+      query="{'section.step-foreground-container'}"
     >
-      <div class="scroller-graphic-well">
-        <section
-          class="background-container graphic {backgroundSize}"
-          step="{index + 1}"
-        >
-          <Background index="{index}" steps="{steps}" preload="{preload}" />
-        </section>
+      <div
+        slot="background"
+        class="background"
+        class:right="{foregroundPosition === 'left opposite'}"
+        class:left="{foregroundPosition === 'right opposite'}"
+      >
+        <div class="scroller-graphic-well">
+          <section
+            class="background-container graphic {backgroundSize}"
+            step="{index + 1}"
+          >
+            <Background
+              index="{index}"
+              steps="{steps}"
+              preload="{preload}"
+              embedded="{embedded}"
+            />
+          </section>
+        </div>
       </div>
-    </div>
 
-    <div slot="foreground" class="foreground {foregroundPosition}">
-      <Foreground steps="{steps}" />
-    </div>
-  </Scroller>
-</section>
+      <div slot="foreground" class="foreground {foregroundPosition}">
+        <Foreground steps="{steps}" />
+      </div>
+    </Scroller>
+  </section>
+{:else}
+  <Background
+    index="{index}"
+    steps="{steps}"
+    preload="{preload}"
+    embedded="{embedded}"
+  />
+{/if}
 
 <style lang="scss">
   .scroller-container {
@@ -67,63 +86,71 @@
     padding: 0;
     display: flex;
     justify-content: center;
-
-    &.left {
-      width: 50%;
-      float: left;
-      @media (max-width: 1200px) {
-        justify-content: center;
-        width: 100%;
-        float: initial;
-      }
-    }
-    &.right {
-      width: 50%;
-      float: right;
-      @media (max-width: 1200px) {
-        justify-content: center;
-        width: 100%;
-        float: initial;
-      }
-    }
-
-    div.scroller-graphic-well {
-      padding: 0 15px;
+  }
+  div.background.left {
+    width: 50%;
+    float: left;
+  }
+  @media (max-width: 1200px) {
+    div.background.left {
+      justify-content: center;
       width: 100%;
-      section.graphic.background-container {
-        margin-top: 0;
-        margin-bottom: 0;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        &.fluid {
-          margin: 0 0 0 -15px;
-        }
-      }
+      float: initial;
     }
+  }
+  div.background.right {
+    width: 50%;
+    float: right;
+  }
+  @media (max-width: 1200px) {
+    div.background.right {
+      justify-content: center;
+      width: 100%;
+      float: initial;
+    }
+  }
+  div.background div.scroller-graphic-well {
+    padding: 0 15px;
+    width: 100%;
+  }
+  div.background
+    div.scroller-graphic-well
+    section.graphic.background-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  div.background
+    div.scroller-graphic-well
+    section.graphic.background-container.fluid {
+    margin: 0 0 0 -15px;
   }
 
   div.foreground {
     width: 100%;
-
-    &.right {
-      width: 50%;
-      float: right;
-      @media (max-width: 1200px) {
-        width: 100%;
-        float: initial;
-      }
+  }
+  div.foreground.right {
+    width: 50%;
+    float: right;
+  }
+  @media (max-width: 1200px) {
+    div.foreground.right {
+      width: 100%;
+      float: initial;
     }
-
-    &.left {
-      width: 50%;
-      float: left;
-      @media (max-width: 1200px) {
-        width: 100%;
-        float: initial;
-      }
+  }
+  div.foreground.left {
+    width: 50%;
+    float: left;
+  }
+  @media (max-width: 1200px) {
+    div.foreground.left {
+      width: 100%;
+      float: initial;
     }
   }
 </style>
