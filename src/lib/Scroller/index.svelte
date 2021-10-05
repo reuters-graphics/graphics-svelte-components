@@ -39,23 +39,15 @@
       parallax="{parallax}"
       query="{'section.step-foreground-container'}"
     >
-      <div
-        slot="background"
-        class="background"
-        class:right="{foregroundPosition === 'left opposite'}"
-        class:left="{foregroundPosition === 'right opposite'}"
-      >
+      <div slot="background" class="background">
         <div class="scroller-graphic-well">
           <section
             class="background-container graphic {backgroundSize}"
+            class:right="{foregroundPosition === 'left opposite'}"
+            class:left="{foregroundPosition === 'right opposite'}"
             step="{index + 1}"
           >
-            <Background
-              index="{index}"
-              steps="{steps}"
-              preload="{preload}"
-              embedded="{embedded}"
-            />
+            <Background index="{index}" steps="{steps}" preload="{preload}" />
           </section>
         </div>
       </div>
