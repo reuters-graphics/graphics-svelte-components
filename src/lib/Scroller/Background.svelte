@@ -1,10 +1,10 @@
 <script>
   import marked from 'marked';
-
   export let index;
   export let steps = [];
   export let preload = 1;
   export let embedded;
+
   const totalSteps = steps.length;
 </script>
 
