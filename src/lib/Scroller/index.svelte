@@ -10,7 +10,9 @@
   export let backgroundSize = 'fluid';
   // middle, left, right, left opposite or right opposite
   export let foregroundPosition = 'middle';
-  export let preload = 1;
+  // true or false
+  export let stackBackground;
+  export let preload;
 
   // Passed to svelte-scroller
   export let threshold = 0.5;
@@ -22,16 +24,16 @@
   let offset, progress;
 </script>
 
-<section class="scroller-container fluid" id="{id}">
+<section class="scroller-container" id="{id}">
   <Scroller
     bind:index
     bind:offset
     bind:progress
-    threshold={threshold}
-    top={top}
-    bottom={bottom}
-    parallax={parallax}
-    query={'section.step-foreground-container'}
+    threshold="{threshold}"
+    top="{top}"
+    bottom="{bottom}"
+    parallax="{parallax}"
+    query="{'section.step-foreground-container'}"
   >
     <div
       slot="background"
@@ -44,7 +46,12 @@
           class="background-container graphic {backgroundSize}"
           step="{index + 1}"
         >
-          <Background index="{index}" steps="{steps}" preload="{preload}" />
+          <Background
+            index="{index}"
+            steps="{steps}"
+            preload="{preload}"
+            stackBackground="{stackBackground}"
+          />
         </section>
       </div>
     </div>
@@ -59,6 +66,9 @@
   .scroller-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
+    width: calc(100vw - 15px);
+    margin-left: -15px;
+    max-width: none;
   }
 
   div.background {

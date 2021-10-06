@@ -57,9 +57,13 @@ Easy scrolly-telling with layout options, based on [svelte-scroller](https://git
 - `foreground` Either a markdown string or a foreground component **REQUIRED**
 - `foregroundProps` An object of props given to foreground component
 
-`backgroundSize`
+`stackBackground`
 
 - Adjusts the size of the background graphic by passing a class name corresponding to one of our well widths: `normal`, `wide`, `wider`, `widest` or `fluid`.
+
+`backgroundSize`
+
+- Determines whether graphics will stack or not. Can be true or false. If true, the background graphics will stack and graphics from previous steps will remain visible. If false, only the graphic from the current step will show and graphics from previous steps are hidden.
 
 </section>
 
