@@ -13,6 +13,7 @@
   // true or false
   export let stackBackground;
   export let preload;
+  export let embedded;
 
   // Passed to svelte-scroller
   export let threshold = 0.5;
@@ -24,43 +25,53 @@
   let offset, progress;
 </script>
 
-<section class="scroller-container" id="{id}">
-  <Scroller
-    bind:index
-    bind:offset
-    bind:progress
-    threshold="{threshold}"
-    top="{top}"
-    bottom="{bottom}"
-    parallax="{parallax}"
-    query="{'section.step-foreground-container'}"
-  >
-    <div
-      slot="background"
-      class="background"
-      class:right="{foregroundPosition === 'left opposite'}"
-      class:left="{foregroundPosition === 'right opposite'}"
+{#if !embedded}
+  <section class="scroller-container" id="{id}">
+    <Scroller
+      bind:index
+      bind:offset
+      bind:progress
+      threshold="{threshold}"
+      top="{top}"
+      bottom="{bottom}"
+      parallax="{parallax}"
+      query="{'section.step-foreground-container'}"
     >
-      <div class="scroller-graphic-well">
-        <section
-          class="background-container graphic {backgroundSize}"
-          step="{index + 1}"
-        >
-          <Background
-            index="{index}"
-            steps="{steps}"
-            preload="{preload}"
-            stackBackground="{stackBackground}"
-          />
-        </section>
+      <div
+        slot="background"
+        class="background"
+        class:right="{foregroundPosition === 'left opposite'}"
+        class:left="{foregroundPosition === 'right opposite'}"
+      >
+        <div class="scroller-graphic-well">
+          <section
+            class="background-container graphic {backgroundSize}"
+            step="{index + 1}"
+          >
+            <Background
+              index="{index}"
+              steps="{steps}"
+              preload="{preload}"
+              stackBackground="{stackBackground}"
+              embedded="{embedded}"
+            />
+          </section>
+        </div>
       </div>
-    </div>
 
-    <div slot="foreground" class="foreground {foregroundPosition}">
-      <Foreground steps="{steps}" />
-    </div>
-  </Scroller>
-</section>
+      <div slot="foreground" class="foreground {foregroundPosition}">
+        <Foreground steps="{steps}" />
+      </div>
+    </Scroller>
+  </section>
+{:else}
+  <Background
+    index="{index + 1}"
+    steps="{steps}"
+    preload="{preload}"
+    embedded="{embedded}"
+  />
+{/if}
 
 <style lang="scss">
   .scroller-container {
