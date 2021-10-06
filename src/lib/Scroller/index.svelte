@@ -59,7 +59,7 @@
   </section>
 {:else}
   <Background
-    index="{index}"
+    index="{index + 1}"
     steps="{steps}"
     preload="{preload}"
     embedded="{embedded}"
