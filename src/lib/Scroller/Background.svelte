@@ -2,6 +2,7 @@
   export let index;
   export let steps = [];
   export let preload = 1;
+  export let stackBackground = true;
 </script>
 
 {#each steps as step, i}
@@ -9,10 +10,13 @@
   {#if preload === 0 || (i >= index - preload && i <= index + preload)}
     <div
       class="step-background step-{i + 1}"
-      class:visible="{i <= index}"
-      class:hidden="{i > index}"
+      class:visible="{stackBackground ? i <= index : i === index}"
+      class:hidden="{stackBackground ? i > index : i !== index}"
     >
-      <svelte:component this="{step.background}" {...(step.backgroundProps || {})} />
+      <svelte:component
+        this="{step.background}"
+        {...step.backgroundProps || {}}
+      />
     </div>
   {/if}
 {/each}

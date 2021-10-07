@@ -1,18 +1,25 @@
 <script>
-  export let steps;
-
+  export let steps = [];
   import marked from 'marked';
 </script>
 
 {#each steps as step, i}
-  <section class='step-foreground-container'>
-    <div class="step-foreground step-{i + 1}">
-      {#if typeof step.foreground === 'string'}
-        {@html marked(step.foreground)}  
-      {:else}
-        <svelte:component this="{step.foreground}" {...(step.foregroundProps || {})} />
-      {/if}
-    </div>
+  <section class="step-foreground-container">
+    {#if (step.foreground === '' || !step.foreground)}
+      <!-- Empty foreground -->
+      <div class="empty-step-foreground step-{i + 1}"></div>
+    {:else}
+      <div class="step-foreground step-{i + 1}">
+        {#if typeof step.foreground === 'string'}
+          {@html marked(step.foreground)}
+        {:else}
+          <svelte:component
+            this="{step.foreground}"
+            {...step.foregroundProps || {}}
+          />
+        {/if}
+      </div>
+    {/if}
   </section>
 {/each}
 
@@ -26,17 +33,14 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 5rem;
-
-    .step-foreground {
-      max-width: 550px;
-      width: 100%;
-      padding: 1.2rem 30px;
-      background: rgba(255, 255, 255, 0.8);
-      :global {
-        p:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
+  }
+  section .step-foreground {
+    max-width: 550px;
+    width: 100%;
+    padding: 1.2rem 30px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  section .step-foreground :global(p:last-child) {
+    margin-bottom: 0;
   }
 </style>
