@@ -10,14 +10,8 @@ slug: scroller
   import Clicker from './demos/basic/_Clicker.svelte';
 
   import BasicStep from './demos/basic/_Step.svelte';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   import { assets } from '$app/paths';
-=======
->>>>>>> aa15d481a5504260a96dc28c72b846804d18a68d
-=======
-  import { assets } from '$app/paths';
->>>>>>> ad81eeb839c03677a7485628cc26cebd98a73503
 
   const basicSteps = [
     { background: BasicStep, backgroundProps: { colour: 'red' }, foreground: '#### Step 1\n\nLorem ipsum red' },
@@ -32,15 +26,9 @@ slug: scroller
   ];
 
   const ai2svelteSteps = [
-<<<<<<< HEAD
-    { background: 'ai-scroller-1', backgroundProps: { assets }, foreground: '#### Step 1\n\nLorem ipsum' },
-    { background: 'ai-scroller-2', backgroundProps: { assets }, foreground: '#### Step 2\n\nLorem ipsum' },
-    { background: 'ai-scroller-3', backgroundProps: { assets }, foreground: '#### Step 3\n\nLorem ipsum' },
-=======
     { background: 'ai-scroller-1', foreground: '#### Step 1\n\nLorem ipsum' },
     { background: 'ai-scroller-2', foreground: '#### Step 2\n\nLorem ipsum' },
     { background: 'ai-scroller-3', foreground: '#### Step 3\n\nLorem ipsum' },
->>>>>>> aa15d481a5504260a96dc28c72b846804d18a68d
   ];
 
   const fetchComponent = async(componentName) => {
