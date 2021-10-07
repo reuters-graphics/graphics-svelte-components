@@ -1,6 +1,5 @@
 <script>
   /* This component wraps ai2svelte graphics. */
-  import { assets } from '$app/paths';
   export let AiGraphic;
   export let id = '';
   // normal, wide, wider, widest or fluid
@@ -12,7 +11,7 @@
     <slot name="title" />
   {/if}
 
-  <svelte:component this="{AiGraphic}" assets="{assets}" />
+  <svelte:component this="{AiGraphic}" />
 
   {#if $$slots.notes}
     <slot name="notes" />
