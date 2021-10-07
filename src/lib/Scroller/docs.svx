@@ -1,6 +1,6 @@
 ---
 title: Scroller
-description: Easy scrolly-telling with layout options.
+description: Easy scrollytelling with layout options.
 slug: scroller
 ---
 
@@ -8,7 +8,7 @@ slug: scroller
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
   import Scroller from './index.svelte';
   import Clicker from './demos/basic/_Clicker.svelte';
-
+  import StackedStep from './demos/basic/_Stacked.svelte';
   import BasicStep from './demos/basic/_Step.svelte';
   import { assets } from '$app/paths';
 
@@ -16,6 +16,12 @@ slug: scroller
     { background: BasicStep, backgroundProps: { colour: 'red' }, foreground: '#### Step 1\n\nLorem ipsum red' },
     { background: BasicStep, backgroundProps: { colour: 'blue' }, foreground: '#### Step 2\n\nLorem ipsum blue' },
     { background: BasicStep, backgroundProps: { colour: 'green' }, foreground: '#### Step 3\n\nLorem ipsum green' },
+  ];
+
+  const stackedSteps = [
+    { background: StackedStep, backgroundProps: { colour: 'red', i: 0 }, foreground: '#### Step 1\n\nLorem ipsum red' },
+    { background: StackedStep, backgroundProps: { colour: 'blue', i: 1 }, foreground: '#### Step 2\n\nLorem ipsum blue' },
+    { background: StackedStep, backgroundProps: { colour: 'green', i: 2 }, foreground: '#### Step 3\n\nLorem ipsum green' },
   ];
 
   const basicStepsComponent = [
@@ -49,7 +55,13 @@ slug: scroller
 
 ## {title}
 
-Easy scrolly-telling with layout options, based on [svelte-scroller](https://github.com/sveltejs/svelte-scroller).
+Easy scrollytelling.
+
+<section class='note'>
+
+This component is designed to handle most common layouts for scrollytelling. If you need something more complex, though, you should use [svelte-scroller](https://github.com/sveltejs/svelte-scroller), which is a lower level component you can more easily customize.
+
+</section>
 
 `steps` _an array of objects_
 
@@ -61,12 +73,6 @@ Easy scrolly-telling with layout options, based on [svelte-scroller](https://git
 `backgroundSize`
 
 - Adjusts the size of the background graphic by passing a class name corresponding to one of our well widths: `normal`, `wide`, `wider`, `widest` or `fluid`.
-
-`stackBackground`
-
-- Determines whether previous background step graphics will stack below current one.
-- `true` _default_ Background graphics from previous steps will remain visible below active one, allowing you to stack graphics with transparent backgrounds.
-- `false` Only the background graphic from the current step will show and backgrounds from previous steps are hidden.
 
 </section>
 
@@ -160,6 +166,36 @@ Both text and graphic will revert to the middle when the window drops below 1200
     foregroundPosition='right opposite'
     backgroundSize='normal'
     id='example2'
+  />
+</DemoContainer>
+
+<section>
+
+`stackBackground`
+
+- Determines whether previous background step graphics will stack below current one.
+- `true` _default_ Background graphics from previous steps will remain visible below active one, allowing you to stack graphics with transparent backgrounds.
+- `false` Only the background graphic from the current step will show and backgrounds from previous steps are hidden.
+
+`preload`
+
+- Determines how many background steps to load before and after the currently active one. This prop basically lazyloads backgrounds, which is useful for making sure you're not loading too many images at once for long scrolls.
+- Default is `1`, which loads one background before and one after the currently active one.
+- `0` disables lazyloading and loads all backgrounds at once.
+
+</section>
+
+```svelte
+<Scroller steps="{steps}" stackBackground="{true}" preload="{0}" />
+```
+
+<DemoContainer fluid={true}>
+  <Scroller
+    steps={stackedSteps}
+    foregroundPosition='middle'
+    backgroundSize='normal'
+    preload={0}
+    id='example-stack'
   />
 </DemoContainer>
 
@@ -377,6 +413,17 @@ This component can also unravel the scrolling experience into a flat, linear lay
 
 <style lang="scss">
   :global {
+    section.note {
+      margin: 2rem auto;
+      padding: 10px;
+      border-left: 10px solid #999;
+      p {
+        font-size: 0.95rem;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
     li {
       margin-bottom: 2px;
     }
