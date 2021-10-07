@@ -1,9 +1,5 @@
 <script>
-<<<<<<< HEAD
-  export let assets;
-=======
   import { assets } from '$app/paths';
->>>>>>> aa15d481a5504260a96dc28c72b846804d18a68d
   let width = null;
 </script>
 
