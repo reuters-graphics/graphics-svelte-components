@@ -3,9 +3,9 @@
   import AnimationMaker from './AnimationMaker.js';
   import marked from 'marked';
   export let id;
-  export let blurbs = '';
+  export let steps = '';
   export let playbackConst = '75';
-  export let withRatio = 1.78;
+  export let widthRatio = 1.78;
   export let fullFrame = 'false';
   export let includeSmall = 'false';
   export let smallWidthRatio = 1;
@@ -13,9 +13,9 @@
   onMount(() => {
     const lottieObject = new AnimationMaker({
       id: id,
-      blurbs: blurbs,
+      blurbs: steps,
       playbackConst: playbackConst,
-      widthRatio: Number(withRatio),
+      widthRatio: Number(widthRatio),
       fullFrame: fullFrame === 'true',
       includeSmall: includeSmall === 'true',
       smallWidthRatio: Number(smallWidthRatio),
@@ -29,9 +29,9 @@
       <canvas id="{id}"></canvas>
     </div>
     <div class="scroll-trigger">
-      {#each blurbs as blurb}
-        <div class="blurb" seconds="{blurb.seconds}">
-          {@html marked(blurb.text)}
+      {#each steps as step}
+        <div class="blurb" seconds="{step.seconds}">
+          {@html marked(step.text)}
         </div>
       {/each}
     </div>

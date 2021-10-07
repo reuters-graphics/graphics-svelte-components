@@ -7,7 +7,7 @@ slug: lottie-scroller
 <script>
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
   import LottieScroller from './index.svelte';
-  const blurbs = [
+  const steps = [
       {
           "seconds": ".1",
           "text": "#### Step 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -44,10 +44,10 @@ Easy scrolly-telling with lottie, based on [Bodymovin](https://aescripts.com/bod
 - `blurbs` An array of objects with blurbs and seconds, which controls when the blurbs appear. Blurbs are optional and can be deleted. 
 - If using `blurbs`, use `seconds` to specify when each blurb appears. `seconds` correspond to seconds in your After Effects file.
 - `PlaybackConst` Controls the length of animation (specifically, it controls the height of the div that wraps around the lottie canvas)
-- `WithRatio` Must match the aspect ratio of your AE artboard. 1.78 by default.
+- `WidthRatio` Must match the aspect ratio of your AE artboard. 1.78 by default.
 - `FullFrame` Set to true if you always want your graphic to be full width
 - `IncludeSmall`  Set to true if you have mobile versions. Mobile versions must be named with a '_sm' suffix. I.e. 'yourID_sm.json'
-- `SmallWidthRatio`  With ratio of your mobile version. Square (withRatio: 1) is recommended and is the default.
+- `SmallWidthRatio`  With ratio of your mobile version. Square (widthRatio: 1) is recommended and is the default.
 
 Only `id` is required. All other props are optional and can be deleted from the Google doc, which should be laid out like this:
 
@@ -59,7 +59,7 @@ Only `id` is required. All other props are optional and can be deleted from the 
 Type: lottie-scroller
 ID: my-lotite-scroller
 PlaybackConst: 75 // optional
-WithRatio:1.78  // optional
+WidthRatio:1.78  // optional
 FullFrame: false  // optional
 IncludeSmall: false  // optional
 SmallWidthRatio: 1  // optional
@@ -98,11 +98,11 @@ Lorem ipsum...
 
 </script>
 
-<LottieScroller id='liberia' blurbs= {blurbs}  />
+<LottieScroller id='liberia' steps= {steps}  />
 ```
 
 <DemoContainer>
-  <LottieScroller id='liberia' blurbs = {blurbs} />
+  <LottieScroller id='liberia' steps = {steps} />
 </DemoContainer>
 
 <style lang="scss">
