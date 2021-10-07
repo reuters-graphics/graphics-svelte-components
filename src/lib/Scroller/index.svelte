@@ -3,6 +3,7 @@
   import Scroller from '@sveltejs/svelte-scroller';
   import Background from './Background.svelte';
   import Foreground from './Foreground.svelte';
+  import Embedded from './Embedded/index.svelte';
 
   export let id = '';
   export let steps = [];
@@ -10,7 +11,10 @@
   export let backgroundSize = 'fluid';
   // middle, left, right, left opposite or right opposite
   export let foregroundPosition = 'middle';
+  export let stackBackground = true;
   export let preload = 1;
+  export let embedded = false;
+  export let embeddedLayout = 'fb';
 
   // Passed to svelte-scroller
   export let threshold = 0.5;
@@ -22,43 +26,64 @@
   let offset, progress;
 </script>
 
-<section class="scroller-container fluid" id="{id}">
-  <Scroller
-    bind:index
-    bind:offset
-    bind:progress
-    threshold={threshold}
-    top={top}
-    bottom={bottom}
-    parallax={parallax}
-    query={'section.step-foreground-container'}
-  >
-    <div
-      slot="background"
-      class="background"
-      class:right="{foregroundPosition === 'left opposite'}"
-      class:left="{foregroundPosition === 'right opposite'}"
+{#if !embedded}
+  <section class="scroller-container" id="{id}">
+    <Scroller
+      bind:index
+      bind:offset
+      bind:progress
+      threshold="{threshold}"
+      top="{top}"
+      bottom="{bottom}"
+      parallax="{parallax}"
+      query="section.step-foreground-container"
     >
-      <div class="scroller-graphic-well">
-        <section
-          class="background-container graphic {backgroundSize}"
-          step="{index + 1}"
-        >
-          <Background index="{index}" steps="{steps}" preload="{preload}" />
-        </section>
+      <div
+        slot="background"
+        class="background"
+        class:right="{foregroundPosition === 'left opposite'}"
+        class:left="{foregroundPosition === 'right opposite'}"
+      >
+        <div class="scroller-graphic-well">
+          <section
+            class="background-container graphic {backgroundSize}"
+            step="{index + 1}"
+          >
+            <Background
+              index="{index}"
+              steps="{steps}"
+              preload="{preload}"
+              stackBackground="{stackBackground}"
+            />
+          </section>
+        </div>
       </div>
-    </div>
 
-    <div slot="foreground" class="foreground {foregroundPosition}">
-      <Foreground steps="{steps}" />
-    </div>
-  </Scroller>
-</section>
+      <div slot="foreground" class="foreground {foregroundPosition}">
+        <Foreground steps="{steps}" />
+      </div>
+    </Scroller>
+  </section>
+{:else}
+  <section class="scroller-container embedded" id="{id}">
+    <Embedded
+      steps="{steps}"
+      embeddedLayout="{embeddedLayout}"
+      backgroundSize="{backgroundSize}"
+    />
+  </section>
+{/if}
 
 <style lang="scss">
   .scroller-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
+    width: 100vw;
+    margin-left: -15px;
+    max-width: initial;
+    &.embedded {
+      padding: 0 15px;
+    }
   }
 
   div.background {
