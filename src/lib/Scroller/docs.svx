@@ -25,9 +25,9 @@ slug: scroller
   ];
 
   const ai2svelteSteps = [
-    { background: 'ai-scroller-1', backgroundProps: { assets }, foreground: '#### Step 1\n\nLorem ipsum' },
-    { background: 'ai-scroller-2', backgroundProps: { assets }, foreground: '#### Step 2\n\nLorem ipsum' },
-    { background: 'ai-scroller-3', backgroundProps: { assets }, foreground: '#### Step 3\n\nLorem ipsum' },
+    { background: 'ai-scroller-1', foreground: '#### Step 1\n\nLorem ipsum' },
+    { background: 'ai-scroller-2', foreground: '#### Step 2\n\nLorem ipsum' },
+    { background: 'ai-scroller-3', foreground: '#### Step 3\n\nLorem ipsum' },
   ];
 
   const fetchComponent = async(componentName) => {
@@ -62,10 +62,11 @@ Easy scrolly-telling with layout options, based on [svelte-scroller](https://git
 
 - Adjusts the size of the background graphic by passing a class name corresponding to one of our well widths: `normal`, `wide`, `wider`, `widest` or `fluid`.
 
-
 `stackBackground`
 
-- Determines whether graphics will stack. Can be `true` or `false`. If true, the background graphics will stack and graphics from previous steps will remain visible. If false, only the graphic from the current step will show and graphics from previous steps are hidden.
+- Determines whether previous background step graphics will stack below current one.
+- `true` _default_ Background graphics from previous steps will remain visible below active one, allowing you to stack graphics with transparent backgrounds.
+- `false` Only the background graphic from the current step will show and backgrounds from previous steps are hidden.
 
 </section>
 
@@ -159,7 +160,6 @@ Both text and graphic will revert to the middle when the window drops below 1200
     foregroundPosition='right opposite'
     backgroundSize='normal'
     id='example2'
-    
   />
 </DemoContainer>
 
@@ -195,7 +195,7 @@ Pass a component to `foreground` and use `backgroundProps` and `foregroundProps`
   ];
 </script>
 
-<Scroller steps="{steps}" backgroundSize="widest"/>
+<Scroller steps="{steps}" backgroundSize="widest" />
 ```
 
 <DemoContainer fluid={true}>
@@ -203,7 +203,6 @@ Pass a component to `foreground` and use `backgroundProps` and `foregroundProps`
     steps={basicStepsComponent}
     backgroundSize="widest"
     id='example3'
-    
   />
 </DemoContainer>
 
@@ -239,7 +238,6 @@ Add an ID to your scroller and use SCSS `:global` rules to override any styles.
     steps={basicSteps}
     backgroundSize="widest"
     id='scroller-example-4'
-    
   />
 </DemoContainer>
 
@@ -291,7 +289,7 @@ Lorem ipsum...
   import { Scroller } from '@reuters-graphics/graphics-svelte-components';
 
   const fetchComponent = async (componentName) => {
-    return (await import(`./ai2html/${componentName}.svelte`)).default;
+    return (await import(`./ai2svelte/${componentName}.svelte`)).default;
   };
 
   const makeSteps = async (steps) => {
@@ -338,28 +336,44 @@ This pattern comes with some restrictions, though. Be sure your `fetchComponent`
       steps={steps}
       backgroundSize="fluid"
       id='example-5'
-      
     />
   {/await}
 </DemoContainer>
 
 <section>
 
-This component also automatically creates a stacked, embed version of the scroll section. The text goes on top of the graphic by default. 
+This component can also unravel the scrolling experience into a flat, linear layout. Use this when the graphic will be embedded in an iframe.
+
+`embedded`
+
+- Setting to `true` will unroll the scroll experience into a flat layout. `true` will also cause the `foregroundPosition` prop to be ignored. (Use global SCSS to adjust the style of foreground text.)
+
+`embeddedLayout`
+
+- `fb` (default) will layout the foreground before the background in each step.
+- `bf` will lead with the background in each step.
+
 </section>
+
+```svelte
+<Scroller
+  steps="{steps}"
+  backgroundSize="fluid"
+  embedded="{true}"
+  embeddedLayout="fb"
+/>
+```
 
 <DemoContainer fluid={true}>
   {#await makeSteps(ai2svelteSteps) then steps}
     <Scroller
       steps={steps}
-      backgroundSize="wide"
-      id='example1'
+      backgroundSize="fluid"
+      id='example6'
       embedded=true
     />
   {/await}
 </DemoContainer>
-
-
 
 <style lang="scss">
   :global {

@@ -3,6 +3,7 @@
   import Scroller from '@sveltejs/svelte-scroller';
   import Background from './Background.svelte';
   import Foreground from './Foreground.svelte';
+  import Embedded from './Embedded/index.svelte';
 
   export let id = '';
   export let steps = [];
@@ -10,10 +11,10 @@
   export let backgroundSize = 'fluid';
   // middle, left, right, left opposite or right opposite
   export let foregroundPosition = 'middle';
-  // true or false
-  export let stackBackground;
-  export let preload;
-  export let embedded;
+  export let stackBackground = true;
+  export let preload = 1;
+  export let embedded = false;
+  export let embeddedLayout = 'fb';
 
   // Passed to svelte-scroller
   export let threshold = 0.5;
@@ -35,7 +36,7 @@
       top="{top}"
       bottom="{bottom}"
       parallax="{parallax}"
-      query="{'section.step-foreground-container'}"
+      query="section.step-foreground-container"
     >
       <div
         slot="background"
@@ -53,7 +54,6 @@
               steps="{steps}"
               preload="{preload}"
               stackBackground="{stackBackground}"
-              embedded="{embedded}"
             />
           </section>
         </div>
@@ -65,21 +65,25 @@
     </Scroller>
   </section>
 {:else}
-  <Background
-    index="{index + 1}"
-    steps="{steps}"
-    preload="{preload}"
-    embedded="{embedded}"
-  />
+  <section class="scroller-container embedded" id="{id}">
+    <Embedded
+      steps="{steps}"
+      embeddedLayout="{embeddedLayout}"
+      backgroundSize="{backgroundSize}"
+    />
+  </section>
 {/if}
 
 <style lang="scss">
   .scroller-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
-    width: calc(100vw - 15px);
+    width: 100vw;
     margin-left: -15px;
-    max-width: none;
+    max-width: initial;
+    &.embedded {
+      padding: 0 15px;
+    }
   }
 
   div.background {
