@@ -287,7 +287,13 @@ If you're still struggling to make this component work for your design, it may b
 
 <section>
 
-You can also use this component to layout an AI graphics scroller via an [ArchieML](http://archieml.org/)-formatted Google doc by using the following pattern to dynamically import [ai2svelte](https://github.com/reuters-graphics/ai2svelte) components for the background:
+You can also use this component to layout an AI-based graphics scroller via an [ArchieML](http://archieml.org/)-formatted Google doc by using the following pattern to dynamically import [ai2svelte](https://github.com/reuters-graphics/ai2svelte) components for the background:
+
+<section class='note'>
+
+If you're using the [graphics kit](https://github.com/reuters-graphics/bluprint_graphics-kit), this pattern is already wired up in the boilerplate included in the Page.svelte component. Free money!
+
+</section>
 
 </section>
 
