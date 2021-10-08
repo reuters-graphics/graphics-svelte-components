@@ -246,6 +246,14 @@ Pass a component to `foreground` and use `backgroundProps` and `foregroundProps`
 
 Add an ID to your scroller and use SCSS `:global` rules to override any styles.
 
+<section class='note'>
+
+This is the main way you should customise this component for any layouts not covered by the props we've already mentioned. Most small layout shifts can be handled with simple SCSS. Check out the component in your browser's inspector to find which elements you want to target with custom styles.
+
+If you're still struggling to make this component work for your design, it may be a good sign you should reach for [svelte-scroller](https://github.com/sveltejs/svelte-scroller) instead.
+
+</section>
+
 </section>
 
 ```svelte
