@@ -65,6 +65,9 @@
       @include font-sans;
       font-weight: 200;
     }
+    ul {
+      margin-bottom: 1.5rem;
+    }
     li {
       font-size: 1rem;
     }
