@@ -78,7 +78,8 @@
   .scroller-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
-    width: 100vw;
+    // width: 100vw;
+    width: calc(100% + 30px);
     margin-left: -15px;
     max-width: initial;
     &.embedded {
