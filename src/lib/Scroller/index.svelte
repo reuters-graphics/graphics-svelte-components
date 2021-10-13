@@ -76,7 +76,7 @@
 
 <style lang="scss">
   .scroller-container {
-    margin-top: 5rem;
+    // margin-top: 5rem;
     margin-bottom: 5rem;
     // width: 100vw;
     width: calc(100% + 30px);

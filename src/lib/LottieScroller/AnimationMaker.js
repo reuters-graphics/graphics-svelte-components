@@ -1,5 +1,6 @@
-// import * as bodymovin from 'lottie-web';
-import bodymovin from 'lottie-web';
+import * as bodymovin from 'lottie-web';
+
+// import bodymovin from 'lottie-web';
 import { getPath } from '$utils/statics';
 
 class AnimationMaker {
