@@ -8,7 +8,6 @@
 			"$lib/*": ["src/lib/*"],
 			"$utils/*": ["src/utils/*"],
 			"$pkg": ["package.json"],
-			"$imgs": ["src/statics/images/manifest.json"],
 			"$locales/*": ["locales/*"]
 		}
 	},

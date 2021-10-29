@@ -81,7 +81,6 @@ export default {
         alias: {
           $utils: '/src/utils',
           $pkg: '/package.json',
-          $imgs: '/src/statics/images/manifest.json',
           $locales: '/locales',
           'reuters-components': '/src/FutureGraphicsComponentsLib',
         },

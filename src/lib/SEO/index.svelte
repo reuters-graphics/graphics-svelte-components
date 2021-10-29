@@ -3,7 +3,6 @@
   import { getPath } from '$utils/statics';
   import { page } from '$app/stores';
   import { get } from 'lodash-es';
-  import imageManifest from '$imgs';
   import urljoin from 'proper-url-join';
   import { browser } from '$app/env';
   import analytics from './analytics';
@@ -61,8 +60,6 @@
         '@context': 'http://schema.org',
         '@type': 'ImageObject',
         url: getPath(shareImgPath),
-        width: get(imageManifest, `${shareImgPath}.width`, 1200),
-        height: get(imageManifest, `${shareImgPath}.height`, 600),
       },
     ],
     publisher: { '@id': 'https://www.reuters.com/#publisher' },
