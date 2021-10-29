@@ -28,7 +28,7 @@ import {
   v as C,
 } from './vendor-927c0fc0.js';
 import { D as L } from './index-38e47fc4.js';
-import { g as I } from './@component-docs-73e95ca8.js';
+import { g as I } from './@component-docs-0386f84c.js';
 import './paths-6758d194.js';
 class x {
   constructor(t) {
