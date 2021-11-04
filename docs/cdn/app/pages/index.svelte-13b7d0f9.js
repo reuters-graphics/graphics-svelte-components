@@ -21,8 +21,8 @@ import {
   a as E,
   g as w,
   b as C,
-  H as z,
-  L as b,
+  H as b,
+  L as z,
   I as j,
 } from '../chunks/vendor-927c0fc0.js';
 import {
@@ -30,7 +30,7 @@ import {
   N as S,
   M as k,
   c as x,
-} from '../chunks/@component-docs-0386f84c.js';
+} from '../chunks/@component-docs-51cb096e.js';
 import { b as L } from '../chunks/paths-6758d194.js';
 function R(s) {
   let e, t;
@@ -110,7 +110,7 @@ function A(s) {
               C(e, 'class', 'svelte-1iw9fdo');
           },
           m(s, r) {
-            g(s, e, r), z(e, t), z(t, a);
+            g(s, e, r), b(e, t), b(t, a);
           },
           p: j,
           d(s) {
@@ -220,16 +220,16 @@ function G(s) {
         c(h, s, n),
         g(s, j, n),
         g(s, L, n),
-        z(L, R),
-        z(R, T),
+        b(L, R),
+        b(R, T),
         c(G, T, null),
-        z(T, H),
-        z(R, N),
-        z(R, O),
-        z(O, P),
-        z(P, J),
-        z(R, K),
-        z(R, M);
+        b(T, H),
+        b(R, N),
+        b(R, O),
+        b(O, P),
+        b(P, J),
+        b(R, K),
+        b(R, M);
       for (let e = 0; e < B.length; e += 1) B[e].m(M, null);
       U = !0;
     },
@@ -268,7 +268,7 @@ function G(s) {
         s && m(j),
         s && m(L),
         f(G),
-        b(B, s);
+        z(B, s);
     },
   };
 }

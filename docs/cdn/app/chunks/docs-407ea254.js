@@ -22,13 +22,13 @@ import {
   U as v,
   j as x,
   m as I,
-  o as j,
-  x as b,
+  o as b,
+  x as j,
   u as y,
   v as E,
 } from './vendor-927c0fc0.js';
 import { D as z } from './index-38e47fc4.js';
-import { g as A } from './@component-docs-0386f84c.js';
+import { g as A } from './@component-docs-51cb096e.js';
 import './paths-6758d194.js';
 function O(s) {
   let a, n;
@@ -268,11 +268,11 @@ function P(s) {
         I(a.$$.fragment, s);
       },
       m(s, t) {
-        j(a, s, t), (n = !0);
+        b(a, s, t), (n = !0);
       },
       p: k,
       i(s) {
-        n || (b(a.$$.fragment, s), (n = !0));
+        n || (j(a.$$.fragment, s), (n = !0));
       },
       o(s) {
         y(a.$$.fragment, s), (n = !1);
@@ -333,7 +333,7 @@ function T(s) {
           (w.innerHTML =
             '<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">\n  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Image <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">\'@reuters-graphics/graphics-svelte-components\'</span><span class="token punctuation">;</span>\n</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>\n\n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span>\n  <span class="token attr-name">src="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">\'path/to/image.jpg\'</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">alt="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">\'Some alt text\'</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">caption="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">\'A caption\'</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">lazy="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token boolean">true</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">wide</span>\n<span class="token punctuation">/></span></span></code>'),
           l(s, v, t),
-          j(A, s, t),
+          b(A, s, t),
           (O = !0);
       },
       p(s, [a]) {
@@ -341,7 +341,7 @@ function T(s) {
         1 & a && (n.$$scope = { dirty: a, ctx: s }), A.$set(n);
       },
       i(s) {
-        O || (b(A.$$.fragment, s), (O = !0));
+        O || (j(A.$$.fragment, s), (O = !0));
       },
       o(s) {
         y(A.$$.fragment, s), (O = !1);

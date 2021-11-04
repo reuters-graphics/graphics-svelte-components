@@ -37,7 +37,7 @@ import {
   B,
 } from './vendor-927c0fc0.js';
 import { D as C } from './index-38e47fc4.js';
-import './@component-docs-0386f84c.js';
+import './@component-docs-51cb096e.js';
 import './paths-6758d194.js';
 const G = (t) => ({ intersecting: 1 & t }),
   M = (t) => ({ intersecting: t[0] });
