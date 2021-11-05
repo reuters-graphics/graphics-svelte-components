@@ -46,7 +46,7 @@ import { a as q, b as z } from './paths-6758d194.js';
 const B = (t = '') => e(q, t);
 var O = {
   name: '@reuters-graphics/graphics-svelte-components',
-  version: '0.1.39',
+  version: '0.1.40',
   type: 'module',
   private: !1,
   homepage: 'https://reuters-graphics.github.io/graphics-svelte-components',
@@ -287,7 +287,8 @@ var W = (function () {
           v(window, 'mousemove', g(w, 500)),
           v(window, 'scroll', g(w, 500)),
           v(document, 'visibilitychange', y),
-          v(document, 'webkitvisibilitychange', y);
+          v(document, 'webkitvisibilitychange', y),
+          e(0);
       },
       trigger: w,
       setIdle: f,

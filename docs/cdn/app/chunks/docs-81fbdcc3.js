@@ -56,7 +56,7 @@ import {
   a2 as q,
 } from './vendor-927c0fc0.js';
 import { D as Q } from './index-38e47fc4.js';
-import './@component-docs-51cb096e.js';
+import './@component-docs-0842da4b.js';
 import './paths-6758d194.js';
 function Y(n, s, a) {
   const t = n.slice();

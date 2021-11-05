@@ -3,8 +3,8 @@ import {
   i as s,
   s as e,
   D as n,
-  e as r,
-  c as a,
+  e as a,
+  c as r,
   a as o,
   d as c,
   f as l,
@@ -37,7 +37,7 @@ import {
   B,
 } from './vendor-927c0fc0.js';
 import { D as C } from './index-38e47fc4.js';
-import './@component-docs-51cb096e.js';
+import './@component-docs-0842da4b.js';
 import './paths-6758d194.js';
 const G = (t) => ({ intersecting: 1 & t }),
   M = (t) => ({ intersecting: t[0] });
@@ -47,15 +47,15 @@ function P(t) {
     m = n(h, t, t[7], M);
   return {
     c() {
-      (s = r('div')), m && m.c();
+      (s = a('div')), m && m.c();
     },
     l(t) {
-      s = a(t, 'DIV', {});
+      s = r(t, 'DIV', {});
       var e = o(s);
       m && m.l(e), e.forEach(c);
     },
-    m(n, r) {
-      l(n, s, r), m && m.m(s, null), t[9](s), (e = !0);
+    m(n, a) {
+      l(n, s, a), m && m.m(s, null), t[9](s), (e = !0);
     },
     p(t, [s]) {
       m &&
@@ -76,7 +76,7 @@ function P(t) {
 }
 function S(t, s, e) {
   let n,
-    { $$slots: r = {}, $$scope: a } = s,
+    { $$slots: a = {}, $$scope: r } = s,
     { once: o = !1 } = s,
     { top: c = 0 } = s,
     { bottom: l = 0 } = s,
@@ -117,7 +117,7 @@ function S(t, s, e) {
         'bottom' in t && e(4, (l = t.bottom)),
         'left' in t && e(5, (i = t.left)),
         'right' in t && e(6, (p = t.right)),
-        '$$scope' in t && e(7, (a = t.$$scope));
+        '$$scope' in t && e(7, (r = t.$$scope));
     }),
     [
       u,
@@ -127,8 +127,8 @@ function S(t, s, e) {
       l,
       i,
       p,
-      a,
       r,
+      a,
       function (t) {
         m[t ? 'unshift' : 'push'](() => {
           (n = t), e(1, n);
@@ -147,10 +147,10 @@ function q(t) {
   let s;
   return {
     c() {
-      (s = r('div')), this.h();
+      (s = a('div')), this.h();
     },
     l(t) {
-      (s = a(t, 'DIV', { class: !0 })), o(s).forEach(c), this.h();
+      (s = r(t, 'DIV', { class: !0 })), o(s).forEach(c), this.h();
     },
     h() {
       x(s, 'class', 'image svelte-13n58v0');
@@ -168,10 +168,10 @@ function F(t) {
   let s, e;
   return {
     c() {
-      (s = r('div')), this.h();
+      (s = a('div')), this.h();
     },
     l(t) {
-      (s = a(t, 'DIV', { class: !0, style: !0 })), o(s).forEach(c), this.h();
+      (s = r(t, 'DIV', { class: !0, style: !0 })), o(s).forEach(c), this.h();
     },
     h() {
       x(s, 'class', 'image svelte-13n58v0'),
@@ -196,24 +196,24 @@ function U(t) {
     return t[4] ? F : q;
   }
   let n = e(t),
-    r = n(t);
+    a = n(t);
   return {
     c() {
-      r.c(), (s = D());
+      a.c(), (s = D());
     },
     l(t) {
-      r.l(t), (s = D());
+      a.l(t), (s = D());
     },
     m(t, e) {
-      r.m(t, e), l(t, s, e);
+      a.m(t, e), l(t, s, e);
     },
-    p(t, a) {
-      n === (n = e(t)) && r
-        ? r.p(t, a)
-        : (r.d(1), (r = n(t)), r && (r.c(), r.m(s.parentNode, s)));
+    p(t, r) {
+      n === (n = e(t)) && a
+        ? a.p(t, r)
+        : (a.d(1), (a = n(t)), a && (a.c(), a.m(s.parentNode, s)));
     },
     d(t) {
-      r.d(t), t && c(s);
+      a.d(t), t && c(s);
     },
   };
 }
@@ -235,36 +235,36 @@ function W(t) {
     })),
     {
       c() {
-        (s = r('div')),
-          (e = r('a')),
+        (s = a('div')),
+          (e = a('a')),
           $(n.$$.fragment),
           (i = d()),
-          (p = r('p')),
+          (p = a('p')),
           (u = v(t[2])),
           this.h();
       },
-      l(r) {
-        s = a(r, 'DIV', { class: !0, title: !0 });
+      l(a) {
+        s = r(a, 'DIV', { class: !0, title: !0 });
         var l = o(s);
-        e = a(l, 'A', { href: !0 });
+        e = r(l, 'A', { href: !0 });
         var f = o(e);
-        k(n.$$.fragment, f), (i = w(f)), (p = a(f, 'P', {}));
+        k(n.$$.fragment, f), (i = w(f)), (p = r(f, 'P', {}));
         var g = o(p);
         (u = E(g, t[2])), g.forEach(c), f.forEach(c), l.forEach(c), this.h();
       },
       h() {
         x(e, 'href', t[0]), x(s, 'class', 'referral'), x(s, 'title', t[3]);
       },
-      m(t, r) {
-        l(t, s, r), b(s, e), I(n, e, null), b(e, i), b(e, p), b(p, u), (h = !0);
+      m(t, a) {
+        l(t, s, a), b(s, e), I(n, e, null), b(e, i), b(e, p), b(p, u), (h = !0);
       },
-      p(t, [r]) {
-        const a = {};
-        50 & r && (a.$$scope = { dirty: r, ctx: t }),
-          n.$set(a),
-          (!h || 4 & r) && y(u, t[2]),
-          (!h || 1 & r) && x(e, 'href', t[0]),
-          (!h || 8 & r) && x(s, 'title', t[3]);
+      p(t, [a]) {
+        const r = {};
+        50 & a && (r.$$scope = { dirty: a, ctx: t }),
+          n.$set(r),
+          (!h || 4 & a) && y(u, t[2]),
+          (!h || 1 & a) && x(e, 'href', t[0]),
+          (!h || 8 & a) && x(s, 'title', t[3]);
       },
       i(t) {
         h || (f(n.$$.fragment, t), (h = !0));
@@ -280,17 +280,17 @@ function W(t) {
 }
 function z(t, s, e) {
   let { url: n } = s,
-    { image: r } = s,
-    { title: a } = s,
+    { image: a } = s,
+    { title: r } = s,
     { description: o } = s;
   return (
     (t.$$set = (t) => {
       'url' in t && e(0, (n = t.url)),
-        'image' in t && e(1, (r = t.image)),
-        'title' in t && e(2, (a = t.title)),
+        'image' in t && e(1, (a = t.image)),
+        'title' in t && e(2, (r = t.title)),
         'description' in t && e(3, (o = t.description));
     }),
-    [n, r, a, o]
+    [n, a, r, o]
   );
 }
 class J extends t {
@@ -313,33 +313,33 @@ function Q(t) {
     h,
     m = t[0],
     $ = [];
-  for (let r = 0; r < m.length; r += 1) $[r] = X(K(t, m, r));
+  for (let a = 0; a < m.length; a += 1) $[a] = X(K(t, m, a));
   const v = (t) =>
     g($[t], 1, 1, () => {
       $[t] = null;
     });
   return {
     c() {
-      (s = r('section')),
-        (e = r('figure')),
-        (n = r('img')),
+      (s = a('section')),
+        (e = a('figure')),
+        (n = a('img')),
         (p = d()),
-        (u = r('nav'));
+        (u = a('nav'));
       for (let t = 0; t < $.length; t += 1) $[t].c();
       this.h();
     },
     l(t) {
-      s = a(t, 'SECTION', { class: !0 });
-      var r = o(s);
-      e = a(r, 'FIGURE', { class: !0 });
+      s = r(t, 'SECTION', { class: !0 });
+      var a = o(s);
+      e = r(a, 'FIGURE', { class: !0 });
       var l = o(e);
-      (n = a(l, 'IMG', { src: !0, alt: !0 })),
+      (n = r(l, 'IMG', { src: !0, alt: !0 })),
         l.forEach(c),
-        (p = w(r)),
-        (u = a(r, 'NAV', { class: !0 }));
+        (p = w(a)),
+        (u = r(a, 'NAV', { class: !0 }));
       var i = o(u);
       for (let s = 0; s < $.length; s += 1) $[s].l(i);
-      i.forEach(c), r.forEach(c), this.h();
+      i.forEach(c), a.forEach(c), this.h();
     },
     h() {
       L(
@@ -357,8 +357,8 @@ function Q(t) {
         x(u, 'class', 'referral-rail row'),
         x(s, 'class', 'referral-container');
     },
-    m(t, r) {
-      l(t, s, r), b(s, e), b(e, n), b(s, p), b(s, u);
+    m(t, a) {
+      l(t, s, a), b(s, e), b(e, n), b(s, p), b(s, u);
       for (let s = 0; s < $.length; s += 1) $[s].m(u, null);
       h = !0;
     },
@@ -394,10 +394,10 @@ function Q(t) {
 function X(t) {
   let s, e;
   const n = [t[1]];
-  let r = {};
-  for (let a = 0; a < n.length; a += 1) r = B(r, n[a]);
+  let a = {};
+  for (let r = 0; r < n.length; r += 1) a = B(a, n[r]);
   return (
-    (s = new J({ props: r })),
+    (s = new J({ props: a })),
     {
       c() {
         $(s.$$.fragment);
@@ -409,8 +409,8 @@ function X(t) {
         I(s, t, n), (e = !0);
       },
       p(t, e) {
-        const r = 1 & e ? N(n, [V(t[1])]) : {};
-        s.$set(r);
+        const a = 1 & e ? N(n, [V(t[1])]) : {};
+        s.$set(a);
       },
       i(t) {
         e || (f(s.$$.fragment, t), (e = !0));
@@ -435,8 +435,8 @@ function Y(t) {
     l(t) {
       n && n.l(t), (s = D());
     },
-    m(t, r) {
-      n && n.m(t, r), l(t, s, r), (e = !0);
+    m(t, a) {
+      n && n.m(t, a), l(t, s, a), (e = !0);
     },
     p(t, [e]) {
       t[0]
@@ -527,8 +527,8 @@ function tt(t) {
     l(t) {
       n && n.l(t), (s = D());
     },
-    m(t, r) {
-      n && n.m(t, r), l(t, s, r), (e = !0);
+    m(t, a) {
+      n && n.m(t, a), l(t, s, a), (e = !0);
     },
     p: R,
     i(t) {
@@ -579,30 +579,30 @@ function nt(t) {
     (D = new C({ props: { $$slots: { default: [et] }, $$scope: { ctx: t } } })),
     {
       c() {
-        (s = r('section')),
-          (e = r('h2')),
-          (n = v(at)),
+        (s = a('section')),
+          (e = a('h2')),
+          (n = v(rt)),
           (i = d()),
-          (p = r('p')),
+          (p = a('p')),
           (u = v(ot)),
           (h = d()),
-          (m = r('pre')),
+          (m = a('pre')),
           (y = d()),
           $(D.$$.fragment),
           this.h();
       },
       l(t) {
-        s = a(t, 'SECTION', {});
-        var r = o(s);
-        e = a(r, 'H2', {});
+        s = r(t, 'SECTION', {});
+        var a = o(s);
+        e = r(a, 'H2', {});
         var l = o(e);
-        (n = E(l, at)), l.forEach(c), (i = w(r)), (p = a(r, 'P', {}));
+        (n = E(l, rt)), l.forEach(c), (i = w(a)), (p = r(a, 'P', {}));
         var f = o(p);
         (u = E(f, ot)),
           f.forEach(c),
-          r.forEach(c),
+          a.forEach(c),
           (h = w(t)),
-          (m = a(t, 'PRE', { class: !0 })),
+          (m = r(t, 'PRE', { class: !0 })),
           o(m).forEach(c),
           (y = w(t)),
           k(D.$$.fragment, t),
@@ -611,19 +611,19 @@ function nt(t) {
       h() {
         x(m, 'class', 'language-svelte');
       },
-      m(t, r) {
-        l(t, s, r),
+      m(t, a) {
+        l(t, s, a),
           b(s, e),
           b(e, n),
           b(s, i),
           b(s, p),
           b(p, u),
-          l(t, h, r),
-          l(t, m, r),
+          l(t, h, a),
+          l(t, m, a),
           (m.innerHTML =
             '<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">\n  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Referrals <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">\'@reuters-graphics/graphics-svelte-components\'</span><span class="token punctuation">;</span>\n</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>\n\n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Referrals</span> <span class="token punctuation">/></span></span></code>'),
-          l(t, y, r),
-          I(D, t, r),
+          l(t, y, a),
+          I(D, t, a),
           (R = !0);
       },
       p(t, [s]) {
@@ -642,15 +642,15 @@ function nt(t) {
     }
   );
 }
-const rt = {
+const at = {
     title: 'Referrals',
     description: 'Add a referrals bar with recent graphics stories.',
     slug: 'referrals',
   },
-  { title: at, description: ot, slug: ct } = rt;
+  { title: rt, description: ot, slug: ct } = at;
 export default class extends t {
   constructor(t) {
     super(), s(this, t, null, nt, e, {});
   }
 }
-export { rt as metadata };
+export { at as metadata };

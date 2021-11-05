@@ -28,7 +28,7 @@ import {
   v as E,
 } from './vendor-927c0fc0.js';
 import { D as z } from './index-38e47fc4.js';
-import { g as A } from './@component-docs-51cb096e.js';
+import { g as A } from './@component-docs-0842da4b.js';
 import './paths-6758d194.js';
 function O(s) {
   let a, n;
