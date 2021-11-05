@@ -125,6 +125,9 @@ var riveted = (function () {
     // Page visibility listeners
     addListener(document, 'visibilitychange', visibilityChange);
     addListener(document, 'webkitvisibilitychange', visibilityChange);
+    
+    //sends initial zero value
+    sendEvent(0);
   }
 
   /*
