@@ -46,7 +46,7 @@ import { a as q, b as z } from './paths-6758d194.js';
 const B = (t = '') => e(q, t);
 var O = {
   name: '@reuters-graphics/graphics-svelte-components',
-  version: '0.1.41',
+  version: '0.1.42',
   type: 'module',
   private: !1,
   homepage: 'https://reuters-graphics.github.io/graphics-svelte-components',

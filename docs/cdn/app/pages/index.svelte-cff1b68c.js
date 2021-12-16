@@ -20,8 +20,8 @@ import {
   c as v,
   a as E,
   g as w,
-  b as C,
-  H as b,
+  b,
+  H as C,
   L as z,
   I as j,
 } from '../chunks/vendor-54feeb2f.js';
@@ -30,7 +30,7 @@ import {
   N as S,
   M as k,
   c as x,
-} from '../chunks/@component-docs-f1e600f2.js';
+} from '../chunks/@component-docs-e19b5d4a.js';
 import { b as L } from '../chunks/paths-6758d194.js';
 function R(s) {
   let e, t;
@@ -105,12 +105,12 @@ function A(s) {
             (a = w(o, n)), o.forEach(m), r.forEach(m), this.h();
           },
           h() {
-            C(t, 'href', (r = `${L}/components/${s[0].slug}/`)),
-              C(t, 'class', 'svelte-1iw9fdo'),
-              C(e, 'class', 'svelte-1iw9fdo');
+            b(t, 'href', (r = `${L}/components/${s[0].slug}/`)),
+              b(t, 'class', 'svelte-1iw9fdo'),
+              b(e, 'class', 'svelte-1iw9fdo');
           },
           m(s, r) {
-            g(s, e, r), b(e, t), b(t, a);
+            g(s, e, r), C(e, t), C(t, a);
           },
           p: j,
           d(s) {
@@ -208,9 +208,9 @@ function G(s) {
       g.forEach(m), l.forEach(m), n.forEach(m), this.h();
     },
     h() {
-      C(T, 'class', 'svelte-1iw9fdo'),
-        C(O, 'class', 'svelte-1iw9fdo'),
-        C(M, 'class', 'svelte-1iw9fdo');
+      b(T, 'class', 'svelte-1iw9fdo'),
+        b(O, 'class', 'svelte-1iw9fdo'),
+        b(M, 'class', 'svelte-1iw9fdo');
     },
     m(s, n) {
       l(e, s, n),
@@ -220,16 +220,16 @@ function G(s) {
         l(h, s, n),
         g(s, j, n),
         g(s, L, n),
-        b(L, R),
-        b(R, T),
+        C(L, R),
+        C(R, T),
         l(G, T, null),
-        b(T, H),
-        b(R, N),
-        b(R, O),
-        b(O, P),
-        b(P, J),
-        b(R, K),
-        b(R, M);
+        C(T, H),
+        C(R, N),
+        C(R, O),
+        C(O, P),
+        C(P, J),
+        C(R, K),
+        C(R, M);
       for (let e = 0; e < B.length; e += 1) B[e].m(M, null);
       U = !0;
     },

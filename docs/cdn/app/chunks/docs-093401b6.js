@@ -21,8 +21,8 @@ import {
   m as k,
   n as w,
   g as E,
-  b as x,
-  H as b,
+  b,
+  H as x,
   o as I,
   h as y,
   v as j,
@@ -37,7 +37,7 @@ import {
   B,
 } from './vendor-54feeb2f.js';
 import { D as C } from './index-c7a36b9c.js';
-import './@component-docs-f1e600f2.js';
+import './@component-docs-e19b5d4a.js';
 import './paths-6758d194.js';
 const G = (t) => ({ intersecting: 1 & t }),
   M = (t) => ({ intersecting: t[0] });
@@ -153,7 +153,7 @@ function q(t) {
       (s = r(t, 'DIV', { class: !0 })), o(s).forEach(c), this.h();
     },
     h() {
-      x(s, 'class', 'image svelte-13n58v0');
+      b(s, 'class', 'image svelte-13n58v0');
     },
     m(t, e) {
       l(t, s, e);
@@ -174,8 +174,8 @@ function F(t) {
       (s = r(t, 'DIV', { class: !0, style: !0 })), o(s).forEach(c), this.h();
     },
     h() {
-      x(s, 'class', 'image svelte-13n58v0'),
-        x(s, 'style', (e = `background-image: url(${t[1]});`));
+      b(s, 'class', 'image svelte-13n58v0'),
+        b(s, 'style', (e = `background-image: url(${t[1]});`));
     },
     m(t, e) {
       l(t, s, e);
@@ -183,7 +183,7 @@ function F(t) {
     p(t, n) {
       2 & n &&
         e !== (e = `background-image: url(${t[1]});`) &&
-        x(s, 'style', e);
+        b(s, 'style', e);
     },
     d(t) {
       t && c(s);
@@ -253,18 +253,18 @@ function W(t) {
         (u = E(g, t[2])), g.forEach(c), f.forEach(c), l.forEach(c), this.h();
       },
       h() {
-        x(e, 'href', t[0]), x(s, 'class', 'referral'), x(s, 'title', t[3]);
+        b(e, 'href', t[0]), b(s, 'class', 'referral'), b(s, 'title', t[3]);
       },
       m(t, a) {
-        l(t, s, a), b(s, e), I(n, e, null), b(e, i), b(e, p), b(p, u), (h = !0);
+        l(t, s, a), x(s, e), I(n, e, null), x(e, i), x(e, p), x(p, u), (h = !0);
       },
       p(t, [a]) {
         const r = {};
         50 & a && (r.$$scope = { dirty: a, ctx: t }),
           n.$set(r),
           (!h || 4 & a) && y(u, t[2]),
-          (!h || 1 & a) && x(e, 'href', t[0]),
-          (!h || 8 & a) && x(s, 'title', t[3]);
+          (!h || 1 & a) && b(e, 'href', t[0]),
+          (!h || 8 & a) && b(s, 'title', t[3]);
       },
       i(t) {
         h || (f(n.$$.fragment, t), (h = !0));
@@ -347,18 +347,18 @@ function Q(t) {
         (i =
           'https://graphics.thomsonreuters.com/style-assets/images/logos/reuters-logo/svg/logo-color.svg')
       ) ||
-        x(
+        b(
           n,
           'src',
           'https://graphics.thomsonreuters.com/style-assets/images/logos/reuters-logo/svg/logo-color.svg'
         ),
-        x(n, 'alt', ''),
-        x(e, 'class', 'svelte-1dfql50'),
-        x(u, 'class', 'referral-rail row'),
-        x(s, 'class', 'referral-container');
+        b(n, 'alt', ''),
+        b(e, 'class', 'svelte-1dfql50'),
+        b(u, 'class', 'referral-rail row'),
+        b(s, 'class', 'referral-container');
     },
     m(t, a) {
-      l(t, s, a), b(s, e), b(e, n), b(s, p), b(s, u);
+      l(t, s, a), x(s, e), x(e, n), x(s, p), x(s, u);
       for (let s = 0; s < $.length; s += 1) $[s].m(u, null);
       h = !0;
     },
@@ -609,15 +609,15 @@ function nt(t) {
           this.h();
       },
       h() {
-        x(m, 'class', 'language-svelte');
+        b(m, 'class', 'language-svelte');
       },
       m(t, a) {
         l(t, s, a),
-          b(s, e),
-          b(e, n),
-          b(s, i),
-          b(s, p),
-          b(p, u),
+          x(s, e),
+          x(e, n),
+          x(s, i),
+          x(s, p),
+          x(p, u),
           l(t, h, a),
           l(t, m, a),
           (m.innerHTML =

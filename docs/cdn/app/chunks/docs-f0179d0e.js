@@ -1,6 +1,6 @@
 import {
-  S as i,
-  i as a,
+  S as a,
+  i,
   s as r,
   a7 as s,
   a6 as t,
@@ -36,70 +36,70 @@ import {
   h as R,
 } from './vendor-54feeb2f.js';
 import { D as z } from './index-c7a36b9c.js';
-import './@component-docs-f1e600f2.js';
+import './@component-docs-e19b5d4a.js';
 import './paths-6758d194.js';
-const I = (i) => ({
-    scrollerProgress: 1 & i,
-    scrollerOffset: 4 & i,
-    scrollerIndex: 2 & i,
-    currentFrame: 128 & i,
-    currentSeconds: 256 & i,
-    durationFrames: 64 & i,
-    durationSeconds: 32 & i,
+const I = (a) => ({
+    scrollerProgress: 1 & a,
+    scrollerOffset: 4 & a,
+    scrollerIndex: 2 & a,
+    currentFrame: 128 & a,
+    currentSeconds: 256 & a,
+    durationFrames: 64 & a,
+    durationSeconds: 32 & a,
   }),
-  T = (i) => ({
-    scrollerProgress: i[0],
-    scrollerOffset: i[2],
-    scrollerIndex: i[1],
-    currentFrame: i[7],
-    currentSeconds: i[8],
-    durationFrames: i[6],
-    durationSeconds: i[5],
+  T = (a) => ({
+    scrollerProgress: a[0],
+    scrollerOffset: a[2],
+    scrollerIndex: a[1],
+    currentFrame: a[7],
+    currentSeconds: a[8],
+    durationFrames: a[6],
+    durationSeconds: a[5],
   });
-function L(i) {
-  let a;
-  const r = i[11]['background:before'],
-    s = M(r, i, i[16], T);
+function L(a) {
+  let i;
+  const r = a[11]['background:before'],
+    s = M(r, a, a[16], T);
   return {
     c() {
       s && s.c();
     },
-    l(i) {
-      s && s.l(i);
+    l(a) {
+      s && s.l(a);
     },
-    m(i, r) {
-      s && s.m(i, r), (a = !0);
+    m(a, r) {
+      s && s.m(a, r), (i = !0);
     },
-    p(i, t) {
+    p(a, t) {
       s &&
         s.p &&
-        (!a || 66023 & t) &&
-        u(s, r, i, i[16], a ? g(r, i[16], t, I) : f(i[16]), T);
+        (!i || 66023 & t) &&
+        u(s, r, a, a[16], i ? g(r, a[16], t, I) : f(a[16]), T);
     },
-    i(i) {
-      a || (d(s, i), (a = !0));
+    i(a) {
+      i || (d(s, a), (i = !0));
     },
-    o(i) {
-      h(s, i), (a = !1);
+    o(a) {
+      h(s, a), (i = !1);
     },
-    d(i) {
-      s && s.d(i);
+    d(a) {
+      s && s.d(a);
     },
   };
 }
-function j(i) {
-  let a,
+function j(a) {
+  let i,
     r,
     s,
     t,
-    o = i[9]['background:before'] && L(i);
+    o = a[9]['background:before'] && L(a);
   return {
     c() {
-      (a = E('div')), o && o.c(), (r = D()), (s = E('div')), this.h();
+      (i = E('div')), o && o.c(), (r = D()), (s = E('div')), this.h();
     },
-    l(i) {
-      a = G(i, 'DIV', { class: !0, slot: !0 });
-      var t = A(a);
+    l(a) {
+      i = G(a, 'DIV', { class: !0, slot: !0 });
+      var t = A(i);
       o && o.l(t),
         (r = V(t)),
         (s = G(t, 'DIV', {})),
@@ -108,16 +108,16 @@ function j(i) {
         this.h();
     },
     h() {
-      b(a, 'class', 'background svelte-e2e2s9'), b(a, 'slot', 'background');
+      b(i, 'class', 'background svelte-e2e2s9'), b(i, 'slot', 'background');
     },
     m(e, n) {
-      v(e, a, n), o && o.m(a, null), S(a, r), S(a, s), i[12](s), (t = !0);
+      v(e, i, n), o && o.m(i, null), S(i, r), S(i, s), a[12](s), (t = !0);
     },
-    p(i, s) {
-      i[9]['background:before']
+    p(a, s) {
+      a[9]['background:before']
         ? o
-          ? (o.p(i, s), 512 & s && d(o, 1))
-          : ((o = L(i)), o.c(), d(o, 1), o.m(a, r))
+          ? (o.p(a, s), 512 & s && d(o, 1))
+          : ((o = L(a)), o.c(), d(o, 1), o.m(i, r))
         : o &&
           (P(),
           h(o, 1, 1, () => {
@@ -125,108 +125,108 @@ function j(i) {
           }),
           F());
     },
-    i(i) {
+    i(a) {
       t || (d(o), (t = !0));
     },
-    o(i) {
+    o(a) {
       h(o), (t = !1);
     },
     d(r) {
-      r && B(a), o && o.d(), i[12](null);
+      r && B(i), o && o.d(), a[12](null);
     },
   };
 }
-function O(i) {
-  let a, r, s;
+function O(a) {
+  let i, r, s;
   return {
     c() {
-      (a = E('div')), (r = E('section')), this.h();
+      (i = E('div')), (r = E('section')), this.h();
     },
-    l(i) {
-      a = G(i, 'DIV', { class: !0, slot: !0, style: !0 });
-      var s = A(a);
+    l(a) {
+      i = G(a, 'DIV', { class: !0, slot: !0, style: !0 });
+      var s = A(i);
       (r = G(s, 'SECTION', {})), A(r).forEach(B), s.forEach(B), this.h();
     },
     h() {
-      b(a, 'class', 'foreground'),
-        b(a, 'slot', 'foreground'),
-        b(a, 'style', (s = `height: ${i[3]}px;`));
+      b(i, 'class', 'foreground'),
+        b(i, 'slot', 'foreground'),
+        b(i, 'style', (s = `height: ${a[3]}px;`));
     },
-    m(i, s) {
-      v(i, a, s), S(a, r);
+    m(a, s) {
+      v(a, i, s), S(i, r);
     },
-    p(i, r) {
-      8 & r && s !== (s = `height: ${i[3]}px;`) && b(a, 'style', s);
+    p(a, r) {
+      8 & r && s !== (s = `height: ${a[3]}px;`) && b(i, 'style', s);
     },
-    d(i) {
-      i && B(a);
+    d(a) {
+      a && B(i);
     },
   };
 }
-function N(i) {
-  let a, r, p, l, k;
-  function y(a) {
-    i[13](a);
+function N(a) {
+  let i, r, p, l, k;
+  function y(i) {
+    a[13](i);
   }
-  function u(a) {
-    i[14](a);
+  function u(i) {
+    a[14](i);
   }
-  function f(a) {
-    i[15](a);
+  function f(i) {
+    a[15](i);
   }
   let g = {
     $$slots: { foreground: [O], background: [j] },
-    $$scope: { ctx: i },
+    $$scope: { ctx: a },
   };
   return (
-    void 0 !== i[0] && (g.progress = i[0]),
-    void 0 !== i[1] && (g.index = i[1]),
-    void 0 !== i[2] && (g.offset = i[2]),
-    (a = new s({ props: g })),
-    t.push(() => o(a, 'progress', y)),
-    t.push(() => o(a, 'index', u)),
-    t.push(() => o(a, 'offset', f)),
+    void 0 !== a[0] && (g.progress = a[0]),
+    void 0 !== a[1] && (g.index = a[1]),
+    void 0 !== a[2] && (g.offset = a[2]),
+    (i = new s({ props: g })),
+    t.push(() => o(i, 'progress', y)),
+    t.push(() => o(i, 'index', u)),
+    t.push(() => o(i, 'offset', f)),
     {
       c() {
-        e(a.$$.fragment);
+        e(i.$$.fragment);
       },
-      l(i) {
-        n(a.$$.fragment, i);
+      l(a) {
+        n(i.$$.fragment, a);
       },
-      m(i, r) {
-        x(a, i, r), (k = !0);
+      m(a, r) {
+        x(i, a, r), (k = !0);
       },
-      p(i, [s]) {
+      p(a, [s]) {
         const t = {};
-        66559 & s && (t.$$scope = { dirty: s, ctx: i }),
-          !r && 1 & s && ((r = !0), (t.progress = i[0]), m(() => (r = !1))),
-          !p && 2 & s && ((p = !0), (t.index = i[1]), m(() => (p = !1))),
-          !l && 4 & s && ((l = !0), (t.offset = i[2]), m(() => (l = !1))),
-          a.$set(t);
+        66559 & s && (t.$$scope = { dirty: s, ctx: a }),
+          !r && 1 & s && ((r = !0), (t.progress = a[0]), m(() => (r = !1))),
+          !p && 2 & s && ((p = !0), (t.index = a[1]), m(() => (p = !1))),
+          !l && 4 & s && ((l = !0), (t.offset = a[2]), m(() => (l = !1))),
+          i.$set(t);
       },
-      i(i) {
-        k || (d(a.$$.fragment, i), (k = !0));
+      i(a) {
+        k || (d(i.$$.fragment, a), (k = !0));
       },
-      o(i) {
-        h(a.$$.fragment, i), (k = !1);
+      o(a) {
+        h(i.$$.fragment, a), (k = !1);
       },
-      d(i) {
-        c(a, i);
+      d(a) {
+        c(i, a);
       },
     }
   );
 }
-function C(i, a, r) {
-  let { $$slots: s = {}, $$scope: o } = a;
+function C(a, i, r) {
+  let { $$slots: s = {}, $$scope: o } = i;
   const e = p(s);
   let n,
     x,
     m,
-    { lottieData: d } = a,
-    { height: h = 1e4 } = a,
-    { scrollerProgress: c } = a,
-    { scrollerIndex: u } = a,
-    { scrollerOffset: f } = a,
+    { lottieData: d } = i,
+    { height: h = 1e4 } = i,
+    { scrollerProgress: c } = i,
+    { scrollerIndex: u } = i,
+    { scrollerOffset: f } = i,
     g = 0,
     E = 0,
     D = 0,
@@ -254,25 +254,25 @@ function C(i, a, r) {
     y(() => {
       if (!x) return;
       m && window.cancelAnimationFrame(m);
-      const i = Math.min(Math.max(0, c), 1),
-        a = Math.round(i * E);
+      const a = Math.min(Math.max(0, c), 1),
+        i = Math.round(a * E);
       r(7, (G = x.currentFrame));
       const s = () => {
-        G !== a &&
-          (r(7, a < G ? (G -= 1) : (G += 1)),
+        G !== i &&
+          (r(7, i < G ? (G -= 1) : (G += 1)),
           r(8, (A = G * D)),
           x.goToAndStop(G, !0),
           (m = window.requestAnimationFrame(s)));
       };
       m = window.requestAnimationFrame(s);
     }),
-    (i.$$set = (i) => {
-      'lottieData' in i && r(10, (d = i.lottieData)),
-        'height' in i && r(3, (h = i.height)),
-        'scrollerProgress' in i && r(0, (c = i.scrollerProgress)),
-        'scrollerIndex' in i && r(1, (u = i.scrollerIndex)),
-        'scrollerOffset' in i && r(2, (f = i.scrollerOffset)),
-        '$$scope' in i && r(16, (o = i.$$scope));
+    (a.$$set = (a) => {
+      'lottieData' in a && r(10, (d = a.lottieData)),
+        'height' in a && r(3, (h = a.height)),
+        'scrollerProgress' in a && r(0, (c = a.scrollerProgress)),
+        'scrollerIndex' in a && r(1, (u = a.scrollerIndex)),
+        'scrollerOffset' in a && r(2, (f = a.scrollerOffset)),
+        '$$scope' in a && r(16, (o = a.$$scope));
     }),
     [
       c,
@@ -287,28 +287,28 @@ function C(i, a, r) {
       e,
       d,
       s,
-      function (i) {
-        t[i ? 'unshift' : 'push'](() => {
-          (n = i), r(4, n);
+      function (a) {
+        t[a ? 'unshift' : 'push'](() => {
+          (n = a), r(4, n);
         });
       },
-      function (i) {
-        (c = i), r(0, c);
+      function (a) {
+        (c = a), r(0, c);
       },
-      function (i) {
-        (u = i), r(1, u);
+      function (a) {
+        (u = a), r(1, u);
       },
-      function (i) {
-        (f = i), r(2, f);
+      function (a) {
+        (f = a), r(2, f);
       },
       o,
     ]
   );
 }
-class W extends i {
-  constructor(i) {
+class W extends a {
+  constructor(a) {
     super(),
-      a(this, i, C, N, r, {
+      i(this, a, C, N, r, {
         lottieData: 10,
         height: 3,
         scrollerProgress: 0,
@@ -5567,8 +5567,8 @@ var q = {
     },
   ],
 };
-function H(i) {
-  let a,
+function H(a) {
+  let i,
     r,
     s,
     t,
@@ -5586,14 +5586,14 @@ function H(i) {
     y,
     u,
     f,
-    g = Math.round(100 * Math.max(i[0], 0)) + '',
-    P = Math.round(i[2] * Math.max(i[0], 0)) + '',
-    F = i[2] + '',
-    M = Math.round(i[1] * Math.max(i[0], 0) * 100) / 100 + '',
-    z = Math.round(100 * i[1]) / 100 + '';
+    g = Math.round(100 * Math.max(a[0], 0)) + '',
+    P = Math.round(a[2] * Math.max(a[0], 0)) + '',
+    F = a[2] + '',
+    M = Math.round(a[1] * Math.max(a[0], 0) * 100) / 100 + '',
+    z = Math.round(100 * a[1]) / 100 + '';
   return {
     c() {
-      (a = E('div')),
+      (i = E('div')),
         (r = E('ul')),
         (s = E('li')),
         (t = w('Progress: ')),
@@ -5613,9 +5613,9 @@ function H(i) {
         (f = w('s')),
         this.h();
     },
-    l(i) {
-      a = G(i, 'DIV', { slot: !0, class: !0 });
-      var E = A(a);
+    l(a) {
+      i = G(a, 'DIV', { slot: !0, class: !0 });
+      var E = A(i);
       r = G(E, 'UL', { class: !0 });
       var D = A(r);
       s = G(D, 'LI', {});
@@ -5646,12 +5646,12 @@ function H(i) {
     },
     h() {
       b(r, 'class', 'svelte-1v5an3q'),
-        b(a, 'slot', 'background:before'),
-        b(a, 'class', 'background-before svelte-1v5an3q');
+        b(i, 'slot', 'background:before'),
+        b(i, 'class', 'background-before svelte-1v5an3q');
     },
-    m(i, g) {
-      v(i, a, g),
-        S(a, r),
+    m(a, g) {
+      v(a, i, g),
+        S(i, r),
         S(r, s),
         S(s, t),
         S(s, o),
@@ -5669,24 +5669,24 @@ function H(i) {
         S(l, u),
         S(l, f);
     },
-    p(i, a) {
-      1 & a && g !== (g = Math.round(100 * Math.max(i[0], 0)) + '') && R(o, g),
-        5 & a &&
-          P !== (P = Math.round(i[2] * Math.max(i[0], 0)) + '') &&
+    p(a, i) {
+      1 & i && g !== (g = Math.round(100 * Math.max(a[0], 0)) + '') && R(o, g),
+        5 & i &&
+          P !== (P = Math.round(a[2] * Math.max(a[0], 0)) + '') &&
           R(d, P),
-        4 & a && F !== (F = i[2] + '') && R(c, F),
-        3 & a &&
-          M !== (M = Math.round(i[1] * Math.max(i[0], 0) * 100) / 100 + '') &&
+        4 & i && F !== (F = a[2] + '') && R(c, F),
+        3 & i &&
+          M !== (M = Math.round(a[1] * Math.max(a[0], 0) * 100) / 100 + '') &&
           R(k, M),
-        2 & a && z !== (z = Math.round(100 * i[1]) / 100 + '') && R(u, z);
+        2 & i && z !== (z = Math.round(100 * a[1]) / 100 + '') && R(u, z);
     },
-    d(i) {
-      i && B(a);
+    d(a) {
+      a && B(i);
     },
   };
 }
-function _(i) {
-  let a, r, s;
+function _(a) {
+  let i, r, s;
   return (
     (r = new W({
       props: {
@@ -5695,88 +5695,88 @@ function _(i) {
           'background:before': [
             H,
             ({
-              scrollerProgress: i,
-              durationSeconds: a,
+              scrollerProgress: a,
+              durationSeconds: i,
               durationFrames: r,
-            }) => ({ 0: i, 1: a, 2: r }),
-            ({ scrollerProgress: i, durationSeconds: a, durationFrames: r }) =>
-              (i ? 1 : 0) | (a ? 2 : 0) | (r ? 4 : 0),
+            }) => ({ 0: a, 1: i, 2: r }),
+            ({ scrollerProgress: a, durationSeconds: i, durationFrames: r }) =>
+              (a ? 1 : 0) | (i ? 2 : 0) | (r ? 4 : 0),
           ],
         },
-        $$scope: { ctx: i },
+        $$scope: { ctx: a },
       },
     })),
     {
       c() {
-        (a = E('section')), e(r.$$.fragment), this.h();
+        (i = E('section')), e(r.$$.fragment), this.h();
       },
-      l(i) {
-        a = G(i, 'SECTION', { class: !0 });
-        var s = A(a);
+      l(a) {
+        i = G(a, 'SECTION', { class: !0 });
+        var s = A(i);
         n(r.$$.fragment, s), s.forEach(B), this.h();
       },
       h() {
-        b(a, 'class', 'graphic');
+        b(i, 'class', 'graphic');
       },
-      m(i, t) {
-        v(i, a, t), x(r, a, null), (s = !0);
+      m(a, t) {
+        v(a, i, t), x(r, i, null), (s = !0);
       },
-      p(i, a) {
+      p(a, i) {
         const s = {};
-        15 & a && (s.$$scope = { dirty: a, ctx: i }), r.$set(s);
+        15 & i && (s.$$scope = { dirty: i, ctx: a }), r.$set(s);
       },
-      i(i) {
-        s || (d(r.$$.fragment, i), (s = !0));
+      i(a) {
+        s || (d(r.$$.fragment, a), (s = !0));
       },
-      o(i) {
-        h(r.$$.fragment, i), (s = !1);
+      o(a) {
+        h(r.$$.fragment, a), (s = !1);
       },
-      d(i) {
-        i && B(a), c(r);
+      d(a) {
+        a && B(i), c(r);
       },
     }
   );
 }
-function U(i) {
-  let a, r, s, t, o, m;
+function U(a) {
+  let i, r, s, t, o, m;
   return (
     (o = new z({
-      props: { fluid: !0, $$slots: { default: [_] }, $$scope: { ctx: i } },
+      props: { fluid: !0, $$slots: { default: [_] }, $$scope: { ctx: a } },
     })),
     {
       c() {
-        (a = E('section')),
+        (i = E('section')),
           (r = E('h2')),
           (s = w(J)),
           (t = D()),
           e(o.$$.fragment);
       },
-      l(i) {
-        a = G(i, 'SECTION', {});
-        var e = A(a);
+      l(a) {
+        i = G(a, 'SECTION', {});
+        var e = A(i);
         r = G(e, 'H2', {});
         var x = A(r);
         (s = $(x, J)),
           x.forEach(B),
           e.forEach(B),
-          (t = V(i)),
-          n(o.$$.fragment, i);
+          (t = V(a)),
+          n(o.$$.fragment, a);
       },
-      m(i, e) {
-        v(i, a, e), S(a, r), S(r, s), v(i, t, e), x(o, i, e), (m = !0);
+      m(a, e) {
+        v(a, i, e), S(i, r), S(r, s), v(a, t, e), x(o, a, e), (m = !0);
       },
-      p(i, [a]) {
+      p(a, [i]) {
         const r = {};
-        8 & a && (r.$$scope = { dirty: a, ctx: i }), o.$set(r);
+        8 & i && (r.$$scope = { dirty: i, ctx: a }), o.$set(r);
       },
-      i(i) {
-        m || (d(o.$$.fragment, i), (m = !0));
+      i(a) {
+        m || (d(o.$$.fragment, a), (m = !0));
       },
-      o(i) {
-        h(o.$$.fragment, i), (m = !1);
+      o(a) {
+        h(o.$$.fragment, a), (m = !1);
       },
-      d(i) {
-        i && B(a), i && B(t), c(o, i);
+      d(a) {
+        a && B(i), a && B(t), c(o, a);
       },
     }
   );
@@ -5787,9 +5787,9 @@ const Z = {
     slug: 'lottie-scroller',
   },
   { title: J, description: K, slug: Q } = Z;
-export default class extends i {
-  constructor(i) {
-    super(), a(this, i, null, U, r, {});
+export default class extends a {
+  constructor(a) {
+    super(), i(this, a, null, U, r, {});
   }
 }
 export { Z as metadata };

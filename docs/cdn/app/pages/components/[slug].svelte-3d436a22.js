@@ -1,8 +1,8 @@
 import { _ as s } from '../../chunks/preload-helper-438f94a3.js';
 import {
   S as r,
-  i as c,
-  s as e,
+  i as e,
+  s as c,
   j as t,
   k as o,
   l as a,
@@ -17,8 +17,8 @@ import {
   d as E,
   A as f,
   z as h,
-  e as $,
-  t as b,
+  e as b,
+  t as $,
   c as v,
   a as k,
   g as x,
@@ -32,31 +32,31 @@ import {
   S as A,
   N as I,
   M as L,
-} from '../../chunks/@component-docs-f1e600f2.js';
+} from '../../chunks/@component-docs-e19b5d4a.js';
 import '../../chunks/paths-6758d194.js';
 function O(s) {
   let r,
-    c,
     e,
+    c,
     t,
     o = s[0].title + '';
   return {
     c() {
-      (r = $('div')), (c = b('> ')), (e = $('span')), (t = b(o)), this.h();
+      (r = b('div')), (e = $('> ')), (c = b('span')), (t = $(o)), this.h();
     },
     l(s) {
       r = v(s, 'DIV', { class: !0 });
       var a = k(r);
-      (c = x(a, '> ')), (e = v(a, 'SPAN', { class: !0 }));
-      var n = k(e);
+      (e = x(a, '> ')), (c = v(a, 'SPAN', { class: !0 }));
+      var n = k(c);
       (t = x(n, o)), n.forEach(E), a.forEach(E), this.h();
     },
     h() {
-      P(e, 'class', 'svelte-e8adws'),
+      P(c, 'class', 'svelte-e8adws'),
         P(r, 'class', 'breadcrumb font-display svelte-e8adws');
     },
     m(s, o) {
-      d(s, r, o), T(r, c), T(r, e), T(e, t);
+      d(s, r, o), T(r, e), T(r, c), T(c, t);
     },
     p(s, r) {
       1 & r && o !== (o = s[0].title + '') && j(t, o);
@@ -67,7 +67,7 @@ function O(s) {
   };
 }
 function V(s) {
-  let r, c, e, f, h, $, b, v, k;
+  let r, e, c, f, h, b, $, v, k;
   (r = new A({
     props: {
       seoTitle: `Reuters Graphics components - ${s[0].title}`,
@@ -79,97 +79,97 @@ function V(s) {
       hostname: 'reuters-graphics.github.io',
     },
   })),
-    (e = new I({ props: { $$slots: { default: [O] }, $$scope: { ctx: s } } })),
+    (c = new I({ props: { $$slots: { default: [O] }, $$scope: { ctx: s } } })),
     (h = new L({ props: { components: D } }));
   var x = s[1];
   return (
-    x && (b = new x({})),
+    x && ($ = new x({})),
     {
       c() {
         t(r.$$.fragment),
-          (c = o()),
-          t(e.$$.fragment),
+          (e = o()),
+          t(c.$$.fragment),
           (f = o()),
           t(h.$$.fragment),
-          ($ = o()),
-          b && t(b.$$.fragment),
+          (b = o()),
+          $ && t($.$$.fragment),
           (v = a());
       },
       l(s) {
         n(r.$$.fragment, s),
-          (c = _(s)),
-          n(e.$$.fragment, s),
+          (e = _(s)),
+          n(c.$$.fragment, s),
           (f = _(s)),
           n(h.$$.fragment, s),
-          ($ = _(s)),
-          b && n(b.$$.fragment, s),
+          (b = _(s)),
+          $ && n($.$$.fragment, s),
           (v = a());
       },
       m(s, t) {
         i(r, s, t),
-          d(s, c, t),
-          i(e, s, t),
+          d(s, e, t),
+          i(c, s, t),
           d(s, f, t),
           i(h, s, t),
-          d(s, $, t),
-          b && i(b, s, t),
+          d(s, b, t),
+          $ && i($, s, t),
           d(s, v, t),
           (k = !0);
       },
-      p(s, [c]) {
+      p(s, [e]) {
         const o = {};
-        1 & c && (o.seoTitle = `Reuters Graphics components - ${s[0].title}`),
-          1 & c && (o.seoDescription = s[0].description),
-          1 & c &&
+        1 & e && (o.seoTitle = `Reuters Graphics components - ${s[0].title}`),
+          1 & e && (o.seoDescription = s[0].description),
+          1 & e &&
             (o.shareTitle = `Reuters Graphics components - ${s[0].title}`),
-          1 & c && (o.shareDescription = s[0].description),
+          1 & e && (o.shareDescription = s[0].description),
           r.$set(o);
         const a = {};
         if (
-          (5 & c && (a.$$scope = { dirty: c, ctx: s }),
-          e.$set(a),
+          (5 & e && (a.$$scope = { dirty: e, ctx: s }),
+          c.$set(a),
           x !== (x = s[1]))
         ) {
-          if (b) {
+          if ($) {
             R();
-            const s = b;
+            const s = $;
             u(s.$$.fragment, 1, 0, () => {
               p(s, 1);
             }),
               l();
           }
           x
-            ? ((b = new x({})),
-              t(b.$$.fragment),
-              m(b.$$.fragment, 1),
-              i(b, v.parentNode, v))
-            : (b = null);
+            ? (($ = new x({})),
+              t($.$$.fragment),
+              m($.$$.fragment, 1),
+              i($, v.parentNode, v))
+            : ($ = null);
         }
       },
       i(s) {
         k ||
           (m(r.$$.fragment, s),
-          m(e.$$.fragment, s),
+          m(c.$$.fragment, s),
           m(h.$$.fragment, s),
-          b && m(b.$$.fragment, s),
+          $ && m($.$$.fragment, s),
           (k = !0));
       },
       o(s) {
         u(r.$$.fragment, s),
-          u(e.$$.fragment, s),
+          u(c.$$.fragment, s),
           u(h.$$.fragment, s),
-          b && u(b.$$.fragment, s),
+          $ && u($.$$.fragment, s),
           (k = !1);
       },
       d(s) {
         p(r, s),
-          s && E(c),
-          p(e, s),
+          s && E(e),
+          p(c, s),
           s && E(f),
           p(h, s),
-          s && E($),
+          s && E(b),
           s && E(v),
-          b && p(b, s);
+          $ && p($, s);
       },
     }
   );
@@ -177,12 +177,12 @@ function V(s) {
 async function g({ page: s }) {
   return { props: { metadata: D.find((r) => r.slug === s.params.slug) } };
 }
-function w(r, c, e) {
+function w(r, e, c) {
   let t,
-    { metadata: o } = c;
+    { metadata: o } = e;
   return (
     f(async () => {
-      e(
+      c(
         1,
         (t = (
           await (function (r) {
@@ -279,29 +279,29 @@ function w(r, c, e) {
                 );
               case '../../src/lib/Image/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-8632c184.js'),
+                  () => import('../../chunks/docs-0c9b3fe5.js'),
                   [
-                    'chunks/docs-8632c184.js',
+                    'chunks/docs-0c9b3fe5.js',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
                 );
               case '../../src/lib/LottieScroller/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-f941cb65.js'),
+                  () => import('../../chunks/docs-f0179d0e.js'),
                   [
-                    'chunks/docs-f941cb65.js',
+                    'chunks/docs-f0179d0e.js',
                     'assets/docs-4a88ca0e.css',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
@@ -328,14 +328,14 @@ function w(r, c, e) {
                 );
               case '../../src/lib/Referrals/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-6a4f396c.js'),
+                  () => import('../../chunks/docs-093401b6.js'),
                   [
-                    'chunks/docs-6a4f396c.js',
+                    'chunks/docs-093401b6.js',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
@@ -351,16 +351,16 @@ function w(r, c, e) {
                 );
               case '../../src/lib/Scroller/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-220f8811.js'),
+                  () => import('../../chunks/docs-0299386f.js'),
                   [
-                    'chunks/docs-220f8811.js',
+                    'chunks/docs-0299386f.js',
                     'assets/docs-58c35654.css',
                     'chunks/preload-helper-438f94a3.js',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
@@ -375,10 +375,10 @@ function w(r, c, e) {
                   ]
                 );
               default:
-                return new Promise(function (s, c) {
+                return new Promise(function (s, e) {
                   ('function' == typeof queueMicrotask
                     ? queueMicrotask
-                    : setTimeout)(c.bind(null, new Error('Unknown variable dynamic import: ' + r)));
+                    : setTimeout)(e.bind(null, new Error('Unknown variable dynamic import: ' + r)));
                 });
             }
           })(`../../src/lib/${o.path}/docs.svx`)
@@ -386,7 +386,7 @@ function w(r, c, e) {
       );
     }),
     h(async () => {
-      e(
+      c(
         1,
         (t = (
           await (function (r) {
@@ -483,29 +483,29 @@ function w(r, c, e) {
                 );
               case '../../src/lib/Image/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-8632c184.js'),
+                  () => import('../../chunks/docs-0c9b3fe5.js'),
                   [
-                    'chunks/docs-8632c184.js',
+                    'chunks/docs-0c9b3fe5.js',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
                 );
               case '../../src/lib/LottieScroller/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-f941cb65.js'),
+                  () => import('../../chunks/docs-f0179d0e.js'),
                   [
-                    'chunks/docs-f941cb65.js',
+                    'chunks/docs-f0179d0e.js',
                     'assets/docs-4a88ca0e.css',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
@@ -532,14 +532,14 @@ function w(r, c, e) {
                 );
               case '../../src/lib/Referrals/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-6a4f396c.js'),
+                  () => import('../../chunks/docs-093401b6.js'),
                   [
-                    'chunks/docs-6a4f396c.js',
+                    'chunks/docs-093401b6.js',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
@@ -555,16 +555,16 @@ function w(r, c, e) {
                 );
               case '../../src/lib/Scroller/docs.svx':
                 return s(
-                  () => import('../../chunks/docs-220f8811.js'),
+                  () => import('../../chunks/docs-0299386f.js'),
                   [
-                    'chunks/docs-220f8811.js',
+                    'chunks/docs-0299386f.js',
                     'assets/docs-58c35654.css',
                     'chunks/preload-helper-438f94a3.js',
                     'chunks/vendor-54feeb2f.js',
                     'assets/vendor-ba67f73c.css',
                     'chunks/index-c7a36b9c.js',
                     'assets/index-2df4dd7a.css',
-                    'chunks/@component-docs-f1e600f2.js',
+                    'chunks/@component-docs-e19b5d4a.js',
                     'assets/@component-docs-a9ace93b.css',
                     'chunks/paths-6758d194.js',
                   ]
@@ -579,10 +579,10 @@ function w(r, c, e) {
                   ]
                 );
               default:
-                return new Promise(function (s, c) {
+                return new Promise(function (s, e) {
                   ('function' == typeof queueMicrotask
                     ? queueMicrotask
-                    : setTimeout)(c.bind(null, new Error('Unknown variable dynamic import: ' + r)));
+                    : setTimeout)(e.bind(null, new Error('Unknown variable dynamic import: ' + r)));
                 });
             }
           })(`../../src/lib/${o.path}/docs.svx`)
@@ -590,14 +590,14 @@ function w(r, c, e) {
       );
     }),
     (r.$$set = (s) => {
-      'metadata' in s && e(0, (o = s.metadata));
+      'metadata' in s && c(0, (o = s.metadata));
     }),
     [o, t]
   );
 }
 export default class extends r {
   constructor(s) {
-    super(), c(this, s, w, V, e, { metadata: 0 });
+    super(), e(this, s, w, V, c, { metadata: 0 });
   }
 }
 export { g as load };
