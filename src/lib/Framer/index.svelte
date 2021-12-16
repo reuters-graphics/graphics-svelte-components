@@ -3,8 +3,7 @@
   import { faMinus } from '@fortawesome/free-solid-svg-icons';
   import { faPlus } from '@fortawesome/free-solid-svg-icons';
   import { faDesktop } from '@fortawesome/free-solid-svg-icons';
-  import { onMount } from 'svelte';
-  import { browser } from '$app/env';
+  import { onMount, afterUpdate } from 'svelte';
   import pym from 'pym.js';
   import urljoin from 'proper-url-join';
 
@@ -32,6 +31,10 @@
 
   onMount(() => {
     width = parseInt(localStorage.getItem('previewWidth')) || 600;
+    reframe(activeEmbed);
+  });
+
+  afterUpdate(() => {
     reframe(activeEmbed);
   });
 </script>
