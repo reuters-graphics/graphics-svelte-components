@@ -6,8 +6,8 @@ import {
   K as r,
   j as n,
   m as o,
-  o as c,
-  x as l,
+  o as l,
+  x as c,
   u as i,
   v as f,
   l as h,
@@ -24,13 +24,13 @@ import {
   H as b,
   L as z,
   I as j,
-} from '../chunks/vendor-927c0fc0.js';
+} from '../chunks/vendor-54feeb2f.js';
 import {
   S as I,
   N as S,
   M as k,
   c as x,
-} from '../chunks/@component-docs-0842da4b.js';
+} from '../chunks/@component-docs-f1e600f2.js';
 import { b as L } from '../chunks/paths-6758d194.js';
 function R(s) {
   let e, t;
@@ -46,14 +46,14 @@ function R(s) {
         o(e.$$.fragment, s);
       },
       m(s, a) {
-        c(e, s, a), (t = !0);
+        l(e, s, a), (t = !0);
       },
       p(s, [t]) {
         const a = {};
         1 & t && (a.size = s[0]), e.$set(a);
       },
       i(s) {
-        t || (l(e.$$.fragment, s), (t = !0));
+        t || (c(e.$$.fragment, s), (t = !0));
       },
       o(s) {
         i(e.$$.fragment, s), (t = !1);
@@ -187,25 +187,25 @@ function G(s) {
         (L = v(s, 'ARTICLE', {}));
       var n = E(L);
       R = v(n, 'SECTION', {});
-      var c = E(R);
-      T = v(c, 'H1', { class: !0 });
-      var l = E(T);
-      o(G.$$.fragment, l),
-        (H = w(l, ' Components')),
-        l.forEach(m),
-        (N = d(c)),
-        (O = v(c, 'PRE', { class: !0 }));
+      var l = E(R);
+      T = v(l, 'H1', { class: !0 });
+      var c = E(T);
+      o(G.$$.fragment, c),
+        (H = w(c, ' Components')),
+        c.forEach(m),
+        (N = d(l)),
+        (O = v(l, 'PRE', { class: !0 }));
       var i = E(O);
       P = v(i, 'CODE', {});
       var f = E(P);
       (J = w(f, 'yarn add @reuters-graphics/graphics-svelte-components')),
         f.forEach(m),
         i.forEach(m),
-        (K = d(c)),
-        (M = v(c, 'UL', { class: !0 }));
+        (K = d(l)),
+        (M = v(l, 'UL', { class: !0 }));
       var g = E(M);
       for (let e = 0; e < B.length; e += 1) B[e].l(g);
-      g.forEach(m), c.forEach(m), n.forEach(m), this.h();
+      g.forEach(m), l.forEach(m), n.forEach(m), this.h();
     },
     h() {
       C(T, 'class', 'svelte-1iw9fdo'),
@@ -213,16 +213,16 @@ function G(s) {
         C(M, 'class', 'svelte-1iw9fdo');
     },
     m(s, n) {
-      c(e, s, n),
+      l(e, s, n),
         g(s, t, n),
-        c(a, s, n),
+        l(a, s, n),
         g(s, r, n),
-        c(h, s, n),
+        l(h, s, n),
         g(s, j, n),
         g(s, L, n),
         b(L, R),
         b(R, T),
-        c(G, T, null),
+        l(G, T, null),
         b(T, H),
         b(R, N),
         b(R, O),
@@ -246,10 +246,10 @@ function G(s) {
     },
     i(s) {
       U ||
-        (l(e.$$.fragment, s),
-        l(a.$$.fragment, s),
-        l(h.$$.fragment, s),
-        l(G.$$.fragment, s),
+        (c(e.$$.fragment, s),
+        c(a.$$.fragment, s),
+        c(h.$$.fragment, s),
+        c(G.$$.fragment, s),
         (U = !0));
     },
     o(s) {

@@ -20,8 +20,8 @@ import {
   x as v,
   u as d,
   v as w,
-} from './vendor-927c0fc0.js';
-import { D as E } from './index-38e47fc4.js';
+} from './vendor-54feeb2f.js';
+import { D as E } from './index-c7a36b9c.js';
 function y(s) {
   let a, n, k, m, $, v, d, w, E, y;
   return {
@@ -95,7 +95,7 @@ class x extends s {
     super(), a(this, s, null, y, n, {});
   }
 }
-function P(s) {
+function b(s) {
   let a, n;
   return (
     (a = new x({})),
@@ -121,19 +121,19 @@ function P(s) {
     }
   );
 }
-function j(s) {
-  let a, n, g, y, x, j, A, F, R, H, O;
+function P(s) {
+  let a, n, g, y, x, P, j, F, R, H, O;
   return (
-    (H = new E({ props: { $$slots: { default: [P] }, $$scope: { ctx: s } } })),
+    (H = new E({ props: { $$slots: { default: [b] }, $$scope: { ctx: s } } })),
     {
       c() {
         (a = t('section')),
           (n = t('h2')),
-          (g = e(T)),
+          (g = e(A)),
           (y = o()),
           (x = t('p')),
-          (j = e(b)),
-          (A = o()),
+          (P = e(T)),
+          (j = o()),
           (F = t('pre')),
           (R = o()),
           k(H.$$.fragment),
@@ -144,12 +144,12 @@ function j(s) {
         var t = r(a);
         n = c(t, 'H2', {});
         var e = r(n);
-        (g = p(e, T)), e.forEach(l), (y = i(t)), (x = c(t, 'P', {}));
+        (g = p(e, A)), e.forEach(l), (y = i(t)), (x = c(t, 'P', {}));
         var o = r(x);
-        (j = p(o, b)),
+        (P = p(o, T)),
           o.forEach(l),
           t.forEach(l),
-          (A = i(s)),
+          (j = i(s)),
           (F = c(s, 'PRE', { class: !0 })),
           r(F).forEach(l),
           (R = i(s)),
@@ -165,8 +165,8 @@ function j(s) {
           h(n, g),
           h(a, y),
           h(a, x),
-          h(x, j),
-          f(s, A, t),
+          h(x, P),
+          f(s, j, t),
           f(s, F, t),
           (F.innerHTML =
             '<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">\n  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Footer <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">\'@reuters-graphics/graphics-svelte-components\'</span><span class="token punctuation">;</span>\n</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>\n\n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Footer</span> <span class="token punctuation">/></span></span></code>'),
@@ -185,20 +185,20 @@ function j(s) {
         d(H.$$.fragment, s), (O = !1);
       },
       d(s) {
-        s && l(a), s && l(A), s && l(F), s && l(R), w(H, s);
+        s && l(a), s && l(j), s && l(F), s && l(R), w(H, s);
       },
     }
   );
 }
-const A = {
+const j = {
     title: 'Footer',
     description: 'Add a bottom footer bar to the page.',
     slug: 'footer',
   },
-  { title: T, description: b, slug: F } = A;
+  { title: A, description: T, slug: F } = j;
 export default class extends s {
   constructor(s) {
-    super(), a(this, s, null, j, n, {});
+    super(), a(this, s, null, P, n, {});
   }
 }
-export { A as metadata };
+export { j as metadata };

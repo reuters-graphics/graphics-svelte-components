@@ -14,17 +14,17 @@ import {
   f as u,
   H as g,
   I as m,
-} from './vendor-927c0fc0.js';
+} from './vendor-54feeb2f.js';
 function h(s) {
   let a, n, h, d, j, E, S, T;
   return {
     c() {
       (a = t('section')),
         (n = t('h2')),
-        (h = p(v)),
+        (h = p(f)),
         (d = e()),
         (j = t('p')),
-        (E = p(f)),
+        (E = p(v)),
         (S = e()),
         (T = t('pre')),
         this.h();
@@ -34,9 +34,9 @@ function h(s) {
       var t = c(a);
       n = o(t, 'H2', {});
       var p = c(n);
-      (h = l(p, v)), p.forEach(r), (d = i(t)), (j = o(t, 'P', {}));
+      (h = l(p, f)), p.forEach(r), (d = i(t)), (j = o(t, 'P', {}));
       var e = c(j);
-      (E = l(e, f)),
+      (E = l(e, v)),
         e.forEach(r),
         t.forEach(r),
         (S = i(s)),
@@ -68,7 +68,7 @@ function h(s) {
   };
 }
 const d = { title: 'SEO', description: 'Add SEO to the page.', slug: 'seo' },
-  { title: v, description: f, slug: j } = d;
+  { title: f, description: v, slug: j } = d;
 export default class extends s {
   constructor(s) {
     super(), a(this, s, null, h, n, {});

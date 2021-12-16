@@ -21,14 +21,14 @@ import {
   a6 as w,
   U as v,
   j as x,
-  m as I,
-  o as b,
+  m as b,
+  o as I,
   x as j,
   u as y,
   v as E,
-} from './vendor-927c0fc0.js';
-import { D as z } from './index-38e47fc4.js';
-import { g as A } from './@component-docs-0842da4b.js';
+} from './vendor-54feeb2f.js';
+import { D as z } from './index-c7a36b9c.js';
+import { g as A } from './@component-docs-f1e600f2.js';
 import './paths-6758d194.js';
 function O(s) {
   let a, n;
@@ -265,10 +265,10 @@ function P(s) {
         x(a.$$.fragment);
       },
       l(s) {
-        I(a.$$.fragment, s);
+        b(a.$$.fragment, s);
       },
       m(s, t) {
-        b(a, s, t), (n = !0);
+        I(a, s, t), (n = !0);
       },
       p: k,
       i(s) {
@@ -315,7 +315,7 @@ function T(s) {
           (w = p(s, 'PRE', { class: !0 })),
           o(w).forEach(i),
           (v = h(s)),
-          I(A.$$.fragment, s),
+          b(A.$$.fragment, s),
           this.h();
       },
       h() {
@@ -333,7 +333,7 @@ function T(s) {
           (w.innerHTML =
             '<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">\n  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Image <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">\'@reuters-graphics/graphics-svelte-components\'</span><span class="token punctuation">;</span>\n</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>\n\n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span>\n  <span class="token attr-name">src="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">\'path/to/image.jpg\'</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">alt="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">\'Some alt text\'</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">caption="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">\'A caption\'</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">lazy="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token boolean">true</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>\n  <span class="token attr-name">wide</span>\n<span class="token punctuation">/></span></span></code>'),
           l(s, v, t),
-          b(A, s, t),
+          I(A, s, t),
           (O = !0);
       },
       p(s, [a]) {

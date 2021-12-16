@@ -4,8 +4,8 @@ import {
   s as n,
   e as t,
   t as p,
-  k as c,
-  c as e,
+  k as e,
+  c,
   a as o,
   g as l,
   d as i,
@@ -14,7 +14,7 @@ import {
   f as k,
   H as g,
   I as d,
-} from './vendor-927c0fc0.js';
+} from './vendor-54feeb2f.js';
 function h(s) {
   let a, n, h, m, y, E, P, b;
   return {
@@ -22,25 +22,25 @@ function h(s) {
       (a = t('section')),
         (n = t('h2')),
         (h = p(f)),
-        (m = c()),
+        (m = e()),
         (y = t('p')),
         (E = p(v)),
-        (P = c()),
+        (P = e()),
         (b = t('pre')),
         this.h();
     },
     l(s) {
-      a = e(s, 'SECTION', {});
+      a = c(s, 'SECTION', {});
       var t = o(a);
-      n = e(t, 'H2', {});
+      n = c(t, 'H2', {});
       var p = o(n);
-      (h = l(p, f)), p.forEach(i), (m = r(t)), (y = e(t, 'P', {}));
-      var c = o(y);
-      (E = l(c, v)),
-        c.forEach(i),
+      (h = l(p, f)), p.forEach(i), (m = r(t)), (y = c(t, 'P', {}));
+      var e = o(y);
+      (E = l(e, v)),
+        e.forEach(i),
         t.forEach(i),
         (P = r(s)),
-        (b = e(s, 'PRE', { class: !0 })),
+        (b = c(s, 'PRE', { class: !0 })),
         o(b).forEach(i),
         this.h();
     },

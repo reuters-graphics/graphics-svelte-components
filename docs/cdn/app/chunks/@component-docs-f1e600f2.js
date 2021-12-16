@@ -41,12 +41,12 @@ import {
   o as G,
   v as V,
   L as K,
-} from './vendor-927c0fc0.js';
+} from './vendor-54feeb2f.js';
 import { a as q, b as z } from './paths-6758d194.js';
 const B = (t = '') => e(q, t);
 var O = {
   name: '@reuters-graphics/graphics-svelte-components',
-  version: '0.1.40',
+  version: '0.1.41',
   type: 'module',
   private: !1,
   homepage: 'https://reuters-graphics.github.io/graphics-svelte-components',

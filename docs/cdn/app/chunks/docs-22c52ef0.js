@@ -5,8 +5,8 @@ import {
   e as t,
   t as p,
   k as e,
-  c,
-  a as o,
+  c as o,
+  a as c,
   g as l,
   d as r,
   n as i,
@@ -14,9 +14,9 @@ import {
   f as k,
   H as g,
   I as h,
-} from './vendor-927c0fc0.js';
+} from './vendor-54feeb2f.js';
 function d(s) {
-  let a, n, d, f, E, x, F, H;
+  let a, n, d, f, E, b, x, F;
   return {
     c() {
       (a = t('section')),
@@ -24,28 +24,28 @@ function d(s) {
         (d = p(m)),
         (f = e()),
         (E = t('p')),
-        (x = p(v)),
-        (F = e()),
-        (H = t('pre')),
+        (b = p(v)),
+        (x = e()),
+        (F = t('pre')),
         this.h();
     },
     l(s) {
-      a = c(s, 'SECTION', {});
-      var t = o(a);
-      n = c(t, 'H2', {});
-      var p = o(n);
-      (d = l(p, m)), p.forEach(r), (f = i(t)), (E = c(t, 'P', {}));
-      var e = o(E);
-      (x = l(e, v)),
+      a = o(s, 'SECTION', {});
+      var t = c(a);
+      n = o(t, 'H2', {});
+      var p = c(n);
+      (d = l(p, m)), p.forEach(r), (f = i(t)), (E = o(t, 'P', {}));
+      var e = c(E);
+      (b = l(e, v)),
         e.forEach(r),
         t.forEach(r),
-        (F = i(s)),
-        (H = c(s, 'PRE', { class: !0 })),
-        o(H).forEach(r),
+        (x = i(s)),
+        (F = o(s, 'PRE', { class: !0 })),
+        c(F).forEach(r),
         this.h();
     },
     h() {
-      u(H, 'class', 'language-svelte');
+      u(F, 'class', 'language-svelte');
     },
     m(s, t) {
       k(s, a, t),
@@ -53,17 +53,17 @@ function d(s) {
         g(n, d),
         g(a, f),
         g(a, E),
-        g(E, x),
+        g(E, b),
+        k(s, x, t),
         k(s, F, t),
-        k(s, H, t),
-        (H.innerHTML =
+        (F.innerHTML =
           '<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">\n  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Framer <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">\'@reuters-graphics/graphics-svelte-components\'</span><span class="token punctuation">;</span>\n</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>\n\n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Framer</span> <span class="token punctuation">/></span></span></code>');
     },
     p: h,
     i: h,
     o: h,
     d(s) {
-      s && r(a), s && r(F), s && r(H);
+      s && r(a), s && r(x), s && r(F);
     },
   };
 }

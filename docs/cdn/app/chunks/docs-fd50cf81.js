@@ -21,8 +21,8 @@ import {
   x,
   u as E,
   v,
-} from './vendor-927c0fc0.js';
-import { D as w } from './index-38e47fc4.js';
+} from './vendor-54feeb2f.js';
+import { D as w } from './index-c7a36b9c.js';
 function T(s) {
   let n,
     a = t(s[0]) + '';
@@ -95,21 +95,21 @@ function H(s) {
   );
 }
 function N(s) {
-  let n, a, t, i, T, j, y, N, S, I, L;
+  let n, a, t, i, T, j, y, N, S, P, I;
   return (
-    (I = new w({ props: { $$slots: { default: [H] }, $$scope: { ctx: s } } })),
+    (P = new w({ props: { $$slots: { default: [H] }, $$scope: { ctx: s } } })),
     {
       c() {
         (n = e('section')),
           (a = e('h2')),
-          (t = u(C)),
+          (t = u(b)),
           (i = k()),
           (T = e('p')),
-          (j = u(P)),
+          (j = u(C)),
           (y = k()),
           (N = e('pre')),
           (S = k()),
-          g(I.$$.fragment),
+          g(P.$$.fragment),
           this.h();
       },
       l(s) {
@@ -117,16 +117,16 @@ function N(s) {
         var e = o(n);
         a = p(e, 'H2', {});
         var r = o(a);
-        (t = d(r, C)), r.forEach(c), (i = f(e)), (T = p(e, 'P', {}));
+        (t = d(r, b)), r.forEach(c), (i = f(e)), (T = p(e, 'P', {}));
         var l = o(T);
-        (j = d(l, P)),
+        (j = d(l, C)),
           l.forEach(c),
           e.forEach(c),
           (y = f(s)),
           (N = p(s, 'PRE', { class: !0 })),
           o(N).forEach(c),
           (S = f(s)),
-          m(I.$$.fragment, s),
+          m(P.$$.fragment, s),
           this.h();
       },
       h() {
@@ -144,21 +144,21 @@ function N(s) {
           (N.innerHTML =
             '<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">\n  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> EndNotes <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">\'@reuters-graphics/graphics-svelte-components\'</span><span class="token punctuation">;</span>\n\n  <span class="token keyword">const</span> markdownText <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token string">### Source\n\nReuters research.\n\n### Credits\n\nPeople.</span><span class="token template-punctuation string">&#96;</span></span><span class="token punctuation">;</span>\n</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>\n\n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EndNotes</span> <span class="token attr-name">text="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>markdownText<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token punctuation">/></span></span></code>'),
           l(s, S, e),
-          h(I, s, e),
-          (L = !0);
+          h(P, s, e),
+          (I = !0);
       },
       p(s, [n]) {
         const a = {};
-        2 & n && (a.$$scope = { dirty: n, ctx: s }), I.$set(a);
+        2 & n && (a.$$scope = { dirty: n, ctx: s }), P.$set(a);
       },
       i(s) {
-        L || (x(I.$$.fragment, s), (L = !0));
+        I || (x(P.$$.fragment, s), (I = !0));
       },
       o(s) {
-        E(I.$$.fragment, s), (L = !1);
+        E(P.$$.fragment, s), (I = !1);
       },
       d(s) {
-        s && c(n), s && c(y), s && c(N), s && c(S), v(I, s);
+        s && c(n), s && c(y), s && c(N), s && c(S), v(P, s);
       },
     }
   );
@@ -168,13 +168,13 @@ const S = {
     description: 'End notes section.',
     slug: 'end-notes',
   },
-  { title: C, description: P, slug: I } = S;
-function L(s) {
+  { title: b, description: C, slug: P } = S;
+function I(s) {
   return ['### Source\n\nReuters research.\n\n### Credits\n\nPeople.'];
 }
 export default class extends s {
   constructor(s) {
-    super(), n(this, s, L, N, a, {});
+    super(), n(this, s, I, N, a, {});
   }
 }
 export { S as metadata };

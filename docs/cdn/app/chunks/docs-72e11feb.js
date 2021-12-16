@@ -5,8 +5,8 @@ import {
   e as t,
   t as p,
   k as e,
-  c,
-  a as o,
+  c as o,
+  a as c,
   g as l,
   d as r,
   n as i,
@@ -14,7 +14,7 @@ import {
   f as k,
   H as g,
   I as h,
-} from './vendor-927c0fc0.js';
+} from './vendor-54feeb2f.js';
 function d(s) {
   let a, n, d, f, E, S, x, H;
   return {
@@ -30,18 +30,18 @@ function d(s) {
         this.h();
     },
     l(s) {
-      a = c(s, 'SECTION', {});
-      var t = o(a);
-      n = c(t, 'H2', {});
-      var p = o(n);
-      (d = l(p, v)), p.forEach(r), (f = i(t)), (E = c(t, 'P', {}));
-      var e = o(E);
+      a = o(s, 'SECTION', {});
+      var t = c(a);
+      n = o(t, 'H2', {});
+      var p = c(n);
+      (d = l(p, v)), p.forEach(r), (f = i(t)), (E = o(t, 'P', {}));
+      var e = c(E);
       (S = l(e, m)),
         e.forEach(r),
         t.forEach(r),
         (x = i(s)),
-        (H = c(s, 'PRE', { class: !0 })),
-        o(H).forEach(r),
+        (H = o(s, 'PRE', { class: !0 })),
+        c(H).forEach(r),
         this.h();
     },
     h() {

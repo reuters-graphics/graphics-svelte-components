@@ -44,19 +44,19 @@ import {
   a3 as z,
   O as B,
   Q as G,
-  a8 as N,
+  a7 as N,
   a6 as M,
-  a9 as R,
-  aa as A,
+  a8 as R,
+  a9 as A,
   t as U,
   g as V,
   V as _,
   h as H,
   a1 as F,
   a2 as q,
-} from './vendor-927c0fc0.js';
-import { D as Q } from './index-38e47fc4.js';
-import './@component-docs-0842da4b.js';
+} from './vendor-54feeb2f.js';
+import { D as Q } from './index-c7a36b9c.js';
+import './@component-docs-f1e600f2.js';
 import './paths-6758d194.js';
 function Y(n, s, a) {
   const t = n.slice();
@@ -3506,33 +3506,33 @@ function ps(n) {
         switch (n) {
           case './demos/ai2html/ai-scroller-1.exclude.svelte':
             return p(
-              () => import('./ai-scroller-1.exclude-0b9bd8cf.js'),
+              () => import('./ai-scroller-1.exclude-94e3991e.js'),
               [
-                'chunks/ai-scroller-1.exclude-0b9bd8cf.js',
+                'chunks/ai-scroller-1.exclude-94e3991e.js',
                 'assets/ai-scroller-1.exclude-bf4133bf.css',
-                'chunks/vendor-927c0fc0.js',
+                'chunks/vendor-54feeb2f.js',
                 'assets/vendor-ba67f73c.css',
                 'chunks/paths-6758d194.js',
               ]
             );
           case './demos/ai2html/ai-scroller-2.exclude.svelte':
             return p(
-              () => import('./ai-scroller-2.exclude-514a6269.js'),
+              () => import('./ai-scroller-2.exclude-226042b2.js'),
               [
-                'chunks/ai-scroller-2.exclude-514a6269.js',
+                'chunks/ai-scroller-2.exclude-226042b2.js',
                 'assets/ai-scroller-2.exclude-d46570e4.css',
-                'chunks/vendor-927c0fc0.js',
+                'chunks/vendor-54feeb2f.js',
                 'assets/vendor-ba67f73c.css',
                 'chunks/paths-6758d194.js',
               ]
             );
           case './demos/ai2html/ai-scroller-3.exclude.svelte':
             return p(
-              () => import('./ai-scroller-3.exclude-4ea8e7cd.js'),
+              () => import('./ai-scroller-3.exclude-815c37a7.js'),
               [
-                'chunks/ai-scroller-3.exclude-4ea8e7cd.js',
+                'chunks/ai-scroller-3.exclude-815c37a7.js',
                 'assets/ai-scroller-3.exclude-9076ea09.css',
-                'chunks/vendor-927c0fc0.js',
+                'chunks/vendor-54feeb2f.js',
                 'assets/vendor-ba67f73c.css',
                 'chunks/paths-6758d194.js',
               ]

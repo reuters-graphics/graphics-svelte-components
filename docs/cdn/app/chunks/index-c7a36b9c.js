@@ -3,9 +3,9 @@ import {
   i as a,
   s as l,
   D as e,
-  e as c,
-  c as i,
-  a as t,
+  e as i,
+  c as t,
+  a as c,
   d as n,
   b as o,
   Y as u,
@@ -16,21 +16,21 @@ import {
   G as $,
   x as h,
   u as v,
-} from './vendor-927c0fc0.js';
+} from './vendor-54feeb2f.js';
 function x(s) {
   let a, l, x;
   const m = s[2].default,
     D = e(m, s, s[1], null);
   return {
     c() {
-      (a = c('div')), (l = c('div')), D && D.c(), this.h();
+      (a = i('div')), (l = i('div')), D && D.c(), this.h();
     },
     l(s) {
-      a = i(s, 'DIV', { id: !0, class: !0 });
-      var e = t(a);
-      l = i(e, 'DIV', { class: !0 });
-      var c = t(l);
-      D && D.l(c), c.forEach(n), e.forEach(n), this.h();
+      a = t(s, 'DIV', { id: !0, class: !0 });
+      var e = c(a);
+      l = t(e, 'DIV', { class: !0 });
+      var i = c(l);
+      D && D.l(i), i.forEach(n), e.forEach(n), this.h();
     },
     h() {
       o(l, 'class', 'svelte-1x6pex2'),
@@ -60,14 +60,14 @@ function x(s) {
   };
 }
 function m(s, a, l) {
-  let { $$slots: e = {}, $$scope: c } = a,
-    { fluid: i = !1 } = a;
+  let { $$slots: e = {}, $$scope: i } = a,
+    { fluid: t = !1 } = a;
   return (
     (s.$$set = (s) => {
-      'fluid' in s && l(0, (i = s.fluid)),
-        '$$scope' in s && l(1, (c = s.$$scope));
+      'fluid' in s && l(0, (t = s.fluid)),
+        '$$scope' in s && l(1, (i = s.$$scope));
     }),
-    [i, c, e]
+    [t, i, e]
   );
 }
 class D extends s {

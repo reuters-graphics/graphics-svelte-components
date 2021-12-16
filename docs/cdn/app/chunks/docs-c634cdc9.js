@@ -5,8 +5,8 @@ import {
   e as t,
   t as e,
   k as p,
-  c,
-  a as o,
+  c as o,
+  a as c,
   g as l,
   d as r,
   n as i,
@@ -14,34 +14,34 @@ import {
   f as k,
   H as g,
   I as d,
-} from './vendor-927c0fc0.js';
+} from './vendor-54feeb2f.js';
 function h(s) {
   let a, n, h, v, E, b, w, P;
   return {
     c() {
       (a = t('section')),
         (n = t('h2')),
-        (h = e(m)),
+        (h = e(f)),
         (v = p()),
         (E = t('p')),
-        (b = e(f)),
+        (b = e(m)),
         (w = p()),
         (P = t('pre')),
         this.h();
     },
     l(s) {
-      a = c(s, 'SECTION', {});
-      var t = o(a);
-      n = c(t, 'H2', {});
-      var e = o(n);
-      (h = l(e, m)), e.forEach(r), (v = i(t)), (E = c(t, 'P', {}));
-      var p = o(E);
-      (b = l(p, f)),
+      a = o(s, 'SECTION', {});
+      var t = c(a);
+      n = o(t, 'H2', {});
+      var e = c(n);
+      (h = l(e, f)), e.forEach(r), (v = i(t)), (E = o(t, 'P', {}));
+      var p = c(E);
+      (b = l(p, m)),
         p.forEach(r),
         t.forEach(r),
         (w = i(s)),
-        (P = c(s, 'PRE', { class: !0 })),
-        o(P).forEach(r),
+        (P = o(s, 'PRE', { class: !0 })),
+        c(P).forEach(r),
         this.h();
     },
     h() {
@@ -72,7 +72,7 @@ const v = {
     description: 'An embed tool for development in graphics-kit.',
     slug: 'embed-previewer-link',
   },
-  { title: m, description: f, slug: E } = v;
+  { title: f, description: m, slug: E } = v;
 export default class extends s {
   constructor(s) {
     super(), a(this, s, null, h, n, {});
