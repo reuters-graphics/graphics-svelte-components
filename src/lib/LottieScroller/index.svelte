@@ -1,93 +1,95 @@
 <script>
-  import { onMount } from 'svelte';
-  import AnimationMaker from './AnimationMaker.js';
-  import marked from 'marked';
-  export let id;
-  export let steps = '';
-  export let playbackConst = '75';
-  export let widthRatio = 1.78;
-  export let fullFrame = 'false';
-  export let includeSmall = 'false';
-  export let smallWidthRatio = 1;
+  import * as lottie from 'lottie-web';
+  import { onMount, afterUpdate } from 'svelte';
+  import Scroller from '@sveltejs/svelte-scroller';
+
+  export let lottieData;
+  export let height = 10000;
+
+  export let scrollerProgress;
+  export let scrollerIndex;
+  export let scrollerOffset;
+
+  let lottieContainer;
+  let animation;
+  let durationSeconds = 0;
+  let durationFrames = 0;
+  let framesPerSecond = 0;
+  let currentFrame = 0;
+  let currentSeconds = 0;
+  let animationFrame;
 
   onMount(() => {
-    const lottieObject = new AnimationMaker({
-      id: id,
-      blurbs: steps,
-      playbackConst: playbackConst,
-      widthRatio: Number(widthRatio),
-      fullFrame: fullFrame === 'true',
-      includeSmall: includeSmall === 'true',
-      smallWidthRatio: Number(smallWidthRatio),
+    animation = lottie.loadAnimation({
+      container: lottieContainer,
+      renderer: 'canvas',
+      loop: false,
+      autoplay: false,
+      animationData: lottieData,
+      rendererSettings: {
+        scaleMode: 'noScale',
+        clearCanvas: true,
+      },
     });
+    durationSeconds = animation.getDuration(false);
+    durationFrames = animation.getDuration(true);
+    framesPerSecond = durationFrames / durationSeconds;
+    return () => {
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
+  });
+
+  afterUpdate(() => {
+    if (!animation) return;
+    if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    const normalizedProgress = Math.min(Math.max(0, scrollerProgress), 1);
+    const nextFrame = Math.round(normalizedProgress * durationFrames);
+    currentFrame = animation.currentFrame;
+    const stepToFrame = () => {
+      if (currentFrame === nextFrame) return;
+      if (nextFrame < currentFrame) {
+        currentFrame -= 1;
+      } else {
+        currentFrame += 1;
+      }
+      currentSeconds = currentFrame * framesPerSecond;
+      animation.goToAndStop(currentFrame, true);
+      animationFrame = window.requestAnimationFrame(stepToFrame);
+    };
+    animationFrame = window.requestAnimationFrame(stepToFrame);
   });
 </script>
 
-<div id="lottie-{id}" class="lottie-target">
-  <div class="lottie-container" data-id="{id}">
-    <div class="canvas-holder">
-      <canvas id="{id}"></canvas>
-    </div>
-    <div class="scroll-trigger">
-      {#each steps as step}
-        <div class="blurb" seconds="{step.seconds}">
-          {@html marked(step.text)}
-        </div>
-      {/each}
-    </div>
+<Scroller
+  bind:progress="{scrollerProgress}"
+  bind:index="{scrollerIndex}"
+  bind:offset="{scrollerOffset}"
+>
+  <div class="background" slot="background">
+    {#if $$slots['background:before']}
+      <slot
+        name="background:before"
+        scrollerProgress="{scrollerProgress}"
+        scrollerOffset="{scrollerOffset}"
+        scrollerIndex="{scrollerIndex}"
+        currentFrame="{currentFrame}"
+        currentSeconds="{currentSeconds}"
+        durationFrames="{durationFrames}"
+        durationSeconds="{durationSeconds}"
+      />
+    {/if}
+    <div bind:this="{lottieContainer}"></div>
   </div>
-</div>
+  <div class="foreground" slot="foreground" style="{`height: ${height}px;`}">
+    <section></section>
+  </div>
+</Scroller>
 
 <style lang="scss">
-  .blurb {
-    max-width: 550px;
-    width: 90%;
-    padding: 1rem 2.5rem 1rem 2.5rem;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .lottie-container {
-    width: calc(100% + 30px);
-    margin-left: -15px;
-    max-width: none;
-    position: relative;
-  }
-
-  :global(.lottie-container.stuck) {
-    padding-top: 100vh;
-    .canvas-holder {
-      position: fixed;
-      top: 0;
-    }
-  }
-  :global(.lottie-container.un-stuck) {
-    padding-top: 0px;
-    padding-bottom: 100vh;
-    .canvas-holder {
-      position: absolute;
-      top: auto;
-      bottom: 0px;
-    }
-  }
-
-  .canvas-holder {
-    width: 100%;
+  div.background {
     height: 100vh;
+    display: flex;
     position: relative;
-    overflow: hidden;
-    canvas {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .scroll-trigger {
-    position: relative;
+    align-items: center;
   }
 </style>
