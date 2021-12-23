@@ -1,0 +1,59 @@
+---
+title: ImageTicker
+description: An image slideshow
+slug: image-ticker
+---
+
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import ImageTicker from './index.svelte';
+  import { assets } from '$app/paths';
+</script>
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { ImageTicker } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
+</script>
+
+<ImageTicker
+  fNames="{[
+    {
+      path: `${assets}/images/graphics/step-1-md.png`,
+      label: 'Image No. 1',
+    },
+    {
+      path: `${assets}/images/graphics/step-2-md.png`,
+      label: 'Image No. 2',
+    },
+    {
+      path: `${assets}/images/graphics/step-3-md.png`,
+      label: 'Image No. 3',
+    },
+  ]}"
+  interval="{1500}"
+/>
+```
+
+<DemoContainer>
+  <ImageTicker
+    fNames={[{
+        path: `${assets}/images/graphics/step-1-md.png`,
+        label: 'Image No. 1'
+      }, {
+        path: `${assets}/images/graphics/step-2-md.png`,
+        label: 'Image No. 2'
+      }, {
+        path: `${assets}/images/graphics/step-3-md.png`,
+        label: 'Image No. 3'
+    }]}
+  />
+</DemoContainer>

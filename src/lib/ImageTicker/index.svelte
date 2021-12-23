@@ -1,5 +1,5 @@
 <script>
-  /* 
+  /*
   Ticks through images with a dot indicator on top
   Example: https://www.dropbox.com/s/clzcs8bwzm5lw3o/ImageTicker.mp4?dl=0
   @props
@@ -13,9 +13,11 @@
     ]
     interval: the time between ticks in milliseconds
   */
-  
+
   export let fNames = [];
   export let interval = 1500;
+
+  import { onMount } from 'svelte';
 
   let currentIndex = 0;
   let start = Date.now();
@@ -33,7 +35,12 @@
     requestAnimationFrame(tick);
   }
 
-  tick();
+  // Call any extra, non-svelte JS after the component "mounts"
+  // so we're sure svelte is done doing its bit and
+  // we can then do whatever DOM manipulations we want.
+  onMount(() => {
+    tick();
+  });
 </script>
 
 <section id="image-ticker-container" class="body-text mt-5 mb-5">
