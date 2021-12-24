@@ -1,1 +1,28 @@
-const e={},t=function(t,r){return r&&0!==r.length?Promise.all(r.map((t=>{if((t=`https://reuters-graphics.github.io/graphics-svelte-components/cdn/app/${t}`)in e)return;e[t]=!0;const r=t.endsWith(".css"),n=r?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${t}"]${n}`))return;const s=document.createElement("link");return s.rel=r?"stylesheet":"modulepreload",r||(s.as="script",s.crossOrigin=""),s.href=t,document.head.appendChild(s),r?new Promise(((e,t)=>{s.addEventListener("load",e),s.addEventListener("error",t)})):void 0}))).then((()=>t())):t()};export{t as _};
+const a = 'modulepreload',
+  i = {},
+  u = 'https://reuters-graphics.github.io/graphics-svelte-components/cdn/app/',
+  m = function (s, n) {
+    return !n || n.length === 0
+      ? s()
+      : Promise.all(
+          n.map((e) => {
+            if (((e = `${u}${e}`), e in i)) return;
+            i[e] = !0;
+            const r = e.endsWith('.css'),
+              o = r ? '[rel="stylesheet"]' : '';
+            if (document.querySelector(`link[href="${e}"]${o}`)) return;
+            const t = document.createElement('link');
+            if (
+              ((t.rel = r ? 'stylesheet' : a),
+              r || ((t.as = 'script'), (t.crossOrigin = '')),
+              (t.href = e),
+              document.head.appendChild(t),
+              r)
+            )
+              return new Promise((c, l) => {
+                t.addEventListener('load', c), t.addEventListener('error', l);
+              });
+          })
+        ).then(() => s());
+  };
+export { m as _ };

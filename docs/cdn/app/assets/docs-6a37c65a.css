@@ -1,0 +1,189 @@
+#g-_ai-chart-box.svelte-zofauz.svelte-zofauz,
+#g-_ai-chart-box.svelte-zofauz .g-artboard.svelte-zofauz {
+  margin: 0 auto;
+}
+#g-_ai-chart-box.svelte-zofauz p.svelte-zofauz {
+  margin: 0;
+}
+#g-_ai-chart-box.svelte-zofauz .g-aiAbs.svelte-zofauz {
+  position: absolute;
+}
+#g-_ai-chart-box.svelte-zofauz .g-aiImg.svelte-zofauz {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100% !important;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#g-_ai-chart-box.svelte-zofauz .g-aiPointText p.svelte-zofauz {
+  white-space: nowrap;
+}
+#g-_ai-chart-xs.svelte-zofauz.svelte-zofauz {
+  position: relative;
+  overflow: hidden;
+}
+#g-_ai-chart-xs.svelte-zofauz p.svelte-zofauz {
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 14px;
+  height: auto;
+  opacity: 1;
+  letter-spacing: 0em;
+  font-size: 12px;
+  text-align: left;
+  color: #333;
+  text-transform: none;
+  padding-bottom: 0;
+  padding-top: 0;
+  mix-blend-mode: normal;
+  font-style: normal;
+  position: static;
+}
+#g-_ai-chart-xs.svelte-zofauz .g-pstyle0.svelte-zofauz {
+  height: 14px;
+}
+#g-_ai-chart-xs.svelte-zofauz .g-pstyle1.svelte-zofauz {
+  font-style: italic;
+  height: 14px;
+  text-align: center;
+  color: #717375;
+}
+#g-_ai-chart-xs.svelte-zofauz .g-pstyle2.svelte-zofauz {
+  font-weight: 700;
+  line-height: 18px;
+  height: 18px;
+  letter-spacing: 0.25em;
+  font-size: 15px;
+}
+#g-_ai-chart-xs.svelte-zofauz .g-pstyle3.svelte-zofauz {
+  font-weight: 700;
+  line-height: 16px;
+  height: 16px;
+  font-size: 13px;
+}
+#g-_ai-chart-xs.svelte-zofauz .g-pstyle4.svelte-zofauz {
+  line-height: 11px;
+  height: 11px;
+  font-size: 11px;
+  text-align: right;
+}
+#g-_ai-chart-sm.svelte-zofauz.svelte-zofauz {
+  position: relative;
+  overflow: hidden;
+}
+#g-_ai-chart-sm.svelte-zofauz p.svelte-zofauz {
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 17px;
+  height: auto;
+  opacity: 1;
+  letter-spacing: 0em;
+  font-size: 14px;
+  text-align: left;
+  color: #333;
+  text-transform: none;
+  padding-bottom: 0;
+  padding-top: 0;
+  mix-blend-mode: normal;
+  font-style: normal;
+  position: static;
+}
+#g-_ai-chart-sm.svelte-zofauz .g-pstyle0.svelte-zofauz {
+  height: 17px;
+}
+#g-_ai-chart-sm.svelte-zofauz .g-pstyle1.svelte-zofauz {
+  font-style: italic;
+  height: 17px;
+  text-align: center;
+  color: #717375;
+}
+#g-_ai-chart-sm.svelte-zofauz .g-pstyle2.svelte-zofauz {
+  font-weight: 700;
+  line-height: 15px;
+  height: 15px;
+  letter-spacing: 0.25em;
+  font-size: 12px;
+}
+#g-_ai-chart-sm.svelte-zofauz .g-pstyle3.svelte-zofauz {
+  font-weight: 700;
+  height: 17px;
+}
+#g-_ai-chart-sm.svelte-zofauz .g-pstyle4.svelte-zofauz {
+  font-weight: 300;
+  line-height: 16px;
+  height: 16px;
+  letter-spacing: 0.25em;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #86888b;
+}
+#g-_ai-chart-sm.svelte-zofauz .g-pstyle5.svelte-zofauz {
+  line-height: 14px;
+  height: 14px;
+  font-size: 12px;
+}
+#g-_ai-chart-md.svelte-zofauz.svelte-zofauz {
+  position: relative;
+  overflow: hidden;
+}
+#g-_ai-chart-md.svelte-zofauz p.svelte-zofauz {
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 17px;
+  height: auto;
+  opacity: 1;
+  letter-spacing: 0em;
+  font-size: 14px;
+  text-align: left;
+  color: #333;
+  text-transform: none;
+  padding-bottom: 0;
+  padding-top: 0;
+  mix-blend-mode: normal;
+  font-style: normal;
+  position: static;
+}
+#g-_ai-chart-md.svelte-zofauz .g-pstyle0.svelte-zofauz {
+  height: 17px;
+}
+#g-_ai-chart-md.svelte-zofauz .g-pstyle1.svelte-zofauz {
+  font-style: italic;
+  height: 17px;
+  text-align: center;
+  color: #717375;
+}
+#g-_ai-chart-md.svelte-zofauz .g-pstyle2.svelte-zofauz {
+  font-weight: 700;
+  line-height: 19px;
+  height: 19px;
+  letter-spacing: 0.25em;
+  font-size: 16px;
+}
+#g-_ai-chart-md.svelte-zofauz .g-pstyle3.svelte-zofauz {
+  font-weight: 300;
+  height: 17px;
+  letter-spacing: 0.25em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #86888b;
+}
+#g-_ai-chart-md.svelte-zofauz .g-pstyle4.svelte-zofauz {
+  font-weight: 700;
+  line-height: 19px;
+  height: 19px;
+  font-size: 16px;
+}
+#g-_ai-chart-md.svelte-zofauz .g-pstyle5.svelte-zofauz {
+  line-height: 14px;
+  height: 14px;
+  font-size: 12px;
+}
+div.title.svelte-xmoab3 h4.svelte-xmoab3 {
+  color: #8b0000;
+}

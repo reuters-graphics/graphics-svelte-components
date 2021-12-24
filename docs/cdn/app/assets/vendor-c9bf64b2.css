@@ -1,0 +1,55 @@
+.spin.svelte-1w3t65e {
+  -webkit-animation: svelte-1w3t65e-spin 2s 0s infinite linear;
+  animation: svelte-1w3t65e-spin 2s 0s infinite linear;
+}
+.pulse.svelte-1w3t65e {
+  -webkit-animation: svelte-1w3t65e-spin 1s infinite steps(8);
+  animation: svelte-1w3t65e-spin 1s infinite steps(8);
+}
+@-webkit-keyframes svelte-1w3t65e-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes svelte-1w3t65e-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+svelte-scroller-outer.svelte-1yjh2jm {
+  display: block;
+  position: relative;
+}
+svelte-scroller-background.svelte-1yjh2jm {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+svelte-scroller-foreground.svelte-1yjh2jm {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+svelte-scroller-foreground.svelte-1yjh2jm:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+svelte-scroller-background-container.svelte-1yjh2jm {
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  pointer-events: none;
+  will-change: transform;
+}
