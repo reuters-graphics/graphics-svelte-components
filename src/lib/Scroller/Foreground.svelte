@@ -1,17 +1,17 @@
 <script>
   export let steps = [];
-  import marked from 'marked';
+  import { marked } from 'marked';
 </script>
 
 {#each steps as step, i}
   <section class="step-foreground-container">
-    {#if (step.foreground === '' || !step.foreground)}
+    {#if step.foreground === '' || !step.foreground}
       <!-- Empty foreground -->
       <div class="empty-step-foreground step-{i + 1}"></div>
     {:else}
       <div class="step-foreground step-{i + 1}">
         {#if typeof step.foreground === 'string'}
-          {@html marked(step.foreground)}
+          {@html marked.parse(step.foreground)}
         {:else}
           <svelte:component
             this="{step.foreground}"

@@ -4,6 +4,7 @@ import componentDocsPlugin from './bin/svelte-kit/plugins/component-docs/index.c
 import dsv from '@rollup/plugin-dsv';
 import fs from 'fs-extra';
 import { mdsvex } from 'mdsvex';
+import mm from 'micromatch';
 import svelteKitPagesPlugin from './bin/svelte-kit/plugins/svelte-kit-pages/index.cjs';
 import sveltePreprocess from 'svelte-preprocess';
 import url from 'url';
@@ -35,22 +36,23 @@ export default {
             return null;
           },
         ],
+        quietDeps: true,
       },
       postcss: {
         plugins: [autoprefixer],
       },
-    })
+    }),
   ],
   extensions: ['.svelte', '.svx'],
   kit: {
     appDir: 'app',
     paths: {
       assets:
-        process.env.NODE_ENV === 'production'
-          ? pkg.homepage + '/cdn' : '',
+        process.env.NODE_ENV === 'production' ? pkg.homepage + '/cdn' : '',
       base:
         process.env.NODE_ENV === 'production'
-          ? getRootRelativePath(pkg.homepage) : '',
+          ? getRootRelativePath(pkg.homepage)
+          : '',
     },
     adapter: adapter({
       pages: 'docs',
@@ -67,27 +69,39 @@ export default {
     package: {
       dir: 'dist',
       emitTypes: false,
-      exports: {
-				include: ['**'],
-				exclude: ['_docs/**', '**/_*', '**/*.svx', '**/*.exclude.svelte']
-			},
-			files: {
-				include: ['**'],
-				exclude: ['_docs/**', '**/_*', '**/*.svx', '**/*.exclude.svelte']
-			}
+      exports: (filePath) => {
+        return !mm.isMatch(filePath, [
+          '_docs/**',
+          '**/_*',
+          '**/*.svx',
+          '**/*.exclude.svelte',
+        ]);
+      },
+      files: (filePath) => {
+        return !mm.isMatch(filePath, [
+          '_docs/**',
+          '**/_*',
+          '**/*.svx',
+          '**/*.exclude.svelte',
+        ]);
+      },
     },
     vite: {
+      server: {
+        fs: {
+          allow: ['.'],
+        },
+      },
       resolve: {
         alias: {
           $utils: '/src/utils',
           $pkg: '/package.json',
           $locales: '/locales',
-          'reuters-components': '/src/FutureGraphicsComponentsLib',
         },
       },
       optimizeDeps: {
-        exclude: ['svelte-fa'],
-        include: ['marked', 'lodash-es'],
+        exclude: ['svelte-fa', '@reuters-graphics/style-theme-eisbaer'],
+        include: ['lodash-es', 'pym.js'],
       },
       plugins: [dsv(), svelteKitPagesPlugin(), componentDocsPlugin()],
     },

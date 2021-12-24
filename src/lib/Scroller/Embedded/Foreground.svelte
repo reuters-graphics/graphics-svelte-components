@@ -2,16 +2,16 @@
   export let step;
   export let index;
 
-  import marked from 'marked';
+  import { marked } from 'marked';
 </script>
 
-{#if (step.foreground === '' || !step.foreground)}
+{#if step.foreground === '' || !step.foreground}
   <!-- Empty foreground -->
   <div class="empty-step-foreground step-{index + 1}"></div>
 {:else if typeof step.foreground === 'string'}
-  <section class='body-text' step="{index + 1}">
+  <section class="body-text" step="{index + 1}">
     <div class="embedded-foreground step-{index + 1}">
-      {@html marked(step.foreground)}
+      {@html marked.parse(step.foreground)}
     </div>
   </section>
 {:else}

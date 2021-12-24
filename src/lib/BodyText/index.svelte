@@ -1,10 +1,13 @@
 <script>
-import marked from 'marked';
-export let text;
+  import { marked } from 'marked';
+  export let text;
 
-if (!text) throw new Error('"text" prop must be defined as a string for BodyText components');
+  if (!text)
+    throw new Error(
+      '"text" prop must be defined as a string for BodyText components'
+    );
 </script>
 
-<section class='body-text'>
-  {@html marked(text)}
+<section class="body-text">
+  {@html marked.parse(text)}
 </section>
