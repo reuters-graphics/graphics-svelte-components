@@ -11,39 +11,54 @@
       },
       ...
     ]
-    interval: the time between ticks in milliseconds
+    interval: number - the time between ticks in milliseconds
+    width: string - body-text|wide|wider|fluid
+    control: string - "autoplay" | "button"
   */
 
   export let fNames = [];
+  export let width = 'body-text';
   export let interval = 1500;
+  export let control = 'a';
 
   import { onMount } from 'svelte';
 
   let currentIndex = 0;
   let start = Date.now();
 
-  function tick() {
+  // load next image
+  // direction: 1 = forward, -1 = backward
+  function tick(direction = 1) {
+    if (direction === 1) currentIndex++;
+    else currentIndex--;
+
+    // go back to first image if reached the end of the array
+    currentIndex = currentIndex % fNames.length;
+    // go to last image if reached the beginning of the array
+    if (currentIndex === -1) currentIndex = fNames.length - 1;
+
+    // reset start time
+    start = Date.now();
+  }
+
+  function autoplay() {
     const t = +Date.now() - start;
     // check if interval has elapsed since last tick
     if (t >= interval) {
-      currentIndex++;
-      // go back to firrst image if reached the end of the array
-      currentIndex = currentIndex % fNames.length;
-      // reset start time
-      start = Date.now();
+      tick();
     }
-    requestAnimationFrame(tick);
+    requestAnimationFrame(autoplay);
   }
 
   // Call any extra, non-svelte JS after the component "mounts"
   // so we're sure svelte is done doing its bit and
   // we can then do whatever DOM manipulations we want.
   onMount(() => {
-    tick();
+    if (control === 'autoplay') autoplay();
   });
 </script>
 
-<section id="image-ticker-container" class="body-text mt-5 mb-5">
+<section id="image-ticker-container" class="{width} mt-5 mb-5">
   <p id="image-ticker-date">{fNames[currentIndex].label}</p>
   <div id="image-ticker-progress-dots" class="mb-2">
     {#each fNames as image, index}
@@ -63,6 +78,23 @@
       />
     {/each}
   </div>
+
+  {#if control === 'button'}
+    <button
+      id="image-ticker-button"
+      class="btn btn-primary"
+      on:click="{tick(1)}"
+    >
+      Next
+    </button>
+    <button
+      id="image-ticker-button"
+      class="btn btn-primary"
+      on:click="{tick(-1)}"
+    >
+      Previous
+    </button>
+  {/if}
 </section>
 
 <style type="text/scss">
