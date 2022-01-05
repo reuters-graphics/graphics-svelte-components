@@ -19,7 +19,7 @@
   export let fNames = [];
   export let width = 'body-text';
   export let interval = 1500;
-  export let control = 'a';
+  export let control = 'autoplay';
 
   import { onMount } from 'svelte';
 
@@ -29,6 +29,7 @@
   // load next image
   // direction: 1 = forward, -1 = backward
   function tick(direction = 1) {
+    console.log('bleh');
     if (direction === 1) currentIndex++;
     else currentIndex--;
 
@@ -59,7 +60,7 @@
 </script>
 
 <section id="image-ticker-container" class="{width} mt-5 mb-5">
-  <p id="image-ticker-date">{fNames[currentIndex].label}</p>
+  <p id="image-ticker-label">{fNames[currentIndex].label}</p>
   <div id="image-ticker-progress-dots" class="mb-2">
     {#each fNames as image, index}
       <div
@@ -77,24 +78,25 @@
         src="{image.path}"
       />
     {/each}
+    {#if control === 'button'}
+      <div class="image-ticker-button-container">
+        <div
+          id="image-ticker-button-previous"
+          class="image-ticker-button"
+          on:click="{() => tick(-1)}"
+        >
+          <p>&lt;</p>
+        </div>
+        <div
+          id="image-ticker-button-next"
+          class="image-ticker-button"
+          on:click="{() => tick(1)}"
+        >
+          <p>&gt;</p>
+        </div>
+      </div>
+    {/if}
   </div>
-
-  {#if control === 'button'}
-    <button
-      id="image-ticker-button"
-      class="btn btn-primary"
-      on:click="{tick(1)}"
-    >
-      Next
-    </button>
-    <button
-      id="image-ticker-button"
-      class="btn btn-primary"
-      on:click="{tick(-1)}"
-    >
-      Previous
-    </button>
-  {/if}
 </section>
 
 <style type="text/scss">
@@ -112,6 +114,42 @@
         }
         &.image-ticker-inactive {
           opacity: 0;
+        }
+      }
+
+      .image-ticker-button-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // buttons are light arrows on the image
+        .image-ticker-button {
+          height: 100%;
+          width: 50px;
+          top: 0;
+          position: absolute;
+          text-align: center;
+          font-size: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          p {
+            margin: 0;
+            pointer-events: none;
+          }
+
+          &#image-ticker-button-next {
+            right: 0;
+            background-image: linear-gradient(to left, #3a3a3a15, #3a3a3a00);
+          }
+
+          &#image-ticker-button-previous {
+            left: 0;
+            background-image: linear-gradient(to right, #3a3a3a15, #3a3a3a00);
+          }
         }
       }
     }
@@ -135,7 +173,8 @@
         background-color: #3a3a3a;
       }
     }
-    #image-ticker-date {
+
+    #image-ticker-label {
       font-size: 1.5rem;
       font-weight: bold;
       text-align: center;
