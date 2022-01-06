@@ -14,12 +14,14 @@
     interval: number - the time between ticks in milliseconds
     width: string - body-text|wide|wider|fluid
     control: string - "autoplay" | "button"
+    labelPosition: "tl" | "tc" (default) | "tr" | "bl" | "bc" | "br" (t = top, b = bottom, r = right, l = left, c = centre)
   */
 
   export let fNames = [];
   export let width = 'body-text';
   export let interval = 1500;
   export let control = 'autoplay';
+  export let labelPosition = 'tc';
 
   import { onMount } from 'svelte';
 
@@ -60,7 +62,12 @@
 </script>
 
 <section id="image-ticker-container" class="{width} mt-5 mb-5">
-  <p id="image-ticker-label">{fNames[currentIndex].label}</p>
+  {#if labelPosition[0] === 't'}
+    <p id="image-ticker-label" class="label-{labelPosition[1]}">
+      {fNames[currentIndex].label}
+    </p>
+  {/if}
+
   <div id="image-ticker-progress-dots" class="mb-2">
     {#each fNames as image, index}
       <div
@@ -97,6 +104,14 @@
       </div>
     {/if}
   </div>
+  {#if labelPosition[0] === 'b'}
+    <p
+      id="image-ticker-label"
+      class="label-{labelPosition[1]} label-{labelPosition[0]}"
+    >
+      {fNames[currentIndex].label}
+    </p>
+  {/if}
 </section>
 
 <style type="text/scss">
@@ -177,8 +192,19 @@
     #image-ticker-label {
       font-size: 1.5rem;
       font-weight: bold;
-      text-align: center;
-      text-shadow: 3px 3px 3px #ede6d1;
+      &.label-c {
+        text-align: center;
+      }
+      &.label-l {
+        text-align: left;
+      }
+      &.label-r {
+        text-align: right;
+      }
+      &.label-b {
+        margin-bottom: 0;
+        margin-top: 1.2rem;
+      }
     }
   }
 </style>

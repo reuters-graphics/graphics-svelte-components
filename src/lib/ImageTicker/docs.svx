@@ -44,7 +44,7 @@ slug: image-ticker
 ```
 
 <DemoContainer>
-  <h5 style="text-align: center;">Autoplay image ticker</h5>
+  <h5 style="text-align: center;">Autoplay image ticker and label top centre</h5>
   <ImageTicker
     fNames={[{
         path: `${assets}/images/graphics/step-1-md.png`,
@@ -60,7 +60,7 @@ slug: image-ticker
 </DemoContainer>
 
 <DemoContainer>
-  <h5 style="text-align: center;">Button controlled image ticker</h5>
+  <h5 style="text-align: center;">Button controlled image ticker and label on the bottom left</h5>
   <ImageTicker
     fNames={[{
         path: `${assets}/images/graphics/step-1-md.png`,
@@ -72,6 +72,7 @@ slug: image-ticker
         path: `${assets}/images/graphics/step-3-md.png`,
         label: 'Image No. 3'
     }]}
-    control= "button"
+    control= "button",
+    labelPosition = "bl"
   />
 </DemoContainer>
