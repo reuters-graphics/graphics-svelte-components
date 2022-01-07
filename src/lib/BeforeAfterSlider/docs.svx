@@ -1,0 +1,52 @@
+---
+title: BeforeAfterImageSlider
+description: A slider for showing before/after images
+slug: before-after-slider
+---
+
+<script>
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import ImageTicker from './index.svelte';
+  import { assets } from '$app/paths';
+</script>
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { ImageTicker } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
+</script>
+
+<ImageTicker
+  fNames = "{[
+    {
+      path: `${assets}/images/graphics/before.png`,
+      label: 'Before',
+    },
+    {
+      path: `${assets}/images/graphics/after.png`,
+      label: 'After',
+    }
+  ]}",
+  width = "body-text"
+/>
+```
+
+<DemoContainer>
+  <ImageTicker
+    fNames={[{
+        path: `${assets}/images/graphics/poyang-before.jpg`,
+        label: 'Jan. 1997'
+      }, {
+        path: `${assets}/images/graphics/poyang-after.jpg`,
+        label: 'Dec. 2019'
+      }]}
+  />
+</DemoContainer>
