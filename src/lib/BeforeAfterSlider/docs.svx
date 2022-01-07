@@ -6,7 +6,7 @@ slug: before-after-slider
 
 <script>
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
-  import ImageTicker from './index.svelte';
+  import BeforeAfterImageSlider from './index.svelte';
   import { assets } from '$app/paths';
 </script>
 
@@ -20,11 +20,11 @@ slug: before-after-slider
 
 ```svelte
 <script>
-  import { ImageTicker } from '@reuters-graphics/graphics-svelte-components';
+  import { BeforeAfterImageSlider } from '@reuters-graphics/graphics-svelte-components';
   import { assets } from '$app/paths';
 </script>
 
-<ImageTicker
+<BeforeAfterImageSlider
   fNames = "{[
     {
       path: `${assets}/images/graphics/before.png`,
@@ -40,7 +40,7 @@ slug: before-after-slider
 ```
 
 <DemoContainer>
-  <ImageTicker
+  <BeforeAfterImageSlider
     fNames={[{
         path: `${assets}/images/graphics/poyang-before.jpg`,
         label: 'Jan. 1997'
