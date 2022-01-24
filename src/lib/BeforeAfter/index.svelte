@@ -214,7 +214,8 @@
     border: 4px solid var(--before-after-handle-colour);
     opacity: var(--before-after-handle-inactive-opacity, 0.6);
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       opacity: 1;
     }
     &:before,
