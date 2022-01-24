@@ -92,7 +92,7 @@ Change the styling of the swipe handle.
   afterAlt="Satellite image of Russian base at Myrne taken on Oct. 20, 2020."
   handleColour="#ff613b"
   handleInactiveOpacity="{0.6}"
-  handleMargin="{40}"
+  handleMargin="{0}"
 />
 ```
 
@@ -104,7 +104,7 @@ Change the styling of the swipe handle.
     afterAlt="After the thing"
     handleColour="#fb8c71"
     handleInactiveOpacity={0.6}
-    handleMargin={40}
+    handleMargin={0}
   />
 </DemoContainer>
 

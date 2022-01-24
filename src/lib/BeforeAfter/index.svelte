@@ -11,7 +11,7 @@
 
   export let handleColour = 'white';
   export let handleInactiveOpacity = 0.4;
-  export let handleMargin = 0;
+  export let handleMargin = 20;
 
   export let offset = 0.5;
 
@@ -37,17 +37,16 @@
   };
   const move = (e) => {
     const el = e.touches ? e.touches[0] : e;
-    const handleOffset = 20 + handleMargin;
     if (sliding && imgOffset) {
       const figureOffset = figure
         ? parseInt(window.getComputedStyle(figure).marginLeft.slice(0, -2))
         : 0;
       let x = el.pageX - figureOffset - imgOffset.left;
       x =
-        x < handleOffset
-          ? handleOffset
-          : x > w - handleOffset
-          ? w - handleOffset
+        x < handleMargin
+          ? handleMargin
+          : x > w - handleMargin
+          ? w - handleMargin
           : x;
       offset = x / w;
     }
@@ -68,8 +67,9 @@
   $: beforeOverlayClip =
     x < beforeOverlayWidth ? Math.abs(x - beforeOverlayWidth) : 0;
 
-  if (!(beforeSrc && beforeAlt && afterSrc && afterAlt))
+  if (!(beforeSrc && beforeAlt && afterSrc && afterAlt)) {
     console.warn('Missing required src or alt props for BeforeAfter component');
+  }
 </script>
 
 <svelte:window
