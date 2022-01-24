@@ -36,7 +36,7 @@ import {
   h as O,
 } from './vendor-a3a8e12b.js';
 import { D as p0 } from './index-95908c5c.js';
-import './@component-docs_components-0771368a.js';
+import './@component-docs_components-305da42f.js';
 import './paths-6758d194.js';
 const u0 = (r) => ({
     scrollerProgress: r & 1,
