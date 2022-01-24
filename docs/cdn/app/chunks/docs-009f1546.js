@@ -1,27 +1,27 @@
 import {
-  S as T,
-  i as b,
+  S as F,
+  i as T,
   s as R,
   e as h,
   t as y,
   k as x,
   c as d,
   a as k,
-  g as P,
+  g as b,
   d as r,
-  n as j,
+  n as P,
   b as g,
-  f as A,
+  f as j,
   H as c,
-  I as F,
+  I as A,
   j as C,
   m as D,
   o as H,
   x as O,
   u as S,
   v as I,
-} from './vendor-7ea24681.js';
-import { D as L } from './index-457577f8.js';
+} from './vendor-b82e5b83.js';
+import { D as L } from './index-75ffd758.js';
 function M(w) {
   let s, e, a, i, u, l, _, p, f, v;
   return {
@@ -45,17 +45,17 @@ function M(w) {
       var t = k(e);
       a = d(t, 'A', { class: !0, href: !0 });
       var n = k(a);
-      (i = P(n, 'Reuters.com')),
+      (i = b(n, 'Reuters.com')),
         n.forEach(r),
-        (u = j(t)),
+        (u = P(t)),
         (l = d(t, 'A', { class: !0, href: !0 }));
       var $ = k(l);
-      (_ = P($, 'Privacy Policy')),
+      (_ = b($, 'Privacy Policy')),
         $.forEach(r),
-        (p = j(t)),
+        (p = P(t)),
         (f = d(t, 'A', { class: !0, href: !0 }));
       var E = k(f);
-      (v = P(E, 'Terms of Use')),
+      (v = b(E, 'Terms of Use')),
         E.forEach(r),
         t.forEach(r),
         m.forEach(r),
@@ -71,7 +71,7 @@ function M(w) {
         g(e, 'class', 'footer nav background-dark justify-content-center');
     },
     m(o, m) {
-      A(o, s, m),
+      j(o, s, m),
         c(s, e),
         c(e, a),
         c(a, i),
@@ -82,18 +82,18 @@ function M(w) {
         c(e, f),
         c(f, v);
     },
-    p: F,
-    i: F,
-    o: F,
+    p: A,
+    i: A,
+    o: A,
     d(o) {
       o && r(s);
     },
   };
 }
-class V extends T {
+class V extends F {
   constructor(s) {
     super();
-    b(this, s, null, M, R, {});
+    T(this, s, null, M, R, {});
   }
 }
 function z(w) {
@@ -160,30 +160,30 @@ function B(w) {
         var n = k(s);
         e = d(n, 'H2', {});
         var $ = k(e);
-        (a = P($, N)), $.forEach(r), (i = j(n)), (u = d(n, 'P', {}));
+        (a = b($, N)), $.forEach(r), (i = P(n)), (u = d(n, 'P', {}));
         var E = k(u);
-        (l = P(E, U)),
+        (l = b(E, U)),
           E.forEach(r),
           n.forEach(r),
-          (_ = j(t)),
+          (_ = P(t)),
           (p = d(t, 'PRE', { class: !0 }));
         var q = k(p);
-        q.forEach(r), (v = j(t)), D(o.$$.fragment, t), this.h();
+        q.forEach(r), (v = P(t)), D(o.$$.fragment, t), this.h();
       },
       h() {
         g(p, 'class', 'language-svelte');
       },
       m(t, n) {
-        A(t, s, n),
+        j(t, s, n),
           c(s, e),
           c(e, a),
           c(s, i),
           c(s, u),
           c(u, l),
-          A(t, _, n),
-          A(t, p, n),
+          j(t, _, n),
+          j(t, p, n),
           (p.innerHTML = f),
-          A(t, v, n),
+          j(t, v, n),
           H(o, t, n),
           (m = !0);
       },
@@ -209,10 +209,10 @@ const G = {
     slug: 'footer',
   },
   { title: N, description: U, slug: Q } = G;
-class W extends T {
+class W extends F {
   constructor(s) {
     super();
-    b(this, s, null, B, R, {});
+    T(this, s, null, B, R, {});
   }
 }
 export { W as default, G as metadata };

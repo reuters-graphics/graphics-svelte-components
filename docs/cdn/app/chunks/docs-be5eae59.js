@@ -9,13 +9,13 @@ import {
   a as u,
   g as x,
   d as e,
-  n as y,
+  n as b,
   b as P,
   f as h,
   H as c,
   I as f,
-} from './vendor-7ea24681.js';
-function T(H) {
+} from './vendor-b82e5b83.js';
+function T(F) {
   let a,
     p,
     k,
@@ -24,7 +24,7 @@ function T(H) {
     d,
     l,
     t,
-    S = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    H = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Framer <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -33,10 +33,10 @@ function T(H) {
     c() {
       (a = r('section')),
         (p = r('h2')),
-        (k = v(w)),
+        (k = v(y)),
         (m = E()),
         (o = r('p')),
-        (d = v(F)),
+        (d = v(w)),
         (l = E()),
         (t = r('pre')),
         this.h();
@@ -46,15 +46,15 @@ function T(H) {
       var n = u(a);
       p = i(n, 'H2', {});
       var g = u(p);
-      (k = x(g, w)), g.forEach(e), (m = y(n)), (o = i(n, 'P', {}));
+      (k = x(g, y)), g.forEach(e), (m = b(n)), (o = i(n, 'P', {}));
       var _ = u(o);
-      (d = x(_, F)),
+      (d = x(_, w)),
         _.forEach(e),
         n.forEach(e),
-        (l = y(s)),
+        (l = b(s)),
         (t = i(s, 'PRE', { class: !0 }));
-      var b = u(t);
-      b.forEach(e), this.h();
+      var S = u(t);
+      S.forEach(e), this.h();
     },
     h() {
       P(t, 'class', 'language-svelte');
@@ -68,7 +68,7 @@ function T(H) {
         c(o, d),
         h(s, l, n),
         h(s, t, n),
-        (t.innerHTML = S);
+        (t.innerHTML = H);
     },
     p: f,
     i: f,
@@ -83,7 +83,7 @@ const q = {
     description: 'An embed tool for development in the graphics kit.',
     slug: 'framer',
   },
-  { title: w, description: F, slug: D } = q;
+  { title: y, description: w, slug: D } = q;
 class L extends j {
   constructor(a) {
     super();

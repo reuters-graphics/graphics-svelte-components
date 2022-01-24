@@ -1,7 +1,7 @@
 import {
-  S as I,
-  i as P,
-  s as T,
+  S as C,
+  i as I,
+  s as P,
   e as r,
   t as v,
   k as E,
@@ -10,12 +10,12 @@ import {
   g as S,
   d as e,
   n as x,
-  b,
+  b as T,
   f as g,
   H as c,
   I as f,
-} from './vendor-7ea24681.js';
-function q(H) {
+} from './vendor-b82e5b83.js';
+function q(w) {
   let a,
     p,
     k,
@@ -24,7 +24,7 @@ function q(H) {
     d,
     l,
     t,
-    j = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    H = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Sharer <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -36,7 +36,7 @@ function q(H) {
         (k = v(y)),
         (h = E()),
         (o = r('p')),
-        (d = v(w)),
+        (d = v(b)),
         (l = E()),
         (t = r('pre')),
         this.h();
@@ -48,16 +48,16 @@ function q(H) {
       var m = u(p);
       (k = S(m, y)), m.forEach(e), (h = x(n)), (o = i(n, 'P', {}));
       var _ = u(o);
-      (d = S(_, w)),
+      (d = S(_, b)),
         _.forEach(e),
         n.forEach(e),
         (l = x(s)),
         (t = i(s, 'PRE', { class: !0 }));
-      var C = u(t);
-      C.forEach(e), this.h();
+      var j = u(t);
+      j.forEach(e), this.h();
     },
     h() {
-      b(t, 'class', 'language-svelte');
+      T(t, 'class', 'language-svelte');
     },
     m(s, n) {
       g(s, a, n),
@@ -68,7 +68,7 @@ function q(H) {
         c(o, d),
         g(s, l, n),
         g(s, t, n),
-        (t.innerHTML = j);
+        (t.innerHTML = H);
     },
     p: f,
     i: f,
@@ -83,11 +83,11 @@ const A = {
     description: 'Add share tools to a page.',
     slug: 'sharer',
   },
-  { title: y, description: w, slug: L } = A;
-class M extends I {
+  { title: y, description: b, slug: L } = A;
+class M extends C {
   constructor(a) {
     super();
-    P(this, a, null, q, T, {});
+    I(this, a, null, q, P, {});
   }
 }
 export { M as default, A as metadata };

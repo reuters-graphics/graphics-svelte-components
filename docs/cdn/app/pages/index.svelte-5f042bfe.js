@@ -24,13 +24,13 @@ import {
   H as p,
   L as te,
   I as se,
-} from '../chunks/vendor-7ea24681.js';
+} from '../chunks/vendor-b82e5b83.js';
 import {
   S as re,
   N as ae,
   M as ne,
   c as F,
-} from '../chunks/@component-docs-f5a9f6ed.js';
+} from '../chunks/@component-docs-989e6ca0.js';
 import { b as le } from '../chunks/paths-6758d194.js';
 function oe(l) {
   let s, r;
@@ -136,7 +136,7 @@ function Y(l) {
   };
 }
 function me(l) {
-  let s, r, t, n, f, h, u, m, v, d, O, P, E, w, A, G, y, N;
+  let s, r, t, n, f, h, u, m, v, d, O, P, b, w, A, G, y, N;
   (s = new re({
     props: {
       seoTitle: 'Reuters Graphics components',
@@ -151,9 +151,9 @@ function me(l) {
     (t = new ae({})),
     (f = new ne({ props: { components: F } })),
     (d = new ce({}));
-  let b = F,
+  let E = F,
     o = [];
-  for (let e = 0; e < b.length; e += 1) o[e] = Y(X(l, b, e));
+  for (let e = 0; e < E.length; e += 1) o[e] = Y(X(l, E, e));
   return {
     c() {
       z(s.$$.fragment),
@@ -168,7 +168,7 @@ function me(l) {
         z(d.$$.fragment),
         (O = M(' Components')),
         (P = T()),
-        (E = _('pre')),
+        (b = _('pre')),
         (w = _('code')),
         (A = M('yarn add @reuters-graphics/graphics-svelte-components')),
         (G = T()),
@@ -193,8 +193,8 @@ function me(l) {
         (O = q(C, ' Components')),
         C.forEach(i),
         (P = D(a)),
-        (E = $(a, 'PRE', { class: !0 }));
-      var J = g(E);
+        (b = $(a, 'PRE', { class: !0 }));
+      var J = g(b);
       w = $(J, 'CODE', {});
       var K = g(w);
       (A = q(K, 'yarn add @reuters-graphics/graphics-svelte-components')),
@@ -208,7 +208,7 @@ function me(l) {
     },
     h() {
       S(v, 'class', 'svelte-10iyprh'),
-        S(E, 'class', 'svelte-10iyprh'),
+        S(b, 'class', 'svelte-10iyprh'),
         S(y, 'class', 'svelte-10iyprh');
     },
     m(e, c) {
@@ -224,8 +224,8 @@ function me(l) {
         x(d, v, null),
         p(v, O),
         p(m, P),
-        p(m, E),
-        p(E, w),
+        p(m, b),
+        p(b, w),
         p(w, A),
         p(m, G),
         p(m, y);
@@ -234,14 +234,14 @@ function me(l) {
     },
     p(e, [c]) {
       if (c & 0) {
-        b = F;
+        E = F;
         let a;
-        for (a = 0; a < b.length; a += 1) {
-          const C = X(e, b, a);
+        for (a = 0; a < E.length; a += 1) {
+          const C = X(e, E, a);
           o[a] ? o[a].p(C, c) : ((o[a] = Y(C)), o[a].c(), o[a].m(y, null));
         }
         for (; a < o.length; a += 1) o[a].d(1);
-        o.length = b.length;
+        o.length = E.length;
       }
     },
     i(e) {

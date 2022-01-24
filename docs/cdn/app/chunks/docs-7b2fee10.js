@@ -7,15 +7,15 @@ import {
   k as y,
   c as r,
   a as u,
-  g as E,
+  g as b,
   d as e,
-  n as P,
+  n as E,
   b as T,
   f as h,
   H as l,
   I as g,
-} from './vendor-7ea24681.js';
-function q(b) {
+} from './vendor-b82e5b83.js';
+function q(C) {
   let a,
     p,
     k,
@@ -33,10 +33,10 @@ function q(b) {
     c() {
       (a = i('section')),
         (p = i('h2')),
-        (k = v(x)),
+        (k = v(P)),
         (d = y()),
         (c = i('p')),
-        (m = v(C)),
+        (m = v(x)),
         (o = y()),
         (t = i('pre')),
         this.h();
@@ -46,12 +46,12 @@ function q(b) {
       var n = u(a);
       p = r(n, 'H2', {});
       var f = u(p);
-      (k = E(f, x)), f.forEach(e), (d = P(n)), (c = r(n, 'P', {}));
+      (k = b(f, P)), f.forEach(e), (d = E(n)), (c = r(n, 'P', {}));
       var _ = u(c);
-      (m = E(_, C)),
+      (m = b(_, x)),
         _.forEach(e),
         n.forEach(e),
-        (o = P(s)),
+        (o = E(s)),
         (t = r(s, 'PRE', { class: !0 }));
       var w = u(t);
       w.forEach(e), this.h();
@@ -83,7 +83,7 @@ const A = {
     description: 'A Pym.js child instance for embeddables.',
     slug: 'pym-child',
   },
-  { title: x, description: C, slug: L } = A;
+  { title: P, description: x, slug: L } = A;
 class M extends H {
   constructor(a) {
     super();

@@ -139,8 +139,8 @@ function init_hydrate(e) {
           ? s + 1
           : upper_bound(1, s, (m) => t[r[m]].claim_order, d)) - 1;
     i[u] = r[x] + 1;
-    const _ = x + 1;
-    (r[_] = u), (s = Math.max(_, s));
+    const b = x + 1;
+    (r[b] = u), (s = Math.max(b, s));
   }
   const n = [],
     o = [];
@@ -210,6 +210,11 @@ function empty() {
 }
 function listen(e, t, r, i) {
   return e.addEventListener(t, r, i), () => e.removeEventListener(t, r, i);
+}
+function prevent_default(e) {
+  return function (t) {
+    return t.preventDefault(), e.call(this, t);
+  };
 }
 function attr(e, t, r) {
   r == null
@@ -431,6 +436,10 @@ function setContext(e, t) {
 function getContext(e) {
   return get_current_component().$$.context.get(e);
 }
+function bubble(e, t) {
+  const r = e.$$.callbacks[t.type];
+  r && r.slice().forEach((i) => i.call(this, t));
+}
 const dirty_components = [],
   binding_callbacks = [],
   render_callbacks = [],
@@ -511,12 +520,12 @@ function handle_promise(e, t) {
     let x = !1;
     t.block &&
       (t.blocks
-        ? t.blocks.forEach((_, m) => {
+        ? t.blocks.forEach((b, m) => {
             m !== n &&
-              _ &&
+              b &&
               (group_outros(),
-              transition_out(_, 1, 1, () => {
-                t.blocks[m] === _ && (t.blocks[m] = null);
+              transition_out(b, 1, 1, () => {
+                t.blocks[m] === b && (t.blocks[m] = null);
               }),
               check_outros());
           })
@@ -647,13 +656,13 @@ function init(e, t, r, i, s, n, o, c = [-1]) {
   let x = !1;
   if (
     ((d.ctx = r
-      ? r(e, t.props || {}, (_, m, ...v) => {
-          const p = v.length ? v[0] : m;
+      ? r(e, t.props || {}, (b, m, ...g) => {
+          const p = g.length ? g[0] : m;
           return (
             d.ctx &&
-              s(d.ctx[_], (d.ctx[_] = p)) &&
-              (!d.skip_bound && d.bound[_] && d.bound[_](p),
-              x && make_dirty(e, _)),
+              s(d.ctx[b], (d.ctx[b] = p)) &&
+              (!d.skip_bound && d.bound[b] && d.bound[b](p),
+              x && make_dirty(e, b)),
             m
           );
         })
@@ -666,8 +675,8 @@ function init(e, t, r, i, s, n, o, c = [-1]) {
   ) {
     if (t.hydrate) {
       start_hydrating();
-      const _ = children(t.target);
-      d.fragment && d.fragment.l(_), _.forEach(detach);
+      const b = children(t.target);
+      d.fragment && d.fragment.l(b), b.forEach(detach);
     } else d.fragment && d.fragment.c();
     t.intro && transition_in(e.$$.fragment),
       mount_component(e, t.target, t.anchor, t.customElement),
@@ -1036,23 +1045,23 @@ class Tokenizer {
         u,
         d,
         x,
-        _,
+        b,
         m,
-        v,
+        g,
         p,
-        g = r[1].trim();
-      const b = g.length > 1,
+        v = r[1].trim();
+      const _ = v.length > 1,
         l = {
           type: 'list',
           raw: '',
-          ordered: b,
-          start: b ? +g.slice(0, -1) : '',
+          ordered: _,
+          start: _ ? +v.slice(0, -1) : '',
           loose: !1,
           items: [],
         };
-      (g = b ? `\\d{1,9}\\${g.slice(-1)}` : `\\${g}`),
-        this.options.pedantic && (g = b ? g : '[*+-]');
-      const a = new RegExp(`^( {0,3}${g})((?: [^\\n]*)?(?:\\n|$))`);
+      (v = _ ? `\\d{1,9}\\${v.slice(-1)}` : `\\${v}`),
+        this.options.pedantic && (v = _ ? v : '[*+-]');
+      const a = new RegExp(`^( {0,3}${v})((?: [^\\n]*)?(?:\\n|$))`);
       for (
         ;
         t && ((p = !1), !(!(r = a.exec(t)) || this.rules.block.hr.test(t)));
@@ -1066,25 +1075,25 @@ class Tokenizer {
 `,
             1
           )[0]),
-          (_ = t.split(
+          (b = t.split(
             `
 `,
             1
           )[0]),
           this.options.pedantic
-            ? ((o = 2), (v = x.trimLeft()))
+            ? ((o = 2), (g = x.trimLeft()))
             : ((o = r[2].search(/[^ ]/)),
               (o = o > 4 ? 1 : o),
-              (v = x.slice(o)),
+              (g = x.slice(o)),
               (o += r[1].length)),
           (u = !1),
           !x &&
-            /^ *$/.test(_) &&
+            /^ *$/.test(b) &&
             ((i +=
-              _ +
+              b +
               `
 `),
-            (t = t.substring(_.length + 1)),
+            (t = t.substring(b.length + 1)),
             (p = !0)),
           !p)
         ) {
@@ -1106,11 +1115,11 @@ class Tokenizer {
 
           ) {
             if (x.search(/[^ ]/) >= o || !x.trim())
-              v +=
+              g +=
                 `
 ` + x.slice(o);
             else if (!u)
-              v +=
+              g +=
                 `
 ` + x;
             else break;
@@ -1124,20 +1133,20 @@ class Tokenizer {
         }
         l.loose || (d ? (l.loose = !0) : /\n *\n *$/.test(i) && (d = !0)),
           this.options.gfm &&
-            ((s = /^\[[ xX]\] /.exec(v)),
-            s && ((n = s[0] !== '[ ] '), (v = v.replace(/^\[[ xX]\] +/, '')))),
+            ((s = /^\[[ xX]\] /.exec(g)),
+            s && ((n = s[0] !== '[ ] '), (g = g.replace(/^\[[ xX]\] +/, '')))),
           l.items.push({
             type: 'list_item',
             raw: i,
             task: !!s,
             checked: n,
             loose: !1,
-            text: v,
+            text: g,
           }),
           (l.raw += i);
       }
       (l.items[l.items.length - 1].raw = i.trimRight()),
-        (l.items[l.items.length - 1].text = v.trimRight()),
+        (l.items[l.items.length - 1].text = g.trimRight()),
         (l.raw = l.raw.trimRight());
       const h = l.items.length;
       for (c = 0; c < h; c++)
@@ -1355,13 +1364,13 @@ class Tokenizer {
         u,
         d = o,
         x = 0;
-      const _ =
+      const b =
         s[0][0] === '*'
           ? this.rules.inline.emStrong.rDelimAst
           : this.rules.inline.emStrong.rDelimUnd;
       for (
-        _.lastIndex = 0, r = r.slice(-1 * t.length + o);
-        (s = _.exec(r)) != null;
+        b.lastIndex = 0, r = r.slice(-1 * t.length + o);
+        (s = b.exec(r)) != null;
 
       ) {
         if (((c = s[1] || s[2] || s[3] || s[4] || s[5] || s[6]), !c)) continue;
@@ -1374,12 +1383,12 @@ class Tokenizer {
         }
         if (((d -= u), d > 0)) continue;
         if (((u = Math.min(u, u + d + x)), Math.min(o, u) % 2)) {
-          const v = t.slice(1, o + s.index + u);
+          const g = t.slice(1, o + s.index + u);
           return {
             type: 'em',
             raw: t.slice(0, o + s.index + u + 1),
-            text: v,
-            tokens: this.lexer.inlineTokens(v, []),
+            text: g,
+            tokens: this.lexer.inlineTokens(g, []),
           };
         }
         const m = t.slice(2, o + s.index + u - 1);
@@ -2010,10 +2019,10 @@ class Lexer {
           this.options.extensions && this.options.extensions.startInline)
         ) {
           let x = 1 / 0;
-          const _ = t.slice(1);
+          const b = t.slice(1);
           let m;
-          this.options.extensions.startInline.forEach(function (v) {
-            (m = v.call({ lexer: this }, _)),
+          this.options.extensions.startInline.forEach(function (g) {
+            (m = g.call({ lexer: this }, b)),
               typeof m == 'number' && m >= 0 && (x = Math.min(x, m));
           }),
             x < 1 / 0 && x >= 0 && (n = t.substring(0, x + 1));
@@ -2308,12 +2317,12 @@ class Parser {
       u,
       d,
       x,
-      _,
-      m,
-      v,
-      p,
-      g,
       b,
+      m,
+      g,
+      p,
+      v,
+      _,
       l,
       a,
       h,
@@ -2323,13 +2332,13 @@ class Parser {
     const w = t.length;
     for (s = 0; s < w; s++) {
       if (
-        ((v = t[s]),
+        ((g = t[s]),
         this.options.extensions &&
           this.options.extensions.renderers &&
-          this.options.extensions.renderers[v.type] &&
-          ((k = this.options.extensions.renderers[v.type].call(
+          this.options.extensions.renderers[g.type] &&
+          ((k = this.options.extensions.renderers[g.type].call(
             { parser: this },
-            v
+            g
           )),
           k !== !1 ||
             ![
@@ -2343,12 +2352,12 @@ class Parser {
               'html',
               'paragraph',
               'text',
-            ].includes(v.type)))
+            ].includes(g.type)))
       ) {
         i += k || '';
         continue;
       }
-      switch (v.type) {
+      switch (g.type) {
         case 'space':
           continue;
         case 'hr': {
@@ -2357,60 +2366,60 @@ class Parser {
         }
         case 'heading': {
           i += this.renderer.heading(
-            this.parseInline(v.tokens),
-            v.depth,
-            unescape(this.parseInline(v.tokens, this.textRenderer)),
+            this.parseInline(g.tokens),
+            g.depth,
+            unescape(this.parseInline(g.tokens, this.textRenderer)),
             this.slugger
           );
           continue;
         }
         case 'code': {
-          i += this.renderer.code(v.text, v.lang, v.escaped);
+          i += this.renderer.code(g.text, g.lang, g.escaped);
           continue;
         }
         case 'table': {
-          for (_ = '', x = '', c = v.header.length, n = 0; n < c; n++)
-            x += this.renderer.tablecell(this.parseInline(v.header[n].tokens), {
+          for (b = '', x = '', c = g.header.length, n = 0; n < c; n++)
+            x += this.renderer.tablecell(this.parseInline(g.header[n].tokens), {
               header: !0,
-              align: v.align[n],
+              align: g.align[n],
             });
           for (
-            _ += this.renderer.tablerow(x), m = '', c = v.rows.length, n = 0;
+            b += this.renderer.tablerow(x), m = '', c = g.rows.length, n = 0;
             n < c;
             n++
           ) {
-            for (d = v.rows[n], x = '', u = d.length, o = 0; o < u; o++)
+            for (d = g.rows[n], x = '', u = d.length, o = 0; o < u; o++)
               x += this.renderer.tablecell(this.parseInline(d[o].tokens), {
                 header: !1,
-                align: v.align[o],
+                align: g.align[o],
               });
             m += this.renderer.tablerow(x);
           }
-          i += this.renderer.table(_, m);
+          i += this.renderer.table(b, m);
           continue;
         }
         case 'blockquote': {
-          (m = this.parse(v.tokens)), (i += this.renderer.blockquote(m));
+          (m = this.parse(g.tokens)), (i += this.renderer.blockquote(m));
           continue;
         }
         case 'list': {
           for (
-            p = v.ordered,
-              g = v.start,
-              b = v.loose,
-              c = v.items.length,
+            p = g.ordered,
+              v = g.start,
+              _ = g.loose,
+              c = g.items.length,
               m = '',
               n = 0;
             n < c;
             n++
           )
-            (a = v.items[n]),
+            (a = g.items[n]),
               (h = a.checked),
               (f = a.task),
               (l = ''),
               a.task &&
                 ((y = this.renderer.checkbox(h)),
-                b
+                _
                   ? a.tokens.length > 0 && a.tokens[0].type === 'paragraph'
                     ? ((a.tokens[0].text = y + ' ' + a.tokens[0].text),
                       a.tokens[0].tokens &&
@@ -2420,34 +2429,34 @@ class Parser {
                           y + ' ' + a.tokens[0].tokens[0].text))
                     : a.tokens.unshift({ type: 'text', text: y })
                   : (l += y)),
-              (l += this.parse(a.tokens, b)),
+              (l += this.parse(a.tokens, _)),
               (m += this.renderer.listitem(l, f, h));
-          i += this.renderer.list(m, p, g);
+          i += this.renderer.list(m, p, v);
           continue;
         }
         case 'html': {
-          i += this.renderer.html(v.text);
+          i += this.renderer.html(g.text);
           continue;
         }
         case 'paragraph': {
-          i += this.renderer.paragraph(this.parseInline(v.tokens));
+          i += this.renderer.paragraph(this.parseInline(g.tokens));
           continue;
         }
         case 'text': {
           for (
-            m = v.tokens ? this.parseInline(v.tokens) : v.text;
+            m = g.tokens ? this.parseInline(g.tokens) : g.text;
             s + 1 < w && t[s + 1].type === 'text';
 
           )
-            (v = t[++s]),
+            (g = t[++s]),
               (m +=
                 `
-` + (v.tokens ? this.parseInline(v.tokens) : v.text));
+` + (g.tokens ? this.parseInline(g.tokens) : g.text));
           i += r ? this.renderer.paragraph(m) : m;
           continue;
         }
         default: {
-          const P = 'Token with "' + v.type + '" type was not found.';
+          const P = 'Token with "' + g.type + '" type was not found.';
           if (this.options.silent) {
             console.error(P);
             return;
@@ -2768,7 +2777,7 @@ function getStyles(e, t, r, i) {
     u,
     d,
     x = '-.125em';
-  const _ = 'visible';
+  const b = 'visible';
   return (
     i && ((d = 'center'), (n = '1.25em')),
     r && (s = r),
@@ -2790,7 +2799,7 @@ function getStyles(e, t, r, i) {
         'text-align': d,
         'vertical-align': x,
         'transform-origin': 'center',
-        overflow: _,
+        overflow: b,
       }),
       e,
     ])
@@ -2819,8 +2828,8 @@ function getTransform(e, t, r, i, s, n = 1, o = '', c = '') {
 var fa_svelte_svelte_type_style_lang = '';
 function create_if_block(e) {
   let t, r, i, s, n, o, c;
-  function u(_, m) {
-    return typeof _[7][4] == 'string' ? create_if_block_1 : create_else_block;
+  function u(b, m) {
+    return typeof b[7][4] == 'string' ? create_if_block_1 : create_else_block;
   }
   let d = u(e),
     x = d(e);
@@ -2832,8 +2841,8 @@ function create_if_block(e) {
         x.c(),
         this.h();
     },
-    l(_) {
-      t = claim_svg_element(_, 'svg', {
+    l(b) {
+      t = claim_svg_element(b, 'svg', {
         id: !0,
         class: !0,
         style: !0,
@@ -2844,10 +2853,10 @@ function create_if_block(e) {
       });
       var m = children(t);
       r = claim_svg_element(m, 'g', { transform: !0, 'transform-origin': !0 });
-      var v = children(r);
-      i = claim_svg_element(v, 'g', { transform: !0 });
+      var g = children(r);
+      i = claim_svg_element(g, 'g', { transform: !0 });
       var p = children(i);
-      x.l(p), p.forEach(detach), v.forEach(detach), m.forEach(detach), this.h();
+      x.l(p), p.forEach(detach), g.forEach(detach), m.forEach(detach), this.h();
     },
     h() {
       attr(i, 'transform', e[10]),
@@ -2861,34 +2870,34 @@ function create_if_block(e) {
         attr(t, 'role', 'img'),
         attr(t, 'xmlns', 'http://www.w3.org/2000/svg');
     },
-    m(_, m) {
-      insert_hydration(_, t, m),
+    m(b, m) {
+      insert_hydration(b, t, m),
         append_hydration(t, r),
         append_hydration(r, i),
         x.m(i, null);
     },
-    p(_, m) {
-      d === (d = u(_)) && x
-        ? x.p(_, m)
-        : (x.d(1), (x = d(_)), x && (x.c(), x.m(i, null))),
-        m & 1024 && attr(i, 'transform', _[10]),
+    p(b, m) {
+      d === (d = u(b)) && x
+        ? x.p(b, m)
+        : (x.d(1), (x = d(b)), x && (x.c(), x.m(i, null))),
+        m & 1024 && attr(i, 'transform', b[10]),
         m & 128 &&
-          s !== (s = `translate(${_[7][0] / 2} ${_[7][1] / 2})`) &&
+          s !== (s = `translate(${b[7][0] / 2} ${b[7][1] / 2})`) &&
           attr(r, 'transform', s),
         m & 128 &&
-          n !== (n = `${_[7][0] / 4} 0`) &&
+          n !== (n = `${b[7][0] / 4} 0`) &&
           attr(r, 'transform-origin', n),
-        m & 1 && attr(t, 'id', _[0]),
+        m & 1 && attr(t, 'id', b[0]),
         m & 256 &&
-          o !== (o = '' + (null_to_empty(_[8]) + ' svelte-1w3t65e')) &&
+          o !== (o = '' + (null_to_empty(b[8]) + ' svelte-1w3t65e')) &&
           attr(t, 'class', o),
-        m & 512 && attr(t, 'style', _[9]),
+        m & 512 && attr(t, 'style', b[9]),
         m & 128 &&
-          c !== (c = `0 0 ${_[7][0]} ${_[7][1]}`) &&
+          c !== (c = `0 0 ${b[7][0]} ${b[7][1]}`) &&
           attr(t, 'viewBox', c);
     },
-    d(_) {
-      _ && detach(t), x.d();
+    d(b) {
+      b && detach(t), x.d();
     },
   };
 }
@@ -2898,15 +2907,15 @@ function create_else_block(e) {
     c() {
       (t = svg_element('path')), (o = svg_element('path')), this.h();
     },
-    l(_) {
-      (t = claim_svg_element(_, 'path', {
+    l(b) {
+      (t = claim_svg_element(b, 'path', {
         d: !0,
         fill: !0,
         'fill-opacity': !0,
         transform: !0,
       })),
         children(t).forEach(detach),
-        (o = claim_svg_element(_, 'path', {
+        (o = claim_svg_element(b, 'path', {
           d: !0,
           fill: !0,
           'fill-opacity': !0,
@@ -2933,33 +2942,33 @@ function create_else_block(e) {
           (x = `translate(${e[7][0] / -2} ${e[7][1] / -2})`)
         );
     },
-    m(_, m) {
-      insert_hydration(_, t, m), insert_hydration(_, o, m);
+    m(b, m) {
+      insert_hydration(b, t, m), insert_hydration(b, o, m);
     },
-    p(_, m) {
-      m & 128 && r !== (r = _[7][4][0]) && attr(t, 'd', r),
+    p(b, m) {
+      m & 128 && r !== (r = b[7][4][0]) && attr(t, 'd', r),
         m & 10 &&
-          i !== (i = _[3] || _[1] || 'currentColor') &&
+          i !== (i = b[3] || b[1] || 'currentColor') &&
           attr(t, 'fill', i),
         m & 112 &&
-          s !== (s = _[6] != !1 ? _[4] : _[5]) &&
+          s !== (s = b[6] != !1 ? b[4] : b[5]) &&
           attr(t, 'fill-opacity', s),
         m & 128 &&
-          n !== (n = `translate(${_[7][0] / -2} ${_[7][1] / -2})`) &&
+          n !== (n = `translate(${b[7][0] / -2} ${b[7][1] / -2})`) &&
           attr(t, 'transform', n),
-        m & 128 && c !== (c = _[7][4][1]) && attr(o, 'd', c),
+        m & 128 && c !== (c = b[7][4][1]) && attr(o, 'd', c),
         m & 6 &&
-          u !== (u = _[2] || _[1] || 'currentColor') &&
+          u !== (u = b[2] || b[1] || 'currentColor') &&
           attr(o, 'fill', u),
         m & 112 &&
-          d !== (d = _[6] != !1 ? _[5] : _[4]) &&
+          d !== (d = b[6] != !1 ? b[5] : b[4]) &&
           attr(o, 'fill-opacity', d),
         m & 128 &&
-          x !== (x = `translate(${_[7][0] / -2} ${_[7][1] / -2})`) &&
+          x !== (x = `translate(${b[7][0] / -2} ${b[7][1] / -2})`) &&
           attr(o, 'transform', x);
     },
-    d(_) {
-      _ && detach(t), _ && detach(o);
+    d(b) {
+      b && detach(t), b && detach(o);
     },
   };
 }
@@ -3036,12 +3045,12 @@ function instance$1(e, t, r) {
     { color: u = '' } = t,
     { fw: d = !1 } = t,
     { pull: x = '' } = t,
-    { scale: _ = 1 } = t,
+    { scale: b = 1 } = t,
     { translateX: m = 0 } = t,
-    { translateY: v = 0 } = t,
+    { translateY: g = 0 } = t,
     { rotate: p = '' } = t,
-    { flip: g = !1 } = t,
-    { spin: b = !1 } = t,
+    { flip: v = !1 } = t,
+    { spin: _ = !1 } = t,
     { pulse: l = !1 } = t,
     { primaryColor: a = '' } = t,
     { secondaryColor: h = '' } = t,
@@ -3050,7 +3059,7 @@ function instance$1(e, t, r) {
     { swapOpacity: k = !1 } = t,
     w,
     P,
-    F,
+    M,
     D;
   return (
     (e.$$set = (T) => {
@@ -3062,12 +3071,12 @@ function instance$1(e, t, r) {
         'color' in T && r(1, (u = T.color)),
         'fw' in T && r(15, (d = T.fw)),
         'pull' in T && r(16, (x = T.pull)),
-        'scale' in T && r(17, (_ = T.scale)),
+        'scale' in T && r(17, (b = T.scale)),
         'translateX' in T && r(18, (m = T.translateX)),
-        'translateY' in T && r(19, (v = T.translateY)),
+        'translateY' in T && r(19, (g = T.translateY)),
         'rotate' in T && r(20, (p = T.rotate)),
-        'flip' in T && r(21, (g = T.flip)),
-        'spin' in T && r(22, (b = T.spin)),
+        'flip' in T && r(21, (v = T.flip)),
+        'spin' in T && r(22, (_ = T.spin)),
         'pulse' in T && r(23, (l = T.pulse)),
         'primaryColor' in T && r(2, (a = T.primaryColor)),
         'secondaryColor' in T && r(3, (h = T.secondaryColor)),
@@ -3078,11 +3087,11 @@ function instance$1(e, t, r) {
     (e.$$.update = () => {
       e.$$.dirty & 8192 && r(7, (w = (o && o.icon) || [0, 0, '', [], ''])),
         e.$$.dirty & 12584960 &&
-          r(8, (P = joinCss([i, 'svelte-fa', b && 'spin', l && 'pulse'], ' '))),
-        e.$$.dirty & 118784 && r(9, (F = getStyles(n, c, x, d))),
-        e.$$.dirty & 4063232 && r(10, (D = getTransform(_, m, v, p, g, 512)));
+          r(8, (P = joinCss([i, 'svelte-fa', _ && 'spin', l && 'pulse'], ' '))),
+        e.$$.dirty & 118784 && r(9, (M = getStyles(n, c, x, d))),
+        e.$$.dirty & 4063232 && r(10, (D = getTransform(b, m, g, p, v, 512)));
     }),
-    [s, u, a, h, f, y, k, w, P, F, D, i, n, o, c, d, x, _, m, v, p, g, b, l]
+    [s, u, a, h, f, y, k, w, P, M, D, i, n, o, c, d, x, b, m, g, p, v, _, l]
   );
 }
 class Fa extends SvelteComponent {
@@ -3131,47 +3140,47 @@ var Fa$1 = Fa,
     var t = 'xPYMx',
       r = {},
       i = function (m) {
-        var v = document.createEvent('Event');
-        v.initEvent('pym:' + m, !0, !0), document.dispatchEvent(v);
+        var g = document.createEvent('Event');
+        g.initEvent('pym:' + m, !0, !0), document.dispatchEvent(g);
       },
       s = function (m) {
-        var v = new RegExp(
+        var g = new RegExp(
             '[\\?&]' +
               m.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]') +
               '=([^&#]*)'
           ),
-          p = v.exec(location.search);
+          p = g.exec(location.search);
         return p === null ? '' : decodeURIComponent(p[1].replace(/\+/g, ' '));
       },
-      n = function (m, v) {
+      n = function (m, g) {
         if (
           !(
-            v.xdomain !== '*' && !m.origin.match(new RegExp(v.xdomain + '$'))
+            g.xdomain !== '*' && !m.origin.match(new RegExp(g.xdomain + '$'))
           ) &&
           typeof m.data == 'string'
         )
           return !0;
       },
       o = function (m) {
-        var v = /^(?:(?:https?|mailto|ftp):|[^&:/?#]*(?:[/?#]|$))/gi;
-        if (!!m.match(v)) return !0;
+        var g = /^(?:(?:https?|mailto|ftp):|[^&:/?#]*(?:[/?#]|$))/gi;
+        if (!!m.match(g)) return !0;
       },
-      c = function (m, v, p) {
-        var g = ['pym', m, v, p];
-        return g.join(t);
+      c = function (m, g, p) {
+        var v = ['pym', m, g, p];
+        return v.join(t);
       },
       u = function (m) {
-        var v = ['pym', m, '(\\S+)', '(.*)'];
-        return new RegExp('^' + v.join(t) + '$');
+        var g = ['pym', m, '(\\S+)', '(.*)'];
+        return new RegExp('^' + g.join(t) + '$');
       },
       d =
         Date.now ||
         function () {
           return new Date().getTime();
         },
-      x = function (m, v, p) {
-        var g,
-          b,
+      x = function (m, g, p) {
+        var v,
+          _,
           l,
           a = null,
           h = 0;
@@ -3179,49 +3188,49 @@ var Fa$1 = Fa,
         var f = function () {
           (h = p.leading === !1 ? 0 : d()),
             (a = null),
-            (l = m.apply(g, b)),
-            a || (g = b = null);
+            (l = m.apply(v, _)),
+            a || (v = _ = null);
         };
         return function () {
           var y = d();
           !h && p.leading === !1 && (h = y);
-          var k = v - (y - h);
+          var k = g - (y - h);
           return (
-            (g = this),
-            (b = arguments),
-            k <= 0 || k > v
+            (v = this),
+            (_ = arguments),
+            k <= 0 || k > g
               ? (a && (clearTimeout(a), (a = null)),
                 (h = y),
-                (l = m.apply(g, b)),
-                a || (g = b = null))
+                (l = m.apply(v, _)),
+                a || (v = _ = null))
               : !a && p.trailing !== !1 && (a = setTimeout(f, k)),
             l
           );
         };
       },
-      _ = function () {
-        for (var m = r.autoInitInstances.length, v = m - 1; v >= 0; v--) {
-          var p = r.autoInitInstances[v];
+      b = function () {
+        for (var m = r.autoInitInstances.length, g = m - 1; g >= 0; g--) {
+          var p = r.autoInitInstances[g];
           (p.el.getElementsByTagName('iframe').length &&
             p.el.getElementsByTagName('iframe')[0].contentWindow) ||
-            r.autoInitInstances.splice(v, 1);
+            r.autoInitInstances.splice(g, 1);
         }
       };
     return (
       (r.autoInitInstances = []),
       (r.autoInit = function (m) {
-        var v = document.querySelectorAll(
+        var g = document.querySelectorAll(
             '[data-pym-src]:not([data-pym-auto-initialized])'
           ),
-          p = v.length;
-        _();
-        for (var g = 0; g < p; ++g) {
-          var b = v[g];
-          b.setAttribute('data-pym-auto-initialized', ''),
-            b.id === '' &&
-              (b.id =
-                'pym-' + g + '-' + Math.random().toString(36).substr(2, 5));
-          var l = b.getAttribute('data-pym-src'),
+          p = g.length;
+        b();
+        for (var v = 0; v < p; ++v) {
+          var _ = g[v];
+          _.setAttribute('data-pym-auto-initialized', ''),
+            _.id === '' &&
+              (_.id =
+                'pym-' + v + '-' + Math.random().toString(36).substr(2, 5));
+          var l = _.getAttribute('data-pym-src'),
             a = {
               xdomain: 'string',
               title: 'string',
@@ -3237,29 +3246,29 @@ var Fa$1 = Fa,
             },
             h = {};
           for (var f in a)
-            if (b.getAttribute('data-pym-' + f) !== null)
+            if (_.getAttribute('data-pym-' + f) !== null)
               switch (a[f]) {
                 case 'boolean':
-                  h[f] = b.getAttribute('data-pym-' + f) !== 'false';
+                  h[f] = _.getAttribute('data-pym-' + f) !== 'false';
                   break;
                 case 'string':
-                  h[f] = b.getAttribute('data-pym-' + f);
+                  h[f] = _.getAttribute('data-pym-' + f);
                   break;
                 case 'number':
-                  var y = Number(b.getAttribute('data-pym-' + f));
+                  var y = Number(_.getAttribute('data-pym-' + f));
                   isNaN(y) || (h[f] = y);
                   break;
                 default:
                   console.err('unrecognized attribute type');
               }
-          var k = new r.Parent(b.id, l, h);
+          var k = new r.Parent(_.id, l, h);
           r.autoInitInstances.push(k);
         }
         return m || i('pym-initialized'), r.autoInitInstances;
       }),
-      (r.Parent = function (m, v, p) {
+      (r.Parent = function (m, g, p) {
         (this.id = m),
-          (this.url = v),
+          (this.url = g),
           (this.el = document.getElementById(m)),
           (this.iframe = null),
           (this.settings = {
@@ -3274,7 +3283,7 @@ var Fa$1 = Fa,
           (this.messageHandlers = {}),
           (p = p || {}),
           (this._constructIframe = function () {
-            var b = this.el.offsetWidth.toString();
+            var _ = this.el.offsetWidth.toString();
             this.iframe = document.createElement('iframe');
             var l = '',
               a = this.url.indexOf('#');
@@ -3286,7 +3295,7 @@ var Fa$1 = Fa,
                   ? (this.url += '?')
                   : (this.url += '&'),
                 this.iframe.src =
-                  this.url + 'initialWidth=' + b + '&childId=' + this.id,
+                  this.url + 'initialWidth=' + _ + '&childId=' + this.id,
                 this.settings.optionalparams &&
                   ((this.iframe.src +=
                     '&parentTitle=' + encodeURIComponent(document.title)),
@@ -3329,66 +3338,66 @@ var Fa$1 = Fa,
           (this._onScroll = function () {
             this.sendViewportAndIFramePosition();
           }.bind(this)),
-          (this._fire = function (b, l) {
-            if (b in this.messageHandlers)
-              for (var a = 0; a < this.messageHandlers[b].length; a++)
-                this.messageHandlers[b][a].call(this, l);
+          (this._fire = function (_, l) {
+            if (_ in this.messageHandlers)
+              for (var a = 0; a < this.messageHandlers[_].length; a++)
+                this.messageHandlers[_][a].call(this, l);
           }),
           (this.remove = function () {
             window.removeEventListener('message', this._processMessage),
               window.removeEventListener('resize', this._onResize),
               this.el.removeChild(this.iframe),
-              _();
+              b();
           }),
-          (this._processMessage = function (b) {
-            if (!!n(b, this.settings) && typeof b.data == 'string') {
-              var l = b.data.match(this.messageRegex);
+          (this._processMessage = function (_) {
+            if (!!n(_, this.settings) && typeof _.data == 'string') {
+              var l = _.data.match(this.messageRegex);
               if (!l || l.length !== 3) return !1;
               var a = l[1],
                 h = l[2];
               this._fire(a, h);
             }
           }.bind(this)),
-          (this._onHeightMessage = function (b) {
-            var l = parseInt(b);
+          (this._onHeightMessage = function (_) {
+            var l = parseInt(_);
             this.iframe.setAttribute('height', l + 'px');
           }),
-          (this._onNavigateToMessage = function (b) {
-            !o(b) || (document.location.href = b);
+          (this._onNavigateToMessage = function (_) {
+            !o(_) || (document.location.href = _);
           }),
-          (this._onScrollToChildPosMessage = function (b) {
+          (this._onScrollToChildPosMessage = function (_) {
             var l =
                 document.getElementById(this.id).getBoundingClientRect().top +
                 window.pageYOffset,
-              a = l + parseInt(b);
+              a = l + parseInt(_);
             window.scrollTo(0, a);
           }),
-          (this.onMessage = function (b, l) {
-            b in this.messageHandlers || (this.messageHandlers[b] = []),
-              this.messageHandlers[b].push(l);
+          (this.onMessage = function (_, l) {
+            _ in this.messageHandlers || (this.messageHandlers[_] = []),
+              this.messageHandlers[_].push(l);
           }),
-          (this.sendMessage = function (b, l) {
+          (this.sendMessage = function (_, l) {
             this.el.getElementsByTagName('iframe').length &&
               (this.el.getElementsByTagName('iframe')[0].contentWindow
                 ? this.el
                     .getElementsByTagName('iframe')[0]
-                    .contentWindow.postMessage(c(this.id, b, l), '*')
+                    .contentWindow.postMessage(c(this.id, _, l), '*')
                 : this.remove());
           }),
           (this.sendWidth = function () {
-            var b = this.el.offsetWidth.toString();
-            this.sendMessage('width', b);
+            var _ = this.el.offsetWidth.toString();
+            this.sendMessage('width', _);
           }),
           (this.sendViewportAndIFramePosition = function () {
-            var b = this.iframe.getBoundingClientRect(),
+            var _ = this.iframe.getBoundingClientRect(),
               l = window.innerWidth || document.documentElement.clientWidth,
               a = window.innerHeight || document.documentElement.clientHeight,
               h = l + ' ' + a;
-            (h += ' ' + b.top + ' ' + b.left),
-              (h += ' ' + b.bottom + ' ' + b.right),
+            (h += ' ' + _.top + ' ' + _.left),
+              (h += ' ' + _.bottom + ' ' + _.right),
               this.sendMessage('viewport-iframe-position', h);
           });
-        for (var g in p) this.settings[g] = p[g];
+        for (var v in p) this.settings[v] = p[v];
         return (
           (this._throttleOnScroll = x(
             this._onScroll.bind(this),
@@ -3421,18 +3430,18 @@ var Fa$1 = Fa,
           (this.messageRegex = null),
           (this.messageHandlers = {}),
           (m = m || {}),
-          (this.onMessage = function (b, l) {
-            b in this.messageHandlers || (this.messageHandlers[b] = []),
-              this.messageHandlers[b].push(l);
+          (this.onMessage = function (_, l) {
+            _ in this.messageHandlers || (this.messageHandlers[_] = []),
+              this.messageHandlers[_].push(l);
           }),
-          (this._fire = function (b, l) {
-            if (b in this.messageHandlers)
-              for (var a = 0; a < this.messageHandlers[b].length; a++)
-                this.messageHandlers[b][a].call(this, l);
+          (this._fire = function (_, l) {
+            if (_ in this.messageHandlers)
+              for (var a = 0; a < this.messageHandlers[_].length; a++)
+                this.messageHandlers[_][a].call(this, l);
           }),
-          (this._processMessage = function (b) {
-            if (!!n(b, this.settings) && typeof b.data == 'string') {
-              var l = b.data.match(this.messageRegex);
+          (this._processMessage = function (_) {
+            if (!!n(_, this.settings) && typeof _.data == 'string') {
+              var l = _.data.match(this.messageRegex);
               if (!(!l || l.length !== 3)) {
                 var a = l[1],
                   h = l[2];
@@ -3440,41 +3449,41 @@ var Fa$1 = Fa,
               }
             }
           }.bind(this)),
-          (this._onWidthMessage = function (b) {
-            var l = parseInt(b);
+          (this._onWidthMessage = function (_) {
+            var l = parseInt(_);
             l !== this.parentWidth &&
               ((this.parentWidth = l),
               this.settings.renderCallback && this.settings.renderCallback(l),
               this.sendHeight());
           }),
-          (this.sendMessage = function (b, l) {
-            window.parent.postMessage(c(this.id, b, l), '*');
+          (this.sendMessage = function (_, l) {
+            window.parent.postMessage(c(this.id, _, l), '*');
           }),
           (this.sendHeight = function () {
-            var b = document
+            var _ = document
               .getElementsByTagName('body')[0]
               .offsetHeight.toString();
-            return this.sendMessage('height', b), b;
+            return this.sendMessage('height', _), _;
           }.bind(this)),
           (this.getParentPositionInfo = function () {
             this.sendMessage('parentPositionInfo');
           }),
-          (this.scrollParentTo = function (b) {
-            this.sendMessage('navigateTo', '#' + b);
+          (this.scrollParentTo = function (_) {
+            this.sendMessage('navigateTo', '#' + _);
           }),
-          (this.navigateParentTo = function (b) {
-            this.sendMessage('navigateTo', b);
+          (this.navigateParentTo = function (_) {
+            this.sendMessage('navigateTo', _);
           }),
-          (this.scrollParentToChildEl = function (b) {
+          (this.scrollParentToChildEl = function (_) {
             var l =
-              document.getElementById(b).getBoundingClientRect().top +
+              document.getElementById(_).getBoundingClientRect().top +
               window.pageYOffset;
             this.scrollParentToChildPos(l);
           }),
-          (this.scrollParentToChildPos = function (b) {
-            this.sendMessage('scrollToChildPos', b.toString());
+          (this.scrollParentToChildPos = function (_) {
+            this.sendMessage('scrollToChildPos', _.toString());
           });
-        var v = function (b) {
+        var g = function (_) {
           var l = document.getElementsByTagName('html')[0],
             a,
             h = l.className;
@@ -3487,7 +3496,7 @@ var Fa$1 = Fa,
           }
           h.indexOf(a) < 0 &&
             ((l.className = h ? h + ' ' + a : a),
-            b && b(a),
+            _ && _(a),
             i('marked-embedded'));
         };
         this.remove = function () {
@@ -3499,20 +3508,20 @@ var Fa$1 = Fa,
           (this.messageRegex = new RegExp(
             '^pym' + t + this.id + t + '(\\S+)' + t + '(.*)$'
           ));
-        var g = parseInt(s('initialWidth'));
+        var v = parseInt(s('initialWidth'));
         return (
           (this.parentUrl = s(this.settings.parenturlparam)),
           (this.parentTitle = s('parentTitle')),
           this.onMessage('width', this._onWidthMessage),
           window.addEventListener('message', this._processMessage, !1),
-          this.settings.renderCallback && this.settings.renderCallback(g),
+          this.settings.renderCallback && this.settings.renderCallback(v),
           this.sendHeight(),
           this.settings.polling &&
             (this.timerId = window.setInterval(
               this.sendHeight,
               this.settings.polling
             )),
-          v(m.onMarkedEmbeddedStatus),
+          g(m.onMarkedEmbeddedStatus),
           this
         );
       }),
@@ -3688,7 +3697,7 @@ var decodeUriComponent = function (e) {
           f = w ? x(f, l) : f;
           const P =
             k || w
-              ? f.split(l.arrayFormatSeparator).map((F) => x(F, l))
+              ? f.split(l.arrayFormatSeparator).map((M) => x(M, l))
               : f === null
               ? f
               : x(f, l);
@@ -3716,11 +3725,11 @@ var decodeUriComponent = function (e) {
   function x(l, a) {
     return a.decode ? r(l) : l;
   }
-  function _(l) {
+  function b(l) {
     return Array.isArray(l)
       ? l.sort()
       : typeof l == 'object'
-      ? _(Object.keys(l))
+      ? b(Object.keys(l))
           .sort((a, h) => Number(a) - Number(h))
           .map((a) => l[a])
       : l;
@@ -3729,7 +3738,7 @@ var decodeUriComponent = function (e) {
     const a = l.indexOf('#');
     return a !== -1 && (l = l.slice(0, a)), l;
   }
-  function v(l) {
+  function g(l) {
     let a = '';
     const h = l.indexOf('#');
     return h !== -1 && (a = l.slice(h)), a;
@@ -3739,7 +3748,7 @@ var decodeUriComponent = function (e) {
     const a = l.indexOf('?');
     return a === -1 ? '' : l.slice(a + 1);
   }
-  function g(l, a) {
+  function v(l, a) {
     return (
       a.parseNumbers &&
       !Number.isNaN(Number(l)) &&
@@ -3753,7 +3762,7 @@ var decodeUriComponent = function (e) {
       l
     );
   }
-  function b(l, a) {
+  function _(l, a) {
     (a = Object.assign(
       {
         decode: !0,
@@ -3784,8 +3793,8 @@ var decodeUriComponent = function (e) {
     for (const y of Object.keys(f)) {
       const k = f[y];
       if (typeof k == 'object' && k !== null)
-        for (const w of Object.keys(k)) k[w] = g(k[w], a);
-      else f[y] = g(k, a);
+        for (const w of Object.keys(k)) k[w] = v(k[w], a);
+      else f[y] = v(k, a);
     }
     return a.sort === !1
       ? f
@@ -3796,14 +3805,14 @@ var decodeUriComponent = function (e) {
           const w = f[k];
           return (
             Boolean(w) && typeof w == 'object' && !Array.isArray(w)
-              ? (y[k] = _(w))
+              ? (y[k] = b(w))
               : (y[k] = w),
             y
           );
         }, Object.create(null));
   }
   (e.extract = p),
-    (e.parse = b),
+    (e.parse = _),
     (e.stringify = (l, a) => {
       if (!l) return '';
       (a = Object.assign(
@@ -3843,7 +3852,7 @@ var decodeUriComponent = function (e) {
       a = Object.assign({ decode: !0 }, a);
       const [h, f] = i(l, '#');
       return Object.assign(
-        { url: h.split('?')[0] || '', query: b(p(l), a) },
+        { url: h.split('?')[0] || '', query: _(p(l), a) },
         a && a.parseFragmentIdentifier && f
           ? { fragmentIdentifier: x(f, a) }
           : {}
@@ -3857,7 +3866,7 @@ var decodeUriComponent = function (e) {
         k = Object.assign(y, l.query);
       let w = e.stringify(k, a);
       w && (w = `?${w}`);
-      let P = v(l.url);
+      let P = g(l.url);
       return (
         l.fragmentIdentifier && (P = `#${d(l.fragmentIdentifier, a)}`),
         `${h}${w}${P}`
@@ -3903,13 +3912,13 @@ const defaultUrlRegExp = /^(\w+:\/\/[^/?]+)?(.*?)(\?.+)?$/,
       { parts: n, hasLeading: o, hasTrailing: c } = i,
       { leadingSlash: u, trailingSlash: d } = t,
       x = u === !0 || (u === 'keep' && o),
-      _ = d === !0 || (d === 'keep' && c);
+      b = d === !0 || (d === 'keep' && c);
     let m = r;
     n.length > 0 && ((m || x) && (m += '/'), (m += n.join('/'))),
-      _ && (m += '/'),
+      b && (m += '/'),
       !m && x && (m += '/');
-    const v = ue(ue({}, queryString.parse(s, t.queryOptions)), t.query),
-      p = queryString.stringify(v, t.queryOptions);
+    const g = ue(ue({}, queryString.parse(s, t.queryOptions)), t.query),
+      p = queryString.stringify(g, t.queryOptions);
     return p && (m += `?${p}`), m;
   },
   urlJoin = (...e) => {
@@ -4020,9 +4029,39 @@ function baseToString(e) {
   var t = e + '';
   return t == '0' && 1 / e == -INFINITY$1 ? '-0' : t;
 }
+var reWhitespace = /\s/;
+function trimmedEndIndex(e) {
+  for (var t = e.length; t-- && reWhitespace.test(e.charAt(t)); );
+  return t;
+}
+var reTrimStart = /^\s+/;
+function baseTrim(e) {
+  return e && e.slice(0, trimmedEndIndex(e) + 1).replace(reTrimStart, '');
+}
 function isObject(e) {
   var t = typeof e;
   return e != null && (t == 'object' || t == 'function');
+}
+var NAN = 0 / 0,
+  reIsBadHex = /^[-+]0x[0-9a-f]+$/i,
+  reIsBinary = /^0b[01]+$/i,
+  reIsOctal = /^0o[0-7]+$/i,
+  freeParseInt = parseInt;
+function toNumber(e) {
+  if (typeof e == 'number') return e;
+  if (isSymbol(e)) return NAN;
+  if (isObject(e)) {
+    var t = typeof e.valueOf == 'function' ? e.valueOf() : e;
+    e = isObject(t) ? t + '' : t;
+  }
+  if (typeof e != 'string') return e === 0 ? e : +e;
+  e = baseTrim(e);
+  var r = reIsBinary.test(e);
+  return r || reIsOctal.test(e)
+    ? freeParseInt(e.slice(2), r ? 2 : 8)
+    : reIsBadHex.test(e)
+    ? NAN
+    : +e;
 }
 var asyncTag = '[object AsyncFunction]',
   funcTag = '[object Function]',
@@ -4242,10 +4281,10 @@ MapCache.prototype.delete = mapCacheDelete;
 MapCache.prototype.get = mapCacheGet;
 MapCache.prototype.has = mapCacheHas;
 MapCache.prototype.set = mapCacheSet;
-var FUNC_ERROR_TEXT = 'Expected a function';
+var FUNC_ERROR_TEXT$2 = 'Expected a function';
 function memoize(e, t) {
   if (typeof e != 'function' || (t != null && typeof t != 'function'))
-    throw new TypeError(FUNC_ERROR_TEXT);
+    throw new TypeError(FUNC_ERROR_TEXT$2);
   var r = function () {
     var i = arguments,
       s = t ? t.apply(this, i) : i[0],
@@ -4300,6 +4339,87 @@ function get(e, t, r) {
   var i = e == null ? void 0 : baseGet(e, t);
   return i === void 0 ? r : i;
 }
+var now = function () {
+    return root$1.Date.now();
+  },
+  now$1 = now,
+  FUNC_ERROR_TEXT$1 = 'Expected a function',
+  nativeMax = Math.max,
+  nativeMin = Math.min;
+function debounce(e, t, r) {
+  var i,
+    s,
+    n,
+    o,
+    c,
+    u,
+    d = 0,
+    x = !1,
+    b = !1,
+    m = !0;
+  if (typeof e != 'function') throw new TypeError(FUNC_ERROR_TEXT$1);
+  (t = toNumber(t) || 0),
+    isObject(r) &&
+      ((x = !!r.leading),
+      (b = 'maxWait' in r),
+      (n = b ? nativeMax(toNumber(r.maxWait) || 0, t) : n),
+      (m = 'trailing' in r ? !!r.trailing : m));
+  function g(k) {
+    var w = i,
+      P = s;
+    return (i = s = void 0), (d = k), (o = e.apply(P, w)), o;
+  }
+  function p(k) {
+    return (d = k), (c = setTimeout(l, t)), x ? g(k) : o;
+  }
+  function v(k) {
+    var w = k - u,
+      P = k - d,
+      M = t - w;
+    return b ? nativeMin(M, n - P) : M;
+  }
+  function _(k) {
+    var w = k - u,
+      P = k - d;
+    return u === void 0 || w >= t || w < 0 || (b && P >= n);
+  }
+  function l() {
+    var k = now$1();
+    if (_(k)) return a(k);
+    c = setTimeout(l, v(k));
+  }
+  function a(k) {
+    return (c = void 0), m && i ? g(k) : ((i = s = void 0), o);
+  }
+  function h() {
+    c !== void 0 && clearTimeout(c), (d = 0), (i = u = s = c = void 0);
+  }
+  function f() {
+    return c === void 0 ? o : a(now$1());
+  }
+  function y() {
+    var k = now$1(),
+      w = _(k);
+    if (((i = arguments), (s = this), (u = k), w)) {
+      if (c === void 0) return p(u);
+      if (b) return clearTimeout(c), (c = setTimeout(l, t)), g(u);
+    }
+    return c === void 0 && (c = setTimeout(l, t)), o;
+  }
+  return (y.cancel = h), (y.flush = f), y;
+}
+var FUNC_ERROR_TEXT = 'Expected a function';
+function throttle(e, t, r) {
+  var i = !0,
+    s = !0;
+  if (typeof e != 'function') throw new TypeError(FUNC_ERROR_TEXT);
+  return (
+    isObject(r) &&
+      ((i = 'leading' in r ? !!r.leading : i),
+      (s = 'trailing' in r ? !!r.trailing : s)),
+    debounce(e, t, { leading: i, maxWait: t, trailing: s })
+  );
+}
 var uaParser = { exports: {} };
 (function (e, t) {
   (function (r, i) {
@@ -4310,12 +4430,12 @@ var uaParser = { exports: {} };
       u = 'undefined',
       d = 'object',
       x = 'string',
-      _ = 'major',
+      b = 'major',
       m = 'model',
-      v = 'name',
+      g = 'name',
       p = 'type',
-      g = 'vendor',
-      b = 'version',
+      v = 'vendor',
+      _ = 'version',
       l = 'architecture',
       a = 'console',
       h = 'mobile',
@@ -4324,11 +4444,11 @@ var uaParser = { exports: {} };
       k = 'wearable',
       w = 'embedded',
       P = 255,
-      F = 'Amazon',
+      M = 'Amazon',
       D = 'Apple',
       T = 'ASUS',
       z = 'BlackBerry',
-      M = 'Browser',
+      F = 'Browser',
       V = 'Chrome',
       R = 'Edge',
       C = 'Firefox',
@@ -4431,19 +4551,19 @@ var uaParser = { exports: {} };
       oe = {
         browser: [
           [/\b(?:crmo|crios)\/([\w\.]+)/i],
-          [b, [v, 'Chrome']],
+          [_, [g, 'Chrome']],
           [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-          [b, [v, 'Edge']],
+          [_, [g, 'Edge']],
           [
             /(opera mini)\/([-\w\.]+)/i,
             /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i,
             /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i,
           ],
-          [v, b],
+          [g, _],
           [/opios[\/ ]+([\w\.]+)/i],
-          [b, [v, B + ' Mini']],
+          [_, [g, B + ' Mini']],
           [/\bopr\/([\w\.]+)/i],
-          [b, [v, B]],
+          [_, [g, B]],
           [
             /(kindle)\/([\w\.]+)/i,
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,
@@ -4453,79 +4573,79 @@ var uaParser = { exports: {} };
             /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale|qqbrowserlite|qq)\/([-\w\.]+)/i,
             /(weibo)__([\d\.]+)/i,
           ],
-          [v, b],
+          [g, _],
           [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-          [b, [v, 'UC' + M]],
+          [_, [g, 'UC' + F]],
           [/\bqbcore\/([\w\.]+)/i],
-          [b, [v, 'WeChat(Win) Desktop']],
+          [_, [g, 'WeChat(Win) Desktop']],
           [/micromessenger\/([\w\.]+)/i],
-          [b, [v, 'WeChat']],
+          [_, [g, 'WeChat']],
           [/konqueror\/([\w\.]+)/i],
-          [b, [v, 'Konqueror']],
+          [_, [g, 'Konqueror']],
           [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-          [b, [v, 'IE']],
+          [_, [g, 'IE']],
           [/yabrowser\/([\w\.]+)/i],
-          [b, [v, 'Yandex']],
+          [_, [g, 'Yandex']],
           [/(avast|avg)\/([\w\.]+)/i],
-          [[v, /(.+)/, '$1 Secure ' + M], b],
+          [[g, /(.+)/, '$1 Secure ' + F], _],
           [/\bfocus\/([\w\.]+)/i],
-          [b, [v, C + ' Focus']],
+          [_, [g, C + ' Focus']],
           [/\bopt\/([\w\.]+)/i],
-          [b, [v, B + ' Touch']],
+          [_, [g, B + ' Touch']],
           [/coc_coc\w+\/([\w\.]+)/i],
-          [b, [v, 'Coc Coc']],
+          [_, [g, 'Coc Coc']],
           [/dolfin\/([\w\.]+)/i],
-          [b, [v, 'Dolphin']],
+          [_, [g, 'Dolphin']],
           [/coast\/([\w\.]+)/i],
-          [b, [v, B + ' Coast']],
+          [_, [g, B + ' Coast']],
           [/miuibrowser\/([\w\.]+)/i],
-          [b, [v, 'MIUI ' + M]],
+          [_, [g, 'MIUI ' + F]],
           [/fxios\/([-\w\.]+)/i],
-          [b, [v, C]],
+          [_, [g, C]],
           [/\bqihu|(qi?ho?o?|360)browser/i],
-          [[v, '360 ' + M]],
+          [[g, '360 ' + F]],
           [/(oculus|samsung|sailfish)browser\/([\w\.]+)/i],
-          [[v, /(.+)/, '$1 ' + M], b],
+          [[g, /(.+)/, '$1 ' + F], _],
           [/(comodo_dragon)\/([\w\.]+)/i],
-          [[v, /_/g, ' '], b],
+          [[g, /_/g, ' '], _],
           [
             /(electron)\/([\w\.]+) safari/i,
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,
             /m?(qqbrowser|baiduboxapp|2345Explorer)[\/ ]?([\w\.]+)/i,
           ],
-          [v, b],
+          [g, _],
           [/(metasr)[\/ ]?([\w\.]+)/i, /(lbbrowser)/i],
-          [v],
+          [g],
           [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-          [[v, Q], b],
+          [[g, Q], _],
           [
             /safari (line)\/([\w\.]+)/i,
             /\b(line)\/([\w\.]+)\/iab/i,
             /(chromium|instagram)[\/ ]([-\w\.]+)/i,
           ],
-          [v, b],
+          [g, _],
           [/\bgsa\/([\w\.]+) .*safari\//i],
-          [b, [v, 'GSA']],
+          [_, [g, 'GSA']],
           [/headlesschrome(?:\/([\w\.]+)| )/i],
-          [b, [v, V + ' Headless']],
+          [_, [g, V + ' Headless']],
           [/ wv\).+(chrome)\/([\w\.]+)/i],
-          [[v, V + ' WebView'], b],
+          [[g, V + ' WebView'], _],
           [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-          [b, [v, 'Android ' + M]],
+          [_, [g, 'Android ' + F]],
           [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-          [v, b],
+          [g, _],
           [/version\/([\w\.]+) .*mobile\/\w+ (safari)/i],
-          [b, [v, 'Mobile Safari']],
+          [_, [g, 'Mobile Safari']],
           [/version\/([\w\.]+) .*(mobile ?safari|safari)/i],
-          [b, v],
+          [_, g],
           [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-          [v, [b, ae, fe]],
+          [g, [_, ae, fe]],
           [/(webkit|khtml)\/([\w\.]+)/i],
-          [v, b],
+          [g, _],
           [/(navigator|netscape\d?)\/([-\w\.]+)/i],
-          [[v, 'Netscape'], b],
+          [[g, 'Netscape'], _],
           [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-          [b, [v, C + ' Reality']],
+          [_, [g, C + ' Reality']],
           [
             /ekiohf.+(flow)\/([\w\.]+)/i,
             /(swiftfox)/i,
@@ -4536,7 +4656,7 @@ var uaParser = { exports: {} };
             /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
             /(links) \(([\w\.]+)/i,
           ],
-          [v, b],
+          [g, _],
         ],
         cpu: [
           [/(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i],
@@ -4564,28 +4684,28 @@ var uaParser = { exports: {} };
           [
             /\b(sch-i[89]0\d|shw-m380s|sm-[pt]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i,
           ],
-          [m, [g, H], [p, f]],
+          [m, [v, H], [p, f]],
           [
             /\b((?:s[cgp]h|gt|sm)-\w+|galaxy nexus)/i,
             /samsung[- ]([-\w]+)/i,
             /sec-(sgh\w+)/i,
           ],
-          [m, [g, H], [p, h]],
+          [m, [v, H], [p, h]],
           [/\((ip(?:hone|od)[\w ]*);/i],
-          [m, [g, D], [p, h]],
+          [m, [v, D], [p, h]],
           [
             /\((ipad);[-\w\),; ]+apple/i,
             /applecoremedia\/[\w\.]+ \((ipad)/i,
             /\b(ipad)\d\d?,\d\d?[;\]].+ios/i,
           ],
-          [m, [g, D], [p, f]],
+          [m, [v, D], [p, f]],
           [/\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i],
-          [m, [g, E], [p, f]],
+          [m, [v, E], [p, f]],
           [
             /(?:huawei|honor)([-\w ]+)[;\)]/i,
             /\b(nexus 6p|\w{2,4}-[atu]?[ln][01259x][012359][an]?)\b(?!.+d\/s)/i,
           ],
-          [m, [g, E], [p, h]],
+          [m, [v, E], [p, h]],
           [
             /\b(poco[\w ]+)(?: bui|\))/i,
             /\b; (\w+) build\/hm\1/i,
@@ -4595,106 +4715,106 @@ var uaParser = { exports: {} };
           ],
           [
             [m, /_/g, ' '],
-            [g, J],
+            [v, J],
             [p, h],
           ],
           [/\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i],
           [
             [m, /_/g, ' '],
-            [g, J],
+            [v, J],
             [p, f],
           ],
           [
             /; (\w+) bui.+ oppo/i,
             /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i,
           ],
-          [m, [g, 'OPPO'], [p, h]],
+          [m, [v, 'OPPO'], [p, h]],
           [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-          [m, [g, 'Vivo'], [p, h]],
+          [m, [v, 'Vivo'], [p, h]],
           [/\b(rmx[12]\d{3})(?: bui|;|\))/i],
-          [m, [g, 'Realme'], [p, h]],
+          [m, [v, 'Realme'], [p, h]],
           [
             /\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i,
             /\bmot(?:orola)?[- ](\w*)/i,
             /((?:moto[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i,
           ],
-          [m, [g, I], [p, h]],
+          [m, [v, I], [p, h]],
           [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-          [m, [g, I], [p, f]],
+          [m, [v, I], [p, f]],
           [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-          [m, [g, A], [p, f]],
+          [m, [v, A], [p, f]],
           [
             /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
             /\blg[-e;\/ ]+((?!browser|netcast|android tv)\w+)/i,
             /\blg-?([\d\w]+) bui/i,
           ],
-          [m, [g, A], [p, h]],
+          [m, [v, A], [p, h]],
           [
             /(ideatab[-\w ]+)/i,
             /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i,
           ],
-          [m, [g, 'Lenovo'], [p, f]],
+          [m, [v, 'Lenovo'], [p, f]],
           [/(?:maemo|nokia).*(n900|lumia \d+)/i, /nokia[-_ ]?([-\w\.]*)/i],
           [
             [m, /_/g, ' '],
-            [g, 'Nokia'],
+            [v, 'Nokia'],
             [p, h],
           ],
           [/(pixel c)\b/i],
-          [m, [g, S], [p, f]],
+          [m, [v, S], [p, f]],
           [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-          [m, [g, S], [p, h]],
+          [m, [v, S], [p, h]],
           [
             /droid.+ ([c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i,
           ],
-          [m, [g, G], [p, h]],
+          [m, [v, G], [p, h]],
           [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
           [
             [m, 'Xperia Tablet'],
-            [g, G],
+            [v, G],
             [p, f],
           ],
           [
             / (kb2005|in20[12]5|be20[12][59])\b/i,
             /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i,
           ],
-          [m, [g, 'OnePlus'], [p, h]],
+          [m, [v, 'OnePlus'], [p, h]],
           [
             /(alexa)webm/i,
             /(kf[a-z]{2}wi)( bui|\))/i,
             /(kf[a-z]+)( bui|\)).+silk\//i,
           ],
-          [m, [g, F], [p, f]],
+          [m, [v, M], [p, f]],
           [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
           [
             [m, /(.+)/g, 'Fire Phone $1'],
-            [g, F],
+            [v, M],
             [p, h],
           ],
           [/(playbook);[-\w\),; ]+(rim)/i],
-          [m, g, [p, f]],
+          [m, v, [p, f]],
           [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-          [m, [g, z], [p, h]],
+          [m, [v, z], [p, h]],
           [
             /(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i,
           ],
-          [m, [g, T], [p, f]],
+          [m, [v, T], [p, f]],
           [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-          [m, [g, T], [p, h]],
+          [m, [v, T], [p, h]],
           [/(nexus 9)/i],
-          [m, [g, 'HTC'], [p, f]],
+          [m, [v, 'HTC'], [p, f]],
           [
             /(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i,
             /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i,
             /(alcatel|geeksphone|nexian|panasonic|sony)[-_ ]?([-\w]*)/i,
           ],
-          [g, [m, /_/g, ' '], [p, h]],
+          [v, [m, /_/g, ' '], [p, h]],
           [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-          [m, [g, 'Acer'], [p, f]],
+          [m, [v, 'Acer'], [p, f]],
           [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-          [m, [g, 'Meizu'], [p, h]],
+          [m, [v, 'Meizu'], [p, h]],
           [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-          [m, [g, 'Sharp'], [p, h]],
+          [m, [v, 'Sharp'], [p, h]],
           [
             /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[-_ ]?([-\w]*)/i,
             /(hp) ([\w ]+\w)/i,
@@ -4704,7 +4824,7 @@ var uaParser = { exports: {} };
             /(jolla)/i,
             /(oppo) ?([\w ]+) bui/i,
           ],
-          [g, m, [p, h]],
+          [v, m, [p, h]],
           [
             /(archos) (gamepad2?)/i,
             /(hp).+(touchpad(?!.+tablet)|tablet)/i,
@@ -4716,121 +4836,121 @@ var uaParser = { exports: {} };
             /(gigaset)[- ]+(q\w{1,9}) bui/i,
             /(vodafone) ([\w ]+)(?:\)| bui)/i,
           ],
-          [g, m, [p, f]],
+          [v, m, [p, f]],
           [/(surface duo)/i],
-          [m, [g, L], [p, f]],
+          [m, [v, L], [p, f]],
           [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-          [m, [g, 'Fairphone'], [p, h]],
+          [m, [v, 'Fairphone'], [p, h]],
           [/(u304aa)/i],
-          [m, [g, 'AT&T'], [p, h]],
+          [m, [v, 'AT&T'], [p, h]],
           [/\bsie-(\w*)/i],
-          [m, [g, 'Siemens'], [p, h]],
+          [m, [v, 'Siemens'], [p, h]],
           [/\b(rct\w+) b/i],
-          [m, [g, 'RCA'], [p, f]],
+          [m, [v, 'RCA'], [p, f]],
           [/\b(venue[\d ]{2,7}) b/i],
-          [m, [g, 'Dell'], [p, f]],
+          [m, [v, 'Dell'], [p, f]],
           [/\b(q(?:mv|ta)\w+) b/i],
-          [m, [g, 'Verizon'], [p, f]],
+          [m, [v, 'Verizon'], [p, f]],
           [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-          [m, [g, 'Barnes & Noble'], [p, f]],
+          [m, [v, 'Barnes & Noble'], [p, f]],
           [/\b(tm\d{3}\w+) b/i],
-          [m, [g, 'NuVision'], [p, f]],
+          [m, [v, 'NuVision'], [p, f]],
           [/\b(k88) b/i],
-          [m, [g, 'ZTE'], [p, f]],
+          [m, [v, 'ZTE'], [p, f]],
           [/\b(nx\d{3}j) b/i],
-          [m, [g, 'ZTE'], [p, h]],
+          [m, [v, 'ZTE'], [p, h]],
           [/\b(gen\d{3}) b.+49h/i],
-          [m, [g, 'Swiss'], [p, h]],
+          [m, [v, 'Swiss'], [p, h]],
           [/\b(zur\d{3}) b/i],
-          [m, [g, 'Swiss'], [p, f]],
+          [m, [v, 'Swiss'], [p, f]],
           [/\b((zeki)?tb.*\b) b/i],
-          [m, [g, 'Zeki'], [p, f]],
+          [m, [v, 'Zeki'], [p, f]],
           [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
-          [[g, 'Dragon Touch'], m, [p, f]],
+          [[v, 'Dragon Touch'], m, [p, f]],
           [/\b(ns-?\w{0,9}) b/i],
-          [m, [g, 'Insignia'], [p, f]],
+          [m, [v, 'Insignia'], [p, f]],
           [/\b((nxa|next)-?\w{0,9}) b/i],
-          [m, [g, 'NextBook'], [p, f]],
+          [m, [v, 'NextBook'], [p, f]],
           [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
-          [[g, 'Voice'], m, [p, h]],
+          [[v, 'Voice'], m, [p, h]],
           [/\b(lvtel\-)?(v1[12]) b/i],
-          [[g, 'LvTel'], m, [p, h]],
+          [[v, 'LvTel'], m, [p, h]],
           [/\b(ph-1) /i],
-          [m, [g, 'Essential'], [p, h]],
+          [m, [v, 'Essential'], [p, h]],
           [/\b(v(100md|700na|7011|917g).*\b) b/i],
-          [m, [g, 'Envizen'], [p, f]],
+          [m, [v, 'Envizen'], [p, f]],
           [/\b(trio[-\w\. ]+) b/i],
-          [m, [g, 'MachSpeed'], [p, f]],
+          [m, [v, 'MachSpeed'], [p, f]],
           [/\btu_(1491) b/i],
-          [m, [g, 'Rotor'], [p, f]],
+          [m, [v, 'Rotor'], [p, f]],
           [/(shield[\w ]+) b/i],
-          [m, [g, 'Nvidia'], [p, f]],
+          [m, [v, 'Nvidia'], [p, f]],
           [/(sprint) (\w+)/i],
-          [g, m, [p, h]],
+          [v, m, [p, h]],
           [/(kin\.[onetw]{3})/i],
           [
             [m, /\./g, ' '],
-            [g, L],
+            [v, L],
             [p, h],
           ],
           [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-          [m, [g, Z], [p, f]],
+          [m, [v, Z], [p, f]],
           [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-          [m, [g, Z], [p, h]],
+          [m, [v, Z], [p, h]],
           [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-          [g, m, [p, a]],
+          [v, m, [p, a]],
           [/droid.+; (shield) bui/i],
-          [m, [g, 'Nvidia'], [p, a]],
+          [m, [v, 'Nvidia'], [p, a]],
           [/(playstation [345portablevi]+)/i],
-          [m, [g, G], [p, a]],
+          [m, [v, G], [p, a]],
           [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-          [m, [g, L], [p, a]],
+          [m, [v, L], [p, a]],
           [/smart-tv.+(samsung)/i],
-          [g, [p, y]],
+          [v, [p, y]],
           [/hbbtv.+maple;(\d+)/i],
           [
             [m, /^/, 'SmartTV'],
-            [g, H],
+            [v, H],
             [p, y],
           ],
           [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
           [
-            [g, A],
+            [v, A],
             [p, y],
           ],
           [/(apple) ?tv/i],
-          [g, [m, D + ' TV'], [p, y]],
+          [v, [m, D + ' TV'], [p, y]],
           [/crkey/i],
           [
             [m, V + 'cast'],
-            [g, S],
+            [v, S],
             [p, y],
           ],
           [/droid.+aft(\w)( bui|\))/i],
-          [m, [g, F], [p, y]],
+          [m, [v, M], [p, y]],
           [/\(dtv[\);].+(aquos)/i],
-          [m, [g, 'Sharp'], [p, y]],
+          [m, [v, 'Sharp'], [p, y]],
           [
             /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,
             /hbbtv\/\d+\.\d+\.\d+ +\([\w ]*; *(\w[^;]*);([^;]*)/i,
           ],
           [
-            [g, O],
+            [v, O],
             [m, O],
             [p, y],
           ],
           [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
           [[p, y]],
           [/((pebble))app/i],
-          [g, m, [p, k]],
+          [v, m, [p, k]],
           [/droid.+; (glass) \d/i],
-          [m, [g, S], [p, k]],
+          [m, [v, S], [p, k]],
           [/droid.+; (wt63?0{2,3})\)/i],
-          [m, [g, Z], [p, k]],
+          [m, [v, Z], [p, k]],
           [/(quest( 2)?)/i],
-          [m, [g, Q], [p, k]],
+          [m, [v, Q], [p, k]],
           [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-          [g, [p, w]],
+          [v, [p, w]],
           [/droid .+?; ([^;]+?)(?: bui|\) applew).+? mobile safari/i],
           [m, [p, h]],
           [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
@@ -4840,13 +4960,13 @@ var uaParser = { exports: {} };
           [/(phone|mobile(?:[;\/]| safari)|pda(?=.+windows ce))/i],
           [[p, h]],
           [/(android[-\w\. ]{0,9});.+buil/i],
-          [m, [g, 'Generic']],
+          [m, [v, 'Generic']],
         ],
         engine: [
           [/windows.+ edge\/([\w\.]+)/i],
-          [b, [v, R + 'HTML']],
+          [_, [g, R + 'HTML']],
           [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-          [b, [v, 'Blink']],
+          [_, [g, 'Blink']],
           [
             /(presto)\/([\w\.]+)/i,
             /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
@@ -4854,60 +4974,60 @@ var uaParser = { exports: {} };
             /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,
             /(icab)[\/ ]([23]\.[\d\.]+)/i,
           ],
-          [v, b],
+          [g, _],
           [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-          [b, v],
+          [_, g],
         ],
         os: [
           [/microsoft (windows) (vista|xp)/i],
-          [v, b],
+          [g, _],
           [
             /(windows) nt 6\.2; (arm)/i,
             /(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i,
             /(windows)[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i,
           ],
-          [v, [b, ae, le]],
+          [g, [_, ae, le]],
           [/(win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
           [
-            [v, 'Windows'],
-            [b, ae, le],
+            [g, 'Windows'],
+            [_, ae, le],
           ],
           [
             /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,
             /cfnetwork\/.+darwin/i,
           ],
           [
-            [b, /_/g, '.'],
-            [v, 'iOS'],
+            [_, /_/g, '.'],
+            [g, 'iOS'],
           ],
           [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
           [
-            [v, 'Mac OS'],
-            [b, /_/g, '.'],
+            [g, 'Mac OS'],
+            [_, /_/g, '.'],
           ],
           [/droid ([\w\.]+)\b.+(android[- ]x86)/i],
-          [b, v],
+          [_, g],
           [
             /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i,
             /(blackberry)\w*\/([\w\.]*)/i,
             /(tizen|kaios)[\/ ]([\w\.]+)/i,
             /\((series40);/i,
           ],
-          [v, b],
+          [g, _],
           [/\(bb(10);/i],
-          [b, [v, z]],
+          [_, [g, z]],
           [/(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i],
-          [b, [v, 'Symbian']],
+          [_, [g, 'Symbian']],
           [
             /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i,
           ],
-          [b, [v, C + ' OS']],
+          [_, [g, C + ' OS']],
           [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-          [b, [v, 'webOS']],
+          [_, [g, 'webOS']],
           [/crkey\/([\d\.]+)/i],
-          [b, [v, V + 'cast']],
+          [_, [g, V + 'cast']],
           [/(cros) [\w]+ ([\w\.]+\w)/i],
-          [[v, 'Chromium OS'], b],
+          [[g, 'Chromium OS'], _],
           [
             /(nintendo|playstation) ([wids345portablevuch]+)/i,
             /(xbox); +xbox ([^\);]+)/i,
@@ -4920,16 +5040,16 @@ var uaParser = { exports: {} };
             /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,
             /(haiku) (\w+)/i,
           ],
-          [v, b],
+          [g, _],
           [/(sunos) ?([\w\.\d]*)/i],
-          [[v, 'Solaris'], b],
+          [[g, 'Solaris'], _],
           [
             /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,
             /(aix) ((\d)(?=\.|\)| )[\w\.])*/i,
             /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux)/i,
             /(unix) ?([\w\.]*)/i,
           ],
-          [v, b],
+          [g, _],
         ],
       },
       $ = function (q, W) {
@@ -4945,8 +5065,8 @@ var uaParser = { exports: {} };
           (this.getBrowser = function () {
             var j = {};
             return (
-              (j[v] = i),
-              (j[b] = i),
+              (j[g] = i),
+              (j[_] = i),
               X.call(j, N, U.browser),
               (j.major = se(j.version)),
               j
@@ -4959,16 +5079,16 @@ var uaParser = { exports: {} };
           (this.getDevice = function () {
             var j = {};
             return (
-              (j[g] = i), (j[m] = i), (j[p] = i), X.call(j, N, U.device), j
+              (j[v] = i), (j[m] = i), (j[p] = i), X.call(j, N, U.device), j
             );
           }),
           (this.getEngine = function () {
             var j = {};
-            return (j[v] = i), (j[b] = i), X.call(j, N, U.engine), j;
+            return (j[g] = i), (j[_] = i), X.call(j, N, U.engine), j;
           }),
           (this.getOS = function () {
             var j = {};
-            return (j[v] = i), (j[b] = i), X.call(j, N, U.os), j;
+            return (j[g] = i), (j[_] = i), X.call(j, N, U.os), j;
           }),
           (this.getResult = function () {
             return {
@@ -4991,10 +5111,10 @@ var uaParser = { exports: {} };
         );
       };
     ($.VERSION = s),
-      ($.BROWSER = te([v, b, _])),
+      ($.BROWSER = te([g, _, b])),
       ($.CPU = te([l])),
-      ($.DEVICE = te([m, g, p, a, h, y, f, k, w])),
-      ($.ENGINE = $.OS = te([v, b])),
+      ($.DEVICE = te([m, v, p, a, h, y, f, k, w])),
+      ($.ENGINE = $.OS = te([g, _])),
       e.exports && (t = e.exports = $),
       (t.UAParser = $);
     var ne = typeof r !== u && (r.jQuery || r.Zepto);
@@ -5022,37 +5142,37 @@ function create_fragment(e) {
   let t, r, i, s, n, o, c, u, d;
   add_render_callback(e[21]);
   const x = e[20].background,
-    _ = create_slot(x, e, e[19], get_background_slot_context),
+    b = create_slot(x, e, e[19], get_background_slot_context),
     m = e[20].foreground,
-    v = create_slot(m, e, e[19], get_foreground_slot_context);
+    g = create_slot(m, e, e[19], get_foreground_slot_context);
   return {
     c() {
       (t = element('svelte-scroller-outer')),
         (r = element('svelte-scroller-background-container')),
         (i = element('svelte-scroller-background')),
-        _ && _.c(),
+        b && b.c(),
         (n = space()),
         (o = element('svelte-scroller-foreground')),
-        v && v.c(),
+        g && g.c(),
         this.h();
     },
     l(p) {
       t = claim_element(p, 'SVELTE-SCROLLER-OUTER', { class: !0 });
-      var g = children(t);
-      r = claim_element(g, 'SVELTE-SCROLLER-BACKGROUND-CONTAINER', {
+      var v = children(t);
+      r = claim_element(v, 'SVELTE-SCROLLER-BACKGROUND-CONTAINER', {
         class: !0,
         style: !0,
       });
-      var b = children(r);
-      i = claim_element(b, 'SVELTE-SCROLLER-BACKGROUND', { class: !0 });
+      var _ = children(r);
+      i = claim_element(_, 'SVELTE-SCROLLER-BACKGROUND', { class: !0 });
       var l = children(i);
-      _ && _.l(l),
+      b && b.l(l),
         l.forEach(detach),
-        b.forEach(detach),
-        (n = claim_space(g)),
-        (o = claim_element(g, 'SVELTE-SCROLLER-FOREGROUND', { class: !0 }));
+        _.forEach(detach),
+        (n = claim_space(v)),
+        (o = claim_element(v, 'SVELTE-SCROLLER-FOREGROUND', { class: !0 }));
       var a = children(o);
-      v && v.l(a), a.forEach(detach), g.forEach(detach), this.h();
+      g && g.l(a), a.forEach(detach), v.forEach(detach), this.h();
     },
     h() {
       set_custom_element_data(i, 'class', 'svelte-1yjh2jm'),
@@ -5065,61 +5185,61 @@ function create_fragment(e) {
         set_custom_element_data(o, 'class', 'svelte-1yjh2jm'),
         set_custom_element_data(t, 'class', 'svelte-1yjh2jm');
     },
-    m(p, g) {
-      insert_hydration(p, t, g),
+    m(p, v) {
+      insert_hydration(p, t, v),
         append_hydration(t, r),
         append_hydration(r, i),
-        _ && _.m(i, null),
+        b && b.m(i, null),
         e[22](i),
         append_hydration(t, n),
         append_hydration(t, o),
-        v && v.m(o, null),
+        g && g.m(o, null),
         e[23](o),
         e[24](t),
         (c = !0),
         u || ((d = listen(window_1, 'resize', e[21])), (u = !0));
     },
-    p(p, g) {
-      _ &&
-        _.p &&
-        (!c || g[0] & 524288) &&
+    p(p, v) {
+      b &&
+        b.p &&
+        (!c || v[0] & 524288) &&
         update_slot_base(
-          _,
+          b,
           x,
           p,
           p[19],
           c
-            ? get_slot_changes(x, p[19], g, get_background_slot_changes)
+            ? get_slot_changes(x, p[19], v, get_background_slot_changes)
             : get_all_dirty_from_scope(p[19]),
           get_background_slot_context
         ),
-        (!c || (g[0] & 48 && s !== (s = '' + (p[5] + p[4])))) &&
+        (!c || (v[0] & 48 && s !== (s = '' + (p[5] + p[4])))) &&
           set_custom_element_data(r, 'style', s),
-        v &&
-          v.p &&
-          (!c || g[0] & 524288) &&
+        g &&
+          g.p &&
+          (!c || v[0] & 524288) &&
           update_slot_base(
-            v,
+            g,
             m,
             p,
             p[19],
             c
-              ? get_slot_changes(m, p[19], g, get_foreground_slot_changes)
+              ? get_slot_changes(m, p[19], v, get_foreground_slot_changes)
               : get_all_dirty_from_scope(p[19]),
             get_foreground_slot_context
           );
     },
     i(p) {
-      c || (transition_in(_, p), transition_in(v, p), (c = !0));
+      c || (transition_in(b, p), transition_in(g, p), (c = !0));
     },
     o(p) {
-      transition_out(_, p), transition_out(v, p), (c = !1);
+      transition_out(b, p), transition_out(g, p), (c = !1);
     },
     d(p) {
       p && detach(t),
-        _ && _.d(p),
+        b && b.d(p),
         e[22](null),
-        v && v.d(p),
+        g && g.d(p),
         e[23](null),
         e[24](null),
         (u = !1),
@@ -5177,12 +5297,12 @@ function instance(e, t, r) {
     c,
     { $$slots: u = {}, $$scope: d } = t,
     { top: x = 0 } = t,
-    { bottom: _ = 1 } = t,
+    { bottom: b = 1 } = t,
     { threshold: m = 0.5 } = t,
-    { query: v = 'section' } = t,
+    { query: g = 'section' } = t,
     { parallax: p = !1 } = t,
-    { index: g = 0 } = t,
-    { count: b = 0 } = t,
+    { index: v = 0 } = t,
+    { count: _ = 0 } = t,
     { offset: l = 0 } = t,
     { progress: a = 0 } = t,
     { visible: h = !1 } = t,
@@ -5191,22 +5311,22 @@ function instance(e, t, r) {
     k,
     w,
     P,
-    F = 0,
+    M = 0,
     D,
     T = 0,
     z = 1;
   onMount(() => {
-    (P = y.querySelectorAll(v)), r(7, (b = P.length)), M();
-    const E = { outer: f, update: M };
+    (P = y.querySelectorAll(g)), r(7, (_ = P.length)), F();
+    const E = { outer: f, update: F };
     return manager.add(E), () => manager.remove(E);
   });
-  function M() {
+  function F() {
     if (!y) return;
     const E = f.getBoundingClientRect();
     (w = E.left), r(18, (z = E.right - w));
     const A = y.getBoundingClientRect(),
       L = k.getBoundingClientRect();
-    r(10, (h = A.top < F && A.bottom > 0));
+    r(10, (h = A.top < M && A.bottom > 0));
     const I = A.bottom - A.top,
       B = L.bottom - L.top,
       H = s - i;
@@ -5222,13 +5342,13 @@ function instance(e, t, r) {
         Q = P[G + 1],
         ee = Q ? Q.getBoundingClientRect().top : A.bottom;
       if ((r(8, (l = (n - Z) / (ee - Z))), ee >= n)) {
-        r(6, (g = G));
+        r(6, (v = G));
         break;
       }
     }
   }
   function V() {
-    r(0, (F = window_1.innerHeight));
+    r(0, (M = window_1.innerHeight));
   }
   function R(E) {
     binding_callbacks[E ? 'unshift' : 'push'](() => {
@@ -5248,22 +5368,22 @@ function instance(e, t, r) {
   return (
     (e.$$set = (E) => {
       'top' in E && r(11, (x = E.top)),
-        'bottom' in E && r(12, (_ = E.bottom)),
+        'bottom' in E && r(12, (b = E.bottom)),
         'threshold' in E && r(13, (m = E.threshold)),
-        'query' in E && r(14, (v = E.query)),
+        'query' in E && r(14, (g = E.query)),
         'parallax' in E && r(15, (p = E.parallax)),
-        'index' in E && r(6, (g = E.index)),
-        'count' in E && r(7, (b = E.count)),
+        'index' in E && r(6, (v = E.index)),
+        'count' in E && r(7, (_ = E.count)),
         'offset' in E && r(8, (l = E.offset)),
         'progress' in E && r(9, (a = E.progress)),
         'visible' in E && r(10, (h = E.visible)),
         '$$scope' in E && r(19, (d = E.$$scope));
     }),
     (e.$$.update = () => {
-      e.$$.dirty[0] & 2049 && (i = Math.round(x * F)),
-        e.$$.dirty[0] & 4097 && (s = Math.round(_ * F)),
-        e.$$.dirty[0] & 8193 && (n = Math.round(m * F)),
-        e.$$.dirty[0] & 47104 && M(),
+      e.$$.dirty[0] & 2049 && (i = Math.round(x * M)),
+        e.$$.dirty[0] & 4097 && (s = Math.round(b * M)),
+        e.$$.dirty[0] & 8193 && (n = Math.round(m * M)),
+        e.$$.dirty[0] & 47104 && F(),
         e.$$.dirty[0] & 196608 &&
           r(
             5,
@@ -5276,7 +5396,7 @@ function instance(e, t, r) {
           ),
         e.$$.dirty[0] & 327680 && r(4, (c = D ? `width:${z}px;` : ''));
     }),
-    [F, f, y, k, c, o, g, b, l, a, h, x, _, m, v, p, D, T, z, d, u, V, R, C, S]
+    [M, f, y, k, c, o, v, _, l, a, h, x, b, m, g, p, D, T, z, d, u, V, R, C, S]
   );
 }
 class Scroller extends SvelteComponent {
@@ -5713,7 +5833,7 @@ var lottie = { exports: {} };
         function x(S, E) {
           return this.shear(r(S), r(E));
         }
-        function _(S, E) {
+        function b(S, E) {
           var A = e(E),
             L = t(E);
           return this._t(A, L, 0, 0, -L, A, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
@@ -5728,7 +5848,7 @@ var lottie = { exports: {} };
               : this._t(S, 0, 0, 0, 0, E, 0, 0, 0, 0, A, 0, 0, 0, 0, 1)
           );
         }
-        function v(S, E, A, L, I, B, H, G, J, Z, Q, ee, te, re, K, se) {
+        function g(S, E, A, L, I, B, H, G, J, Z, Q, ee, te, re, K, se) {
           return (
             (this.props[0] = S),
             (this.props[1] = E),
@@ -5757,7 +5877,7 @@ var lottie = { exports: {} };
               : this
           );
         }
-        function g(S, E, A, L, I, B, H, G, J, Z, Q, ee, te, re, K, se) {
+        function v(S, E, A, L, I, B, H, G, J, Z, Q, ee, te, re, K, se) {
           var O = this.props;
           if (
             S === 1 &&
@@ -5818,7 +5938,7 @@ var lottie = { exports: {} };
             this
           );
         }
-        function b() {
+        function _() {
           return (
             this._identityCalculated ||
               ((this._identity = !(
@@ -5928,7 +6048,7 @@ var lottie = { exports: {} };
             G
           );
         }
-        function F(S) {
+        function M(S) {
           var E = this.getInverseMatrix();
           return E.applyToPointArray(S[0], S[1], S[2] || 0);
         }
@@ -5936,7 +6056,7 @@ var lottie = { exports: {} };
           var E,
             A = S.length,
             L = [];
-          for (E = 0; E < A; E += 1) L[E] = F(S[E]);
+          for (E = 0; E < A; E += 1) L[E] = M(S[E]);
           return L;
         }
         function T(S, E, A) {
@@ -5986,7 +6106,7 @@ var lottie = { exports: {} };
             L
           );
         }
-        function M(S, E) {
+        function F(S, E) {
           if (this.isIdentity()) return S + ',' + E;
           var A = this.props;
           return (
@@ -6035,29 +6155,29 @@ var lottie = { exports: {} };
             (this.rotateY = c),
             (this.rotateZ = u),
             (this.skew = x),
-            (this.skewFromAxis = _),
+            (this.skewFromAxis = b),
             (this.shear = d),
             (this.scale = m),
-            (this.setTransform = v),
+            (this.setTransform = g),
             (this.translate = p),
-            (this.transform = g),
+            (this.transform = v),
             (this.applyToPoint = f),
             (this.applyToX = y),
             (this.applyToY = k),
             (this.applyToZ = w),
             (this.applyToPointArray = z),
             (this.applyToTriplePoints = T),
-            (this.applyToPointStringified = M),
+            (this.applyToPointStringified = F),
             (this.toCSS = V),
             (this.to2dCSS = C),
             (this.clone = a),
             (this.cloneFromProps = h),
             (this.equals = l),
             (this.inversePoints = D),
-            (this.inversePoint = F),
+            (this.inversePoint = M),
             (this.getInverseMatrix = P),
             (this._t = this.transform),
-            (this.isIdentity = b),
+            (this.isIdentity = _),
             (this._identity = !0),
             (this._identityCalculated = !1),
             (this.props = createTypedArray('float32', 16)),
@@ -6074,77 +6194,77 @@ var lottie = { exports: {} };
           u = t.pow(2, n),
           d = u * 2,
           x = i - 1,
-          _;
+          b;
         function m(h, f, y) {
           var k = [];
           f = f === !0 ? { entropy: !0 } : f || {};
-          var w = b(g(f.entropy ? [h, a(e)] : h === null ? l() : h, 3), k),
-            P = new v(k),
-            F = function () {
+          var w = _(v(f.entropy ? [h, a(e)] : h === null ? l() : h, 3), k),
+            P = new g(k),
+            M = function () {
               for (var D = P.g(s), T = c, z = 0; D < u; )
                 (D = (D + z) * i), (T *= i), (z = P.g(1));
               for (; D >= d; ) (D /= 2), (T /= 2), (z >>>= 1);
               return (D + z) / T;
             };
           return (
-            (F.int32 = function () {
+            (M.int32 = function () {
               return P.g(4) | 0;
             }),
-            (F.quick = function () {
+            (M.quick = function () {
               return P.g(4) / 4294967296;
             }),
-            (F.double = F),
-            b(a(P.S), e),
+            (M.double = M),
+            _(a(P.S), e),
             (
               f.pass ||
               y ||
-              function (D, T, z, M) {
+              function (D, T, z, F) {
                 return (
-                  M &&
-                    (M.S && p(M, P),
+                  F &&
+                    (F.S && p(F, P),
                     (D.state = function () {
                       return p(P, {});
                     })),
                   z ? ((t[o] = D), T) : D
                 );
               }
-            )(F, w, 'global' in f ? f.global : this == t, f.state)
+            )(M, w, 'global' in f ? f.global : this == t, f.state)
           );
         }
         t['seed' + o] = m;
-        function v(h) {
+        function g(h) {
           var f,
             y = h.length,
             k = this,
             w = 0,
             P = (k.i = k.j = 0),
-            F = (k.S = []);
-          for (y || (h = [y++]); w < i; ) F[w] = w++;
+            M = (k.S = []);
+          for (y || (h = [y++]); w < i; ) M[w] = w++;
           for (w = 0; w < i; w++)
-            (F[w] = F[(P = x & (P + h[w % y] + (f = F[w])))]), (F[P] = f);
+            (M[w] = M[(P = x & (P + h[w % y] + (f = M[w])))]), (M[P] = f);
           k.g = function (D) {
-            for (var T, z = 0, M = k.i, V = k.j, R = k.S; D--; )
-              (T = R[(M = x & (M + 1))]),
+            for (var T, z = 0, F = k.i, V = k.j, R = k.S; D--; )
+              (T = R[(F = x & (F + 1))]),
                 (z =
-                  z * i + R[x & ((R[M] = R[(V = x & (V + T))]) + (R[V] = T))]);
-            return (k.i = M), (k.j = V), z;
+                  z * i + R[x & ((R[F] = R[(V = x & (V + T))]) + (R[V] = T))]);
+            return (k.i = F), (k.j = V), z;
           };
         }
         function p(h, f) {
           return (f.i = h.i), (f.j = h.j), (f.S = h.S.slice()), f;
         }
-        function g(h, f) {
+        function v(h, f) {
           var y = [],
             k = typeof h,
             w;
           if (f && k == 'object')
             for (w in h)
               try {
-                y.push(g(h[w], f - 1));
+                y.push(v(h[w], f - 1));
               } catch {}
           return y.length ? y : k == 'string' ? h : h + '\0';
         }
-        function b(h, f) {
+        function _(h, f) {
           for (var y = h + '', k, w = 0; w < y.length; )
             f[x & w] = x & ((k ^= f[x & w] * 19) + y.charCodeAt(w++));
           return a(f);
@@ -6162,7 +6282,7 @@ var lottie = { exports: {} };
         function a(h) {
           return String.fromCharCode.apply(0, h);
         }
-        b(t.random(), e);
+        _(t.random(), e);
       })([], BMMath);
       var BezierFactory = (function () {
         var e = {};
@@ -6185,34 +6305,34 @@ var lottie = { exports: {} };
         function x(a, h) {
           return 1 - 3 * h + 3 * a;
         }
-        function _(a, h) {
+        function b(a, h) {
           return 3 * h - 6 * a;
         }
         function m(a) {
           return 3 * a;
         }
-        function v(a, h, f) {
-          return ((x(h, f) * a + _(h, f)) * a + m(h)) * a;
+        function g(a, h, f) {
+          return ((x(h, f) * a + b(h, f)) * a + m(h)) * a;
         }
         function p(a, h, f) {
-          return 3 * x(h, f) * a * a + 2 * _(h, f) * a + m(h);
+          return 3 * x(h, f) * a * a + 2 * b(h, f) * a + m(h);
         }
-        function g(a, h, f, y, k) {
+        function v(a, h, f, y, k) {
           var w,
             P,
-            F = 0;
+            M = 0;
           do
             (P = h + (f - h) / 2),
-              (w = v(P, y, k) - a),
+              (w = g(P, y, k) - a),
               w > 0 ? (f = P) : (h = P);
-          while (Math.abs(w) > n && ++F < o);
+          while (Math.abs(w) > n && ++M < o);
           return P;
         }
-        function b(a, h, f, y) {
+        function _(a, h, f, y) {
           for (var k = 0; k < i; ++k) {
             var w = p(h, f, y);
             if (w === 0) return h;
-            var P = v(h, f, y) - a;
+            var P = g(h, f, y) - a;
             h -= P / w;
           }
           return h;
@@ -6238,7 +6358,7 @@ var lottie = { exports: {} };
                   ? 0
                   : a === 1
                   ? 1
-                  : v(this._getTForX(a), f, k)
+                  : g(this._getTForX(a), f, k)
               );
             },
             _precompute: function () {
@@ -6251,7 +6371,7 @@ var lottie = { exports: {} };
             },
             _calcSampleValues: function () {
               for (var a = this._p[0], h = this._p[2], f = 0; f < c; ++f)
-                this._mSampleValues[f] = v(f * u, a, h);
+                this._mSampleValues[f] = g(f * u, a, h);
             },
             _getTForX: function (a) {
               for (
@@ -6266,14 +6386,14 @@ var lottie = { exports: {} };
               )
                 k += u;
               --w;
-              var F = (a - y[w]) / (y[w + 1] - y[w]),
-                D = k + F * u,
+              var M = (a - y[w]) / (y[w + 1] - y[w]),
+                D = k + M * u,
                 T = p(D, h, f);
               return T >= s
-                ? b(a, D, h, f)
+                ? _(a, D, h, f)
                 : T === 0
                 ? D
-                : g(a, k, k + u, h, f);
+                : v(a, k, k + u, h, f);
             },
           }),
           e
@@ -6324,15 +6444,15 @@ var lottie = { exports: {} };
       }
       function bezFunction() {
         var e = Math;
-        function t(m, v, p, g, b, l) {
-          var a = m * g + v * b + p * l - b * g - l * m - p * v;
+        function t(m, g, p, v, _, l) {
+          var a = m * v + g * _ + p * l - _ * v - l * m - p * g;
           return a > -0.001 && a < 0.001;
         }
-        function r(m, v, p, g, b, l, a, h, f) {
-          if (p === 0 && l === 0 && f === 0) return t(m, v, g, b, a, h);
-          var y = e.sqrt(e.pow(g - m, 2) + e.pow(b - v, 2) + e.pow(l - p, 2)),
-            k = e.sqrt(e.pow(a - m, 2) + e.pow(h - v, 2) + e.pow(f - p, 2)),
-            w = e.sqrt(e.pow(a - g, 2) + e.pow(h - b, 2) + e.pow(f - l, 2)),
+        function r(m, g, p, v, _, l, a, h, f) {
+          if (p === 0 && l === 0 && f === 0) return t(m, g, v, _, a, h);
+          var y = e.sqrt(e.pow(v - m, 2) + e.pow(_ - g, 2) + e.pow(l - p, 2)),
+            k = e.sqrt(e.pow(a - m, 2) + e.pow(h - g, 2) + e.pow(f - p, 2)),
+            w = e.sqrt(e.pow(a - v, 2) + e.pow(h - _, 2) + e.pow(f - l, 2)),
             P;
           return (
             y > k
@@ -6346,8 +6466,8 @@ var lottie = { exports: {} };
           );
         }
         var i = (function () {
-          return function (m, v, p, g) {
-            var b = defaultCurveSegments,
+          return function (m, g, p, v) {
+            var _ = defaultCurveSegments,
               l,
               a,
               h,
@@ -6356,18 +6476,18 @@ var lottie = { exports: {} };
               k = 0,
               w,
               P = [],
-              F = [],
+              M = [],
               D = bezierLengthPool.newElement();
-            for (h = p.length, l = 0; l < b; l += 1) {
-              for (y = l / (b - 1), w = 0, a = 0; a < h; a += 1)
+            for (h = p.length, l = 0; l < _; l += 1) {
+              for (y = l / (_ - 1), w = 0, a = 0; a < h; a += 1)
                 (f =
                   bmPow(1 - y, 3) * m[a] +
                   3 * bmPow(1 - y, 2) * y * p[a] +
-                  3 * (1 - y) * bmPow(y, 2) * g[a] +
-                  bmPow(y, 3) * v[a]),
+                  3 * (1 - y) * bmPow(y, 2) * v[a] +
+                  bmPow(y, 3) * g[a]),
                   (P[a] = f),
-                  F[a] !== null && (w += bmPow(P[a] - F[a], 2)),
-                  (F[a] = P[a]);
+                  M[a] !== null && (w += bmPow(P[a] - M[a], 2)),
+                  (M[a] = P[a]);
               w && ((w = bmSqrt(w)), (k += w)),
                 (D.percents[l] = y),
                 (D.lengths[l] = k);
@@ -6376,50 +6496,50 @@ var lottie = { exports: {} };
           };
         })();
         function s(m) {
-          var v = segmentsLengthPool.newElement(),
+          var g = segmentsLengthPool.newElement(),
             p = m.c,
-            g = m.v,
-            b = m.o,
+            v = m.v,
+            _ = m.o,
             l = m.i,
             a,
             h = m._length,
-            f = v.lengths,
+            f = g.lengths,
             y = 0;
           for (a = 0; a < h - 1; a += 1)
-            (f[a] = i(g[a], g[a + 1], b[a], l[a + 1])), (y += f[a].addedLength);
+            (f[a] = i(v[a], v[a + 1], _[a], l[a + 1])), (y += f[a].addedLength);
           return (
             p &&
               h &&
-              ((f[a] = i(g[a], g[0], b[a], l[0])), (y += f[a].addedLength)),
-            (v.totalLength = y),
-            v
+              ((f[a] = i(v[a], v[0], _[a], l[0])), (y += f[a].addedLength)),
+            (g.totalLength = y),
+            g
           );
         }
         function n(m) {
           (this.segmentLength = 0), (this.points = new Array(m));
         }
-        function o(m, v) {
-          (this.partialLength = m), (this.point = v);
+        function o(m, g) {
+          (this.partialLength = m), (this.point = g);
         }
         var c = (function () {
           var m = {};
-          return function (v, p, g, b) {
+          return function (g, p, v, _) {
             var l = (
-              v[0] +
+              g[0] +
               '_' +
-              v[1] +
+              g[1] +
               '_' +
               p[0] +
               '_' +
               p[1] +
               '_' +
-              g[0] +
+              v[0] +
               '_' +
-              g[1] +
+              v[1] +
               '_' +
-              b[0] +
+              _[0] +
               '_' +
-              b[1]
+              _[1]
             ).replace(/\./g, 'p');
             if (!m[l]) {
               var a = defaultCurveSegments,
@@ -6429,91 +6549,91 @@ var lottie = { exports: {} };
                 k,
                 w,
                 P = 0,
-                F,
+                M,
                 D,
                 T = null;
-              v.length === 2 &&
-                (v[0] !== p[0] || v[1] !== p[1]) &&
-                t(v[0], v[1], p[0], p[1], v[0] + g[0], v[1] + g[1]) &&
-                t(v[0], v[1], p[0], p[1], p[0] + b[0], p[1] + b[1]) &&
+              g.length === 2 &&
+                (g[0] !== p[0] || g[1] !== p[1]) &&
+                t(g[0], g[1], p[0], p[1], g[0] + v[0], g[1] + v[1]) &&
+                t(g[0], g[1], p[0], p[1], p[0] + _[0], p[1] + _[1]) &&
                 (a = 2);
               var z = new n(a);
-              for (y = g.length, h = 0; h < a; h += 1) {
+              for (y = v.length, h = 0; h < a; h += 1) {
                 for (
-                  D = createSizedArray(y), w = h / (a - 1), F = 0, f = 0;
+                  D = createSizedArray(y), w = h / (a - 1), M = 0, f = 0;
                   f < y;
                   f += 1
                 )
                   (k =
-                    bmPow(1 - w, 3) * v[f] +
-                    3 * bmPow(1 - w, 2) * w * (v[f] + g[f]) +
-                    3 * (1 - w) * bmPow(w, 2) * (p[f] + b[f]) +
+                    bmPow(1 - w, 3) * g[f] +
+                    3 * bmPow(1 - w, 2) * w * (g[f] + v[f]) +
+                    3 * (1 - w) * bmPow(w, 2) * (p[f] + _[f]) +
                     bmPow(w, 3) * p[f]),
                     (D[f] = k),
-                    T !== null && (F += bmPow(D[f] - T[f], 2));
-                (F = bmSqrt(F)), (P += F), (z.points[h] = new o(F, D)), (T = D);
+                    T !== null && (M += bmPow(D[f] - T[f], 2));
+                (M = bmSqrt(M)), (P += M), (z.points[h] = new o(M, D)), (T = D);
               }
               (z.segmentLength = P), (m[l] = z);
             }
             return m[l];
           };
         })();
-        function u(m, v) {
-          var p = v.percents,
-            g = v.lengths,
-            b = p.length,
-            l = bmFloor((b - 1) * m),
-            a = m * v.addedLength,
+        function u(m, g) {
+          var p = g.percents,
+            v = g.lengths,
+            _ = p.length,
+            l = bmFloor((_ - 1) * m),
+            a = m * g.addedLength,
             h = 0;
-          if (l === b - 1 || l === 0 || a === g[l]) return p[l];
-          for (var f = g[l] > a ? -1 : 1, y = !0; y; )
+          if (l === _ - 1 || l === 0 || a === v[l]) return p[l];
+          for (var f = v[l] > a ? -1 : 1, y = !0; y; )
             if (
-              (g[l] <= a && g[l + 1] > a
-                ? ((h = (a - g[l]) / (g[l + 1] - g[l])), (y = !1))
+              (v[l] <= a && v[l + 1] > a
+                ? ((h = (a - v[l]) / (v[l + 1] - v[l])), (y = !1))
                 : (l += f),
-              l < 0 || l >= b - 1)
+              l < 0 || l >= _ - 1)
             ) {
-              if (l === b - 1) return p[l];
+              if (l === _ - 1) return p[l];
               y = !1;
             }
           return p[l] + (p[l + 1] - p[l]) * h;
         }
-        function d(m, v, p, g, b, l) {
-          var a = u(b, l),
+        function d(m, g, p, v, _, l) {
+          var a = u(_, l),
             h = 1 - a,
             f =
               e.round(
                 (h * h * h * m[0] +
                   (a * h * h + h * a * h + h * h * a) * p[0] +
-                  (a * a * h + h * a * a + a * h * a) * g[0] +
-                  a * a * a * v[0]) *
+                  (a * a * h + h * a * a + a * h * a) * v[0] +
+                  a * a * a * g[0]) *
                   1e3
               ) / 1e3,
             y =
               e.round(
                 (h * h * h * m[1] +
                   (a * h * h + h * a * h + h * h * a) * p[1] +
-                  (a * a * h + h * a * a + a * h * a) * g[1] +
-                  a * a * a * v[1]) *
+                  (a * a * h + h * a * a + a * h * a) * v[1] +
+                  a * a * a * g[1]) *
                   1e3
               ) / 1e3;
           return [f, y];
         }
         var x = createTypedArray('float32', 8);
-        function _(m, v, p, g, b, l, a) {
-          b < 0 ? (b = 0) : b > 1 && (b = 1);
-          var h = u(b, a);
+        function b(m, g, p, v, _, l, a) {
+          _ < 0 ? (_ = 0) : _ > 1 && (_ = 1);
+          var h = u(_, a);
           l = l > 1 ? 1 : l;
           var f = u(l, a),
             y,
             k = m.length,
             w = 1 - h,
             P = 1 - f,
-            F = w * w * w,
+            M = w * w * w,
             D = h * w * w * 3,
             T = h * h * w * 3,
             z = h * h * h,
-            M = w * w * P,
+            F = w * w * P,
             V = h * w * P + w * h * P + w * w * f,
             R = h * h * P + w * h * f + h * w * f,
             C = h * h * f,
@@ -6527,21 +6647,21 @@ var lottie = { exports: {} };
             G = f * f * f;
           for (y = 0; y < k; y += 1)
             (x[y * 4] =
-              e.round((F * m[y] + D * p[y] + T * g[y] + z * v[y]) * 1e3) / 1e3),
+              e.round((M * m[y] + D * p[y] + T * v[y] + z * g[y]) * 1e3) / 1e3),
               (x[y * 4 + 1] =
-                e.round((M * m[y] + V * p[y] + R * g[y] + C * v[y]) * 1e3) /
+                e.round((F * m[y] + V * p[y] + R * v[y] + C * g[y]) * 1e3) /
                 1e3),
               (x[y * 4 + 2] =
-                e.round((S * m[y] + E * p[y] + A * g[y] + L * v[y]) * 1e3) /
+                e.round((S * m[y] + E * p[y] + A * v[y] + L * g[y]) * 1e3) /
                 1e3),
               (x[y * 4 + 3] =
-                e.round((I * m[y] + B * p[y] + H * g[y] + G * v[y]) * 1e3) /
+                e.round((I * m[y] + B * p[y] + H * v[y] + G * g[y]) * 1e3) /
                 1e3);
           return x;
         }
         return {
           getSegmentsLength: s,
-          getNewSegment: _,
+          getNewSegment: b,
           getPointInSegment: d,
           buildBezierData: c,
           pointOnLine2D: t,
@@ -6567,32 +6687,32 @@ var lottie = { exports: {} };
             };
           function o(m) {
             if (window.Worker && window.Blob && _useWebWorker) {
-              var v = new Blob(
+              var g = new Blob(
                   ['var _workerSelf = self; self.onmessage = ', m.toString()],
                   { type: 'text/javascript' }
                 ),
-                p = URL.createObjectURL(v);
+                p = URL.createObjectURL(g);
               return new Worker(p);
             }
             return (r = m), s;
           }
           function c() {
             i ||
-              ((i = o(function (v) {
+              ((i = o(function (g) {
                 function p() {
-                  function b(M, V) {
+                  function _(F, V) {
                     var R,
                       C,
-                      S = M.length,
+                      S = F.length,
                       E,
                       A,
                       L,
                       I;
                     for (C = 0; C < S; C += 1)
-                      if (((R = M[C]), 'ks' in R && !R.completed)) {
+                      if (((R = F[C]), 'ks' in R && !R.completed)) {
                         if (
                           ((R.completed = !0),
-                          R.tt && (M[C - 1].td = R.tt),
+                          R.tt && (F[C - 1].td = R.tt),
                           R.hasMask)
                         ) {
                           var B = R.masksProperties;
@@ -6604,15 +6724,15 @@ var lottie = { exports: {} };
                                   B[E].pt.k[L].e && h(B[E].pt.k[L].e[0]);
                         }
                         R.ty === 0
-                          ? ((R.layers = l(R.refId, V)), b(R.layers, V))
+                          ? ((R.layers = l(R.refId, V)), _(R.layers, V))
                           : R.ty === 4
                           ? a(R.shapes)
                           : R.ty === 5 && T(R);
                       }
                   }
-                  function l(M, V) {
+                  function l(F, V) {
                     for (var R = 0, C = V.length; R < C; ) {
-                      if (V[R].id === M)
+                      if (V[R].id === F)
                         return V[R].layers.__used
                           ? JSON.parse(JSON.stringify(V[R].layers))
                           : ((V[R].layers.__used = !0), V[R].layers);
@@ -6620,47 +6740,47 @@ var lottie = { exports: {} };
                     }
                     return null;
                   }
-                  function a(M) {
+                  function a(F) {
                     var V,
-                      R = M.length,
+                      R = F.length,
                       C,
                       S;
                     for (V = R - 1; V >= 0; V -= 1)
-                      if (M[V].ty === 'sh')
-                        if (M[V].ks.k.i) h(M[V].ks.k);
+                      if (F[V].ty === 'sh')
+                        if (F[V].ks.k.i) h(F[V].ks.k);
                         else
-                          for (S = M[V].ks.k.length, C = 0; C < S; C += 1)
-                            M[V].ks.k[C].s && h(M[V].ks.k[C].s[0]),
-                              M[V].ks.k[C].e && h(M[V].ks.k[C].e[0]);
-                      else M[V].ty === 'gr' && a(M[V].it);
+                          for (S = F[V].ks.k.length, C = 0; C < S; C += 1)
+                            F[V].ks.k[C].s && h(F[V].ks.k[C].s[0]),
+                              F[V].ks.k[C].e && h(F[V].ks.k[C].e[0]);
+                      else F[V].ty === 'gr' && a(F[V].it);
                   }
-                  function h(M) {
+                  function h(F) {
                     var V,
-                      R = M.i.length;
+                      R = F.i.length;
                     for (V = 0; V < R; V += 1)
-                      (M.i[V][0] += M.v[V][0]),
-                        (M.i[V][1] += M.v[V][1]),
-                        (M.o[V][0] += M.v[V][0]),
-                        (M.o[V][1] += M.v[V][1]);
+                      (F.i[V][0] += F.v[V][0]),
+                        (F.i[V][1] += F.v[V][1]),
+                        (F.o[V][0] += F.v[V][0]),
+                        (F.o[V][1] += F.v[V][1]);
                   }
-                  function f(M, V) {
+                  function f(F, V) {
                     var R = V ? V.split('.') : [100, 100, 100];
-                    return M[0] > R[0]
+                    return F[0] > R[0]
                       ? !0
-                      : R[0] > M[0]
+                      : R[0] > F[0]
                       ? !1
-                      : M[1] > R[1]
+                      : F[1] > R[1]
                       ? !0
-                      : R[1] > M[1]
+                      : R[1] > F[1]
                       ? !1
-                      : M[2] > R[2]
+                      : F[2] > R[2]
                       ? !0
-                      : R[2] > M[2]
+                      : R[2] > F[2]
                       ? !1
                       : null;
                   }
                   var y = (function () {
-                      var M = [4, 4, 14];
+                      var F = [4, 4, 14];
                       function V(C) {
                         var S = C.t.d;
                         C.t.d = { k: [{ s: S, t: 0 }] };
@@ -6671,7 +6791,7 @@ var lottie = { exports: {} };
                         for (S = 0; S < E; S += 1) C[S].ty === 5 && V(C[S]);
                       }
                       return function (C) {
-                        if (f(M, C.v) && (R(C.layers), C.assets)) {
+                        if (f(F, C.v) && (R(C.layers), C.assets)) {
                           var S,
                             E = C.assets.length;
                           for (S = 0; S < E; S += 1)
@@ -6680,9 +6800,9 @@ var lottie = { exports: {} };
                       };
                     })(),
                     k = (function () {
-                      var M = [4, 7, 99];
+                      var F = [4, 7, 99];
                       return function (V) {
-                        if (V.chars && !f(M, V.v)) {
+                        if (V.chars && !f(F, V.v)) {
                           var R,
                             C = V.chars.length,
                             S,
@@ -6705,7 +6825,7 @@ var lottie = { exports: {} };
                       };
                     })(),
                     w = (function () {
-                      var M = [5, 7, 15];
+                      var F = [5, 7, 15];
                       function V(C) {
                         var S = C.t.p;
                         typeof S.a == 'number' && (S.a = { a: 0, k: S.a }),
@@ -6718,7 +6838,7 @@ var lottie = { exports: {} };
                         for (S = 0; S < E; S += 1) C[S].ty === 5 && V(C[S]);
                       }
                       return function (C) {
-                        if (f(M, C.v) && (R(C.layers), C.assets)) {
+                        if (f(F, C.v) && (R(C.layers), C.assets)) {
                           var S,
                             E = C.assets.length;
                           for (S = 0; S < E; S += 1)
@@ -6727,7 +6847,7 @@ var lottie = { exports: {} };
                       };
                     })(),
                     P = (function () {
-                      var M = [4, 1, 9];
+                      var F = [4, 1, 9];
                       function V(C) {
                         var S,
                           E = C.length,
@@ -6761,7 +6881,7 @@ var lottie = { exports: {} };
                           C[S].ty === 4 && V(C[S].shapes);
                       }
                       return function (C) {
-                        if (f(M, C.v) && (R(C.layers), C.assets)) {
+                        if (f(F, C.v) && (R(C.layers), C.assets)) {
                           var S,
                             E = C.assets.length;
                           for (S = 0; S < E; S += 1)
@@ -6769,8 +6889,8 @@ var lottie = { exports: {} };
                         }
                       };
                     })(),
-                    F = (function () {
-                      var M = [4, 4, 18];
+                    M = (function () {
+                      var F = [4, 4, 18];
                       function V(C) {
                         var S,
                           E = C.length,
@@ -6811,7 +6931,7 @@ var lottie = { exports: {} };
                         }
                       }
                       return function (C) {
-                        if (f(M, C.v) && (R(C.layers), C.assets)) {
+                        if (f(F, C.v) && (R(C.layers), C.assets)) {
                           var S,
                             E = C.assets.length;
                           for (S = 0; S < E; S += 1)
@@ -6819,20 +6939,20 @@ var lottie = { exports: {} };
                         }
                       };
                     })();
-                  function D(M) {
-                    M.__complete ||
-                      (P(M),
-                      y(M),
-                      k(M),
-                      w(M),
-                      F(M),
-                      b(M.layers, M.assets),
-                      (M.__complete = !0));
+                  function D(F) {
+                    F.__complete ||
+                      (P(F),
+                      y(F),
+                      k(F),
+                      w(F),
+                      M(F),
+                      _(F.layers, F.assets),
+                      (F.__complete = !0));
                   }
-                  function T(M) {
-                    M.t.a.length === 0 &&
-                      !('m' in M.t.p) &&
-                      (M.singleShape = !0);
+                  function T(F) {
+                    F.t.a.length === 0 &&
+                      !('m' in F.t.p) &&
+                      (F.singleShape = !0);
                   }
                   var z = {};
                   return (
@@ -6840,8 +6960,8 @@ var lottie = { exports: {} };
                     (z.checkColors = P),
                     (z.checkChars = k),
                     (z.checkPathProperties = w),
-                    (z.checkShapes = F),
-                    (z.completeLayers = b),
+                    (z.checkShapes = M),
+                    (z.completeLayers = _),
                     z
                   );
                 }
@@ -6849,7 +6969,7 @@ var lottie = { exports: {} };
                   (n.dataManager || (n.dataManager = p()),
                   n.assetLoader ||
                     (n.assetLoader = (function () {
-                      function b(a) {
+                      function _(a) {
                         var h = a.getResponseHeader('content-type');
                         return (h &&
                           a.responseType === 'json' &&
@@ -6870,10 +6990,10 @@ var lottie = { exports: {} };
                         } catch {}
                         w.onreadystatechange = function () {
                           if (w.readyState === 4)
-                            if (w.status === 200) (k = b(w)), f(k);
+                            if (w.status === 200) (k = _(w)), f(k);
                             else
                               try {
-                                (k = b(w)), f(k);
+                                (k = _(w)), f(k);
                               } catch (P) {
                                 y && y(P);
                               }
@@ -6887,89 +7007,89 @@ var lottie = { exports: {} };
                       }
                       return { load: l };
                     })()),
-                  v.data.type === 'loadAnimation')
+                  g.data.type === 'loadAnimation')
                 )
                   n.assetLoader.load(
-                    v.data.path,
-                    v.data.fullPath,
-                    function (b) {
-                      n.dataManager.completeData(b),
+                    g.data.path,
+                    g.data.fullPath,
+                    function (_) {
+                      n.dataManager.completeData(_),
                         n.postMessage({
-                          id: v.data.id,
-                          payload: b,
+                          id: g.data.id,
+                          payload: _,
                           status: 'success',
                         });
                     },
                     function () {
-                      n.postMessage({ id: v.data.id, status: 'error' });
+                      n.postMessage({ id: g.data.id, status: 'error' });
                     }
                   );
-                else if (v.data.type === 'complete') {
-                  var g = v.data.animation;
-                  n.dataManager.completeData(g),
+                else if (g.data.type === 'complete') {
+                  var v = g.data.animation;
+                  n.dataManager.completeData(v),
                     n.postMessage({
-                      id: v.data.id,
-                      payload: g,
+                      id: g.data.id,
+                      payload: v,
                       status: 'success',
                     });
                 } else
-                  v.data.type === 'loadData' &&
+                  g.data.type === 'loadData' &&
                     n.assetLoader.load(
-                      v.data.path,
-                      v.data.fullPath,
-                      function (b) {
+                      g.data.path,
+                      g.data.fullPath,
+                      function (_) {
                         n.postMessage({
-                          id: v.data.id,
-                          payload: b,
+                          id: g.data.id,
+                          payload: _,
                           status: 'success',
                         });
                       },
                       function () {
-                        n.postMessage({ id: v.data.id, status: 'error' });
+                        n.postMessage({ id: g.data.id, status: 'error' });
                       }
                     );
               })),
               (i.onmessage = function (m) {
-                var v = m.data,
-                  p = v.id,
-                  g = t[p];
+                var g = m.data,
+                  p = g.id,
+                  v = t[p];
                 (t[p] = null),
-                  v.status === 'success'
-                    ? g.onComplete(v.payload)
-                    : g.onError && g.onError();
+                  g.status === 'success'
+                    ? v.onComplete(g.payload)
+                    : v.onError && v.onError();
               }));
           }
-          function u(m, v) {
+          function u(m, g) {
             e += 1;
             var p = 'processId_' + e;
-            return (t[p] = { onComplete: m, onError: v }), p;
+            return (t[p] = { onComplete: m, onError: g }), p;
           }
-          function d(m, v, p) {
+          function d(m, g, p) {
             c();
-            var g = u(v, p);
+            var v = u(g, p);
             i.postMessage({
               type: 'loadAnimation',
               path: m,
               fullPath: window.location.origin + window.location.pathname,
-              id: g,
+              id: v,
             });
           }
-          function x(m, v, p) {
+          function x(m, g, p) {
             c();
-            var g = u(v, p);
+            var v = u(g, p);
             i.postMessage({
               type: 'loadData',
               path: m,
               fullPath: window.location.origin + window.location.pathname,
-              id: g,
+              id: v,
             });
           }
-          function _(m, v, p) {
+          function b(m, g, p) {
             c();
-            var g = u(v, p);
-            i.postMessage({ type: 'complete', animation: m, id: g });
+            var v = u(g, p);
+            i.postMessage({ type: 'complete', animation: m, id: v });
           }
-          return { loadAnimation: d, loadData: x, completeAnimation: _ };
+          return { loadAnimation: d, loadData: x, completeAnimation: b };
         })();
       function getFontProperties(e) {
         for (
@@ -7107,7 +7227,7 @@ var lottie = { exports: {} };
             var k = f.list,
               w,
               P = k.length,
-              F = P;
+              M = P;
             for (w = 0; w < P; w += 1) {
               var D = !0,
                 T,
@@ -7118,7 +7238,7 @@ var lottie = { exports: {} };
                 (k[w].sansCase = o(k[w].fFamily, 'sans-serif')),
                 !k[w].fPath)
               )
-                (k[w].loaded = !0), (F -= 1);
+                (k[w].loaded = !0), (M -= 1);
               else if (k[w].fOrigin === 'p' || k[w].origin === 3) {
                 if (
                   ((T = document.querySelectorAll(
@@ -7131,18 +7251,18 @@ var lottie = { exports: {} };
                   T.length > 0 && (D = !1),
                   D)
                 ) {
-                  var M = createTag('style');
-                  M.setAttribute('f-forigin', k[w].fOrigin),
-                    M.setAttribute('f-origin', k[w].origin),
-                    M.setAttribute('f-family', k[w].fFamily),
-                    (M.type = 'text/css'),
-                    (M.innerText =
+                  var F = createTag('style');
+                  F.setAttribute('f-forigin', k[w].fOrigin),
+                    F.setAttribute('f-origin', k[w].origin),
+                    F.setAttribute('f-family', k[w].fFamily),
+                    (F.type = 'text/css'),
+                    (F.innerText =
                       '@font-face {font-family: ' +
                       k[w].fFamily +
                       "; font-style: normal; src: url('" +
                       k[w].fPath +
                       "');}"),
-                    y.appendChild(M);
+                    y.appendChild(F);
                 }
               } else if (k[w].fOrigin === 'g' || k[w].origin === 1) {
                 for (
@@ -7186,7 +7306,7 @@ var lottie = { exports: {} };
                 (k[w].cache = {}),
                 this.fonts.push(k[w]);
             }
-            F === 0
+            M === 0
               ? (this.isLoaded = !0)
               : setTimeout(this.checkLoadedFonts.bind(this), 100);
           }
@@ -7197,19 +7317,19 @@ var lottie = { exports: {} };
                 k = f.length,
                 w,
                 P = this.chars.length,
-                F;
+                M;
               for (y = 0; y < k; y += 1) {
-                for (w = 0, F = !1; w < P; )
+                for (w = 0, M = !1; w < P; )
                   this.chars[w].style === f[y].style &&
                     this.chars[w].fFamily === f[y].fFamily &&
                     this.chars[w].ch === f[y].ch &&
-                    (F = !0),
+                    (M = !0),
                     (w += 1);
-                F || (this.chars.push(f[y]), (P += 1));
+                M || (this.chars.push(f[y]), (P += 1));
               }
             }
           }
-          function _(f, y, k) {
+          function b(f, y, k) {
             for (var w = 0, P = this.chars.length; w < P; ) {
               if (
                 this.chars[w].ch === f &&
@@ -7238,20 +7358,20 @@ var lottie = { exports: {} };
             var w = this.getFontByName(y),
               P = f.charCodeAt(0);
             if (!w.cache[P + 1]) {
-              var F = w.helper;
+              var M = w.helper;
               if (f === ' ') {
-                F.textContent = '|' + f + '|';
-                var D = F.getComputedTextLength();
-                F.textContent = '||';
-                var T = F.getComputedTextLength();
+                M.textContent = '|' + f + '|';
+                var D = M.getComputedTextLength();
+                M.textContent = '||';
+                var T = M.getComputedTextLength();
                 w.cache[P + 1] = (D - T) / 100;
               } else
-                (F.textContent = f),
-                  (w.cache[P + 1] = F.getComputedTextLength() / 100);
+                (M.textContent = f),
+                  (w.cache[P + 1] = M.getComputedTextLength() / 100);
             }
             return w.cache[P + 1] * k;
           }
-          function v(f) {
+          function g(f) {
             for (var y = 0, k = this.fonts.length; y < k; ) {
               if (this.fonts[y].fName === f) return this.fonts[y];
               y += 1;
@@ -7262,10 +7382,10 @@ var lottie = { exports: {} };
             var k = f.toString(16) + y.toString(16);
             return i.indexOf(k) !== -1;
           }
-          function g(f, y) {
+          function v(f, y) {
             return y ? f === s[0] && y === s[1] : f === s[1];
           }
-          function b(f) {
+          function _(f) {
             return r.indexOf(f) !== -1;
           }
           function l() {
@@ -7282,13 +7402,13 @@ var lottie = { exports: {} };
               (this.checkLoadedFontsBinded = this.checkLoadedFonts.bind(this));
           };
           (a.isModifier = p),
-            (a.isZeroWidthJoiner = g),
-            (a.isCombinedCharacter = b);
+            (a.isZeroWidthJoiner = v),
+            (a.isCombinedCharacter = _);
           var h = {
             addChars: x,
             addFonts: d,
-            getCharData: _,
-            getFontByName: v,
+            getCharData: b,
+            getFontByName: g,
             measureText: m,
             checkLoadedFonts: c,
             setIsLoaded: l,
@@ -7298,7 +7418,7 @@ var lottie = { exports: {} };
         PropertyFactory = (function () {
           var e = initialDefaultFrame,
             t = Math.abs;
-          function r(b, l) {
+          function r(_, l) {
             var a = this.offsetTime,
               h;
             this.propType === 'multidimensional' &&
@@ -7309,20 +7429,20 @@ var lottie = { exports: {} };
                 k = this.keyframes.length - 1,
                 w = !0,
                 P,
-                F,
+                M,
                 D;
               w;
 
             ) {
               if (
                 ((P = this.keyframes[y]),
-                (F = this.keyframes[y + 1]),
-                y === k - 1 && b >= F.t - a)
+                (M = this.keyframes[y + 1]),
+                y === k - 1 && _ >= M.t - a)
               ) {
-                P.h && (P = F), (f = 0);
+                P.h && (P = M), (f = 0);
                 break;
               }
-              if (F.t - a > b) {
+              if (M.t - a > _) {
                 f = y;
                 break;
               }
@@ -7331,24 +7451,24 @@ var lottie = { exports: {} };
             D = this.keyframesMetadata[y] || {};
             var T,
               z,
-              M,
+              F,
               V,
               R,
               C,
-              S = F.t - a,
+              S = M.t - a,
               E = P.t - a,
               A;
             if (P.to) {
               D.bezierData ||
                 (D.bezierData = bez.buildBezierData(
                   P.s,
-                  F.s || P.e,
+                  M.s || P.e,
                   P.to,
                   P.ti
                 ));
               var L = D.bezierData;
-              if (b >= S || b < E) {
-                var I = b >= S ? L.points.length - 1 : 0;
+              if (_ >= S || _ < E) {
+                var I = _ >= S ? L.points.length - 1 : 0;
                 for (z = L.points[I].point.length, T = 0; T < z; T += 1)
                   h[T] = L.points[I].point[T];
               } else {
@@ -7362,16 +7482,16 @@ var lottie = { exports: {} };
                       P.n
                     ).get),
                     (D.__fnct = C)),
-                  (M = C((b - E) / (S - E)));
-                var B = L.segmentLength * M,
+                  (F = C((_ - E) / (S - E)));
+                var B = L.segmentLength * F,
                   H,
                   G =
-                    l.lastFrame < b && l._lastKeyframeIndex === y
+                    l.lastFrame < _ && l._lastKeyframeIndex === y
                       ? l._lastAddedLength
                       : 0;
                 for (
                   R =
-                    l.lastFrame < b && l._lastKeyframeIndex === y
+                    l.lastFrame < _ && l._lastKeyframeIndex === y
                       ? l._lastPoint
                       : 0,
                     w = !0,
@@ -7381,7 +7501,7 @@ var lottie = { exports: {} };
                 ) {
                   if (
                     ((G += L.points[R].partialLength),
-                    B === 0 || M === 0 || R === L.points.length - 1)
+                    B === 0 || F === 0 || R === L.points.length - 1)
                   ) {
                     for (z = L.points[R].point.length, T = 0; T < z; T += 1)
                       h[T] = L.points[R].point[T];
@@ -7407,23 +7527,23 @@ var lottie = { exports: {} };
               }
             } else {
               var J, Z, Q, ee, te;
-              if (((k = P.s.length), (A = F.s || P.e), this.sh && P.h !== 1))
-                if (b >= S) (h[0] = A[0]), (h[1] = A[1]), (h[2] = A[2]);
-                else if (b <= E)
+              if (((k = P.s.length), (A = M.s || P.e), this.sh && P.h !== 1))
+                if (_ >= S) (h[0] = A[0]), (h[1] = A[1]), (h[2] = A[2]);
+                else if (_ <= E)
                   (h[0] = P.s[0]), (h[1] = P.s[1]), (h[2] = P.s[2]);
                 else {
                   var re = n(P.s),
                     K = n(A),
-                    se = (b - E) / (S - E);
+                    se = (_ - E) / (S - E);
                   s(h, i(re, K, se));
                 }
               else
                 for (y = 0; y < k; y += 1)
                   P.h !== 1 &&
-                    (b >= S
-                      ? (M = 1)
-                      : b < E
-                      ? (M = 0)
+                    (_ >= S
+                      ? (F = 1)
+                      : _ < E
+                      ? (F = 0)
                       : (P.o.x.constructor === Array
                           ? (D.__fnct || (D.__fnct = []),
                             D.__fnct[y]
@@ -7454,47 +7574,47 @@ var lottie = { exports: {} };
                               ee
                             ).get),
                             (P.keyframeMetadata = C)),
-                        (M = C((b - E) / (S - E))))),
-                    (A = F.s || P.e),
-                    (te = P.h === 1 ? P.s[y] : P.s[y] + (A[y] - P.s[y]) * M),
+                        (F = C((_ - E) / (S - E))))),
+                    (A = M.s || P.e),
+                    (te = P.h === 1 ? P.s[y] : P.s[y] + (A[y] - P.s[y]) * F),
                     this.propType === 'multidimensional'
                       ? (h[y] = te)
                       : (h = te);
             }
             return (l.lastIndex = f), h;
           }
-          function i(b, l, a) {
+          function i(_, l, a) {
             var h = [],
-              f = b[0],
-              y = b[1],
-              k = b[2],
-              w = b[3],
+              f = _[0],
+              y = _[1],
+              k = _[2],
+              w = _[3],
               P = l[0],
-              F = l[1],
+              M = l[1],
               D = l[2],
               T = l[3],
               z,
-              M,
+              F,
               V,
               R,
               C;
             return (
-              (M = f * P + y * F + k * D + w * T),
-              M < 0 && ((M = -M), (P = -P), (F = -F), (D = -D), (T = -T)),
-              1 - M > 1e-6
-                ? ((z = Math.acos(M)),
+              (F = f * P + y * M + k * D + w * T),
+              F < 0 && ((F = -F), (P = -P), (M = -M), (D = -D), (T = -T)),
+              1 - F > 1e-6
+                ? ((z = Math.acos(F)),
                   (V = Math.sin(z)),
                   (R = Math.sin((1 - a) * z) / V),
                   (C = Math.sin(a * z) / V))
                 : ((R = 1 - a), (C = a)),
               (h[0] = R * f + C * P),
-              (h[1] = R * y + C * F),
+              (h[1] = R * y + C * M),
               (h[2] = R * k + C * D),
               (h[3] = R * w + C * T),
               h
             );
           }
-          function s(b, l) {
+          function s(_, l) {
             var a = l[0],
               h = l[1],
               f = l[2],
@@ -7502,54 +7622,54 @@ var lottie = { exports: {} };
               k = Math.atan2(2 * h * y - 2 * a * f, 1 - 2 * h * h - 2 * f * f),
               w = Math.asin(2 * a * h + 2 * f * y),
               P = Math.atan2(2 * a * y - 2 * h * f, 1 - 2 * a * a - 2 * f * f);
-            (b[0] = k / degToRads),
-              (b[1] = w / degToRads),
-              (b[2] = P / degToRads);
+            (_[0] = k / degToRads),
+              (_[1] = w / degToRads),
+              (_[2] = P / degToRads);
           }
-          function n(b) {
-            var l = b[0] * degToRads,
-              a = b[1] * degToRads,
-              h = b[2] * degToRads,
+          function n(_) {
+            var l = _[0] * degToRads,
+              a = _[1] * degToRads,
+              h = _[2] * degToRads,
               f = Math.cos(l / 2),
               y = Math.cos(a / 2),
               k = Math.cos(h / 2),
               w = Math.sin(l / 2),
               P = Math.sin(a / 2),
-              F = Math.sin(h / 2),
-              D = f * y * k - w * P * F,
-              T = w * P * k + f * y * F,
-              z = w * y * k + f * P * F,
-              M = f * P * k - w * y * F;
-            return [T, z, M, D];
+              M = Math.sin(h / 2),
+              D = f * y * k - w * P * M,
+              T = w * P * k + f * y * M,
+              z = w * y * k + f * P * M,
+              F = f * P * k - w * y * M;
+            return [T, z, F, D];
           }
           function o() {
-            var b = this.comp.renderedFrame - this.offsetTime,
+            var _ = this.comp.renderedFrame - this.offsetTime,
               l = this.keyframes[0].t - this.offsetTime,
               a = this.keyframes[this.keyframes.length - 1].t - this.offsetTime;
             if (
               !(
-                b === this._caching.lastFrame ||
+                _ === this._caching.lastFrame ||
                 (this._caching.lastFrame !== e &&
-                  ((this._caching.lastFrame >= a && b >= a) ||
-                    (this._caching.lastFrame < l && b < l)))
+                  ((this._caching.lastFrame >= a && _ >= a) ||
+                    (this._caching.lastFrame < l && _ < l)))
               )
             ) {
-              this._caching.lastFrame >= b &&
+              this._caching.lastFrame >= _ &&
                 ((this._caching._lastKeyframeIndex = -1),
                 (this._caching.lastIndex = 0));
-              var h = this.interpolateValue(b, this._caching);
+              var h = this.interpolateValue(_, this._caching);
               this.pv = h;
             }
-            return (this._caching.lastFrame = b), this.pv;
+            return (this._caching.lastFrame = _), this.pv;
           }
-          function c(b) {
+          function c(_) {
             var l;
             if (this.propType === 'unidimensional')
-              (l = b * this.mult),
+              (l = _ * this.mult),
                 t(this.v - l) > 1e-5 && ((this.v = l), (this._mdf = !0));
             else
               for (var a = 0, h = this.v.length; a < h; )
-                (l = b[a] * this.mult),
+                (l = _[a] * this.mult),
                   t(this.v[a] - l) > 1e-5 &&
                     ((this.v[a] = l), (this._mdf = !0)),
                   (a += 1);
@@ -7566,30 +7686,30 @@ var lottie = { exports: {} };
                 return;
               }
               (this.lock = !0), (this._mdf = this._isFirstFrame);
-              var b,
+              var _,
                 l = this.effectsSequence.length,
                 a = this.kf ? this.pv : this.data.k;
-              for (b = 0; b < l; b += 1) a = this.effectsSequence[b](a);
+              for (_ = 0; _ < l; _ += 1) a = this.effectsSequence[_](a);
               this.setVValue(a),
                 (this._isFirstFrame = !1),
                 (this.lock = !1),
                 (this.frameId = this.elem.globalData.frameId);
             }
           }
-          function d(b) {
-            this.effectsSequence.push(b),
+          function d(_) {
+            this.effectsSequence.push(_),
               this.container.addDynamicProperty(this);
           }
-          function x(b, l, a, h) {
+          function x(_, l, a, h) {
             (this.propType = 'unidimensional'),
               (this.mult = a || 1),
               (this.data = l),
               (this.v = a ? l.k * a : l.k),
               (this.pv = l.k),
               (this._mdf = !1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.k = !1),
               (this.kf = !1),
               (this.vel = 0),
@@ -7599,14 +7719,14 @@ var lottie = { exports: {} };
               (this.setVValue = c),
               (this.addEffect = d);
           }
-          function _(b, l, a, h) {
+          function b(_, l, a, h) {
             (this.propType = 'multidimensional'),
               (this.mult = a || 1),
               (this.data = l),
               (this._mdf = !1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.k = !1),
               (this.kf = !1),
               (this.frameId = -1);
@@ -7627,11 +7747,11 @@ var lottie = { exports: {} };
               (this.setVValue = c),
               (this.addEffect = d);
           }
-          function m(b, l, a, h) {
+          function m(_, l, a, h) {
             (this.propType = 'unidimensional'),
               (this.keyframes = l.k),
               (this.keyframesMetadata = []),
-              (this.offsetTime = b.data.st),
+              (this.offsetTime = _.data.st),
               (this.frameId = -1),
               (this._caching = {
                 lastFrame: e,
@@ -7643,9 +7763,9 @@ var lottie = { exports: {} };
               (this.kf = !0),
               (this.data = l),
               (this.mult = a || 1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.v = e),
               (this.pv = e),
               (this._isFirstFrame = !0),
@@ -7655,14 +7775,14 @@ var lottie = { exports: {} };
               (this.effectsSequence = [o.bind(this)]),
               (this.addEffect = d);
           }
-          function v(b, l, a, h) {
+          function g(_, l, a, h) {
             this.propType = 'multidimensional';
             var f,
               y = l.k.length,
               k,
               w,
               P,
-              F;
+              M;
             for (f = 0; f < y - 1; f += 1)
               l.k[f].to &&
                 l.k[f].s &&
@@ -7671,7 +7791,7 @@ var lottie = { exports: {} };
                 ((k = l.k[f].s),
                 (w = l.k[f + 1].s),
                 (P = l.k[f].to),
-                (F = l.k[f].ti),
+                (M = l.k[f].ti),
                 ((k.length === 2 &&
                   !(k[0] === w[0] && k[1] === w[1]) &&
                   bez.pointOnLine2D(
@@ -7687,8 +7807,8 @@ var lottie = { exports: {} };
                     k[1],
                     w[0],
                     w[1],
-                    w[0] + F[0],
-                    w[1] + F[1]
+                    w[0] + M[0],
+                    w[1] + M[1]
                   )) ||
                   (k.length === 3 &&
                     !(k[0] === w[0] && k[1] === w[1] && k[2] === w[2]) &&
@@ -7710,32 +7830,32 @@ var lottie = { exports: {} };
                       w[0],
                       w[1],
                       w[2],
-                      w[0] + F[0],
-                      w[1] + F[1],
-                      w[2] + F[2]
+                      w[0] + M[0],
+                      w[1] + M[1],
+                      w[2] + M[2]
                     ))) &&
                   ((l.k[f].to = null), (l.k[f].ti = null)),
                 k[0] === w[0] &&
                   k[1] === w[1] &&
                   P[0] === 0 &&
                   P[1] === 0 &&
-                  F[0] === 0 &&
-                  F[1] === 0 &&
+                  M[0] === 0 &&
+                  M[1] === 0 &&
                   (k.length === 2 ||
-                    (k[2] === w[2] && P[2] === 0 && F[2] === 0)) &&
+                    (k[2] === w[2] && P[2] === 0 && M[2] === 0)) &&
                   ((l.k[f].to = null), (l.k[f].ti = null)));
             (this.effectsSequence = [o.bind(this)]),
               (this.data = l),
               (this.keyframes = l.k),
               (this.keyframesMetadata = []),
-              (this.offsetTime = b.data.st),
+              (this.offsetTime = _.data.st),
               (this.k = !0),
               (this.kf = !0),
               (this._isFirstFrame = !0),
               (this.mult = a || 1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.getValue = u),
               (this.setVValue = c),
               (this.interpolateValue = r),
@@ -7756,23 +7876,23 @@ var lottie = { exports: {} };
             }),
               (this.addEffect = d);
           }
-          function p(b, l, a, h, f) {
+          function p(_, l, a, h, f) {
             var y;
-            if (!l.k.length) y = new x(b, l, h, f);
-            else if (typeof l.k[0] == 'number') y = new _(b, l, h, f);
+            if (!l.k.length) y = new x(_, l, h, f);
+            else if (typeof l.k[0] == 'number') y = new b(_, l, h, f);
             else
               switch (a) {
                 case 0:
-                  y = new m(b, l, h, f);
+                  y = new m(_, l, h, f);
                   break;
                 case 1:
-                  y = new v(b, l, h, f);
+                  y = new g(_, l, h, f);
                   break;
               }
             return y.effectsSequence.length && f.addDynamicProperty(y), y;
           }
-          var g = { getProp: p };
-          return g;
+          var v = { getProp: p };
+          return v;
         })(),
         TransformPropertyFactory = (function () {
           var e = [0, 0];
@@ -7829,7 +7949,7 @@ var lottie = { exports: {} };
                         .rotateX(this.or.v[0]),
                   this.autoOriented)
                 ) {
-                  var x, _;
+                  var x, b;
                   if (
                     ((d = this.elem.globalData.frameRate),
                     this.p && this.p.keyframes && this.p.getValueAtTime)
@@ -7840,7 +7960,7 @@ var lottie = { exports: {} };
                           (this.p.keyframes[0].t + 0.01) / d,
                           0
                         )),
-                        (_ = this.p.getValueAtTime(
+                        (b = this.p.getValueAtTime(
                           this.p.keyframes[0].t / d,
                           0
                         )))
@@ -7850,14 +7970,14 @@ var lottie = { exports: {} };
                           this.p.keyframes[this.p.keyframes.length - 1].t / d,
                           0
                         )),
-                        (_ = this.p.getValueAtTime(
+                        (b = this.p.getValueAtTime(
                           (this.p.keyframes[this.p.keyframes.length - 1].t -
                             0.05) /
                             d,
                           0
                         )))
                       : ((x = this.p.pv),
-                        (_ = this.p.getValueAtTime(
+                        (b = this.p.getValueAtTime(
                           (this.p._caching.lastFrame +
                             this.p.offsetTime -
                             0.01) /
@@ -7871,49 +7991,49 @@ var lottie = { exports: {} };
                     this.px.getValueAtTime &&
                     this.py.getValueAtTime
                   ) {
-                    (x = []), (_ = []);
+                    (x = []), (b = []);
                     var m = this.px,
-                      v = this.py;
+                      g = this.py;
                     m._caching.lastFrame + m.offsetTime <= m.keyframes[0].t
                       ? ((x[0] = m.getValueAtTime(
                           (m.keyframes[0].t + 0.01) / d,
                           0
                         )),
-                        (x[1] = v.getValueAtTime(
-                          (v.keyframes[0].t + 0.01) / d,
+                        (x[1] = g.getValueAtTime(
+                          (g.keyframes[0].t + 0.01) / d,
                           0
                         )),
-                        (_[0] = m.getValueAtTime(m.keyframes[0].t / d, 0)),
-                        (_[1] = v.getValueAtTime(v.keyframes[0].t / d, 0)))
+                        (b[0] = m.getValueAtTime(m.keyframes[0].t / d, 0)),
+                        (b[1] = g.getValueAtTime(g.keyframes[0].t / d, 0)))
                       : m._caching.lastFrame + m.offsetTime >=
                         m.keyframes[m.keyframes.length - 1].t
                       ? ((x[0] = m.getValueAtTime(
                           m.keyframes[m.keyframes.length - 1].t / d,
                           0
                         )),
-                        (x[1] = v.getValueAtTime(
-                          v.keyframes[v.keyframes.length - 1].t / d,
+                        (x[1] = g.getValueAtTime(
+                          g.keyframes[g.keyframes.length - 1].t / d,
                           0
                         )),
-                        (_[0] = m.getValueAtTime(
+                        (b[0] = m.getValueAtTime(
                           (m.keyframes[m.keyframes.length - 1].t - 0.01) / d,
                           0
                         )),
-                        (_[1] = v.getValueAtTime(
-                          (v.keyframes[v.keyframes.length - 1].t - 0.01) / d,
+                        (b[1] = g.getValueAtTime(
+                          (g.keyframes[g.keyframes.length - 1].t - 0.01) / d,
                           0
                         )))
-                      : ((x = [m.pv, v.pv]),
-                        (_[0] = m.getValueAtTime(
+                      : ((x = [m.pv, g.pv]),
+                        (b[0] = m.getValueAtTime(
                           (m._caching.lastFrame + m.offsetTime - 0.01) / d,
                           m.offsetTime
                         )),
-                        (_[1] = v.getValueAtTime(
-                          (v._caching.lastFrame + v.offsetTime - 0.01) / d,
-                          v.offsetTime
+                        (b[1] = g.getValueAtTime(
+                          (g._caching.lastFrame + g.offsetTime - 0.01) / d,
+                          g.offsetTime
                         )));
-                  } else (_ = e), (x = _);
-                  this.v.rotate(-Math.atan2(x[1] - _[1], x[0] - _[0]));
+                  } else (b = e), (x = b);
+                  this.v.rotate(-Math.atan2(x[1] - b[1], x[0] - b[0]));
                 }
                 this.data.p && this.data.p.s
                   ? this.data.p.z
@@ -8011,10 +8131,10 @@ var lottie = { exports: {} };
                 )),
                 d.or.k[0].ti)
               ) {
-                var _,
+                var b,
                   m = d.or.k.length;
-                for (_ = 0; _ < m; _ += 1)
-                  (d.or.k[_].to = null), (d.or.k[_].ti = null);
+                for (b = 0; b < m; b += 1)
+                  (d.or.k[b].to = null), (d.or.k[b].ti = null);
               }
               (this.or = PropertyFactory.getProp(u, d.or, 1, degToRads, this)),
                 (this.or.sh = !0);
@@ -8163,11 +8283,11 @@ var lottie = { exports: {} };
               k,
               w,
               P,
-              F,
+              M,
               D,
               T,
               z,
-              M,
+              F,
               V = this.keyframes;
             if (l < V[0].t - this.offsetTime)
               (y = V[0].s[0]), (w = !0), (f = 0);
@@ -8216,13 +8336,13 @@ var lottie = { exports: {} };
               P < D;
               P += 1
             )
-              for (F = 0; F < T; F += 1)
-                (M = w ? y.i[P][F] : y.i[P][F] + (k.i[P][F] - y.i[P][F]) * z),
-                  (a.i[P][F] = M),
-                  (M = w ? y.o[P][F] : y.o[P][F] + (k.o[P][F] - y.o[P][F]) * z),
-                  (a.o[P][F] = M),
-                  (M = w ? y.v[P][F] : y.v[P][F] + (k.v[P][F] - y.v[P][F]) * z),
-                  (a.v[P][F] = M);
+              for (M = 0; M < T; M += 1)
+                (F = w ? y.i[P][M] : y.i[P][M] + (k.i[P][M] - y.i[P][M]) * z),
+                  (a.i[P][M] = F),
+                  (F = w ? y.o[P][M] : y.o[P][M] + (k.o[P][M] - y.o[P][M]) * z),
+                  (a.o[P][M] = F),
+                  (F = w ? y.v[P][M] : y.v[P][M] + (k.v[P][M] - y.v[P][M]) * z),
+                  (a.v[P][M] = F);
           }
           function r() {
             var l = this.comp.renderedFrame - this.offsetTime,
@@ -8410,7 +8530,7 @@ var lottie = { exports: {} };
                 a
               );
             })(),
-            _ = (function () {
+            b = (function () {
               function l(a, h) {
                 (this.v = shapePool.newElement()),
                   this.v.setPathData(!0, 0),
@@ -8467,17 +8587,17 @@ var lottie = { exports: {} };
                       k = this.ir.v,
                       w = this.os.v,
                       P = this.is.v,
-                      F = (2 * Math.PI * y) / (a * 2),
+                      M = (2 * Math.PI * y) / (a * 2),
                       D = (2 * Math.PI * k) / (a * 2),
                       T,
                       z,
-                      M,
+                      F,
                       V,
                       R = -Math.PI / 2;
                     R += this.r.v;
                     var C = this.data.d === 3 ? -1 : 1;
                     for (this.v._length = 0, T = 0; T < a; T += 1) {
-                      (z = f ? y : k), (M = f ? w : P), (V = f ? F : D);
+                      (z = f ? y : k), (F = f ? w : P), (V = f ? M : D);
                       var S = z * Math.cos(R),
                         E = z * Math.sin(R),
                         A =
@@ -8491,10 +8611,10 @@ var lottie = { exports: {} };
                         this.v.setTripleAt(
                           S,
                           E,
-                          S - A * V * M * C,
-                          E - L * V * M * C,
-                          S + A * V * M * C,
-                          E + L * V * M * C,
+                          S - A * V * F * C,
+                          E - L * V * F * C,
+                          S + A * V * F * C,
+                          E + L * V * F * C,
                           T,
                           !0
                         ),
@@ -8510,7 +8630,7 @@ var lottie = { exports: {} };
                       k = (2 * Math.PI * f) / (a * 4),
                       w,
                       P = -Math.PI * 0.5,
-                      F = this.data.d === 3 ? -1 : 1;
+                      M = this.data.d === 3 ? -1 : 1;
                     for (
                       P += this.r.v, this.v._length = 0, w = 0;
                       w < a;
@@ -8520,7 +8640,7 @@ var lottie = { exports: {} };
                         T = f * Math.sin(P),
                         z =
                           D === 0 && T === 0 ? 0 : T / Math.sqrt(D * D + T * T),
-                        M =
+                        F =
                           D === 0 && T === 0
                             ? 0
                             : -D / Math.sqrt(D * D + T * T);
@@ -8529,14 +8649,14 @@ var lottie = { exports: {} };
                         this.v.setTripleAt(
                           D,
                           T,
-                          D - z * k * y * F,
-                          T - M * k * y * F,
-                          D + z * k * y * F,
-                          T + M * k * y * F,
+                          D - z * k * y * M,
+                          T - F * k * y * M,
+                          D + z * k * y * M,
+                          T + F * k * y * M,
                           w,
                           !0
                         ),
-                        (P += h * F);
+                        (P += h * M);
                     }
                     (this.paths.length = 0), (this.paths[0] = this.v);
                   },
@@ -8799,7 +8919,7 @@ var lottie = { exports: {} };
                 l
               );
             })();
-          function v(l, a, h) {
+          function g(l, a, h) {
             var f;
             if (h === 3 || h === 4) {
               var y = h === 3 ? a.pt : a.ks,
@@ -8810,21 +8930,21 @@ var lottie = { exports: {} };
                 ? (f = new m(l, a))
                 : h === 6
                 ? (f = new x(l, a))
-                : h === 7 && (f = new _(l, a));
+                : h === 7 && (f = new b(l, a));
             return f.k && l.addDynamicProperty(f), f;
           }
           function p() {
             return c;
           }
-          function g() {
+          function v() {
             return d;
           }
-          var b = {};
+          var _ = {};
           return (
-            (b.getShapeProp = v),
-            (b.getConstructorFunction = p),
-            (b.getKeyframedConstructorFunction = g),
-            b
+            (_.getShapeProp = g),
+            (_.getConstructorFunction = p),
+            (_.getKeyframedConstructorFunction = v),
+            _
           );
         })(),
         ShapeModifiers = (function () {
@@ -8902,10 +9022,10 @@ var lottie = { exports: {} };
             d;
           for (c = 0; c < u; c += 1)
             if (((d = n[c]), !(d.e * s < i || d.s * s > i + r))) {
-              var x, _;
+              var x, b;
               d.s * s <= i ? (x = 0) : (x = (d.s * s - i) / r),
-                d.e * s >= i + r ? (_ = 1) : (_ = (d.e * s - i) / r),
-                o.push([x, _]);
+                d.e * s >= i + r ? (b = 1) : (b = (d.e * s - i) / r),
+                o.push([x, b]);
             }
           return o.length || o.push([0, 0]), o;
         }),
@@ -8947,9 +9067,9 @@ var lottie = { exports: {} };
             u,
             d,
             x,
-            _,
+            b,
             m,
-            v = 0;
+            g = 0;
           if (r === t)
             for (o = 0; o < c; o += 1)
               this.shapes[o].localShapeCollection.releaseShapes(),
@@ -8964,53 +9084,53 @@ var lottie = { exports: {} };
                   (this.shapes[o].shape._mdf = !0);
           } else {
             var p = [],
-              g,
-              b;
+              v,
+              _;
             for (o = 0; o < c; o += 1)
               if (
-                ((g = this.shapes[o]),
-                !g.shape._mdf && !this._mdf && !e && this.m !== 2)
+                ((v = this.shapes[o]),
+                !v.shape._mdf && !this._mdf && !e && this.m !== 2)
               )
-                g.shape.paths = g.localShapeCollection;
+                v.shape.paths = v.localShapeCollection;
               else {
                 if (
-                  ((n = g.shape.paths),
+                  ((n = v.shape.paths),
                   (d = n._length),
                   (m = 0),
-                  !g.shape._mdf && g.pathsData.length)
+                  !v.shape._mdf && v.pathsData.length)
                 )
-                  m = g.totalShapeLength;
+                  m = v.totalShapeLength;
                 else {
                   for (
-                    x = this.releasePathsData(g.pathsData), u = 0;
+                    x = this.releasePathsData(v.pathsData), u = 0;
                     u < d;
                     u += 1
                   )
-                    (_ = bez.getSegmentsLength(n.shapes[u])),
-                      x.push(_),
-                      (m += _.totalLength);
-                  (g.totalShapeLength = m), (g.pathsData = x);
+                    (b = bez.getSegmentsLength(n.shapes[u])),
+                      x.push(b),
+                      (m += b.totalLength);
+                  (v.totalShapeLength = m), (v.pathsData = x);
                 }
-                (v += m), (g.shape._mdf = !0);
+                (g += m), (v.shape._mdf = !0);
               }
             var l = t,
               a = r,
               h = 0,
               f;
             for (o = c - 1; o >= 0; o -= 1)
-              if (((g = this.shapes[o]), g.shape._mdf)) {
+              if (((v = this.shapes[o]), v.shape._mdf)) {
                 for (
-                  b = g.localShapeCollection,
-                    b.releaseShapes(),
+                  _ = v.localShapeCollection,
+                    _.releaseShapes(),
                     this.m === 2 && c > 1
                       ? ((f = this.calculateShapeEdges(
                           t,
                           r,
-                          g.totalShapeLength,
+                          v.totalShapeLength,
                           h,
-                          v
+                          g
                         )),
-                        (h += g.totalShapeLength))
+                        (h += v.totalShapeLength))
                       : (f = [[l, a]]),
                     d = f.length,
                     u = 0;
@@ -9022,32 +9142,32 @@ var lottie = { exports: {} };
                     (p.length = 0),
                     a <= 1
                       ? p.push({
-                          s: g.totalShapeLength * l,
-                          e: g.totalShapeLength * a,
+                          s: v.totalShapeLength * l,
+                          e: v.totalShapeLength * a,
                         })
                       : l >= 1
                       ? p.push({
-                          s: g.totalShapeLength * (l - 1),
-                          e: g.totalShapeLength * (a - 1),
+                          s: v.totalShapeLength * (l - 1),
+                          e: v.totalShapeLength * (a - 1),
                         })
                       : (p.push({
-                          s: g.totalShapeLength * l,
-                          e: g.totalShapeLength,
+                          s: v.totalShapeLength * l,
+                          e: v.totalShapeLength,
                         }),
-                        p.push({ s: 0, e: g.totalShapeLength * (a - 1) }));
-                  var y = this.addShapes(g, p[0]);
+                        p.push({ s: 0, e: v.totalShapeLength * (a - 1) }));
+                  var y = this.addShapes(v, p[0]);
                   if (p[0].s !== p[0].e) {
                     if (p.length > 1) {
-                      var k = g.shape.paths.shapes[g.shape.paths._length - 1];
+                      var k = v.shape.paths.shapes[v.shape.paths._length - 1];
                       if (k.c) {
                         var w = y.pop();
-                        this.addPaths(y, b), (y = this.addShapes(g, p[1], w));
-                      } else this.addPaths(y, b), (y = this.addShapes(g, p[1]));
+                        this.addPaths(y, _), (y = this.addShapes(v, p[1], w));
+                      } else this.addPaths(y, _), (y = this.addShapes(v, p[1]));
                     }
-                    this.addPaths(y, b);
+                    this.addPaths(y, _);
                   }
                 }
-                g.shape.paths = b;
+                v.shape.paths = _;
               }
           }
         }),
@@ -9077,16 +9197,16 @@ var lottie = { exports: {} };
             u,
             d = 0,
             x,
-            _,
+            b,
             m,
-            v,
-            p = [],
             g,
-            b = !0;
+            p = [],
+            v,
+            _ = !0;
           for (
             r
-              ? ((_ = r._length), (g = r._length))
-              : ((r = shapePool.newElement()), (_ = 0), (g = 0)),
+              ? ((b = r._length), (v = r._length))
+              : ((r = shapePool.newElement()), (b = 0), (v = 0)),
               p.push(r),
               n = 0;
             n < o;
@@ -9113,11 +9233,11 @@ var lottie = { exports: {} };
                       s[n].i[c],
                       s[n].v[c],
                       r,
-                      _,
-                      b
+                      b,
+                      _
                     ),
-                    (b = !1))
-                  : ((v = bez.getNewSegment(
+                    (_ = !1))
+                  : ((g = bez.getNewSegment(
                       s[n].v[c - 1],
                       s[n].v[c],
                       s[n].o[c - 1],
@@ -9126,11 +9246,11 @@ var lottie = { exports: {} };
                       (t.e - d) / x.addedLength,
                       m[c - 1]
                     )),
-                    this.addSegmentFromArray(v, r, _, b),
-                    (b = !1),
+                    this.addSegmentFromArray(g, r, b, _),
+                    (_ = !1),
                     (r.c = !1)),
                   (d += x.addedLength),
-                  (_ += 1);
+                  (b += 1);
             if (s[n].c && m.length) {
               if (((x = m[c - 1]), d <= t.e)) {
                 var l = m[c - 1].addedLength;
@@ -9141,11 +9261,11 @@ var lottie = { exports: {} };
                       s[n].i[0],
                       s[n].v[0],
                       r,
-                      _,
-                      b
+                      b,
+                      _
                     ),
-                    (b = !1))
-                  : ((v = bez.getNewSegment(
+                    (_ = !1))
+                  : ((g = bez.getNewSegment(
                       s[n].v[c - 1],
                       s[n].v[0],
                       s[n].o[c - 1],
@@ -9154,15 +9274,15 @@ var lottie = { exports: {} };
                       (t.e - d) / l,
                       m[c - 1]
                     )),
-                    this.addSegmentFromArray(v, r, _, b),
-                    (b = !1),
+                    this.addSegmentFromArray(g, r, b, _),
+                    (_ = !1),
                     (r.c = !1));
               } else r.c = !1;
-              (d += x.addedLength), (_ += 1);
+              (d += x.addedLength), (b += 1);
             }
             if (
               (r._length &&
-                (r.setXYAt(r.v[g][0], r.v[g][1], 'i', g),
+                (r.setXYAt(r.v[v][0], r.v[v][1], 'i', v),
                 r.setXYAt(
                   r.v[r._length - 1][0],
                   r.v[r._length - 1][1],
@@ -9173,7 +9293,7 @@ var lottie = { exports: {} };
             )
               break;
             n < o - 1 &&
-              ((r = shapePool.newElement()), (b = !0), p.push(r), (_ = 0));
+              ((r = shapePool.newElement()), (_ = !0), p.push(r), (b = 0));
           }
           return p;
         }),
@@ -9199,12 +9319,12 @@ var lottie = { exports: {} };
             u,
             d,
             x,
-            _ = 0,
+            b = 0,
             m,
-            v,
-            p,
             g,
-            b,
+            p,
+            v,
+            _,
             l;
           for (i = 0; i < s; i += 1)
             (n = e.v[i]),
@@ -9212,21 +9332,21 @@ var lottie = { exports: {} };
               (o = e.i[i]),
               n[0] === c[0] && n[1] === c[1] && n[0] === o[0] && n[1] === o[1]
                 ? (i === 0 || i === s - 1) && !e.c
-                  ? (r.setTripleAt(n[0], n[1], c[0], c[1], o[0], o[1], _),
-                    (_ += 1))
+                  ? (r.setTripleAt(n[0], n[1], c[0], c[1], o[0], o[1], b),
+                    (b += 1))
                   : (i === 0 ? (u = e.v[s - 1]) : (u = e.v[i - 1]),
                     (d = Math.sqrt(
                       Math.pow(n[0] - u[0], 2) + Math.pow(n[1] - u[1], 2)
                     )),
                     (x = d ? Math.min(d / 2, t) / d : 0),
-                    (b = n[0] + (u[0] - n[0]) * x),
-                    (m = b),
+                    (_ = n[0] + (u[0] - n[0]) * x),
+                    (m = _),
                     (l = n[1] - (n[1] - u[1]) * x),
-                    (v = l),
+                    (g = l),
                     (p = m - (m - n[0]) * roundCorner),
-                    (g = v - (v - n[1]) * roundCorner),
-                    r.setTripleAt(m, v, p, g, b, l, _),
-                    (_ += 1),
+                    (v = g - (g - n[1]) * roundCorner),
+                    r.setTripleAt(m, g, p, v, _, l, b),
+                    (b += 1),
                     i === s - 1 ? (u = e.v[0]) : (u = e.v[i + 1]),
                     (d = Math.sqrt(
                       Math.pow(n[0] - u[0], 2) + Math.pow(n[1] - u[1], 2)
@@ -9234,12 +9354,12 @@ var lottie = { exports: {} };
                     (x = d ? Math.min(d / 2, t) / d : 0),
                     (p = n[0] + (u[0] - n[0]) * x),
                     (m = p),
-                    (g = n[1] + (u[1] - n[1]) * x),
-                    (v = g),
-                    (b = m - (m - n[0]) * roundCorner),
-                    (l = v - (v - n[1]) * roundCorner),
-                    r.setTripleAt(m, v, p, g, b, l, _),
-                    (_ += 1))
+                    (v = n[1] + (u[1] - n[1]) * x),
+                    (g = v),
+                    (_ = m - (m - n[0]) * roundCorner),
+                    (l = g - (g - n[1]) * roundCorner),
+                    r.setTripleAt(m, g, p, v, _, l, b),
+                    (b += 1))
                 : (r.setTripleAt(
                     e.v[i][0],
                     e.v[i][1],
@@ -9247,9 +9367,9 @@ var lottie = { exports: {} };
                     e.o[i][1],
                     e.i[i][0],
                     e.i[i][1],
-                    _
+                    b
                   ),
-                  (_ += 1));
+                  (b += 1));
           return r;
         }),
         (RoundCornersModifier.prototype.processShapes = function (e) {
@@ -9302,15 +9422,15 @@ var lottie = { exports: {} };
           (i[0] /= s), (i[1] /= s);
           var o = shapePool.newElement();
           o.c = e.c;
-          var c, u, d, x, _, m;
+          var c, u, d, x, b, m;
           for (n = 0; n < s; n += 1)
             (c = e.v[n][0] + (i[0] - e.v[n][0]) * r),
               (u = e.v[n][1] + (i[1] - e.v[n][1]) * r),
               (d = e.o[n][0] + (i[0] - e.o[n][0]) * -r),
               (x = e.o[n][1] + (i[1] - e.o[n][1]) * -r),
-              (_ = e.i[n][0] + (i[0] - e.i[n][0]) * -r),
+              (b = e.i[n][0] + (i[0] - e.i[n][0]) * -r),
               (m = e.i[n][1] + (i[1] - e.i[n][1]) * -r),
-              o.setTripleAt(c, u, d, x, _, m, n);
+              o.setTripleAt(c, u, d, x, b, m, n);
           return o;
         }),
         (PuckerAndBloatModifier.prototype.processShapes = function (e) {
@@ -9467,19 +9587,19 @@ var lottie = { exports: {} };
                 !d)
               ) {
                 var x = this.elemsData[i].it,
-                  _ = x[x.length - 1];
-                _.transform.op.v !== 0
-                  ? ((_.transform.op._mdf = !0), (_.transform.op.v = 0))
-                  : (_.transform.op._mdf = !1);
+                  b = x[x.length - 1];
+                b.transform.op.v !== 0
+                  ? ((b.transform.op._mdf = !0), (b.transform.op.v = 0))
+                  : (b.transform.op._mdf = !1);
               }
               n += 1;
             }
             this._currentCopies = c;
             var m = this.o.v,
-              v = m % 1,
+              g = m % 1,
               p = m > 0 ? Math.floor(m) : Math.ceil(m),
-              g = this.pMatrix.props,
-              b = this.rMatrix.props,
+              v = this.pMatrix.props,
+              _ = this.rMatrix.props,
               l = this.sMatrix.props;
             this.pMatrix.reset(),
               this.rMatrix.reset(),
@@ -9498,16 +9618,16 @@ var lottie = { exports: {} };
                   !1
                 ),
                   (a += 1);
-              v &&
+              g &&
                 (this.applyTransforms(
                   this.pMatrix,
                   this.rMatrix,
                   this.sMatrix,
                   this.tr,
-                  v,
+                  g,
                   !1
                 ),
-                (a += v));
+                (a += g));
             } else if (m < 0) {
               for (; a > p; )
                 this.applyTransforms(
@@ -9519,16 +9639,16 @@ var lottie = { exports: {} };
                   !0
                 ),
                   (a -= 1);
-              v &&
+              g &&
                 (this.applyTransforms(
                   this.pMatrix,
                   this.rMatrix,
                   this.sMatrix,
                   this.tr,
-                  -v,
+                  -g,
                   !0
                 ),
-                (a -= v));
+                (a -= g));
             }
             (i = this.data.m === 1 ? 0 : this._currentCopies - 1),
               (s = this.data.m === 1 ? 1 : -1),
@@ -9560,22 +9680,22 @@ var lottie = { exports: {} };
                       !1
                     ),
                     this.matrix.transform(
-                      b[0],
-                      b[1],
-                      b[2],
-                      b[3],
-                      b[4],
-                      b[5],
-                      b[6],
-                      b[7],
-                      b[8],
-                      b[9],
-                      b[10],
-                      b[11],
-                      b[12],
-                      b[13],
-                      b[14],
-                      b[15]
+                      _[0],
+                      _[1],
+                      _[2],
+                      _[3],
+                      _[4],
+                      _[5],
+                      _[6],
+                      _[7],
+                      _[8],
+                      _[9],
+                      _[10],
+                      _[11],
+                      _[12],
+                      _[13],
+                      _[14],
+                      _[15]
                     ),
                     this.matrix.transform(
                       l[0],
@@ -9596,22 +9716,22 @@ var lottie = { exports: {} };
                       l[15]
                     ),
                     this.matrix.transform(
-                      g[0],
-                      g[1],
-                      g[2],
-                      g[3],
-                      g[4],
-                      g[5],
-                      g[6],
-                      g[7],
-                      g[8],
-                      g[9],
-                      g[10],
-                      g[11],
-                      g[12],
-                      g[13],
-                      g[14],
-                      g[15]
+                      v[0],
+                      v[1],
+                      v[2],
+                      v[3],
+                      v[4],
+                      v[5],
+                      v[6],
+                      v[7],
+                      v[8],
+                      v[9],
+                      v[10],
+                      v[11],
+                      v[12],
+                      v[13],
+                      v[14],
+                      v[15]
                     ),
                     h = 0;
                   h < f;
@@ -9978,7 +10098,7 @@ var lottie = { exports: {} };
           function x(l) {
             this.assetsPath = l || '';
           }
-          function _(l) {
+          function b(l) {
             for (var a = 0, h = this.images.length; a < h; ) {
               if (this.images[a].assetData === l) return this.images[a].img;
               a += 1;
@@ -9988,19 +10108,19 @@ var lottie = { exports: {} };
           function m() {
             (this.imagesLoadedCb = null), (this.images.length = 0);
           }
-          function v() {
+          function g() {
             return this.totalImages === this.loadedAssets;
           }
           function p() {
             return this.totalFootages === this.loadedFootagesCount;
           }
-          function g(l, a) {
+          function v(l, a) {
             l === 'svg'
               ? ((this._elementHelper = a),
                 (this._createImageData = this.createImageData.bind(this)))
               : (this._createImageData = this.createImgData.bind(this));
           }
-          function b() {
+          function _() {
             (this._imageLoaded = t.bind(this)),
               (this._footageLoaded = r.bind(this)),
               (this.testImageLoaded = s.bind(this)),
@@ -10015,21 +10135,21 @@ var lottie = { exports: {} };
               (this.images = []);
           }
           return (
-            (b.prototype = {
+            (_.prototype = {
               loadAssets: u,
               setAssetsPath: x,
               setPath: d,
-              loadedImages: v,
+              loadedImages: g,
               loadedFootages: p,
               destroy: m,
-              getAsset: _,
+              getAsset: b,
               createImgData: o,
               createImageData: n,
               imageLoaded: t,
               footageLoaded: r,
-              setCacheType: g,
+              setCacheType: v,
             }),
-            b
+            _
           );
         })(),
         featureSupport = (function () {
@@ -10138,12 +10258,12 @@ var lottie = { exports: {} };
               u,
               d,
               x,
-              _,
-              m = e.l,
-              v,
-              p,
-              g,
               b,
+              m = e.l,
+              g,
+              p,
+              v,
+              _,
               l,
               a,
               h,
@@ -10152,7 +10272,7 @@ var lottie = { exports: {} };
               k,
               w,
               P,
-              F,
+              M,
               D,
               T;
             if (this._hasMaskedPath) {
@@ -10162,11 +10282,11 @@ var lottie = { exports: {} };
               ) {
                 var z = T.v;
                 this._pathData.r.v && (z = z.reverse()),
-                  (v = { tLength: 0, segments: [] }),
-                  (_ = z._length - 1);
-                var M;
-                for (P = 0, x = 0; x < _; x += 1)
-                  (M = bez.buildBezierData(
+                  (g = { tLength: 0, segments: [] }),
+                  (b = z._length - 1);
+                var F;
+                for (P = 0, x = 0; x < b; x += 1)
+                  (F = bez.buildBezierData(
                     z.v[x],
                     z.v[x + 1],
                     [z.o[x][0] - z.v[x][0], z.o[x][1] - z.v[x][1]],
@@ -10175,34 +10295,34 @@ var lottie = { exports: {} };
                       z.i[x + 1][1] - z.v[x + 1][1],
                     ]
                   )),
-                    (v.tLength += M.segmentLength),
-                    v.segments.push(M),
-                    (P += M.segmentLength);
-                (x = _),
+                    (g.tLength += F.segmentLength),
+                    g.segments.push(F),
+                    (P += F.segmentLength);
+                (x = b),
                   T.v.c &&
-                    ((M = bez.buildBezierData(
+                    ((F = bez.buildBezierData(
                       z.v[x],
                       z.v[0],
                       [z.o[x][0] - z.v[x][0], z.o[x][1] - z.v[x][1]],
                       [z.i[0][0] - z.v[0][0], z.i[0][1] - z.v[0][1]]
                     )),
-                    (v.tLength += M.segmentLength),
-                    v.segments.push(M),
-                    (P += M.segmentLength)),
-                  (this._pathData.pi = v);
+                    (g.tLength += F.segmentLength),
+                    g.segments.push(F),
+                    (P += F.segmentLength)),
+                  (this._pathData.pi = g);
               }
               if (
-                ((v = this._pathData.pi),
+                ((g = this._pathData.pi),
                 (p = this._pathData.f.v),
                 (h = 0),
                 (a = 1),
-                (b = 0),
+                (_ = 0),
                 (l = !0),
-                (k = v.segments),
+                (k = g.segments),
                 p < 0 && T.v.c)
               )
                 for (
-                  v.tLength < Math.abs(p) && (p = -Math.abs(p) % v.tLength),
+                  g.tLength < Math.abs(p) && (p = -Math.abs(p) % g.tLength),
                     h = k.length - 1,
                     y = k[h].points,
                     a = y.length - 1;
@@ -10214,10 +10334,10 @@ var lottie = { exports: {} };
                     a < 0 && ((h -= 1), (y = k[h].points), (a = y.length - 1));
               (y = k[h].points),
                 (f = y[a - 1]),
-                (g = y[a]),
-                (w = g.partialLength);
+                (v = y[a]),
+                (w = v.partialLength);
             }
-            (_ = m.length), (u = 0), (d = 0);
+            (b = m.length), (u = 0), (d = 0);
             var V = e.finalSize * 1.2 * 0.714,
               R = !0,
               C,
@@ -10252,7 +10372,7 @@ var lottie = { exports: {} };
                 W = e.j === 2 ? -0.5 : -1,
                 N = 0,
                 U = !0;
-              for (x = 0; x < _; x += 1)
+              for (x = 0; x < b; x += 1)
                 if (m[x].n) {
                   for (ie && (ie += q); N < x; )
                     (m[N].animatorJustifyOffset = ie), (N += 1);
@@ -10272,7 +10392,7 @@ var lottie = { exports: {} };
               for (ie && (ie += q); N < x; )
                 (m[N].animatorJustifyOffset = ie), (N += 1);
             }
-            for (x = 0; x < _; x += 1) {
+            for (x = 0; x < b; x += 1) {
               if ((n.reset(), (re = 1), m[x].n))
                 (u = 0),
                   (d += e.yOffset),
@@ -10284,9 +10404,9 @@ var lottie = { exports: {} };
                     (a = ee),
                     (y = k[h].points),
                     (f = y[a - 1]),
-                    (g = y[a]),
-                    (w = g.partialLength),
-                    (b = 0)),
+                    (v = y[a]),
+                    (w = v.partialLength),
+                    (_ = 0)),
                   (oe = ''),
                   (le = ''),
                   (ae = ''),
@@ -10335,22 +10455,22 @@ var lottie = { exports: {} };
                             m[0].an * 0.5 -
                             m[m.length - 1].an * 0.5) *
                             B) /
-                            (_ - 1)),
+                            (b - 1)),
                         (p += this._pathData.f.v));
                     l;
 
                   )
-                    b + w >= p + j || !y
-                      ? ((F = (p + j - b) / g.partialLength),
-                        (G = f.point[0] + (g.point[0] - f.point[0]) * F),
-                        (J = f.point[1] + (g.point[1] - f.point[1]) * F),
+                    _ + w >= p + j || !y
+                      ? ((M = (p + j - _) / v.partialLength),
+                        (G = f.point[0] + (v.point[0] - f.point[0]) * M),
+                        (J = f.point[1] + (v.point[1] - f.point[1]) * M),
                         n.translate(
                           -r[0] * m[x].an * 0.005,
                           -(r[1] * V) * 0.01
                         ),
                         (l = !1))
                       : y &&
-                        ((b += g.partialLength),
+                        ((_ += v.partialLength),
                         (a += 1),
                         a >= y.length &&
                           ((a = 0),
@@ -10359,8 +10479,8 @@ var lottie = { exports: {} };
                             ? (y = k[h].points)
                             : T.v.c
                             ? ((a = 0), (h = 0), (y = k[h].points))
-                            : ((b -= g.partialLength), (y = null))),
-                        y && ((f = g), (g = y[a]), (w = g.partialLength)));
+                            : ((_ -= v.partialLength), (y = null))),
+                        y && ((f = v), (v = y[a]), (w = v.partialLength)));
                   (H = m[x].an / 2 - m[x].add), n.translate(-H, 0, 0);
                 } else
                   (H = m[x].an / 2 - m[x].add),
@@ -10525,9 +10645,9 @@ var lottie = { exports: {} };
                     n.translate(0, r[1] * V * 0.01 + d, 0),
                     this._pathData.p.v)
                   ) {
-                    D = (g.point[1] - f.point[1]) / (g.point[0] - f.point[0]);
+                    D = (v.point[1] - f.point[1]) / (v.point[0] - f.point[0]);
                     var he = (Math.atan(D) * 180) / Math.PI;
-                    g.point[0] < f.point[0] && (he += 180),
+                    v.point[0] < f.point[0] && (he += 180),
                       n.rotate((-he * Math.PI) / 180);
                   }
                   n.translate(G, J, 0),
@@ -10822,12 +10942,12 @@ var lottie = { exports: {} };
             u,
             d = r.m.g,
             x = 0,
-            _ = 0,
+            b = 0,
             m = 0,
-            v = [],
+            g = [],
             p = 0,
-            g = 0,
-            b,
+            v = 0,
+            _,
             l,
             a = t.getFontByName(e.f),
             h,
@@ -10842,18 +10962,18 @@ var lottie = { exports: {} };
           var k = (e.tr / 1e3) * e.finalSize,
             w;
           if (e.sz)
-            for (var P = !0, F = e.sz[0], D = e.sz[1], T, z; P; ) {
+            for (var P = !0, M = e.sz[0], D = e.sz[1], T, z; P; ) {
               (z = this.buildFinalText(e.t)),
                 (T = 0),
                 (p = 0),
                 (n = z.length),
                 (k = (e.tr / 1e3) * e.finalSize);
-              var M = -1;
+              var F = -1;
               for (s = 0; s < n; s += 1)
                 (w = z[s].charCodeAt(0)),
                   (o = !1),
                   z[s] === ' '
-                    ? (M = s)
+                    ? (F = s)
                     : (w === 13 || w === 3) &&
                       ((p = 0),
                       (o = !0),
@@ -10862,11 +10982,11 @@ var lottie = { exports: {} };
                     ? ((h = t.getCharData(z[s], a.fStyle, a.fFamily)),
                       (f = o ? 0 : (h.w * e.finalSize) / 100))
                     : (f = t.measureText(z[s], e.f, e.finalSize)),
-                  p + f > F && z[s] !== ' '
-                    ? (M === -1 ? (n += 1) : (s = M),
+                  p + f > M && z[s] !== ' '
+                    ? (F === -1 ? (n += 1) : (s = F),
                       (T += e.finalLineHeight || e.finalSize * 1.2),
-                      z.splice(s, M === s ? 1 : 0, '\r'),
-                      (M = -1),
+                      z.splice(s, F === s ? 1 : 0, '\r'),
+                      (F = -1),
                       (p = 0))
                     : ((p += f), (p += k));
               (T += (a.ascent * e.finalSize) / 100),
@@ -10885,8 +11005,8 @@ var lottie = { exports: {} };
               (w = R.charCodeAt(0)),
               w === 13 || w === 3
                 ? ((V = 0),
-                  v.push(p),
-                  (g = p > g ? p : g),
+                  g.push(p),
+                  (v = p > v ? p : v),
                   (p = -2 * k),
                   (u = ''),
                   (o = !0),
@@ -10914,21 +11034,21 @@ var lottie = { exports: {} };
               d == 2)
             ) {
               if (((x += f), u === '' || u === ' ' || s === n - 1)) {
-                for ((u === '' || u === ' ') && (x -= f); _ <= s; )
-                  (i[_].an = x), (i[_].ind = c), (i[_].extra = f), (_ += 1);
+                for ((u === '' || u === ' ') && (x -= f); b <= s; )
+                  (i[b].an = x), (i[b].ind = c), (i[b].extra = f), (b += 1);
                 (c += 1), (x = 0);
               }
             } else if (d == 3) {
               if (((x += f), u === '' || s === n - 1)) {
-                for (u === '' && (x -= f); _ <= s; )
-                  (i[_].an = x), (i[_].ind = c), (i[_].extra = f), (_ += 1);
+                for (u === '' && (x -= f); b <= s; )
+                  (i[b].an = x), (i[b].ind = c), (i[b].extra = f), (b += 1);
                 (x = 0), (c += 1);
               }
             } else (i[c].ind = c), (i[c].extra = 0), (c += 1);
-          if (((e.l = i), (g = p > g ? p : g), v.push(p), e.sz))
+          if (((e.l = i), (v = p > v ? p : v), g.push(p), e.sz))
             (e.boxWidth = e.sz[0]), (e.justifyOffset = 0);
           else
-            switch (((e.boxWidth = g), e.j)) {
+            switch (((e.boxWidth = v), e.j)) {
               case 1:
                 e.justifyOffset = -e.boxWidth;
                 break;
@@ -10938,7 +11058,7 @@ var lottie = { exports: {} };
               default:
                 e.justifyOffset = 0;
             }
-          e.lineWidths = v;
+          e.lineWidths = g;
           var C = r.a,
             S,
             E;
@@ -10946,9 +11066,9 @@ var lottie = { exports: {} };
           var A,
             L,
             I = [];
-          for (b = 0; b < l; b += 1) {
+          for (_ = 0; _ < l; _ += 1) {
             for (
-              S = C[b],
+              S = C[_],
                 S.a.sc && (e.strokeColorAnim = !0),
                 S.a.sw && (e.strokeWidthAnim = !0),
                 (S.a.fc || S.a.fh || S.a.fs || S.a.fb) &&
@@ -10960,22 +11080,22 @@ var lottie = { exports: {} };
               s += 1
             )
               (E = i[s]),
-                (E.anIndexes[b] = L),
+                (E.anIndexes[_] = L),
                 ((A == 1 && E.val !== '') ||
                   (A == 2 && E.val !== '' && E.val !== ' ') ||
                   (A == 3 && (E.n || E.val == ' ' || s == n - 1)) ||
                   (A == 4 && (E.n || s == n - 1))) &&
                   (S.s.rn === 1 && I.push(L), (L += 1));
-            r.a[b].s.totalChars = L;
+            r.a[_].s.totalChars = L;
             var B = -1,
               H;
             if (S.s.rn === 1)
               for (s = 0; s < n; s += 1)
                 (E = i[s]),
-                  B != E.anIndexes[b] &&
-                    ((B = E.anIndexes[b]),
+                  B != E.anIndexes[_] &&
+                    ((B = E.anIndexes[_]),
                     (H = I.splice(Math.floor(Math.random() * I.length), 1)[0])),
-                  (E.anIndexes[b] = H);
+                  (E.anIndexes[_] = H);
           }
           (e.yOffset = e.finalLineHeight || e.finalSize * 1.2),
             (e.ls = e.ls || 0),
@@ -11073,58 +11193,58 @@ var lottie = { exports: {} };
                   ? (u = 1 - this.xe.v / 100)
                   : (d = 1 + this.xe.v / 100);
               var x = BezierFactory.getBezierEasing(o, c, u, d).get,
-                _ = 0,
+                b = 0,
                 m = this.finalS,
-                v = this.finalE,
+                g = this.finalE,
                 p = this.data.sh;
               if (p === 2)
-                v === m
-                  ? (_ = n >= v ? 1 : 0)
-                  : (_ = e(0, t(0.5 / (v - m) + (n - m) / (v - m), 1))),
-                  (_ = x(_));
+                g === m
+                  ? (b = n >= g ? 1 : 0)
+                  : (b = e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
+                  (b = x(b));
               else if (p === 3)
-                v === m
-                  ? (_ = n >= v ? 0 : 1)
-                  : (_ = 1 - e(0, t(0.5 / (v - m) + (n - m) / (v - m), 1))),
-                  (_ = x(_));
+                g === m
+                  ? (b = n >= g ? 0 : 1)
+                  : (b = 1 - e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
+                  (b = x(b));
               else if (p === 4)
-                v === m
-                  ? (_ = 0)
-                  : ((_ = e(0, t(0.5 / (v - m) + (n - m) / (v - m), 1))),
-                    _ < 0.5 ? (_ *= 2) : (_ = 1 - 2 * (_ - 0.5))),
-                  (_ = x(_));
+                g === m
+                  ? (b = 0)
+                  : ((b = e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
+                    b < 0.5 ? (b *= 2) : (b = 1 - 2 * (b - 0.5))),
+                  (b = x(b));
               else if (p === 5) {
-                if (v === m) _ = 0;
+                if (g === m) b = 0;
                 else {
-                  var g = v - m;
-                  n = t(e(0, n + 0.5 - m), v - m);
-                  var b = -g / 2 + n,
-                    l = g / 2;
-                  _ = Math.sqrt(1 - (b * b) / (l * l));
+                  var v = g - m;
+                  n = t(e(0, n + 0.5 - m), g - m);
+                  var _ = -v / 2 + n,
+                    l = v / 2;
+                  b = Math.sqrt(1 - (_ * _) / (l * l));
                 }
-                _ = x(_);
+                b = x(b);
               } else
                 p === 6
-                  ? (v === m
-                      ? (_ = 0)
-                      : ((n = t(e(0, n + 0.5 - m), v - m)),
-                        (_ =
+                  ? (g === m
+                      ? (b = 0)
+                      : ((n = t(e(0, n + 0.5 - m), g - m)),
+                        (b =
                           (1 +
-                            Math.cos(Math.PI + (Math.PI * 2 * n) / (v - m))) /
+                            Math.cos(Math.PI + (Math.PI * 2 * n) / (g - m))) /
                           2)),
-                    (_ = x(_)))
+                    (b = x(b)))
                   : (n >= r(m) &&
                       (n - m < 0
-                        ? (_ = e(0, t(t(v, 1) - (m - n), 1)))
-                        : (_ = e(0, t(v - n, 1)))),
-                    (_ = x(_)));
+                        ? (b = e(0, t(t(g, 1) - (m - n), 1)))
+                        : (b = e(0, t(g - n, 1)))),
+                    (b = x(b)));
               if (this.sm.v !== 100) {
                 var a = this.sm.v * 0.01;
                 a === 0 && (a = 1e-8);
                 var h = 0.5 - a * 0.5;
-                _ < h ? (_ = 0) : ((_ = (_ - h) / a), _ > 1 && (_ = 1));
+                b < h ? (b = 0) : ((b = (b - h) / a), b > 1 && (b = 1));
               }
-              return _ * this.a.v;
+              return b * this.a.v;
             },
             getValue: function (n) {
               this.iterateDynamicProperties(),
@@ -12321,12 +12441,12 @@ var lottie = { exports: {} };
           u = 0,
           d = [],
           x,
-          _,
-          m = createElementID(),
-          v,
-          p,
-          g,
           b,
+          m = createElementID(),
+          g,
+          p,
+          v,
+          _,
           l = 'clipPath',
           a = 'clip-path';
         for (s = 0; s < n; s += 1)
@@ -12337,12 +12457,12 @@ var lottie = { exports: {} };
               c[s].o.x) &&
               ((l = 'mask'), (a = 'mask')),
             (c[s].mode === 's' || c[s].mode === 'i') && u === 0
-              ? ((v = createNS('rect')),
-                v.setAttribute('fill', '#ffffff'),
-                v.setAttribute('width', this.element.comp.data.w || 0),
-                v.setAttribute('height', this.element.comp.data.h || 0),
-                d.push(v))
-              : (v = null),
+              ? ((g = createNS('rect')),
+                g.setAttribute('fill', '#ffffff'),
+                g.setAttribute('width', this.element.comp.data.w || 0),
+                g.setAttribute('height', this.element.comp.data.h || 0),
+                d.push(g))
+              : (g = null),
             (o = createNS('path')),
             c[s].mode === 'n')
           )
@@ -12368,7 +12488,7 @@ var lottie = { exports: {} };
               (c[s].x.k !== 0
                 ? ((l = 'mask'),
                   (a = 'mask'),
-                  (b = PropertyFactory.getProp(
+                  (_ = PropertyFactory.getProp(
                     this.element,
                     c[s].x,
                     0,
@@ -12378,21 +12498,21 @@ var lottie = { exports: {} };
                   (h = createElementID()),
                   (p = createNS('filter')),
                   p.setAttribute('id', h),
-                  (g = createNS('feMorphology')),
-                  g.setAttribute('operator', 'erode'),
-                  g.setAttribute('in', 'SourceGraphic'),
-                  g.setAttribute('radius', '0'),
-                  p.appendChild(g),
+                  (v = createNS('feMorphology')),
+                  v.setAttribute('operator', 'erode'),
+                  v.setAttribute('in', 'SourceGraphic'),
+                  v.setAttribute('radius', '0'),
+                  p.appendChild(v),
                   i.appendChild(p),
                   o.setAttribute(
                     'stroke',
                     c[s].mode === 's' ? '#000000' : '#ffffff'
                   ))
-                : ((g = null), (b = null)),
+                : ((v = null), (_ = null)),
               (this.storedData[s] = {
                 elem: o,
-                x: b,
-                expan: g,
+                x: _,
+                expan: v,
                 lastPath: '',
                 lastOperator: '',
                 filterId: h,
@@ -12400,9 +12520,9 @@ var lottie = { exports: {} };
               }),
               c[s].mode === 'i')
             ) {
-              _ = d.length;
+              b = d.length;
               var f = createNS('g');
-              for (x = 0; x < _; x += 1) f.appendChild(d[x]);
+              for (x = 0; x < b; x += 1) f.appendChild(d[x]);
               var y = createNS('mask');
               y.setAttribute('mask-type', 'alpha'),
                 y.setAttribute('id', m + '_' + u),
@@ -12429,7 +12549,7 @@ var lottie = { exports: {} };
                   this.element
                 ),
                 prop: ShapePropertyFactory.getShapeProp(this.element, c[s], 3),
-                invRect: v,
+                invRect: g,
               }),
               this.viewData[s].prop.k ||
                 this.drawPath(c[s], this.viewData[s].prop.v, this.viewData[s]);
@@ -12981,46 +13101,46 @@ var lottie = { exports: {} };
               return null;
           }
         }
-        function s(x, _, m) {
-          (m || _.transform.op._mdf) &&
-            _.transform.container.setAttribute('opacity', _.transform.op.v),
-            (m || _.transform.mProps._mdf) &&
-              _.transform.container.setAttribute(
+        function s(x, b, m) {
+          (m || b.transform.op._mdf) &&
+            b.transform.container.setAttribute('opacity', b.transform.op.v),
+            (m || b.transform.mProps._mdf) &&
+              b.transform.container.setAttribute(
                 'transform',
-                _.transform.mProps.v.to2dCSS()
+                b.transform.mProps.v.to2dCSS()
               );
         }
-        function n(x, _, m) {
-          var v,
+        function n(x, b, m) {
+          var g,
             p,
-            g,
-            b,
+            v,
+            _,
             l,
             a,
-            h = _.styles.length,
-            f = _.lvl,
+            h = b.styles.length,
+            f = b.lvl,
             y,
             k,
             w,
             P,
-            F;
+            M;
           for (a = 0; a < h; a += 1) {
-            if (((b = _.sh._mdf || m), _.styles[a].lvl < f)) {
+            if (((_ = b.sh._mdf || m), b.styles[a].lvl < f)) {
               for (
                 k = t.reset(),
-                  P = f - _.styles[a].lvl,
-                  F = _.transformers.length - 1;
-                !b && P > 0;
+                  P = f - b.styles[a].lvl,
+                  M = b.transformers.length - 1;
+                !_ && P > 0;
 
               )
-                (b = _.transformers[F].mProps._mdf || b), (P -= 1), (F -= 1);
-              if (b)
+                (_ = b.transformers[M].mProps._mdf || _), (P -= 1), (M -= 1);
+              if (_)
                 for (
-                  P = f - _.styles[a].lvl, F = _.transformers.length - 1;
+                  P = f - b.styles[a].lvl, M = b.transformers.length - 1;
                   P > 0;
 
                 )
-                  (w = _.transformers[F].mProps.v.props),
+                  (w = b.transformers[M].mProps.v.props),
                     k.transform(
                       w[0],
                       w[1],
@@ -13040,60 +13160,60 @@ var lottie = { exports: {} };
                       w[15]
                     ),
                     (P -= 1),
-                    (F -= 1);
+                    (M -= 1);
             } else k = e;
-            if (((y = _.sh.paths), (p = y._length), b)) {
-              for (g = '', v = 0; v < p; v += 1)
-                (l = y.shapes[v]),
+            if (((y = b.sh.paths), (p = y._length), _)) {
+              for (v = '', g = 0; g < p; g += 1)
+                (l = y.shapes[g]),
                   l &&
                     l._length &&
-                    (g += buildShapeString(l, l._length, l.c, k));
-              _.caches[a] = g;
-            } else g = _.caches[a];
-            (_.styles[a].d += x.hd === !0 ? '' : g),
-              (_.styles[a]._mdf = b || _.styles[a]._mdf);
+                    (v += buildShapeString(l, l._length, l.c, k));
+              b.caches[a] = v;
+            } else v = b.caches[a];
+            (b.styles[a].d += x.hd === !0 ? '' : v),
+              (b.styles[a]._mdf = _ || b.styles[a]._mdf);
           }
         }
-        function o(x, _, m) {
-          var v = _.style;
-          (_.c._mdf || m) &&
-            v.pElem.setAttribute(
+        function o(x, b, m) {
+          var g = b.style;
+          (b.c._mdf || m) &&
+            g.pElem.setAttribute(
               'fill',
               'rgb(' +
-                bmFloor(_.c.v[0]) +
+                bmFloor(b.c.v[0]) +
                 ',' +
-                bmFloor(_.c.v[1]) +
+                bmFloor(b.c.v[1]) +
                 ',' +
-                bmFloor(_.c.v[2]) +
+                bmFloor(b.c.v[2]) +
                 ')'
             ),
-            (_.o._mdf || m) && v.pElem.setAttribute('fill-opacity', _.o.v);
+            (b.o._mdf || m) && g.pElem.setAttribute('fill-opacity', b.o.v);
         }
-        function c(x, _, m) {
-          u(x, _, m), d(x, _, m);
+        function c(x, b, m) {
+          u(x, b, m), d(x, b, m);
         }
-        function u(x, _, m) {
-          var v = _.gf,
-            p = _.g._hasOpacity,
-            g = _.s.v,
-            b = _.e.v;
-          if (_.o._mdf || m) {
+        function u(x, b, m) {
+          var g = b.gf,
+            p = b.g._hasOpacity,
+            v = b.s.v,
+            _ = b.e.v;
+          if (b.o._mdf || m) {
             var l = x.ty === 'gf' ? 'fill-opacity' : 'stroke-opacity';
-            _.style.pElem.setAttribute(l, _.o.v);
+            b.style.pElem.setAttribute(l, b.o.v);
           }
-          if (_.s._mdf || m) {
+          if (b.s._mdf || m) {
             var a = x.t === 1 ? 'x1' : 'cx',
               h = a === 'x1' ? 'y1' : 'cy';
-            v.setAttribute(a, g[0]),
-              v.setAttribute(h, g[1]),
+            g.setAttribute(a, v[0]),
+              g.setAttribute(h, v[1]),
               p &&
-                !_.g._collapsable &&
-                (_.of.setAttribute(a, g[0]), _.of.setAttribute(h, g[1]));
+                !b.g._collapsable &&
+                (b.of.setAttribute(a, v[0]), b.of.setAttribute(h, v[1]));
           }
           var f, y, k, w;
-          if (_.g._cmdf || m) {
-            f = _.cst;
-            var P = _.g.c;
+          if (b.g._cmdf || m) {
+            f = b.cst;
+            var P = b.g.c;
             for (k = f.length, y = 0; y < k; y += 1)
               (w = f[y]),
                 w.setAttribute('offset', P[y * 4] + '%'),
@@ -13108,77 +13228,77 @@ var lottie = { exports: {} };
                     ')'
                 );
           }
-          if (p && (_.g._omdf || m)) {
-            var F = _.g.o;
+          if (p && (b.g._omdf || m)) {
+            var M = b.g.o;
             for (
-              _.g._collapsable ? (f = _.cst) : (f = _.ost), k = f.length, y = 0;
+              b.g._collapsable ? (f = b.cst) : (f = b.ost), k = f.length, y = 0;
               y < k;
               y += 1
             )
               (w = f[y]),
-                _.g._collapsable || w.setAttribute('offset', F[y * 2] + '%'),
-                w.setAttribute('stop-opacity', F[y * 2 + 1]);
+                b.g._collapsable || w.setAttribute('offset', M[y * 2] + '%'),
+                w.setAttribute('stop-opacity', M[y * 2 + 1]);
           }
           if (x.t === 1)
-            (_.e._mdf || m) &&
-              (v.setAttribute('x2', b[0]),
-              v.setAttribute('y2', b[1]),
+            (b.e._mdf || m) &&
+              (g.setAttribute('x2', _[0]),
+              g.setAttribute('y2', _[1]),
               p &&
-                !_.g._collapsable &&
-                (_.of.setAttribute('x2', b[0]), _.of.setAttribute('y2', b[1])));
+                !b.g._collapsable &&
+                (b.of.setAttribute('x2', _[0]), b.of.setAttribute('y2', _[1])));
           else {
             var D;
             if (
-              ((_.s._mdf || _.e._mdf || m) &&
+              ((b.s._mdf || b.e._mdf || m) &&
                 ((D = Math.sqrt(
-                  Math.pow(g[0] - b[0], 2) + Math.pow(g[1] - b[1], 2)
+                  Math.pow(v[0] - _[0], 2) + Math.pow(v[1] - _[1], 2)
                 )),
-                v.setAttribute('r', D),
-                p && !_.g._collapsable && _.of.setAttribute('r', D)),
-              _.e._mdf || _.h._mdf || _.a._mdf || m)
+                g.setAttribute('r', D),
+                p && !b.g._collapsable && b.of.setAttribute('r', D)),
+              b.e._mdf || b.h._mdf || b.a._mdf || m)
             ) {
               D ||
                 (D = Math.sqrt(
-                  Math.pow(g[0] - b[0], 2) + Math.pow(g[1] - b[1], 2)
+                  Math.pow(v[0] - _[0], 2) + Math.pow(v[1] - _[1], 2)
                 ));
-              var T = Math.atan2(b[1] - g[1], b[0] - g[0]),
-                z = _.h.v;
+              var T = Math.atan2(_[1] - v[1], _[0] - v[0]),
+                z = b.h.v;
               z >= 1 ? (z = 0.99) : z <= -1 && (z = -0.99);
-              var M = D * z,
-                V = Math.cos(T + _.a.v) * M + g[0],
-                R = Math.sin(T + _.a.v) * M + g[1];
-              v.setAttribute('fx', V),
-                v.setAttribute('fy', R),
+              var F = D * z,
+                V = Math.cos(T + b.a.v) * F + v[0],
+                R = Math.sin(T + b.a.v) * F + v[1];
+              g.setAttribute('fx', V),
+                g.setAttribute('fy', R),
                 p &&
-                  !_.g._collapsable &&
-                  (_.of.setAttribute('fx', V), _.of.setAttribute('fy', R));
+                  !b.g._collapsable &&
+                  (b.of.setAttribute('fx', V), b.of.setAttribute('fy', R));
             }
           }
         }
-        function d(x, _, m) {
-          var v = _.style,
-            p = _.d;
+        function d(x, b, m) {
+          var g = b.style,
+            p = b.d;
           p &&
             (p._mdf || m) &&
             p.dashStr &&
-            (v.pElem.setAttribute('stroke-dasharray', p.dashStr),
-            v.pElem.setAttribute('stroke-dashoffset', p.dashoffset[0])),
-            _.c &&
-              (_.c._mdf || m) &&
-              v.pElem.setAttribute(
+            (g.pElem.setAttribute('stroke-dasharray', p.dashStr),
+            g.pElem.setAttribute('stroke-dashoffset', p.dashoffset[0])),
+            b.c &&
+              (b.c._mdf || m) &&
+              g.pElem.setAttribute(
                 'stroke',
                 'rgb(' +
-                  bmFloor(_.c.v[0]) +
+                  bmFloor(b.c.v[0]) +
                   ',' +
-                  bmFloor(_.c.v[1]) +
+                  bmFloor(b.c.v[1]) +
                   ',' +
-                  bmFloor(_.c.v[2]) +
+                  bmFloor(b.c.v[2]) +
                   ')'
               ),
-            (_.o._mdf || m) && v.pElem.setAttribute('stroke-opacity', _.o.v),
-            (_.w._mdf || m) &&
-              (v.pElem.setAttribute('stroke-width', _.w.v),
-              v.msElem && v.msElem.setAttribute('stroke-width', _.w.v));
+            (b.o._mdf || m) && g.pElem.setAttribute('stroke-opacity', b.o.v),
+            (b.w._mdf || m) &&
+              (g.pElem.setAttribute('stroke-width', b.w.v),
+              g.msElem && g.msElem.setAttribute('stroke-width', b.w.v));
         }
         return r;
       })();
@@ -13445,8 +13565,8 @@ var lottie = { exports: {} };
             this.data.ty === 0 && !this.data.hd)
           ) {
             var x = createNS('clipPath'),
-              _ = createNS('path');
-            _.setAttribute(
+              b = createNS('path');
+            b.setAttribute(
               'd',
               'M0,0 L' +
                 this.data.w +
@@ -13461,17 +13581,17 @@ var lottie = { exports: {} };
             var m = createElementID();
             if (
               (x.setAttribute('id', m),
-              x.appendChild(_),
+              x.appendChild(b),
               this.globalData.defs.appendChild(x),
               this.checkMasks())
             ) {
-              var v = createNS('g');
-              v.setAttribute(
+              var g = createNS('g');
+              g.setAttribute(
                 'clip-path',
                 'url(' + locationHref + '#' + m + ')'
               ),
-                v.appendChild(this.layerElement),
-                (this.transformedElement = v),
+                g.appendChild(this.layerElement),
+                (this.transformedElement = g),
                 e
                   ? e.appendChild(this.transformedElement)
                   : (this.baseElement = this.transformedElement);
@@ -13951,12 +14071,12 @@ var lottie = { exports: {} };
           var u,
             d = this.mHelper,
             x,
-            _ = '',
+            b = '',
             m = this.data.singleShape,
-            v = 0,
+            g = 0,
             p = 0,
-            g = !0,
-            b = r.tr * 0.001 * r.finalSize;
+            v = !0,
+            _ = r.tr * 0.001 * r.finalSize;
           if (m && !c && !r.sz) {
             var l = this.textContainer,
               a = 'start';
@@ -13972,7 +14092,7 @@ var lottie = { exports: {} };
                 break;
             }
             l.setAttribute('text-anchor', a),
-              l.setAttribute('letter-spacing', b);
+              l.setAttribute('letter-spacing', _);
             var h = this.buildTextContents(r.finalText);
             for (
               t = h.length, p = r.ps ? r.ps[1] + r.ascent : 0, e = 0;
@@ -14007,10 +14127,10 @@ var lottie = { exports: {} };
                 d.scale(r.finalSize / 100, r.finalSize / 100),
                 m &&
                   (o[e].n &&
-                    ((v = -b), (p += r.yOffset), (p += g ? 1 : 0), (g = !1)),
-                  this.applyTextPropertiesToMatrix(r, d, o[e].line, v, p),
-                  (v += o[e].l || 0),
-                  (v += b)),
+                    ((g = -_), (p += r.yOffset), (p += v ? 1 : 0), (v = !1)),
+                  this.applyTextPropertiesToMatrix(r, d, o[e].line, g, p),
+                  (g += o[e].l || 0),
+                  (g += _)),
                 c
                   ? ((k = this.globalData.fontManager.getCharData(
                       r.finalText[e],
@@ -14020,7 +14140,7 @@ var lottie = { exports: {} };
                     (y = (k && k.data) || {}),
                     (x = y.shapes ? y.shapes[0].it : []),
                     m
-                      ? (_ += this.createPathShape(d, x))
+                      ? (b += this.createPathShape(d, x))
                       : u.setAttribute('d', this.createPathShape(d, x)))
                   : (m &&
                       u.setAttribute(
@@ -14033,7 +14153,7 @@ var lottie = { exports: {} };
                       'xml:space',
                       'preserve'
                     ));
-            m && u && u.setAttribute('d', _);
+            m && u && u.setAttribute('d', b);
           }
           for (; e < this.textSpans.length; )
             (this.textSpans[e].style.display = 'none'), (e += 1);
@@ -14268,22 +14388,22 @@ var lottie = { exports: {} };
             u,
             d = e.length - 1,
             x,
-            _,
+            b,
             m = [],
-            v = [],
+            g = [],
             p,
-            g,
-            b;
+            v,
+            _;
           for (u = d; u >= 0; u -= 1) {
             if (
-              ((b = this.searchProcessedElement(e[u])),
-              b ? (t[u] = r[b - 1]) : (e[u]._render = o),
+              ((_ = this.searchProcessedElement(e[u])),
+              _ ? (t[u] = r[_ - 1]) : (e[u]._render = o),
               e[u].ty === 'fl' ||
                 e[u].ty === 'st' ||
                 e[u].ty === 'gf' ||
                 e[u].ty === 'gs')
             )
-              b
+              _
                 ? (t[u].style.closed = !1)
                 : (t[u] = this.createStyleElement(e[u], s)),
                 e[u]._render &&
@@ -14291,9 +14411,9 @@ var lottie = { exports: {} };
                   i.appendChild(t[u].style.pElem),
                 m.push(t[u].style);
             else if (e[u].ty === 'gr') {
-              if (!b) t[u] = this.createGroupElement(e[u]);
+              if (!_) t[u] = this.createGroupElement(e[u]);
               else
-                for (_ = t[u].it.length, x = 0; x < _; x += 1)
+                for (b = t[u].it.length, x = 0; x < b; x += 1)
                   t[u].prevViewData[x] = t[u].it[x];
               this.searchShapes(
                 e[u].it,
@@ -14309,39 +14429,39 @@ var lottie = { exports: {} };
                   i.appendChild(t[u].gr);
             } else
               e[u].ty === 'tr'
-                ? (b || (t[u] = this.createTransformElement(e[u], i)),
+                ? (_ || (t[u] = this.createTransformElement(e[u], i)),
                   (p = t[u].transform),
                   c.push(p))
                 : e[u].ty === 'sh' ||
                   e[u].ty === 'rc' ||
                   e[u].ty === 'el' ||
                   e[u].ty === 'sr'
-                ? (b || (t[u] = this.createShapeElement(e[u], c, s)),
+                ? (_ || (t[u] = this.createShapeElement(e[u], c, s)),
                   this.setElementStyles(t[u]))
                 : e[u].ty === 'tm' ||
                   e[u].ty === 'rd' ||
                   e[u].ty === 'ms' ||
                   e[u].ty === 'pb'
-                ? (b
-                    ? ((g = t[u]), (g.closed = !1))
-                    : ((g = ShapeModifiers.getModifier(e[u].ty)),
-                      g.init(this, e[u]),
-                      (t[u] = g),
-                      this.shapeModifiers.push(g)),
-                  v.push(g))
+                ? (_
+                    ? ((v = t[u]), (v.closed = !1))
+                    : ((v = ShapeModifiers.getModifier(e[u].ty)),
+                      v.init(this, e[u]),
+                      (t[u] = v),
+                      this.shapeModifiers.push(v)),
+                  g.push(v))
                 : e[u].ty === 'rp' &&
-                  (b
-                    ? ((g = t[u]), (g.closed = !0))
-                    : ((g = ShapeModifiers.getModifier(e[u].ty)),
-                      (t[u] = g),
-                      g.init(this, e, u, t),
-                      this.shapeModifiers.push(g),
+                  (_
+                    ? ((v = t[u]), (v.closed = !0))
+                    : ((v = ShapeModifiers.getModifier(e[u].ty)),
+                      (t[u] = v),
+                      v.init(this, e, u, t),
+                      this.shapeModifiers.push(v),
                       (o = !1)),
-                  v.push(g));
+                  g.push(v));
             this.addProcessedElement(e[u], u + 1);
           }
           for (d = m.length, u = 0; u < d; u += 1) m[u].closed = !0;
-          for (d = v.length, u = 0; u < d; u += 1) v[u].closed = !0;
+          for (d = g.length, u = 0; u < d; u += 1) g[u].closed = !0;
         }),
         (SVGShapeElement.prototype.renderInnerContent = function () {
           this.renderModifiers();
@@ -14593,9 +14713,9 @@ var lottie = { exports: {} };
                       2 *
                       this.filterManager.effectElements[9].p.v *
                       0.01,
-                  _ = Math.floor(d / x),
+                  b = Math.floor(d / x),
                   m;
-                for (m = 0; m < _; m += 1)
+                for (m = 0; m < b; m += 1)
                   n +=
                     '1 ' +
                     this.filterManager.effectElements[4].p.v *
@@ -14628,15 +14748,15 @@ var lottie = { exports: {} };
               this.filterManager.effectElements[10].p.v === 2) &&
               (e || this.filterManager.effectElements[3].p._mdf))
           ) {
-            var v = this.filterManager.effectElements[3].p.v;
+            var g = this.filterManager.effectElements[3].p.v;
             this.pathMasker.setAttribute(
               'stroke',
               'rgb(' +
-                bmFloor(v[0] * 255) +
+                bmFloor(g[0] * 255) +
                 ',' +
-                bmFloor(v[1] * 255) +
+                bmFloor(g[1] * 255) +
                 ',' +
-                bmFloor(v[2] * 255) +
+                bmFloor(g[2] * 255) +
                 ')'
             );
           }
@@ -14756,20 +14876,20 @@ var lottie = { exports: {} };
               u = Math.min(e, t),
               d = Math.max(e, t),
               x = Array.call(null, { length: o }),
-              _,
+              b,
               m = 0,
-              v = s - i,
+              g = s - i,
               p = t - e;
             n <= 256;
 
           )
             (c = n / 256),
               c <= u
-                ? (_ = p < 0 ? s : i)
+                ? (b = p < 0 ? s : i)
                 : c >= d
-                ? (_ = p < 0 ? i : s)
-                : (_ = i + v * Math.pow((c - e) / p, 1 / r)),
-              (x[m] = _),
+                ? (b = p < 0 ? i : s)
+                : (b = i + g * Math.pow((c - e) / p, 1 / r)),
+              (x[m] = b),
               (m += 1),
               (n += 256 / (o - 1));
           return x.join(' ');
@@ -15487,41 +15607,41 @@ var lottie = { exports: {} };
             u,
             d = [],
             x = [],
-            _,
+            b,
             m,
-            v,
+            g,
             p = [].concat(s);
           for (n = o; n >= 0; n -= 1) {
             if (
-              ((_ = this.searchProcessedElement(e[n])),
-              _ ? (t[n] = r[_ - 1]) : (e[n]._shouldRender = i),
+              ((b = this.searchProcessedElement(e[n])),
+              b ? (t[n] = r[b - 1]) : (e[n]._shouldRender = i),
               e[n].ty === 'fl' ||
                 e[n].ty === 'st' ||
                 e[n].ty === 'gf' ||
                 e[n].ty === 'gs')
             )
-              _
+              b
                 ? (t[n].style.closed = !1)
                 : (t[n] = this.createStyleElement(e[n], p)),
                 d.push(t[n].style);
             else if (e[n].ty === 'gr') {
-              if (!_) t[n] = this.createGroupElement(e[n]);
+              if (!b) t[n] = this.createGroupElement(e[n]);
               else
                 for (u = t[n].it.length, c = 0; c < u; c += 1)
                   t[n].prevViewData[c] = t[n].it[c];
               this.searchShapes(e[n].it, t[n].it, t[n].prevViewData, i, p);
             } else
               e[n].ty === 'tr'
-                ? (_ || ((v = this.createTransformElement(e[n])), (t[n] = v)),
+                ? (b || ((g = this.createTransformElement(e[n])), (t[n] = g)),
                   p.push(t[n]),
                   this.addTransformToStyleList(t[n]))
                 : e[n].ty === 'sh' ||
                   e[n].ty === 'rc' ||
                   e[n].ty === 'el' ||
                   e[n].ty === 'sr'
-                ? _ || (t[n] = this.createShapeElement(e[n]))
+                ? b || (t[n] = this.createShapeElement(e[n]))
                 : e[n].ty === 'tm' || e[n].ty === 'rd' || e[n].ty === 'pb'
-                ? (_
+                ? (b
                     ? ((m = t[n]), (m.closed = !1))
                     : ((m = ShapeModifiers.getModifier(e[n].ty)),
                       m.init(this, e[n]),
@@ -15529,7 +15649,7 @@ var lottie = { exports: {} };
                       this.shapeModifiers.push(m)),
                   x.push(m))
                 : e[n].ty === 'rp' &&
-                  (_
+                  (b
                     ? ((m = t[n]), (m.closed = !0))
                     : ((m = ShapeModifiers.getModifier(e[n].ty)),
                       (t[n] = m),
@@ -15577,31 +15697,31 @@ var lottie = { exports: {} };
             u = this.globalData.renderer,
             d = this.globalData.canvasContext,
             x,
-            _;
+            b;
           for (e = 0; e < t; e += 1)
             if (
-              ((_ = this.stylesList[e]),
-              (x = _.type),
+              ((b = this.stylesList[e]),
+              (x = b.type),
               !(
-                ((x === 'st' || x === 'gs') && _.wi === 0) ||
-                !_.data._shouldRender ||
-                _.coOp === 0 ||
+                ((x === 'st' || x === 'gs') && b.wi === 0) ||
+                !b.data._shouldRender ||
+                b.coOp === 0 ||
                 this.globalData.currentGlobalAlpha === 0
               ))
             ) {
               for (
                 u.save(),
-                  o = _.elements,
+                  o = b.elements,
                   x === 'st' || x === 'gs'
-                    ? ((d.strokeStyle = x === 'st' ? _.co : _.grd),
-                      (d.lineWidth = _.wi),
-                      (d.lineCap = _.lc),
-                      (d.lineJoin = _.lj),
-                      (d.miterLimit = _.ml || 0))
-                    : (d.fillStyle = x === 'fl' ? _.co : _.grd),
-                  u.ctxOpacity(_.coOp),
+                    ? ((d.strokeStyle = x === 'st' ? b.co : b.grd),
+                      (d.lineWidth = b.wi),
+                      (d.lineCap = b.lc),
+                      (d.lineJoin = b.lj),
+                      (d.miterLimit = b.ml || 0))
+                    : (d.fillStyle = x === 'fl' ? b.co : b.grd),
+                  u.ctxOpacity(b.coOp),
                   x !== 'st' && x !== 'gs' && d.beginPath(),
-                  u.ctxTransform(_.preTransforms.finalTransform.props),
+                  u.ctxTransform(b.preTransforms.finalTransform.props),
                   i = o.length,
                   r = 0;
                 r < i;
@@ -15610,7 +15730,7 @@ var lottie = { exports: {} };
                 for (
                   (x === 'st' || x === 'gs') &&
                     (d.beginPath(),
-                    _.da && (d.setLineDash(_.da), (d.lineDashOffset = _.do))),
+                    b.da && (d.setLineDash(b.da), (d.lineDashOffset = b.do))),
                     c = o[r].trNodes,
                     n = c.length,
                     s = 0;
@@ -15630,9 +15750,9 @@ var lottie = { exports: {} };
                       )
                     : d.closePath();
                 (x === 'st' || x === 'gs') &&
-                  (d.stroke(), _.da && d.setLineDash(this.dashResetter));
+                  (d.stroke(), b.da && d.setLineDash(this.dashResetter));
               }
-              x !== 'st' && x !== 'gs' && d.fill(_.r), u.restore();
+              x !== 'st' && x !== 'gs' && d.fill(b.r), u.restore();
             }
         }),
         (CVShapeElement.prototype.renderShape = function (e, t, r, i) {
@@ -15741,25 +15861,25 @@ var lottie = { exports: {} };
                 d = Math.atan2(c[1] - o[1], c[0] - o[0]),
                 x = t.h.v;
               x >= 1 ? (x = 0.99) : x <= -1 && (x = -0.99);
-              var _ = u * x,
-                m = Math.cos(d + t.a.v) * _ + o[0],
-                v = Math.sin(d + t.a.v) * _ + o[1];
-              s = n.createRadialGradient(m, v, 0, o[0], o[1], u);
+              var b = u * x,
+                m = Math.cos(d + t.a.v) * b + o[0],
+                g = Math.sin(d + t.a.v) * b + o[1];
+              s = n.createRadialGradient(m, g, 0, o[0], o[1], u);
             }
             var p,
-              g = e.g.p,
-              b = t.g.c,
+              v = e.g.p,
+              _ = t.g.c,
               l = 1;
-            for (p = 0; p < g; p += 1)
+            for (p = 0; p < v; p += 1)
               t.g._hasOpacity && t.g._collapsable && (l = t.g.o[p * 2 + 1]),
                 s.addColorStop(
-                  b[p * 4] / 100,
+                  _[p * 4] / 100,
                   'rgba(' +
-                    b[p * 4 + 1] +
+                    _[p * 4 + 1] +
                     ',' +
-                    b[p * 4 + 2] +
+                    _[p * 4 + 2] +
                     ',' +
-                    b[p * 4 + 3] +
+                    _[p * 4 + 3] +
                     ',' +
                     l +
                     ')'
@@ -15877,12 +15997,12 @@ var lottie = { exports: {} };
           var u,
             d,
             x,
-            _,
-            m,
-            v,
-            p,
-            g,
             b,
+            m,
+            g,
+            p,
+            v,
+            _,
             l,
             a = this.data.singleShape,
             h = e.tr * 0.001 * e.finalSize,
@@ -15906,43 +16026,43 @@ var lottie = { exports: {} };
                 p = m.length,
                 c.scale(e.finalSize / 100, e.finalSize / 100),
                 a && this.applyTextPropertiesToMatrix(e, c, o[s].line, f, y),
-                b = createSizedArray(p),
-                v = 0;
-              v < p;
-              v += 1
+                _ = createSizedArray(p),
+                g = 0;
+              g < p;
+              g += 1
             ) {
               for (
-                _ = m[v].ks.k.i.length, g = m[v].ks.k, l = [], x = 1;
-                x < _;
+                b = m[g].ks.k.i.length, v = m[g].ks.k, l = [], x = 1;
+                x < b;
                 x += 1
               )
                 x === 1 &&
                   l.push(
-                    c.applyToX(g.v[0][0], g.v[0][1], 0),
-                    c.applyToY(g.v[0][0], g.v[0][1], 0)
+                    c.applyToX(v.v[0][0], v.v[0][1], 0),
+                    c.applyToY(v.v[0][0], v.v[0][1], 0)
                   ),
                   l.push(
-                    c.applyToX(g.o[x - 1][0], g.o[x - 1][1], 0),
-                    c.applyToY(g.o[x - 1][0], g.o[x - 1][1], 0),
-                    c.applyToX(g.i[x][0], g.i[x][1], 0),
-                    c.applyToY(g.i[x][0], g.i[x][1], 0),
-                    c.applyToX(g.v[x][0], g.v[x][1], 0),
-                    c.applyToY(g.v[x][0], g.v[x][1], 0)
+                    c.applyToX(v.o[x - 1][0], v.o[x - 1][1], 0),
+                    c.applyToY(v.o[x - 1][0], v.o[x - 1][1], 0),
+                    c.applyToX(v.i[x][0], v.i[x][1], 0),
+                    c.applyToY(v.i[x][0], v.i[x][1], 0),
+                    c.applyToX(v.v[x][0], v.v[x][1], 0),
+                    c.applyToY(v.v[x][0], v.v[x][1], 0)
                   );
               l.push(
-                c.applyToX(g.o[x - 1][0], g.o[x - 1][1], 0),
-                c.applyToY(g.o[x - 1][0], g.o[x - 1][1], 0),
-                c.applyToX(g.i[0][0], g.i[0][1], 0),
-                c.applyToY(g.i[0][0], g.i[0][1], 0),
-                c.applyToX(g.v[0][0], g.v[0][1], 0),
-                c.applyToY(g.v[0][0], g.v[0][1], 0)
+                c.applyToX(v.o[x - 1][0], v.o[x - 1][1], 0),
+                c.applyToY(v.o[x - 1][0], v.o[x - 1][1], 0),
+                c.applyToX(v.i[0][0], v.i[0][1], 0),
+                c.applyToY(v.i[0][0], v.i[0][1], 0),
+                c.applyToX(v.v[0][0], v.v[0][1], 0),
+                c.applyToY(v.v[0][0], v.v[0][1], 0)
               ),
-                (b[v] = l);
+                (_[g] = l);
             }
             a && ((f += o[s].l), (f += h)),
               this.textSpans[w]
-                ? (this.textSpans[w].elem = b)
-                : (this.textSpans[w] = { elem: b }),
+                ? (this.textSpans[w].elem = _)
+                : (this.textSpans[w] = { elem: _ }),
               (w += 1);
           }
         }),
@@ -15968,9 +16088,9 @@ var lottie = { exports: {} };
           r = u.length;
           var d,
             x = null,
-            _ = null,
+            b = null,
             m = null,
-            v,
+            g,
             p;
           for (t = 0; t < r; t += 1)
             if (!u[t].n) {
@@ -15988,15 +16108,15 @@ var lottie = { exports: {} };
                     : x !== this.values.fill &&
                       ((x = this.values.fill),
                       (e.fillStyle = this.values.fill)),
-                    v = this.textSpans[t].elem,
-                    s = v.length,
+                    g = this.textSpans[t].elem,
+                    s = g.length,
                     this.globalData.canvasContext.beginPath(),
                     i = 0;
                   i < s;
                   i += 1
                 )
                   for (
-                    p = v[i],
+                    p = g[i],
                       o = p.length,
                       this.globalData.canvasContext.moveTo(p[0], p[1]),
                       n = 2;
@@ -16022,19 +16142,19 @@ var lottie = { exports: {} };
                       ((m = this.values.sWidth),
                       (e.lineWidth = this.values.sWidth)),
                     d && d.sc
-                      ? _ !== d.sc && ((_ = d.sc), (e.strokeStyle = d.sc))
-                      : _ !== this.values.stroke &&
-                        ((_ = this.values.stroke),
+                      ? b !== d.sc && ((b = d.sc), (e.strokeStyle = d.sc))
+                      : b !== this.values.stroke &&
+                        ((b = this.values.stroke),
                         (e.strokeStyle = this.values.stroke)),
-                    v = this.textSpans[t].elem,
-                    s = v.length,
+                    g = this.textSpans[t].elem,
+                    s = g.length,
                     this.globalData.canvasContext.beginPath(),
                     i = 0;
                   i < s;
                   i += 1
                 )
                   for (
-                    p = v[i],
+                    p = g[i],
                       o = p.length,
                       this.globalData.canvasContext.moveTo(p[0], p[1]),
                       n = 2;
@@ -16301,7 +16421,7 @@ var lottie = { exports: {} };
               u,
               d,
               x,
-              _,
+              b,
               m = 0;
             m < 2;
             ++m
@@ -16324,10 +16444,10 @@ var lottie = { exports: {} };
                       x > 0 &&
                         x < 1 &&
                         s[m].push(this.calculateF(x, e, t, r, i, m)),
-                      (_ = (-o - bmSqrt(d)) / (2 * n)),
-                      _ > 0 &&
-                        _ < 1 &&
-                        s[m].push(this.calculateF(_, e, t, r, i, m)))));
+                      (b = (-o - bmSqrt(d)) / (2 * n)),
+                      b > 0 &&
+                        b < 1 &&
+                        s[m].push(this.calculateF(b, e, t, r, i, m)))));
           (this.shapeBoundingBox.left = bmMin.apply(null, s[0])),
             (this.shapeBoundingBox.top = bmMin.apply(null, s[1])),
             (this.shapeBoundingBox.right = bmMax.apply(null, s[0])),
@@ -16475,32 +16595,32 @@ var lottie = { exports: {} };
           c = u.length;
           var d,
             x,
-            _,
+            b,
             m = this.mHelper,
-            v,
+            g,
             p = '',
-            g = 0;
+            v = 0;
           for (o = 0; o < c; o += 1) {
             if (
               (this.globalData.fontManager.chars
-                ? (this.textPaths[g]
-                    ? (d = this.textPaths[g])
+                ? (this.textPaths[v]
+                    ? (d = this.textPaths[v])
                     : ((d = createNS('path')),
                       d.setAttribute('stroke-linecap', lineCapEnum[1]),
                       d.setAttribute('stroke-linejoin', lineJoinEnum[2]),
                       d.setAttribute('stroke-miterlimit', '4')),
                   this.isMasked ||
-                    (this.textSpans[g]
-                      ? ((x = this.textSpans[g]), (_ = x.children[0]))
+                    (this.textSpans[v]
+                      ? ((x = this.textSpans[v]), (b = x.children[0]))
                       : ((x = createTag('div')),
                         (x.style.lineHeight = 0),
-                        (_ = createNS('svg')),
-                        _.appendChild(d),
+                        (b = createNS('svg')),
+                        b.appendChild(d),
                         styleDiv(x))))
                 : this.isMasked
-                ? (d = this.textPaths[g] ? this.textPaths[g] : createNS('text'))
-                : this.textSpans[g]
-                ? ((x = this.textSpans[g]), (d = this.textPaths[g]))
+                ? (d = this.textPaths[v] ? this.textPaths[v] : createNS('text'))
+                : this.textSpans[v]
+                ? ((x = this.textSpans[v]), (d = this.textPaths[v]))
                 : ((x = createTag('span')),
                   styleDiv(x),
                   (d = createTag('span')),
@@ -16508,31 +16628,31 @@ var lottie = { exports: {} };
                   x.appendChild(d)),
               this.globalData.fontManager.chars)
             ) {
-              var b = this.globalData.fontManager.getCharData(
+              var _ = this.globalData.fontManager.getCharData(
                   e.finalText[o],
                   i.fStyle,
                   this.globalData.fontManager.getFontByName(e.f).fFamily
                 ),
                 l;
               if (
-                (b ? (l = b.data) : (l = null),
+                (_ ? (l = _.data) : (l = null),
                 m.reset(),
                 l &&
                   l.shapes &&
-                  ((v = l.shapes[0].it),
+                  ((g = l.shapes[0].it),
                   m.scale(e.finalSize / 100, e.finalSize / 100),
-                  (p = this.createPathShape(m, v)),
+                  (p = this.createPathShape(m, g)),
                   d.setAttribute('d', p)),
                 this.isMasked)
               )
                 this.innerElem.appendChild(d);
               else {
                 if ((this.innerElem.appendChild(x), l && l.shapes)) {
-                  document.body.appendChild(_);
-                  var a = _.getBBox();
-                  _.setAttribute('width', a.width + 2),
-                    _.setAttribute('height', a.height + 2),
-                    _.setAttribute(
+                  document.body.appendChild(b);
+                  var a = b.getBBox();
+                  b.setAttribute('width', a.width + 2),
+                    b.setAttribute('height', a.height + 2),
+                    b.setAttribute(
                       'viewBox',
                       a.x -
                         1 +
@@ -16543,13 +16663,13 @@ var lottie = { exports: {} };
                         ' ' +
                         (a.height + 2)
                     );
-                  var h = _.style,
+                  var h = b.style,
                     f = 'translate(' + (a.x - 1) + 'px,' + (a.y - 1) + 'px)';
                   (h.transform = f),
                     (h.webkitTransform = f),
                     (u[o].yOffset = a.y - 1);
-                } else _.setAttribute('width', 1), _.setAttribute('height', 1);
-                x.appendChild(_);
+                } else b.setAttribute('width', 1), b.setAttribute('height', 1);
+                x.appendChild(b);
               }
             } else if (
               ((d.textContent = u[o].val),
@@ -16567,13 +16687,13 @@ var lottie = { exports: {} };
                 k = 'translate3d(0,' + -e.finalSize / 1.2 + 'px,0)';
               (y.transform = k), (y.webkitTransform = k);
             }
-            this.isMasked ? (this.textSpans[g] = d) : (this.textSpans[g] = x),
-              (this.textSpans[g].style.display = 'block'),
-              (this.textPaths[g] = d),
-              (g += 1);
+            this.isMasked ? (this.textSpans[v] = d) : (this.textSpans[v] = x),
+              (this.textSpans[v].style.display = 'block'),
+              (this.textPaths[v] = d),
+              (v += 1);
           }
-          for (; g < this.textSpans.length; )
-            (this.textSpans[g].style.display = 'none'), (g += 1);
+          for (; v < this.textSpans.length; )
+            (this.textSpans[v].style.display = 'none'), (v += 1);
         }),
         (HTextElement.prototype.renderInnerContent = function () {
           var e;
@@ -16646,17 +16766,17 @@ var lottie = { exports: {} };
                 this.currentBBox.h !== x.height &&
                   ((this.currentBBox.h = x.height),
                   this.svgElement.setAttribute('height', x.height));
-              var _ = 1;
+              var b = 1;
               if (
-                this.currentBBox.w !== x.width + _ * 2 ||
-                this.currentBBox.h !== x.height + _ * 2 ||
-                this.currentBBox.x !== x.x - _ ||
-                this.currentBBox.y !== x.y - _
+                this.currentBBox.w !== x.width + b * 2 ||
+                this.currentBBox.h !== x.height + b * 2 ||
+                this.currentBBox.x !== x.x - b ||
+                this.currentBBox.y !== x.y - b
               ) {
-                (this.currentBBox.w = x.width + _ * 2),
-                  (this.currentBBox.h = x.height + _ * 2),
-                  (this.currentBBox.x = x.x - _),
-                  (this.currentBBox.y = x.y - _),
+                (this.currentBBox.w = x.width + b * 2),
+                  (this.currentBBox.h = x.height + b * 2),
+                  (this.currentBBox.x = x.x - b),
+                  (this.currentBBox.y = x.y - b),
                   this.svgElement.setAttribute(
                     'viewBox',
                     this.currentBBox.x +
@@ -16840,17 +16960,17 @@ var lottie = { exports: {} };
             var x = !this._prevMat.equals(this.mat);
             if ((x || this.pe._mdf) && this.comp.threeDElements) {
               r = this.comp.threeDElements.length;
-              var _, m, v;
+              var b, m, g;
               for (t = 0; t < r; t += 1)
-                if (((_ = this.comp.threeDElements[t]), _.type === '3d')) {
+                if (((b = this.comp.threeDElements[t]), b.type === '3d')) {
                   if (x) {
                     var p = this.mat.toCSS();
-                    (v = _.container.style),
-                      (v.transform = p),
-                      (v.webkitTransform = p);
+                    (g = b.container.style),
+                      (g.transform = p),
+                      (g.webkitTransform = p);
                   }
                   this.pe._mdf &&
-                    ((m = _.perspectiveElem.style),
+                    ((m = b.perspectiveElem.style),
                     (m.perspective = this.pe.v + 'px'),
                     (m.webkitPerspective = this.pe.v + 'px'));
                 }
@@ -16877,7 +16997,7 @@ var lottie = { exports: {} };
           function c(C) {
             for (var S = 0, E = C.target; S < i; )
               t[S].animation === E &&
-                (t.splice(S, 1), (S -= 1), (i -= 1), E.isPaused || _()),
+                (t.splice(S, 1), (S -= 1), (i -= 1), E.isPaused || b()),
                 (S += 1);
           }
           function u(C, S) {
@@ -16899,17 +17019,17 @@ var lottie = { exports: {} };
           function x() {
             (s += 1), D();
           }
-          function _() {
+          function b() {
             s -= 1;
           }
           function m(C, S) {
             C.addEventListener('destroy', c),
               C.addEventListener('_active', x),
-              C.addEventListener('_idle', _),
+              C.addEventListener('_idle', b),
               t.push({ elem: S, animation: C }),
               (i += 1);
           }
-          function v(C) {
+          function g(C) {
             var S = new AnimationItem();
             return m(S, null), S.setParams(C), S;
           }
@@ -16917,11 +17037,11 @@ var lottie = { exports: {} };
             var E;
             for (E = 0; E < i; E += 1) t[E].animation.setSpeed(C, S);
           }
-          function g(C, S) {
+          function v(C, S) {
             var E;
             for (E = 0; E < i; E += 1) t[E].animation.setDirection(C, S);
           }
-          function b(C) {
+          function _(C) {
             var S;
             for (S = 0; S < i; S += 1) t[S].animation.play(C);
           }
@@ -16975,7 +17095,7 @@ var lottie = { exports: {} };
                 u(H, C);
             }
           }
-          function F() {
+          function M() {
             var C;
             for (C = 0; C < i; C += 1) t[C].animation.resize();
           }
@@ -16988,7 +17108,7 @@ var lottie = { exports: {} };
           function z() {
             (o = !1), D();
           }
-          function M(C, S) {
+          function F(C, S) {
             var E;
             for (E = 0; E < i; E += 1) t[E].animation.setVolume(C, S);
           }
@@ -17002,20 +17122,20 @@ var lottie = { exports: {} };
           }
           return (
             (e.registerAnimation = u),
-            (e.loadAnimation = v),
+            (e.loadAnimation = g),
             (e.setSpeed = p),
-            (e.setDirection = g),
-            (e.play = b),
+            (e.setDirection = v),
+            (e.play = _),
             (e.pause = h),
             (e.stop = y),
             (e.togglePause = k),
             (e.searchAnimations = P),
-            (e.resize = F),
+            (e.resize = M),
             (e.goToAndStop = f),
             (e.destroy = w),
             (e.freeze = T),
             (e.unfreeze = z),
-            (e.setVolume = M),
+            (e.setVolume = F),
             (e.mute = V),
             (e.unmute = R),
             (e.getRegisteredAnimations = d),
@@ -17821,8 +17941,8 @@ var lottie = { exports: {} };
               d = this.getValueAtTime(o + c),
               x = 0;
             if (u.length) {
-              var _;
-              for (_ = 0; _ < u.length; _ += 1) x += Math.pow(d[_] - u[_], 2);
+              var b;
+              for (b = 0; b < u.length; b += 1) x += Math.pow(d[b] - u[b], 2);
               x = Math.sqrt(x) * 100;
             } else x = 0;
             return x;
@@ -17835,8 +17955,8 @@ var lottie = { exports: {} };
               x;
             if (u.length) {
               x = createTypedArray('float32', u.length);
-              var _;
-              for (_ = 0; _ < u.length; _ += 1) x[_] = (d[_] - u[_]) / c;
+              var b;
+              for (b = 0; b < u.length; b += 1) x[b] = (d[b] - u[b]) / c;
             } else x = (d - u) / c;
             return x;
           }
@@ -17856,15 +17976,15 @@ var lottie = { exports: {} };
           };
         })();
       (function e() {
-        function t(v, p, g) {
+        function t(g, p, v) {
           if (!this.k || !this.keyframes) return this.pv;
-          v = v ? v.toLowerCase() : '';
-          var b = this.comp.renderedFrame,
+          g = g ? g.toLowerCase() : '';
+          var _ = this.comp.renderedFrame,
             l = this.keyframes,
             a = l[l.length - 1].t;
-          if (b <= a) return this.pv;
+          if (_ <= a) return this.pv;
           var h, f;
-          g
+          v
             ? (p
                 ? (h = Math.abs(a - this.elem.comp.globalData.frameRate * p))
                 : (h = Math.max(0, a - this.elem.data.ip)),
@@ -17873,57 +17993,57 @@ var lottie = { exports: {} };
               (f = l[l.length - 1 - p].t),
               (h = a - f));
           var y, k, w;
-          if (v === 'pingpong') {
-            var P = Math.floor((b - f) / h);
+          if (g === 'pingpong') {
+            var P = Math.floor((_ - f) / h);
             if (P % 2 != 0)
               return this.getValueAtTime(
-                (h - ((b - f) % h) + f) / this.comp.globalData.frameRate,
+                (h - ((_ - f) % h) + f) / this.comp.globalData.frameRate,
                 0
               );
-          } else if (v === 'offset') {
-            var F = this.getValueAtTime(f / this.comp.globalData.frameRate, 0),
+          } else if (g === 'offset') {
+            var M = this.getValueAtTime(f / this.comp.globalData.frameRate, 0),
               D = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
               T = this.getValueAtTime(
-                (((b - f) % h) + f) / this.comp.globalData.frameRate,
+                (((_ - f) % h) + f) / this.comp.globalData.frameRate,
                 0
               ),
-              z = Math.floor((b - f) / h);
+              z = Math.floor((_ - f) / h);
             if (this.pv.length) {
-              for (w = new Array(F.length), k = w.length, y = 0; y < k; y += 1)
-                w[y] = (D[y] - F[y]) * z + T[y];
+              for (w = new Array(M.length), k = w.length, y = 0; y < k; y += 1)
+                w[y] = (D[y] - M[y]) * z + T[y];
               return w;
             }
-            return (D - F) * z + T;
-          } else if (v === 'continue') {
-            var M = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
+            return (D - M) * z + T;
+          } else if (g === 'continue') {
+            var F = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
               V = this.getValueAtTime(
                 (a - 0.001) / this.comp.globalData.frameRate,
                 0
               );
             if (this.pv.length) {
-              for (w = new Array(M.length), k = w.length, y = 0; y < k; y += 1)
+              for (w = new Array(F.length), k = w.length, y = 0; y < k; y += 1)
                 w[y] =
-                  M[y] +
-                  ((M[y] - V[y]) * ((b - a) / this.comp.globalData.frameRate)) /
+                  F[y] +
+                  ((F[y] - V[y]) * ((_ - a) / this.comp.globalData.frameRate)) /
                     5e-4;
               return w;
             }
-            return M + (M - V) * ((b - a) / 0.001);
+            return F + (F - V) * ((_ - a) / 0.001);
           }
           return this.getValueAtTime(
-            (((b - f) % h) + f) / this.comp.globalData.frameRate,
+            (((_ - f) % h) + f) / this.comp.globalData.frameRate,
             0
           );
         }
-        function r(v, p, g) {
+        function r(g, p, v) {
           if (!this.k) return this.pv;
-          v = v ? v.toLowerCase() : '';
-          var b = this.comp.renderedFrame,
+          g = g ? g.toLowerCase() : '';
+          var _ = this.comp.renderedFrame,
             l = this.keyframes,
             a = l[0].t;
-          if (b >= a) return this.pv;
+          if (_ >= a) return this.pv;
           var h, f;
-          g
+          v
             ? (p
                 ? (h = Math.abs(this.elem.comp.globalData.frameRate * p))
                 : (h = Math.max(0, this.elem.data.op - a)),
@@ -17932,53 +18052,53 @@ var lottie = { exports: {} };
               (f = l[p].t),
               (h = f - a));
           var y, k, w;
-          if (v === 'pingpong') {
-            var P = Math.floor((a - b) / h);
+          if (g === 'pingpong') {
+            var P = Math.floor((a - _) / h);
             if (P % 2 == 0)
               return this.getValueAtTime(
-                (((a - b) % h) + a) / this.comp.globalData.frameRate,
+                (((a - _) % h) + a) / this.comp.globalData.frameRate,
                 0
               );
-          } else if (v === 'offset') {
-            var F = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
+          } else if (g === 'offset') {
+            var M = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
               D = this.getValueAtTime(f / this.comp.globalData.frameRate, 0),
               T = this.getValueAtTime(
-                (h - ((a - b) % h) + a) / this.comp.globalData.frameRate,
+                (h - ((a - _) % h) + a) / this.comp.globalData.frameRate,
                 0
               ),
-              z = Math.floor((a - b) / h) + 1;
+              z = Math.floor((a - _) / h) + 1;
             if (this.pv.length) {
-              for (w = new Array(F.length), k = w.length, y = 0; y < k; y += 1)
-                w[y] = T[y] - (D[y] - F[y]) * z;
+              for (w = new Array(M.length), k = w.length, y = 0; y < k; y += 1)
+                w[y] = T[y] - (D[y] - M[y]) * z;
               return w;
             }
-            return T - (D - F) * z;
-          } else if (v === 'continue') {
-            var M = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
+            return T - (D - M) * z;
+          } else if (g === 'continue') {
+            var F = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
               V = this.getValueAtTime(
                 (a + 0.001) / this.comp.globalData.frameRate,
                 0
               );
             if (this.pv.length) {
-              for (w = new Array(M.length), k = w.length, y = 0; y < k; y += 1)
-                w[y] = M[y] + ((M[y] - V[y]) * (a - b)) / 0.001;
+              for (w = new Array(F.length), k = w.length, y = 0; y < k; y += 1)
+                w[y] = F[y] + ((F[y] - V[y]) * (a - _)) / 0.001;
               return w;
             }
-            return M + ((M - V) * (a - b)) / 0.001;
+            return F + ((F - V) * (a - _)) / 0.001;
           }
           return this.getValueAtTime(
-            (h - (((a - b) % h) + a)) / this.comp.globalData.frameRate,
+            (h - (((a - _) % h) + a)) / this.comp.globalData.frameRate,
             0
           );
         }
-        function i(v, p) {
+        function i(g, p) {
           if (!this.k) return this.pv;
-          if (((v = (v || 0.4) * 0.5), (p = Math.floor(p || 5)), p <= 1))
+          if (((g = (g || 0.4) * 0.5), (p = Math.floor(p || 5)), p <= 1))
             return this.pv;
-          var g = this.comp.renderedFrame / this.comp.globalData.frameRate,
-            b = g - v,
-            l = g + v,
-            a = p > 1 ? (l - b) / (p - 1) : 1,
+          var v = this.comp.renderedFrame / this.comp.globalData.frameRate,
+            _ = v - g,
+            l = v + g,
+            a = p > 1 ? (l - _) / (p - 1) : 1,
             h = 0,
             f = 0,
             y;
@@ -17986,7 +18106,7 @@ var lottie = { exports: {} };
             ? (y = createTypedArray('float32', this.pv.length))
             : (y = 0);
           for (var k; h < p; ) {
-            if (((k = this.getValueAtTime(b + h * a)), this.pv.length))
+            if (((k = this.getValueAtTime(_ + h * a)), this.pv.length))
               for (f = 0; f < this.pv.length; f += 1) y[f] += k[f];
             else y += k;
             h += 1;
@@ -17995,37 +18115,37 @@ var lottie = { exports: {} };
           else y /= p;
           return y;
         }
-        function s(v) {
+        function s(g) {
           this._transformCachingAtTime ||
             (this._transformCachingAtTime = { v: new Matrix() });
           var p = this._transformCachingAtTime.v;
           if (
             (p.cloneFromProps(this.pre.props), this.appliedTransformations < 1)
           ) {
-            var g = this.a.getValueAtTime(v);
+            var v = this.a.getValueAtTime(g);
             p.translate(
-              -g[0] * this.a.mult,
-              -g[1] * this.a.mult,
-              g[2] * this.a.mult
+              -v[0] * this.a.mult,
+              -v[1] * this.a.mult,
+              v[2] * this.a.mult
             );
           }
           if (this.appliedTransformations < 2) {
-            var b = this.s.getValueAtTime(v);
-            p.scale(b[0] * this.s.mult, b[1] * this.s.mult, b[2] * this.s.mult);
+            var _ = this.s.getValueAtTime(g);
+            p.scale(_[0] * this.s.mult, _[1] * this.s.mult, _[2] * this.s.mult);
           }
           if (this.sk && this.appliedTransformations < 3) {
-            var l = this.sk.getValueAtTime(v),
-              a = this.sa.getValueAtTime(v);
+            var l = this.sk.getValueAtTime(g),
+              a = this.sa.getValueAtTime(g);
             p.skewFromAxis(-l * this.sk.mult, a * this.sa.mult);
           }
           if (this.r && this.appliedTransformations < 4) {
-            var h = this.r.getValueAtTime(v);
+            var h = this.r.getValueAtTime(g);
             p.rotate(-h * this.r.mult);
           } else if (!this.r && this.appliedTransformations < 4) {
-            var f = this.rz.getValueAtTime(v),
-              y = this.ry.getValueAtTime(v),
-              k = this.rx.getValueAtTime(v),
-              w = this.or.getValueAtTime(v);
+            var f = this.rz.getValueAtTime(g),
+              y = this.ry.getValueAtTime(g),
+              k = this.rx.getValueAtTime(g),
+              w = this.or.getValueAtTime(g);
             p.rotateZ(-f * this.rz.mult)
               .rotateY(y * this.ry.mult)
               .rotateX(k * this.rx.mult)
@@ -18034,18 +18154,18 @@ var lottie = { exports: {} };
               .rotateX(w[0] * this.or.mult);
           }
           if (this.data.p && this.data.p.s) {
-            var P = this.px.getValueAtTime(v),
-              F = this.py.getValueAtTime(v);
+            var P = this.px.getValueAtTime(g),
+              M = this.py.getValueAtTime(g);
             if (this.data.p.z) {
-              var D = this.pz.getValueAtTime(v);
+              var D = this.pz.getValueAtTime(g);
               p.translate(
                 P * this.px.mult,
-                F * this.py.mult,
+                M * this.py.mult,
                 -D * this.pz.mult
               );
-            } else p.translate(P * this.px.mult, F * this.py.mult, 0);
+            } else p.translate(P * this.px.mult, M * this.py.mult, 0);
           } else {
-            var T = this.p.getValueAtTime(v);
+            var T = this.p.getValueAtTime(g);
             p.translate(
               T[0] * this.p.mult,
               T[1] * this.p.mult,
@@ -18058,19 +18178,19 @@ var lottie = { exports: {} };
           return this.v.clone(new Matrix());
         }
         var o = TransformPropertyFactory.getTransformProperty;
-        TransformPropertyFactory.getTransformProperty = function (v, p, g) {
-          var b = o(v, p, g);
+        TransformPropertyFactory.getTransformProperty = function (g, p, v) {
+          var _ = o(g, p, v);
           return (
-            b.dynamicProperties.length
-              ? (b.getValueAtTime = s.bind(b))
-              : (b.getValueAtTime = n.bind(b)),
-            (b.setGroupProperty = expressionHelpers.setGroupProperty),
-            b
+            _.dynamicProperties.length
+              ? (_.getValueAtTime = s.bind(_))
+              : (_.getValueAtTime = n.bind(_)),
+            (_.setGroupProperty = expressionHelpers.setGroupProperty),
+            _
           );
         };
         var c = PropertyFactory.getProp;
-        PropertyFactory.getProp = function (v, p, g, b, l) {
-          var a = c(v, p, g, b, l);
+        PropertyFactory.getProp = function (g, p, v, _, l) {
+          var a = c(g, p, v, _, l);
           a.kf
             ? (a.getValueAtTime = expressionHelpers.getValueAtTime.bind(a))
             : (a.getValueAtTime =
@@ -18085,7 +18205,7 @@ var lottie = { exports: {} };
             (a.propertyIndex = p.ix);
           var h = 0;
           return (
-            g !== 0 &&
+            v !== 0 &&
               (h = createTypedArray(
                 'float32',
                 p.a === 1 ? p.k[0].s.length : p.k.length
@@ -18095,12 +18215,12 @@ var lottie = { exports: {} };
               lastIndex: 0,
               value: h,
             }),
-            expressionHelpers.searchExpressions(v, p, a),
+            expressionHelpers.searchExpressions(g, p, a),
             a.k && l.addDynamicProperty(a),
             a
           );
         };
-        function u(v) {
+        function u(g) {
           return (
             this._cachingAtTime ||
               (this._cachingAtTime = {
@@ -18108,14 +18228,14 @@ var lottie = { exports: {} };
                 lastIndex: 0,
                 lastTime: initialDefaultFrame,
               }),
-            (v *= this.elem.globalData.frameRate),
-            (v -= this.offsetTime),
-            v !== this._cachingAtTime.lastTime &&
+            (g *= this.elem.globalData.frameRate),
+            (g -= this.offsetTime),
+            g !== this._cachingAtTime.lastTime &&
               ((this._cachingAtTime.lastIndex =
-                this._cachingAtTime.lastTime < v ? this._caching.lastIndex : 0),
-              (this._cachingAtTime.lastTime = v),
+                this._cachingAtTime.lastTime < g ? this._caching.lastIndex : 0),
+              (this._cachingAtTime.lastTime = g),
               this.interpolateShape(
-                v,
+                g,
                 this._cachingAtTime.shapeValue,
                 this._cachingAtTime
               )),
@@ -18124,44 +18244,44 @@ var lottie = { exports: {} };
         }
         var d = ShapePropertyFactory.getConstructorFunction(),
           x = ShapePropertyFactory.getKeyframedConstructorFunction();
-        function _() {}
-        (_.prototype = {
-          vertices: function (v, p) {
+        function b() {}
+        (b.prototype = {
+          vertices: function (g, p) {
             this.k && this.getValue();
-            var g = this.v;
-            p !== void 0 && (g = this.getValueAtTime(p, 0));
-            var b,
-              l = g._length,
-              a = g[v],
-              h = g.v,
+            var v = this.v;
+            p !== void 0 && (v = this.getValueAtTime(p, 0));
+            var _,
+              l = v._length,
+              a = v[g],
+              h = v.v,
               f = createSizedArray(l);
-            for (b = 0; b < l; b += 1)
-              v === 'i' || v === 'o'
-                ? (f[b] = [a[b][0] - h[b][0], a[b][1] - h[b][1]])
-                : (f[b] = [a[b][0], a[b][1]]);
+            for (_ = 0; _ < l; _ += 1)
+              g === 'i' || g === 'o'
+                ? (f[_] = [a[_][0] - h[_][0], a[_][1] - h[_][1]])
+                : (f[_] = [a[_][0], a[_][1]]);
             return f;
           },
-          points: function (v) {
-            return this.vertices('v', v);
+          points: function (g) {
+            return this.vertices('v', g);
           },
-          inTangents: function (v) {
-            return this.vertices('i', v);
+          inTangents: function (g) {
+            return this.vertices('i', g);
           },
-          outTangents: function (v) {
-            return this.vertices('o', v);
+          outTangents: function (g) {
+            return this.vertices('o', g);
           },
           isClosed: function () {
             return this.v.c;
           },
-          pointOnPath: function (v, p) {
-            var g = this.v;
-            p !== void 0 && (g = this.getValueAtTime(p, 0)),
+          pointOnPath: function (g, p) {
+            var v = this.v;
+            p !== void 0 && (v = this.getValueAtTime(p, 0)),
               this._segmentsLength ||
-                (this._segmentsLength = bez.getSegmentsLength(g));
+                (this._segmentsLength = bez.getSegmentsLength(v));
             for (
-              var b = this._segmentsLength,
-                l = b.lengths,
-                a = b.totalLength * v,
+              var _ = this._segmentsLength,
+                l = _.lengths,
+                a = _.totalLength * g,
                 h = 0,
                 f = l.length,
                 y = 0,
@@ -18171,14 +18291,14 @@ var lottie = { exports: {} };
             ) {
               if (y + l[h].addedLength > a) {
                 var w = h,
-                  P = g.c && h === f - 1 ? 0 : h + 1,
-                  F = (a - y) / l[h].addedLength;
+                  P = v.c && h === f - 1 ? 0 : h + 1,
+                  M = (a - y) / l[h].addedLength;
                 k = bez.getPointInSegment(
-                  g.v[w],
-                  g.v[P],
-                  g.o[w],
-                  g.i[P],
-                  F,
+                  v.v[w],
+                  v.v[P],
+                  v.o[w],
+                  v.i[P],
+                  M,
                   l[h]
                 );
                 break;
@@ -18187,47 +18307,47 @@ var lottie = { exports: {} };
             }
             return (
               k ||
-                (k = g.c
-                  ? [g.v[0][0], g.v[0][1]]
-                  : [g.v[g._length - 1][0], g.v[g._length - 1][1]]),
+                (k = v.c
+                  ? [v.v[0][0], v.v[0][1]]
+                  : [v.v[v._length - 1][0], v.v[v._length - 1][1]]),
               k
             );
           },
-          vectorOnPath: function (v, p, g) {
-            v == 1 ? (v = this.v.c) : v == 0 && (v = 0.999);
-            var b = this.pointOnPath(v, p),
-              l = this.pointOnPath(v + 0.001, p),
-              a = l[0] - b[0],
-              h = l[1] - b[1],
+          vectorOnPath: function (g, p, v) {
+            g == 1 ? (g = this.v.c) : g == 0 && (g = 0.999);
+            var _ = this.pointOnPath(g, p),
+              l = this.pointOnPath(g + 0.001, p),
+              a = l[0] - _[0],
+              h = l[1] - _[1],
               f = Math.sqrt(Math.pow(a, 2) + Math.pow(h, 2));
             if (f === 0) return [0, 0];
-            var y = g === 'tangent' ? [a / f, h / f] : [-h / f, a / f];
+            var y = v === 'tangent' ? [a / f, h / f] : [-h / f, a / f];
             return y;
           },
-          tangentOnPath: function (v, p) {
-            return this.vectorOnPath(v, p, 'tangent');
+          tangentOnPath: function (g, p) {
+            return this.vectorOnPath(g, p, 'tangent');
           },
-          normalOnPath: function (v, p) {
-            return this.vectorOnPath(v, p, 'normal');
+          normalOnPath: function (g, p) {
+            return this.vectorOnPath(g, p, 'normal');
           },
           setGroupProperty: expressionHelpers.setGroupProperty,
           getValueAtTime: expressionHelpers.getStaticValueAtTime,
         }),
-          extendPrototype([_], d),
-          extendPrototype([_], x),
+          extendPrototype([b], d),
+          extendPrototype([b], x),
           (x.prototype.getValueAtTime = u),
           (x.prototype.initiateExpression =
             ExpressionManager.initiateExpression);
         var m = ShapePropertyFactory.getShapeProp;
-        ShapePropertyFactory.getShapeProp = function (v, p, g, b, l) {
-          var a = m(v, p, g, b, l);
+        ShapePropertyFactory.getShapeProp = function (g, p, v, _, l) {
+          var a = m(g, p, v, _, l);
           return (
             (a.propertyIndex = p.ix),
             (a.lock = !1),
-            g === 3
-              ? expressionHelpers.searchExpressions(v, p.pt, a)
-              : g === 4 && expressionHelpers.searchExpressions(v, p.ks, a),
-            a.k && v.addDynamicProperty(a),
+            v === 3
+              ? expressionHelpers.searchExpressions(g, p.pt, a)
+              : v === 4 && expressionHelpers.searchExpressions(g, p.ks, a),
+            a.k && g.addDynamicProperty(a),
             a
           );
         };
@@ -18319,38 +18439,38 @@ var lottie = { exports: {} };
           };
         })(),
         ShapeExpressionInterface = (function () {
-          function e(p, g, b) {
+          function e(p, v, _) {
             var l = [],
               a,
               h = p ? p.length : 0;
             for (a = 0; a < h; a += 1)
               p[a].ty === 'gr'
-                ? l.push(r(p[a], g[a], b))
+                ? l.push(r(p[a], v[a], _))
                 : p[a].ty === 'fl'
-                ? l.push(i(p[a], g[a], b))
+                ? l.push(i(p[a], v[a], _))
                 : p[a].ty === 'st'
-                ? l.push(o(p[a], g[a], b))
+                ? l.push(o(p[a], v[a], _))
                 : p[a].ty === 'tm'
-                ? l.push(c(p[a], g[a], b))
+                ? l.push(c(p[a], v[a], _))
                 : p[a].ty === 'tr' ||
                   (p[a].ty === 'el'
-                    ? l.push(d(p[a], g[a], b))
+                    ? l.push(d(p[a], v[a], _))
                     : p[a].ty === 'sr'
-                    ? l.push(x(p[a], g[a], b))
+                    ? l.push(x(p[a], v[a], _))
                     : p[a].ty === 'sh'
-                    ? l.push(ShapePathInterface(p[a], g[a], b))
+                    ? l.push(ShapePathInterface(p[a], v[a], _))
                     : p[a].ty === 'rc'
-                    ? l.push(_(p[a], g[a], b))
+                    ? l.push(b(p[a], v[a], _))
                     : p[a].ty === 'rd'
-                    ? l.push(m(p[a], g[a], b))
+                    ? l.push(m(p[a], v[a], _))
                     : p[a].ty === 'rp'
-                    ? l.push(v(p[a], g[a], b))
+                    ? l.push(g(p[a], v[a], _))
                     : p[a].ty === 'gf'
-                    ? l.push(s(p[a], g[a], b))
-                    : l.push(n(p[a], g[a])));
+                    ? l.push(s(p[a], v[a], _))
+                    : l.push(n(p[a], v[a])));
             return l;
           }
-          function t(p, g, b) {
+          function t(p, v, _) {
             var l,
               a = function (y) {
                 for (var k = 0, w = l.length; k < w; ) {
@@ -18366,19 +18486,19 @@ var lottie = { exports: {} };
                 }
                 return typeof y == 'number' ? l[y - 1] : null;
               };
-            (a.propertyGroup = propertyGroupFactory(a, b)),
-              (l = e(p.it, g.it, a.propertyGroup)),
+            (a.propertyGroup = propertyGroupFactory(a, _)),
+              (l = e(p.it, v.it, a.propertyGroup)),
               (a.numProperties = l.length);
             var h = u(
               p.it[p.it.length - 1],
-              g.it[g.it.length - 1],
+              v.it[v.it.length - 1],
               a.propertyGroup
             );
             return (
               (a.transform = h), (a.propertyIndex = p.cix), (a._name = p.nm), a
             );
           }
-          function r(p, g, b) {
+          function r(p, v, _) {
             var l = function (y) {
               switch (y) {
                 case 'ADBE Vectors Group':
@@ -18389,11 +18509,11 @@ var lottie = { exports: {} };
                   return l.transform;
               }
             };
-            l.propertyGroup = propertyGroupFactory(l, b);
-            var a = t(p, g, l.propertyGroup),
+            l.propertyGroup = propertyGroupFactory(l, _);
+            var a = t(p, v, l.propertyGroup),
               h = u(
                 p.it[p.it.length - 1],
-                g.it[g.it.length - 1],
+                v.it[v.it.length - 1],
                 l.propertyGroup
               );
             return (
@@ -18411,7 +18531,7 @@ var lottie = { exports: {} };
               l
             );
           }
-          function i(p, g, b) {
+          function i(p, v, _) {
             function l(a) {
               return a === 'Color' || a === 'color'
                 ? l.color
@@ -18421,17 +18541,17 @@ var lottie = { exports: {} };
             }
             return (
               Object.defineProperties(l, {
-                color: { get: ExpressionPropertyInterface(g.c) },
-                opacity: { get: ExpressionPropertyInterface(g.o) },
+                color: { get: ExpressionPropertyInterface(v.c) },
+                opacity: { get: ExpressionPropertyInterface(v.o) },
                 _name: { value: p.nm },
                 mn: { value: p.mn },
               }),
-              g.c.setGroupProperty(PropertyInterface('Color', b)),
-              g.o.setGroupProperty(PropertyInterface('Opacity', b)),
+              v.c.setGroupProperty(PropertyInterface('Color', _)),
+              v.o.setGroupProperty(PropertyInterface('Opacity', _)),
               l
             );
           }
-          function s(p, g, b) {
+          function s(p, v, _) {
             function l(a) {
               return a === 'Start Point' || a === 'start point'
                 ? l.startPoint
@@ -18443,9 +18563,9 @@ var lottie = { exports: {} };
             }
             return (
               Object.defineProperties(l, {
-                startPoint: { get: ExpressionPropertyInterface(g.s) },
-                endPoint: { get: ExpressionPropertyInterface(g.e) },
-                opacity: { get: ExpressionPropertyInterface(g.o) },
+                startPoint: { get: ExpressionPropertyInterface(v.s) },
+                endPoint: { get: ExpressionPropertyInterface(v.e) },
+                opacity: { get: ExpressionPropertyInterface(v.o) },
                 type: {
                   get: function () {
                     return 'a';
@@ -18454,9 +18574,9 @@ var lottie = { exports: {} };
                 _name: { value: p.nm },
                 mn: { value: p.mn },
               }),
-              g.s.setGroupProperty(PropertyInterface('Start Point', b)),
-              g.e.setGroupProperty(PropertyInterface('End Point', b)),
-              g.o.setGroupProperty(PropertyInterface('Opacity', b)),
+              v.s.setGroupProperty(PropertyInterface('Start Point', _)),
+              v.e.setGroupProperty(PropertyInterface('End Point', _)),
+              v.o.setGroupProperty(PropertyInterface('Opacity', _)),
               l
             );
           }
@@ -18466,19 +18586,19 @@ var lottie = { exports: {} };
             }
             return p;
           }
-          function o(p, g, b) {
-            var l = propertyGroupFactory(w, b),
+          function o(p, v, _) {
+            var l = propertyGroupFactory(w, _),
               a = propertyGroupFactory(k, l);
             function h(P) {
               Object.defineProperty(k, p.d[P].nm, {
-                get: ExpressionPropertyInterface(g.d.dataProps[P].p),
+                get: ExpressionPropertyInterface(v.d.dataProps[P].p),
               });
             }
             var f,
               y = p.d ? p.d.length : 0,
               k = {};
             for (f = 0; f < y; f += 1)
-              h(f), g.d.dataProps[f].p.setGroupProperty(a);
+              h(f), v.d.dataProps[f].p.setGroupProperty(a);
             function w(P) {
               return P === 'Color' || P === 'color'
                 ? w.color
@@ -18490,9 +18610,9 @@ var lottie = { exports: {} };
             }
             return (
               Object.defineProperties(w, {
-                color: { get: ExpressionPropertyInterface(g.c) },
-                opacity: { get: ExpressionPropertyInterface(g.o) },
-                strokeWidth: { get: ExpressionPropertyInterface(g.w) },
+                color: { get: ExpressionPropertyInterface(v.c) },
+                opacity: { get: ExpressionPropertyInterface(v.o) },
+                strokeWidth: { get: ExpressionPropertyInterface(v.w) },
                 dash: {
                   get: function () {
                     return k;
@@ -18501,13 +18621,13 @@ var lottie = { exports: {} };
                 _name: { value: p.nm },
                 mn: { value: p.mn },
               }),
-              g.c.setGroupProperty(PropertyInterface('Color', l)),
-              g.o.setGroupProperty(PropertyInterface('Opacity', l)),
-              g.w.setGroupProperty(PropertyInterface('Stroke Width', l)),
+              v.c.setGroupProperty(PropertyInterface('Color', l)),
+              v.o.setGroupProperty(PropertyInterface('Opacity', l)),
+              v.w.setGroupProperty(PropertyInterface('Stroke Width', l)),
               w
             );
           }
-          function c(p, g, b) {
+          function c(p, v, _) {
             function l(h) {
               return h === p.e.ix || h === 'End' || h === 'end'
                 ? l.end
@@ -18517,25 +18637,25 @@ var lottie = { exports: {} };
                 ? l.offset
                 : null;
             }
-            var a = propertyGroupFactory(l, b);
+            var a = propertyGroupFactory(l, _);
             return (
               (l.propertyIndex = p.ix),
-              g.s.setGroupProperty(PropertyInterface('Start', a)),
-              g.e.setGroupProperty(PropertyInterface('End', a)),
-              g.o.setGroupProperty(PropertyInterface('Offset', a)),
+              v.s.setGroupProperty(PropertyInterface('Start', a)),
+              v.e.setGroupProperty(PropertyInterface('End', a)),
+              v.o.setGroupProperty(PropertyInterface('Offset', a)),
               (l.propertyIndex = p.ix),
-              (l.propertyGroup = b),
+              (l.propertyGroup = _),
               Object.defineProperties(l, {
-                start: { get: ExpressionPropertyInterface(g.s) },
-                end: { get: ExpressionPropertyInterface(g.e) },
-                offset: { get: ExpressionPropertyInterface(g.o) },
+                start: { get: ExpressionPropertyInterface(v.s) },
+                end: { get: ExpressionPropertyInterface(v.e) },
+                offset: { get: ExpressionPropertyInterface(v.o) },
                 _name: { value: p.nm },
               }),
               (l.mn = p.mn),
               l
             );
           }
-          function u(p, g, b) {
+          function u(p, v, _) {
             function l(h) {
               return p.a.ix === h || h === 'Anchor Point'
                 ? l.anchorPoint
@@ -18555,68 +18675,68 @@ var lottie = { exports: {} };
                 ? l.skewAxis
                 : null;
             }
-            var a = propertyGroupFactory(l, b);
+            var a = propertyGroupFactory(l, _);
             return (
-              g.transform.mProps.o.setGroupProperty(
+              v.transform.mProps.o.setGroupProperty(
                 PropertyInterface('Opacity', a)
               ),
-              g.transform.mProps.p.setGroupProperty(
+              v.transform.mProps.p.setGroupProperty(
                 PropertyInterface('Position', a)
               ),
-              g.transform.mProps.a.setGroupProperty(
+              v.transform.mProps.a.setGroupProperty(
                 PropertyInterface('Anchor Point', a)
               ),
-              g.transform.mProps.s.setGroupProperty(
+              v.transform.mProps.s.setGroupProperty(
                 PropertyInterface('Scale', a)
               ),
-              g.transform.mProps.r.setGroupProperty(
+              v.transform.mProps.r.setGroupProperty(
                 PropertyInterface('Rotation', a)
               ),
-              g.transform.mProps.sk &&
-                (g.transform.mProps.sk.setGroupProperty(
+              v.transform.mProps.sk &&
+                (v.transform.mProps.sk.setGroupProperty(
                   PropertyInterface('Skew', a)
                 ),
-                g.transform.mProps.sa.setGroupProperty(
+                v.transform.mProps.sa.setGroupProperty(
                   PropertyInterface('Skew Angle', a)
                 )),
-              g.transform.op.setGroupProperty(PropertyInterface('Opacity', a)),
+              v.transform.op.setGroupProperty(PropertyInterface('Opacity', a)),
               Object.defineProperties(l, {
                 opacity: {
-                  get: ExpressionPropertyInterface(g.transform.mProps.o),
+                  get: ExpressionPropertyInterface(v.transform.mProps.o),
                 },
                 position: {
-                  get: ExpressionPropertyInterface(g.transform.mProps.p),
+                  get: ExpressionPropertyInterface(v.transform.mProps.p),
                 },
                 anchorPoint: {
-                  get: ExpressionPropertyInterface(g.transform.mProps.a),
+                  get: ExpressionPropertyInterface(v.transform.mProps.a),
                 },
                 scale: {
-                  get: ExpressionPropertyInterface(g.transform.mProps.s),
+                  get: ExpressionPropertyInterface(v.transform.mProps.s),
                 },
                 rotation: {
-                  get: ExpressionPropertyInterface(g.transform.mProps.r),
+                  get: ExpressionPropertyInterface(v.transform.mProps.r),
                 },
                 skew: {
-                  get: ExpressionPropertyInterface(g.transform.mProps.sk),
+                  get: ExpressionPropertyInterface(v.transform.mProps.sk),
                 },
                 skewAxis: {
-                  get: ExpressionPropertyInterface(g.transform.mProps.sa),
+                  get: ExpressionPropertyInterface(v.transform.mProps.sa),
                 },
                 _name: { value: p.nm },
               }),
               (l.ty = 'tr'),
               (l.mn = p.mn),
-              (l.propertyGroup = b),
+              (l.propertyGroup = _),
               l
             );
           }
-          function d(p, g, b) {
+          function d(p, v, _) {
             function l(f) {
               return p.p.ix === f ? l.position : p.s.ix === f ? l.size : null;
             }
-            var a = propertyGroupFactory(l, b);
+            var a = propertyGroupFactory(l, _);
             l.propertyIndex = p.ix;
-            var h = g.sh.ty === 'tm' ? g.sh.prop : g.sh;
+            var h = v.sh.ty === 'tm' ? v.sh.prop : v.sh;
             return (
               h.s.setGroupProperty(PropertyInterface('Size', a)),
               h.p.setGroupProperty(PropertyInterface('Position', a)),
@@ -18629,7 +18749,7 @@ var lottie = { exports: {} };
               l
             );
           }
-          function x(p, g, b) {
+          function x(p, v, _) {
             function l(f) {
               return p.p.ix === f
                 ? l.position
@@ -18648,8 +18768,8 @@ var lottie = { exports: {} };
                 ? l.innerRoundness
                 : null;
             }
-            var a = propertyGroupFactory(l, b),
-              h = g.sh.ty === 'tm' ? g.sh.prop : g.sh;
+            var a = propertyGroupFactory(l, _),
+              h = v.sh.ty === 'tm' ? v.sh.prop : v.sh;
             return (
               (l.propertyIndex = p.ix),
               h.or.setGroupProperty(PropertyInterface('Outer Radius', a)),
@@ -18674,7 +18794,7 @@ var lottie = { exports: {} };
               l
             );
           }
-          function _(p, g, b) {
+          function b(p, v, _) {
             function l(f) {
               return p.p.ix === f
                 ? l.position
@@ -18684,8 +18804,8 @@ var lottie = { exports: {} };
                 ? l.size
                 : null;
             }
-            var a = propertyGroupFactory(l, b),
-              h = g.sh.ty === 'tm' ? g.sh.prop : g.sh;
+            var a = propertyGroupFactory(l, _),
+              h = v.sh.ty === 'tm' ? v.sh.prop : v.sh;
             return (
               (l.propertyIndex = p.ix),
               h.p.setGroupProperty(PropertyInterface('Position', a)),
@@ -18701,12 +18821,12 @@ var lottie = { exports: {} };
               l
             );
           }
-          function m(p, g, b) {
+          function m(p, v, _) {
             function l(f) {
               return p.r.ix === f || f === 'Round Corners 1' ? l.radius : null;
             }
-            var a = propertyGroupFactory(l, b),
-              h = g;
+            var a = propertyGroupFactory(l, _),
+              h = v;
             return (
               (l.propertyIndex = p.ix),
               h.rd.setGroupProperty(PropertyInterface('Radius', a)),
@@ -18718,7 +18838,7 @@ var lottie = { exports: {} };
               l
             );
           }
-          function v(p, g, b) {
+          function g(p, v, _) {
             function l(f) {
               return p.c.ix === f || f === 'Copies'
                 ? l.copies
@@ -18726,8 +18846,8 @@ var lottie = { exports: {} };
                 ? l.offset
                 : null;
             }
-            var a = propertyGroupFactory(l, b),
-              h = g;
+            var a = propertyGroupFactory(l, _),
+              h = v;
             return (
               (l.propertyIndex = p.ix),
               h.c.setGroupProperty(PropertyInterface('Copies', a)),
@@ -18741,11 +18861,11 @@ var lottie = { exports: {} };
               l
             );
           }
-          return function (p, g, b) {
+          return function (p, v, _) {
             var l;
             function a(f) {
               if (typeof f == 'number')
-                return (f = f === void 0 ? 1 : f), f === 0 ? b : l[f - 1];
+                return (f = f === void 0 ? 1 : f), f === 0 ? _ : l[f - 1];
               for (var y = 0, k = l.length; y < k; ) {
                 if (l[y]._name === f) return l[y];
                 y += 1;
@@ -18753,11 +18873,11 @@ var lottie = { exports: {} };
               return null;
             }
             function h() {
-              return b;
+              return _;
             }
             return (
               (a.propertyGroup = propertyGroupFactory(a, h)),
-              (l = e(p, g, a.propertyGroup)),
+              (l = e(p, v, a.propertyGroup)),
               (a.numProperties = l.length),
               (a._name = 'Contents'),
               a
@@ -18797,8 +18917,8 @@ var lottie = { exports: {} };
           function e(d) {
             var x = new Matrix();
             if (d !== void 0) {
-              var _ = this._elem.finalTransform.mProp.getValueAtTime(d);
-              _.clone(x);
+              var b = this._elem.finalTransform.mProp.getValueAtTime(d);
+              b.clone(x);
             } else {
               var m = this._elem.finalTransform.mProp;
               m.applyToMatrix(x);
@@ -18806,46 +18926,46 @@ var lottie = { exports: {} };
             return x;
           }
           function t(d, x) {
-            var _ = this.getMatrix(x);
+            var b = this.getMatrix(x);
             return (
-              (_.props[12] = 0),
-              (_.props[13] = 0),
-              (_.props[14] = 0),
-              this.applyPoint(_, d)
+              (b.props[12] = 0),
+              (b.props[13] = 0),
+              (b.props[14] = 0),
+              this.applyPoint(b, d)
             );
           }
           function r(d, x) {
-            var _ = this.getMatrix(x);
-            return this.applyPoint(_, d);
+            var b = this.getMatrix(x);
+            return this.applyPoint(b, d);
           }
           function i(d, x) {
-            var _ = this.getMatrix(x);
+            var b = this.getMatrix(x);
             return (
-              (_.props[12] = 0),
-              (_.props[13] = 0),
-              (_.props[14] = 0),
-              this.invertPoint(_, d)
+              (b.props[12] = 0),
+              (b.props[13] = 0),
+              (b.props[14] = 0),
+              this.invertPoint(b, d)
             );
           }
           function s(d, x) {
-            var _ = this.getMatrix(x);
-            return this.invertPoint(_, d);
+            var b = this.getMatrix(x);
+            return this.invertPoint(b, d);
           }
           function n(d, x) {
             if (this._elem.hierarchy && this._elem.hierarchy.length) {
-              var _,
+              var b,
                 m = this._elem.hierarchy.length;
-              for (_ = 0; _ < m; _ += 1)
-                this._elem.hierarchy[_].finalTransform.mProp.applyToMatrix(d);
+              for (b = 0; b < m; b += 1)
+                this._elem.hierarchy[b].finalTransform.mProp.applyToMatrix(d);
             }
             return d.applyToPointArray(x[0], x[1], x[2] || 0);
           }
           function o(d, x) {
             if (this._elem.hierarchy && this._elem.hierarchy.length) {
-              var _,
+              var b,
                 m = this._elem.hierarchy.length;
-              for (_ = 0; _ < m; _ += 1)
-                this._elem.hierarchy[_].finalTransform.mProp.applyToMatrix(d);
+              for (b = 0; b < m; b += 1)
+                this._elem.hierarchy[b].finalTransform.mProp.applyToMatrix(d);
             }
             return d.inversePoint(x);
           }
@@ -18856,10 +18976,10 @@ var lottie = { exports: {} };
               this._elem.finalTransform.mProp.applyToMatrix(x),
               this._elem.hierarchy && this._elem.hierarchy.length)
             ) {
-              var _,
+              var b,
                 m = this._elem.hierarchy.length;
-              for (_ = 0; _ < m; _ += 1)
-                this._elem.hierarchy[_].finalTransform.mProp.applyToMatrix(x);
+              for (b = 0; b < m; b += 1)
+                this._elem.hierarchy[b].finalTransform.mProp.applyToMatrix(x);
               return x.inversePoint(d);
             }
             return x.inversePoint(d);
@@ -18869,18 +18989,18 @@ var lottie = { exports: {} };
           }
           return function (d) {
             var x;
-            function _(g) {
-              v.mask = new MaskManagerInterface(g, d);
+            function b(v) {
+              g.mask = new MaskManagerInterface(v, d);
             }
-            function m(g) {
-              v.effect = g;
+            function m(v) {
+              g.effect = v;
             }
-            function v(g) {
-              switch (g) {
+            function g(v) {
+              switch (v) {
                 case 'ADBE Root Vectors Group':
                 case 'Contents':
                 case 2:
-                  return v.shapeInterface;
+                  return g.shapeInterface;
                 case 1:
                 case 6:
                 case 'Transform':
@@ -18891,29 +19011,29 @@ var lottie = { exports: {} };
                 case 'ADBE Effect Parade':
                 case 'effects':
                 case 'Effects':
-                  return v.effect;
+                  return g.effect;
                 case 'ADBE Text Properties':
-                  return v.textInterface;
+                  return g.textInterface;
                 default:
                   return null;
               }
             }
-            (v.getMatrix = e),
-              (v.invertPoint = o),
-              (v.applyPoint = n),
-              (v.toWorld = r),
-              (v.toWorldVec = t),
-              (v.fromWorld = s),
-              (v.fromWorldVec = i),
-              (v.toComp = r),
-              (v.fromComp = c),
-              (v.sampleImage = u),
-              (v.sourceRectAtTime = d.sourceRectAtTime.bind(d)),
-              (v._elem = d),
+            (g.getMatrix = e),
+              (g.invertPoint = o),
+              (g.applyPoint = n),
+              (g.toWorld = r),
+              (g.toWorldVec = t),
+              (g.fromWorld = s),
+              (g.fromWorldVec = i),
+              (g.toComp = r),
+              (g.fromComp = c),
+              (g.sampleImage = u),
+              (g.sourceRectAtTime = d.sourceRectAtTime.bind(d)),
+              (g._elem = d),
               (x = TransformExpressionInterface(d.finalTransform.mProp));
             var p = getDescriptor(x, 'anchorPoint');
             return (
-              Object.defineProperties(v, {
+              Object.defineProperties(g, {
                 hasParent: {
                   get: function () {
                     return d.hierarchy.length;
@@ -18941,17 +19061,17 @@ var lottie = { exports: {} };
                   },
                 },
               }),
-              (v.startTime = d.data.st),
-              (v.index = d.data.ind),
-              (v.source = d.data.refId),
-              (v.height = d.data.ty === 0 ? d.data.h : 100),
-              (v.width = d.data.ty === 0 ? d.data.w : 100),
-              (v.inPoint = d.data.ip / d.comp.globalData.frameRate),
-              (v.outPoint = d.data.op / d.comp.globalData.frameRate),
-              (v._name = d.data.nm),
-              (v.registerMaskInterface = _),
-              (v.registerEffectsInterface = m),
-              v
+              (g.startTime = d.data.st),
+              (g.index = d.data.ind),
+              (g.source = d.data.refId),
+              (g.height = d.data.ty === 0 ? d.data.h : 100),
+              (g.width = d.data.ty === 0 ? d.data.w : 100),
+              (g.inPoint = d.data.ip / d.comp.globalData.frameRate),
+              (g.outPoint = d.data.op / d.comp.globalData.frameRate),
+              (g._name = d.data.nm),
+              (g.registerMaskInterface = b),
+              (g.registerEffectsInterface = m),
+              g
             );
           };
         })(),
@@ -19150,7 +19270,7 @@ var lottie = { exports: {} };
               for (u = 0; u < d; u += 1)
                 o.push(r(c[u], s.effectsManager.effectElements[u], n, s));
               var x = s.data.ef || [],
-                _ = function (m) {
+                b = function (m) {
                   for (u = 0, d = x.length; u < d; ) {
                     if (m === x[u].nm || m === x[u].mn || m === x[u].ix)
                       return o[u];
@@ -19159,40 +19279,40 @@ var lottie = { exports: {} };
                   return null;
                 };
               return (
-                Object.defineProperty(_, 'numProperties', {
+                Object.defineProperty(b, 'numProperties', {
                   get: function () {
                     return x.length;
                   },
                 }),
-                _
+                b
               );
             }
             return null;
           }
           function r(s, n, o, c) {
-            function u(v) {
-              for (var p = s.ef, g = 0, b = p.length; g < b; ) {
-                if (v === p[g].nm || v === p[g].mn || v === p[g].ix)
-                  return p[g].ty === 5 ? x[g] : x[g]();
-                g += 1;
+            function u(g) {
+              for (var p = s.ef, v = 0, _ = p.length; v < _; ) {
+                if (g === p[v].nm || g === p[v].mn || g === p[v].ix)
+                  return p[v].ty === 5 ? x[v] : x[v]();
+                v += 1;
               }
               throw new Error();
             }
             var d = propertyGroupFactory(u, o),
               x = [],
-              _,
+              b,
               m = s.ef.length;
-            for (_ = 0; _ < m; _ += 1)
-              s.ef[_].ty === 5
+            for (b = 0; b < m; b += 1)
+              s.ef[b].ty === 5
                 ? x.push(
                     r(
-                      s.ef[_],
-                      n.effectElements[_],
-                      n.effectElements[_].propertyGroup,
+                      s.ef[b],
+                      n.effectElements[b],
+                      n.effectElements[b].propertyGroup,
                       c
                     )
                   )
-                : x.push(i(n.effectElements[_], s.ef[_].ty, c, d));
+                : x.push(i(n.effectElements[b], s.ef[b].ty, c, d));
             return (
               s.mn === 'ADBE Color Control' &&
                 Object.defineProperty(u, 'color', {
@@ -19281,13 +19401,13 @@ var lottie = { exports: {} };
                   : 'e' in c.keyframes[d - 2]
                   ? (x = c.keyframes[d - 2].e)
                   : (x = c.keyframes[d - 2].s);
-                var _ =
+                var b =
                   u === 'unidimensional' ? new Number(x) : Object.assign({}, x);
                 return (
-                  (_.time =
+                  (b.time =
                     c.keyframes[d - 1].t / c.elem.comp.globalData.frameRate),
-                  (_.value = u === 'unidimensional' ? x[0] : x),
-                  _
+                  (b.value = u === 'unidimensional' ? x[0] : x),
+                  b
                 );
               }),
               (o.valueAtTime = c.getValueAtTime),
@@ -19327,8 +19447,8 @@ var lottie = { exports: {} };
               r(d, o, 'multidimensional'),
               function () {
                 o.k && o.getValue();
-                for (var _ = 0; _ < u; _ += 1)
-                  (x[_] = o.v[_] * c), (d[_] = x[_]);
+                for (var b = 0; b < u; b += 1)
+                  (x[b] = o.v[b] * c), (d[b] = x[b]);
                 return d;
               }
             );
@@ -19661,14 +19781,19 @@ export {
   add_resize_listener as a0,
   handle_promise as a1,
   update_await_block_branch as a2,
-  marked as a3,
+  prevent_default as a3,
   null_to_empty as a4,
-  classnames as a5,
-  binding_callbacks as a6,
-  Scroller as a7,
-  bind as a8,
-  add_flush_callback as a9,
-  lottie as aa,
+  run_all as a5,
+  throttle as a6,
+  globals as a7,
+  bubble as a8,
+  binding_callbacks as a9,
+  marked as aa,
+  classnames as ab,
+  Scroller as ac,
+  bind as ad,
+  add_flush_callback as ae,
+  lottie as af,
   attr as b,
   claim_element as c,
   detach as d,

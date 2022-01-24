@@ -11,12 +11,12 @@ import {
   o as v,
   f as E,
   u as h,
-  w as H,
+  w as B,
   x as b,
-  v as $,
+  v as k,
   d as l,
-  A as F,
-  z as G,
+  A as H,
+  z as F,
   e as O,
   t as V,
   c as x,
@@ -24,202 +24,217 @@ import {
   g as w,
   b as y,
   H as T,
-  h as U,
-  r as B,
-} from '../../chunks/vendor-7ea24681.js';
+  h as G,
+  r as U,
+} from '../../chunks/vendor-b82e5b83.js';
 import {
   c as S,
   S as C,
   N as z,
   M as J,
-} from '../../chunks/@component-docs-f5a9f6ed.js';
+} from '../../chunks/@component-docs-989e6ca0.js';
 import '../../chunks/paths-6758d194.js';
 function K(o) {
   switch (o) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return e(
-        () => import('../../chunks/docs-7c024bfa.js'),
+        () => import('../../chunks/docs-689deda0.js'),
         [
-          'chunks/docs-7c024bfa.js',
+          'chunks/docs-689deda0.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-438f94a3.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
+          'chunks/paths-6758d194.js',
+        ]
+      );
+    case '../../src/lib/BeforeAfter/docs.svx':
+      return e(
+        () => import('../../chunks/docs-1677e5c7.js'),
+        [
+          'chunks/docs-1677e5c7.js',
+          'assets/docs-ea1c5840.css',
+          'chunks/vendor-b82e5b83.js',
+          'assets/vendor-c9bf64b2.css',
+          'chunks/index-75ffd758.js',
+          'assets/index-2df4dd7a.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return e(
-        () => import('../../chunks/docs-033fcfcf.js'),
+        () => import('../../chunks/docs-c7b95108.js'),
         [
-          'chunks/docs-033fcfcf.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-c7b95108.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/EmbedPreviewerLink/docs.svx':
       return e(
-        () => import('../../chunks/docs-7d6032a7.js'),
+        () => import('../../chunks/docs-11cfff7a.js'),
         [
-          'chunks/docs-7d6032a7.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-11cfff7a.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/EndNotes/docs.svx':
       return e(
-        () => import('../../chunks/docs-d1fd0a83.js'),
+        () => import('../../chunks/docs-08d72711.js'),
         [
-          'chunks/docs-d1fd0a83.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-08d72711.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Footer/docs.svx':
       return e(
-        () => import('../../chunks/docs-08986a20.js'),
+        () => import('../../chunks/docs-009f1546.js'),
         [
-          'chunks/docs-08986a20.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-009f1546.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Framer/docs.svx':
       return e(
-        () => import('../../chunks/docs-e485ce7f.js'),
+        () => import('../../chunks/docs-be5eae59.js'),
         [
-          'chunks/docs-e485ce7f.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-be5eae59.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Headline/docs.svx':
       return e(
-        () => import('../../chunks/docs-688916d7.js'),
+        () => import('../../chunks/docs-350b704e.js'),
         [
-          'chunks/docs-688916d7.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-350b704e.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Hero/docs.svx':
       return e(
-        () => import('../../chunks/docs-6fdcd22d.js'),
+        () => import('../../chunks/docs-49a7211a.js'),
         [
-          'chunks/docs-6fdcd22d.js',
+          'chunks/docs-49a7211a.js',
           'assets/docs-b2c6cc18.css',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-b74c464b.js'),
+        () => import('../../chunks/docs-58f7dc92.js'),
         [
-          'chunks/docs-b74c464b.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-58f7dc92.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-8fbdb9b3.js'),
+        () => import('../../chunks/docs-157344ff.js'),
         [
-          'chunks/docs-8fbdb9b3.js',
+          'chunks/docs-157344ff.js',
           'assets/docs-4a88ca0e.css',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Nav/docs.svx':
       return e(
-        () => import('../../chunks/docs-ba301174.js'),
+        () => import('../../chunks/docs-15684686.js'),
         [
-          'chunks/docs-ba301174.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-15684686.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/PymChild/docs.svx':
       return e(
-        () => import('../../chunks/docs-89d56a07.js'),
+        () => import('../../chunks/docs-7b2fee10.js'),
         [
-          'chunks/docs-89d56a07.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-7b2fee10.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-c7c90b25.js'),
+        () => import('../../chunks/docs-cf84b7c5.js'),
         [
-          'chunks/docs-c7c90b25.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-cf84b7c5.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/SEO/docs.svx':
       return e(
-        () => import('../../chunks/docs-c6f0fe97.js'),
+        () => import('../../chunks/docs-9d518c41.js'),
         [
-          'chunks/docs-c6f0fe97.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-9d518c41.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-9b5ad9a5.js'),
+        () => import('../../chunks/docs-0d8cfd40.js'),
         [
-          'chunks/docs-9b5ad9a5.js',
+          'chunks/docs-0d8cfd40.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Sharer/docs.svx':
       return e(
-        () => import('../../chunks/docs-8e110364.js'),
+        () => import('../../chunks/docs-228b9597.js'),
         [
-          'chunks/docs-8e110364.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-228b9597.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
@@ -235,188 +250,203 @@ function Q(o) {
   switch (o) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return e(
-        () => import('../../chunks/docs-7c024bfa.js'),
+        () => import('../../chunks/docs-689deda0.js'),
         [
-          'chunks/docs-7c024bfa.js',
+          'chunks/docs-689deda0.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-438f94a3.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
+          'chunks/paths-6758d194.js',
+        ]
+      );
+    case '../../src/lib/BeforeAfter/docs.svx':
+      return e(
+        () => import('../../chunks/docs-1677e5c7.js'),
+        [
+          'chunks/docs-1677e5c7.js',
+          'assets/docs-ea1c5840.css',
+          'chunks/vendor-b82e5b83.js',
+          'assets/vendor-c9bf64b2.css',
+          'chunks/index-75ffd758.js',
+          'assets/index-2df4dd7a.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return e(
-        () => import('../../chunks/docs-033fcfcf.js'),
+        () => import('../../chunks/docs-c7b95108.js'),
         [
-          'chunks/docs-033fcfcf.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-c7b95108.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/EmbedPreviewerLink/docs.svx':
       return e(
-        () => import('../../chunks/docs-7d6032a7.js'),
+        () => import('../../chunks/docs-11cfff7a.js'),
         [
-          'chunks/docs-7d6032a7.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-11cfff7a.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/EndNotes/docs.svx':
       return e(
-        () => import('../../chunks/docs-d1fd0a83.js'),
+        () => import('../../chunks/docs-08d72711.js'),
         [
-          'chunks/docs-d1fd0a83.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-08d72711.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Footer/docs.svx':
       return e(
-        () => import('../../chunks/docs-08986a20.js'),
+        () => import('../../chunks/docs-009f1546.js'),
         [
-          'chunks/docs-08986a20.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-009f1546.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Framer/docs.svx':
       return e(
-        () => import('../../chunks/docs-e485ce7f.js'),
+        () => import('../../chunks/docs-be5eae59.js'),
         [
-          'chunks/docs-e485ce7f.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-be5eae59.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Headline/docs.svx':
       return e(
-        () => import('../../chunks/docs-688916d7.js'),
+        () => import('../../chunks/docs-350b704e.js'),
         [
-          'chunks/docs-688916d7.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-350b704e.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Hero/docs.svx':
       return e(
-        () => import('../../chunks/docs-6fdcd22d.js'),
+        () => import('../../chunks/docs-49a7211a.js'),
         [
-          'chunks/docs-6fdcd22d.js',
+          'chunks/docs-49a7211a.js',
           'assets/docs-b2c6cc18.css',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-b74c464b.js'),
+        () => import('../../chunks/docs-58f7dc92.js'),
         [
-          'chunks/docs-b74c464b.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-58f7dc92.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-8fbdb9b3.js'),
+        () => import('../../chunks/docs-157344ff.js'),
         [
-          'chunks/docs-8fbdb9b3.js',
+          'chunks/docs-157344ff.js',
           'assets/docs-4a88ca0e.css',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Nav/docs.svx':
       return e(
-        () => import('../../chunks/docs-ba301174.js'),
+        () => import('../../chunks/docs-15684686.js'),
         [
-          'chunks/docs-ba301174.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-15684686.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/PymChild/docs.svx':
       return e(
-        () => import('../../chunks/docs-89d56a07.js'),
+        () => import('../../chunks/docs-7b2fee10.js'),
         [
-          'chunks/docs-89d56a07.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-7b2fee10.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-c7c90b25.js'),
+        () => import('../../chunks/docs-cf84b7c5.js'),
         [
-          'chunks/docs-c7c90b25.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-cf84b7c5.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/SEO/docs.svx':
       return e(
-        () => import('../../chunks/docs-c6f0fe97.js'),
+        () => import('../../chunks/docs-9d518c41.js'),
         [
-          'chunks/docs-c6f0fe97.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-9d518c41.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-9b5ad9a5.js'),
+        () => import('../../chunks/docs-0d8cfd40.js'),
         [
-          'chunks/docs-9b5ad9a5.js',
+          'chunks/docs-0d8cfd40.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-457577f8.js',
+          'chunks/index-75ffd758.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs-f5a9f6ed.js',
-          'assets/@component-docs-c7cbffa2.css',
+          'chunks/@component-docs-989e6ca0.js',
+          'assets/@component-docs-f0b2d3fe.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/Sharer/docs.svx':
       return e(
-        () => import('../../chunks/docs-8e110364.js'),
+        () => import('../../chunks/docs-228b9597.js'),
         [
-          'chunks/docs-8e110364.js',
-          'chunks/vendor-7ea24681.js',
+          'chunks/docs-228b9597.js',
+          'chunks/vendor-b82e5b83.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
@@ -453,7 +483,7 @@ function W(o) {
       E(u, t, r), T(t, i), T(t, c), T(c, n);
     },
     p(u, r) {
-      r & 1 && a !== (a = u[0].title + '') && U(n, a);
+      r & 1 && a !== (a = u[0].title + '') && G(n, a);
     },
     d(u) {
       u && l(t);
@@ -461,7 +491,7 @@ function W(o) {
   };
 }
 function X(o) {
-  let t, i, c, a, n, u, r, d, k;
+  let t, i, c, a, n, u, r, d, $;
   (t = new C({
     props: {
       seoTitle: `Reuters Graphics components - ${o[0].title}`,
@@ -511,7 +541,7 @@ function X(o) {
           E(s, u, _),
           r && v(r, s, _),
           E(s, d, _),
-          (k = !0);
+          ($ = !0);
       },
       p(s, [_]) {
         const p = {};
@@ -521,19 +551,19 @@ function X(o) {
             (p.shareTitle = `Reuters Graphics components - ${s[0].title}`),
           _ & 1 && (p.shareDescription = s[0].description),
           t.$set(p);
-        const I = {};
+        const A = {};
         if (
-          (_ & 5 && (I.$$scope = { dirty: _, ctx: s }),
-          c.$set(I),
+          (_ & 5 && (A.$$scope = { dirty: _, ctx: s }),
+          c.$set(A),
           m !== (m = s[1]))
         ) {
           if (r) {
-            B();
-            const A = r;
-            h(A.$$.fragment, 1, 0, () => {
-              $(A, 1);
+            U();
+            const I = r;
+            h(I.$$.fragment, 1, 0, () => {
+              k(I, 1);
             }),
-              H();
+              B();
           }
           m
             ? ((r = new m(j())),
@@ -544,29 +574,29 @@ function X(o) {
         }
       },
       i(s) {
-        k ||
+        $ ||
           (b(t.$$.fragment, s),
           b(c.$$.fragment, s),
           b(n.$$.fragment, s),
           r && b(r.$$.fragment, s),
-          (k = !0));
+          ($ = !0));
       },
       o(s) {
         h(t.$$.fragment, s),
           h(c.$$.fragment, s),
           h(n.$$.fragment, s),
           r && h(r.$$.fragment, s),
-          (k = !1);
+          ($ = !1);
       },
       d(s) {
-        $(t, s),
+        k(t, s),
           s && l(i),
-          $(c, s),
+          k(c, s),
           s && l(a),
-          $(n, s),
+          k(n, s),
           s && l(u),
           s && l(d),
-          r && $(r, s);
+          r && k(r, s);
       },
     }
   );
@@ -578,10 +608,10 @@ function Y(o, t, i) {
   let { metadata: c } = t,
     a;
   return (
-    F(async () => {
+    H(async () => {
       i(1, (a = (await Q(`../../src/lib/${c.path}/docs.svx`)).default));
     }),
-    G(async () => {
+    F(async () => {
       i(1, (a = (await K(`../../src/lib/${c.path}/docs.svx`)).default));
     }),
     (o.$$set = (n) => {

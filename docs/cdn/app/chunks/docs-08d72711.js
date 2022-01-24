@@ -2,7 +2,7 @@ import {
   S as y,
   i as C,
   s as N,
-  a3 as S,
+  aa as S,
   e as m,
   c as f,
   a as d,
@@ -12,17 +12,17 @@ import {
   I as v,
   t as H,
   k as E,
-  j as P,
-  g as D,
+  j as b,
+  g as P,
   n as w,
-  m as I,
+  m as D,
   H as g,
-  o as L,
-  x as M,
-  u as R,
-  v as b,
-} from './vendor-7ea24681.js';
-import { D as A } from './index-457577f8.js';
+  o as I,
+  x as L,
+  u as M,
+  v as R,
+} from './vendor-b82e5b83.js';
+import { D as A } from './index-75ffd758.js';
 function F(p) {
   let s,
     a = S.parse(p[0]) + '';
@@ -76,23 +76,23 @@ function K(p) {
     (s = new J({ props: { text: p[0] } })),
     {
       c() {
-        P(s.$$.fragment);
+        b(s.$$.fragment);
       },
       l(t) {
-        I(s.$$.fragment, t);
+        D(s.$$.fragment, t);
       },
       m(t, e) {
-        L(s, t, e), (a = !0);
+        I(s, t, e), (a = !0);
       },
       p: v,
       i(t) {
-        a || (M(s.$$.fragment, t), (a = !0));
+        a || (L(s.$$.fragment, t), (a = !0));
       },
       o(t) {
-        R(s.$$.fragment, t), (a = !1);
+        M(s.$$.fragment, t), (a = !1);
       },
       d(t) {
-        b(s, t);
+        R(s, t);
       },
     }
   );
@@ -135,7 +135,7 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
           ($ = E()),
           (l = m('pre')),
           (_ = E()),
-          P(c.$$.fragment),
+          b(c.$$.fragment),
           this.h();
       },
       l(n) {
@@ -143,15 +143,15 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
         var o = d(s);
         a = f(o, 'H2', {});
         var u = d(a);
-        (t = D(u, O)), u.forEach(r), (e = w(o)), (i = f(o, 'P', {}));
+        (t = P(u, O)), u.forEach(r), (e = w(o)), (i = f(o, 'P', {}));
         var T = d(i);
-        (x = D(T, q)),
+        (x = P(T, q)),
           T.forEach(r),
           o.forEach(r),
           ($ = w(n)),
           (l = f(n, 'PRE', { class: !0 }));
         var z = d(l);
-        z.forEach(r), (_ = w(n)), I(c.$$.fragment, n), this.h();
+        z.forEach(r), (_ = w(n)), D(c.$$.fragment, n), this.h();
       },
       h() {
         j(l, 'class', 'language-svelte');
@@ -167,7 +167,7 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
           k(n, l, o),
           (l.innerHTML = B),
           k(n, _, o),
-          L(c, n, o),
+          I(c, n, o),
           (h = !0);
       },
       p(n, [o]) {
@@ -175,13 +175,13 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
         o & 2 && (u.$$scope = { dirty: o, ctx: n }), c.$set(u);
       },
       i(n) {
-        h || (M(c.$$.fragment, n), (h = !0));
+        h || (L(c.$$.fragment, n), (h = !0));
       },
       o(n) {
-        R(c.$$.fragment, n), (h = !1);
+        M(c.$$.fragment, n), (h = !1);
       },
       d(n) {
-        n && r(s), n && r($), n && r(l), n && r(_), b(c, n);
+        n && r(s), n && r($), n && r(l), n && r(_), R(c, n);
       },
     }
   );

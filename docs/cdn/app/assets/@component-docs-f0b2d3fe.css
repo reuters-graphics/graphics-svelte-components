@@ -268,6 +268,101 @@ div.background.svelte-e2e2s9 {
   position: relative;
   align-items: center;
 }
+figure.before-after-container.svelte-b70c3s.svelte-b70c3s {
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box;
+  margin: 0 auto;
+}
+figure.before-after-container.svelte-b70c3s img.svelte-b70c3s {
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: block;
+  max-width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+}
+figure.before-after-container.svelte-b70c3s img.after.svelte-b70c3s {
+  z-index: 21;
+}
+figure.before-after-container.svelte-b70c3s img.before.svelte-b70c3s {
+  z-index: 22;
+}
+figure.before-after-container.svelte-b70c3s .overlay-container.svelte-b70c3s {
+  position: absolute;
+}
+figure.before-after-container.svelte-b70c3s
+  .overlay-container.before.svelte-b70c3s {
+  left: 0;
+  z-index: 23;
+}
+figure.before-after-container.svelte-b70c3s
+  .overlay-container.after.svelte-b70c3s {
+  right: 0;
+  z-index: 21;
+}
+.handle.svelte-b70c3s.svelte-b70c3s {
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+  cursor: move;
+  background: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  border-radius: 50px;
+  top: calc(50% - 20px);
+  border: 4px solid var(--before-after-handle-colour);
+  opacity: var(--before-after-handle-inactive-opacity, 0.6);
+}
+.handle.svelte-b70c3s.svelte-b70c3s:hover,
+.handle.svelte-b70c3s.svelte-b70c3s:active {
+  opacity: 1;
+}
+.handle.svelte-b70c3s.svelte-b70c3s:before,
+.handle.svelte-b70c3s.svelte-b70c3s:after {
+  content: '';
+  height: 9999px;
+  position: absolute;
+  left: calc(50% - 2px);
+  border: 2px solid var(--before-after-handle-colour);
+}
+.handle.svelte-b70c3s.svelte-b70c3s:before {
+  top: 40px;
+}
+.handle.svelte-b70c3s.svelte-b70c3s:after {
+  bottom: 40px;
+}
+.handle.svelte-b70c3s .arrow-right.svelte-b70c3s,
+.handle.svelte-b70c3s .arrow-left.svelte-b70c3s {
+  width: 0;
+  height: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.handle.svelte-b70c3s .arrow-right.svelte-b70c3s {
+  left: 19px;
+  bottom: 13px;
+  border-left: 10px solid var(--before-after-handle-colour);
+}
+.handle.svelte-b70c3s .arrow-left.svelte-b70c3s {
+  left: 3px;
+  top: 7px;
+  border-right: 10px solid var(--before-after-handle-colour);
+}
 nav.svelte-ca3v86 {
   margin-bottom: 3rem;
 }
