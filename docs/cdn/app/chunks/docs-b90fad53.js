@@ -42,7 +42,7 @@ import {
   I as Ps,
 } from './vendor-a3a8e12b.js';
 import { D as _a } from './index-95908c5c.js';
-import './@component-docs_components-fb16dedc.js';
+import './@component-docs_components-7577cc8f.js';
 import { a as L } from './paths-6758d194.js';
 const { window: Fa } = bt,
   _t = (o) => ({}),

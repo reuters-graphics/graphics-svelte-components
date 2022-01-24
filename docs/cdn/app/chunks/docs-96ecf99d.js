@@ -3,32 +3,32 @@ import {
   S as Vt,
   i as Ct,
   s as St,
-  E as Mt,
+  E as Ht,
   F as Lt,
   G as Nt,
   x as _s,
-  u as $s,
+  u as As,
   e as l,
   k,
   j as pt,
   c as o,
   a as p,
-  n as m,
+  n as h,
   m as rt,
   d as n,
   b as e,
   f as U,
   H as s,
   o as it,
-  r as jt,
-  w as Gt,
+  r as Mt,
+  w as jt,
   v as ct,
   Z as Qt,
   D as Ot,
   t as g,
   g as v,
   _ as a,
-  I as is,
+  I as cs,
   $ as Xt,
   a0 as sa,
   a1 as ta,
@@ -36,15 +36,15 @@ import {
   a2 as aa,
 } from './vendor-a3a8e12b.js';
 import { D as It } from './index-95908c5c.js';
-import { a as Ht } from './paths-6758d194.js';
+import { a as Gt } from './paths-6758d194.js';
 const ea = (y) => ({}),
   Jt = (y) => ({}),
   na = (y) => ({}),
   qt = (y) => ({});
 function Ut(y) {
   let t;
-  const f = y[5].title,
-    i = Ot(f, y, y[4], qt);
+  const f = y[6].title,
+    i = Ot(f, y, y[5], qt);
   return {
     c() {
       i && i.c();
@@ -52,20 +52,20 @@ function Ut(y) {
     l(u) {
       i && i.l(u);
     },
-    m(u, h) {
-      i && i.m(u, h), (t = !0);
+    m(u, m) {
+      i && i.m(u, m), (t = !0);
     },
-    p(u, h) {
+    p(u, m) {
       i &&
         i.p &&
-        (!t || h & 16) &&
-        Mt(i, f, u, u[4], t ? Nt(f, u[4], h, na) : Lt(u[4]), qt);
+        (!t || m & 32) &&
+        Ht(i, f, u, u[5], t ? Nt(f, u[5], m, na) : Lt(u[5]), qt);
     },
     i(u) {
       t || (_s(i, u), (t = !0));
     },
     o(u) {
-      $s(i, u), (t = !1);
+      As(i, u), (t = !1);
     },
     d(u) {
       i && i.d(u);
@@ -74,8 +74,8 @@ function Ut(y) {
 }
 function Wt(y) {
   let t;
-  const f = y[5].notes,
-    i = Ot(f, y, y[4], Jt);
+  const f = y[6].notes,
+    i = Ot(f, y, y[5], Jt);
   return {
     c() {
       i && i.c();
@@ -83,20 +83,20 @@ function Wt(y) {
     l(u) {
       i && i.l(u);
     },
-    m(u, h) {
-      i && i.m(u, h), (t = !0);
+    m(u, m) {
+      i && i.m(u, m), (t = !0);
     },
-    p(u, h) {
+    p(u, m) {
       i &&
         i.p &&
-        (!t || h & 16) &&
-        Mt(i, f, u, u[4], t ? Nt(f, u[4], h, ea) : Lt(u[4]), Jt);
+        (!t || m & 32) &&
+        Ht(i, f, u, u[5], t ? Nt(f, u[5], m, ea) : Lt(u[5]), Jt);
     },
     i(u) {
       t || (_s(i, u), (t = !0));
     },
     o(u) {
-      $s(i, u), (t = !1);
+      As(i, u), (t = !1);
     },
     d(u) {
       i && i.d(u);
@@ -108,15 +108,15 @@ function la(y) {
     f,
     i,
     u,
-    h,
-    x,
-    d = y[3].title && Ut(y);
+    m,
+    P,
+    d = y[4].title && Ut(y);
   var _ = y[0];
-  function P(z) {
-    return {};
+  function $(z) {
+    return { props: { onAiMounted: z[3] } };
   }
-  _ && (i = new _(P()));
-  let $ = y[3].notes && Wt(y);
+  _ && (i = new _($(y)));
+  let E = y[4].notes && Wt(y);
   return {
     c() {
       (t = l('section')),
@@ -124,107 +124,108 @@ function la(y) {
         (f = k()),
         i && pt(i.$$.fragment),
         (u = k()),
-        $ && $.c(),
+        E && E.c(),
         this.h();
     },
     l(z) {
       t = o(z, 'SECTION', { class: !0, id: !0 });
-      var C = p(t);
-      d && d.l(C),
-        (f = m(C)),
-        i && rt(i.$$.fragment, C),
-        (u = m(C)),
-        $ && $.l(C),
-        C.forEach(n),
+      var T = p(t);
+      d && d.l(T),
+        (f = h(T)),
+        i && rt(i.$$.fragment, T),
+        (u = h(T)),
+        E && E.l(T),
+        T.forEach(n),
         this.h();
     },
     h() {
-      e(t, 'class', (h = 'ai2svelte-container graphic ' + y[2])),
+      e(t, 'class', (m = 'ai2svelte-container graphic ' + y[2])),
         e(t, 'id', y[1]);
     },
-    m(z, C) {
-      U(z, t, C),
+    m(z, T) {
+      U(z, t, T),
         d && d.m(t, null),
         s(t, f),
         i && it(i, t, null),
         s(t, u),
-        $ && $.m(t, null),
-        (x = !0);
+        E && E.m(t, null),
+        (P = !0);
     },
-    p(z, [C]) {
-      if (
-        (z[3].title
-          ? d
-            ? (d.p(z, C), C & 8 && _s(d, 1))
-            : ((d = Ut(z)), d.c(), _s(d, 1), d.m(t, f))
-          : d &&
-            (jt(),
-            $s(d, 1, 1, () => {
-              d = null;
-            }),
-            Gt()),
-        _ !== (_ = z[0]))
-      ) {
-        if (i) {
-          jt();
-          const vs = i;
-          $s(vs.$$.fragment, 1, 0, () => {
-            ct(vs, 1);
+    p(z, [T]) {
+      z[4].title
+        ? d
+          ? (d.p(z, T), T & 16 && _s(d, 1))
+          : ((d = Ut(z)), d.c(), _s(d, 1), d.m(t, f))
+        : d &&
+          (Mt(),
+          As(d, 1, 1, () => {
+            d = null;
           }),
-            Gt();
+          jt());
+      const vs = {};
+      if ((T & 8 && (vs.onAiMounted = z[3]), _ !== (_ = z[0]))) {
+        if (i) {
+          Mt();
+          const os = i;
+          As(os.$$.fragment, 1, 0, () => {
+            ct(os, 1);
+          }),
+            jt();
         }
         _
-          ? ((i = new _(P())),
+          ? ((i = new _($(z))),
             pt(i.$$.fragment),
             _s(i.$$.fragment, 1),
             it(i, t, u))
           : (i = null);
-      }
-      z[3].notes
-        ? $
-          ? ($.p(z, C), C & 8 && _s($, 1))
-          : (($ = Wt(z)), $.c(), _s($, 1), $.m(t, null))
-        : $ &&
-          (jt(),
-          $s($, 1, 1, () => {
-            $ = null;
+      } else _ && i.$set(vs);
+      z[4].notes
+        ? E
+          ? (E.p(z, T), T & 16 && _s(E, 1))
+          : ((E = Wt(z)), E.c(), _s(E, 1), E.m(t, null))
+        : E &&
+          (Mt(),
+          As(E, 1, 1, () => {
+            E = null;
           }),
-          Gt()),
-        (!x || (C & 4 && h !== (h = 'ai2svelte-container graphic ' + z[2]))) &&
-          e(t, 'class', h),
-        (!x || C & 2) && e(t, 'id', z[1]);
+          jt()),
+        (!P || (T & 4 && m !== (m = 'ai2svelte-container graphic ' + z[2]))) &&
+          e(t, 'class', m),
+        (!P || T & 2) && e(t, 'id', z[1]);
     },
     i(z) {
-      x || (_s(d), i && _s(i.$$.fragment, z), _s($), (x = !0));
+      P || (_s(d), i && _s(i.$$.fragment, z), _s(E), (P = !0));
     },
     o(z) {
-      $s(d), i && $s(i.$$.fragment, z), $s($), (x = !1);
+      As(d), i && As(i.$$.fragment, z), As(E), (P = !1);
     },
     d(z) {
-      z && n(t), d && d.d(), i && ct(i), $ && $.d();
+      z && n(t), d && d.d(), i && ct(i), E && E.d();
     },
   };
 }
 function oa(y, t, f) {
   let { $$slots: i = {}, $$scope: u } = t;
-  const h = Qt(i);
-  let { AiGraphic: x } = t,
+  const m = Qt(i);
+  let { AiGraphic: P } = t,
     { id: d = '' } = t,
-    { size: _ = 'normal' } = t;
+    { size: _ = 'normal' } = t,
+    { onAiMounted: $ = () => {} } = t;
   return (
-    (y.$$set = (P) => {
-      'AiGraphic' in P && f(0, (x = P.AiGraphic)),
-        'id' in P && f(1, (d = P.id)),
-        'size' in P && f(2, (_ = P.size)),
-        '$$scope' in P && f(4, (u = P.$$scope));
+    (y.$$set = (E) => {
+      'AiGraphic' in E && f(0, (P = E.AiGraphic)),
+        'id' in E && f(1, (d = E.id)),
+        'size' in E && f(2, (_ = E.size)),
+        'onAiMounted' in E && f(3, ($ = E.onAiMounted)),
+        '$$scope' in E && f(5, (u = E.$$scope));
     }),
-    [x, d, _, h, u, i]
+    [P, d, _, $, m, u, i]
   );
 }
 class Dt extends Vt {
   constructor(t) {
     super();
-    Ct(this, t, oa, la, St, { AiGraphic: 0, id: 1, size: 2 });
+    Ct(this, t, oa, la, St, { AiGraphic: 0, id: 1, size: 2, onAiMounted: 3 });
   }
 }
 function Yt(y) {
@@ -232,79 +233,79 @@ function Yt(y) {
     f,
     i,
     u,
-    h,
-    x,
+    m,
+    P,
     d,
     _,
-    P,
     $,
+    E,
     z,
-    C,
+    T,
     vs,
-    ds,
+    os,
     I,
     Z,
     X,
     Ss,
     A,
     as,
-    js,
-    bs,
-    T,
-    es,
-    xs,
-    Gs,
-    V,
-    Q,
-    Hs,
     Ms,
+    bs,
+    V,
+    es,
+    ws,
+    js,
+    C,
+    Q,
+    Gs,
+    Hs,
     D,
     Y,
     qs,
-    As,
-    E,
+    $s,
+    b,
     ss,
     zs,
     Ps,
     ns,
     Is,
     ks,
-    G,
+    j,
     ts,
     fs,
     Ds,
-    w,
+    x,
     B,
     Ls,
-    ms,
+    hs,
     L,
-    cs,
+    rs,
     Ts,
     K,
     O,
-    ps,
-    hs,
-    rs,
+    is,
+    ms,
+    us,
     S,
     ls,
-    us,
-    os,
+    ds,
+    ps,
     J,
     ys,
     Ns,
-    M,
+    H,
     W,
     Es,
     Vs,
-    H,
+    G,
     R,
     r,
-    b,
+    w,
     N,
     F,
-    ws,
+    xs,
     Cs,
-    j,
+    M,
     q,
     Rs;
   return {
@@ -313,78 +314,78 @@ function Yt(y) {
         (f = l('div')),
         (i = k()),
         (u = l('div')),
-        (x = k()),
+        (P = k()),
         (d = l('div')),
         (_ = l('p')),
-        (P = g('Shake intensity')),
-        ($ = k()),
+        ($ = g('Shake intensity')),
+        (E = k()),
         (z = l('div')),
-        (C = l('p')),
+        (T = l('p')),
         (vs = g('Light')),
-        (ds = k()),
+        (os = k()),
         (I = l('div')),
         (Z = l('p')),
         (X = g('Moderate')),
         (Ss = k()),
         (A = l('div')),
         (as = l('p')),
-        (js = g('Cap-Haitien')),
+        (Ms = g('Cap-Haitien')),
         (bs = k()),
-        (T = l('div')),
-        (es = l('p')),
-        (xs = g('Strong')),
-        (Gs = k()),
         (V = l('div')),
+        (es = l('p')),
+        (ws = g('Strong')),
+        (js = k()),
+        (C = l('div')),
         (Q = l('p')),
-        (Hs = g('Very strong')),
-        (Ms = k()),
+        (Gs = g('Very strong')),
+        (Hs = k()),
         (D = l('div')),
         (Y = l('p')),
         (qs = g('Gona\xEFves')),
-        (As = k()),
-        (E = l('div')),
+        ($s = k()),
+        (b = l('div')),
         (ss = l('p')),
         (zs = g('Caribbean')),
         (Ps = k()),
         (ns = l('p')),
         (Is = g('Sea')),
         (ks = k()),
-        (G = l('div')),
+        (j = l('div')),
         (ts = l('p')),
         (fs = g('HAITI')),
         (Ds = k()),
-        (w = l('div')),
+        (x = l('div')),
         (B = l('p')),
         (Ls = g('Jeremie')),
-        (ms = k()),
+        (hs = k()),
         (L = l('div')),
-        (cs = l('p')),
+        (rs = l('p')),
         (Ts = g('Port-au-Prince')),
         (K = k()),
         (O = l('div')),
-        (ps = l('p')),
-        (hs = g('Epicenter')),
-        (rs = k()),
+        (is = l('p')),
+        (ms = g('Epicenter')),
+        (us = k()),
         (S = l('div')),
         (ls = l('p')),
-        (us = g('Jacmel')),
-        (os = k()),
+        (ds = g('Jacmel')),
+        (ps = k()),
         (J = l('div')),
         (ys = l('p')),
         (Ns = g('Les Cayes')),
-        (M = k()),
+        (H = k()),
         (W = l('div')),
         (Es = l('p')),
         (Vs = g('50 mi')),
-        (H = k()),
+        (G = k()),
         (R = l('div')),
         (r = l('p')),
-        (b = g('Dominican')),
+        (w = g('Dominican')),
         (N = k()),
         (F = l('p')),
-        (ws = g('Republic')),
+        (xs = g('Republic')),
         (Cs = k()),
-        (j = l('div')),
+        (M = l('div')),
         (q = l('p')),
         (Rs = g('50 km')),
         this.h();
@@ -394,26 +395,26 @@ function Yt(y) {
       var c = p(t);
       (f = o(c, 'DIV', { style: !0 })),
         p(f).forEach(n),
-        (i = m(c)),
+        (i = h(c)),
         (u = o(c, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
         p(u).forEach(n),
-        (x = m(c)),
+        (P = h(c)),
         (d = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ws = p(d);
       _ = o(Ws, 'P', { class: !0 });
       var st = p(_);
-      (P = v(st, 'Shake intensity')),
+      ($ = v(st, 'Shake intensity')),
         st.forEach(n),
         Ws.forEach(n),
-        ($ = m(c)),
+        (E = h(c)),
         (z = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ys = p(z);
-      C = o(Ys, 'P', { class: !0 });
-      var Bs = p(C);
+      T = o(Ys, 'P', { class: !0 });
+      var Bs = p(T);
       (vs = v(Bs, 'Light')),
         Bs.forEach(n),
         Ys.forEach(n),
-        (ds = m(c)),
+        (os = h(c)),
         (I = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var tt = p(I);
       Z = o(tt, 'P', { class: !0 });
@@ -421,31 +422,31 @@ function Yt(y) {
       (X = v(Fs, 'Moderate')),
         Fs.forEach(n),
         tt.forEach(n),
-        (Ss = m(c)),
+        (Ss = h(c)),
         (A = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Us = p(A);
       as = o(Us, 'P', { class: !0 });
       var Zs = p(as);
-      (js = v(Zs, 'Cap-Haitien')),
+      (Ms = v(Zs, 'Cap-Haitien')),
         Zs.forEach(n),
         Us.forEach(n),
-        (bs = m(c)),
-        (T = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var at = p(T);
+        (bs = h(c)),
+        (V = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var at = p(V);
       es = o(at, 'P', { class: !0 });
       var et = p(es);
-      (xs = v(et, 'Strong')),
+      (ws = v(et, 'Strong')),
         et.forEach(n),
         at.forEach(n),
-        (Gs = m(c)),
-        (V = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Ks = p(V);
+        (js = h(c)),
+        (C = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Ks = p(C);
       Q = o(Ks, 'P', { class: !0 });
       var Os = p(Q);
-      (Hs = v(Os, 'Very strong')),
+      (Gs = v(Os, 'Very strong')),
         Os.forEach(n),
         Ks.forEach(n),
-        (Ms = m(c)),
+        (Hs = h(c)),
         (D = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Qs = p(D);
       Y = o(Qs, 'P', { class: !0 });
@@ -453,60 +454,60 @@ function Yt(y) {
       (qs = v(Xs, 'Gona\xEFves')),
         Xs.forEach(n),
         Qs.forEach(n),
-        (As = m(c)),
-        (E = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Js = p(E);
+        ($s = h(c)),
+        (b = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Js = p(b);
       ss = o(Js, 'P', { class: !0 });
       var ut = p(ss);
       (zs = v(ut, 'Caribbean')),
         ut.forEach(n),
-        (Ps = m(Js)),
+        (Ps = h(Js)),
         (ns = o(Js, 'P', { class: !0 }));
       var dt = p(ns);
       (Is = v(dt, 'Sea')),
         dt.forEach(n),
         Js.forEach(n),
-        (ks = m(c)),
-        (G = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ft = p(G);
+        (ks = h(c)),
+        (j = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var ft = p(j);
       ts = o(ft, 'P', { class: !0 });
       var gt = p(ts);
       (fs = v(gt, 'HAITI')),
         gt.forEach(n),
         ft.forEach(n),
-        (Ds = m(c)),
-        (w = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var nt = p(w);
+        (Ds = h(c)),
+        (x = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var nt = p(x);
       B = o(nt, 'P', { class: !0 });
       var vt = p(B);
       (Ls = v(vt, 'Jeremie')),
         vt.forEach(n),
         nt.forEach(n),
-        (ms = m(c)),
+        (hs = h(c)),
         (L = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var kt = p(L);
-      cs = o(kt, 'P', { class: !0 });
-      var mt = p(cs);
-      (Ts = v(mt, 'Port-au-Prince')),
-        mt.forEach(n),
-        kt.forEach(n),
-        (K = m(c)),
-        (O = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ht = p(O);
-      ps = o(ht, 'P', { class: !0 });
-      var _t = p(ps);
-      (hs = v(_t, 'Epicenter')),
-        _t.forEach(n),
+      rs = o(kt, 'P', { class: !0 });
+      var ht = p(rs);
+      (Ts = v(ht, 'Port-au-Prince')),
         ht.forEach(n),
-        (rs = m(c)),
+        kt.forEach(n),
+        (K = h(c)),
+        (O = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var mt = p(O);
+      is = o(mt, 'P', { class: !0 });
+      var _t = p(is);
+      (ms = v(_t, 'Epicenter')),
+        _t.forEach(n),
+        mt.forEach(n),
+        (us = h(c)),
         (S = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var lt = p(S);
       ls = o(lt, 'P', { class: !0 });
       var zt = p(ls);
-      (us = v(zt, 'Jacmel')),
+      (ds = v(zt, 'Jacmel')),
         zt.forEach(n),
         lt.forEach(n),
-        (os = m(c)),
+        (ps = h(c)),
         (J = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var yt = p(J);
       ys = o(yt, 'P', { class: !0 });
@@ -514,35 +515,35 @@ function Yt(y) {
       (Ns = v(Et, 'Les Cayes')),
         Et.forEach(n),
         yt.forEach(n),
-        (M = m(c)),
+        (H = h(c)),
         (W = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var bt = p(W);
       Es = o(bt, 'P', { class: !0 });
-      var xt = p(Es);
-      (Vs = v(xt, '50 mi')),
-        xt.forEach(n),
+      var wt = p(Es);
+      (Vs = v(wt, '50 mi')),
+        wt.forEach(n),
         bt.forEach(n),
-        (H = m(c)),
+        (G = h(c)),
         (R = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var ot = p(R);
       r = o(ot, 'P', { class: !0 });
       var Pt = p(r);
-      (b = v(Pt, 'Dominican')),
+      (w = v(Pt, 'Dominican')),
         Pt.forEach(n),
-        (N = m(ot)),
+        (N = h(ot)),
         (F = o(ot, 'P', { class: !0 }));
-      var wt = p(F);
-      (ws = v(wt, 'Republic')),
-        wt.forEach(n),
+      var xt = p(F);
+      (xs = v(xt, 'Republic')),
+        xt.forEach(n),
         ot.forEach(n),
-        (Cs = m(c)),
-        (j = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var $t = p(j);
-      q = o($t, 'P', { class: !0 });
-      var At = p(q);
-      (Rs = v(At, '50 km')),
-        At.forEach(n),
+        (Cs = h(c)),
+        (M = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var At = p(M);
+      q = o(At, 'P', { class: !0 });
+      var $t = p(q);
+      (Rs = v($t, '50 km')),
         $t.forEach(n),
+        At.forEach(n),
         c.forEach(n),
         this.h();
     },
@@ -554,7 +555,7 @@ function Yt(y) {
         e(
           u,
           'style',
-          (h = `background-image: url(${Ht}/images/graphics/ai-chart-xs.png);`)
+          (m = `background-image: url(${Gt}/images/graphics/ai-chart-xs.png);`)
         ),
         e(_, 'class', 'g-pstyle0 svelte-zofauz'),
         e(d, 'id', 'g-ai0-1'),
@@ -563,7 +564,7 @@ function Yt(y) {
         a(d, 'margin-top', '-7.7px'),
         a(d, 'left', '0.5952%'),
         a(d, 'width', '99px'),
-        e(C, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(T, 'class', 'g-pstyle0 svelte-zofauz'),
         e(z, 'id', 'g-ai0-2'),
         e(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
         a(z, 'top', '9.8251%'),
@@ -585,19 +586,19 @@ function Yt(y) {
         a(A, 'left', '79.0675%'),
         a(A, 'width', '82px'),
         e(es, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(T, 'id', 'g-ai0-5'),
-        e(T, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        a(T, 'top', '21.7216%'),
-        a(T, 'margin-top', '-7.7px'),
-        a(T, 'left', '4.9821%'),
-        a(T, 'width', '55px'),
-        e(Q, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(V, 'id', 'g-ai0-6'),
+        e(V, 'id', 'g-ai0-5'),
         e(V, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        a(V, 'top', '28.0002%'),
+        a(V, 'top', '21.7216%'),
         a(V, 'margin-top', '-7.7px'),
         a(V, 'left', '4.9821%'),
-        a(V, 'width', '78px'),
+        a(V, 'width', '55px'),
+        e(Q, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(C, 'id', 'g-ai0-6'),
+        e(C, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        a(C, 'top', '28.0002%'),
+        a(C, 'margin-top', '-7.7px'),
+        a(C, 'left', '4.9821%'),
+        a(C, 'width', '78px'),
         e(Y, 'class', 'g-pstyle0 svelte-zofauz'),
         e(D, 'id', 'g-ai0-7'),
         e(D, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
@@ -607,35 +608,35 @@ function Yt(y) {
         a(D, 'width', '68px'),
         e(ss, 'class', 'g-pstyle1 svelte-zofauz'),
         e(ns, 'class', 'g-pstyle1 svelte-zofauz'),
-        e(E, 'id', 'g-ai0-8'),
-        e(E, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(E, 'top', '39.9449%'),
-        a(E, 'margin-top', '-14.9px'),
-        a(E, 'left', '28.714%'),
-        a(E, 'margin-left', '-36.5px'),
-        a(E, 'width', '73px'),
+        e(b, 'id', 'g-ai0-8'),
+        e(b, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(b, 'top', '39.9449%'),
+        a(b, 'margin-top', '-14.9px'),
+        a(b, 'left', '28.714%'),
+        a(b, 'margin-left', '-36.5px'),
+        a(b, 'width', '73px'),
         e(ts, 'class', 'g-pstyle2 svelte-zofauz'),
-        e(G, 'id', 'g-ai0-9'),
-        e(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(G, 'top', '42.6579%'),
-        a(G, 'margin-top', '-10.1px'),
-        a(G, 'left', '68.5061%'),
-        a(G, 'width', '77px'),
+        e(j, 'id', 'g-ai0-9'),
+        e(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(j, 'top', '42.6579%'),
+        a(j, 'margin-top', '-10.1px'),
+        a(j, 'left', '68.5061%'),
+        a(j, 'width', '77px'),
         e(B, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(w, 'id', 'g-ai0-10'),
-        e(w, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(w, 'top', '59.0632%'),
-        a(w, 'margin-top', '-7.7px'),
-        a(w, 'left', '11.2526%'),
-        a(w, 'width', '63px'),
-        e(cs, 'class', 'g-pstyle3 svelte-zofauz'),
+        e(x, 'id', 'g-ai0-10'),
+        e(x, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(x, 'top', '59.0632%'),
+        a(x, 'margin-top', '-7.7px'),
+        a(x, 'left', '11.2526%'),
+        a(x, 'width', '63px'),
+        e(rs, 'class', 'g-pstyle3 svelte-zofauz'),
         e(L, 'id', 'g-ai0-11'),
         e(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
         a(L, 'top', '61.1155%'),
         a(L, 'margin-top', '-8.9px'),
         a(L, 'left', '70.5455%'),
         a(L, 'width', '106px'),
-        e(ps, 'class', 'g-pstyle3 svelte-zofauz'),
+        e(is, 'class', 'g-pstyle3 svelte-zofauz'),
         e(O, 'id', 'g-ai0-12'),
         e(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
         a(O, 'top', '62.1069%'),
@@ -672,12 +673,12 @@ function Yt(y) {
         a(R, 'right', '10.4418%'),
         a(R, 'width', '70px'),
         e(q, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(j, 'id', 'g-ai0-17'),
-        e(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(j, 'top', '93.7611%'),
-        a(j, 'margin-top', '-7.7px'),
-        a(j, 'left', '0.6179%'),
-        a(j, 'width', '52px'),
+        e(M, 'id', 'g-ai0-17'),
+        e(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(M, 'top', '93.7611%'),
+        a(M, 'margin-top', '-7.7px'),
+        a(M, 'left', '0.6179%'),
+        a(M, 'width', '52px'),
         e(t, 'id', 'g-_ai-chart-xs'),
         e(t, 'class', 'g-artboard svelte-zofauz'),
         e(t, 'style', '');
@@ -687,82 +688,82 @@ function Yt(y) {
         s(t, f),
         s(t, i),
         s(t, u),
-        s(t, x),
+        s(t, P),
         s(t, d),
         s(d, _),
-        s(_, P),
-        s(t, $),
+        s(_, $),
+        s(t, E),
         s(t, z),
-        s(z, C),
-        s(C, vs),
-        s(t, ds),
+        s(z, T),
+        s(T, vs),
+        s(t, os),
         s(t, I),
         s(I, Z),
         s(Z, X),
         s(t, Ss),
         s(t, A),
         s(A, as),
-        s(as, js),
+        s(as, Ms),
         s(t, bs),
-        s(t, T),
-        s(T, es),
-        s(es, xs),
-        s(t, Gs),
         s(t, V),
-        s(V, Q),
-        s(Q, Hs),
-        s(t, Ms),
+        s(V, es),
+        s(es, ws),
+        s(t, js),
+        s(t, C),
+        s(C, Q),
+        s(Q, Gs),
+        s(t, Hs),
         s(t, D),
         s(D, Y),
         s(Y, qs),
-        s(t, As),
-        s(t, E),
-        s(E, ss),
+        s(t, $s),
+        s(t, b),
+        s(b, ss),
         s(ss, zs),
-        s(E, Ps),
-        s(E, ns),
+        s(b, Ps),
+        s(b, ns),
         s(ns, Is),
         s(t, ks),
-        s(t, G),
-        s(G, ts),
+        s(t, j),
+        s(j, ts),
         s(ts, fs),
         s(t, Ds),
-        s(t, w),
-        s(w, B),
+        s(t, x),
+        s(x, B),
         s(B, Ls),
-        s(t, ms),
+        s(t, hs),
         s(t, L),
-        s(L, cs),
-        s(cs, Ts),
+        s(L, rs),
+        s(rs, Ts),
         s(t, K),
         s(t, O),
-        s(O, ps),
-        s(ps, hs),
-        s(t, rs),
+        s(O, is),
+        s(is, ms),
+        s(t, us),
         s(t, S),
         s(S, ls),
-        s(ls, us),
-        s(t, os),
+        s(ls, ds),
+        s(t, ps),
         s(t, J),
         s(J, ys),
         s(ys, Ns),
-        s(t, M),
+        s(t, H),
         s(t, W),
         s(W, Es),
         s(Es, Vs),
-        s(t, H),
+        s(t, G),
         s(t, R),
         s(R, r),
-        s(r, b),
+        s(r, w),
         s(R, N),
         s(R, F),
-        s(F, ws),
+        s(F, xs),
         s(t, Cs),
-        s(t, j),
-        s(j, q),
+        s(t, M),
+        s(M, q),
         s(q, Rs);
     },
-    p: is,
+    p: cs,
     d(gs) {
       gs && n(t);
     },
@@ -773,79 +774,79 @@ function Bt(y) {
     f,
     i,
     u,
-    h,
-    x,
+    m,
+    P,
     d,
     _,
-    P,
     $,
+    E,
     z,
-    C,
+    T,
     vs,
-    ds,
+    os,
     I,
     Z,
     X,
     Ss,
     A,
     as,
-    js,
-    bs,
-    T,
-    es,
-    xs,
-    Gs,
-    V,
-    Q,
-    Hs,
     Ms,
+    bs,
+    V,
+    es,
+    ws,
+    js,
+    C,
+    Q,
+    Gs,
+    Hs,
     D,
     Y,
     qs,
-    As,
-    E,
+    $s,
+    b,
     ss,
     zs,
     Ps,
     ns,
     Is,
     ks,
-    G,
+    j,
     ts,
     fs,
     Ds,
-    w,
+    x,
     B,
     Ls,
-    ms,
+    hs,
     L,
-    cs,
+    rs,
     Ts,
     K,
     O,
-    ps,
-    hs,
-    rs,
+    is,
+    ms,
+    us,
     S,
     ls,
-    us,
-    os,
+    ds,
+    ps,
     J,
     ys,
     Ns,
-    M,
+    H,
     W,
     Es,
     Vs,
-    H,
+    G,
     R,
     r,
-    b,
+    w,
     N,
     F,
-    ws,
+    xs,
     Cs,
-    j,
+    M,
     q,
     Rs;
   return {
@@ -854,78 +855,78 @@ function Bt(y) {
         (f = l('div')),
         (i = k()),
         (u = l('div')),
-        (x = k()),
+        (P = k()),
         (d = l('div')),
         (_ = l('p')),
-        (P = g('Shake intensity')),
-        ($ = k()),
+        ($ = g('Shake intensity')),
+        (E = k()),
         (z = l('div')),
-        (C = l('p')),
+        (T = l('p')),
         (vs = g('Light')),
-        (ds = k()),
+        (os = k()),
         (I = l('div')),
         (Z = l('p')),
         (X = g('Moderate')),
         (Ss = k()),
         (A = l('div')),
         (as = l('p')),
-        (js = g('Cap-Haitien')),
+        (Ms = g('Cap-Haitien')),
         (bs = k()),
-        (T = l('div')),
-        (es = l('p')),
-        (xs = g('Strong')),
-        (Gs = k()),
         (V = l('div')),
+        (es = l('p')),
+        (ws = g('Strong')),
+        (js = k()),
+        (C = l('div')),
         (Q = l('p')),
-        (Hs = g('Very strong')),
-        (Ms = k()),
+        (Gs = g('Very strong')),
+        (Hs = k()),
         (D = l('div')),
         (Y = l('p')),
         (qs = g('Gona\xEFves')),
-        (As = k()),
-        (E = l('div')),
+        ($s = k()),
+        (b = l('div')),
         (ss = l('p')),
         (zs = g('Caribbean')),
         (Ps = k()),
         (ns = l('p')),
         (Is = g('Sea')),
         (ks = k()),
-        (G = l('div')),
+        (j = l('div')),
         (ts = l('p')),
         (fs = g('HAITI')),
         (Ds = k()),
-        (w = l('div')),
+        (x = l('div')),
         (B = l('p')),
         (Ls = g('Jeremie')),
-        (ms = k()),
+        (hs = k()),
         (L = l('div')),
-        (cs = l('p')),
+        (rs = l('p')),
         (Ts = g('Port-au-Prince')),
         (K = k()),
         (O = l('div')),
-        (ps = l('p')),
-        (hs = g('Epicenter')),
-        (rs = k()),
+        (is = l('p')),
+        (ms = g('Epicenter')),
+        (us = k()),
         (S = l('div')),
         (ls = l('p')),
-        (us = g('Dominican')),
-        (os = k()),
+        (ds = g('Dominican')),
+        (ps = k()),
         (J = l('p')),
         (ys = g('Republic')),
         (Ns = k()),
-        (M = l('div')),
+        (H = l('div')),
         (W = l('p')),
         (Es = g('Jacmel')),
         (Vs = k()),
-        (H = l('div')),
+        (G = l('div')),
         (R = l('p')),
         (r = g('Les Cayes')),
-        (b = k()),
+        (w = k()),
         (N = l('div')),
         (F = l('p')),
-        (ws = g('50 mi')),
+        (xs = g('50 mi')),
         (Cs = k()),
-        (j = l('div')),
+        (M = l('div')),
         (q = l('p')),
         (Rs = g('50 km')),
         this.h();
@@ -935,26 +936,26 @@ function Bt(y) {
       var c = p(t);
       (f = o(c, 'DIV', { style: !0 })),
         p(f).forEach(n),
-        (i = m(c)),
+        (i = h(c)),
         (u = o(c, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
         p(u).forEach(n),
-        (x = m(c)),
+        (P = h(c)),
         (d = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ws = p(d);
       _ = o(Ws, 'P', { class: !0 });
       var st = p(_);
-      (P = v(st, 'Shake intensity')),
+      ($ = v(st, 'Shake intensity')),
         st.forEach(n),
         Ws.forEach(n),
-        ($ = m(c)),
+        (E = h(c)),
         (z = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ys = p(z);
-      C = o(Ys, 'P', { class: !0 });
-      var Bs = p(C);
+      T = o(Ys, 'P', { class: !0 });
+      var Bs = p(T);
       (vs = v(Bs, 'Light')),
         Bs.forEach(n),
         Ys.forEach(n),
-        (ds = m(c)),
+        (os = h(c)),
         (I = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var tt = p(I);
       Z = o(tt, 'P', { class: !0 });
@@ -962,31 +963,31 @@ function Bt(y) {
       (X = v(Fs, 'Moderate')),
         Fs.forEach(n),
         tt.forEach(n),
-        (Ss = m(c)),
+        (Ss = h(c)),
         (A = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Us = p(A);
       as = o(Us, 'P', { class: !0 });
       var Zs = p(as);
-      (js = v(Zs, 'Cap-Haitien')),
+      (Ms = v(Zs, 'Cap-Haitien')),
         Zs.forEach(n),
         Us.forEach(n),
-        (bs = m(c)),
-        (T = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var at = p(T);
+        (bs = h(c)),
+        (V = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var at = p(V);
       es = o(at, 'P', { class: !0 });
       var et = p(es);
-      (xs = v(et, 'Strong')),
+      (ws = v(et, 'Strong')),
         et.forEach(n),
         at.forEach(n),
-        (Gs = m(c)),
-        (V = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Ks = p(V);
+        (js = h(c)),
+        (C = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Ks = p(C);
       Q = o(Ks, 'P', { class: !0 });
       var Os = p(Q);
-      (Hs = v(Os, 'Very strong')),
+      (Gs = v(Os, 'Very strong')),
         Os.forEach(n),
         Ks.forEach(n),
-        (Ms = m(c)),
+        (Hs = h(c)),
         (D = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Qs = p(D);
       Y = o(Qs, 'P', { class: !0 });
@@ -994,96 +995,96 @@ function Bt(y) {
       (qs = v(Xs, 'Gona\xEFves')),
         Xs.forEach(n),
         Qs.forEach(n),
-        (As = m(c)),
-        (E = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Js = p(E);
+        ($s = h(c)),
+        (b = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Js = p(b);
       ss = o(Js, 'P', { class: !0 });
       var ut = p(ss);
       (zs = v(ut, 'Caribbean')),
         ut.forEach(n),
-        (Ps = m(Js)),
+        (Ps = h(Js)),
         (ns = o(Js, 'P', { class: !0 }));
       var dt = p(ns);
       (Is = v(dt, 'Sea')),
         dt.forEach(n),
         Js.forEach(n),
-        (ks = m(c)),
-        (G = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ft = p(G);
+        (ks = h(c)),
+        (j = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var ft = p(j);
       ts = o(ft, 'P', { class: !0 });
       var gt = p(ts);
       (fs = v(gt, 'HAITI')),
         gt.forEach(n),
         ft.forEach(n),
-        (Ds = m(c)),
-        (w = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var nt = p(w);
+        (Ds = h(c)),
+        (x = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var nt = p(x);
       B = o(nt, 'P', { class: !0 });
       var vt = p(B);
       (Ls = v(vt, 'Jeremie')),
         vt.forEach(n),
         nt.forEach(n),
-        (ms = m(c)),
+        (hs = h(c)),
         (L = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var kt = p(L);
-      cs = o(kt, 'P', { class: !0 });
-      var mt = p(cs);
-      (Ts = v(mt, 'Port-au-Prince')),
-        mt.forEach(n),
-        kt.forEach(n),
-        (K = m(c)),
-        (O = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ht = p(O);
-      ps = o(ht, 'P', { class: !0 });
-      var _t = p(ps);
-      (hs = v(_t, 'Epicenter')),
-        _t.forEach(n),
+      rs = o(kt, 'P', { class: !0 });
+      var ht = p(rs);
+      (Ts = v(ht, 'Port-au-Prince')),
         ht.forEach(n),
-        (rs = m(c)),
+        kt.forEach(n),
+        (K = h(c)),
+        (O = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var mt = p(O);
+      is = o(mt, 'P', { class: !0 });
+      var _t = p(is);
+      (ms = v(_t, 'Epicenter')),
+        _t.forEach(n),
+        mt.forEach(n),
+        (us = h(c)),
         (S = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var lt = p(S);
       ls = o(lt, 'P', { class: !0 });
       var zt = p(ls);
-      (us = v(zt, 'Dominican')),
+      (ds = v(zt, 'Dominican')),
         zt.forEach(n),
-        (os = m(lt)),
+        (ps = h(lt)),
         (J = o(lt, 'P', { class: !0 }));
       var yt = p(J);
       (ys = v(yt, 'Republic')),
         yt.forEach(n),
         lt.forEach(n),
-        (Ns = m(c)),
-        (M = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Et = p(M);
+        (Ns = h(c)),
+        (H = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Et = p(H);
       W = o(Et, 'P', { class: !0 });
       var bt = p(W);
       (Es = v(bt, 'Jacmel')),
         bt.forEach(n),
         Et.forEach(n),
-        (Vs = m(c)),
-        (H = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var xt = p(H);
-      R = o(xt, 'P', { class: !0 });
+        (Vs = h(c)),
+        (G = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var wt = p(G);
+      R = o(wt, 'P', { class: !0 });
       var ot = p(R);
       (r = v(ot, 'Les Cayes')),
         ot.forEach(n),
-        xt.forEach(n),
-        (b = m(c)),
+        wt.forEach(n),
+        (w = h(c)),
         (N = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Pt = p(N);
       F = o(Pt, 'P', { class: !0 });
-      var wt = p(F);
-      (ws = v(wt, '50 mi')),
-        wt.forEach(n),
+      var xt = p(F);
+      (xs = v(xt, '50 mi')),
+        xt.forEach(n),
         Pt.forEach(n),
-        (Cs = m(c)),
-        (j = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var $t = p(j);
-      q = o($t, 'P', { class: !0 });
-      var At = p(q);
-      (Rs = v(At, '50 km')),
-        At.forEach(n),
+        (Cs = h(c)),
+        (M = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var At = p(M);
+      q = o(At, 'P', { class: !0 });
+      var $t = p(q);
+      (Rs = v($t, '50 km')),
         $t.forEach(n),
+        At.forEach(n),
         c.forEach(n),
         this.h();
     },
@@ -1095,7 +1096,7 @@ function Bt(y) {
         e(
           u,
           'style',
-          (h = `background-image: url(${Ht}/images/graphics/ai-chart-sm.png);`)
+          (m = `background-image: url(${Gt}/images/graphics/ai-chart-sm.png);`)
         ),
         e(_, 'class', 'g-pstyle0 svelte-zofauz'),
         e(d, 'id', 'g-ai1-1'),
@@ -1104,7 +1105,7 @@ function Bt(y) {
         a(d, 'margin-top', '-9.4px'),
         a(d, 'left', '0.3278%'),
         a(d, 'width', '111px'),
-        e(C, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(T, 'class', 'g-pstyle0 svelte-zofauz'),
         e(z, 'id', 'g-ai1-2'),
         e(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
         a(z, 'top', '9.0933%'),
@@ -1126,19 +1127,19 @@ function Bt(y) {
         a(A, 'left', '70.3255%'),
         a(A, 'width', '92px'),
         e(es, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(T, 'id', 'g-ai1-5'),
-        e(T, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        a(T, 'top', '18.3397%'),
-        a(T, 'margin-top', '-9.4px'),
-        a(T, 'left', '3.0258%'),
-        a(T, 'width', '61px'),
-        e(Q, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(V, 'id', 'g-ai1-6'),
+        e(V, 'id', 'g-ai1-5'),
         e(V, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        a(V, 'top', '22.6073%'),
+        a(V, 'top', '18.3397%'),
         a(V, 'margin-top', '-9.4px'),
         a(V, 'left', '3.0258%'),
-        a(V, 'width', '88px'),
+        a(V, 'width', '61px'),
+        e(Q, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(C, 'id', 'g-ai1-6'),
+        e(C, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        a(C, 'top', '22.6073%'),
+        a(C, 'margin-top', '-9.4px'),
+        a(C, 'left', '3.0258%'),
+        a(C, 'width', '88px'),
         e(Y, 'class', 'g-pstyle0 svelte-zofauz'),
         e(D, 'id', 'g-ai1-7'),
         e(D, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
@@ -1148,35 +1149,35 @@ function Bt(y) {
         a(D, 'width', '76px'),
         e(ss, 'class', 'g-pstyle1 svelte-zofauz'),
         e(ns, 'class', 'g-pstyle1 svelte-zofauz'),
-        e(E, 'id', 'g-ai1-8'),
-        e(E, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(E, 'top', '38.8091%'),
-        a(E, 'margin-top', '-17.7px'),
-        a(E, 'left', '27.2818%'),
-        a(E, 'margin-left', '-41px'),
-        a(E, 'width', '82px'),
+        e(b, 'id', 'g-ai1-8'),
+        e(b, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(b, 'top', '38.8091%'),
+        a(b, 'margin-top', '-17.7px'),
+        a(b, 'left', '27.2818%'),
+        a(b, 'margin-left', '-41px'),
+        a(b, 'width', '82px'),
         e(ts, 'class', 'g-pstyle2 svelte-zofauz'),
-        e(G, 'id', 'g-ai1-9'),
-        e(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(G, 'top', '39.9724%'),
-        a(G, 'margin-top', '-8.6px'),
-        a(G, 'left', '61.2858%'),
-        a(G, 'width', '67px'),
+        e(j, 'id', 'g-ai1-9'),
+        e(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(j, 'top', '39.9724%'),
+        a(j, 'margin-top', '-8.6px'),
+        a(j, 'left', '61.2858%'),
+        a(j, 'width', '67px'),
         e(B, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(w, 'id', 'g-ai1-10'),
-        e(w, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(w, 'top', '56.985%'),
-        a(w, 'margin-top', '-9.4px'),
-        a(w, 'left', '12.2815%'),
-        a(w, 'width', '69px'),
-        e(cs, 'class', 'g-pstyle3 svelte-zofauz'),
+        e(x, 'id', 'g-ai1-10'),
+        e(x, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(x, 'top', '56.985%'),
+        a(x, 'margin-top', '-9.4px'),
+        a(x, 'left', '12.2815%'),
+        a(x, 'width', '69px'),
+        e(rs, 'class', 'g-pstyle3 svelte-zofauz'),
         e(L, 'id', 'g-ai1-11'),
         e(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
         a(L, 'top', '59.1569%'),
         a(L, 'margin-top', '-9.5px'),
         a(L, 'left', '63.0314%'),
         a(L, 'width', '112px'),
-        e(ps, 'class', 'g-pstyle3 svelte-zofauz'),
+        e(is, 'class', 'g-pstyle3 svelte-zofauz'),
         e(O, 'id', 'g-ai1-12'),
         e(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
         a(O, 'top', '60.1053%'),
@@ -1193,19 +1194,19 @@ function Bt(y) {
         a(S, 'margin-left', '-57px'),
         a(S, 'width', '114px'),
         e(W, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(M, 'id', 'g-ai1-14'),
-        e(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(M, 'top', '75.4778%'),
-        a(M, 'margin-top', '-9.4px'),
-        a(M, 'left', '57.3552%'),
-        a(M, 'width', '64px'),
-        e(R, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(H, 'id', 'g-ai1-15'),
+        e(H, 'id', 'g-ai1-14'),
         e(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(H, 'top', '76.6632%'),
+        a(H, 'top', '75.4778%'),
         a(H, 'margin-top', '-9.4px'),
-        a(H, 'left', '21.9639%'),
-        a(H, 'width', '79px'),
+        a(H, 'left', '57.3552%'),
+        a(H, 'width', '64px'),
+        e(R, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(G, 'id', 'g-ai1-15'),
+        e(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(G, 'top', '76.6632%'),
+        a(G, 'margin-top', '-9.4px'),
+        a(G, 'left', '21.9639%'),
+        a(G, 'width', '79px'),
         e(F, 'class', 'g-pstyle5 svelte-zofauz'),
         e(N, 'id', 'g-ai1-16'),
         e(N, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
@@ -1214,12 +1215,12 @@ function Bt(y) {
         a(N, 'left', '0.1344%'),
         a(N, 'width', '49px'),
         e(q, 'class', 'g-pstyle5 svelte-zofauz'),
-        e(j, 'id', 'g-ai1-17'),
-        e(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(j, 'top', '90.0297%'),
-        a(j, 'margin-top', '-7.7px'),
-        a(j, 'left', '0.1344%'),
-        a(j, 'width', '52px'),
+        e(M, 'id', 'g-ai1-17'),
+        e(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(M, 'top', '90.0297%'),
+        a(M, 'margin-top', '-7.7px'),
+        a(M, 'left', '0.1344%'),
+        a(M, 'width', '52px'),
         e(t, 'id', 'g-_ai-chart-sm'),
         e(t, 'class', 'g-artboard svelte-zofauz'),
         e(t, 'style', '');
@@ -1229,82 +1230,82 @@ function Bt(y) {
         s(t, f),
         s(t, i),
         s(t, u),
-        s(t, x),
+        s(t, P),
         s(t, d),
         s(d, _),
-        s(_, P),
-        s(t, $),
+        s(_, $),
+        s(t, E),
         s(t, z),
-        s(z, C),
-        s(C, vs),
-        s(t, ds),
+        s(z, T),
+        s(T, vs),
+        s(t, os),
         s(t, I),
         s(I, Z),
         s(Z, X),
         s(t, Ss),
         s(t, A),
         s(A, as),
-        s(as, js),
+        s(as, Ms),
         s(t, bs),
-        s(t, T),
-        s(T, es),
-        s(es, xs),
-        s(t, Gs),
         s(t, V),
-        s(V, Q),
-        s(Q, Hs),
-        s(t, Ms),
+        s(V, es),
+        s(es, ws),
+        s(t, js),
+        s(t, C),
+        s(C, Q),
+        s(Q, Gs),
+        s(t, Hs),
         s(t, D),
         s(D, Y),
         s(Y, qs),
-        s(t, As),
-        s(t, E),
-        s(E, ss),
+        s(t, $s),
+        s(t, b),
+        s(b, ss),
         s(ss, zs),
-        s(E, Ps),
-        s(E, ns),
+        s(b, Ps),
+        s(b, ns),
         s(ns, Is),
         s(t, ks),
-        s(t, G),
-        s(G, ts),
+        s(t, j),
+        s(j, ts),
         s(ts, fs),
         s(t, Ds),
-        s(t, w),
-        s(w, B),
+        s(t, x),
+        s(x, B),
         s(B, Ls),
-        s(t, ms),
+        s(t, hs),
         s(t, L),
-        s(L, cs),
-        s(cs, Ts),
+        s(L, rs),
+        s(rs, Ts),
         s(t, K),
         s(t, O),
-        s(O, ps),
-        s(ps, hs),
-        s(t, rs),
+        s(O, is),
+        s(is, ms),
+        s(t, us),
         s(t, S),
         s(S, ls),
-        s(ls, us),
-        s(S, os),
+        s(ls, ds),
+        s(S, ps),
         s(S, J),
         s(J, ys),
         s(t, Ns),
-        s(t, M),
-        s(M, W),
+        s(t, H),
+        s(H, W),
         s(W, Es),
         s(t, Vs),
-        s(t, H),
-        s(H, R),
+        s(t, G),
+        s(G, R),
         s(R, r),
-        s(t, b),
+        s(t, w),
         s(t, N),
         s(N, F),
-        s(F, ws),
+        s(F, xs),
         s(t, Cs),
-        s(t, j),
-        s(j, q),
+        s(t, M),
+        s(M, q),
         s(q, Rs);
     },
-    p: is,
+    p: cs,
     d(gs) {
       gs && n(t);
     },
@@ -1315,79 +1316,79 @@ function Ft(y) {
     f,
     i,
     u,
-    h,
-    x,
+    m,
+    P,
     d,
     _,
-    P,
     $,
+    E,
     z,
-    C,
+    T,
     vs,
-    ds,
+    os,
     I,
     Z,
     X,
     Ss,
     A,
     as,
-    js,
-    bs,
-    T,
-    es,
-    xs,
-    Gs,
-    V,
-    Q,
-    Hs,
     Ms,
+    bs,
+    V,
+    es,
+    ws,
+    js,
+    C,
+    Q,
+    Gs,
+    Hs,
     D,
     Y,
     qs,
-    As,
-    E,
+    $s,
+    b,
     ss,
     zs,
     Ps,
     ns,
     Is,
     ks,
-    G,
+    j,
     ts,
     fs,
     Ds,
-    w,
+    x,
     B,
     Ls,
-    ms,
+    hs,
     L,
-    cs,
+    rs,
     Ts,
     K,
     O,
-    ps,
-    hs,
-    rs,
+    is,
+    ms,
+    us,
     S,
     ls,
-    us,
-    os,
+    ds,
+    ps,
     J,
     ys,
     Ns,
-    M,
+    H,
     W,
     Es,
     Vs,
-    H,
+    G,
     R,
     r,
-    b,
+    w,
     N,
     F,
-    ws,
+    xs,
     Cs,
-    j,
+    M,
     q,
     Rs;
   return {
@@ -1396,78 +1397,78 @@ function Ft(y) {
         (f = l('div')),
         (i = k()),
         (u = l('div')),
-        (x = k()),
+        (P = k()),
         (d = l('div')),
         (_ = l('p')),
-        (P = g('Shake intensity')),
-        ($ = k()),
+        ($ = g('Shake intensity')),
+        (E = k()),
         (z = l('div')),
-        (C = l('p')),
+        (T = l('p')),
         (vs = g('Light')),
-        (ds = k()),
+        (os = k()),
         (I = l('div')),
         (Z = l('p')),
         (X = g('Moderate')),
         (Ss = k()),
         (A = l('div')),
         (as = l('p')),
-        (js = g('Cap-Haitien')),
+        (Ms = g('Cap-Haitien')),
         (bs = k()),
-        (T = l('div')),
-        (es = l('p')),
-        (xs = g('Strong')),
-        (Gs = k()),
         (V = l('div')),
+        (es = l('p')),
+        (ws = g('Strong')),
+        (js = k()),
+        (C = l('div')),
         (Q = l('p')),
-        (Hs = g('Very strong')),
-        (Ms = k()),
+        (Gs = g('Very strong')),
+        (Hs = k()),
         (D = l('div')),
         (Y = l('p')),
         (qs = g('Gona\xEFves')),
-        (As = k()),
-        (E = l('div')),
+        ($s = k()),
+        (b = l('div')),
         (ss = l('p')),
         (zs = g('Caribbean')),
         (Ps = k()),
         (ns = l('p')),
         (Is = g('Sea')),
         (ks = k()),
-        (G = l('div')),
+        (j = l('div')),
         (ts = l('p')),
         (fs = g('HAITI')),
         (Ds = k()),
-        (w = l('div')),
+        (x = l('div')),
         (B = l('p')),
         (Ls = g('Dominican')),
-        (ms = k()),
+        (hs = k()),
         (L = l('p')),
-        (cs = g('Republic')),
+        (rs = g('Republic')),
         (Ts = k()),
         (K = l('div')),
         (O = l('p')),
-        (ps = g('Jeremie')),
-        (hs = k()),
-        (rs = l('div')),
+        (is = g('Jeremie')),
+        (ms = k()),
+        (us = l('div')),
         (S = l('p')),
         (ls = g('Epicenter')),
-        (us = k()),
-        (os = l('div')),
+        (ds = k()),
+        (ps = l('div')),
         (J = l('p')),
         (ys = g('Port-au-Prince')),
         (Ns = k()),
-        (M = l('div')),
+        (H = l('div')),
         (W = l('p')),
         (Es = g('Jacmel')),
         (Vs = k()),
-        (H = l('div')),
+        (G = l('div')),
         (R = l('p')),
         (r = g('Les Cayes')),
-        (b = k()),
+        (w = k()),
         (N = l('div')),
         (F = l('p')),
-        (ws = g('50 mi')),
+        (xs = g('50 mi')),
         (Cs = k()),
-        (j = l('div')),
+        (M = l('div')),
         (q = l('p')),
         (Rs = g('50 km')),
         this.h();
@@ -1477,26 +1478,26 @@ function Ft(y) {
       var c = p(t);
       (f = o(c, 'DIV', { style: !0 })),
         p(f).forEach(n),
-        (i = m(c)),
+        (i = h(c)),
         (u = o(c, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
         p(u).forEach(n),
-        (x = m(c)),
+        (P = h(c)),
         (d = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ws = p(d);
       _ = o(Ws, 'P', { class: !0 });
       var st = p(_);
-      (P = v(st, 'Shake intensity')),
+      ($ = v(st, 'Shake intensity')),
         st.forEach(n),
         Ws.forEach(n),
-        ($ = m(c)),
+        (E = h(c)),
         (z = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ys = p(z);
-      C = o(Ys, 'P', { class: !0 });
-      var Bs = p(C);
+      T = o(Ys, 'P', { class: !0 });
+      var Bs = p(T);
       (vs = v(Bs, 'Light')),
         Bs.forEach(n),
         Ys.forEach(n),
-        (ds = m(c)),
+        (os = h(c)),
         (I = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var tt = p(I);
       Z = o(tt, 'P', { class: !0 });
@@ -1504,31 +1505,31 @@ function Ft(y) {
       (X = v(Fs, 'Moderate')),
         Fs.forEach(n),
         tt.forEach(n),
-        (Ss = m(c)),
+        (Ss = h(c)),
         (A = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Us = p(A);
       as = o(Us, 'P', { class: !0 });
       var Zs = p(as);
-      (js = v(Zs, 'Cap-Haitien')),
+      (Ms = v(Zs, 'Cap-Haitien')),
         Zs.forEach(n),
         Us.forEach(n),
-        (bs = m(c)),
-        (T = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var at = p(T);
+        (bs = h(c)),
+        (V = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var at = p(V);
       es = o(at, 'P', { class: !0 });
       var et = p(es);
-      (xs = v(et, 'Strong')),
+      (ws = v(et, 'Strong')),
         et.forEach(n),
         at.forEach(n),
-        (Gs = m(c)),
-        (V = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Ks = p(V);
+        (js = h(c)),
+        (C = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Ks = p(C);
       Q = o(Ks, 'P', { class: !0 });
       var Os = p(Q);
-      (Hs = v(Os, 'Very strong')),
+      (Gs = v(Os, 'Very strong')),
         Os.forEach(n),
         Ks.forEach(n),
-        (Ms = m(c)),
+        (Hs = h(c)),
         (D = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Qs = p(D);
       Y = o(Qs, 'P', { class: !0 });
@@ -1536,96 +1537,96 @@ function Ft(y) {
       (qs = v(Xs, 'Gona\xEFves')),
         Xs.forEach(n),
         Qs.forEach(n),
-        (As = m(c)),
-        (E = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Js = p(E);
+        ($s = h(c)),
+        (b = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Js = p(b);
       ss = o(Js, 'P', { class: !0 });
       var ut = p(ss);
       (zs = v(ut, 'Caribbean')),
         ut.forEach(n),
-        (Ps = m(Js)),
+        (Ps = h(Js)),
         (ns = o(Js, 'P', { class: !0 }));
       var dt = p(ns);
       (Is = v(dt, 'Sea')),
         dt.forEach(n),
         Js.forEach(n),
-        (ks = m(c)),
-        (G = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ft = p(G);
+        (ks = h(c)),
+        (j = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var ft = p(j);
       ts = o(ft, 'P', { class: !0 });
       var gt = p(ts);
       (fs = v(gt, 'HAITI')),
         gt.forEach(n),
         ft.forEach(n),
-        (Ds = m(c)),
-        (w = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var nt = p(w);
+        (Ds = h(c)),
+        (x = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var nt = p(x);
       B = o(nt, 'P', { class: !0 });
       var vt = p(B);
       (Ls = v(vt, 'Dominican')),
         vt.forEach(n),
-        (ms = m(nt)),
+        (hs = h(nt)),
         (L = o(nt, 'P', { class: !0 }));
       var kt = p(L);
-      (cs = v(kt, 'Republic')),
+      (rs = v(kt, 'Republic')),
         kt.forEach(n),
         nt.forEach(n),
-        (Ts = m(c)),
+        (Ts = h(c)),
         (K = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var mt = p(K);
-      O = o(mt, 'P', { class: !0 });
-      var ht = p(O);
-      (ps = v(ht, 'Jeremie')),
-        ht.forEach(n),
+      var ht = p(K);
+      O = o(ht, 'P', { class: !0 });
+      var mt = p(O);
+      (is = v(mt, 'Jeremie')),
         mt.forEach(n),
-        (hs = m(c)),
-        (rs = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var _t = p(rs);
+        ht.forEach(n),
+        (ms = h(c)),
+        (us = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var _t = p(us);
       S = o(_t, 'P', { class: !0 });
       var lt = p(S);
       (ls = v(lt, 'Epicenter')),
         lt.forEach(n),
         _t.forEach(n),
-        (us = m(c)),
-        (os = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var zt = p(os);
+        (ds = h(c)),
+        (ps = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var zt = p(ps);
       J = o(zt, 'P', { class: !0 });
       var yt = p(J);
       (ys = v(yt, 'Port-au-Prince')),
         yt.forEach(n),
         zt.forEach(n),
-        (Ns = m(c)),
-        (M = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Et = p(M);
+        (Ns = h(c)),
+        (H = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Et = p(H);
       W = o(Et, 'P', { class: !0 });
       var bt = p(W);
       (Es = v(bt, 'Jacmel')),
         bt.forEach(n),
         Et.forEach(n),
-        (Vs = m(c)),
-        (H = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var xt = p(H);
-      R = o(xt, 'P', { class: !0 });
+        (Vs = h(c)),
+        (G = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var wt = p(G);
+      R = o(wt, 'P', { class: !0 });
       var ot = p(R);
       (r = v(ot, 'Les Cayes')),
         ot.forEach(n),
-        xt.forEach(n),
-        (b = m(c)),
+        wt.forEach(n),
+        (w = h(c)),
         (N = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
       var Pt = p(N);
       F = o(Pt, 'P', { class: !0 });
-      var wt = p(F);
-      (ws = v(wt, '50 mi')),
-        wt.forEach(n),
+      var xt = p(F);
+      (xs = v(xt, '50 mi')),
+        xt.forEach(n),
         Pt.forEach(n),
-        (Cs = m(c)),
-        (j = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
-      var $t = p(j);
-      q = o($t, 'P', { class: !0 });
-      var At = p(q);
-      (Rs = v(At, '50 km')),
-        At.forEach(n),
+        (Cs = h(c)),
+        (M = o(c, 'DIV', { id: !0, class: !0, style: !0 }));
+      var At = p(M);
+      q = o(At, 'P', { class: !0 });
+      var $t = p(q);
+      (Rs = v($t, '50 km')),
         $t.forEach(n),
+        At.forEach(n),
         c.forEach(n),
         this.h();
     },
@@ -1637,7 +1638,7 @@ function Ft(y) {
         e(
           u,
           'style',
-          (h = `background-image: url(${Ht}/images/graphics/ai-chart-md.png);`)
+          (m = `background-image: url(${Gt}/images/graphics/ai-chart-md.png);`)
         ),
         e(_, 'class', 'g-pstyle0 svelte-zofauz'),
         e(d, 'id', 'g-ai2-1'),
@@ -1646,7 +1647,7 @@ function Ft(y) {
         a(d, 'margin-top', '-9.4px'),
         a(d, 'left', '0.3608%'),
         a(d, 'width', '111px'),
-        e(C, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(T, 'class', 'g-pstyle0 svelte-zofauz'),
         e(z, 'id', 'g-ai2-2'),
         e(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
         a(z, 'top', '7.6811%'),
@@ -1668,19 +1669,19 @@ function Ft(y) {
         a(A, 'left', '70.3606%'),
         a(A, 'width', '92px'),
         e(es, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(T, 'id', 'g-ai2-5'),
-        e(T, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        a(T, 'top', '17.1983%'),
-        a(T, 'margin-top', '-9.4px'),
-        a(T, 'left', '2.6603%'),
-        a(T, 'width', '61px'),
-        e(Q, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(V, 'id', 'g-ai2-6'),
+        e(V, 'id', 'g-ai2-5'),
         e(V, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        a(V, 'top', '21.7666%'),
+        a(V, 'top', '17.1983%'),
         a(V, 'margin-top', '-9.4px'),
         a(V, 'left', '2.6603%'),
-        a(V, 'width', '88px'),
+        a(V, 'width', '61px'),
+        e(Q, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(C, 'id', 'g-ai2-6'),
+        e(C, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        a(C, 'top', '21.7666%'),
+        a(C, 'margin-top', '-9.4px'),
+        a(C, 'left', '2.6603%'),
+        a(C, 'width', '88px'),
         e(Y, 'class', 'g-pstyle0 svelte-zofauz'),
         e(D, 'id', 'g-ai2-7'),
         e(D, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
@@ -1690,29 +1691,29 @@ function Ft(y) {
         a(D, 'width', '76px'),
         e(ss, 'class', 'g-pstyle1 svelte-zofauz'),
         e(ns, 'class', 'g-pstyle1 svelte-zofauz'),
-        e(E, 'id', 'g-ai2-8'),
-        e(E, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(E, 'top', '38.0099%'),
-        a(E, 'margin-top', '-17.7px'),
-        a(E, 'left', '27.2388%'),
-        a(E, 'margin-left', '-41px'),
-        a(E, 'width', '82px'),
+        e(b, 'id', 'g-ai2-8'),
+        e(b, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(b, 'top', '38.0099%'),
+        a(b, 'margin-top', '-17.7px'),
+        a(b, 'left', '27.2388%'),
+        a(b, 'margin-left', '-41px'),
+        a(b, 'width', '82px'),
         e(ts, 'class', 'g-pstyle2 svelte-zofauz'),
-        e(G, 'id', 'g-ai2-9'),
-        e(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(G, 'top', '42.7626%'),
-        a(G, 'margin-top', '-10.7px'),
-        a(G, 'left', '62.8914%'),
-        a(G, 'width', '80px'),
+        e(j, 'id', 'g-ai2-9'),
+        e(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(j, 'top', '42.7626%'),
+        a(j, 'margin-top', '-10.7px'),
+        a(j, 'left', '62.8914%'),
+        a(j, 'width', '80px'),
         e(B, 'class', 'g-pstyle3 svelte-zofauz'),
         e(L, 'class', 'g-pstyle3 svelte-zofauz'),
-        e(w, 'id', 'g-ai2-10'),
-        e(w, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(w, 'top', '50.0029%'),
-        a(w, 'margin-top', '-17.7px'),
-        a(w, 'left', '92.295%'),
-        a(w, 'margin-left', '-60.5px'),
-        a(w, 'width', '121px'),
+        e(x, 'id', 'g-ai2-10'),
+        e(x, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(x, 'top', '50.0029%'),
+        a(x, 'margin-top', '-17.7px'),
+        a(x, 'left', '92.295%'),
+        a(x, 'margin-left', '-60.5px'),
+        a(x, 'width', '121px'),
         e(O, 'class', 'g-pstyle0 svelte-zofauz'),
         e(K, 'id', 'g-ai2-11'),
         e(K, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
@@ -1721,33 +1722,33 @@ function Ft(y) {
         a(K, 'left', '12.2815%'),
         a(K, 'width', '69px'),
         e(S, 'class', 'g-pstyle4 svelte-zofauz'),
-        e(rs, 'id', 'g-ai2-12'),
-        e(rs, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(rs, 'top', '60.2742%'),
-        a(rs, 'margin-top', '-10.7px'),
-        a(rs, 'left', '30.6995%'),
-        a(rs, 'width', '89px'),
+        e(us, 'id', 'g-ai2-12'),
+        e(us, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(us, 'top', '60.2742%'),
+        a(us, 'margin-top', '-10.7px'),
+        a(us, 'left', '30.6995%'),
+        a(us, 'width', '89px'),
         e(J, 'class', 'g-pstyle4 svelte-zofauz'),
-        e(os, 'id', 'g-ai2-13'),
-        e(os, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(os, 'top', '62.5583%'),
-        a(os, 'margin-top', '-10.7px'),
-        a(os, 'left', '66.3403%'),
-        a(os, 'width', '125px'),
+        e(ps, 'id', 'g-ai2-13'),
+        e(ps, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(ps, 'top', '62.5583%'),
+        a(ps, 'margin-top', '-10.7px'),
+        a(ps, 'left', '66.3403%'),
+        a(ps, 'width', '125px'),
         e(W, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(M, 'id', 'g-ai2-14'),
-        e(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(M, 'top', '75.6338%'),
-        a(M, 'margin-top', '-9.4px'),
-        a(M, 'left', '57.8174%'),
-        a(M, 'width', '64px'),
-        e(R, 'class', 'g-pstyle0 svelte-zofauz'),
-        e(H, 'id', 'g-ai2-15'),
+        e(H, 'id', 'g-ai2-14'),
         e(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(H, 'top', '77.3469%'),
+        a(H, 'top', '75.6338%'),
         a(H, 'margin-top', '-9.4px'),
-        a(H, 'left', '22.5239%'),
-        a(H, 'width', '79px'),
+        a(H, 'left', '57.8174%'),
+        a(H, 'width', '64px'),
+        e(R, 'class', 'g-pstyle0 svelte-zofauz'),
+        e(G, 'id', 'g-ai2-15'),
+        e(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(G, 'top', '77.3469%'),
+        a(G, 'margin-top', '-9.4px'),
+        a(G, 'left', '22.5239%'),
+        a(G, 'width', '79px'),
         e(F, 'class', 'g-pstyle5 svelte-zofauz'),
         e(N, 'id', 'g-ai2-16'),
         e(N, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
@@ -1756,12 +1757,12 @@ function Ft(y) {
         a(N, 'left', '0.1678%'),
         a(N, 'width', '49px'),
         e(q, 'class', 'g-pstyle5 svelte-zofauz'),
-        e(j, 'id', 'g-ai2-17'),
-        e(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        a(j, 'top', '91.5043%'),
-        a(j, 'margin-top', '-7.7px'),
-        a(j, 'left', '0.1678%'),
-        a(j, 'width', '52px'),
+        e(M, 'id', 'g-ai2-17'),
+        e(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        a(M, 'top', '91.5043%'),
+        a(M, 'margin-top', '-7.7px'),
+        a(M, 'left', '0.1678%'),
+        a(M, 'width', '52px'),
         e(t, 'id', 'g-_ai-chart-md'),
         e(t, 'class', 'g-artboard svelte-zofauz'),
         e(t, 'style', '');
@@ -1771,82 +1772,82 @@ function Ft(y) {
         s(t, f),
         s(t, i),
         s(t, u),
-        s(t, x),
+        s(t, P),
         s(t, d),
         s(d, _),
-        s(_, P),
-        s(t, $),
+        s(_, $),
+        s(t, E),
         s(t, z),
-        s(z, C),
-        s(C, vs),
-        s(t, ds),
+        s(z, T),
+        s(T, vs),
+        s(t, os),
         s(t, I),
         s(I, Z),
         s(Z, X),
         s(t, Ss),
         s(t, A),
         s(A, as),
-        s(as, js),
+        s(as, Ms),
         s(t, bs),
-        s(t, T),
-        s(T, es),
-        s(es, xs),
-        s(t, Gs),
         s(t, V),
-        s(V, Q),
-        s(Q, Hs),
-        s(t, Ms),
+        s(V, es),
+        s(es, ws),
+        s(t, js),
+        s(t, C),
+        s(C, Q),
+        s(Q, Gs),
+        s(t, Hs),
         s(t, D),
         s(D, Y),
         s(Y, qs),
-        s(t, As),
-        s(t, E),
-        s(E, ss),
+        s(t, $s),
+        s(t, b),
+        s(b, ss),
         s(ss, zs),
-        s(E, Ps),
-        s(E, ns),
+        s(b, Ps),
+        s(b, ns),
         s(ns, Is),
         s(t, ks),
-        s(t, G),
-        s(G, ts),
+        s(t, j),
+        s(j, ts),
         s(ts, fs),
         s(t, Ds),
-        s(t, w),
-        s(w, B),
+        s(t, x),
+        s(x, B),
         s(B, Ls),
-        s(w, ms),
-        s(w, L),
-        s(L, cs),
+        s(x, hs),
+        s(x, L),
+        s(L, rs),
         s(t, Ts),
         s(t, K),
         s(K, O),
-        s(O, ps),
-        s(t, hs),
-        s(t, rs),
-        s(rs, S),
-        s(S, ls),
+        s(O, is),
+        s(t, ms),
         s(t, us),
-        s(t, os),
-        s(os, J),
+        s(us, S),
+        s(S, ls),
+        s(t, ds),
+        s(t, ps),
+        s(ps, J),
         s(J, ys),
         s(t, Ns),
-        s(t, M),
-        s(M, W),
+        s(t, H),
+        s(H, W),
         s(W, Es),
         s(t, Vs),
-        s(t, H),
-        s(H, R),
+        s(t, G),
+        s(G, R),
         s(R, r),
-        s(t, b),
+        s(t, w),
         s(t, N),
         s(N, F),
-        s(F, ws),
+        s(F, xs),
         s(t, Cs),
-        s(t, j),
-        s(j, q),
+        s(t, M),
+        s(M, q),
         s(q, Rs);
     },
-    p: is,
+    p: cs,
     d(gs) {
       gs && n(t);
     },
@@ -1857,28 +1858,28 @@ function pa(y) {
     f,
     i,
     u,
-    h = y[0] && y[0] >= 0 && y[0] < 510 && Yt(),
-    x = y[0] && y[0] >= 510 && y[0] < 660 && Bt(),
+    m = y[0] && y[0] >= 0 && y[0] < 510 && Yt(),
+    P = y[0] && y[0] >= 510 && y[0] < 660 && Bt(),
     d = y[0] && y[0] >= 660 && Ft();
   return {
     c() {
       (t = l('div')),
-        h && h.c(),
+        m && m.c(),
         (f = k()),
-        x && x.c(),
+        P && P.c(),
         (i = k()),
         d && d.c(),
         this.h();
     },
     l(_) {
       t = o(_, 'DIV', { id: !0, class: !0 });
-      var P = p(t);
-      h && h.l(P),
-        (f = m(P)),
-        x && x.l(P),
-        (i = m(P)),
-        d && d.l(P),
-        P.forEach(n),
+      var $ = p(t);
+      m && m.l($),
+        (f = h($)),
+        P && P.l($),
+        (i = h($)),
+        d && d.l($),
+        $.forEach(n),
         this.h();
     },
     h() {
@@ -1886,36 +1887,36 @@ function pa(y) {
         e(t, 'class', 'svelte-zofauz'),
         Xt(() => y[1].call(t));
     },
-    m(_, P) {
-      U(_, t, P),
-        h && h.m(t, null),
+    m(_, $) {
+      U(_, t, $),
+        m && m.m(t, null),
         s(t, f),
-        x && x.m(t, null),
+        P && P.m(t, null),
         s(t, i),
         d && d.m(t, null),
         (u = sa(t, y[1].bind(t)));
     },
-    p(_, [P]) {
+    p(_, [$]) {
       _[0] && _[0] >= 0 && _[0] < 510
-        ? h
-          ? h.p(_, P)
-          : ((h = Yt()), h.c(), h.m(t, f))
-        : h && (h.d(1), (h = null)),
+        ? m
+          ? m.p(_, $)
+          : ((m = Yt()), m.c(), m.m(t, f))
+        : m && (m.d(1), (m = null)),
         _[0] && _[0] >= 510 && _[0] < 660
-          ? x
-            ? x.p(_, P)
-            : ((x = Bt()), x.c(), x.m(t, i))
-          : x && (x.d(1), (x = null)),
+          ? P
+            ? P.p(_, $)
+            : ((P = Bt()), P.c(), P.m(t, i))
+          : P && (P.d(1), (P = null)),
         _[0] && _[0] >= 660
           ? d
-            ? d.p(_, P)
+            ? d.p(_, $)
             : ((d = Ft()), d.c(), d.m(t, null))
           : d && (d.d(1), (d = null));
     },
-    i: is,
-    o: is,
+    i: cs,
+    o: cs,
     d(_) {
-      _ && n(t), h && h.d(), x && x.d(), d && d.d(), u();
+      _ && n(t), m && m.d(), P && P.d(), d && d.d(), u();
     },
   };
 }
@@ -1969,12 +1970,12 @@ function ua(y) {
       m(i, u) {
         it(t, i, u), (f = !0);
       },
-      p: is,
+      p: cs,
       i(i) {
         f || (_s(t.$$.fragment, i), (f = !0));
       },
       o(i) {
-        $s(t.$$.fragment, i), (f = !1);
+        As(t.$$.fragment, i), (f = !1);
       },
       d(i) {
         ct(t, i);
@@ -1996,12 +1997,12 @@ function da(y) {
       m(i, u) {
         it(t, i, u), (f = !0);
       },
-      p: is,
+      p: cs,
       i(i) {
         f || (_s(t.$$.fragment, i), (f = !0));
       },
       o(i) {
-        $s(t.$$.fragment, i), (f = !1);
+        As(t.$$.fragment, i), (f = !1);
       },
       d(i) {
         ct(t, i);
@@ -2010,29 +2011,29 @@ function da(y) {
   );
 }
 function fa(y) {
-  let t, f, i, u, h, x;
+  let t, f, i, u, m, P;
   return {
     c() {
       (t = l('div')),
         (f = l('h4')),
         (i = g('Earthquake in Haiti')),
         (u = k()),
-        (h = l('p')),
-        (x = g('A 7.0 magnitude earthquake struck the island on Tuesday.')),
+        (m = l('p')),
+        (P = g('A 7.0 magnitude earthquake struck the island on Tuesday.')),
         this.h();
     },
     l(d) {
       t = o(d, 'DIV', { slot: !0, class: !0 });
       var _ = p(t);
       f = o(_, 'H4', { class: !0 });
-      var P = p(f);
-      (i = v(P, 'Earthquake in Haiti')),
-        P.forEach(n),
-        (u = m(_)),
-        (h = o(_, 'P', {}));
-      var $ = p(h);
-      (x = v($, 'A 7.0 magnitude earthquake struck the island on Tuesday.')),
+      var $ = p(f);
+      (i = v($, 'Earthquake in Haiti')),
         $.forEach(n),
+        (u = h(_)),
+        (m = o(_, 'P', {}));
+      var E = p(m);
+      (P = v(E, 'A 7.0 magnitude earthquake struck the island on Tuesday.')),
+        E.forEach(n),
         _.forEach(n),
         this.h();
     },
@@ -2042,7 +2043,7 @@ function fa(y) {
         e(t, 'class', 'title svelte-xmoab3');
     },
     m(d, _) {
-      U(d, t, _), s(t, f), s(f, i), s(t, u), s(t, h), s(h, x);
+      U(d, t, _), s(t, f), s(f, i), s(t, u), s(t, m), s(m, P);
     },
     d(d) {
       d && n(t);
@@ -2050,34 +2051,34 @@ function fa(y) {
   };
 }
 function ga(y) {
-  let t, f, i, u, h, x;
+  let t, f, i, u, m, P;
   return {
     c() {
       (t = l('aside')),
         (f = l('p')),
         (i = g('Note: Data current as of Wednesday.')),
         (u = k()),
-        (h = l('p')),
-        (x = g('Source: USGIS')),
+        (m = l('p')),
+        (P = g('Source: USGIS')),
         this.h();
     },
     l(d) {
       t = o(d, 'ASIDE', { slot: !0 });
       var _ = p(t);
       f = o(_, 'P', { class: !0 });
-      var P = p(f);
-      (i = v(P, 'Note: Data current as of Wednesday.')),
-        P.forEach(n),
-        (u = m(_)),
-        (h = o(_, 'P', { class: !0 }));
-      var $ = p(h);
-      (x = v($, 'Source: USGIS')), $.forEach(n), _.forEach(n), this.h();
+      var $ = p(f);
+      (i = v($, 'Note: Data current as of Wednesday.')),
+        $.forEach(n),
+        (u = h(_)),
+        (m = o(_, 'P', { class: !0 }));
+      var E = p(m);
+      (P = v(E, 'Source: USGIS')), E.forEach(n), _.forEach(n), this.h();
     },
     h() {
-      e(f, 'class', 'note'), e(h, 'class', 'source'), e(t, 'slot', 'notes');
+      e(f, 'class', 'note'), e(m, 'class', 'source'), e(t, 'slot', 'notes');
     },
     m(d, _) {
-      U(d, t, _), s(t, f), s(f, i), s(t, u), s(t, h), s(h, x);
+      U(d, t, _), s(t, f), s(f, i), s(t, u), s(t, m), s(m, P);
     },
     d(d) {
       d && n(t);
@@ -2106,14 +2107,14 @@ function va(y) {
         it(t, i, u), (f = !0);
       },
       p(i, u) {
-        const h = {};
-        u & 4 && (h.$$scope = { dirty: u, ctx: i }), t.$set(h);
+        const m = {};
+        u & 4 && (m.$$scope = { dirty: u, ctx: i }), t.$set(m);
       },
       i(i) {
         f || (_s(t.$$.fragment, i), (f = !0));
       },
       o(i) {
-        $s(t.$$.fragment, i), (f = !1);
+        As(t.$$.fragment, i), (f = !1);
       },
       d(i) {
         ct(t, i);
@@ -2122,9 +2123,9 @@ function va(y) {
   );
 }
 function ka(y) {
-  return { c: is, l: is, m: is, p: is, i: is, o: is, d: is };
+  return { c: cs, l: cs, m: cs, p: cs, i: cs, o: cs, d: cs };
 }
-function ma(y) {
+function ha(y) {
   let t, f;
   return (
     (t = new Dt({ props: { AiGraphic: y[1] } })),
@@ -2138,12 +2139,12 @@ function ma(y) {
       m(i, u) {
         it(t, i, u), (f = !0);
       },
-      p: is,
+      p: cs,
       i(i) {
         f || (_s(t.$$.fragment, i), (f = !0));
       },
       o(i) {
-        $s(t.$$.fragment, i), (f = !1);
+        As(t.$$.fragment, i), (f = !1);
       },
       d(i) {
         ct(t, i);
@@ -2151,8 +2152,8 @@ function ma(y) {
     }
   );
 }
-function ha(y) {
-  return { c: is, l: is, m: is, p: is, i: is, o: is, d: is };
+function ma(y) {
+  return { c: cs, l: cs, m: cs, p: cs, i: cs, o: cs, d: cs };
 }
 function _a(y) {
   let t,
@@ -2162,8 +2163,8 @@ function _a(y) {
       current: null,
       token: null,
       hasCatch: !1,
-      pending: ha,
-      then: ma,
+      pending: ma,
+      then: ha,
       catch: ka,
       value: 1,
       blocks: [, , ,],
@@ -2177,23 +2178,23 @@ function _a(y) {
       l(u) {
         (t = Rt()), i.block.l(u);
       },
-      m(u, h) {
-        U(u, t, h),
-          i.block.m(u, (i.anchor = h)),
+      m(u, m) {
+        U(u, t, m),
+          i.block.m(u, (i.anchor = m)),
           (i.mount = () => t.parentNode),
           (i.anchor = t),
           (f = !0);
       },
-      p(u, h) {
-        (y = u), aa(i, y, h);
+      p(u, m) {
+        (y = u), aa(i, y, m);
       },
       i(u) {
         f || (_s(i.block), (f = !0));
       },
       o(u) {
-        for (let h = 0; h < 3; h += 1) {
-          const x = i.blocks[h];
-          $s(x);
+        for (let m = 0; m < 3; m += 1) {
+          const P = i.blocks[m];
+          As(P);
         }
         f = !1;
       },
@@ -2208,37 +2209,37 @@ function za(y) {
     f,
     i,
     u,
-    h,
-    x,
+    m,
+    P,
     d,
     _,
-    P,
     $,
+    E,
     z,
-    C = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    T = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Ai2svelte <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> MyAiChart <span class="token keyword">from</span> <span class="token string">'./some-chart.svelte'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Ai2svelte</span> <span class="token attr-name">AiGraphic="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>MyAiChart<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token punctuation">/></span></span></code>`,
     vs,
-    ds,
+    os,
     I,
     Z,
     X,
     Ss,
     A,
     as,
-    js,
-    bs,
-    T,
-    es,
-    xs,
-    Gs,
-    V,
-    Q,
-    Hs,
     Ms,
+    bs,
+    V,
+    es,
+    ws,
+    js,
+    C,
+    Q,
+    Gs,
+    Hs,
     D,
     Y,
     qs = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
@@ -2247,15 +2248,15 @@ function za(y) {
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Ai2svelte</span> <span class="token attr-name">AiGraphic="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>MyAiChart<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wide<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code>`,
-    As,
-    E,
+    $s,
+    b,
     ss,
     zs,
     Ps,
     ns,
     Is,
     ks,
-    G = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    j = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Ai2svelte <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> MyAiChart <span class="token keyword">from</span> <span class="token string">'./some-chart.svelte'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -2282,12 +2283,12 @@ function za(y) {
     ts,
     fs,
     Ds,
-    w,
+    x,
     B,
     Ls,
-    ms,
+    hs,
     L,
-    cs,
+    rs,
     Ts,
     K,
     O = `<code class="language-bash"><span class="token comment"># In your Google doc...</span>
@@ -2298,9 +2299,9 @@ Type: ai2svelte
 ComponentName: my-chart
 
 <span class="token punctuation">[</span><span class="token punctuation">]</span></code>`,
-    ps,
-    hs,
-    rs = `<code class="language-svelte"><span class="token comment">&lt;!-- src/lib/Page.svelte --></span>
+    is,
+    ms,
+    us = `<code class="language-svelte"><span class="token comment">&lt;!-- src/lib/Page.svelte --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> content <span class="token keyword">from</span> <span class="token string">'$locales/en/content.json'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Ai2svelte <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
@@ -2326,28 +2327,28 @@ ComponentName: my-chart
 <span class="token each"><span class="token punctuation">&#123;</span><span class="token keyword">/each</span><span class="token punctuation">&#125;</span></span></code>`,
     S,
     ls,
-    us,
-    os,
+    ds,
+    ps,
     J,
     ys,
     Ns,
-    M,
+    H,
     W,
     Es,
     Vs,
-    H,
+    G,
     R;
   return (
-    (ds = new It({
+    (os = new It({
       props: { $$slots: { default: [ua] }, $$scope: { ctx: y } },
     })),
-    (E = new It({
+    (b = new It({
       props: { $$slots: { default: [da] }, $$scope: { ctx: y } },
     })),
     (fs = new It({
       props: { $$slots: { default: [va] }, $$scope: { ctx: y } },
     })),
-    (H = new It({
+    (G = new It({
       props: { $$slots: { default: [_a] }, $$scope: { ctx: y } },
     })),
     {
@@ -2356,17 +2357,17 @@ ComponentName: my-chart
           (f = l('h2')),
           (i = g(Zt)),
           (u = k()),
-          (h = l('p')),
-          (x = g('Pass a component created by ')),
+          (m = l('p')),
+          (P = g('Pass a component created by ')),
           (d = l('a')),
           (_ = g('ai2svelte')),
-          (P = g(
+          ($ = g(
             ' to this component, which will wrap it in a graphics section tag.'
           )),
-          ($ = k()),
+          (E = k()),
           (z = l('pre')),
           (vs = k()),
-          pt(ds.$$.fragment),
+          pt(os.$$.fragment),
           (I = k()),
           (Z = l('section')),
           (X = l('p')),
@@ -2375,20 +2376,20 @@ ComponentName: my-chart
           )),
           (A = l('code')),
           (as = g('wide')),
-          (js = g(', ')),
+          (Ms = g(', ')),
           (bs = l('code')),
-          (T = g('wider')),
+          (V = g('wider')),
           (es = g(', ')),
-          (xs = l('code')),
-          (Gs = g('widest')),
-          (V = g(' or ')),
+          (ws = l('code')),
+          (js = g('widest')),
+          (C = g(' or ')),
           (Q = l('code')),
-          (Hs = g('fluid')),
-          (Ms = g('.')),
+          (Gs = g('fluid')),
+          (Hs = g('.')),
           (D = k()),
           (Y = l('pre')),
-          (As = k()),
-          pt(E.$$.fragment),
+          ($s = k()),
+          pt(b.$$.fragment),
           (ss = k()),
           (zs = l('section')),
           (Ps = l('p')),
@@ -2398,60 +2399,60 @@ ComponentName: my-chart
           (ts = k()),
           pt(fs.$$.fragment),
           (Ds = k()),
-          (w = l('section')),
+          (x = l('section')),
           (B = l('p')),
           (Ls = g('You can use this component to layout AI graphics via an ')),
-          (ms = l('a')),
+          (hs = l('a')),
           (L = g('ArchieML')),
-          (cs = g(
+          (rs = g(
             '-formatted Google doc by using the following pattern to dynamically import an ai2svelte component:'
           )),
           (Ts = k()),
           (K = l('pre')),
-          (ps = k()),
-          (hs = l('pre')),
+          (is = k()),
+          (ms = l('pre')),
           (S = k()),
           (ls = l('section')),
-          (us = l('p')),
-          (os = g('This comes with some restrictions, though. Be sure your ')),
+          (ds = l('p')),
+          (ps = g('This comes with some restrictions, though. Be sure your ')),
           (J = l('code')),
           (ys = g('fetchComponent')),
           (Ns = g(' function follows ')),
-          (M = l('a')),
+          (H = l('a')),
           (W = g('the limits on dynamic imports')),
           (Es = g('.')),
           (Vs = k()),
-          pt(H.$$.fragment),
+          pt(G.$$.fragment),
           this.h();
       },
       l(r) {
         t = o(r, 'SECTION', {});
-        var b = p(t);
-        f = o(b, 'H2', {});
+        var w = p(t);
+        f = o(w, 'H2', {});
         var N = p(f);
-        (i = v(N, Zt)), N.forEach(n), (u = m(b)), (h = o(b, 'P', {}));
-        var F = p(h);
-        (x = v(F, 'Pass a component created by ')),
+        (i = v(N, Zt)), N.forEach(n), (u = h(w)), (m = o(w, 'P', {}));
+        var F = p(m);
+        (P = v(F, 'Pass a component created by ')),
           (d = o(F, 'A', { href: !0, rel: !0 }));
-        var ws = p(d);
-        (_ = v(ws, 'ai2svelte')),
-          ws.forEach(n),
-          (P = v(
+        var xs = p(d);
+        (_ = v(xs, 'ai2svelte')),
+          xs.forEach(n),
+          ($ = v(
             F,
             ' to this component, which will wrap it in a graphics section tag.'
           )),
           F.forEach(n),
-          b.forEach(n),
-          ($ = m(r)),
+          w.forEach(n),
+          (E = h(r)),
           (z = o(r, 'PRE', { class: !0 }));
         var Cs = p(z);
         Cs.forEach(n),
-          (vs = m(r)),
-          rt(ds.$$.fragment, r),
-          (I = m(r)),
+          (vs = h(r)),
+          rt(os.$$.fragment, r),
+          (I = h(r)),
           (Z = o(r, 'SECTION', {}));
-        var j = p(Z);
-        X = o(j, 'P', {});
+        var M = p(Z);
+        X = o(M, 'P', {});
         var q = p(X);
         (Ss = v(
           q,
@@ -2461,31 +2462,31 @@ ComponentName: my-chart
         var Rs = p(A);
         (as = v(Rs, 'wide')),
           Rs.forEach(n),
-          (js = v(q, ', ')),
+          (Ms = v(q, ', ')),
           (bs = o(q, 'CODE', {}));
         var gs = p(bs);
-        (T = v(gs, 'wider')),
+        (V = v(gs, 'wider')),
           gs.forEach(n),
           (es = v(q, ', ')),
-          (xs = o(q, 'CODE', {}));
-        var c = p(xs);
-        (Gs = v(c, 'widest')),
+          (ws = o(q, 'CODE', {}));
+        var c = p(ws);
+        (js = v(c, 'widest')),
           c.forEach(n),
-          (V = v(q, ' or ')),
+          (C = v(q, ' or ')),
           (Q = o(q, 'CODE', {}));
         var Ws = p(Q);
-        (Hs = v(Ws, 'fluid')),
+        (Gs = v(Ws, 'fluid')),
           Ws.forEach(n),
-          (Ms = v(q, '.')),
+          (Hs = v(q, '.')),
           q.forEach(n),
-          j.forEach(n),
-          (D = m(r)),
+          M.forEach(n),
+          (D = h(r)),
           (Y = o(r, 'PRE', { class: !0 }));
         var st = p(Y);
         st.forEach(n),
-          (As = m(r)),
-          rt(E.$$.fragment, r),
-          (ss = m(r)),
+          ($s = h(r)),
+          rt(b.$$.fragment, r),
+          (ss = h(r)),
           (zs = o(r, 'SECTION', {}));
         var Ys = p(zs);
         Ps = o(Ys, 'P', {});
@@ -2493,41 +2494,41 @@ ComponentName: my-chart
         (ns = v(Bs, 'Add additional chart chatter through slots.')),
           Bs.forEach(n),
           Ys.forEach(n),
-          (Is = m(r)),
+          (Is = h(r)),
           (ks = o(r, 'PRE', { class: !0 }));
         var tt = p(ks);
         tt.forEach(n),
-          (ts = m(r)),
+          (ts = h(r)),
           rt(fs.$$.fragment, r),
-          (Ds = m(r)),
-          (w = o(r, 'SECTION', {}));
-        var Fs = p(w);
+          (Ds = h(r)),
+          (x = o(r, 'SECTION', {}));
+        var Fs = p(x);
         B = o(Fs, 'P', {});
         var Us = p(B);
         (Ls = v(
           Us,
           'You can use this component to layout AI graphics via an '
         )),
-          (ms = o(Us, 'A', { href: !0, rel: !0 }));
-        var Zs = p(ms);
+          (hs = o(Us, 'A', { href: !0, rel: !0 }));
+        var Zs = p(hs);
         (L = v(Zs, 'ArchieML')),
           Zs.forEach(n),
-          (cs = v(
+          (rs = v(
             Us,
             '-formatted Google doc by using the following pattern to dynamically import an ai2svelte component:'
           )),
           Us.forEach(n),
           Fs.forEach(n),
-          (Ts = m(r)),
+          (Ts = h(r)),
           (K = o(r, 'PRE', { class: !0 }));
         var at = p(K);
-        at.forEach(n), (ps = m(r)), (hs = o(r, 'PRE', { class: !0 }));
-        var et = p(hs);
-        et.forEach(n), (S = m(r)), (ls = o(r, 'SECTION', {}));
+        at.forEach(n), (is = h(r)), (ms = o(r, 'PRE', { class: !0 }));
+        var et = p(ms);
+        et.forEach(n), (S = h(r)), (ls = o(r, 'SECTION', {}));
         var Ks = p(ls);
-        us = o(Ks, 'P', {});
-        var Os = p(us);
-        (os = v(
+        ds = o(Ks, 'P', {});
+        var Os = p(ds);
+        (ps = v(
           Os,
           'This comes with some restrictions, though. Be sure your '
         )),
@@ -2536,15 +2537,15 @@ ComponentName: my-chart
         (ys = v(Qs, 'fetchComponent')),
           Qs.forEach(n),
           (Ns = v(Os, ' function follows ')),
-          (M = o(Os, 'A', { href: !0, rel: !0 }));
-        var Xs = p(M);
+          (H = o(Os, 'A', { href: !0, rel: !0 }));
+        var Xs = p(H);
         (W = v(Xs, 'the limits on dynamic imports')),
           Xs.forEach(n),
           (Es = v(Os, '.')),
           Os.forEach(n),
           Ks.forEach(n),
-          (Vs = m(r)),
-          rt(H.$$.fragment, r),
+          (Vs = h(r)),
+          rt(G.$$.fragment, r),
           this.h();
       },
       h() {
@@ -2553,126 +2554,126 @@ ComponentName: my-chart
           e(z, 'class', 'language-svelte'),
           e(Y, 'class', 'language-svelte'),
           e(ks, 'class', 'language-svelte'),
-          e(ms, 'href', 'http://archieml.org/'),
-          e(ms, 'rel', 'nofollow'),
+          e(hs, 'href', 'http://archieml.org/'),
+          e(hs, 'rel', 'nofollow'),
           e(K, 'class', 'language-bash'),
-          e(hs, 'class', 'language-svelte'),
+          e(ms, 'class', 'language-svelte'),
           e(
-            M,
+            H,
             'href',
             'https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations'
           ),
-          e(M, 'rel', 'nofollow');
+          e(H, 'rel', 'nofollow');
       },
-      m(r, b) {
-        U(r, t, b),
+      m(r, w) {
+        U(r, t, w),
           s(t, f),
           s(f, i),
           s(t, u),
-          s(t, h),
-          s(h, x),
-          s(h, d),
+          s(t, m),
+          s(m, P),
+          s(m, d),
           s(d, _),
-          s(h, P),
-          U(r, $, b),
-          U(r, z, b),
-          (z.innerHTML = C),
-          U(r, vs, b),
-          it(ds, r, b),
-          U(r, I, b),
-          U(r, Z, b),
+          s(m, $),
+          U(r, E, w),
+          U(r, z, w),
+          (z.innerHTML = T),
+          U(r, vs, w),
+          it(os, r, w),
+          U(r, I, w),
+          U(r, Z, w),
           s(Z, X),
           s(X, Ss),
           s(X, A),
           s(A, as),
-          s(X, js),
-          s(X, bs),
-          s(bs, T),
-          s(X, es),
-          s(X, xs),
-          s(xs, Gs),
-          s(X, V),
-          s(X, Q),
-          s(Q, Hs),
           s(X, Ms),
-          U(r, D, b),
-          U(r, Y, b),
+          s(X, bs),
+          s(bs, V),
+          s(X, es),
+          s(X, ws),
+          s(ws, js),
+          s(X, C),
+          s(X, Q),
+          s(Q, Gs),
+          s(X, Hs),
+          U(r, D, w),
+          U(r, Y, w),
           (Y.innerHTML = qs),
-          U(r, As, b),
-          it(E, r, b),
-          U(r, ss, b),
-          U(r, zs, b),
+          U(r, $s, w),
+          it(b, r, w),
+          U(r, ss, w),
+          U(r, zs, w),
           s(zs, Ps),
           s(Ps, ns),
-          U(r, Is, b),
-          U(r, ks, b),
-          (ks.innerHTML = G),
-          U(r, ts, b),
-          it(fs, r, b),
-          U(r, Ds, b),
-          U(r, w, b),
-          s(w, B),
+          U(r, Is, w),
+          U(r, ks, w),
+          (ks.innerHTML = j),
+          U(r, ts, w),
+          it(fs, r, w),
+          U(r, Ds, w),
+          U(r, x, w),
+          s(x, B),
           s(B, Ls),
-          s(B, ms),
-          s(ms, L),
-          s(B, cs),
-          U(r, Ts, b),
-          U(r, K, b),
+          s(B, hs),
+          s(hs, L),
+          s(B, rs),
+          U(r, Ts, w),
+          U(r, K, w),
           (K.innerHTML = O),
-          U(r, ps, b),
-          U(r, hs, b),
-          (hs.innerHTML = rs),
-          U(r, S, b),
-          U(r, ls, b),
-          s(ls, us),
-          s(us, os),
-          s(us, J),
+          U(r, is, w),
+          U(r, ms, w),
+          (ms.innerHTML = us),
+          U(r, S, w),
+          U(r, ls, w),
+          s(ls, ds),
+          s(ds, ps),
+          s(ds, J),
           s(J, ys),
-          s(us, Ns),
-          s(us, M),
-          s(M, W),
-          s(us, Es),
-          U(r, Vs, b),
-          it(H, r, b),
+          s(ds, Ns),
+          s(ds, H),
+          s(H, W),
+          s(ds, Es),
+          U(r, Vs, w),
+          it(G, r, w),
           (R = !0);
       },
-      p(r, [b]) {
+      p(r, [w]) {
         const N = {};
-        b & 4 && (N.$$scope = { dirty: b, ctx: r }), ds.$set(N);
+        w & 4 && (N.$$scope = { dirty: w, ctx: r }), os.$set(N);
         const F = {};
-        b & 4 && (F.$$scope = { dirty: b, ctx: r }), E.$set(F);
-        const ws = {};
-        b & 4 && (ws.$$scope = { dirty: b, ctx: r }), fs.$set(ws);
+        w & 4 && (F.$$scope = { dirty: w, ctx: r }), b.$set(F);
+        const xs = {};
+        w & 4 && (xs.$$scope = { dirty: w, ctx: r }), fs.$set(xs);
         const Cs = {};
-        b & 4 && (Cs.$$scope = { dirty: b, ctx: r }), H.$set(Cs);
+        w & 4 && (Cs.$$scope = { dirty: w, ctx: r }), G.$set(Cs);
       },
       i(r) {
         R ||
-          (_s(ds.$$.fragment, r),
-          _s(E.$$.fragment, r),
+          (_s(os.$$.fragment, r),
+          _s(b.$$.fragment, r),
           _s(fs.$$.fragment, r),
-          _s(H.$$.fragment, r),
+          _s(G.$$.fragment, r),
           (R = !0));
       },
       o(r) {
-        $s(ds.$$.fragment, r),
-          $s(E.$$.fragment, r),
-          $s(fs.$$.fragment, r),
-          $s(H.$$.fragment, r),
+        As(os.$$.fragment, r),
+          As(b.$$.fragment, r),
+          As(fs.$$.fragment, r),
+          As(G.$$.fragment, r),
           (R = !1);
       },
       d(r) {
         r && n(t),
-          r && n($),
+          r && n(E),
           r && n(z),
           r && n(vs),
-          ct(ds, r),
+          ct(os, r),
           r && n(I),
           r && n(Z),
           r && n(D),
           r && n(Y),
-          r && n(As),
-          ct(E, r),
+          r && n($s),
+          ct(b, r),
           r && n(ss),
           r && n(zs),
           r && n(Is),
@@ -2680,15 +2681,15 @@ ComponentName: my-chart
           r && n(ts),
           ct(fs, r),
           r && n(Ds),
-          r && n(w),
+          r && n(x),
           r && n(Ts),
           r && n(K),
-          r && n(ps),
-          r && n(hs),
+          r && n(is),
+          r && n(ms),
           r && n(S),
           r && n(ls),
           r && n(Vs),
-          ct(H, r);
+          ct(G, r);
       },
     }
   );
@@ -2698,7 +2699,7 @@ const ya = {
     description: 'A shortcut for ai2svelte graphics.',
     slug: 'ai2svelte',
   },
-  { title: Zt, description: $a, slug: Aa } = ya;
+  { title: Zt, description: Aa, slug: $a } = ya;
 function Ea(y) {
   return [async (f) => (await ra(`./ai2html/${f}.exclude.svelte`)).default];
 }
