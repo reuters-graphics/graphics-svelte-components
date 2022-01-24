@@ -6,7 +6,7 @@
   import Cog from '$lib/_docs/Cog/index.svelte';
   import Menu from '$lib/_docs/Menu/index.svelte';
 
-  import components from '@component-docs';
+  import components from '@component-docs:components';
 </script>
 
 <SEO
@@ -20,11 +20,11 @@
 />
 
 <Nav />
-<Menu {components} />
+<Menu components="{components}" />
 
 <article>
   <section>
-    <h1><Cog/> Components</h1>
+    <h1><Cog /> Components</h1>
 
     <pre>
       <code>yarn add @reuters-graphics/graphics-svelte-components</code>
@@ -32,21 +32,22 @@
 
     <ul>
       {#each components as component}
-        {#if (component.title && component.slug)}
-          <li><a href="{`${base}/components/${component.slug}/`}">{component.title}</a></li>
+        {#if component.title && component.slug}
+          <li>
+            <a href="{`${base}/components/${component.slug}/`}"
+              >{component.title}</a
+            >
+          </li>
         {/if}
       {/each}
     </ul>
   </section>
-  
-  
 </article>
-
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
   @import '~@reuters-graphics/style-main/scss/fonts/font-faces';
-  @import "~@reuters-graphics/style-main/scss/fonts/mixins";
+  @import '~@reuters-graphics/style-main/scss/fonts/mixins';
   :global {
     @import '@reuters-graphics/style-theme-eisbaer/scss/main';
     body {
@@ -81,9 +82,9 @@
     overflow: hidden;
     flex-wrap: wrap;
 
-    li{
+    li {
       display: inline-block;
-      position: relative; 
+      position: relative;
       @include font-sans;
       padding: 5px 10px;
       font-size: 1.2rem;

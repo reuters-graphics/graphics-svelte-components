@@ -22,7 +22,7 @@ const getDocsMetadata = () => {
 };
 
 module.exports = function svelteKitComponentDocsPlugin() {
-  const virtualModuleId = '@component-docs';
+  const virtualModuleId = '@component-docs:components';
 
   return {
     name: 'svelte-kit-component-docs-plugin',

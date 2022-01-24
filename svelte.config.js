@@ -100,7 +100,11 @@ export default {
         },
       },
       optimizeDeps: {
-        exclude: ['svelte-fa', '@reuters-graphics/style-theme-eisbaer'],
+        exclude: [
+          'svelte-fa',
+          '@reuters-graphics/style-theme-eisbaer',
+          '@component-docs',
+        ],
         include: ['lodash-es', 'pym.js'],
       },
       plugins: [dsv(), svelteKitPagesPlugin(), componentDocsPlugin()],
