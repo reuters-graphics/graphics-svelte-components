@@ -12,6 +12,7 @@
   export let handleColour = 'white';
   export let handleInactiveOpacity = 0.4;
   export let handleMargin = 20;
+  export let keyPressStep = 0.05;
 
   export let offset = 0.5;
 
@@ -27,6 +28,20 @@
   let img;
   let figure;
   let beforeOverlayWidth = 0;
+  let isFocused = false;
+
+  const onFocus = () => (isFocused = true);
+  const onBlur = () => (isFocused = false);
+  const handleKeyDown = (e) => {
+    if (!isFocused) return;
+    const { keyCode } = e;
+    const margin = handleMargin / w;
+    if (keyCode === 39) {
+      offset = Math.min(1 - margin, offset + keyPressStep);
+    } else if (keyCode === 37) {
+      offset = Math.max(0 + margin, offset - keyPressStep);
+    }
+  };
 
   const resize = (e) => {
     if (e.type === 'load') {
@@ -78,6 +93,7 @@
   on:mousemove="{move}"
   on:mouseup="{end}"
   on:resize="{throttle(resize, 100)}"
+  on:keydown="{handleKeyDown}"
 />
 
 {#if beforeSrc && beforeAlt && afterSrc && afterAlt}
@@ -130,9 +146,12 @@
         </div>
       {/if}
       <div
+        tabindex="0"
         class="handle"
         style="left: calc({offset *
           100}% - 20px); --before-after-handle-colour: {handleColour}; --before-after-handle-inactive-opacity: {handleInactiveOpacity};"
+        on:focus="{onFocus}"
+        on:blur="{onBlur}"
       >
         <div class="arrow-left"></div>
         <div class="arrow-right"></div>
