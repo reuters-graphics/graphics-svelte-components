@@ -268,13 +268,13 @@ div.background.svelte-e2e2s9 {
   position: relative;
   align-items: center;
 }
-figure.before-after-container.svelte-b70c3s.svelte-b70c3s {
+figure.before-after-container.svelte-1fkuva.svelte-1fkuva {
   overflow: hidden;
   position: relative;
   box-sizing: content-box;
   margin: 0 auto;
 }
-figure.before-after-container.svelte-b70c3s img.svelte-b70c3s {
+figure.before-after-container.svelte-1fkuva img.svelte-1fkuva {
   top: 0;
   left: 0;
   z-index: 20;
@@ -288,26 +288,26 @@ figure.before-after-container.svelte-b70c3s img.svelte-b70c3s {
   object-fit: cover;
   position: absolute;
 }
-figure.before-after-container.svelte-b70c3s img.after.svelte-b70c3s {
+figure.before-after-container.svelte-1fkuva img.after.svelte-1fkuva {
   z-index: 21;
 }
-figure.before-after-container.svelte-b70c3s img.before.svelte-b70c3s {
+figure.before-after-container.svelte-1fkuva img.before.svelte-1fkuva {
   z-index: 22;
 }
-figure.before-after-container.svelte-b70c3s .overlay-container.svelte-b70c3s {
+figure.before-after-container.svelte-1fkuva .overlay-container.svelte-1fkuva {
   position: absolute;
 }
-figure.before-after-container.svelte-b70c3s
-  .overlay-container.before.svelte-b70c3s {
+figure.before-after-container.svelte-1fkuva
+  .overlay-container.before.svelte-1fkuva {
   left: 0;
   z-index: 23;
 }
-figure.before-after-container.svelte-b70c3s
-  .overlay-container.after.svelte-b70c3s {
+figure.before-after-container.svelte-1fkuva
+  .overlay-container.after.svelte-1fkuva {
   right: 0;
   z-index: 21;
 }
-.handle.svelte-b70c3s.svelte-b70c3s {
+.handle.svelte-1fkuva.svelte-1fkuva {
   z-index: 30;
   width: 40px;
   height: 40px;
@@ -323,26 +323,27 @@ figure.before-after-container.svelte-b70c3s
   border: 4px solid var(--before-after-handle-colour);
   opacity: var(--before-after-handle-inactive-opacity, 0.6);
 }
-.handle.svelte-b70c3s.svelte-b70c3s:hover,
-.handle.svelte-b70c3s.svelte-b70c3s:active {
+.handle.svelte-1fkuva.svelte-1fkuva:hover,
+.handle.svelte-1fkuva.svelte-1fkuva:active,
+.handle.svelte-1fkuva.svelte-1fkuva:focus {
   opacity: 1;
 }
-.handle.svelte-b70c3s.svelte-b70c3s:before,
-.handle.svelte-b70c3s.svelte-b70c3s:after {
+.handle.svelte-1fkuva.svelte-1fkuva:before,
+.handle.svelte-1fkuva.svelte-1fkuva:after {
   content: '';
   height: 9999px;
   position: absolute;
   left: calc(50% - 2px);
   border: 2px solid var(--before-after-handle-colour);
 }
-.handle.svelte-b70c3s.svelte-b70c3s:before {
+.handle.svelte-1fkuva.svelte-1fkuva:before {
   top: 40px;
 }
-.handle.svelte-b70c3s.svelte-b70c3s:after {
+.handle.svelte-1fkuva.svelte-1fkuva:after {
   bottom: 40px;
 }
-.handle.svelte-b70c3s .arrow-right.svelte-b70c3s,
-.handle.svelte-b70c3s .arrow-left.svelte-b70c3s {
+.handle.svelte-1fkuva .arrow-right.svelte-1fkuva,
+.handle.svelte-1fkuva .arrow-left.svelte-1fkuva {
   width: 0;
   height: 0;
   -webkit-user-select: none;
@@ -353,12 +354,12 @@ figure.before-after-container.svelte-b70c3s
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
-.handle.svelte-b70c3s .arrow-right.svelte-b70c3s {
+.handle.svelte-1fkuva .arrow-right.svelte-1fkuva {
   left: 19px;
   bottom: 13px;
   border-left: 10px solid var(--before-after-handle-colour);
 }
-.handle.svelte-b70c3s .arrow-left.svelte-b70c3s {
+.handle.svelte-1fkuva .arrow-left.svelte-1fkuva {
   left: 3px;
   top: 7px;
   border-right: 10px solid var(--before-after-handle-colour);

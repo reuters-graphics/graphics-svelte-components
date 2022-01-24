@@ -37,7 +37,7 @@ import {
   B as le,
 } from './vendor-a3a8e12b.js';
 import { D as ae } from './index-95908c5c.js';
-import './@component-docs_components-305da42f.js';
+import './@component-docs_components-fb16dedc.js';
 import './paths-6758d194.js';
 const oe = (a) => ({ intersecting: a & 1 }),
   T = (a) => ({ intersecting: a[0] });

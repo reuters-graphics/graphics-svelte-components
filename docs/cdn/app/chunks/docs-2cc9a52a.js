@@ -42,7 +42,7 @@ import {
   I as Ps,
 } from './vendor-a3a8e12b.js';
 import { D as _a } from './index-95908c5c.js';
-import './@component-docs_components-305da42f.js';
+import './@component-docs_components-fb16dedc.js';
 import { a as L } from './paths-6758d194.js';
 const { window: Fa } = bt,
   _t = (o) => ({}),
@@ -146,7 +146,7 @@ function Kn(o) {
       Bs(s.src, (l = o[5])) || i(s, 'src', l),
         i(s, 'alt', o[6]),
         i(s, 'style', o[14]),
-        i(s, 'class', 'after svelte-b70c3s'),
+        i(s, 'class', 'after svelte-1fkuva'),
         i(s, 'role', 'img'),
         i(
           s,
@@ -160,20 +160,20 @@ function Kn(o) {
           'style',
           (B = 'clip: rect(0 ' + o[10] + 'px ' + o[16] + 'px 0);' + o[14])
         ),
-        i(u, 'class', 'before svelte-b70c3s'),
+        i(u, 'class', 'before svelte-1fkuva'),
         i(u, 'role', 'img'),
         i(u, 'aria-describedby', (R = o[25].afterOverlay && `${o[17]}-after`)),
-        i(X, 'class', 'arrow-left svelte-b70c3s'),
-        i(W, 'class', 'arrow-right svelte-b70c3s'),
+        i(X, 'class', 'arrow-left svelte-1fkuva'),
+        i(W, 'class', 'arrow-right svelte-1fkuva'),
         i(w, 'tabindex', '0'),
-        i(w, 'class', 'handle svelte-b70c3s'),
+        i(w, 'class', 'handle svelte-1fkuva'),
         pa(w, 'left', 'calc(' + o[0] * 100 + '% - 20px)'),
         pa(w, '--before-after-handle-colour', o[7]),
         pa(w, '--before-after-handle-inactive-opacity', o[8]),
         i(n, 'style', o[15]),
-        i(n, 'class', 'before-after-container svelte-b70c3s'),
+        i(n, 'class', 'before-after-container svelte-1fkuva'),
         i(n, 'aria-labelledby', (Z = o[25].caption && `${o[17]}-caption`)),
-        i(a, 'class', (Y = 'photo before-after ' + o[1] + ' svelte-b70c3s')),
+        i(a, 'class', (Y = 'photo before-after ' + o[1] + ' svelte-1fkuva')),
         pa(a, 'height', o[2] + 'px');
     },
     m(v, y) {
@@ -260,7 +260,7 @@ function Kn(o) {
           i(n, 'aria-labelledby', Z),
         (!S ||
           (y[0] & 2 &&
-            Y !== (Y = 'photo before-after ' + v[1] + ' svelte-b70c3s'))) &&
+            Y !== (Y = 'photo before-after ' + v[1] + ' svelte-1fkuva'))) &&
           i(a, 'class', Y),
         (!S || y[0] & 4) && pa(a, 'height', v[2] + 'px'),
         v[25].caption
@@ -309,7 +309,7 @@ function Zn(o) {
     },
     h() {
       i(a, 'id', 'image-before-label'),
-        i(a, 'class', 'overlay-container before svelte-b70c3s'),
+        i(a, 'class', 'overlay-container before svelte-1fkuva'),
         pa(a, 'clip-path', 'inset(0 ' + o[13] + 'px 0 0)'),
         mt(() => o[35].call(a));
     },
@@ -350,7 +350,7 @@ function Qn(o) {
     },
     h() {
       i(a, 'id', 'image-after-label'),
-        i(a, 'class', 'overlay-container after svelte-b70c3s');
+        i(a, 'class', 'overlay-container after svelte-1fkuva');
     },
     m(e, r) {
       b(e, a, r), l && l.m(a, null), (n = !0);
@@ -386,7 +386,7 @@ function xn(o) {
       e && e.l(u), u.forEach(p), this.h();
     },
     h() {
-      i(a, 'class', (n = '' + (Gn(o[1]) + ' svelte-b70c3s'))),
+      i(a, 'class', (n = '' + (Gn(o[1]) + ' svelte-1fkuva'))),
         i(a, 'id', `${o[17]}-caption`);
     },
     m(r, u) {
@@ -397,7 +397,7 @@ function xn(o) {
         e.p &&
         (!s || u[0] & 1073741824) &&
         gn(e, l, r, r[30], s ? vn(l, r[30], u, _t) : mn(r[30]), qn),
-        (!s || (u[0] & 2 && n !== (n = '' + (Gn(r[1]) + ' svelte-b70c3s')))) &&
+        (!s || (u[0] & 2 && n !== (n = '' + (Gn(r[1]) + ' svelte-1fkuva')))) &&
           i(a, 'class', n);
     },
     i(r) {
