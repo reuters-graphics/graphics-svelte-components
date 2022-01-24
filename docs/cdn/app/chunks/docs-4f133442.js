@@ -21,11 +21,11 @@ import {
   x as M,
   u as P,
   v as F,
-} from './vendor-b82e5b83.js';
-import { D as R } from './index-75ffd758.js';
+} from './vendor-a3a8e12b.js';
+import { D as R } from './index-95908c5c.js';
 function z(r) {
   let t,
-    a = j.parse(r[0]) + '';
+    n = j.parse(r[0]) + '';
   return {
     c() {
       (t = m('section')), this.h();
@@ -39,10 +39,10 @@ function z(r) {
       H(t, 'class', 'body-text');
     },
     m(s, e) {
-      f(s, t, e), (t.innerHTML = a);
+      f(s, t, e), (t.innerHTML = n);
     },
     p(s, [e]) {
-      e & 1 && a !== (a = j.parse(s[0]) + '') && (t.innerHTML = a);
+      e & 1 && n !== (n = j.parse(s[0]) + '') && (t.innerHTML = n);
     },
     i: b,
     o: b,
@@ -51,7 +51,7 @@ function z(r) {
     },
   };
 }
-function A(r, t, a) {
+function A(r, t, n) {
   let { text: s } = t;
   if (!s)
     throw new Error(
@@ -59,7 +59,7 @@ function A(r, t, a) {
     );
   return (
     (r.$$set = (e) => {
-      'text' in e && a(0, (s = e.text));
+      'text' in e && n(0, (s = e.text));
     }),
     [s]
   );
@@ -71,7 +71,7 @@ class G extends T {
   }
 }
 function J(r) {
-  let t, a;
+  let t, n;
   return (
     (t = new G({ props: { text: r[0] } })),
     {
@@ -82,14 +82,14 @@ function J(r) {
         I(t.$$.fragment, s);
       },
       m(s, e) {
-        L(t, s, e), (a = !0);
+        L(t, s, e), (n = !0);
       },
       p: b,
       i(s) {
-        a || (M(t.$$.fragment, s), (a = !0));
+        n || (M(t.$$.fragment, s), (n = !0));
       },
       o(s) {
-        P(t.$$.fragment, s), (a = !1);
+        P(t.$$.fragment, s), (n = !1);
       },
       d(s) {
         F(t, s);
@@ -99,7 +99,7 @@ function J(r) {
 }
 function K(r) {
   let t,
-    a,
+    n,
     s,
     e,
     i,
@@ -125,7 +125,7 @@ function K(r) {
     {
       c() {
         (t = m('section')),
-          (a = m('h2')),
+          (n = m('h2')),
           (s = C(N)),
           (e = v()),
           (i = m('p')),
@@ -136,50 +136,50 @@ function K(r) {
           S(c.$$.fragment),
           this.h();
       },
-      l(n) {
-        t = k(n, 'SECTION', {});
+      l(a) {
+        t = k(a, 'SECTION', {});
         var o = d(t);
-        a = k(o, 'H2', {});
-        var u = d(a);
+        n = k(o, 'H2', {});
+        var u = d(n);
         (s = D(u, N)), u.forEach(p), (e = y(o)), (i = k(o, 'P', {}));
         var w = d(i);
         (_ = D(w, O)),
           w.forEach(p),
           o.forEach(p),
-          (h = y(n)),
-          (l = k(n, 'PRE', { class: !0 }));
+          (h = y(a)),
+          (l = k(a, 'PRE', { class: !0 }));
         var q = d(l);
-        q.forEach(p), (x = y(n)), I(c.$$.fragment, n), this.h();
+        q.forEach(p), (x = y(a)), I(c.$$.fragment, a), this.h();
       },
       h() {
         H(l, 'class', 'language-svelte');
       },
-      m(n, o) {
-        f(n, t, o),
-          g(t, a),
-          g(a, s),
+      m(a, o) {
+        f(a, t, o),
+          g(t, n),
+          g(n, s),
           g(t, e),
           g(t, i),
           g(i, _),
-          f(n, h, o),
-          f(n, l, o),
+          f(a, h, o),
+          f(a, l, o),
           (l.innerHTML = V),
-          f(n, x, o),
-          L(c, n, o),
+          f(a, x, o),
+          L(c, a, o),
           ($ = !0);
       },
-      p(n, [o]) {
+      p(a, [o]) {
         const u = {};
-        o & 2 && (u.$$scope = { dirty: o, ctx: n }), c.$set(u);
+        o & 2 && (u.$$scope = { dirty: o, ctx: a }), c.$set(u);
       },
-      i(n) {
-        $ || (M(c.$$.fragment, n), ($ = !0));
+      i(a) {
+        $ || (M(c.$$.fragment, a), ($ = !0));
       },
-      o(n) {
-        P(c.$$.fragment, n), ($ = !1);
+      o(a) {
+        P(c.$$.fragment, a), ($ = !1);
       },
-      d(n) {
-        n && p(t), n && p(h), n && p(l), n && p(x), F(c, n);
+      d(a) {
+        a && p(t), a && p(h), a && p(l), a && p(x), F(c, a);
       },
     }
   );

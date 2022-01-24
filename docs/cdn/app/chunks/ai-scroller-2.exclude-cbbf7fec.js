@@ -17,9 +17,9 @@ import {
   I as P,
   $ as B,
   a0 as F,
-} from './vendor-b82e5b83.js';
+} from './vendor-a3a8e12b.js';
 import { a as w } from './paths-6758d194.js';
-function A(E) {
+function A(b) {
   let e, p, _, r, y, t, d, c, u, o, g;
   return {
     c() {
@@ -46,17 +46,17 @@ function A(E) {
         f(r).forEach(n),
         (y = I(l)),
         (t = v(l, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      d = v(b, 'P', { class: !0 });
+      var E = f(t);
+      d = v(E, 'P', { class: !0 });
       var x = f(d);
       (c = k(x, 'This thing here is')),
         x.forEach(n),
-        (u = I(b)),
-        (o = v(b, 'P', { class: !0 }));
+        (u = I(E)),
+        (o = v(E, 'P', { class: !0 }));
       var D = f(o);
       (g = k(D, 'particularly important')),
         D.forEach(n),
-        b.forEach(n),
+        E.forEach(n),
         l.forEach(n),
         this.h();
     },
@@ -101,7 +101,7 @@ function A(E) {
     },
   };
 }
-function $(E) {
+function $(b) {
   let e, p, _, r, y, t, d, c, u, o, g;
   return {
     c() {
@@ -128,17 +128,17 @@ function $(E) {
         f(r).forEach(n),
         (y = I(l)),
         (t = v(l, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      d = v(b, 'P', { class: !0 });
+      var E = f(t);
+      d = v(E, 'P', { class: !0 });
       var x = f(d);
       (c = k(x, 'This thing here is')),
         x.forEach(n),
-        (u = I(b)),
-        (o = v(b, 'P', { class: !0 }));
+        (u = I(E)),
+        (o = v(E, 'P', { class: !0 }));
       var D = f(o);
       (g = k(D, 'particularly important')),
         D.forEach(n),
-        b.forEach(n),
+        E.forEach(n),
         l.forEach(n),
         this.h();
     },
@@ -183,7 +183,7 @@ function $(E) {
     },
   };
 }
-function S(E) {
+function S(b) {
   let e, p, _, r, y, t, d, c, u, o, g;
   return {
     c() {
@@ -210,17 +210,17 @@ function S(E) {
         f(r).forEach(n),
         (y = I(l)),
         (t = v(l, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      d = v(b, 'P', { class: !0 });
+      var E = f(t);
+      d = v(E, 'P', { class: !0 });
       var x = f(d);
       (c = k(x, 'This thing here is')),
         x.forEach(n),
-        (u = I(b)),
-        (o = v(b, 'P', { class: !0 }));
+        (u = I(E)),
+        (o = v(E, 'P', { class: !0 }));
       var D = f(o);
       (g = k(D, 'particularly important')),
         D.forEach(n),
-        b.forEach(n),
+        E.forEach(n),
         l.forEach(n),
         this.h();
     },
@@ -265,7 +265,7 @@ function S(E) {
     },
   };
 }
-function j(E) {
+function j(b) {
   let e, p, _, r, y, t, d, c, u, o, g;
   return {
     c() {
@@ -292,17 +292,17 @@ function j(E) {
         f(r).forEach(n),
         (y = I(l)),
         (t = v(l, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      d = v(b, 'P', { class: !0 });
+      var E = f(t);
+      d = v(E, 'P', { class: !0 });
       var x = f(d);
       (c = k(x, 'This thing here is')),
         x.forEach(n),
-        (u = I(b)),
-        (o = v(b, 'P', { class: !0 }));
+        (u = I(E)),
+        (o = v(E, 'P', { class: !0 }));
       var D = f(o);
       (g = k(D, 'particularly important')),
         D.forEach(n),
-        b.forEach(n),
+        E.forEach(n),
         l.forEach(n),
         this.h();
     },
@@ -347,7 +347,7 @@ function j(E) {
     },
   };
 }
-function q(E) {
+function q(b) {
   let e, p, _, r, y, t, d, c, u, o, g;
   return {
     c() {
@@ -374,17 +374,17 @@ function q(E) {
         f(r).forEach(n),
         (y = I(l)),
         (t = v(l, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      d = v(b, 'P', { class: !0 });
+      var E = f(t);
+      d = v(E, 'P', { class: !0 });
       var x = f(d);
       (c = k(x, 'This thing here is')),
         x.forEach(n),
-        (u = I(b)),
-        (o = v(b, 'P', { class: !0 }));
+        (u = I(E)),
+        (o = v(E, 'P', { class: !0 }));
       var D = f(o);
       (g = k(D, 'particularly important')),
         D.forEach(n),
-        b.forEach(n),
+        E.forEach(n),
         l.forEach(n),
         this.h();
     },
@@ -429,18 +429,18 @@ function q(E) {
     },
   };
 }
-function G(E) {
+function G(b) {
   let e,
     p,
     _,
     r,
     y,
     t,
-    d = E[0] && E[0] >= 1200 && A(),
-    c = E[0] && E[0] >= 930 && E[0] < 1200 && $(),
-    u = E[0] && E[0] >= 660 && E[0] < 930 && S(),
-    o = E[0] && E[0] >= 510 && E[0] < 660 && j(),
-    g = E[0] && E[0] >= 0 && E[0] < 510 && q();
+    d = b[0] && b[0] >= 1200 && A(),
+    c = b[0] && b[0] >= 930 && b[0] < 1200 && $(),
+    u = b[0] && b[0] >= 660 && b[0] < 930 && S(),
+    o = b[0] && b[0] >= 510 && b[0] < 660 && j(),
+    g = b[0] && b[0] >= 0 && b[0] < 510 && q();
   return {
     c() {
       (e = h('div')),
@@ -473,7 +473,7 @@ function G(E) {
     h() {
       a(e, 'id', 'g-step-2-box'),
         a(e, 'class', 'svelte-ldx4oz'),
-        B(() => E[1].call(e));
+        B(() => b[1].call(e));
     },
     m(s, l) {
       T(s, e, l),
@@ -486,7 +486,7 @@ function G(E) {
         o && o.m(e, null),
         i(e, y),
         g && g.m(e, null),
-        (t = F(e, E[1].bind(e)));
+        (t = F(e, b[1].bind(e)));
     },
     p(s, [l]) {
       s[0] && s[0] >= 1200
@@ -528,7 +528,7 @@ function G(E) {
     },
   };
 }
-function J(E, e, p) {
+function J(b, e, p) {
   let _ = null;
   function r() {
     (_ = this.clientWidth), p(0, _);

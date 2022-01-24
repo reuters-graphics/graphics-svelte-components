@@ -8,11 +8,11 @@ import {
   G as c,
   x as p,
   u as d,
-} from './chunks/vendor-b82e5b83.js';
-function m(a) {
+} from './chunks/vendor-a3a8e12b.js';
+function m(n) {
   let s;
-  const o = a[1].default,
-    e = r(o, a, a[0], null);
+  const o = n[1].default,
+    e = r(o, n, n[0], null);
   return {
     c() {
       e && e.c();
@@ -20,14 +20,14 @@ function m(a) {
     l(t) {
       e && e.l(t);
     },
-    m(t, n) {
-      e && e.m(t, n), (s = !0);
+    m(t, a) {
+      e && e.m(t, a), (s = !0);
     },
-    p(t, [n]) {
+    p(t, [a]) {
       e &&
         e.p &&
-        (!s || n & 1) &&
-        f(e, o, t, t[0], s ? c(o, t[0], n, null) : _(t[0]), null);
+        (!s || a & 1) &&
+        f(e, o, t, t[0], s ? c(o, t[0], a, null) : _(t[0]), null);
     },
     i(t) {
       s || (p(e, t), (s = !0));
@@ -40,19 +40,19 @@ function m(a) {
     },
   };
 }
-function $(a, s, o) {
+function $(n, s, o) {
   let { $$slots: e = {}, $$scope: t } = s;
   return (
-    (a.$$set = (n) => {
-      '$$scope' in n && o(0, (t = n.$$scope));
+    (n.$$set = (a) => {
+      '$$scope' in a && o(0, (t = a.$$scope));
     }),
     [t, e]
   );
 }
-class b extends l {
+class h extends l {
   constructor(s) {
     super();
     i(this, s, $, m, u, {});
   }
 }
-export { b as default };
+export { h as default };

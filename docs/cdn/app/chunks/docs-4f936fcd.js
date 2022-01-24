@@ -9,12 +9,12 @@ import {
   a as u,
   g as x,
   d as e,
-  n as b,
+  n as y,
   b as P,
   f as h,
   H as c,
   I as f,
-} from './vendor-b82e5b83.js';
+} from './vendor-a3a8e12b.js';
 function T(F) {
   let a,
     p,
@@ -33,7 +33,7 @@ function T(F) {
     c() {
       (a = r('section')),
         (p = r('h2')),
-        (k = v(y)),
+        (k = v(b)),
         (m = E()),
         (o = r('p')),
         (d = v(w)),
@@ -46,12 +46,12 @@ function T(F) {
       var n = u(a);
       p = i(n, 'H2', {});
       var g = u(p);
-      (k = x(g, y)), g.forEach(e), (m = b(n)), (o = i(n, 'P', {}));
+      (k = x(g, b)), g.forEach(e), (m = y(n)), (o = i(n, 'P', {}));
       var _ = u(o);
       (d = x(_, w)),
         _.forEach(e),
         n.forEach(e),
-        (l = b(s)),
+        (l = y(s)),
         (t = i(s, 'PRE', { class: !0 }));
       var S = u(t);
       S.forEach(e), this.h();
@@ -83,7 +83,7 @@ const q = {
     description: 'An embed tool for development in the graphics kit.',
     slug: 'framer',
   },
-  { title: y, description: w, slug: D } = q;
+  { title: b, description: w, slug: D } = q;
 class L extends j {
   constructor(a) {
     super();

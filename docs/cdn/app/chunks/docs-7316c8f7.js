@@ -25,8 +25,8 @@ import {
   o as G,
   v as M,
   I as J,
-} from './vendor-b82e5b83.js';
-import { D as K } from './index-75ffd758.js';
+} from './vendor-a3a8e12b.js';
+import { D as K } from './index-95908c5c.js';
 function Q(i) {
   let s, e;
   return {
@@ -132,12 +132,12 @@ function Y(i) {
   };
 }
 function Z(i) {
-  let s, e, n, o, c, k, t;
+  let s, e, n, o, c, f, t;
   function p(a, l) {
     return a[2] && a[3] ? Y : a[2] ? X : a[3] ? W : Q;
   }
-  let f = p(i),
-    m = f(i);
+  let k = p(i),
+    m = k(i);
   const h = i[5].default,
     g = V(h, i, i[4], null);
   return {
@@ -174,7 +174,7 @@ function Z(i) {
         r(n, 'href', i[0]),
         r(e, 'class', 'logo-container'),
         r(s, 'class', 'nav'),
-        r(s, 'style', (k = `background: ${i[1]};`));
+        r(s, 'style', (f = `background: ${i[1]};`));
     },
     m(a, l) {
       d(a, s, l),
@@ -187,14 +187,14 @@ function Z(i) {
         (t = !0);
     },
     p(a, [l]) {
-      f !== (f = p(a)) && (m.d(1), (m = f(a)), m && (m.c(), m.m(o, null))),
+      k !== (k = p(a)) && (m.d(1), (m = k(a)), m && (m.c(), m.m(o, null))),
         (!t || l & 1) && r(n, 'href', a[0]),
         g &&
           g.p &&
           (!t || l & 16) &&
           O(g, h, a, a[4], t ? B(h, a[4], l, null) : z(a[4]), null),
-        (!t || (l & 2 && k !== (k = `background: ${a[1]};`))) &&
-          r(s, 'style', k);
+        (!t || (l & 2 && f !== (f = `background: ${a[1]};`))) &&
+          r(s, 'style', f);
     },
     i(a) {
       t || (j(g, a), (t = !0));
@@ -210,18 +210,18 @@ function Z(i) {
 function x(i, s, e) {
   let { $$slots: n = {}, $$scope: o } = s,
     { link: c = 'https://graphics.reuters.com' } = s,
-    { backgroundColour: k = '#333333' } = s,
+    { backgroundColour: f = '#333333' } = s,
     { monocolourLogo: t = !1 } = s,
     { lightLogo: p = !0 } = s;
   return (
-    (i.$$set = (f) => {
-      'link' in f && e(0, (c = f.link)),
-        'backgroundColour' in f && e(1, (k = f.backgroundColour)),
-        'monocolourLogo' in f && e(2, (t = f.monocolourLogo)),
-        'lightLogo' in f && e(3, (p = f.lightLogo)),
-        '$$scope' in f && e(4, (o = f.$$scope));
+    (i.$$set = (k) => {
+      'link' in k && e(0, (c = k.link)),
+        'backgroundColour' in k && e(1, (f = k.backgroundColour)),
+        'monocolourLogo' in k && e(2, (t = k.monocolourLogo)),
+        'lightLogo' in k && e(3, (p = k.lightLogo)),
+        '$$scope' in k && e(4, (o = k.$$scope));
     }),
-    [c, k, t, p, o, n]
+    [c, f, t, p, o, n]
   );
 }
 class A extends H {
@@ -236,7 +236,7 @@ class A extends H {
   }
 }
 function ss(i) {
-  let s, e, n, o, c, k;
+  let s, e, n, o, c, f;
   return (
     (s = new A({})),
     (n = new A({ props: { lightLogo: !1, backgroundColour: '#fff' } })),
@@ -259,18 +259,18 @@ function ss(i) {
           D(c.$$.fragment, t);
       },
       m(t, p) {
-        G(s, t, p), d(t, e, p), G(n, t, p), d(t, o, p), G(c, t, p), (k = !0);
+        G(s, t, p), d(t, e, p), G(n, t, p), d(t, o, p), G(c, t, p), (f = !0);
       },
       p: J,
       i(t) {
-        k ||
+        f ||
           (j(s.$$.fragment, t),
           j(n.$$.fragment, t),
           j(c.$$.fragment, t),
-          (k = !0));
+          (f = !0));
       },
       o(t) {
-        I(s.$$.fragment, t), I(n.$$.fragment, t), I(c.$$.fragment, t), (k = !1);
+        I(s.$$.fragment, t), I(n.$$.fragment, t), I(c.$$.fragment, t), (f = !1);
       },
       d(t) {
         M(s, t), t && u(e), M(n, t), t && u(o), M(c, t);
@@ -284,10 +284,10 @@ function as(i) {
     n,
     o,
     c,
-    k,
+    f,
     t,
     p,
-    f = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    k = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Nav <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -316,7 +316,7 @@ function as(i) {
           (n = F(T)),
           (o = y()),
           (c = _('p')),
-          (k = F(U)),
+          (f = F(U)),
           (t = y()),
           (p = _('pre')),
           (m = y()),
@@ -330,7 +330,7 @@ function as(i) {
         var $ = L(e);
         (n = P($, T)), $.forEach(u), (o = C(l)), (c = v(l, 'P', {}));
         var E = L(c);
-        (k = P(E, U)),
+        (f = P(E, U)),
           E.forEach(u),
           l.forEach(u),
           (t = C(a)),
@@ -347,10 +347,10 @@ function as(i) {
           b(e, n),
           b(s, o),
           b(s, c),
-          b(c, k),
+          b(c, f),
           d(a, t, l),
           d(a, p, l),
-          (p.innerHTML = f),
+          (p.innerHTML = k),
           d(a, m, l),
           G(h, a, l),
           (g = !0);

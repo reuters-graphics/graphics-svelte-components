@@ -1,5 +1,5 @@
 import {
-  S as O,
+  S as b,
   i as y,
   s as D,
   e as i,
@@ -14,9 +14,9 @@ import {
   f as h,
   H as c,
   I as d,
-} from './vendor-b82e5b83.js';
-function I(w) {
-  let a,
+} from './vendor-a3a8e12b.js';
+function I(x) {
+  let s,
     e,
     k,
     g,
@@ -24,7 +24,7 @@ function I(w) {
     m,
     l,
     t,
-    x = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    A = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> <span class="token constant">SEO</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -39,59 +39,59 @@ function I(w) {
 <span class="token punctuation">/></span></span></code>`;
   return {
     c() {
-      (a = i('section')),
+      (s = i('section')),
         (e = i('h2')),
         (k = _(T)),
         (g = j()),
         (o = i('p')),
-        (m = _(b)),
+        (m = _(w)),
         (l = j()),
         (t = i('pre')),
         this.h();
     },
-    l(s) {
-      a = r(s, 'SECTION', {});
-      var n = u(a);
+    l(a) {
+      s = r(a, 'SECTION', {});
+      var n = u(s);
       e = r(n, 'H2', {});
       var f = u(e);
       (k = E(f, T)), f.forEach(p), (g = S(n)), (o = r(n, 'P', {}));
       var v = u(o);
-      (m = E(v, b)),
+      (m = E(v, w)),
         v.forEach(p),
         n.forEach(p),
-        (l = S(s)),
-        (t = r(s, 'PRE', { class: !0 }));
-      var A = u(t);
-      A.forEach(p), this.h();
+        (l = S(a)),
+        (t = r(a, 'PRE', { class: !0 }));
+      var O = u(t);
+      O.forEach(p), this.h();
     },
     h() {
       H(t, 'class', 'language-svelte');
     },
-    m(s, n) {
-      h(s, a, n),
-        c(a, e),
+    m(a, n) {
+      h(a, s, n),
+        c(s, e),
         c(e, k),
-        c(a, g),
-        c(a, o),
+        c(s, g),
+        c(s, o),
         c(o, m),
-        h(s, l, n),
-        h(s, t, n),
-        (t.innerHTML = x);
+        h(a, l, n),
+        h(a, t, n),
+        (t.innerHTML = A);
     },
     p: d,
     i: d,
     o: d,
-    d(s) {
-      s && p(a), s && p(l), s && p(t);
+    d(a) {
+      a && p(s), a && p(l), a && p(t);
     },
   };
 }
 const P = { title: 'SEO', description: 'Add SEO to the page.', slug: 'seo' },
-  { title: T, description: b, slug: F } = P;
-class G extends O {
-  constructor(a) {
+  { title: T, description: w, slug: F } = P;
+class G extends b {
+  constructor(s) {
     super();
-    y(this, a, null, I, D, {});
+    y(this, s, null, I, D, {});
   }
 }
 export { G as default, P as metadata };

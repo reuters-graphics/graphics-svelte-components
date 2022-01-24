@@ -1,19 +1,19 @@
-var Ur = Object.defineProperty,
-  Vr = Object.defineProperties;
-var Hr = Object.getOwnPropertyDescriptors;
-var pr = Object.getOwnPropertySymbols;
-var Fr = Object.prototype.hasOwnProperty,
-  qr = Object.prototype.propertyIsEnumerable;
-var cr = (r, n, e) =>
-    n in r
-      ? Ur(r, n, { enumerable: !0, configurable: !0, writable: !0, value: e })
-      : (r[n] = e),
-  ur = (r, n) => {
-    for (var e in n || (n = {})) Fr.call(n, e) && cr(r, e, n[e]);
-    if (pr) for (var e of pr(n)) qr.call(n, e) && cr(r, e, n[e]);
-    return r;
+var Up = Object.defineProperty,
+  Vp = Object.defineProperties;
+var Hp = Object.getOwnPropertyDescriptors;
+var rp = Object.getOwnPropertySymbols;
+var Fp = Object.prototype.hasOwnProperty,
+  qp = Object.prototype.propertyIsEnumerable;
+var cp = (p, n, e) =>
+    n in p
+      ? Up(p, n, { enumerable: !0, configurable: !0, writable: !0, value: e })
+      : (p[n] = e),
+  ip = (p, n) => {
+    for (var e in n || (n = {})) Fp.call(n, e) && cp(p, e, n[e]);
+    if (rp) for (var e of rp(n)) qp.call(n, e) && cp(p, e, n[e]);
+    return p;
   },
-  ir = (r, n) => Vr(r, Hr(n));
+  up = (p, n) => Vp(p, Hp(n));
 import { _ as qo } from './preload-helper-438f94a3.js';
 import {
   S as x,
@@ -23,15 +23,15 @@ import {
   f as b,
   x as P,
   e as f,
-  k as y,
+  k as E,
   c as d,
   a as k,
   n as $,
-  d as p,
-  b as E,
+  d as r,
+  b as y,
   Y as $n,
   H as a,
-  p as pt,
+  p as rt,
   q as ct,
   r as V,
   u as C,
@@ -40,60 +40,60 @@ import {
   j as T,
   o as j,
   L as Qo,
-  B as ut,
+  B as it,
   m as z,
   I,
-  aa as it,
-  O as Qr,
-  Q as Yr,
-  ac as Jr,
+  aa as ut,
+  O as Qp,
+  Q as Yp,
+  ac as Jp,
   a9 as Yo,
   ad as Jo,
   ae as Ko,
   t as m,
   g as h,
-  V as Kr,
-  h as Wr,
-  a1 as fr,
-  a2 as dr,
-} from './vendor-b82e5b83.js';
-import { D as Xn } from './index-75ffd758.js';
-import './@component-docs-989e6ca0.js';
+  V as Kp,
+  h as Wp,
+  a1 as fp,
+  a2 as dp,
+} from './vendor-a3a8e12b.js';
+import { D as Xn } from './index-95908c5c.js';
+import './@component-docs_components-0771368a.js';
 import './paths-6758d194.js';
-function kr(r, n, e) {
-  const s = r.slice();
+function kp(p, n, e) {
+  const s = p.slice();
   return (s[4] = n[e]), (s[6] = e), s;
 }
-function gr(r) {
+function gp(p) {
   let n, e, s, t;
-  const c = [r[4].backgroundProps || {}];
-  var o = r[4].background;
-  function u(l) {
+  const c = [p[4].backgroundProps || {}];
+  var o = p[4].background;
+  function i(l) {
     let g = {};
-    for (let v = 0; v < c.length; v += 1) g = ut(g, c[v]);
+    for (let v = 0; v < c.length; v += 1) g = it(g, c[v]);
     return { props: g };
   }
   return (
-    o && (e = new o(u())),
+    o && (e = new o(i())),
     {
       c() {
-        (n = f('div')), e && T(e.$$.fragment), (s = y()), this.h();
+        (n = f('div')), e && T(e.$$.fragment), (s = E()), this.h();
       },
       l(l) {
         n = d(l, 'DIV', { class: !0 });
         var g = k(n);
-        e && z(e.$$.fragment, g), (s = $(g)), g.forEach(p), this.h();
+        e && z(e.$$.fragment, g), (s = $(g)), g.forEach(r), this.h();
       },
       h() {
-        E(n, 'class', 'step-background step-' + (r[6] + 1) + ' svelte-va4hxg'),
-          $n(n, 'visible', r[3] ? r[6] <= r[0] : r[6] === r[0]),
-          $n(n, 'hidden', r[3] ? r[6] > r[0] : r[6] !== r[0]);
+        y(n, 'class', 'step-background step-' + (p[6] + 1) + ' svelte-va4hxg'),
+          $n(n, 'visible', p[3] ? p[6] <= p[0] : p[6] === p[0]),
+          $n(n, 'hidden', p[3] ? p[6] > p[0] : p[6] !== p[0]);
       },
       m(l, g) {
         b(l, n, g), e && j(e, n, null), a(n, s), (t = !0);
       },
       p(l, g) {
-        const v = g & 2 ? pt(c, [ct(l[4].backgroundProps || {})]) : {};
+        const v = g & 2 ? rt(c, [ct(l[4].backgroundProps || {})]) : {};
         if (o !== (o = l[4].background)) {
           if (e) {
             V();
@@ -104,7 +104,7 @@ function gr(r) {
               H();
           }
           o
-            ? ((e = new o(u())),
+            ? ((e = new o(i())),
               T(e.$$.fragment),
               P(e.$$.fragment, 1),
               j(e, n, s))
@@ -120,15 +120,15 @@ function gr(r) {
         e && C(e.$$.fragment, l), (t = !1);
       },
       d(l) {
-        l && p(n), e && O(e);
+        l && r(n), e && O(e);
       },
     }
   );
 }
-function mr(r) {
+function mp(p) {
   let n,
     e,
-    s = (r[2] === 0 || (r[6] >= r[0] - r[2] && r[6] <= r[0] + r[2])) && gr(r);
+    s = (p[2] === 0 || (p[6] >= p[0] - p[2] && p[6] <= p[0] + p[2])) && gp(p);
   return {
     c() {
       s && s.c(), (n = B());
@@ -143,7 +143,7 @@ function mr(r) {
       t[2] === 0 || (t[6] >= t[0] - t[2] && t[6] <= t[0] + t[2])
         ? s
           ? (s.p(t, c), c & 5 && P(s, 1))
-          : ((s = gr(t)), s.c(), P(s, 1), s.m(n.parentNode, n))
+          : ((s = gp(t)), s.c(), P(s, 1), s.m(n.parentNode, n))
         : s &&
           (V(),
           C(s, 1, 1, () => {
@@ -158,16 +158,16 @@ function mr(r) {
       C(s), (e = !1);
     },
     d(t) {
-      s && s.d(t), t && p(n);
+      s && s.d(t), t && r(n);
     },
   };
 }
-function Xr(r) {
+function Xp(p) {
   let n,
     e,
-    s = r[1],
+    s = p[1],
     t = [];
-  for (let o = 0; o < s.length; o += 1) t[o] = mr(kr(r, s, o));
+  for (let o = 0; o < s.length; o += 1) t[o] = mp(kp(p, s, o));
   const c = (o) =>
     C(t[o], 1, 1, () => {
       t[o] = null;
@@ -178,22 +178,22 @@ function Xr(r) {
       n = B();
     },
     l(o) {
-      for (let u = 0; u < t.length; u += 1) t[u].l(o);
+      for (let i = 0; i < t.length; i += 1) t[i].l(o);
       n = B();
     },
-    m(o, u) {
-      for (let l = 0; l < t.length; l += 1) t[l].m(o, u);
-      b(o, n, u), (e = !0);
+    m(o, i) {
+      for (let l = 0; l < t.length; l += 1) t[l].m(o, i);
+      b(o, n, i), (e = !0);
     },
-    p(o, [u]) {
-      if (u & 15) {
+    p(o, [i]) {
+      if (i & 15) {
         s = o[1];
         let l;
         for (l = 0; l < s.length; l += 1) {
-          const g = kr(o, s, l);
+          const g = kp(o, s, l);
           t[l]
-            ? (t[l].p(g, u), P(t[l], 1))
-            : ((t[l] = mr(g)), t[l].c(), P(t[l], 1), t[l].m(n.parentNode, n));
+            ? (t[l].p(g, i), P(t[l], 1))
+            : ((t[l] = mp(g)), t[l].c(), P(t[l], 1), t[l].m(n.parentNode, n));
         }
         for (V(), l = s.length; l < t.length; l += 1) c(l);
         H();
@@ -201,39 +201,39 @@ function Xr(r) {
     },
     i(o) {
       if (!e) {
-        for (let u = 0; u < s.length; u += 1) P(t[u]);
+        for (let i = 0; i < s.length; i += 1) P(t[i]);
         e = !0;
       }
     },
     o(o) {
       t = t.filter(Boolean);
-      for (let u = 0; u < t.length; u += 1) C(t[u]);
+      for (let i = 0; i < t.length; i += 1) C(t[i]);
       e = !1;
     },
     d(o) {
-      Qo(t, o), o && p(n);
+      Qo(t, o), o && r(n);
     },
   };
 }
-function Zr(r, n, e) {
+function Zp(p, n, e) {
   let { index: s } = n,
     { steps: t = [] } = n,
     { preload: c = 1 } = n,
     { stackBackground: o = !0 } = n;
   return (
-    (r.$$set = (u) => {
-      'index' in u && e(0, (s = u.index)),
-        'steps' in u && e(1, (t = u.steps)),
-        'preload' in u && e(2, (c = u.preload)),
-        'stackBackground' in u && e(3, (o = u.stackBackground));
+    (p.$$set = (i) => {
+      'index' in i && e(0, (s = i.index)),
+        'steps' in i && e(1, (t = i.steps)),
+        'preload' in i && e(2, (c = i.preload)),
+        'stackBackground' in i && e(3, (o = i.stackBackground));
     }),
     [s, t, c, o]
   );
 }
-class xr extends x {
+class xp extends x {
   constructor(n) {
     super();
-    nn(this, n, Zr, Xr, sn, {
+    nn(this, n, Zp, Xp, sn, {
       index: 0,
       steps: 1,
       preload: 2,
@@ -241,20 +241,20 @@ class xr extends x {
     });
   }
 }
-function hr(r, n, e) {
-  const s = r.slice();
+function hp(p, n, e) {
+  const s = p.slice();
   return (s[1] = n[e]), (s[3] = e), s;
 }
-function np(r) {
+function nr(p) {
   let n, e, s, t;
-  const c = [tp, ep],
+  const c = [tr, er],
     o = [];
-  function u(l, g) {
+  function i(l, g) {
     return typeof l[1].foreground == 'string' ? 0 : 1;
   }
   return (
-    (e = u(r)),
-    (s = o[e] = c[e](r)),
+    (e = i(p)),
+    (s = o[e] = c[e](p)),
     {
       c() {
         (n = f('div')), s.c(), this.h();
@@ -262,17 +262,17 @@ function np(r) {
       l(l) {
         n = d(l, 'DIV', { class: !0 });
         var g = k(n);
-        s.l(g), g.forEach(p), this.h();
+        s.l(g), g.forEach(r), this.h();
       },
       h() {
-        E(n, 'class', 'step-foreground step-' + (r[3] + 1) + ' svelte-20kuyz');
+        y(n, 'class', 'step-foreground step-' + (p[3] + 1) + ' svelte-20kuyz');
       },
       m(l, g) {
         b(l, n, g), o[e].m(n, null), (t = !0);
       },
       p(l, g) {
         let v = e;
-        (e = u(l)),
+        (e = i(l)),
           e === v
             ? o[e].p(l, g)
             : (V(),
@@ -292,25 +292,25 @@ function np(r) {
         C(s), (t = !1);
       },
       d(l) {
-        l && p(n), o[e].d();
+        l && r(n), o[e].d();
       },
     }
   );
 }
-function sp(r) {
+function sr(p) {
   let n;
   return {
     c() {
       (n = f('div')), this.h();
     },
     l(e) {
-      (n = d(e, 'DIV', { class: !0 })), k(n).forEach(p), this.h();
+      (n = d(e, 'DIV', { class: !0 })), k(n).forEach(r), this.h();
     },
     h() {
-      E(
+      y(
         n,
         'class',
-        'empty-step-foreground step-' + (r[3] + 1) + ' svelte-20kuyz'
+        'empty-step-foreground step-' + (p[3] + 1) + ' svelte-20kuyz'
       );
     },
     m(e, s) {
@@ -320,17 +320,17 @@ function sp(r) {
     i: I,
     o: I,
     d(e) {
-      e && p(n);
+      e && r(n);
     },
   };
 }
-function ep(r) {
+function er(p) {
   let n, e, s;
-  const t = [r[1].foregroundProps || {}];
-  var c = r[1].foreground;
-  function o(u) {
+  const t = [p[1].foregroundProps || {}];
+  var c = p[1].foreground;
+  function o(i) {
     let l = {};
-    for (let g = 0; g < t.length; g += 1) l = ut(l, t[g]);
+    for (let g = 0; g < t.length; g += 1) l = it(l, t[g]);
     return { props: l };
   }
   return (
@@ -339,15 +339,15 @@ function ep(r) {
       c() {
         n && T(n.$$.fragment), (e = B());
       },
-      l(u) {
-        n && z(n.$$.fragment, u), (e = B());
+      l(i) {
+        n && z(n.$$.fragment, i), (e = B());
       },
-      m(u, l) {
-        n && j(n, u, l), b(u, e, l), (s = !0);
+      m(i, l) {
+        n && j(n, i, l), b(i, e, l), (s = !0);
       },
-      p(u, l) {
-        const g = l & 1 ? pt(t, [ct(u[1].foregroundProps || {})]) : {};
-        if (c !== (c = u[1].foreground)) {
+      p(i, l) {
+        const g = l & 1 ? rt(t, [ct(i[1].foregroundProps || {})]) : {};
+        if (c !== (c = i[1].foreground)) {
           if (n) {
             V();
             const v = n;
@@ -364,28 +364,28 @@ function ep(r) {
             : (n = null);
         } else c && n.$set(g);
       },
-      i(u) {
-        s || (n && P(n.$$.fragment, u), (s = !0));
+      i(i) {
+        s || (n && P(n.$$.fragment, i), (s = !0));
       },
-      o(u) {
-        n && C(n.$$.fragment, u), (s = !1);
+      o(i) {
+        n && C(n.$$.fragment, i), (s = !1);
       },
-      d(u) {
-        u && p(e), n && O(n, u);
+      d(i) {
+        i && r(e), n && O(n, i);
       },
     }
   );
 }
-function tp(r) {
+function tr(p) {
   let n,
-    e = it.parse(r[1].foreground) + '',
+    e = ut.parse(p[1].foreground) + '',
     s;
   return {
     c() {
-      (n = new Qr()), (s = B()), this.h();
+      (n = new Qp()), (s = B()), this.h();
     },
     l(t) {
-      (n = Yr(t)), (s = B()), this.h();
+      (n = Yp(t)), (s = B()), this.h();
     },
     h() {
       n.a = s;
@@ -394,52 +394,52 @@ function tp(r) {
       n.m(e, t, c), b(t, s, c);
     },
     p(t, c) {
-      c & 1 && e !== (e = it.parse(t[1].foreground) + '') && n.p(e);
+      c & 1 && e !== (e = ut.parse(t[1].foreground) + '') && n.p(e);
     },
     i: I,
     o: I,
     d(t) {
-      t && p(s), t && n.d();
+      t && r(s), t && n.d();
     },
   };
 }
-function _r(r) {
+function _p(p) {
   let n, e, s, t, c;
-  const o = [sp, np],
-    u = [];
+  const o = [sr, nr],
+    i = [];
   function l(g, v) {
     return g[1].foreground === '' || !g[1].foreground ? 0 : 1;
   }
   return (
-    (e = l(r)),
-    (s = u[e] = o[e](r)),
+    (e = l(p)),
+    (s = i[e] = o[e](p)),
     {
       c() {
-        (n = f('section')), s.c(), (t = y()), this.h();
+        (n = f('section')), s.c(), (t = E()), this.h();
       },
       l(g) {
         n = d(g, 'SECTION', { class: !0 });
         var v = k(n);
-        s.l(v), (t = $(v)), v.forEach(p), this.h();
+        s.l(v), (t = $(v)), v.forEach(r), this.h();
       },
       h() {
-        E(n, 'class', 'step-foreground-container svelte-20kuyz');
+        y(n, 'class', 'step-foreground-container svelte-20kuyz');
       },
       m(g, v) {
-        b(g, n, v), u[e].m(n, null), a(n, t), (c = !0);
+        b(g, n, v), i[e].m(n, null), a(n, t), (c = !0);
       },
       p(g, v) {
         let w = e;
         (e = l(g)),
           e === w
-            ? u[e].p(g, v)
+            ? i[e].p(g, v)
             : (V(),
-              C(u[w], 1, 1, () => {
-                u[w] = null;
+              C(i[w], 1, 1, () => {
+                i[w] = null;
               }),
               H(),
-              (s = u[e]),
-              s ? s.p(g, v) : ((s = u[e] = o[e](g)), s.c()),
+              (s = i[e]),
+              s ? s.p(g, v) : ((s = i[e] = o[e](g)), s.c()),
               P(s, 1),
               s.m(n, t));
       },
@@ -450,17 +450,17 @@ function _r(r) {
         C(s), (c = !1);
       },
       d(g) {
-        g && p(n), u[e].d();
+        g && r(n), i[e].d();
       },
     }
   );
 }
-function ap(r) {
+function ar(p) {
   let n,
     e,
-    s = r[0],
+    s = p[0],
     t = [];
-  for (let o = 0; o < s.length; o += 1) t[o] = _r(hr(r, s, o));
+  for (let o = 0; o < s.length; o += 1) t[o] = _p(hp(p, s, o));
   const c = (o) =>
     C(t[o], 1, 1, () => {
       t[o] = null;
@@ -471,22 +471,22 @@ function ap(r) {
       n = B();
     },
     l(o) {
-      for (let u = 0; u < t.length; u += 1) t[u].l(o);
+      for (let i = 0; i < t.length; i += 1) t[i].l(o);
       n = B();
     },
-    m(o, u) {
-      for (let l = 0; l < t.length; l += 1) t[l].m(o, u);
-      b(o, n, u), (e = !0);
+    m(o, i) {
+      for (let l = 0; l < t.length; l += 1) t[l].m(o, i);
+      b(o, n, i), (e = !0);
     },
-    p(o, [u]) {
-      if (u & 1) {
+    p(o, [i]) {
+      if (i & 1) {
         s = o[0];
         let l;
         for (l = 0; l < s.length; l += 1) {
-          const g = hr(o, s, l);
+          const g = hp(o, s, l);
           t[l]
-            ? (t[l].p(g, u), P(t[l], 1))
-            : ((t[l] = _r(g)), t[l].c(), P(t[l], 1), t[l].m(n.parentNode, n));
+            ? (t[l].p(g, i), P(t[l], 1))
+            : ((t[l] = _p(g)), t[l].c(), P(t[l], 1), t[l].m(n.parentNode, n));
         }
         for (V(), l = s.length; l < t.length; l += 1) c(l);
         H();
@@ -494,42 +494,42 @@ function ap(r) {
     },
     i(o) {
       if (!e) {
-        for (let u = 0; u < s.length; u += 1) P(t[u]);
+        for (let i = 0; i < s.length; i += 1) P(t[i]);
         e = !0;
       }
     },
     o(o) {
       t = t.filter(Boolean);
-      for (let u = 0; u < t.length; u += 1) C(t[u]);
+      for (let i = 0; i < t.length; i += 1) C(t[i]);
       e = !1;
     },
     d(o) {
-      Qo(t, o), o && p(n);
+      Qo(t, o), o && r(n);
     },
   };
 }
-function op(r, n, e) {
+function or(p, n, e) {
   let { steps: s = [] } = n;
   return (
-    (r.$$set = (t) => {
+    (p.$$set = (t) => {
       'steps' in t && e(0, (s = t.steps));
     }),
     [s]
   );
 }
-class lp extends x {
+class lr extends x {
   constructor(n) {
     super();
-    nn(this, n, op, ap, sn, { steps: 0 });
+    nn(this, n, or, ar, sn, { steps: 0 });
   }
 }
-function rp(r) {
-  let n, e, s, t, c, o, u;
-  const l = [r[0].backgroundProps || {}];
-  var g = r[0].background;
+function pr(p) {
+  let n, e, s, t, c, o, i;
+  const l = [p[0].backgroundProps || {}];
+  var g = p[0].background;
   function v(w) {
     let S = {};
-    for (let L = 0; L < l.length; L += 1) S = ut(S, l[L]);
+    for (let L = 0; L < l.length; L += 1) S = it(S, l[L]);
     return { props: S };
   }
   return (
@@ -543,18 +543,18 @@ function rp(r) {
         var S = k(n);
         e = d(S, 'DIV', { class: !0 });
         var L = k(e);
-        s && z(s.$$.fragment, L), L.forEach(p), S.forEach(p), this.h();
+        s && z(s.$$.fragment, L), L.forEach(r), S.forEach(r), this.h();
       },
       h() {
-        E(e, 'class', (t = 'embedded-background step-' + (r[2] + 1))),
-          E(n, 'class', (c = 'background-container graphic ' + r[1])),
-          E(n, 'step', (o = r[2] + 1));
+        y(e, 'class', (t = 'embedded-background step-' + (p[2] + 1))),
+          y(n, 'class', (c = 'background-container graphic ' + p[1])),
+          y(n, 'step', (o = p[2] + 1));
       },
       m(w, S) {
-        b(w, n, S), a(n, e), s && j(s, e, null), (u = !0);
+        b(w, n, S), a(n, e), s && j(s, e, null), (i = !0);
       },
       p(w, [S]) {
-        const L = S & 1 ? pt(l, [ct(w[0].backgroundProps || {})]) : {};
+        const L = S & 1 ? rt(l, [ct(w[0].backgroundProps || {})]) : {};
         if (g !== (g = w[0].background)) {
           if (s) {
             V();
@@ -571,32 +571,32 @@ function rp(r) {
               j(s, e, null))
             : (s = null);
         } else g && s.$set(L);
-        (!u ||
+        (!i ||
           (S & 4 && t !== (t = 'embedded-background step-' + (w[2] + 1)))) &&
-          E(e, 'class', t),
-          (!u ||
+          y(e, 'class', t),
+          (!i ||
             (S & 2 && c !== (c = 'background-container graphic ' + w[1]))) &&
-            E(n, 'class', c),
-          (!u || (S & 4 && o !== (o = w[2] + 1))) && E(n, 'step', o);
+            y(n, 'class', c),
+          (!i || (S & 4 && o !== (o = w[2] + 1))) && y(n, 'step', o);
       },
       i(w) {
-        u || (s && P(s.$$.fragment, w), (u = !0));
+        i || (s && P(s.$$.fragment, w), (i = !0));
       },
       o(w) {
-        s && C(s.$$.fragment, w), (u = !1);
+        s && C(s.$$.fragment, w), (i = !1);
       },
       d(w) {
-        w && p(n), s && O(s);
+        w && r(n), s && O(s);
       },
     }
   );
 }
-function pp(r, n, e) {
+function rr(p, n, e) {
   let { step: s } = n,
     { backgroundSize: t } = n,
     { index: c } = n;
   return (
-    (r.$$set = (o) => {
+    (p.$$set = (o) => {
       'step' in o && e(0, (s = o.step)),
         'backgroundSize' in o && e(1, (t = o.backgroundSize)),
         'index' in o && e(2, (c = o.index));
@@ -604,23 +604,23 @@ function pp(r, n, e) {
     [s, t, c]
   );
 }
-class br extends x {
+class bp extends x {
   constructor(n) {
     super();
-    nn(this, n, pp, rp, sn, { step: 0, backgroundSize: 1, index: 2 });
+    nn(this, n, rr, pr, sn, { step: 0, backgroundSize: 1, index: 2 });
   }
 }
-function cp(r) {
+function cr(p) {
   let n, e, s, t;
-  const c = [r[0].foregroundProps || {}];
-  var o = r[0].foreground;
-  function u(l) {
+  const c = [p[0].foregroundProps || {}];
+  var o = p[0].foreground;
+  function i(l) {
     let g = {};
-    for (let v = 0; v < c.length; v += 1) g = ut(g, c[v]);
+    for (let v = 0; v < c.length; v += 1) g = it(g, c[v]);
     return { props: g };
   }
   return (
-    o && (e = new o(u())),
+    o && (e = new o(i())),
     {
       c() {
         (n = f('div')), e && T(e.$$.fragment), this.h();
@@ -628,20 +628,20 @@ function cp(r) {
       l(l) {
         n = d(l, 'DIV', { class: !0 });
         var g = k(n);
-        e && z(e.$$.fragment, g), g.forEach(p), this.h();
+        e && z(e.$$.fragment, g), g.forEach(r), this.h();
       },
       h() {
-        E(
+        y(
           n,
           'class',
-          (s = 'embedded-foreground step-' + (r[1] + 1) + ' svelte-kywsd6')
+          (s = 'embedded-foreground step-' + (p[1] + 1) + ' svelte-kywsd6')
         );
       },
       m(l, g) {
         b(l, n, g), e && j(e, n, null), (t = !0);
       },
       p(l, g) {
-        const v = g & 1 ? pt(c, [ct(l[0].foregroundProps || {})]) : {};
+        const v = g & 1 ? rt(c, [ct(l[0].foregroundProps || {})]) : {};
         if (o !== (o = l[0].foreground)) {
           if (e) {
             V();
@@ -652,7 +652,7 @@ function cp(r) {
               H();
           }
           o
-            ? ((e = new o(u())),
+            ? ((e = new o(i())),
               T(e.$$.fragment),
               P(e.$$.fragment, 1),
               j(e, n, null))
@@ -665,7 +665,7 @@ function cp(r) {
                 'embedded-foreground step-' +
                 (l[1] + 1) +
                 ' svelte-kywsd6'))) &&
-          E(n, 'class', s);
+          y(n, 'class', s);
       },
       i(l) {
         t || (e && P(e.$$.fragment, l), (t = !0));
@@ -674,15 +674,15 @@ function cp(r) {
         e && C(e.$$.fragment, l), (t = !1);
       },
       d(l) {
-        l && p(n), e && O(e);
+        l && r(n), e && O(e);
       },
     }
   );
 }
-function up(r) {
+function ir(p) {
   let n,
     e,
-    s = it.parse(r[0].foreground) + '',
+    s = ut.parse(p[0].foreground) + '',
     t,
     c;
   return {
@@ -691,52 +691,52 @@ function up(r) {
     },
     l(o) {
       n = d(o, 'SECTION', { class: !0, step: !0 });
-      var u = k(n);
-      e = d(u, 'DIV', { class: !0 });
+      var i = k(n);
+      e = d(i, 'DIV', { class: !0 });
       var l = k(e);
-      l.forEach(p), u.forEach(p), this.h();
+      l.forEach(r), i.forEach(r), this.h();
     },
     h() {
-      E(
+      y(
         e,
         'class',
-        (t = 'embedded-foreground step-' + (r[1] + 1) + ' svelte-kywsd6')
+        (t = 'embedded-foreground step-' + (p[1] + 1) + ' svelte-kywsd6')
       ),
-        E(n, 'class', 'body-text'),
-        E(n, 'step', (c = r[1] + 1));
+        y(n, 'class', 'body-text'),
+        y(n, 'step', (c = p[1] + 1));
     },
-    m(o, u) {
-      b(o, n, u), a(n, e), (e.innerHTML = s);
+    m(o, i) {
+      b(o, n, i), a(n, e), (e.innerHTML = s);
     },
-    p(o, u) {
-      u & 1 && s !== (s = it.parse(o[0].foreground) + '') && (e.innerHTML = s),
-        u & 2 &&
+    p(o, i) {
+      i & 1 && s !== (s = ut.parse(o[0].foreground) + '') && (e.innerHTML = s),
+        i & 2 &&
           t !==
             (t = 'embedded-foreground step-' + (o[1] + 1) + ' svelte-kywsd6') &&
-          E(e, 'class', t),
-        u & 2 && c !== (c = o[1] + 1) && E(n, 'step', c);
+          y(e, 'class', t),
+        i & 2 && c !== (c = o[1] + 1) && y(n, 'step', c);
     },
     i: I,
     o: I,
     d(o) {
-      o && p(n);
+      o && r(n);
     },
   };
 }
-function ip(r) {
+function ur(p) {
   let n, e;
   return {
     c() {
       (n = f('div')), this.h();
     },
     l(s) {
-      (n = d(s, 'DIV', { class: !0 })), k(n).forEach(p), this.h();
+      (n = d(s, 'DIV', { class: !0 })), k(n).forEach(r), this.h();
     },
     h() {
-      E(
+      y(
         n,
         'class',
-        (e = 'empty-step-foreground step-' + (r[1] + 1) + ' svelte-kywsd6')
+        (e = 'empty-step-foreground step-' + (p[1] + 1) + ' svelte-kywsd6')
       );
     },
     m(s, t) {
@@ -746,20 +746,20 @@ function ip(r) {
       t & 2 &&
         e !==
           (e = 'empty-step-foreground step-' + (s[1] + 1) + ' svelte-kywsd6') &&
-        E(n, 'class', e);
+        y(n, 'class', e);
     },
     i: I,
     o: I,
     d(s) {
-      s && p(n);
+      s && r(n);
     },
   };
 }
-function fp(r) {
+function fr(p) {
   let n, e, s, t;
-  const c = [ip, up, cp],
+  const c = [ur, ir, cr],
     o = [];
-  function u(l, g) {
+  function i(l, g) {
     return l[0].foreground === '' || !l[0].foreground
       ? 0
       : typeof l[0].foreground == 'string'
@@ -767,8 +767,8 @@ function fp(r) {
       : 2;
   }
   return (
-    (n = u(r)),
-    (e = o[n] = c[n](r)),
+    (n = i(p)),
+    (e = o[n] = c[n](p)),
     {
       c() {
         e.c(), (s = B());
@@ -781,7 +781,7 @@ function fp(r) {
       },
       p(l, [g]) {
         let v = n;
-        (n = u(l)),
+        (n = i(l)),
           n === v
             ? o[n].p(l, g)
             : (V(),
@@ -801,39 +801,39 @@ function fp(r) {
         C(e), (t = !1);
       },
       d(l) {
-        o[n].d(l), l && p(s);
+        o[n].d(l), l && r(s);
       },
     }
   );
 }
-function dp(r, n, e) {
+function dr(p, n, e) {
   let { step: s } = n,
     { index: t } = n;
   return (
-    (r.$$set = (c) => {
+    (p.$$set = (c) => {
       'step' in c && e(0, (s = c.step)), 'index' in c && e(1, (t = c.index));
     }),
     [s, t]
   );
 }
-class vr extends x {
+class vp extends x {
   constructor(n) {
     super();
-    nn(this, n, dp, fp, sn, { step: 0, index: 1 });
+    nn(this, n, dr, fr, sn, { step: 0, index: 1 });
   }
 }
-function wr(r, n, e) {
-  const s = r.slice();
+function wp(p, n, e) {
+  const s = p.slice();
   return (s[3] = n[e]), (s[5] = e), s;
 }
-function kp(r) {
+function kr(p) {
   let n, e, s, t;
   return (
-    (n = new vr({ props: { step: r[3], index: r[5] } })),
-    (s = new br({ props: { step: r[3], index: r[5], backgroundSize: r[2] } })),
+    (n = new vp({ props: { step: p[3], index: p[5] } })),
+    (s = new bp({ props: { step: p[3], index: p[5], backgroundSize: p[2] } })),
     {
       c() {
-        T(n.$$.fragment), (e = y()), T(s.$$.fragment);
+        T(n.$$.fragment), (e = E()), T(s.$$.fragment);
       },
       l(c) {
         z(n.$$.fragment, c), (e = $(c)), z(s.$$.fragment, c);
@@ -842,8 +842,8 @@ function kp(r) {
         j(n, c, o), b(c, e, o), j(s, c, o), (t = !0);
       },
       p(c, o) {
-        const u = {};
-        o & 1 && (u.step = c[3]), n.$set(u);
+        const i = {};
+        o & 1 && (i.step = c[3]), n.$set(i);
         const l = {};
         o & 1 && (l.step = c[3]), o & 4 && (l.backgroundSize = c[2]), s.$set(l);
       },
@@ -854,31 +854,31 @@ function kp(r) {
         C(n.$$.fragment, c), C(s.$$.fragment, c), (t = !1);
       },
       d(c) {
-        O(n, c), c && p(e), O(s, c);
+        O(n, c), c && r(e), O(s, c);
       },
     }
   );
 }
-function gp(r) {
+function gr(p) {
   let n, e, s, t, c;
   return (
-    (n = new br({ props: { step: r[3], index: r[5], backgroundSize: r[2] } })),
-    (s = new vr({ props: { step: r[3], index: r[5] } })),
+    (n = new bp({ props: { step: p[3], index: p[5], backgroundSize: p[2] } })),
+    (s = new vp({ props: { step: p[3], index: p[5] } })),
     {
       c() {
-        T(n.$$.fragment), (e = y()), T(s.$$.fragment), (t = y());
+        T(n.$$.fragment), (e = E()), T(s.$$.fragment), (t = E());
       },
       l(o) {
         z(n.$$.fragment, o), (e = $(o)), z(s.$$.fragment, o), (t = $(o));
       },
-      m(o, u) {
-        j(n, o, u), b(o, e, u), j(s, o, u), b(o, t, u), (c = !0);
+      m(o, i) {
+        j(n, o, i), b(o, e, i), j(s, o, i), b(o, t, i), (c = !0);
       },
-      p(o, u) {
+      p(o, i) {
         const l = {};
-        u & 1 && (l.step = o[3]), u & 4 && (l.backgroundSize = o[2]), n.$set(l);
+        i & 1 && (l.step = o[3]), i & 4 && (l.backgroundSize = o[2]), n.$set(l);
         const g = {};
-        u & 1 && (g.step = o[3]), s.$set(g);
+        i & 1 && (g.step = o[3]), s.$set(g);
       },
       i(o) {
         c || (P(n.$$.fragment, o), P(s.$$.fragment, o), (c = !0));
@@ -887,21 +887,21 @@ function gp(r) {
         C(n.$$.fragment, o), C(s.$$.fragment, o), (c = !1);
       },
       d(o) {
-        O(n, o), o && p(e), O(s, o), o && p(t);
+        O(n, o), o && r(e), O(s, o), o && r(t);
       },
     }
   );
 }
-function Er(r) {
+function yp(p) {
   let n, e, s, t;
-  const c = [gp, kp],
+  const c = [gr, kr],
     o = [];
-  function u(l, g) {
+  function i(l, g) {
     return l[1] === 'bf' ? 0 : 1;
   }
   return (
-    (n = u(r)),
-    (e = o[n] = c[n](r)),
+    (n = i(p)),
+    (e = o[n] = c[n](p)),
     {
       c() {
         e.c(), (s = B());
@@ -914,7 +914,7 @@ function Er(r) {
       },
       p(l, g) {
         let v = n;
-        (n = u(l)),
+        (n = i(l)),
           n === v
             ? o[n].p(l, g)
             : (V(),
@@ -934,17 +934,17 @@ function Er(r) {
         C(e), (t = !1);
       },
       d(l) {
-        o[n].d(l), l && p(s);
+        o[n].d(l), l && r(s);
       },
     }
   );
 }
-function mp(r) {
+function mr(p) {
   let n,
     e,
-    s = r[0],
+    s = p[0],
     t = [];
-  for (let o = 0; o < s.length; o += 1) t[o] = Er(wr(r, s, o));
+  for (let o = 0; o < s.length; o += 1) t[o] = yp(wp(p, s, o));
   const c = (o) =>
     C(t[o], 1, 1, () => {
       t[o] = null;
@@ -955,22 +955,22 @@ function mp(r) {
       n = B();
     },
     l(o) {
-      for (let u = 0; u < t.length; u += 1) t[u].l(o);
+      for (let i = 0; i < t.length; i += 1) t[i].l(o);
       n = B();
     },
-    m(o, u) {
-      for (let l = 0; l < t.length; l += 1) t[l].m(o, u);
-      b(o, n, u), (e = !0);
+    m(o, i) {
+      for (let l = 0; l < t.length; l += 1) t[l].m(o, i);
+      b(o, n, i), (e = !0);
     },
-    p(o, [u]) {
-      if (u & 7) {
+    p(o, [i]) {
+      if (i & 7) {
         s = o[0];
         let l;
         for (l = 0; l < s.length; l += 1) {
-          const g = wr(o, s, l);
+          const g = wp(o, s, l);
           t[l]
-            ? (t[l].p(g, u), P(t[l], 1))
-            : ((t[l] = Er(g)), t[l].c(), P(t[l], 1), t[l].m(n.parentNode, n));
+            ? (t[l].p(g, i), P(t[l], 1))
+            : ((t[l] = yp(g)), t[l].c(), P(t[l], 1), t[l].m(n.parentNode, n));
         }
         for (V(), l = s.length; l < t.length; l += 1) c(l);
         H();
@@ -978,26 +978,26 @@ function mp(r) {
     },
     i(o) {
       if (!e) {
-        for (let u = 0; u < s.length; u += 1) P(t[u]);
+        for (let i = 0; i < s.length; i += 1) P(t[i]);
         e = !0;
       }
     },
     o(o) {
       t = t.filter(Boolean);
-      for (let u = 0; u < t.length; u += 1) C(t[u]);
+      for (let i = 0; i < t.length; i += 1) C(t[i]);
       e = !1;
     },
     d(o) {
-      Qo(t, o), o && p(n);
+      Qo(t, o), o && r(n);
     },
   };
 }
-function hp(r, n, e) {
+function hr(p, n, e) {
   let { steps: s } = n,
     { embeddedLayout: t = 'fb' } = n,
     { backgroundSize: c } = n;
   return (
-    (r.$$set = (o) => {
+    (p.$$set = (o) => {
       'steps' in o && e(0, (s = o.steps)),
         'embeddedLayout' in o && e(1, (t = o.embeddedLayout)),
         'backgroundSize' in o && e(2, (c = o.backgroundSize));
@@ -1005,17 +1005,17 @@ function hp(r, n, e) {
     [s, t, c]
   );
 }
-class _p extends x {
+class _r extends x {
   constructor(n) {
     super();
-    nn(this, n, hp, mp, sn, { steps: 0, embeddedLayout: 1, backgroundSize: 2 });
+    nn(this, n, hr, mr, sn, { steps: 0, embeddedLayout: 1, backgroundSize: 2 });
   }
 }
-function bp(r) {
+function br(p) {
   let n, e, s;
   return (
-    (e = new _p({
-      props: { steps: r[1], embeddedLayout: r[7], backgroundSize: r[2] },
+    (e = new _r({
+      props: { steps: p[1], embeddedLayout: p[7], backgroundSize: p[2] },
     })),
     {
       c() {
@@ -1024,11 +1024,11 @@ function bp(r) {
       l(t) {
         n = d(t, 'SECTION', { class: !0, id: !0 });
         var c = k(n);
-        z(e.$$.fragment, c), c.forEach(p), this.h();
+        z(e.$$.fragment, c), c.forEach(r), this.h();
       },
       h() {
-        E(n, 'class', 'scroller-container embedded svelte-5wwrxt'),
-          E(n, 'id', r[0]);
+        y(n, 'class', 'scroller-container embedded svelte-5wwrxt'),
+          y(n, 'id', p[0]);
       },
       m(t, c) {
         b(t, n, c), j(e, n, null), (s = !0);
@@ -1039,7 +1039,7 @@ function bp(r) {
           c & 128 && (o.embeddedLayout = t[7]),
           c & 4 && (o.backgroundSize = t[2]),
           e.$set(o),
-          (!s || c & 1) && E(n, 'id', t[0]);
+          (!s || c & 1) && y(n, 'id', t[0]);
       },
       i(t) {
         s || (P(e.$$.fragment, t), (s = !0));
@@ -1048,37 +1048,37 @@ function bp(r) {
         C(e.$$.fragment, t), (s = !1);
       },
       d(t) {
-        t && p(n), O(e);
+        t && r(n), O(e);
       },
     }
   );
 }
-function vp(r) {
+function vr(p) {
   let n, e, s, t, c, o;
-  function u(w) {
-    r[15](w);
+  function i(w) {
+    p[15](w);
   }
   function l(w) {
-    r[16](w);
+    p[16](w);
   }
   function g(w) {
-    r[17](w);
+    p[17](w);
   }
   let v = {
-    threshold: r[8],
-    top: r[9],
-    bottom: r[10],
-    parallax: r[11],
+    threshold: p[8],
+    top: p[9],
+    bottom: p[10],
+    parallax: p[11],
     query: 'section.step-foreground-container',
-    $$slots: { foreground: [Ep], background: [wp] },
-    $$scope: { ctx: r },
+    $$slots: { foreground: [yr], background: [wr] },
+    $$scope: { ctx: p },
   };
   return (
-    r[12] !== void 0 && (v.index = r[12]),
-    r[13] !== void 0 && (v.offset = r[13]),
-    r[14] !== void 0 && (v.progress = r[14]),
-    (e = new Jr({ props: v })),
-    Yo.push(() => Jo(e, 'index', u)),
+    p[12] !== void 0 && (v.index = p[12]),
+    p[13] !== void 0 && (v.offset = p[13]),
+    p[14] !== void 0 && (v.progress = p[14]),
+    (e = new Jp({ props: v })),
+    Yo.push(() => Jo(e, 'index', i)),
     Yo.push(() => Jo(e, 'offset', l)),
     Yo.push(() => Jo(e, 'progress', g)),
     {
@@ -1088,10 +1088,10 @@ function vp(r) {
       l(w) {
         n = d(w, 'SECTION', { class: !0, id: !0 });
         var S = k(n);
-        z(e.$$.fragment, S), S.forEach(p), this.h();
+        z(e.$$.fragment, S), S.forEach(r), this.h();
       },
       h() {
-        E(n, 'class', 'scroller-container svelte-5wwrxt'), E(n, 'id', r[0]);
+        y(n, 'class', 'scroller-container svelte-5wwrxt'), y(n, 'id', p[0]);
       },
       m(w, S) {
         b(w, n, S), j(e, n, null), (o = !0);
@@ -1109,7 +1109,7 @@ function vp(r) {
             S & 16384 &&
             ((c = !0), (L.progress = w[14]), Ko(() => (c = !1))),
           e.$set(L),
-          (!o || S & 1) && E(n, 'id', w[0]);
+          (!o || S & 1) && y(n, 'id', w[0]);
       },
       i(w) {
         o || (P(e.$$.fragment, w), (o = !0));
@@ -1118,20 +1118,20 @@ function vp(r) {
         C(e.$$.fragment, w), (o = !1);
       },
       d(w) {
-        w && p(n), O(e);
+        w && r(n), O(e);
       },
     }
   );
 }
-function wp(r) {
-  let n, e, s, t, c, o, u;
+function wr(p) {
+  let n, e, s, t, c, o, i;
   return (
-    (t = new xr({
+    (t = new xp({
       props: {
-        index: r[12],
-        steps: r[1],
-        preload: r[5],
-        stackBackground: r[4],
+        index: p[12],
+        steps: p[1],
+        preload: p[5],
+        stackBackground: p[4],
       },
     })),
     {
@@ -1149,23 +1149,23 @@ function wp(r) {
         var v = k(e);
         s = d(v, 'SECTION', { class: !0, step: !0 });
         var w = k(s);
-        z(t.$$.fragment, w), w.forEach(p), v.forEach(p), g.forEach(p), this.h();
+        z(t.$$.fragment, w), w.forEach(r), v.forEach(r), g.forEach(r), this.h();
       },
       h() {
-        E(
+        y(
           s,
           'class',
-          (c = 'background-container graphic ' + r[2] + ' svelte-5wwrxt')
+          (c = 'background-container graphic ' + p[2] + ' svelte-5wwrxt')
         ),
-          E(s, 'step', (o = r[12] + 1)),
-          E(e, 'class', 'scroller-graphic-well svelte-5wwrxt'),
-          E(n, 'slot', 'background'),
-          E(n, 'class', 'background svelte-5wwrxt'),
-          $n(n, 'right', r[3] === 'left opposite'),
-          $n(n, 'left', r[3] === 'right opposite');
+          y(s, 'step', (o = p[12] + 1)),
+          y(e, 'class', 'scroller-graphic-well svelte-5wwrxt'),
+          y(n, 'slot', 'background'),
+          y(n, 'class', 'background svelte-5wwrxt'),
+          $n(n, 'right', p[3] === 'left opposite'),
+          $n(n, 'left', p[3] === 'right opposite');
       },
       m(l, g) {
-        b(l, n, g), a(n, e), a(e, s), j(t, s, null), (u = !0);
+        b(l, n, g), a(n, e), a(e, s), j(t, s, null), (i = !0);
       },
       p(l, g) {
         const v = {};
@@ -1174,34 +1174,34 @@ function wp(r) {
           g & 32 && (v.preload = l[5]),
           g & 16 && (v.stackBackground = l[4]),
           t.$set(v),
-          (!u ||
+          (!i ||
             (g & 4 &&
               c !==
                 (c =
                   'background-container graphic ' +
                   l[2] +
                   ' svelte-5wwrxt'))) &&
-            E(s, 'class', c),
-          (!u || (g & 4096 && o !== (o = l[12] + 1))) && E(s, 'step', o),
+            y(s, 'class', c),
+          (!i || (g & 4096 && o !== (o = l[12] + 1))) && y(s, 'step', o),
           g & 8 && $n(n, 'right', l[3] === 'left opposite'),
           g & 8 && $n(n, 'left', l[3] === 'right opposite');
       },
       i(l) {
-        u || (P(t.$$.fragment, l), (u = !0));
+        i || (P(t.$$.fragment, l), (i = !0));
       },
       o(l) {
-        C(t.$$.fragment, l), (u = !1);
+        C(t.$$.fragment, l), (i = !1);
       },
       d(l) {
-        l && p(n), O(t);
+        l && r(n), O(t);
       },
     }
   );
 }
-function Ep(r) {
+function yr(p) {
   let n, e, s, t;
   return (
-    (e = new lp({ props: { steps: r[1] } })),
+    (e = new lr({ props: { steps: p[1] } })),
     {
       c() {
         (n = f('div')), T(e.$$.fragment), this.h();
@@ -1209,22 +1209,22 @@ function Ep(r) {
       l(c) {
         n = d(c, 'DIV', { slot: !0, class: !0 });
         var o = k(n);
-        z(e.$$.fragment, o), o.forEach(p), this.h();
+        z(e.$$.fragment, o), o.forEach(r), this.h();
       },
       h() {
-        E(n, 'slot', 'foreground'),
-          E(n, 'class', (s = 'foreground ' + r[3] + ' svelte-5wwrxt'));
+        y(n, 'slot', 'foreground'),
+          y(n, 'class', (s = 'foreground ' + p[3] + ' svelte-5wwrxt'));
       },
       m(c, o) {
         b(c, n, o), j(e, n, null), (t = !0);
       },
       p(c, o) {
-        const u = {};
-        o & 2 && (u.steps = c[1]),
-          e.$set(u),
+        const i = {};
+        o & 2 && (i.steps = c[1]),
+          e.$set(i),
           (!t ||
             (o & 8 && s !== (s = 'foreground ' + c[3] + ' svelte-5wwrxt'))) &&
-            E(n, 'class', s);
+            y(n, 'class', s);
       },
       i(c) {
         t || (P(e.$$.fragment, c), (t = !0));
@@ -1233,21 +1233,21 @@ function Ep(r) {
         C(e.$$.fragment, c), (t = !1);
       },
       d(c) {
-        c && p(n), O(e);
+        c && r(n), O(e);
       },
     }
   );
 }
-function yp(r) {
+function Er(p) {
   let n, e, s, t;
-  const c = [vp, bp],
+  const c = [vr, br],
     o = [];
-  function u(l, g) {
+  function i(l, g) {
     return l[6] ? 1 : 0;
   }
   return (
-    (n = u(r)),
-    (e = o[n] = c[n](r)),
+    (n = i(p)),
+    (e = o[n] = c[n](p)),
     {
       c() {
         e.c(), (s = B());
@@ -1260,7 +1260,7 @@ function yp(r) {
       },
       p(l, [g]) {
         let v = n;
-        (n = u(l)),
+        (n = i(l)),
           n === v
             ? o[n].p(l, g)
             : (V(),
@@ -1280,17 +1280,17 @@ function yp(r) {
         C(e), (t = !1);
       },
       d(l) {
-        o[n].d(l), l && p(s);
+        o[n].d(l), l && r(s);
       },
     }
   );
 }
-function $p(r, n, e) {
+function $r(p, n, e) {
   let { id: s = '' } = n,
     { steps: t = [] } = n,
     { backgroundSize: c = 'fluid' } = n,
     { foregroundPosition: o = 'middle' } = n,
-    { stackBackground: u = !0 } = n,
+    { stackBackground: i = !0 } = n,
     { preload: l = 1 } = n,
     { embedded: g = !1 } = n,
     { embeddedLayout: v = 'fb' } = n,
@@ -1311,12 +1311,12 @@ function $p(r, n, e) {
     (Sn = D), e(14, Sn);
   }
   return (
-    (r.$$set = (D) => {
+    (p.$$set = (D) => {
       'id' in D && e(0, (s = D.id)),
         'steps' in D && e(1, (t = D.steps)),
         'backgroundSize' in D && e(2, (c = D.backgroundSize)),
         'foregroundPosition' in D && e(3, (o = D.foregroundPosition)),
-        'stackBackground' in D && e(4, (u = D.stackBackground)),
+        'stackBackground' in D && e(4, (i = D.stackBackground)),
         'preload' in D && e(5, (l = D.preload)),
         'embedded' in D && e(6, (g = D.embedded)),
         'embeddedLayout' in D && e(7, (v = D.embeddedLayout)),
@@ -1325,13 +1325,13 @@ function $p(r, n, e) {
         'bottom' in D && e(10, (L = D.bottom)),
         'parallax' in D && e(11, (A = D.parallax));
     }),
-    [s, t, c, o, u, l, g, v, w, S, L, A, N, en, Sn, hs, Pn, _s]
+    [s, t, c, o, i, l, g, v, w, S, L, A, N, en, Sn, hs, Pn, _s]
   );
 }
 class Zn extends x {
   constructor(n) {
     super();
-    nn(this, n, $p, yp, sn, {
+    nn(this, n, $r, Er, sn, {
       id: 0,
       steps: 1,
       backgroundSize: 2,
@@ -1347,17 +1347,17 @@ class Zn extends x {
     });
   }
 }
-function Sp(r) {
-  let n, e, s, t, c, o, u, l, g, v, w;
+function Sr(p) {
+  let n, e, s, t, c, o, i, l, g, v, w;
   return {
     c() {
       (n = f('h4')),
         (e = m('Interactive step')),
-        (s = y()),
+        (s = E()),
         (t = f('p')),
         (c = m('The count is ')),
-        (o = m(r[0])),
-        (u = y()),
+        (o = m(p[0])),
+        (i = E()),
         (l = f('button')),
         (g = m('Click Me'));
     },
@@ -1365,17 +1365,17 @@ function Sp(r) {
       n = d(S, 'H4', {});
       var L = k(n);
       (e = h(L, 'Interactive step')),
-        L.forEach(p),
+        L.forEach(r),
         (s = $(S)),
         (t = d(S, 'P', {}));
       var A = k(t);
       (c = h(A, 'The count is ')),
-        (o = h(A, r[0])),
-        A.forEach(p),
-        (u = $(S)),
+        (o = h(A, p[0])),
+        A.forEach(r),
+        (i = $(S)),
         (l = d(S, 'BUTTON', {}));
       var N = k(l);
-      (g = h(N, 'Click Me')), N.forEach(p);
+      (g = h(N, 'Click Me')), N.forEach(r);
     },
     m(S, L) {
       b(S, n, L),
@@ -1384,40 +1384,40 @@ function Sp(r) {
         b(S, t, L),
         a(t, c),
         a(t, o),
-        b(S, u, L),
+        b(S, i, L),
         b(S, l, L),
         a(l, g),
-        v || ((w = Kr(l, 'click', r[1])), (v = !0));
+        v || ((w = Kp(l, 'click', p[1])), (v = !0));
     },
     p(S, [L]) {
-      L & 1 && Wr(o, S[0]);
+      L & 1 && Wp(o, S[0]);
     },
     i: I,
     o: I,
     d(S) {
-      S && p(n), S && p(s), S && p(t), S && p(u), S && p(l), (v = !1), w();
+      S && r(n), S && r(s), S && r(t), S && r(i), S && r(l), (v = !1), w();
     },
   };
 }
-function Pp(r, n, e) {
+function Pr(p, n, e) {
   let { count: s = 0 } = n;
   const t = () => {
     e(0, (s += 1));
   };
   return (
-    (r.$$set = (c) => {
+    (p.$$set = (c) => {
       'count' in c && e(0, (s = c.count));
     }),
     [s, t]
   );
 }
-class yr extends x {
+class Ep extends x {
   constructor(n) {
     super();
-    nn(this, n, Pp, Sp, sn, { count: 0 });
+    nn(this, n, Pr, Sr, sn, { count: 0 });
   }
 }
-function Cp(r) {
+function Cr(p) {
   let n, e, s;
   return {
     c() {
@@ -1427,22 +1427,22 @@ function Cp(r) {
       n = d(t, 'DIV', { class: !0 });
       var c = k(n);
       (e = d(c, 'DIV', { class: !0, style: !0 })),
-        k(e).forEach(p),
-        c.forEach(p),
+        k(e).forEach(r),
+        c.forEach(r),
         this.h();
     },
     h() {
-      E(e, 'class', 'step svelte-1e3wp2r'),
-        E(
+      y(e, 'class', 'step svelte-1e3wp2r'),
+        y(
           e,
           'style',
           (s = `
-      background: ${r[0]};
-      height: ${400 / r[2]}px;
-      top: ${r[1] * (400 / r[2])}px;
+      background: ${p[0]};
+      height: ${400 / p[2]}px;
+      top: ${p[1] * (400 / p[2])}px;
   `)
         ),
-        E(n, 'class', 'step-cont svelte-1e3wp2r');
+        y(n, 'class', 'step-cont svelte-1e3wp2r');
     },
     m(t, c) {
       b(t, n, c), a(n, e);
@@ -1455,21 +1455,21 @@ function Cp(r) {
       height: ${400 / t[2]}px;
       top: ${t[1] * (400 / t[2])}px;
   `) &&
-        E(e, 'style', s);
+        y(e, 'style', s);
     },
     i: I,
     o: I,
     d(t) {
-      t && p(n);
+      t && r(n);
     },
   };
 }
-function Ip(r, n, e) {
+function Ir(p, n, e) {
   let { colour: s = 'lightblue' } = n,
     { i: t = 0 } = n,
     { steps: c = 3 } = n;
   return (
-    (r.$$set = (o) => {
+    (p.$$set = (o) => {
       'colour' in o && e(0, (s = o.colour)),
         'i' in o && e(1, (t = o.i)),
         'steps' in o && e(2, (c = o.steps));
@@ -1480,39 +1480,39 @@ function Ip(r, n, e) {
 class Wo extends x {
   constructor(n) {
     super();
-    nn(this, n, Ip, Cp, sn, { colour: 0, i: 1, steps: 2 });
+    nn(this, n, Ir, Cr, sn, { colour: 0, i: 1, steps: 2 });
   }
 }
-function Lp(r) {
+function Lr(p) {
   let n, e;
   return {
     c() {
       (n = f('div')), this.h();
     },
     l(s) {
-      (n = d(s, 'DIV', { class: !0, style: !0 })), k(n).forEach(p), this.h();
+      (n = d(s, 'DIV', { class: !0, style: !0 })), k(n).forEach(r), this.h();
     },
     h() {
-      E(n, 'class', 'step svelte-13llgxe'),
-        E(n, 'style', (e = `background: ${r[0]};`));
+      y(n, 'class', 'step svelte-13llgxe'),
+        y(n, 'style', (e = `background: ${p[0]};`));
     },
     m(s, t) {
       b(s, n, t);
     },
     p(s, [t]) {
-      t & 1 && e !== (e = `background: ${s[0]};`) && E(n, 'style', e);
+      t & 1 && e !== (e = `background: ${s[0]};`) && y(n, 'style', e);
     },
     i: I,
     o: I,
     d(s) {
-      s && p(n);
+      s && r(n);
     },
   };
 }
-function Dp(r, n, e) {
+function Dr(p, n, e) {
   let { colour: s = 'lightblue' } = n;
   return (
-    (r.$$set = (t) => {
+    (p.$$set = (t) => {
       'colour' in t && e(0, (s = t.colour));
     }),
     [s]
@@ -1521,40 +1521,40 @@ function Dp(r, n, e) {
 class ms extends x {
   constructor(n) {
     super();
-    nn(this, n, Dp, Lp, sn, { colour: 0 });
+    nn(this, n, Dr, Lr, sn, { colour: 0 });
   }
 }
-function Op(r) {
-  switch (r) {
+function Or(p) {
+  switch (p) {
     case './demos/ai2html/ai-scroller-1.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-1.exclude-40da6cd4.js'),
+        () => import('./ai-scroller-1.exclude-ca79c8f7.js'),
         [
-          'chunks/ai-scroller-1.exclude-40da6cd4.js',
+          'chunks/ai-scroller-1.exclude-ca79c8f7.js',
           'assets/ai-scroller-1.exclude-74bdcb73.css',
-          'chunks/vendor-b82e5b83.js',
+          'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case './demos/ai2html/ai-scroller-2.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-2.exclude-1f4b3f36.js'),
+        () => import('./ai-scroller-2.exclude-cbbf7fec.js'),
         [
-          'chunks/ai-scroller-2.exclude-1f4b3f36.js',
+          'chunks/ai-scroller-2.exclude-cbbf7fec.js',
           'assets/ai-scroller-2.exclude-7d0e85bf.css',
-          'chunks/vendor-b82e5b83.js',
+          'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case './demos/ai2html/ai-scroller-3.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-3.exclude-2aa23049.js'),
+        () => import('./ai-scroller-3.exclude-7adbae8e.js'),
         [
-          'chunks/ai-scroller-3.exclude-2aa23049.js',
+          'chunks/ai-scroller-3.exclude-7adbae8e.js',
           'assets/ai-scroller-3.exclude-e5d75c9d.css',
-          'chunks/vendor-b82e5b83.js',
+          'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]
@@ -1563,15 +1563,15 @@ function Op(r) {
       return new Promise(function (n, e) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(e.bind(null, new Error('Unknown variable dynamic import: ' + r)));
+          : setTimeout)(e.bind(null, new Error('Unknown variable dynamic import: ' + p)));
       });
   }
 }
-function Tp(r) {
+function Tr(p) {
   let n, e;
   return (
     (n = new Zn({
-      props: { steps: r[0], backgroundSize: 'wide', id: 'example1' },
+      props: { steps: p[0], backgroundSize: 'wide', id: 'example1' },
     })),
     {
       c() {
@@ -1596,12 +1596,12 @@ function Tp(r) {
     }
   );
 }
-function jp(r) {
+function jr(p) {
   let n, e;
   return (
     (n = new Zn({
       props: {
-        steps: r[0],
+        steps: p[0],
         foregroundPosition: 'right opposite',
         backgroundSize: 'normal',
         id: 'example2',
@@ -1630,12 +1630,12 @@ function jp(r) {
     }
   );
 }
-function zp(r) {
+function zr(p) {
   let n, e;
   return (
     (n = new Zn({
       props: {
-        steps: r[1],
+        steps: p[1],
         foregroundPosition: 'middle',
         backgroundSize: 'normal',
         preload: 0,
@@ -1665,11 +1665,11 @@ function zp(r) {
     }
   );
 }
-function Bp(r) {
+function Br(p) {
   let n, e;
   return (
     (n = new Zn({
-      props: { steps: r[2], backgroundSize: 'widest', id: 'example3' },
+      props: { steps: p[2], backgroundSize: 'widest', id: 'example3' },
     })),
     {
       c() {
@@ -1694,12 +1694,12 @@ function Bp(r) {
     }
   );
 }
-function Gp(r) {
+function Gr(p) {
   let n, e;
   return (
     (n = new Zn({
       props: {
-        steps: r[0],
+        steps: p[0],
         backgroundSize: 'widest',
         id: 'scroller-example-4',
       },
@@ -1727,14 +1727,14 @@ function Gp(r) {
     }
   );
 }
-function Np(r) {
+function Nr(p) {
   return { c: I, l: I, m: I, p: I, i: I, o: I, d: I };
 }
-function Mp(r) {
+function Mr(p) {
   let n, e;
   return (
     (n = new Zn({
-      props: { steps: r[6], backgroundSize: 'fluid', id: 'example-5' },
+      props: { steps: p[6], backgroundSize: 'fluid', id: 'example-5' },
     })),
     {
       c() {
@@ -1759,25 +1759,25 @@ function Mp(r) {
     }
   );
 }
-function Rp(r) {
+function Rr(p) {
   return { c: I, l: I, m: I, p: I, i: I, o: I, d: I };
 }
-function Ap(r) {
+function Ar(p) {
   let n,
     e,
     s = {
-      ctx: r,
+      ctx: p,
       current: null,
       token: null,
       hasCatch: !1,
-      pending: Rp,
-      then: Mp,
-      catch: Np,
+      pending: Rr,
+      then: Mr,
+      catch: Nr,
       value: 6,
       blocks: [, , ,],
     };
   return (
-    fr(r[4](r[3]), s),
+    fp(p[4](p[3]), s),
     {
       c() {
         (n = B()), s.block.c();
@@ -1793,7 +1793,7 @@ function Ap(r) {
           (e = !0);
       },
       p(t, c) {
-        (r = t), dr(s, r, c);
+        (p = t), dp(s, p, c);
       },
       i(t) {
         e || (P(s.block), (e = !0));
@@ -1806,20 +1806,20 @@ function Ap(r) {
         e = !1;
       },
       d(t) {
-        t && p(n), s.block.d(t), (s.token = null), (s = null);
+        t && r(n), s.block.d(t), (s.token = null), (s = null);
       },
     }
   );
 }
-function Up(r) {
+function Ur(p) {
   return { c: I, l: I, m: I, p: I, i: I, o: I, d: I };
 }
-function Vp(r) {
+function Vr(p) {
   let n, e;
   return (
     (n = new Zn({
       props: {
-        steps: r[6],
+        steps: p[6],
         backgroundSize: 'fluid',
         id: 'example6',
         embedded: 'true',
@@ -1848,25 +1848,25 @@ function Vp(r) {
     }
   );
 }
-function Hp(r) {
+function Hr(p) {
   return { c: I, l: I, m: I, p: I, i: I, o: I, d: I };
 }
-function Fp(r) {
+function Fr(p) {
   let n,
     e,
     s = {
-      ctx: r,
+      ctx: p,
       current: null,
       token: null,
       hasCatch: !1,
-      pending: Hp,
-      then: Vp,
-      catch: Up,
+      pending: Hr,
+      then: Vr,
+      catch: Ur,
       value: 6,
       blocks: [, , ,],
     };
   return (
-    fr(r[4](r[3]), s),
+    fp(p[4](p[3]), s),
     {
       c() {
         (n = B()), s.block.c();
@@ -1882,7 +1882,7 @@ function Fp(r) {
           (e = !0);
       },
       p(t, c) {
-        (r = t), dr(s, r, c);
+        (p = t), dp(s, p, c);
       },
       i(t) {
         e || (P(s.block), (e = !0));
@@ -1895,19 +1895,19 @@ function Fp(r) {
         e = !1;
       },
       d(t) {
-        t && p(n), s.block.d(t), (s.token = null), (s = null);
+        t && r(n), s.block.d(t), (s.token = null), (s = null);
       },
     }
   );
 }
-function qp(r) {
+function qr(p) {
   let n,
     e,
     s,
     t,
     c,
     o,
-    u,
+    i,
     l,
     g,
     v,
@@ -1936,15 +1936,15 @@ function qp(r) {
     ht,
     _t,
     In,
-    Es,
+    ys,
     bt,
     vt,
-    ys,
+    Es,
     wt,
-    Et,
+    yt,
     ns,
     $s,
-    yt,
+    Et,
     $t,
     St,
     Ss,
@@ -1971,7 +1971,7 @@ function qp(r) {
     Mt,
     Ce,
     Ln,
-    Sr = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    Sp = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Scroller <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> RedGraphic <span class="token keyword">from</span> <span class="token string">'./RedGraphic.svelte'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> BlueGraphic <span class="token keyword">from</span> <span class="token string">'./BlueGraphic.svelte'</span><span class="token punctuation">;</span>
@@ -1979,16 +1979,16 @@ function qp(r) {
 
   <span class="token keyword">const</span> steps <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> RedGraphic<span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> <span class="token string">'#### Step 1&#92;n&#92;nLorem ipsum red'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> RedGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">'#### Step 1&#92;n&#92;nLorem ipsum red'</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> BlueGraphic<span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> <span class="token string">'#### Step 2&#92;n&#92;nLorem ipsum blue'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> BlueGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">'#### Step 2&#92;n&#92;nLorem ipsum blue'</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> GreenGraphic<span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> <span class="token string">'#### Step 3&#92;n&#92;nLorem ipsum green'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> GreenGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">'#### Step 3&#92;n&#92;nLorem ipsum green'</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
 
@@ -1997,7 +1997,7 @@ function qp(r) {
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Scroller</span> <span class="token attr-name">steps="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>steps<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token attr-name">backgroundSize="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>backgroundSize<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token punctuation">/></span></span></code>`,
     Ie,
-    pn,
+    rn,
     Le,
     M,
     Dn,
@@ -2039,14 +2039,14 @@ function qp(r) {
     oa,
     la,
     Vs,
-    ra,
     pa,
+    ra,
     F,
     Hs,
     ca,
-    ua,
-    Fs,
     ia,
+    Fs,
+    ua,
     fa,
     qs,
     da,
@@ -2056,7 +2056,7 @@ function qp(r) {
     ma,
     De,
     Tn,
-    Pr = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    Pp = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Scroller <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> RedGraphic <span class="token keyword">from</span> <span class="token string">'./RedGraphic.svelte'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> BlueGraphic <span class="token keyword">from</span> <span class="token string">'./BlueGraphic.svelte'</span><span class="token punctuation">;</span>
@@ -2064,16 +2064,16 @@ function qp(r) {
 
   <span class="token keyword">const</span> steps <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> RedGraphic<span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> <span class="token string">'#### Step 1&#92;n&#92;nLorem ipsum'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> RedGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">'#### Step 1&#92;n&#92;nLorem ipsum'</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> BlueGraphic<span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> <span class="token string">'#### Step 2&#92;n&#92;nLorem ipsum'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> BlueGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">'#### Step 2&#92;n&#92;nLorem ipsum'</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> GreenGraphic<span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> <span class="token string">'#### Step 3&#92;n&#92;nLorem ipsum'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> GreenGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">'#### Step 3&#92;n&#92;nLorem ipsum'</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -2098,9 +2098,9 @@ function qp(r) {
     un,
     Ws,
     wa,
-    Ea,
-    Xs,
     ya,
+    Xs,
+    Ea,
     $a,
     Sa,
     os,
@@ -2128,12 +2128,12 @@ function qp(r) {
     Ma,
     je,
     zn,
-    Cr =
+    Cp =
       '<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Scroller</span> <span class="token attr-name">steps="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>steps<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token attr-name">stackBackground="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token boolean">true</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token attr-name">preload="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token punctuation">/></span></span></code>',
     ze,
     fn,
     Be,
-    rs,
+    ps,
     J,
     Ra,
     ae,
@@ -2147,27 +2147,27 @@ function qp(r) {
     qa,
     Ge,
     Bn,
-    Ir = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    Ip = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Scroller <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> MultiColourGraphic <span class="token keyword">from</span> <span class="token string">'./MultiColourGraphic.svelte'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> InteractiveText <span class="token keyword">from</span> <span class="token string">'./InteractiveText.svelte'</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> steps <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> MultiColourGraphic<span class="token punctuation">,</span>
-      backgroundProps<span class="token operator">:</span> <span class="token punctuation">&#123;</span> colour<span class="token operator">:</span> <span class="token string">'red'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token comment">// \u{1F448}</span>
-      foreground<span class="token operator">:</span> InteractiveText<span class="token punctuation">,</span> <span class="token comment">// \u{1F448}</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> MultiColourGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">backgroundProps</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">colour</span><span class="token operator">:</span> <span class="token string">'red'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token comment">// \u{1F448}</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> InteractiveText<span class="token punctuation">,</span> <span class="token comment">// \u{1F448}</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> MultiColourGraphic<span class="token punctuation">,</span>
-      backgroundProps<span class="token operator">:</span> <span class="token punctuation">&#123;</span> colour<span class="token operator">:</span> <span class="token string">'blue'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> <span class="token string">'#### Step 2&#92;n&#92;nLorem ipsum blue'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> MultiColourGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">backgroundProps</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">colour</span><span class="token operator">:</span> <span class="token string">'blue'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">'#### Step 2&#92;n&#92;nLorem ipsum blue'</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span>
-      background<span class="token operator">:</span> MultiColourGraphic<span class="token punctuation">,</span>
-      backgroundProps<span class="token operator">:</span> <span class="token punctuation">&#123;</span> colour<span class="token operator">:</span> <span class="token string">'green'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-      foreground<span class="token operator">:</span> InteractiveText<span class="token punctuation">,</span>
-      foregroundProps<span class="token operator">:</span> <span class="token punctuation">&#123;</span> count<span class="token operator">:</span> <span class="token number">100</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token comment">// \u{1F448}</span>
+      <span class="token literal-property property">background</span><span class="token operator">:</span> MultiColourGraphic<span class="token punctuation">,</span>
+      <span class="token literal-property property">backgroundProps</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">colour</span><span class="token operator">:</span> <span class="token string">'green'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">foreground</span><span class="token operator">:</span> InteractiveText<span class="token punctuation">,</span>
+      <span class="token literal-property property">foregroundProps</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">100</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token comment">// \u{1F448}</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -2179,12 +2179,12 @@ function qp(r) {
     kn,
     Gn,
     Qa,
-    re,
+    pe,
     Ya,
     Ja,
     Ka,
     gn,
-    pe,
+    re,
     Wa,
     Xa,
     Nn,
@@ -2194,7 +2194,7 @@ function qp(r) {
     no,
     Re,
     Rn,
-    Lr = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Scroller</span> <span class="token attr-name">steps="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>steps<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token attr-name">backgroundSize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>widest<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-scroller<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    Lp = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Scroller</span> <span class="token attr-name">steps="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>steps<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token attr-name">backgroundSize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>widest<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-scroller<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 
 <span class="token comment">&lt;!-- svelte-ignore css-unused-selector --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scss<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
@@ -2225,15 +2225,15 @@ function qp(r) {
     ao,
     oo,
     lo,
-    ps,
+    rs,
     Vn,
-    ro,
-    Hn,
     po,
+    Hn,
+    ro,
     co,
     Ve,
     Fn,
-    Dr = `<code class="language-bash"><span class="token comment"># In your Google doc...</span>
+    Dp = `<code class="language-bash"><span class="token comment"># In your Google doc...</span>
 <span class="token punctuation">[</span>blocks<span class="token punctuation">]</span>
 
 <span class="token comment"># ...</span>
@@ -2266,7 +2266,7 @@ Lorem ipsum<span class="token punctuation">..</span>.
 <span class="token punctuation">[</span><span class="token punctuation">]</span></code>`,
     He,
     qn,
-    Or = `<code class="language-svelte"><span class="token comment">&lt;!-- src/lib/Page.svelte --></span>
+    Op = `<code class="language-svelte"><span class="token comment">&lt;!-- src/lib/Page.svelte --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> assets <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$app/paths'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> content <span class="token keyword">from</span> <span class="token string">'$locales/en/content.json'</span><span class="token punctuation">;</span>
@@ -2282,8 +2282,8 @@ Lorem ipsum<span class="token punctuation">..</span>.
       <span class="token keyword">const</span> background <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchComponent</span><span class="token punctuation">(</span>step<span class="token punctuation">.</span>Background<span class="token punctuation">)</span><span class="token punctuation">;</span>
       scrollerSteps<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
         background<span class="token punctuation">,</span>
-        backgroundProps<span class="token operator">:</span> <span class="token punctuation">&#123;</span> assets <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-        foreground<span class="token operator">:</span> step<span class="token punctuation">.</span>Foreground<span class="token punctuation">,</span>
+        <span class="token literal-property property">backgroundProps</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> assets <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">foreground</span><span class="token operator">:</span> step<span class="token punctuation">.</span>Foreground<span class="token punctuation">,</span>
       <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> scrollerSteps<span class="token punctuation">;</span>
@@ -2309,9 +2309,9 @@ Lorem ipsum<span class="token punctuation">..</span>.
     Fe,
     cs,
     ln,
-    uo,
-    ce,
     io,
+    ce,
+    uo,
     fo,
     Qn,
     ko,
@@ -2320,10 +2320,10 @@ Lorem ipsum<span class="token punctuation">..</span>.
     _n,
     Qe,
     R,
-    ue,
+    ie,
     mo,
     ho,
-    ie,
+    ue,
     fe,
     _o,
     bo,
@@ -2332,9 +2332,9 @@ Lorem ipsum<span class="token punctuation">..</span>.
     vo,
     ke,
     wo,
-    Eo,
-    ge,
     yo,
+    ge,
+    Eo,
     $o,
     me,
     So,
@@ -2345,18 +2345,18 @@ Lorem ipsum<span class="token punctuation">..</span>.
     Io,
     Lo,
     Yn,
-    us,
+    is,
     be,
     Do,
     Oo,
     To,
-    is,
+    us,
     ve,
     jo,
     zo,
     Ye,
     Jn,
-    Tr = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Scroller</span>
+    Tp = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Scroller</span>
   <span class="token attr-name">steps="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>steps<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
   <span class="token attr-name">backgroundSize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fluid<span class="token punctuation">"</span></span>
   <span class="token attr-name">embedded="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token boolean">true</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
@@ -2366,36 +2366,36 @@ Lorem ipsum<span class="token punctuation">..</span>.
     bn,
     Ke;
   return (
-    (pn = new Xn({
-      props: { fluid: !0, $$slots: { default: [Tp] }, $$scope: { ctx: r } },
+    (rn = new Xn({
+      props: { fluid: !0, $$slots: { default: [Tr] }, $$scope: { ctx: p } },
     })),
     (cn = new Xn({
-      props: { fluid: !0, $$slots: { default: [jp] }, $$scope: { ctx: r } },
+      props: { fluid: !0, $$slots: { default: [jr] }, $$scope: { ctx: p } },
     })),
     (fn = new Xn({
-      props: { fluid: !0, $$slots: { default: [zp] }, $$scope: { ctx: r } },
+      props: { fluid: !0, $$slots: { default: [zr] }, $$scope: { ctx: p } },
     })),
     (dn = new Xn({
-      props: { fluid: !0, $$slots: { default: [Bp] }, $$scope: { ctx: r } },
+      props: { fluid: !0, $$slots: { default: [Br] }, $$scope: { ctx: p } },
     })),
     (mn = new Xn({
-      props: { fluid: !0, $$slots: { default: [Gp] }, $$scope: { ctx: r } },
+      props: { fluid: !0, $$slots: { default: [Gr] }, $$scope: { ctx: p } },
     })),
     (_n = new Xn({
-      props: { fluid: !0, $$slots: { default: [Ap] }, $$scope: { ctx: r } },
+      props: { fluid: !0, $$slots: { default: [Ar] }, $$scope: { ctx: p } },
     })),
     (bn = new Xn({
-      props: { fluid: !0, $$slots: { default: [Fp] }, $$scope: { ctx: r } },
+      props: { fluid: !0, $$slots: { default: [Fr] }, $$scope: { ctx: p } },
     })),
     {
       c() {
         (n = f('section')),
           (e = f('h2')),
-          (s = m($r)),
-          (t = y()),
+          (s = m($p)),
+          (t = E()),
           (c = f('p')),
           (o = m('Easy scrollytelling.')),
-          (u = y()),
+          (i = E()),
           (l = f('section')),
           (g = f('p')),
           (v = m(
@@ -2406,14 +2406,14 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (L = m(
             ', which is a lower level component you can more easily customize.'
           )),
-          (A = y()),
+          (A = E()),
           (N = f('p')),
           (en = f('code')),
           (Sn = m('steps')),
-          (hs = y()),
+          (hs = E()),
           (Pn = f('em')),
           (_s = m('an array of objects')),
-          (D = y()),
+          (D = E()),
           (Y = f('ul')),
           (Cn = f('li')),
           (bs = f('code')),
@@ -2421,28 +2421,28 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (dt = m(' A background component ')),
           (vs = f('strong')),
           (kt = m('REQUIRED')),
-          (gt = y()),
+          (gt = E()),
           (xn = f('li')),
           (ws = f('code')),
           (mt = m('backgroundProps')),
           (ht = m(' An object of props given to background component')),
-          (_t = y()),
+          (_t = E()),
           (In = f('li')),
-          (Es = f('code')),
+          (ys = f('code')),
           (bt = m('foreground')),
           (vt = m(' Either a markdown string or a foreground component ')),
-          (ys = f('strong')),
+          (Es = f('strong')),
           (wt = m('REQUIRED')),
-          (Et = y()),
+          (yt = E()),
           (ns = f('li')),
           ($s = f('code')),
-          (yt = m('foregroundProps')),
+          (Et = m('foregroundProps')),
           ($t = m(' An object of props given to foreground component')),
-          (St = y()),
+          (St = E()),
           (Ss = f('p')),
           (Ps = f('code')),
           (Pt = m('backgroundSize')),
-          (Ct = y()),
+          (Ct = E()),
           (Cs = f('ul')),
           (G = f('li')),
           (It = m(
@@ -2463,22 +2463,22 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Ts = f('code')),
           (Nt = m('fluid')),
           (Mt = m('.')),
-          (Ce = y()),
+          (Ce = E()),
           (Ln = f('pre')),
-          (Ie = y()),
-          T(pn.$$.fragment),
-          (Le = y()),
+          (Ie = E()),
+          T(rn.$$.fragment),
+          (Le = E()),
           (M = f('section')),
           (Dn = f('p')),
           (Rt = m('Control the layout of your component with the ')),
           (js = f('code')),
           (At = m('foregroundPosition')),
           (Ut = m(' prop.')),
-          (Vt = y()),
+          (Vt = E()),
           (zs = f('p')),
           (Bs = f('code')),
           (Ht = m('foregroundPosition')),
-          (Ft = y()),
+          (Ft = E()),
           (U = f('ul')),
           (On = f('li')),
           (Gs = f('code')),
@@ -2486,38 +2486,38 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Qt = m(' Text and graphic middle ')),
           (Ns = f('em')),
           (Yt = m('default')),
-          (Jt = y()),
+          (Jt = E()),
           (ss = f('li')),
           (Ms = f('code')),
           (Kt = m('left')),
           (Wt = m(' Text to left, graphic stays middle')),
-          (Xt = y()),
+          (Xt = E()),
           (es = f('li')),
           (Rs = f('code')),
           (Zt = m('right')),
           (xt = m(' Text to right, graphic stays middle')),
-          (na = y()),
+          (na = E()),
           (ts = f('li')),
           (As = f('code')),
           (sa = m('left opposite')),
           (ea = m(' Text to left, graphic to right')),
-          (ta = y()),
+          (ta = E()),
           (as = f('li')),
           (Us = f('code')),
           (aa = m('right opposite')),
           (oa = m(' Text to right, graphic to left')),
-          (la = y()),
+          (la = E()),
           (Vs = f('p')),
-          (ra = m(
+          (pa = m(
             'Both text and graphic will revert to the middle when the window drops below 1200px.'
           )),
-          (pa = y()),
+          (ra = E()),
           (F = f('p')),
           (Hs = f('strong')),
           (ca = m('Note:')),
-          (ua = m(' Make sure your ')),
+          (ia = m(' Make sure your ')),
           (Fs = f('code')),
-          (ia = m('backgroundSize')),
+          (ua = m('backgroundSize')),
           (fa = m(' prop is ')),
           (qs = f('em')),
           (da = m('not')),
@@ -2525,49 +2525,49 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Qs = f('code')),
           (ga = m('fluid')),
           (ma = m(' if using either left or right opposite option.')),
-          (De = y()),
+          (De = E()),
           (Tn = f('pre')),
-          (Oe = y()),
+          (Oe = E()),
           T(cn.$$.fragment),
-          (Te = y()),
+          (Te = E()),
           (q = f('section')),
           (Ys = f('p')),
           (Js = f('code')),
           (ha = m('stackBackground')),
-          (_a = y()),
+          (_a = E()),
           (tn = f('ul')),
           (Ks = f('li')),
           (ba = m(
             'Determines whether previous background step graphics will stack below current one.'
           )),
-          (va = y()),
+          (va = E()),
           (un = f('li')),
           (Ws = f('code')),
           (wa = m('true')),
-          (Ea = y()),
+          (ya = E()),
           (Xs = f('em')),
-          (ya = m('default')),
+          (Ea = m('default')),
           ($a = m(
             ' Background graphics from previous steps will remain visible below active one, allowing you to stack graphics with transparent backgrounds.'
           )),
-          (Sa = y()),
+          (Sa = E()),
           (os = f('li')),
           (Zs = f('code')),
           (Pa = m('false')),
           (Ca = m(
             ' Only the background graphic from the current step will show and backgrounds from previous steps are hidden.'
           )),
-          (Ia = y()),
+          (Ia = E()),
           (xs = f('p')),
           (ne = f('code')),
           (La = m('preload')),
-          (Da = y()),
+          (Da = E()),
           (an = f('ul')),
           (se = f('li')),
           (Oa = m(
             'Determines how many background steps to load before and after the currently active one. This prop basically lazyloads backgrounds, which is useful for making sure you\u2019re not loading too many images at once for long scrolls.'
           )),
-          (Ta = y()),
+          (Ta = E()),
           (jn = f('li')),
           (ja = m('Default is ')),
           (ee = f('code')),
@@ -2575,17 +2575,17 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Ba = m(
             ', which loads one background before and one after the currently active one.'
           )),
-          (Ga = y()),
+          (Ga = E()),
           (ls = f('li')),
           (te = f('code')),
           (Na = m('0')),
           (Ma = m(' disables lazyloading and loads all backgrounds at once.')),
-          (je = y()),
+          (je = E()),
           (zn = f('pre')),
-          (ze = y()),
+          (ze = E()),
           T(fn.$$.fragment),
-          (Be = y()),
-          (rs = f('section')),
+          (Be = E()),
+          (ps = f('section')),
           (J = f('p')),
           (Ra = m('Pass a component to ')),
           (ae = f('code')),
@@ -2597,24 +2597,24 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (le = f('code')),
           (Fa = m('foregroundProps')),
           (qa = m(' to pass data to your components.')),
-          (Ge = y()),
+          (Ge = E()),
           (Bn = f('pre')),
-          (Ne = y()),
+          (Ne = E()),
           T(dn.$$.fragment),
-          (Me = y()),
+          (Me = E()),
           (kn = f('section')),
           (Gn = f('p')),
           (Qa = m('Add an ID to your scroller and use SCSS ')),
-          (re = f('code')),
+          (pe = f('code')),
           (Ya = m(':global')),
           (Ja = m(' rules to override any styles.')),
-          (Ka = y()),
+          (Ka = E()),
           (gn = f('section')),
-          (pe = f('p')),
+          (re = f('p')),
           (Wa = m(
             'This is the main way you should customise this component for any layouts not covered by the props we\u2019ve already mentioned. Most small layout shifts can be handled with simple SCSS. Check out the component in your browser\u2019s inspector to find which elements you want to target with custom styles.'
           )),
-          (Xa = y()),
+          (Xa = E()),
           (Nn = f('p')),
           (Za = m(
             'If you\u2019re still struggling to make this component work for your design, it may be a good sign you should reach for '
@@ -2622,11 +2622,11 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Mn = f('a')),
           (xa = m('svelte-scroller')),
           (no = m(' instead.')),
-          (Re = y()),
+          (Re = E()),
           (Rn = f('pre')),
-          (Ae = y()),
+          (Ae = E()),
           T(mn.$$.fragment),
-          (Ue = y()),
+          (Ue = E()),
           (hn = f('section')),
           (on = f('p')),
           (so = m(
@@ -2640,94 +2640,94 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Un = f('a')),
           (ao = m('ai2svelte')),
           (oo = m(' components for the background:')),
-          (lo = y()),
-          (ps = f('section')),
+          (lo = E()),
+          (rs = f('section')),
           (Vn = f('p')),
-          (ro = m('If you\u2019re using the ')),
+          (po = m('If you\u2019re using the ')),
           (Hn = f('a')),
-          (po = m('graphics kit')),
+          (ro = m('graphics kit')),
           (co = m(
             ', this pattern is already wired up in the boilerplate included in the Page.svelte component. Free money!'
           )),
-          (Ve = y()),
+          (Ve = E()),
           (Fn = f('pre')),
-          (He = y()),
+          (He = E()),
           (qn = f('pre')),
-          (Fe = y()),
+          (Fe = E()),
           (cs = f('section')),
           (ln = f('p')),
-          (uo = m(
+          (io = m(
             'This pattern comes with some restrictions, though. Be sure your '
           )),
           (ce = f('code')),
-          (io = m('fetchComponent')),
+          (uo = m('fetchComponent')),
           (fo = m(' function follows ')),
           (Qn = f('a')),
           (ko = m('the limits on dynamic imports')),
           (go = m('.')),
-          (qe = y()),
+          (qe = E()),
           T(_n.$$.fragment),
-          (Qe = y()),
+          (Qe = E()),
           (R = f('section')),
-          (ue = f('p')),
+          (ie = f('p')),
           (mo = m(
             'This component can also unravel the scrolling experience into a flat, linear layout. Use this when the graphic will be embedded in an iframe.'
           )),
-          (ho = y()),
-          (ie = f('p')),
+          (ho = E()),
+          (ue = f('p')),
           (fe = f('code')),
           (_o = m('embedded')),
-          (bo = y()),
+          (bo = E()),
           (de = f('ul')),
           (K = f('li')),
           (vo = m('Setting to ')),
           (ke = f('code')),
           (wo = m('true')),
-          (Eo = m(' will unroll the scroll experience into a flat layout. ')),
+          (yo = m(' will unroll the scroll experience into a flat layout. ')),
           (ge = f('code')),
-          (yo = m('true')),
+          (Eo = m('true')),
           ($o = m(' will also cause the ')),
           (me = f('code')),
           (So = m('foregroundPosition')),
           (Po = m(
             ' prop to be ignored. (Use global SCSS to adjust the style of foreground text.)'
           )),
-          (Co = y()),
+          (Co = E()),
           (he = f('p')),
           (_e = f('code')),
           (Io = m('embeddedLayout')),
-          (Lo = y()),
+          (Lo = E()),
           (Yn = f('ul')),
-          (us = f('li')),
+          (is = f('li')),
           (be = f('code')),
           (Do = m('fb')),
           (Oo = m(
             ' (default) will layout the foreground before the background in each step.'
           )),
-          (To = y()),
-          (is = f('li')),
+          (To = E()),
+          (us = f('li')),
           (ve = f('code')),
           (jo = m('bf')),
           (zo = m(' will lead with the background in each step.')),
-          (Ye = y()),
+          (Ye = E()),
           (Jn = f('pre')),
-          (Je = y()),
+          (Je = E()),
           T(bn.$$.fragment),
           this.h();
       },
-      l(i) {
-        n = d(i, 'SECTION', {});
+      l(u) {
+        n = d(u, 'SECTION', {});
         var _ = k(n);
         e = d(_, 'H2', {});
         var we = k(e);
-        (s = h(we, $r)), we.forEach(p), (t = $(_)), (c = d(_, 'P', {}));
-        var Ee = k(c);
-        (o = h(Ee, 'Easy scrollytelling.')),
-          Ee.forEach(p),
-          (u = $(_)),
+        (s = h(we, $p)), we.forEach(r), (t = $(_)), (c = d(_, 'P', {}));
+        var ye = k(c);
+        (o = h(ye, 'Easy scrollytelling.')),
+          ye.forEach(r),
+          (i = $(_)),
           (l = d(_, 'SECTION', { class: !0 }));
-        var ye = k(l);
-        g = d(ye, 'P', {});
+        var Ee = k(l);
+        g = d(Ee, 'P', {});
         var Kn = k(g);
         (v = h(
           Kn,
@@ -2736,26 +2736,26 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (w = d(Kn, 'A', { href: !0, rel: !0 }));
         var $e = k(w);
         (S = h($e, 'svelte-scroller')),
-          $e.forEach(p),
+          $e.forEach(r),
           (L = h(
             Kn,
             ', which is a lower level component you can more easily customize.'
           )),
-          Kn.forEach(p),
-          ye.forEach(p),
+          Kn.forEach(r),
+          Ee.forEach(r),
           (A = $(_)),
           (N = d(_, 'P', {}));
         var Wn = k(N);
         en = d(Wn, 'CODE', {});
         var Se = k(en);
         (Sn = h(Se, 'steps')),
-          Se.forEach(p),
+          Se.forEach(r),
           (hs = $(Wn)),
           (Pn = d(Wn, 'EM', {}));
         var Xo = k(Pn);
         (_s = h(Xo, 'an array of objects')),
-          Xo.forEach(p),
-          Wn.forEach(p),
+          Xo.forEach(r),
+          Wn.forEach(r),
           (D = $(_)),
           (Y = d(_, 'UL', {}));
         var vn = k(Y);
@@ -2764,53 +2764,53 @@ Lorem ipsum<span class="token punctuation">..</span>.
         bs = d(We, 'CODE', {});
         var Zo = k(bs);
         (ft = h(Zo, 'background')),
-          Zo.forEach(p),
+          Zo.forEach(r),
           (dt = h(We, ' A background component ')),
           (vs = d(We, 'STRONG', {}));
         var xo = k(vs);
         (kt = h(xo, 'REQUIRED')),
-          xo.forEach(p),
-          We.forEach(p),
+          xo.forEach(r),
+          We.forEach(r),
           (gt = $(vn)),
           (xn = d(vn, 'LI', {}));
         var Bo = k(xn);
         ws = d(Bo, 'CODE', {});
         var nl = k(ws);
         (mt = h(nl, 'backgroundProps')),
-          nl.forEach(p),
+          nl.forEach(r),
           (ht = h(Bo, ' An object of props given to background component')),
-          Bo.forEach(p),
+          Bo.forEach(r),
           (_t = $(vn)),
           (In = d(vn, 'LI', {}));
         var Xe = k(In);
-        Es = d(Xe, 'CODE', {});
-        var sl = k(Es);
+        ys = d(Xe, 'CODE', {});
+        var sl = k(ys);
         (bt = h(sl, 'foreground')),
-          sl.forEach(p),
+          sl.forEach(r),
           (vt = h(Xe, ' Either a markdown string or a foreground component ')),
-          (ys = d(Xe, 'STRONG', {}));
-        var el = k(ys);
+          (Es = d(Xe, 'STRONG', {}));
+        var el = k(Es);
         (wt = h(el, 'REQUIRED')),
-          el.forEach(p),
-          Xe.forEach(p),
-          (Et = $(vn)),
+          el.forEach(r),
+          Xe.forEach(r),
+          (yt = $(vn)),
           (ns = d(vn, 'LI', {}));
         var Go = k(ns);
         $s = d(Go, 'CODE', {});
         var tl = k($s);
-        (yt = h(tl, 'foregroundProps')),
-          tl.forEach(p),
+        (Et = h(tl, 'foregroundProps')),
+          tl.forEach(r),
           ($t = h(Go, ' An object of props given to foreground component')),
-          Go.forEach(p),
-          vn.forEach(p),
+          Go.forEach(r),
+          vn.forEach(r),
           (St = $(_)),
           (Ss = d(_, 'P', {}));
         var al = k(Ss);
         Ps = d(al, 'CODE', {});
         var ol = k(Ps);
         (Pt = h(ol, 'backgroundSize')),
-          ol.forEach(p),
-          al.forEach(p),
+          ol.forEach(r),
+          al.forEach(r),
           (Ct = $(_)),
           (Cs = d(_, 'UL', {}));
         var ll = k(Cs);
@@ -2821,41 +2821,41 @@ Lorem ipsum<span class="token punctuation">..</span>.
           'Adjusts the size of the background graphic by passing a class name corresponding to one of our well widths: '
         )),
           (Is = d(Q, 'CODE', {}));
-        var rl = k(Is);
-        (Lt = h(rl, 'normal')),
-          rl.forEach(p),
+        var pl = k(Is);
+        (Lt = h(pl, 'normal')),
+          pl.forEach(r),
           (Dt = h(Q, ', ')),
           (Ls = d(Q, 'CODE', {}));
-        var pl = k(Ls);
-        (Ot = h(pl, 'wide')),
-          pl.forEach(p),
+        var rl = k(Ls);
+        (Ot = h(rl, 'wide')),
+          rl.forEach(r),
           (Tt = h(Q, ', ')),
           (Ds = d(Q, 'CODE', {}));
         var cl = k(Ds);
         (jt = h(cl, 'wider')),
-          cl.forEach(p),
+          cl.forEach(r),
           (zt = h(Q, ', ')),
           (Os = d(Q, 'CODE', {}));
-        var ul = k(Os);
-        (Bt = h(ul, 'widest')),
-          ul.forEach(p),
+        var il = k(Os);
+        (Bt = h(il, 'widest')),
+          il.forEach(r),
           (Gt = h(Q, ' or ')),
           (Ts = d(Q, 'CODE', {}));
-        var il = k(Ts);
-        (Nt = h(il, 'fluid')),
-          il.forEach(p),
+        var ul = k(Ts);
+        (Nt = h(ul, 'fluid')),
+          ul.forEach(r),
           (Mt = h(Q, '.')),
-          Q.forEach(p),
-          ll.forEach(p),
-          _.forEach(p),
-          (Ce = $(i)),
-          (Ln = d(i, 'PRE', { class: !0 }));
-        var jr = k(Ln);
-        jr.forEach(p),
-          (Ie = $(i)),
-          z(pn.$$.fragment, i),
-          (Le = $(i)),
-          (M = d(i, 'SECTION', {}));
+          Q.forEach(r),
+          ll.forEach(r),
+          _.forEach(r),
+          (Ce = $(u)),
+          (Ln = d(u, 'PRE', { class: !0 }));
+        var jp = k(Ln);
+        jp.forEach(r),
+          (Ie = $(u)),
+          z(rn.$$.fragment, u),
+          (Le = $(u)),
+          (M = d(u, 'SECTION', {}));
         var W = k(M);
         Dn = d(W, 'P', {});
         var Ze = k(Dn);
@@ -2863,17 +2863,17 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (js = d(Ze, 'CODE', {}));
         var fl = k(js);
         (At = h(fl, 'foregroundPosition')),
-          fl.forEach(p),
+          fl.forEach(r),
           (Ut = h(Ze, ' prop.')),
-          Ze.forEach(p),
+          Ze.forEach(r),
           (Vt = $(W)),
           (zs = d(W, 'P', {}));
         var dl = k(zs);
         Bs = d(dl, 'CODE', {});
         var kl = k(Bs);
         (Ht = h(kl, 'foregroundPosition')),
-          kl.forEach(p),
-          dl.forEach(p),
+          kl.forEach(r),
+          dl.forEach(r),
           (Ft = $(W)),
           (U = d(W, 'UL', {}));
         var X = k(U);
@@ -2882,99 +2882,99 @@ Lorem ipsum<span class="token punctuation">..</span>.
         Gs = d(xe, 'CODE', {});
         var gl = k(Gs);
         (qt = h(gl, 'middle')),
-          gl.forEach(p),
+          gl.forEach(r),
           (Qt = h(xe, ' Text and graphic middle ')),
           (Ns = d(xe, 'EM', {}));
         var ml = k(Ns);
         (Yt = h(ml, 'default')),
-          ml.forEach(p),
-          xe.forEach(p),
+          ml.forEach(r),
+          xe.forEach(r),
           (Jt = $(X)),
           (ss = d(X, 'LI', {}));
         var No = k(ss);
         Ms = d(No, 'CODE', {});
         var hl = k(Ms);
         (Kt = h(hl, 'left')),
-          hl.forEach(p),
+          hl.forEach(r),
           (Wt = h(No, ' Text to left, graphic stays middle')),
-          No.forEach(p),
+          No.forEach(r),
           (Xt = $(X)),
           (es = d(X, 'LI', {}));
         var Mo = k(es);
         Rs = d(Mo, 'CODE', {});
         var _l = k(Rs);
         (Zt = h(_l, 'right')),
-          _l.forEach(p),
+          _l.forEach(r),
           (xt = h(Mo, ' Text to right, graphic stays middle')),
-          Mo.forEach(p),
+          Mo.forEach(r),
           (na = $(X)),
           (ts = d(X, 'LI', {}));
         var Ro = k(ts);
         As = d(Ro, 'CODE', {});
         var bl = k(As);
         (sa = h(bl, 'left opposite')),
-          bl.forEach(p),
+          bl.forEach(r),
           (ea = h(Ro, ' Text to left, graphic to right')),
-          Ro.forEach(p),
+          Ro.forEach(r),
           (ta = $(X)),
           (as = d(X, 'LI', {}));
         var Ao = k(as);
         Us = d(Ao, 'CODE', {});
         var vl = k(Us);
         (aa = h(vl, 'right opposite')),
-          vl.forEach(p),
+          vl.forEach(r),
           (oa = h(Ao, ' Text to right, graphic to left')),
-          Ao.forEach(p),
-          X.forEach(p),
+          Ao.forEach(r),
+          X.forEach(r),
           (la = $(W)),
           (Vs = d(W, 'P', {}));
         var wl = k(Vs);
-        (ra = h(
+        (pa = h(
           wl,
           'Both text and graphic will revert to the middle when the window drops below 1200px.'
         )),
-          wl.forEach(p),
-          (pa = $(W)),
+          wl.forEach(r),
+          (ra = $(W)),
           (F = d(W, 'P', {}));
-        var rn = k(F);
-        Hs = d(rn, 'STRONG', {});
-        var El = k(Hs);
-        (ca = h(El, 'Note:')),
-          El.forEach(p),
-          (ua = h(rn, ' Make sure your ')),
-          (Fs = d(rn, 'CODE', {}));
-        var yl = k(Fs);
-        (ia = h(yl, 'backgroundSize')),
-          yl.forEach(p),
-          (fa = h(rn, ' prop is ')),
-          (qs = d(rn, 'EM', {}));
+        var pn = k(F);
+        Hs = d(pn, 'STRONG', {});
+        var yl = k(Hs);
+        (ca = h(yl, 'Note:')),
+          yl.forEach(r),
+          (ia = h(pn, ' Make sure your ')),
+          (Fs = d(pn, 'CODE', {}));
+        var El = k(Fs);
+        (ua = h(El, 'backgroundSize')),
+          El.forEach(r),
+          (fa = h(pn, ' prop is ')),
+          (qs = d(pn, 'EM', {}));
         var $l = k(qs);
         (da = h($l, 'not')),
-          $l.forEach(p),
-          (ka = h(rn, ' set to ')),
-          (Qs = d(rn, 'CODE', {}));
+          $l.forEach(r),
+          (ka = h(pn, ' set to ')),
+          (Qs = d(pn, 'CODE', {}));
         var Sl = k(Qs);
         (ga = h(Sl, 'fluid')),
-          Sl.forEach(p),
-          (ma = h(rn, ' if using either left or right opposite option.')),
-          rn.forEach(p),
-          W.forEach(p),
-          (De = $(i)),
-          (Tn = d(i, 'PRE', { class: !0 }));
-        var zr = k(Tn);
-        zr.forEach(p),
-          (Oe = $(i)),
-          z(cn.$$.fragment, i),
-          (Te = $(i)),
-          (q = d(i, 'SECTION', {}));
+          Sl.forEach(r),
+          (ma = h(pn, ' if using either left or right opposite option.')),
+          pn.forEach(r),
+          W.forEach(r),
+          (De = $(u)),
+          (Tn = d(u, 'PRE', { class: !0 }));
+        var zp = k(Tn);
+        zp.forEach(r),
+          (Oe = $(u)),
+          z(cn.$$.fragment, u),
+          (Te = $(u)),
+          (q = d(u, 'SECTION', {}));
         var wn = k(q);
         Ys = d(wn, 'P', {});
         var Pl = k(Ys);
         Js = d(Pl, 'CODE', {});
         var Cl = k(Js);
         (ha = h(Cl, 'stackBackground')),
-          Cl.forEach(p),
-          Pl.forEach(p),
+          Cl.forEach(r),
+          Pl.forEach(r),
           (_a = $(wn)),
           (tn = d(wn, 'UL', {}));
         var fs = k(tn);
@@ -2984,45 +2984,45 @@ Lorem ipsum<span class="token punctuation">..</span>.
           Il,
           'Determines whether previous background step graphics will stack below current one.'
         )),
-          Il.forEach(p),
+          Il.forEach(r),
           (va = $(fs)),
           (un = d(fs, 'LI', {}));
         var Pe = k(un);
         Ws = d(Pe, 'CODE', {});
         var Ll = k(Ws);
         (wa = h(Ll, 'true')),
-          Ll.forEach(p),
-          (Ea = $(Pe)),
+          Ll.forEach(r),
+          (ya = $(Pe)),
           (Xs = d(Pe, 'EM', {}));
         var Dl = k(Xs);
-        (ya = h(Dl, 'default')),
-          Dl.forEach(p),
+        (Ea = h(Dl, 'default')),
+          Dl.forEach(r),
           ($a = h(
             Pe,
             ' Background graphics from previous steps will remain visible below active one, allowing you to stack graphics with transparent backgrounds.'
           )),
-          Pe.forEach(p),
+          Pe.forEach(r),
           (Sa = $(fs)),
           (os = d(fs, 'LI', {}));
         var Uo = k(os);
         Zs = d(Uo, 'CODE', {});
         var Ol = k(Zs);
         (Pa = h(Ol, 'false')),
-          Ol.forEach(p),
+          Ol.forEach(r),
           (Ca = h(
             Uo,
             ' Only the background graphic from the current step will show and backgrounds from previous steps are hidden.'
           )),
-          Uo.forEach(p),
-          fs.forEach(p),
+          Uo.forEach(r),
+          fs.forEach(r),
           (Ia = $(wn)),
           (xs = d(wn, 'P', {}));
         var Tl = k(xs);
         ne = d(Tl, 'CODE', {});
         var jl = k(ne);
         (La = h(jl, 'preload')),
-          jl.forEach(p),
-          Tl.forEach(p),
+          jl.forEach(r),
+          Tl.forEach(r),
           (Da = $(wn)),
           (an = d(wn, 'UL', {}));
         var ds = k(an);
@@ -3032,89 +3032,89 @@ Lorem ipsum<span class="token punctuation">..</span>.
           zl,
           'Determines how many background steps to load before and after the currently active one. This prop basically lazyloads backgrounds, which is useful for making sure you\u2019re not loading too many images at once for long scrolls.'
         )),
-          zl.forEach(p),
+          zl.forEach(r),
           (Ta = $(ds)),
           (jn = d(ds, 'LI', {}));
         var nt = k(jn);
         (ja = h(nt, 'Default is ')), (ee = d(nt, 'CODE', {}));
         var Bl = k(ee);
         (za = h(Bl, '1')),
-          Bl.forEach(p),
+          Bl.forEach(r),
           (Ba = h(
             nt,
             ', which loads one background before and one after the currently active one.'
           )),
-          nt.forEach(p),
+          nt.forEach(r),
           (Ga = $(ds)),
           (ls = d(ds, 'LI', {}));
         var Vo = k(ls);
         te = d(Vo, 'CODE', {});
         var Gl = k(te);
         (Na = h(Gl, '0')),
-          Gl.forEach(p),
+          Gl.forEach(r),
           (Ma = h(
             Vo,
             ' disables lazyloading and loads all backgrounds at once.'
           )),
-          Vo.forEach(p),
-          ds.forEach(p),
-          wn.forEach(p),
-          (je = $(i)),
-          (zn = d(i, 'PRE', { class: !0 }));
-        var Br = k(zn);
-        Br.forEach(p),
-          (ze = $(i)),
-          z(fn.$$.fragment, i),
-          (Be = $(i)),
-          (rs = d(i, 'SECTION', {}));
-        var Nl = k(rs);
+          Vo.forEach(r),
+          ds.forEach(r),
+          wn.forEach(r),
+          (je = $(u)),
+          (zn = d(u, 'PRE', { class: !0 }));
+        var Bp = k(zn);
+        Bp.forEach(r),
+          (ze = $(u)),
+          z(fn.$$.fragment, u),
+          (Be = $(u)),
+          (ps = d(u, 'SECTION', {}));
+        var Nl = k(ps);
         J = d(Nl, 'P', {});
-        var En = k(J);
-        (Ra = h(En, 'Pass a component to ')), (ae = d(En, 'CODE', {}));
+        var yn = k(J);
+        (Ra = h(yn, 'Pass a component to ')), (ae = d(yn, 'CODE', {}));
         var Ml = k(ae);
         (Aa = h(Ml, 'foreground')),
-          Ml.forEach(p),
-          (Ua = h(En, ' and use ')),
-          (oe = d(En, 'CODE', {}));
+          Ml.forEach(r),
+          (Ua = h(yn, ' and use ')),
+          (oe = d(yn, 'CODE', {}));
         var Rl = k(oe);
         (Va = h(Rl, 'backgroundProps')),
-          Rl.forEach(p),
-          (Ha = h(En, ' and ')),
-          (le = d(En, 'CODE', {}));
+          Rl.forEach(r),
+          (Ha = h(yn, ' and ')),
+          (le = d(yn, 'CODE', {}));
         var Al = k(le);
         (Fa = h(Al, 'foregroundProps')),
-          Al.forEach(p),
-          (qa = h(En, ' to pass data to your components.')),
-          En.forEach(p),
-          Nl.forEach(p),
-          (Ge = $(i)),
-          (Bn = d(i, 'PRE', { class: !0 }));
-        var Gr = k(Bn);
-        Gr.forEach(p),
-          (Ne = $(i)),
-          z(dn.$$.fragment, i),
-          (Me = $(i)),
-          (kn = d(i, 'SECTION', {}));
+          Al.forEach(r),
+          (qa = h(yn, ' to pass data to your components.')),
+          yn.forEach(r),
+          Nl.forEach(r),
+          (Ge = $(u)),
+          (Bn = d(u, 'PRE', { class: !0 }));
+        var Gp = k(Bn);
+        Gp.forEach(r),
+          (Ne = $(u)),
+          z(dn.$$.fragment, u),
+          (Me = $(u)),
+          (kn = d(u, 'SECTION', {}));
         var st = k(kn);
         Gn = d(st, 'P', {});
         var et = k(Gn);
         (Qa = h(et, 'Add an ID to your scroller and use SCSS ')),
-          (re = d(et, 'CODE', {}));
-        var Ul = k(re);
+          (pe = d(et, 'CODE', {}));
+        var Ul = k(pe);
         (Ya = h(Ul, ':global')),
-          Ul.forEach(p),
+          Ul.forEach(r),
           (Ja = h(et, ' rules to override any styles.')),
-          et.forEach(p),
+          et.forEach(r),
           (Ka = $(st)),
           (gn = d(st, 'SECTION', { class: !0 }));
         var tt = k(gn);
-        pe = d(tt, 'P', {});
-        var Vl = k(pe);
+        re = d(tt, 'P', {});
+        var Vl = k(re);
         (Wa = h(
           Vl,
           'This is the main way you should customise this component for any layouts not covered by the props we\u2019ve already mentioned. Most small layout shifts can be handled with simple SCSS. Check out the component in your browser\u2019s inspector to find which elements you want to target with custom styles.'
         )),
-          Vl.forEach(p),
+          Vl.forEach(r),
           (Xa = $(tt)),
           (Nn = d(tt, 'P', {}));
         var at = k(Nn);
@@ -3125,19 +3125,19 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Mn = d(at, 'A', { href: !0, rel: !0 }));
         var Hl = k(Mn);
         (xa = h(Hl, 'svelte-scroller')),
-          Hl.forEach(p),
+          Hl.forEach(r),
           (no = h(at, ' instead.')),
-          at.forEach(p),
-          tt.forEach(p),
-          st.forEach(p),
-          (Re = $(i)),
-          (Rn = d(i, 'PRE', { class: !0 }));
-        var Nr = k(Rn);
-        Nr.forEach(p),
-          (Ae = $(i)),
-          z(mn.$$.fragment, i),
-          (Ue = $(i)),
-          (hn = d(i, 'SECTION', {}));
+          at.forEach(r),
+          tt.forEach(r),
+          st.forEach(r),
+          (Re = $(u)),
+          (Rn = d(u, 'PRE', { class: !0 }));
+        var Np = k(Rn);
+        Np.forEach(r),
+          (Ae = $(u)),
+          z(mn.$$.fragment, u),
+          (Ue = $(u)),
+          (hn = d(u, 'SECTION', {}));
         var ot = k(hn);
         on = d(ot, 'P', {});
         var ks = k(on);
@@ -3148,7 +3148,7 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (An = d(ks, 'A', { href: !0, rel: !0 }));
         var Fl = k(An);
         (eo = h(Fl, 'ArchieML')),
-          Fl.forEach(p),
+          Fl.forEach(r),
           (to = h(
             ks,
             '-formatted Google doc by using the following pattern to dynamically import '
@@ -3156,178 +3156,178 @@ Lorem ipsum<span class="token punctuation">..</span>.
           (Un = d(ks, 'A', { href: !0, rel: !0 }));
         var ql = k(Un);
         (ao = h(ql, 'ai2svelte')),
-          ql.forEach(p),
+          ql.forEach(r),
           (oo = h(ks, ' components for the background:')),
-          ks.forEach(p),
+          ks.forEach(r),
           (lo = $(ot)),
-          (ps = d(ot, 'SECTION', { class: !0 }));
-        var Ql = k(ps);
+          (rs = d(ot, 'SECTION', { class: !0 }));
+        var Ql = k(rs);
         Vn = d(Ql, 'P', {});
         var lt = k(Vn);
-        (ro = h(lt, 'If you\u2019re using the ')),
+        (po = h(lt, 'If you\u2019re using the ')),
           (Hn = d(lt, 'A', { href: !0, rel: !0 }));
         var Yl = k(Hn);
-        (po = h(Yl, 'graphics kit')),
-          Yl.forEach(p),
+        (ro = h(Yl, 'graphics kit')),
+          Yl.forEach(r),
           (co = h(
             lt,
             ', this pattern is already wired up in the boilerplate included in the Page.svelte component. Free money!'
           )),
-          lt.forEach(p),
-          Ql.forEach(p),
-          ot.forEach(p),
-          (Ve = $(i)),
-          (Fn = d(i, 'PRE', { class: !0 }));
-        var Mr = k(Fn);
-        Mr.forEach(p), (He = $(i)), (qn = d(i, 'PRE', { class: !0 }));
-        var Rr = k(qn);
-        Rr.forEach(p), (Fe = $(i)), (cs = d(i, 'SECTION', {}));
+          lt.forEach(r),
+          Ql.forEach(r),
+          ot.forEach(r),
+          (Ve = $(u)),
+          (Fn = d(u, 'PRE', { class: !0 }));
+        var Mp = k(Fn);
+        Mp.forEach(r), (He = $(u)), (qn = d(u, 'PRE', { class: !0 }));
+        var Rp = k(qn);
+        Rp.forEach(r), (Fe = $(u)), (cs = d(u, 'SECTION', {}));
         var Jl = k(cs);
         ln = d(Jl, 'P', {});
         var gs = k(ln);
-        (uo = h(
+        (io = h(
           gs,
           'This pattern comes with some restrictions, though. Be sure your '
         )),
           (ce = d(gs, 'CODE', {}));
         var Kl = k(ce);
-        (io = h(Kl, 'fetchComponent')),
-          Kl.forEach(p),
+        (uo = h(Kl, 'fetchComponent')),
+          Kl.forEach(r),
           (fo = h(gs, ' function follows ')),
           (Qn = d(gs, 'A', { href: !0, rel: !0 }));
         var Wl = k(Qn);
         (ko = h(Wl, 'the limits on dynamic imports')),
-          Wl.forEach(p),
+          Wl.forEach(r),
           (go = h(gs, '.')),
-          gs.forEach(p),
-          Jl.forEach(p),
-          (qe = $(i)),
-          z(_n.$$.fragment, i),
-          (Qe = $(i)),
-          (R = d(i, 'SECTION', {}));
+          gs.forEach(r),
+          Jl.forEach(r),
+          (qe = $(u)),
+          z(_n.$$.fragment, u),
+          (Qe = $(u)),
+          (R = d(u, 'SECTION', {}));
         var Z = k(R);
-        ue = d(Z, 'P', {});
-        var Xl = k(ue);
+        ie = d(Z, 'P', {});
+        var Xl = k(ie);
         (mo = h(
           Xl,
           'This component can also unravel the scrolling experience into a flat, linear layout. Use this when the graphic will be embedded in an iframe.'
         )),
-          Xl.forEach(p),
+          Xl.forEach(r),
           (ho = $(Z)),
-          (ie = d(Z, 'P', {}));
-        var Zl = k(ie);
+          (ue = d(Z, 'P', {}));
+        var Zl = k(ue);
         fe = d(Zl, 'CODE', {});
         var xl = k(fe);
         (_o = h(xl, 'embedded')),
-          xl.forEach(p),
-          Zl.forEach(p),
+          xl.forEach(r),
+          Zl.forEach(r),
           (bo = $(Z)),
           (de = d(Z, 'UL', {}));
-        var nr = k(de);
-        K = d(nr, 'LI', {});
-        var yn = k(K);
-        (vo = h(yn, 'Setting to ')), (ke = d(yn, 'CODE', {}));
-        var sr = k(ke);
-        (wo = h(sr, 'true')),
-          sr.forEach(p),
-          (Eo = h(
-            yn,
+        var np = k(de);
+        K = d(np, 'LI', {});
+        var En = k(K);
+        (vo = h(En, 'Setting to ')), (ke = d(En, 'CODE', {}));
+        var sp = k(ke);
+        (wo = h(sp, 'true')),
+          sp.forEach(r),
+          (yo = h(
+            En,
             ' will unroll the scroll experience into a flat layout. '
           )),
-          (ge = d(yn, 'CODE', {}));
-        var er = k(ge);
-        (yo = h(er, 'true')),
-          er.forEach(p),
-          ($o = h(yn, ' will also cause the ')),
-          (me = d(yn, 'CODE', {}));
-        var tr = k(me);
-        (So = h(tr, 'foregroundPosition')),
-          tr.forEach(p),
+          (ge = d(En, 'CODE', {}));
+        var ep = k(ge);
+        (Eo = h(ep, 'true')),
+          ep.forEach(r),
+          ($o = h(En, ' will also cause the ')),
+          (me = d(En, 'CODE', {}));
+        var tp = k(me);
+        (So = h(tp, 'foregroundPosition')),
+          tp.forEach(r),
           (Po = h(
-            yn,
+            En,
             ' prop to be ignored. (Use global SCSS to adjust the style of foreground text.)'
           )),
-          yn.forEach(p),
-          nr.forEach(p),
+          En.forEach(r),
+          np.forEach(r),
           (Co = $(Z)),
           (he = d(Z, 'P', {}));
-        var ar = k(he);
-        _e = d(ar, 'CODE', {});
-        var or = k(_e);
-        (Io = h(or, 'embeddedLayout')),
-          or.forEach(p),
-          ar.forEach(p),
+        var ap = k(he);
+        _e = d(ap, 'CODE', {});
+        var op = k(_e);
+        (Io = h(op, 'embeddedLayout')),
+          op.forEach(r),
+          ap.forEach(r),
           (Lo = $(Z)),
           (Yn = d(Z, 'UL', {}));
-        var rt = k(Yn);
-        us = d(rt, 'LI', {});
-        var Ho = k(us);
+        var pt = k(Yn);
+        is = d(pt, 'LI', {});
+        var Ho = k(is);
         be = d(Ho, 'CODE', {});
-        var lr = k(be);
-        (Do = h(lr, 'fb')),
-          lr.forEach(p),
+        var lp = k(be);
+        (Do = h(lp, 'fb')),
+          lp.forEach(r),
           (Oo = h(
             Ho,
             ' (default) will layout the foreground before the background in each step.'
           )),
-          Ho.forEach(p),
-          (To = $(rt)),
-          (is = d(rt, 'LI', {}));
-        var Fo = k(is);
+          Ho.forEach(r),
+          (To = $(pt)),
+          (us = d(pt, 'LI', {}));
+        var Fo = k(us);
         ve = d(Fo, 'CODE', {});
-        var rr = k(ve);
-        (jo = h(rr, 'bf')),
-          rr.forEach(p),
+        var pp = k(ve);
+        (jo = h(pp, 'bf')),
+          pp.forEach(r),
           (zo = h(Fo, ' will lead with the background in each step.')),
-          Fo.forEach(p),
-          rt.forEach(p),
-          Z.forEach(p),
-          (Ye = $(i)),
-          (Jn = d(i, 'PRE', { class: !0 }));
-        var Ar = k(Jn);
-        Ar.forEach(p), (Je = $(i)), z(bn.$$.fragment, i), this.h();
+          Fo.forEach(r),
+          pt.forEach(r),
+          Z.forEach(r),
+          (Ye = $(u)),
+          (Jn = d(u, 'PRE', { class: !0 }));
+        var Ap = k(Jn);
+        Ap.forEach(r), (Je = $(u)), z(bn.$$.fragment, u), this.h();
       },
       h() {
-        E(w, 'href', 'https://github.com/sveltejs/svelte-scroller'),
-          E(w, 'rel', 'nofollow'),
-          E(l, 'class', 'note'),
-          E(Ln, 'class', 'language-svelte'),
-          E(Tn, 'class', 'language-svelte'),
-          E(zn, 'class', 'language-svelte'),
-          E(Bn, 'class', 'language-svelte'),
-          E(Mn, 'href', 'https://github.com/sveltejs/svelte-scroller'),
-          E(Mn, 'rel', 'nofollow'),
-          E(gn, 'class', 'note'),
-          E(Rn, 'class', 'language-svelte'),
-          E(An, 'href', 'http://archieml.org/'),
-          E(An, 'rel', 'nofollow'),
-          E(Un, 'href', 'https://github.com/reuters-graphics/ai2svelte'),
-          E(Un, 'rel', 'nofollow'),
-          E(
+        y(w, 'href', 'https://github.com/sveltejs/svelte-scroller'),
+          y(w, 'rel', 'nofollow'),
+          y(l, 'class', 'note'),
+          y(Ln, 'class', 'language-svelte'),
+          y(Tn, 'class', 'language-svelte'),
+          y(zn, 'class', 'language-svelte'),
+          y(Bn, 'class', 'language-svelte'),
+          y(Mn, 'href', 'https://github.com/sveltejs/svelte-scroller'),
+          y(Mn, 'rel', 'nofollow'),
+          y(gn, 'class', 'note'),
+          y(Rn, 'class', 'language-svelte'),
+          y(An, 'href', 'http://archieml.org/'),
+          y(An, 'rel', 'nofollow'),
+          y(Un, 'href', 'https://github.com/reuters-graphics/ai2svelte'),
+          y(Un, 'rel', 'nofollow'),
+          y(
             Hn,
             'href',
             'https://github.com/reuters-graphics/bluprint_graphics-kit'
           ),
-          E(Hn, 'rel', 'nofollow'),
-          E(ps, 'class', 'note'),
-          E(Fn, 'class', 'language-bash'),
-          E(qn, 'class', 'language-svelte'),
-          E(
+          y(Hn, 'rel', 'nofollow'),
+          y(rs, 'class', 'note'),
+          y(Fn, 'class', 'language-bash'),
+          y(qn, 'class', 'language-svelte'),
+          y(
             Qn,
             'href',
             'https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations'
           ),
-          E(Qn, 'rel', 'nofollow'),
-          E(Jn, 'class', 'language-svelte');
+          y(Qn, 'rel', 'nofollow'),
+          y(Jn, 'class', 'language-svelte');
       },
-      m(i, _) {
-        b(i, n, _),
+      m(u, _) {
+        b(u, n, _),
           a(n, e),
           a(e, s),
           a(n, t),
           a(n, c),
           a(c, o),
-          a(n, u),
+          a(n, i),
           a(n, l),
           a(l, g),
           a(g, v),
@@ -3356,15 +3356,15 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(xn, ht),
           a(Y, _t),
           a(Y, In),
-          a(In, Es),
-          a(Es, bt),
-          a(In, vt),
           a(In, ys),
-          a(ys, wt),
-          a(Y, Et),
+          a(ys, bt),
+          a(In, vt),
+          a(In, Es),
+          a(Es, wt),
+          a(Y, yt),
           a(Y, ns),
           a(ns, $s),
-          a($s, yt),
+          a($s, Et),
           a(ns, $t),
           a(n, St),
           a(n, Ss),
@@ -3389,13 +3389,13 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(G, Ts),
           a(Ts, Nt),
           a(G, Mt),
-          b(i, Ce, _),
-          b(i, Ln, _),
-          (Ln.innerHTML = Sr),
-          b(i, Ie, _),
-          j(pn, i, _),
-          b(i, Le, _),
-          b(i, M, _),
+          b(u, Ce, _),
+          b(u, Ln, _),
+          (Ln.innerHTML = Sp),
+          b(u, Ie, _),
+          j(rn, u, _),
+          b(u, Le, _),
+          b(u, M, _),
           a(M, Dn),
           a(Dn, Rt),
           a(Dn, js),
@@ -3435,14 +3435,14 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(as, oa),
           a(M, la),
           a(M, Vs),
-          a(Vs, ra),
-          a(M, pa),
+          a(Vs, pa),
+          a(M, ra),
           a(M, F),
           a(F, Hs),
           a(Hs, ca),
-          a(F, ua),
+          a(F, ia),
           a(F, Fs),
-          a(Fs, ia),
+          a(Fs, ua),
           a(F, fa),
           a(F, qs),
           a(qs, da),
@@ -3450,13 +3450,13 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(F, Qs),
           a(Qs, ga),
           a(F, ma),
-          b(i, De, _),
-          b(i, Tn, _),
-          (Tn.innerHTML = Pr),
-          b(i, Oe, _),
-          j(cn, i, _),
-          b(i, Te, _),
-          b(i, q, _),
+          b(u, De, _),
+          b(u, Tn, _),
+          (Tn.innerHTML = Pp),
+          b(u, Oe, _),
+          j(cn, u, _),
+          b(u, Te, _),
+          b(u, q, _),
           a(q, Ys),
           a(Ys, Js),
           a(Js, ha),
@@ -3468,9 +3468,9 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(tn, un),
           a(un, Ws),
           a(Ws, wa),
-          a(un, Ea),
+          a(un, ya),
           a(un, Xs),
-          a(Xs, ya),
+          a(Xs, Ea),
           a(un, $a),
           a(tn, Sa),
           a(tn, os),
@@ -3496,14 +3496,14 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(ls, te),
           a(te, Na),
           a(ls, Ma),
-          b(i, je, _),
-          b(i, zn, _),
-          (zn.innerHTML = Cr),
-          b(i, ze, _),
-          j(fn, i, _),
-          b(i, Be, _),
-          b(i, rs, _),
-          a(rs, J),
+          b(u, je, _),
+          b(u, zn, _),
+          (zn.innerHTML = Cp),
+          b(u, ze, _),
+          j(fn, u, _),
+          b(u, Be, _),
+          b(u, ps, _),
+          a(ps, J),
           a(J, Ra),
           a(J, ae),
           a(ae, Aa),
@@ -3514,35 +3514,35 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(J, le),
           a(le, Fa),
           a(J, qa),
-          b(i, Ge, _),
-          b(i, Bn, _),
-          (Bn.innerHTML = Ir),
-          b(i, Ne, _),
-          j(dn, i, _),
-          b(i, Me, _),
-          b(i, kn, _),
+          b(u, Ge, _),
+          b(u, Bn, _),
+          (Bn.innerHTML = Ip),
+          b(u, Ne, _),
+          j(dn, u, _),
+          b(u, Me, _),
+          b(u, kn, _),
           a(kn, Gn),
           a(Gn, Qa),
-          a(Gn, re),
-          a(re, Ya),
+          a(Gn, pe),
+          a(pe, Ya),
           a(Gn, Ja),
           a(kn, Ka),
           a(kn, gn),
-          a(gn, pe),
-          a(pe, Wa),
+          a(gn, re),
+          a(re, Wa),
           a(gn, Xa),
           a(gn, Nn),
           a(Nn, Za),
           a(Nn, Mn),
           a(Mn, xa),
           a(Nn, no),
-          b(i, Re, _),
-          b(i, Rn, _),
-          (Rn.innerHTML = Lr),
-          b(i, Ae, _),
-          j(mn, i, _),
-          b(i, Ue, _),
-          b(i, hn, _),
+          b(u, Re, _),
+          b(u, Rn, _),
+          (Rn.innerHTML = Lp),
+          b(u, Ae, _),
+          j(mn, u, _),
+          b(u, Ue, _),
+          b(u, hn, _),
           a(hn, on),
           a(on, so),
           a(on, An),
@@ -3552,37 +3552,37 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(Un, ao),
           a(on, oo),
           a(hn, lo),
-          a(hn, ps),
-          a(ps, Vn),
-          a(Vn, ro),
+          a(hn, rs),
+          a(rs, Vn),
+          a(Vn, po),
           a(Vn, Hn),
-          a(Hn, po),
+          a(Hn, ro),
           a(Vn, co),
-          b(i, Ve, _),
-          b(i, Fn, _),
-          (Fn.innerHTML = Dr),
-          b(i, He, _),
-          b(i, qn, _),
-          (qn.innerHTML = Or),
-          b(i, Fe, _),
-          b(i, cs, _),
+          b(u, Ve, _),
+          b(u, Fn, _),
+          (Fn.innerHTML = Dp),
+          b(u, He, _),
+          b(u, qn, _),
+          (qn.innerHTML = Op),
+          b(u, Fe, _),
+          b(u, cs, _),
           a(cs, ln),
-          a(ln, uo),
+          a(ln, io),
           a(ln, ce),
-          a(ce, io),
+          a(ce, uo),
           a(ln, fo),
           a(ln, Qn),
           a(Qn, ko),
           a(ln, go),
-          b(i, qe, _),
-          j(_n, i, _),
-          b(i, Qe, _),
-          b(i, R, _),
-          a(R, ue),
-          a(ue, mo),
-          a(R, ho),
+          b(u, qe, _),
+          j(_n, u, _),
+          b(u, Qe, _),
+          b(u, R, _),
           a(R, ie),
-          a(ie, fe),
+          a(ie, mo),
+          a(R, ho),
+          a(R, ue),
+          a(ue, fe),
           a(fe, _o),
           a(R, bo),
           a(R, de),
@@ -3590,9 +3590,9 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(K, vo),
           a(K, ke),
           a(ke, wo),
-          a(K, Eo),
+          a(K, yo),
           a(K, ge),
-          a(ge, yo),
+          a(ge, Eo),
           a(K, $o),
           a(K, me),
           a(me, So),
@@ -3603,116 +3603,116 @@ Lorem ipsum<span class="token punctuation">..</span>.
           a(_e, Io),
           a(R, Lo),
           a(R, Yn),
-          a(Yn, us),
-          a(us, be),
-          a(be, Do),
-          a(us, Oo),
-          a(Yn, To),
           a(Yn, is),
-          a(is, ve),
+          a(is, be),
+          a(be, Do),
+          a(is, Oo),
+          a(Yn, To),
+          a(Yn, us),
+          a(us, ve),
           a(ve, jo),
-          a(is, zo),
-          b(i, Ye, _),
-          b(i, Jn, _),
-          (Jn.innerHTML = Tr),
-          b(i, Je, _),
-          j(bn, i, _),
+          a(us, zo),
+          b(u, Ye, _),
+          b(u, Jn, _),
+          (Jn.innerHTML = Tp),
+          b(u, Je, _),
+          j(bn, u, _),
           (Ke = !0);
       },
-      p(i, [_]) {
+      p(u, [_]) {
         const we = {};
-        _ & 128 && (we.$$scope = { dirty: _, ctx: i }), pn.$set(we);
-        const Ee = {};
-        _ & 128 && (Ee.$$scope = { dirty: _, ctx: i }), cn.$set(Ee);
+        _ & 128 && (we.$$scope = { dirty: _, ctx: u }), rn.$set(we);
         const ye = {};
-        _ & 128 && (ye.$$scope = { dirty: _, ctx: i }), fn.$set(ye);
+        _ & 128 && (ye.$$scope = { dirty: _, ctx: u }), cn.$set(ye);
+        const Ee = {};
+        _ & 128 && (Ee.$$scope = { dirty: _, ctx: u }), fn.$set(Ee);
         const Kn = {};
-        _ & 128 && (Kn.$$scope = { dirty: _, ctx: i }), dn.$set(Kn);
+        _ & 128 && (Kn.$$scope = { dirty: _, ctx: u }), dn.$set(Kn);
         const $e = {};
-        _ & 128 && ($e.$$scope = { dirty: _, ctx: i }), mn.$set($e);
+        _ & 128 && ($e.$$scope = { dirty: _, ctx: u }), mn.$set($e);
         const Wn = {};
-        _ & 128 && (Wn.$$scope = { dirty: _, ctx: i }), _n.$set(Wn);
+        _ & 128 && (Wn.$$scope = { dirty: _, ctx: u }), _n.$set(Wn);
         const Se = {};
-        _ & 128 && (Se.$$scope = { dirty: _, ctx: i }), bn.$set(Se);
+        _ & 128 && (Se.$$scope = { dirty: _, ctx: u }), bn.$set(Se);
       },
-      i(i) {
+      i(u) {
         Ke ||
-          (P(pn.$$.fragment, i),
-          P(cn.$$.fragment, i),
-          P(fn.$$.fragment, i),
-          P(dn.$$.fragment, i),
-          P(mn.$$.fragment, i),
-          P(_n.$$.fragment, i),
-          P(bn.$$.fragment, i),
+          (P(rn.$$.fragment, u),
+          P(cn.$$.fragment, u),
+          P(fn.$$.fragment, u),
+          P(dn.$$.fragment, u),
+          P(mn.$$.fragment, u),
+          P(_n.$$.fragment, u),
+          P(bn.$$.fragment, u),
           (Ke = !0));
       },
-      o(i) {
-        C(pn.$$.fragment, i),
-          C(cn.$$.fragment, i),
-          C(fn.$$.fragment, i),
-          C(dn.$$.fragment, i),
-          C(mn.$$.fragment, i),
-          C(_n.$$.fragment, i),
-          C(bn.$$.fragment, i),
+      o(u) {
+        C(rn.$$.fragment, u),
+          C(cn.$$.fragment, u),
+          C(fn.$$.fragment, u),
+          C(dn.$$.fragment, u),
+          C(mn.$$.fragment, u),
+          C(_n.$$.fragment, u),
+          C(bn.$$.fragment, u),
           (Ke = !1);
       },
-      d(i) {
-        i && p(n),
-          i && p(Ce),
-          i && p(Ln),
-          i && p(Ie),
-          O(pn, i),
-          i && p(Le),
-          i && p(M),
-          i && p(De),
-          i && p(Tn),
-          i && p(Oe),
-          O(cn, i),
-          i && p(Te),
-          i && p(q),
-          i && p(je),
-          i && p(zn),
-          i && p(ze),
-          O(fn, i),
-          i && p(Be),
-          i && p(rs),
-          i && p(Ge),
-          i && p(Bn),
-          i && p(Ne),
-          O(dn, i),
-          i && p(Me),
-          i && p(kn),
-          i && p(Re),
-          i && p(Rn),
-          i && p(Ae),
-          O(mn, i),
-          i && p(Ue),
-          i && p(hn),
-          i && p(Ve),
-          i && p(Fn),
-          i && p(He),
-          i && p(qn),
-          i && p(Fe),
-          i && p(cs),
-          i && p(qe),
-          O(_n, i),
-          i && p(Qe),
-          i && p(R),
-          i && p(Ye),
-          i && p(Jn),
-          i && p(Je),
-          O(bn, i);
+      d(u) {
+        u && r(n),
+          u && r(Ce),
+          u && r(Ln),
+          u && r(Ie),
+          O(rn, u),
+          u && r(Le),
+          u && r(M),
+          u && r(De),
+          u && r(Tn),
+          u && r(Oe),
+          O(cn, u),
+          u && r(Te),
+          u && r(q),
+          u && r(je),
+          u && r(zn),
+          u && r(ze),
+          O(fn, u),
+          u && r(Be),
+          u && r(ps),
+          u && r(Ge),
+          u && r(Bn),
+          u && r(Ne),
+          O(dn, u),
+          u && r(Me),
+          u && r(kn),
+          u && r(Re),
+          u && r(Rn),
+          u && r(Ae),
+          O(mn, u),
+          u && r(Ue),
+          u && r(hn),
+          u && r(Ve),
+          u && r(Fn),
+          u && r(He),
+          u && r(qn),
+          u && r(Fe),
+          u && r(cs),
+          u && r(qe),
+          O(_n, u),
+          u && r(Qe),
+          u && r(R),
+          u && r(Ye),
+          u && r(Jn),
+          u && r(Je),
+          O(bn, u);
       },
     }
   );
 }
-const Qp = {
+const Qr = {
     title: 'Scroller',
     description: 'Easy scrollytelling with layout options.',
     slug: 'scroller',
   },
-  { title: $r, description: nc, slug: sc } = Qp;
-function Yp(r) {
+  { title: $p, description: nc, slug: sc } = Qr;
+function Yr(p) {
   const n = [
       {
         background: ms,
@@ -3760,7 +3760,7 @@ Lorem ipsum green`,
       },
     ],
     s = [
-      { background: ms, backgroundProps: { colour: 'red' }, foreground: yr },
+      { background: ms, backgroundProps: { colour: 'red' }, foreground: Ep },
       {
         background: ms,
         backgroundProps: { colour: 'blue' },
@@ -3771,7 +3771,7 @@ Lorem ipsum blue`,
       {
         background: ms,
         backgroundProps: { colour: 'green' },
-        foreground: yr,
+        foreground: Ep,
         foregroundProps: { count: 100 },
       },
     ],
@@ -3795,17 +3795,17 @@ Lorem ipsum`,
 Lorem ipsum`,
       },
     ],
-    c = async (u) => (await Op(`./demos/ai2html/${u}.exclude.svelte`)).default;
+    c = async (i) => (await Or(`./demos/ai2html/${i}.exclude.svelte`)).default;
   return [
     n,
     e,
     s,
     t,
-    async (u) => {
+    async (i) => {
       const l = [];
-      for (const g of u) {
+      for (const g of i) {
         const v = await c(g.background);
-        l.push(ir(ur({}, g), { background: v }));
+        l.push(up(ip({}, g), { background: v }));
       }
       return l;
     },
@@ -3814,7 +3814,7 @@ Lorem ipsum`,
 class ec extends x {
   constructor(n) {
     super();
-    nn(this, n, Yp, qp, sn, {});
+    nn(this, n, Yr, qr, sn, {});
   }
 }
-export { ec as default, Qp as metadata };
+export { ec as default, Qr as metadata };

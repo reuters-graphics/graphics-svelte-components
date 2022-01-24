@@ -14,8 +14,8 @@ import {
   f as g,
   H as c,
   I as f,
-} from './vendor-b82e5b83.js';
-function q(w) {
+} from './vendor-a3a8e12b.js';
+function q(H) {
   let a,
     p,
     k,
@@ -24,7 +24,7 @@ function q(w) {
     d,
     l,
     t,
-    H = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    b = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Sharer <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -36,7 +36,7 @@ function q(w) {
         (k = v(y)),
         (h = E()),
         (o = r('p')),
-        (d = v(b)),
+        (d = v(w)),
         (l = E()),
         (t = r('pre')),
         this.h();
@@ -48,7 +48,7 @@ function q(w) {
       var m = u(p);
       (k = S(m, y)), m.forEach(e), (h = x(n)), (o = i(n, 'P', {}));
       var _ = u(o);
-      (d = S(_, b)),
+      (d = S(_, w)),
         _.forEach(e),
         n.forEach(e),
         (l = x(s)),
@@ -68,7 +68,7 @@ function q(w) {
         c(o, d),
         g(s, l, n),
         g(s, t, n),
-        (t.innerHTML = H);
+        (t.innerHTML = b);
     },
     p: f,
     i: f,
@@ -83,7 +83,7 @@ const A = {
     description: 'Add share tools to a page.',
     slug: 'sharer',
   },
-  { title: y, description: b, slug: L } = A;
+  { title: y, description: w, slug: L } = A;
 class M extends C {
   constructor(a) {
     super();

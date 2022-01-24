@@ -17,9 +17,9 @@ import {
   I as w,
   $ as B,
   a0 as F,
-} from './vendor-b82e5b83.js';
+} from './vendor-a3a8e12b.js';
 import { a as T } from './paths-6758d194.js';
-function $(E) {
+function $(b) {
   let e, n, _, d, y, t, r, o, g, c, h;
   return {
     c() {
@@ -46,17 +46,17 @@ function $(E) {
         f(d).forEach(p),
         (y = D(s)),
         (t = v(s, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      r = v(b, 'P', { class: !0 });
+      var E = f(t);
+      r = v(E, 'P', { class: !0 });
       var V = f(r);
       (o = S(V, 'Something')),
         V.forEach(p),
-        (g = D(b)),
-        (c = v(b, 'P', { class: !0 }));
+        (g = D(E)),
+        (c = v(E, 'P', { class: !0 }));
       var k = f(c);
       (h = S(k, 'happened here')),
         k.forEach(p),
-        b.forEach(p),
+        E.forEach(p),
         s.forEach(p),
         this.h();
     },
@@ -101,7 +101,7 @@ function $(E) {
     },
   };
 }
-function z(E) {
+function z(b) {
   let e, n, _, d, y, t, r, o, g, c, h;
   return {
     c() {
@@ -128,17 +128,17 @@ function z(E) {
         f(d).forEach(p),
         (y = D(s)),
         (t = v(s, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      r = v(b, 'P', { class: !0 });
+      var E = f(t);
+      r = v(E, 'P', { class: !0 });
       var V = f(r);
       (o = S(V, 'Something')),
         V.forEach(p),
-        (g = D(b)),
-        (c = v(b, 'P', { class: !0 }));
+        (g = D(E)),
+        (c = v(E, 'P', { class: !0 }));
       var k = f(c);
       (h = S(k, 'happened here')),
         k.forEach(p),
-        b.forEach(p),
+        E.forEach(p),
         s.forEach(p),
         this.h();
     },
@@ -183,7 +183,7 @@ function z(E) {
     },
   };
 }
-function j(E) {
+function j(b) {
   let e, n, _, d, y, t, r, o, g, c, h;
   return {
     c() {
@@ -210,17 +210,17 @@ function j(E) {
         f(d).forEach(p),
         (y = D(s)),
         (t = v(s, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      r = v(b, 'P', { class: !0 });
+      var E = f(t);
+      r = v(E, 'P', { class: !0 });
       var V = f(r);
       (o = S(V, 'Something')),
         V.forEach(p),
-        (g = D(b)),
-        (c = v(b, 'P', { class: !0 }));
+        (g = D(E)),
+        (c = v(E, 'P', { class: !0 }));
       var k = f(c);
       (h = S(k, 'happened here')),
         k.forEach(p),
-        b.forEach(p),
+        E.forEach(p),
         s.forEach(p),
         this.h();
     },
@@ -265,7 +265,7 @@ function j(E) {
     },
   };
 }
-function q(E) {
+function q(b) {
   let e, n, _, d, y, t, r, o, g, c, h;
   return {
     c() {
@@ -292,17 +292,17 @@ function q(E) {
         f(d).forEach(p),
         (y = D(s)),
         (t = v(s, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      r = v(b, 'P', { class: !0 });
+      var E = f(t);
+      r = v(E, 'P', { class: !0 });
       var V = f(r);
       (o = S(V, 'Something')),
         V.forEach(p),
-        (g = D(b)),
-        (c = v(b, 'P', { class: !0 }));
+        (g = D(E)),
+        (c = v(E, 'P', { class: !0 }));
       var k = f(c);
       (h = S(k, 'happened here')),
         k.forEach(p),
-        b.forEach(p),
+        E.forEach(p),
         s.forEach(p),
         this.h();
     },
@@ -347,7 +347,7 @@ function q(E) {
     },
   };
 }
-function C(E) {
+function C(b) {
   let e, n, _, d, y, t, r, o, g, c, h;
   return {
     c() {
@@ -374,17 +374,17 @@ function C(E) {
         f(d).forEach(p),
         (y = D(s)),
         (t = v(s, 'DIV', { id: !0, class: !0, style: !0 }));
-      var b = f(t);
-      r = v(b, 'P', { class: !0 });
+      var E = f(t);
+      r = v(E, 'P', { class: !0 });
       var V = f(r);
       (o = S(V, 'Something')),
         V.forEach(p),
-        (g = D(b)),
-        (c = v(b, 'P', { class: !0 }));
+        (g = D(E)),
+        (c = v(E, 'P', { class: !0 }));
       var k = f(c);
       (h = S(k, 'happened here')),
         k.forEach(p),
-        b.forEach(p),
+        E.forEach(p),
         s.forEach(p),
         this.h();
     },
@@ -429,18 +429,18 @@ function C(E) {
     },
   };
 }
-function G(E) {
+function G(b) {
   let e,
     n,
     _,
     d,
     y,
     t,
-    r = E[0] && E[0] >= 1200 && $(),
-    o = E[0] && E[0] >= 930 && E[0] < 1200 && z(),
-    g = E[0] && E[0] >= 660 && E[0] < 930 && j(),
-    c = E[0] && E[0] >= 510 && E[0] < 660 && q(),
-    h = E[0] && E[0] >= 0 && E[0] < 510 && C();
+    r = b[0] && b[0] >= 1200 && $(),
+    o = b[0] && b[0] >= 930 && b[0] < 1200 && z(),
+    g = b[0] && b[0] >= 660 && b[0] < 930 && j(),
+    c = b[0] && b[0] >= 510 && b[0] < 660 && q(),
+    h = b[0] && b[0] >= 0 && b[0] < 510 && C();
   return {
     c() {
       (e = u('div')),
@@ -473,7 +473,7 @@ function G(E) {
     h() {
       i(e, 'id', 'g-step-3-box'),
         i(e, 'class', 'svelte-ma2cd4'),
-        B(() => E[1].call(e));
+        B(() => b[1].call(e));
     },
     m(l, s) {
       A(l, e, s),
@@ -486,7 +486,7 @@ function G(E) {
         c && c.m(e, null),
         a(e, y),
         h && h.m(e, null),
-        (t = F(e, E[1].bind(e)));
+        (t = F(e, b[1].bind(e)));
     },
     p(l, [s]) {
       l[0] && l[0] >= 1200
@@ -528,7 +528,7 @@ function G(E) {
     },
   };
 }
-function J(E, e, n) {
+function J(b, e, n) {
   let _ = null;
   function d() {
     (_ = this.clientWidth), n(0, _);

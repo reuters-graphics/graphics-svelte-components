@@ -7,14 +7,14 @@ import {
   k as y,
   c as r,
   a as u,
-  g as b,
+  g as E,
   d as e,
-  n as E,
+  n as P,
   b as T,
   f as h,
   H as l,
   I as g,
-} from './vendor-b82e5b83.js';
+} from './vendor-a3a8e12b.js';
 function q(C) {
   let a,
     p,
@@ -33,7 +33,7 @@ function q(C) {
     c() {
       (a = i('section')),
         (p = i('h2')),
-        (k = v(P)),
+        (k = v(b)),
         (d = y()),
         (c = i('p')),
         (m = v(x)),
@@ -46,12 +46,12 @@ function q(C) {
       var n = u(a);
       p = r(n, 'H2', {});
       var f = u(p);
-      (k = b(f, P)), f.forEach(e), (d = E(n)), (c = r(n, 'P', {}));
+      (k = E(f, b)), f.forEach(e), (d = P(n)), (c = r(n, 'P', {}));
       var _ = u(c);
-      (m = b(_, x)),
+      (m = E(_, x)),
         _.forEach(e),
         n.forEach(e),
-        (o = E(s)),
+        (o = P(s)),
         (t = r(s, 'PRE', { class: !0 }));
       var w = u(t);
       w.forEach(e), this.h();
@@ -83,7 +83,7 @@ const A = {
     description: 'A Pym.js child instance for embeddables.',
     slug: 'pym-child',
   },
-  { title: P, description: x, slug: L } = A;
+  { title: b, description: x, slug: L } = A;
 class M extends H {
   constructor(a) {
     super();

@@ -11,10 +11,10 @@ import {
   d as p,
   U as Ms,
   b as i,
-  _ as ta,
+  _ as na,
   f as b,
   H as c,
-  V as ea,
+  V as ta,
   a3 as Ln,
   x as A,
   $ as mt,
@@ -40,11 +40,11 @@ import {
   o as H,
   v as z,
   I as Ds,
-} from './vendor-b82e5b83.js';
-import { D as ha } from './index-75ffd758.js';
-import './@component-docs-989e6ca0.js';
+} from './vendor-a3a8e12b.js';
+import { D as va } from './index-95908c5c.js';
+import './@component-docs_components-0771368a.js';
 import { a as L } from './paths-6758d194.js';
-const { window: os } = bt,
+const { window: ps } = bt,
   _t = (o) => ({}),
   Wn = (o) => ({}),
   yt = (o) => ({}),
@@ -66,15 +66,15 @@ function Zn(o) {
     G,
     P,
     O,
-    q,
-    W,
     F,
-    K,
     Y,
     Z,
+    Q,
+    K,
     U,
+    X,
     C,
-    pa,
+    ea,
     J,
     S = o[22].beforeOverlay && Kn(o),
     I = o[22].afterOverlay && Qn(o),
@@ -92,12 +92,12 @@ function Zn(o) {
         I && I.c(),
         (P = w()),
         (O = f('div')),
-        (q = f('div')),
-        (W = w()),
         (F = f('div')),
-        (Z = w()),
+        (Y = w()),
+        (Z = f('div')),
+        (U = w()),
         j && j.c(),
-        (U = Cs()),
+        (X = Cs()),
         this.h();
     },
     l(v) {
@@ -128,18 +128,18 @@ function Zn(o) {
         I && I.l(T),
         (P = E(T)),
         (O = k(T, 'DIV', { class: !0, style: !0 }));
-      var x = g(O);
-      (q = k(x, 'DIV', { class: !0 })),
-        g(q).forEach(p),
-        (W = E(x)),
-        (F = k(x, 'DIV', { class: !0 })),
+      var aa = g(O);
+      (F = k(aa, 'DIV', { class: !0 })),
         g(F).forEach(p),
-        x.forEach(p),
+        (Y = E(aa)),
+        (Z = k(aa, 'DIV', { class: !0 })),
+        g(Z).forEach(p),
+        aa.forEach(p),
         T.forEach(p),
         $.forEach(p),
-        (Z = E(v)),
+        (U = E(v)),
         j && j.l(v),
-        (U = Cs()),
+        (X = Cs()),
         this.h();
     },
     h() {
@@ -163,17 +163,17 @@ function Zn(o) {
         i(u, 'class', 'before svelte-b70c3s'),
         i(u, 'role', 'img'),
         i(u, 'aria-describedby', (B = o[22].afterOverlay && `${o[17]}-after`)),
-        i(q, 'class', 'arrow-left svelte-b70c3s'),
-        i(F, 'class', 'arrow-right svelte-b70c3s'),
+        i(F, 'class', 'arrow-left svelte-b70c3s'),
+        i(Z, 'class', 'arrow-right svelte-b70c3s'),
         i(O, 'class', 'handle svelte-b70c3s'),
-        ta(O, 'left', 'calc(' + o[0] * 100 + '% - 20px)'),
-        ta(O, '--before-after-handle-colour', o[7]),
-        ta(O, '--before-after-handle-inactive-opacity', o[8]),
+        na(O, 'left', 'calc(' + o[0] * 100 + '% - 20px)'),
+        na(O, '--before-after-handle-colour', o[7]),
+        na(O, '--before-after-handle-inactive-opacity', o[8]),
         i(n, 'style', o[15]),
         i(n, 'class', 'before-after-container svelte-b70c3s'),
-        i(n, 'aria-labelledby', (K = o[22].caption && `${o[17]}-caption`)),
-        i(a, 'class', (Y = 'photo before-after ' + o[1] + ' svelte-b70c3s')),
-        ta(a, 'height', o[2] + 'px');
+        i(n, 'aria-labelledby', (Q = o[22].caption && `${o[17]}-caption`)),
+        i(a, 'class', (K = 'photo before-after ' + o[1] + ' svelte-b70c3s')),
+        na(a, 'height', o[2] + 'px');
     },
     m(v, $) {
       b(v, a, $),
@@ -188,23 +188,23 @@ function Zn(o) {
         I && I.m(n, null),
         c(n, P),
         c(n, O),
-        c(O, q),
-        c(O, W),
         c(O, F),
+        c(O, Y),
+        c(O, Z),
         o[32](n),
-        b(v, Z, $),
-        j && j.m(v, $),
         b(v, U, $),
+        j && j.m(v, $),
+        b(v, X, $),
         (C = !0),
-        pa ||
+        ea ||
           ((J = [
-            ea(s, 'mousedown', Ln(o[29])),
-            ea(s, 'load', o[18]),
-            ea(u, 'mousedown', Ln(o[28])),
-            ea(n, 'touchstart', o[20]),
-            ea(n, 'mousedown', o[20]),
+            ta(s, 'mousedown', Ln(o[29])),
+            ta(s, 'load', o[18]),
+            ta(u, 'mousedown', Ln(o[28])),
+            ta(n, 'touchstart', o[20]),
+            ta(n, 'mousedown', o[20]),
           ]),
-          (pa = !0));
+          (ea = !0));
     },
     p(v, $) {
       (!C || ($[0] & 32 && !Ms(s.src, (l = v[5])))) && i(s, 'src', l),
@@ -246,24 +246,24 @@ function Zn(o) {
               I = null;
             }),
             Bs()),
-        (!C || $[0] & 1) && ta(O, 'left', 'calc(' + v[0] * 100 + '% - 20px)'),
-        (!C || $[0] & 128) && ta(O, '--before-after-handle-colour', v[7]),
+        (!C || $[0] & 1) && na(O, 'left', 'calc(' + v[0] * 100 + '% - 20px)'),
+        (!C || $[0] & 128) && na(O, '--before-after-handle-colour', v[7]),
         (!C || $[0] & 256) &&
-          ta(O, '--before-after-handle-inactive-opacity', v[8]),
+          na(O, '--before-after-handle-inactive-opacity', v[8]),
         (!C || $[0] & 32768) && i(n, 'style', v[15]),
         (!C ||
           ($[0] & 4194304 &&
-            K !== (K = v[22].caption && `${v[17]}-caption`))) &&
-          i(n, 'aria-labelledby', K),
+            Q !== (Q = v[22].caption && `${v[17]}-caption`))) &&
+          i(n, 'aria-labelledby', Q),
         (!C ||
           ($[0] & 2 &&
-            Y !== (Y = 'photo before-after ' + v[1] + ' svelte-b70c3s'))) &&
-          i(a, 'class', Y),
-        (!C || $[0] & 4) && ta(a, 'height', v[2] + 'px'),
+            K !== (K = 'photo before-after ' + v[1] + ' svelte-b70c3s'))) &&
+          i(a, 'class', K),
+        (!C || $[0] & 4) && na(a, 'height', v[2] + 'px'),
         v[22].caption
           ? j
             ? (j.p(v, $), $[0] & 4194304 && A(j, 1))
-            : ((j = xn(v)), j.c(), A(j, 1), j.m(U.parentNode, U))
+            : ((j = xn(v)), j.c(), A(j, 1), j.m(X.parentNode, X))
           : j &&
             (Rs(),
             M(j, 1, 1, () => {
@@ -283,10 +283,10 @@ function Zn(o) {
         S && S.d(),
         I && I.d(),
         o[32](null),
-        v && p(Z),
-        j && j.d(v),
         v && p(U),
-        (pa = !1),
+        j && j.d(v),
+        v && p(X),
+        (ea = !1),
         Un(J);
     },
   };
@@ -307,7 +307,7 @@ function Kn(o) {
     h() {
       i(a, 'id', 'image-before-label'),
         i(a, 'class', 'overlay-container before svelte-b70c3s'),
-        ta(a, 'clip-path', 'inset(0 ' + o[13] + 'px 0 0)'),
+        na(a, 'clip-path', 'inset(0 ' + o[13] + 'px 0 0)'),
         mt(() => o[31].call(a));
     },
     m(r, u) {
@@ -319,7 +319,7 @@ function Kn(o) {
         (!s || u[0] & 67108864) &&
         gn(e, l, r, r[26], s ? vn(l, r[26], u, $t) : mn(r[26]), Yn),
         (!s || u[0] & 8192) &&
-          ta(a, 'clip-path', 'inset(0 ' + r[13] + 'px 0 0)');
+          na(a, 'clip-path', 'inset(0 ' + r[13] + 'px 0 0)');
     },
     i(r) {
       s || (A(e, r), (s = !0));
@@ -427,11 +427,11 @@ function wt(o) {
         (n = !0),
         s ||
           ((l = [
-            ea(os, 'touchmove', o[19]),
-            ea(os, 'touchend', o[21]),
-            ea(os, 'mousemove', o[19]),
-            ea(os, 'mouseup', o[21]),
-            ea(os, 'resize', dt(o[18], 100)),
+            ta(ps, 'touchmove', o[19]),
+            ta(ps, 'touchend', o[21]),
+            ta(ps, 'mousemove', o[19]),
+            ta(ps, 'mouseup', o[21]),
+            ta(ps, 'resize', dt(o[18], 100)),
           ]),
           (s = !0));
     },
@@ -470,18 +470,18 @@ function Et(o, a, n) {
   let { width: G = '' } = a,
     { height: P = 600 } = a,
     { beforeSrc: O = null } = a,
-    { beforeAlt: q = null } = a,
-    { afterSrc: W = null } = a,
-    { afterAlt: F = null } = a,
-    { handleColour: K = 'white' } = a,
-    { handleInactiveOpacity: Y = 0.4 } = a,
-    { handleMargin: Z = 0 } = a,
-    { offset: U = 0.5 } = a;
+    { beforeAlt: F = null } = a,
+    { afterSrc: Y = null } = a,
+    { afterAlt: Z = null } = a,
+    { handleColour: Q = 'white' } = a,
+    { handleInactiveOpacity: K = 0.4 } = a,
+    { handleMargin: U = 20 } = a,
+    { offset: X = 0.5 } = a;
   const C = () =>
       Math.floor((1 + Math.random()) * 65536)
         .toString(16)
         .substring(1),
-    pa = 'before-after-' + C() + C();
+    ea = 'before-after-' + C() + C();
   let J = null,
     S = !1,
     I,
@@ -493,39 +493,38 @@ function Et(o, a, n) {
         : n(24, (J = I.getBoundingClientRect()));
     },
     T = (_) => {
-      const Ps = _.touches ? _.touches[0] : _,
-        la = 20 + Z;
+      const Ps = _.touches ? _.touches[0] : _;
       if (S && J) {
-        const aa = j
+        const Ra = j
           ? parseInt(window.getComputedStyle(j).marginLeft.slice(0, -2))
           : 0;
-        let sa = Ps.pageX - aa - J.left;
-        (sa = sa < la ? la : sa > s - la ? s - la : sa), n(0, (U = sa / s));
+        let W = Ps.pageX - Ra - J.left;
+        (W = W < U ? U : W > s - U ? s - U : W), n(0, (X = W / s));
       }
     },
-    x = (_) => {
+    aa = (_) => {
       (S = !0), T(_);
     },
-    oa = () => {
+    pa = () => {
       S = !1;
     };
-  (O && q && W && F) ||
+  (O && F && Y && Z) ||
     console.warn('Missing required src or alt props for BeforeAfter component');
+  function Ha(_) {
+    Xn.call(this, o, _);
+  }
+  function ha(_) {
+    Xn.call(this, o, _);
+  }
   function za(_) {
-    Xn.call(this, o, _);
-  }
-  function _a(_) {
-    Xn.call(this, o, _);
-  }
-  function La(_) {
     qn[_ ? 'unshift' : 'push'](() => {
       (I = _), n(11, I);
     });
   }
-  function Ga() {
+  function La() {
     (v = this.clientWidth), n(9, v);
   }
-  function Ba(_) {
+  function Ma(_) {
     qn[_ ? 'unshift' : 'push'](() => {
       (j = _), n(12, j);
     });
@@ -535,33 +534,33 @@ function Et(o, a, n) {
       'width' in _ && n(1, (G = _.width)),
         'height' in _ && n(2, (P = _.height)),
         'beforeSrc' in _ && n(3, (O = _.beforeSrc)),
-        'beforeAlt' in _ && n(4, (q = _.beforeAlt)),
-        'afterSrc' in _ && n(5, (W = _.afterSrc)),
-        'afterAlt' in _ && n(6, (F = _.afterAlt)),
-        'handleColour' in _ && n(7, (K = _.handleColour)),
-        'handleInactiveOpacity' in _ && n(8, (Y = _.handleInactiveOpacity)),
-        'handleMargin' in _ && n(23, (Z = _.handleMargin)),
-        'offset' in _ && n(0, (U = _.offset)),
+        'beforeAlt' in _ && n(4, (F = _.beforeAlt)),
+        'afterSrc' in _ && n(5, (Y = _.afterSrc)),
+        'afterAlt' in _ && n(6, (Z = _.afterAlt)),
+        'handleColour' in _ && n(7, (Q = _.handleColour)),
+        'handleInactiveOpacity' in _ && n(8, (K = _.handleInactiveOpacity)),
+        'handleMargin' in _ && n(23, (U = _.handleMargin)),
+        'offset' in _ && n(0, (X = _.offset)),
         '$$scope' in _ && n(26, (B = _.$$scope));
     }),
     (o.$$.update = () => {
       o.$$.dirty[0] & 16777216 && n(25, (s = (J && J.width) || 0)),
         o.$$.dirty[0] & 16777216 && n(16, (l = (J && J.height) || 0)),
-        o.$$.dirty[0] & 33554433 && n(10, (e = s * U)),
+        o.$$.dirty[0] & 33554433 && n(10, (e = s * X)),
         o.$$.dirty[0] & 4 && n(15, (r = `width:100%;height:${P}px;`)),
         o.$$.dirty[0] & 1536 && n(13, (y = e < v ? Math.abs(e - v) : 0));
     }),
     n(14, (u = 'width:100%;height:100%;')),
     [
-      U,
+      X,
       G,
       P,
       O,
-      q,
-      W,
       F,
-      K,
       Y,
+      Z,
+      Q,
+      K,
       v,
       e,
       I,
@@ -570,26 +569,26 @@ function Et(o, a, n) {
       u,
       r,
       l,
-      pa,
+      ea,
       $,
       T,
-      x,
-      oa,
+      aa,
+      pa,
       D,
-      Z,
+      U,
       J,
       s,
       B,
       R,
+      Ha,
+      ha,
       za,
-      _a,
       La,
-      Ga,
-      Ba,
+      Ma,
     ]
   );
 }
-class ba extends Nn {
+class da extends Nn {
   constructor(a) {
     super();
     Hn(
@@ -618,7 +617,7 @@ class ba extends Nn {
 function Ot(o) {
   let a, n;
   return (
-    (a = new ba({
+    (a = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt: 'Before the thing',
@@ -652,7 +651,7 @@ function Ot(o) {
 function At(o) {
   let a, n;
   return (
-    (a = new ba({
+    (a = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt: 'Before the thing',
@@ -688,7 +687,7 @@ function At(o) {
 function St(o) {
   let a, n;
   return (
-    (a = new ba({
+    (a = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt: 'Before the thing',
@@ -696,7 +695,7 @@ function St(o) {
         afterAlt: 'After the thing',
         handleColour: '#fb8c71',
         handleInactiveOpacity: 0.6,
-        handleMargin: 40,
+        handleMargin: 0,
       },
     })),
     {
@@ -725,7 +724,7 @@ function St(o) {
 function jt(o) {
   let a, n;
   return (
-    (a = new ba({
+    (a = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt: 'Before the thing',
@@ -782,7 +781,7 @@ function It(o) {
 function Ct(o) {
   let a, n;
   return (
-    (a = new ba({
+    (a = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt:
@@ -905,7 +904,7 @@ function Rt(o) {
 function Bt(o) {
   let a, n;
   return (
-    (a = new ba({
+    (a = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt: 'Before the thing',
@@ -1004,7 +1003,7 @@ function Pt(o) {
 function Tt(o) {
   let a, n, s;
   return (
-    (n = new ba({
+    (n = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt: 'Before the thing',
@@ -1152,7 +1151,7 @@ function Vt(o) {
 function Nt(o) {
   let a, n;
   return (
-    (a = new ba({
+    (a = new da({
       props: {
         beforeSrc: `${L}/images/before-after/myrne-before.jpg`,
         beforeAlt:
@@ -1225,15 +1224,15 @@ function Ht(o) {
     G,
     P,
     O,
-    q,
-    W,
     F,
-    K,
     Y,
     Z,
+    Q,
+    K,
     U,
+    X,
     C,
-    pa,
+    ea,
     J,
     S,
     I,
@@ -1241,13 +1240,13 @@ function Ht(o) {
     v,
     $,
     T,
-    x,
-    oa,
+    aa,
+    pa,
+    Ha,
+    ha,
     za,
-    _a,
     La,
-    Ga,
-    Ba,
+    Ma,
     _,
     Ps = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BeforeAfter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
@@ -1261,14 +1260,14 @@ function Ht(o) {
   <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wide<span class="token punctuation">"</span></span>
   <span class="token attr-name">height="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">400</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
 <span class="token punctuation">/></span></span></code>`,
-    la,
-    aa,
-    sa,
-    Da,
-    Ua,
+    Ra,
+    W,
+    os,
+    Ba,
+    Ga,
     Ts,
     ls,
-    ya,
+    ba,
     nt = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BeforeAfter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -1280,19 +1279,19 @@ function Ht(o) {
   <span class="token attr-name">afterAlt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Satellite image of Russian base at Myrne taken on Oct. 20, 2020.<span class="token punctuation">"</span></span>
   <span class="token attr-name">handleColour</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff613b<span class="token punctuation">"</span></span>
   <span class="token attr-name">handleInactiveOpacity="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">0.6</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
-  <span class="token attr-name">handleMargin="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">40</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">handleMargin="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
 <span class="token punctuation">/></span></span></code>`,
     cs,
-    ia,
+    ca,
     rs,
-    Pa,
-    $a,
+    Da,
+    _a,
     Js,
-    Xa,
+    Ua,
     Vs,
     Ns,
     is,
-    wa,
+    ya,
     tt = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BeforeAfter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -1305,16 +1304,16 @@ function Ht(o) {
   <span class="token attr-name">offset="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">0.1</span><span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
 <span class="token punctuation">/></span></span></code>`,
     us,
-    ua,
+    ra,
     fs,
-    Ta,
-    Ea,
+    Pa,
+    $a,
     Hs,
-    qa,
+    Xa,
     zs,
     Ls,
     ks,
-    Oa,
+    wa,
     et = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BeforeAfter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -1335,19 +1334,19 @@ function Ht(o) {
   <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code>`,
     gs,
-    fa,
+    ia,
     ms,
-    Ja,
-    ca,
+    Ta,
+    oa,
     Gs,
-    Wa,
+    qa,
     Us,
     Xs,
-    Fa,
+    Wa,
     qs,
     Ws,
     vs,
-    Aa,
+    Ea,
     pt = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BeforeAfter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -1384,19 +1383,19 @@ function Ht(o) {
   <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code>`,
     ds,
-    ka,
+    ua,
     hs,
-    Va,
-    ra,
+    Ja,
+    la,
     Fs,
-    Ya,
+    Fa,
     Ys,
     Zs,
-    Za,
+    Ya,
     Ks,
     Qs,
     bs,
-    Sa,
+    Oa,
     ot = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BeforeAfter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -1419,33 +1418,33 @@ function Ht(o) {
   <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code>`,
     _s,
-    ga,
+    fa,
     ys,
-    ma,
-    Q,
+    ka,
+    x,
     xs,
-    ja,
+    Aa,
     an,
     sn,
-    Ka,
+    Za,
     nn,
     tn,
-    Ia,
+    Sa,
     en,
     pn,
     on,
-    na,
-    Qa,
+    sa,
+    Ka,
     ln,
     cn,
-    xa,
+    Qa,
     rn,
     un,
-    as,
+    xa,
     fn,
     kn,
     $s,
-    Ca,
+    ja,
     lt = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BeforeAfter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -1474,31 +1473,31 @@ function Ht(o) {
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>BeforeAfter</span><span class="token punctuation">></span></span></code>`,
     ws,
-    va,
+    ga,
     Es;
   return (
-    (D = new ha({
+    (D = new va({
       props: { $$slots: { default: [Ot] }, $$scope: { ctx: o } },
     })),
-    (aa = new ha({
+    (W = new va({
       props: { $$slots: { default: [At] }, $$scope: { ctx: o } },
     })),
-    (ia = new ha({
+    (ca = new va({
       props: { $$slots: { default: [St] }, $$scope: { ctx: o } },
     })),
-    (ua = new ha({
+    (ra = new va({
       props: { $$slots: { default: [jt] }, $$scope: { ctx: o } },
     })),
-    (fa = new ha({
+    (ia = new va({
       props: { $$slots: { default: [Ct] }, $$scope: { ctx: o } },
     })),
-    (ka = new ha({
+    (ua = new va({
       props: { $$slots: { default: [Bt] }, $$scope: { ctx: o } },
     })),
-    (ga = new ha({
+    (fa = new va({
       props: { $$slots: { default: [Tt] }, $$scope: { ctx: o } },
     })),
-    (va = new ha({
+    (ga = new va({
       props: { $$slots: { default: [Nt] }, $$scope: { ctx: o } },
     })),
     {
@@ -1516,17 +1515,17 @@ function Ht(o) {
           (G = w()),
           (P = f('section')),
           (O = f('p')),
-          (q = d('Adjust the size of the image by passing the ')),
-          (W = f('code')),
-          (F = d('width')),
-          (K = d(
+          (F = d('Adjust the size of the image by passing the ')),
+          (Y = f('code')),
+          (Z = d('width')),
+          (Q = d(
             ' prop a class name corresponding to one of our well widths: '
           )),
-          (Y = f('code')),
-          (Z = d('wide')),
-          (U = d(', ')),
+          (K = f('code')),
+          (U = d('wide')),
+          (X = d(', ')),
           (C = f('code')),
-          (pa = d('wider')),
+          (ea = d('wider')),
           (J = d(', ')),
           (S = f('code')),
           (I = d('widest')),
@@ -1534,117 +1533,117 @@ function Ht(o) {
           (v = f('code')),
           ($ = d('fluid')),
           (T = d('.')),
-          (x = w()),
-          (oa = f('p')),
-          (za = d('Adjust the height by passing a number of pixels to the ')),
-          (_a = f('code')),
-          (La = d('height')),
-          (Ga = d(' prop.')),
-          (Ba = w()),
+          (aa = w()),
+          (pa = f('p')),
+          (Ha = d('Adjust the height by passing a number of pixels to the ')),
+          (ha = f('code')),
+          (za = d('height')),
+          (La = d(' prop.')),
+          (Ma = w()),
           (_ = f('pre')),
-          (la = w()),
-          V(aa.$$.fragment),
-          (sa = w()),
-          (Da = f('section')),
-          (Ua = f('p')),
+          (Ra = w()),
+          V(W.$$.fragment),
+          (os = w()),
+          (Ba = f('section')),
+          (Ga = f('p')),
           (Ts = d('Change the styling of the swipe handle.')),
           (ls = w()),
-          (ya = f('pre')),
+          (ba = f('pre')),
           (cs = w()),
-          V(ia.$$.fragment),
+          V(ca.$$.fragment),
           (rs = w()),
-          (Pa = f('section')),
-          ($a = f('p')),
+          (Da = f('section')),
+          (_a = f('p')),
           (Js = d('Change the starting position of the swipe with the ')),
-          (Xa = f('code')),
+          (Ua = f('code')),
           (Vs = d('offset')),
           (Ns = d(' prop.')),
           (is = w()),
-          (wa = f('pre')),
+          (ya = f('pre')),
           (us = w()),
-          V(ua.$$.fragment),
+          V(ra.$$.fragment),
           (fs = w()),
-          (Ta = f('section')),
-          (Ea = f('p')),
+          (Pa = f('section')),
+          ($a = f('p')),
           (Hs = d('Add and style a caption with the ')),
-          (qa = f('code')),
+          (Xa = f('code')),
           (zs = d('caption')),
           (Ls = d(' slot.')),
           (ks = w()),
-          (Oa = f('pre')),
+          (wa = f('pre')),
           (gs = w()),
-          V(fa.$$.fragment),
+          V(ia.$$.fragment),
           (ms = w()),
-          (Ja = f('section')),
-          (ca = f('p')),
+          (Ta = f('section')),
+          (oa = f('p')),
           (Gs = d('Add overlays with the ')),
-          (Wa = f('code')),
+          (qa = f('code')),
           (Us = d('beforeOverlay')),
           (Xs = d(' and ')),
-          (Fa = f('code')),
+          (Wa = f('code')),
           (qs = d('afterOverlay')),
           (Ws = d(' slots.')),
           (vs = w()),
-          (Aa = f('pre')),
+          (Ea = f('pre')),
           (ds = w()),
-          V(ka.$$.fragment),
+          V(ua.$$.fragment),
           (hs = w()),
-          (Va = f('section')),
-          (ra = f('p')),
+          (Ja = f('section')),
+          (la = f('p')),
           (Fs = d('Target the ')),
-          (Ya = f('code')),
+          (Fa = f('code')),
           (Ys = d('.overlay-container')),
           (Zs = d(' with ')),
-          (Za = f('code')),
+          (Ya = f('code')),
           (Ks = d(':global')),
           (Qs = d(' SCSS rules to change the overlay positioning.')),
           (bs = w()),
-          (Sa = f('pre')),
+          (Oa = f('pre')),
           (_s = w()),
-          V(ga.$$.fragment),
+          V(fa.$$.fragment),
           (ys = w()),
-          (ma = f('section')),
-          (Q = f('p')),
+          (ka = f('section')),
+          (x = f('p')),
           (xs = d('Use text elements in your overlays as ')),
-          (ja = f('a')),
+          (Aa = f('a')),
           (an = d('ARIA descriptions')),
           (sn = d(
             ' for your images by setting an ID on text elements within each overly with the '
           )),
-          (Ka = f('code')),
+          (Za = f('code')),
           (nn = d('description')),
           (tn = w()),
-          (Ia = f('a')),
+          (Sa = f('a')),
           (en = d('slot prop')),
           (pn = d('.')),
           (on = w()),
-          (na = f('p')),
-          (Qa = f('strong')),
+          (sa = f('p')),
+          (Ka = f('strong')),
           (ln = d('\u{1F4A1} TIP:')),
           (cn = d(' You must always use the ')),
-          (xa = f('code')),
+          (Qa = f('code')),
           (rn = d('beforeAlt')),
           (un = d(' / ')),
-          (as = f('code')),
+          (xa = f('code')),
           (fn = d('afterAlt')),
           (kn = d(
             ' props to label your image for visually impaired readers, but you can use these descriptions to provide more information or context that the reader might also need.'
           )),
           ($s = w()),
-          (Ca = f('pre')),
+          (ja = f('pre')),
           (ws = w()),
-          V(va.$$.fragment),
+          V(ga.$$.fragment),
           this.h();
       },
       l(t) {
         a = k(t, 'SECTION', {});
         var m = g(a);
         n = k(m, 'H2', {});
-        var ss = g(n);
-        (s = h(ss, at)), ss.forEach(p), (l = E(m)), (e = k(m, 'P', {}));
-        var ns = g(e);
-        (r = h(ns, st)),
-          ns.forEach(p),
+        var as = g(n);
+        (s = h(as, at)), as.forEach(p), (l = E(m)), (e = k(m, 'P', {}));
+        var ss = g(e);
+        (r = h(ss, st)),
+          ss.forEach(p),
           m.forEach(p),
           (u = E(t)),
           (y = k(t, 'PRE', { class: !0 }));
@@ -1654,224 +1653,224 @@ function Ht(o) {
           N(D.$$.fragment, t),
           (G = E(t)),
           (P = k(t, 'SECTION', {}));
-        var Ma = g(P);
-        O = k(Ma, 'P', {});
-        var X = g(O);
-        (q = h(X, 'Adjust the size of the image by passing the ')),
-          (W = k(X, 'CODE', {}));
-        var ts = g(W);
-        (F = h(ts, 'width')),
-          ts.forEach(p),
-          (K = h(
-            X,
+        var Ia = g(P);
+        O = k(Ia, 'P', {});
+        var q = g(O);
+        (F = h(q, 'Adjust the size of the image by passing the ')),
+          (Y = k(q, 'CODE', {}));
+        var ns = g(Y);
+        (Z = h(ns, 'width')),
+          ns.forEach(p),
+          (Q = h(
+            q,
             ' prop a class name corresponding to one of our well widths: '
           )),
-          (Y = k(X, 'CODE', {}));
-        var es = g(Y);
-        (Z = h(es, 'wide')),
+          (K = k(q, 'CODE', {}));
+        var ts = g(K);
+        (U = h(ts, 'wide')),
+          ts.forEach(p),
+          (X = h(q, ', ')),
+          (C = k(q, 'CODE', {}));
+        var es = g(C);
+        (ea = h(es, 'wider')),
           es.forEach(p),
-          (U = h(X, ', ')),
-          (C = k(X, 'CODE', {}));
-        var ps = g(C);
-        (pa = h(ps, 'wider')),
-          ps.forEach(p),
-          (J = h(X, ', ')),
-          (S = k(X, 'CODE', {}));
+          (J = h(q, ', ')),
+          (S = k(q, 'CODE', {}));
         var hn = g(S);
         (I = h(hn, 'widest')),
           hn.forEach(p),
-          (j = h(X, ' or ')),
-          (v = k(X, 'CODE', {}));
+          (j = h(q, ' or ')),
+          (v = k(q, 'CODE', {}));
         var bn = g(v);
         ($ = h(bn, 'fluid')),
           bn.forEach(p),
-          (T = h(X, '.')),
-          X.forEach(p),
-          (x = E(Ma)),
-          (oa = k(Ma, 'P', {}));
-        var As = g(oa);
-        (za = h(As, 'Adjust the height by passing a number of pixels to the ')),
-          (_a = k(As, 'CODE', {}));
-        var _n = g(_a);
-        (La = h(_n, 'height')),
+          (T = h(q, '.')),
+          q.forEach(p),
+          (aa = E(Ia)),
+          (pa = k(Ia, 'P', {}));
+        var As = g(pa);
+        (Ha = h(As, 'Adjust the height by passing a number of pixels to the ')),
+          (ha = k(As, 'CODE', {}));
+        var _n = g(ha);
+        (za = h(_n, 'height')),
           _n.forEach(p),
-          (Ga = h(As, ' prop.')),
+          (La = h(As, ' prop.')),
           As.forEach(p),
-          Ma.forEach(p),
-          (Ba = E(t)),
+          Ia.forEach(p),
+          (Ma = E(t)),
           (_ = k(t, 'PRE', { class: !0 }));
         var ct = g(_);
         ct.forEach(p),
-          (la = E(t)),
-          N(aa.$$.fragment, t),
-          (sa = E(t)),
-          (Da = k(t, 'SECTION', {}));
-        var yn = g(Da);
-        Ua = k(yn, 'P', {});
-        var $n = g(Ua);
+          (Ra = E(t)),
+          N(W.$$.fragment, t),
+          (os = E(t)),
+          (Ba = k(t, 'SECTION', {}));
+        var yn = g(Ba);
+        Ga = k(yn, 'P', {});
+        var $n = g(Ga);
         (Ts = h($n, 'Change the styling of the swipe handle.')),
           $n.forEach(p),
           yn.forEach(p),
           (ls = E(t)),
-          (ya = k(t, 'PRE', { class: !0 }));
-        var rt = g(ya);
+          (ba = k(t, 'PRE', { class: !0 }));
+        var rt = g(ba);
         rt.forEach(p),
           (cs = E(t)),
-          N(ia.$$.fragment, t),
+          N(ca.$$.fragment, t),
           (rs = E(t)),
-          (Pa = k(t, 'SECTION', {}));
-        var wn = g(Pa);
-        $a = k(wn, 'P', {});
-        var Ss = g($a);
+          (Da = k(t, 'SECTION', {}));
+        var wn = g(Da);
+        _a = k(wn, 'P', {});
+        var Ss = g(_a);
         (Js = h(Ss, 'Change the starting position of the swipe with the ')),
-          (Xa = k(Ss, 'CODE', {}));
-        var En = g(Xa);
+          (Ua = k(Ss, 'CODE', {}));
+        var En = g(Ua);
         (Vs = h(En, 'offset')),
           En.forEach(p),
           (Ns = h(Ss, ' prop.')),
           Ss.forEach(p),
           wn.forEach(p),
           (is = E(t)),
-          (wa = k(t, 'PRE', { class: !0 }));
-        var it = g(wa);
+          (ya = k(t, 'PRE', { class: !0 }));
+        var it = g(ya);
         it.forEach(p),
           (us = E(t)),
-          N(ua.$$.fragment, t),
+          N(ra.$$.fragment, t),
           (fs = E(t)),
-          (Ta = k(t, 'SECTION', {}));
-        var On = g(Ta);
-        Ea = k(On, 'P', {});
-        var js = g(Ea);
+          (Pa = k(t, 'SECTION', {}));
+        var On = g(Pa);
+        $a = k(On, 'P', {});
+        var js = g($a);
         (Hs = h(js, 'Add and style a caption with the ')),
-          (qa = k(js, 'CODE', {}));
-        var An = g(qa);
+          (Xa = k(js, 'CODE', {}));
+        var An = g(Xa);
         (zs = h(An, 'caption')),
           An.forEach(p),
           (Ls = h(js, ' slot.')),
           js.forEach(p),
           On.forEach(p),
           (ks = E(t)),
-          (Oa = k(t, 'PRE', { class: !0 }));
-        var ut = g(Oa);
+          (wa = k(t, 'PRE', { class: !0 }));
+        var ut = g(wa);
         ut.forEach(p),
           (gs = E(t)),
-          N(fa.$$.fragment, t),
+          N(ia.$$.fragment, t),
           (ms = E(t)),
-          (Ja = k(t, 'SECTION', {}));
-        var Sn = g(Ja);
-        ca = k(Sn, 'P', {});
-        var Na = g(ca);
-        (Gs = h(Na, 'Add overlays with the ')), (Wa = k(Na, 'CODE', {}));
-        var jn = g(Wa);
+          (Ta = k(t, 'SECTION', {}));
+        var Sn = g(Ta);
+        oa = k(Sn, 'P', {});
+        var Va = g(oa);
+        (Gs = h(Va, 'Add overlays with the ')), (qa = k(Va, 'CODE', {}));
+        var jn = g(qa);
         (Us = h(jn, 'beforeOverlay')),
           jn.forEach(p),
-          (Xs = h(Na, ' and ')),
-          (Fa = k(Na, 'CODE', {}));
-        var In = g(Fa);
+          (Xs = h(Va, ' and ')),
+          (Wa = k(Va, 'CODE', {}));
+        var In = g(Wa);
         (qs = h(In, 'afterOverlay')),
           In.forEach(p),
-          (Ws = h(Na, ' slots.')),
-          Na.forEach(p),
+          (Ws = h(Va, ' slots.')),
+          Va.forEach(p),
           Sn.forEach(p),
           (vs = E(t)),
-          (Aa = k(t, 'PRE', { class: !0 }));
-        var ft = g(Aa);
+          (Ea = k(t, 'PRE', { class: !0 }));
+        var ft = g(Ea);
         ft.forEach(p),
           (ds = E(t)),
-          N(ka.$$.fragment, t),
+          N(ua.$$.fragment, t),
           (hs = E(t)),
-          (Va = k(t, 'SECTION', {}));
-        var Cn = g(Va);
-        ra = k(Cn, 'P', {});
-        var Ha = g(ra);
-        (Fs = h(Ha, 'Target the ')), (Ya = k(Ha, 'CODE', {}));
-        var Mn = g(Ya);
+          (Ja = k(t, 'SECTION', {}));
+        var Cn = g(Ja);
+        la = k(Cn, 'P', {});
+        var Na = g(la);
+        (Fs = h(Na, 'Target the ')), (Fa = k(Na, 'CODE', {}));
+        var Mn = g(Fa);
         (Ys = h(Mn, '.overlay-container')),
           Mn.forEach(p),
-          (Zs = h(Ha, ' with ')),
-          (Za = k(Ha, 'CODE', {}));
-        var Rn = g(Za);
+          (Zs = h(Na, ' with ')),
+          (Ya = k(Na, 'CODE', {}));
+        var Rn = g(Ya);
         (Ks = h(Rn, ':global')),
           Rn.forEach(p),
-          (Qs = h(Ha, ' SCSS rules to change the overlay positioning.')),
-          Ha.forEach(p),
+          (Qs = h(Na, ' SCSS rules to change the overlay positioning.')),
+          Na.forEach(p),
           Cn.forEach(p),
           (bs = E(t)),
-          (Sa = k(t, 'PRE', { class: !0 }));
-        var kt = g(Sa);
+          (Oa = k(t, 'PRE', { class: !0 }));
+        var kt = g(Oa);
         kt.forEach(p),
           (_s = E(t)),
-          N(ga.$$.fragment, t),
+          N(fa.$$.fragment, t),
           (ys = E(t)),
-          (ma = k(t, 'SECTION', {}));
-        var Is = g(ma);
-        Q = k(Is, 'P', {});
-        var da = g(Q);
-        (xs = h(da, 'Use text elements in your overlays as ')),
-          (ja = k(da, 'A', { href: !0, rel: !0 }));
-        var Bn = g(ja);
+          (ka = k(t, 'SECTION', {}));
+        var Is = g(ka);
+        x = k(Is, 'P', {});
+        var ma = g(x);
+        (xs = h(ma, 'Use text elements in your overlays as ')),
+          (Aa = k(ma, 'A', { href: !0, rel: !0 }));
+        var Bn = g(Aa);
         (an = h(Bn, 'ARIA descriptions')),
           Bn.forEach(p),
           (sn = h(
-            da,
+            ma,
             ' for your images by setting an ID on text elements within each overly with the '
           )),
-          (Ka = k(da, 'CODE', {}));
-        var Dn = g(Ka);
+          (Za = k(ma, 'CODE', {}));
+        var Dn = g(Za);
         (nn = h(Dn, 'description')),
           Dn.forEach(p),
-          (tn = E(da)),
-          (Ia = k(da, 'A', { href: !0, rel: !0 }));
-        var Pn = g(Ia);
+          (tn = E(ma)),
+          (Sa = k(ma, 'A', { href: !0, rel: !0 }));
+        var Pn = g(Sa);
         (en = h(Pn, 'slot prop')),
           Pn.forEach(p),
-          (pn = h(da, '.')),
-          da.forEach(p),
+          (pn = h(ma, '.')),
+          ma.forEach(p),
           (on = E(Is)),
-          (na = k(Is, 'P', {}));
-        var Ra = g(na);
-        Qa = k(Ra, 'STRONG', {});
-        var Tn = g(Qa);
+          (sa = k(Is, 'P', {}));
+        var Ca = g(sa);
+        Ka = k(Ca, 'STRONG', {});
+        var Tn = g(Ka);
         (ln = h(Tn, '\u{1F4A1} TIP:')),
           Tn.forEach(p),
-          (cn = h(Ra, ' You must always use the ')),
-          (xa = k(Ra, 'CODE', {}));
-        var Jn = g(xa);
+          (cn = h(Ca, ' You must always use the ')),
+          (Qa = k(Ca, 'CODE', {}));
+        var Jn = g(Qa);
         (rn = h(Jn, 'beforeAlt')),
           Jn.forEach(p),
-          (un = h(Ra, ' / ')),
-          (as = k(Ra, 'CODE', {}));
-        var Vn = g(as);
+          (un = h(Ca, ' / ')),
+          (xa = k(Ca, 'CODE', {}));
+        var Vn = g(xa);
         (fn = h(Vn, 'afterAlt')),
           Vn.forEach(p),
           (kn = h(
-            Ra,
+            Ca,
             ' props to label your image for visually impaired readers, but you can use these descriptions to provide more information or context that the reader might also need.'
           )),
-          Ra.forEach(p),
+          Ca.forEach(p),
           Is.forEach(p),
           ($s = E(t)),
-          (Ca = k(t, 'PRE', { class: !0 }));
-        var gt = g(Ca);
-        gt.forEach(p), (ws = E(t)), N(va.$$.fragment, t), this.h();
+          (ja = k(t, 'PRE', { class: !0 }));
+        var gt = g(ja);
+        gt.forEach(p), (ws = E(t)), N(ga.$$.fragment, t), this.h();
       },
       h() {
         i(y, 'class', 'language-svelte'),
           i(_, 'class', 'language-svelte'),
+          i(ba, 'class', 'language-svelte'),
           i(ya, 'class', 'language-svelte'),
           i(wa, 'class', 'language-svelte'),
+          i(Ea, 'class', 'language-svelte'),
           i(Oa, 'class', 'language-svelte'),
-          i(Aa, 'class', 'language-svelte'),
-          i(Sa, 'class', 'language-svelte'),
           i(
-            ja,
+            Aa,
             'href',
             'https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby'
           ),
-          i(ja, 'rel', 'nofollow'),
-          i(Ia, 'href', 'https://svelte.dev/tutorial/slot-props'),
-          i(Ia, 'rel', 'nofollow'),
-          i(Ca, 'class', 'language-svelte');
+          i(Aa, 'rel', 'nofollow'),
+          i(Sa, 'href', 'https://svelte.dev/tutorial/slot-props'),
+          i(Sa, 'rel', 'nofollow'),
+          i(ja, 'class', 'language-svelte');
       },
       m(t, m) {
         b(t, a, m),
@@ -1888,15 +1887,15 @@ function Ht(o) {
           b(t, G, m),
           b(t, P, m),
           c(P, O),
-          c(O, q),
-          c(O, W),
-          c(W, F),
-          c(O, K),
+          c(O, F),
           c(O, Y),
           c(Y, Z),
-          c(O, U),
+          c(O, Q),
+          c(O, K),
+          c(K, U),
+          c(O, X),
           c(O, C),
-          c(C, pa),
+          c(C, ea),
           c(O, J),
           c(O, S),
           c(S, I),
@@ -1904,150 +1903,150 @@ function Ht(o) {
           c(O, v),
           c(v, $),
           c(O, T),
-          c(P, x),
-          c(P, oa),
-          c(oa, za),
-          c(oa, _a),
-          c(_a, La),
-          c(oa, Ga),
-          b(t, Ba, m),
+          c(P, aa),
+          c(P, pa),
+          c(pa, Ha),
+          c(pa, ha),
+          c(ha, za),
+          c(pa, La),
+          b(t, Ma, m),
           b(t, _, m),
           (_.innerHTML = Ps),
-          b(t, la, m),
-          H(aa, t, m),
-          b(t, sa, m),
-          b(t, Da, m),
-          c(Da, Ua),
-          c(Ua, Ts),
+          b(t, Ra, m),
+          H(W, t, m),
+          b(t, os, m),
+          b(t, Ba, m),
+          c(Ba, Ga),
+          c(Ga, Ts),
           b(t, ls, m),
-          b(t, ya, m),
-          (ya.innerHTML = nt),
+          b(t, ba, m),
+          (ba.innerHTML = nt),
           b(t, cs, m),
-          H(ia, t, m),
+          H(ca, t, m),
           b(t, rs, m),
+          b(t, Da, m),
+          c(Da, _a),
+          c(_a, Js),
+          c(_a, Ua),
+          c(Ua, Vs),
+          c(_a, Ns),
+          b(t, is, m),
+          b(t, ya, m),
+          (ya.innerHTML = tt),
+          b(t, us, m),
+          H(ra, t, m),
+          b(t, fs, m),
           b(t, Pa, m),
           c(Pa, $a),
-          c($a, Js),
+          c($a, Hs),
           c($a, Xa),
-          c(Xa, Vs),
-          c($a, Ns),
-          b(t, is, m),
-          b(t, wa, m),
-          (wa.innerHTML = tt),
-          b(t, us, m),
-          H(ua, t, m),
-          b(t, fs, m),
-          b(t, Ta, m),
-          c(Ta, Ea),
-          c(Ea, Hs),
-          c(Ea, qa),
-          c(qa, zs),
-          c(Ea, Ls),
+          c(Xa, zs),
+          c($a, Ls),
           b(t, ks, m),
-          b(t, Oa, m),
-          (Oa.innerHTML = et),
+          b(t, wa, m),
+          (wa.innerHTML = et),
           b(t, gs, m),
-          H(fa, t, m),
+          H(ia, t, m),
           b(t, ms, m),
-          b(t, Ja, m),
-          c(Ja, ca),
-          c(ca, Gs),
-          c(ca, Wa),
-          c(Wa, Us),
-          c(ca, Xs),
-          c(ca, Fa),
-          c(Fa, qs),
-          c(ca, Ws),
+          b(t, Ta, m),
+          c(Ta, oa),
+          c(oa, Gs),
+          c(oa, qa),
+          c(qa, Us),
+          c(oa, Xs),
+          c(oa, Wa),
+          c(Wa, qs),
+          c(oa, Ws),
           b(t, vs, m),
-          b(t, Aa, m),
-          (Aa.innerHTML = pt),
+          b(t, Ea, m),
+          (Ea.innerHTML = pt),
           b(t, ds, m),
-          H(ka, t, m),
+          H(ua, t, m),
           b(t, hs, m),
-          b(t, Va, m),
-          c(Va, ra),
-          c(ra, Fs),
-          c(ra, Ya),
-          c(Ya, Ys),
-          c(ra, Zs),
-          c(ra, Za),
-          c(Za, Ks),
-          c(ra, Qs),
+          b(t, Ja, m),
+          c(Ja, la),
+          c(la, Fs),
+          c(la, Fa),
+          c(Fa, Ys),
+          c(la, Zs),
+          c(la, Ya),
+          c(Ya, Ks),
+          c(la, Qs),
           b(t, bs, m),
-          b(t, Sa, m),
-          (Sa.innerHTML = ot),
+          b(t, Oa, m),
+          (Oa.innerHTML = ot),
           b(t, _s, m),
-          H(ga, t, m),
+          H(fa, t, m),
           b(t, ys, m),
-          b(t, ma, m),
-          c(ma, Q),
-          c(Q, xs),
-          c(Q, ja),
-          c(ja, an),
-          c(Q, sn),
-          c(Q, Ka),
-          c(Ka, nn),
-          c(Q, tn),
-          c(Q, Ia),
-          c(Ia, en),
-          c(Q, pn),
-          c(ma, on),
-          c(ma, na),
-          c(na, Qa),
-          c(Qa, ln),
-          c(na, cn),
-          c(na, xa),
-          c(xa, rn),
-          c(na, un),
-          c(na, as),
-          c(as, fn),
-          c(na, kn),
+          b(t, ka, m),
+          c(ka, x),
+          c(x, xs),
+          c(x, Aa),
+          c(Aa, an),
+          c(x, sn),
+          c(x, Za),
+          c(Za, nn),
+          c(x, tn),
+          c(x, Sa),
+          c(Sa, en),
+          c(x, pn),
+          c(ka, on),
+          c(ka, sa),
+          c(sa, Ka),
+          c(Ka, ln),
+          c(sa, cn),
+          c(sa, Qa),
+          c(Qa, rn),
+          c(sa, un),
+          c(sa, xa),
+          c(xa, fn),
+          c(sa, kn),
           b(t, $s, m),
-          b(t, Ca, m),
-          (Ca.innerHTML = lt),
+          b(t, ja, m),
+          (ja.innerHTML = lt),
           b(t, ws, m),
-          H(va, t, m),
+          H(ga, t, m),
           (Es = !0);
       },
       p(t, [m]) {
+        const as = {};
+        m & 2 && (as.$$scope = { dirty: m, ctx: t }), D.$set(as);
         const ss = {};
-        m & 2 && (ss.$$scope = { dirty: m, ctx: t }), D.$set(ss);
-        const ns = {};
-        m & 2 && (ns.$$scope = { dirty: m, ctx: t }), aa.$set(ns);
+        m & 2 && (ss.$$scope = { dirty: m, ctx: t }), W.$set(ss);
         const Os = {};
-        m & 2 && (Os.$$scope = { dirty: m, ctx: t }), ia.$set(Os);
-        const Ma = {};
-        m & 2 && (Ma.$$scope = { dirty: m, ctx: t }), ua.$set(Ma);
-        const X = {};
-        m & 2 && (X.$$scope = { dirty: m, ctx: t }), fa.$set(X);
+        m & 2 && (Os.$$scope = { dirty: m, ctx: t }), ca.$set(Os);
+        const Ia = {};
+        m & 2 && (Ia.$$scope = { dirty: m, ctx: t }), ra.$set(Ia);
+        const q = {};
+        m & 2 && (q.$$scope = { dirty: m, ctx: t }), ia.$set(q);
+        const ns = {};
+        m & 2 && (ns.$$scope = { dirty: m, ctx: t }), ua.$set(ns);
         const ts = {};
-        m & 2 && (ts.$$scope = { dirty: m, ctx: t }), ka.$set(ts);
+        m & 2 && (ts.$$scope = { dirty: m, ctx: t }), fa.$set(ts);
         const es = {};
         m & 2 && (es.$$scope = { dirty: m, ctx: t }), ga.$set(es);
-        const ps = {};
-        m & 2 && (ps.$$scope = { dirty: m, ctx: t }), va.$set(ps);
       },
       i(t) {
         Es ||
           (A(D.$$.fragment, t),
-          A(aa.$$.fragment, t),
+          A(W.$$.fragment, t),
+          A(ca.$$.fragment, t),
+          A(ra.$$.fragment, t),
           A(ia.$$.fragment, t),
           A(ua.$$.fragment, t),
           A(fa.$$.fragment, t),
-          A(ka.$$.fragment, t),
           A(ga.$$.fragment, t),
-          A(va.$$.fragment, t),
           (Es = !0));
       },
       o(t) {
         M(D.$$.fragment, t),
-          M(aa.$$.fragment, t),
+          M(W.$$.fragment, t),
+          M(ca.$$.fragment, t),
+          M(ra.$$.fragment, t),
           M(ia.$$.fragment, t),
           M(ua.$$.fragment, t),
           M(fa.$$.fragment, t),
-          M(ka.$$.fragment, t),
           M(ga.$$.fragment, t),
-          M(va.$$.fragment, t),
           (Es = !1);
       },
       d(t) {
@@ -2058,46 +2057,46 @@ function Ht(o) {
           z(D, t),
           t && p(G),
           t && p(P),
-          t && p(Ba),
+          t && p(Ma),
           t && p(_),
-          t && p(la),
-          z(aa, t),
-          t && p(sa),
-          t && p(Da),
+          t && p(Ra),
+          z(W, t),
+          t && p(os),
+          t && p(Ba),
           t && p(ls),
-          t && p(ya),
+          t && p(ba),
           t && p(cs),
-          z(ia, t),
+          z(ca, t),
           t && p(rs),
-          t && p(Pa),
+          t && p(Da),
           t && p(is),
-          t && p(wa),
+          t && p(ya),
           t && p(us),
-          z(ua, t),
+          z(ra, t),
           t && p(fs),
-          t && p(Ta),
+          t && p(Pa),
           t && p(ks),
-          t && p(Oa),
+          t && p(wa),
           t && p(gs),
-          z(fa, t),
+          z(ia, t),
           t && p(ms),
-          t && p(Ja),
+          t && p(Ta),
           t && p(vs),
-          t && p(Aa),
+          t && p(Ea),
           t && p(ds),
-          z(ka, t),
+          z(ua, t),
           t && p(hs),
-          t && p(Va),
+          t && p(Ja),
           t && p(bs),
-          t && p(Sa),
+          t && p(Oa),
           t && p(_s),
-          z(ga, t),
+          z(fa, t),
           t && p(ys),
-          t && p(ma),
+          t && p(ka),
           t && p($s),
-          t && p(Ca),
+          t && p(ja),
           t && p(ws),
-          z(va, t);
+          z(ga, t);
       },
     }
   );
