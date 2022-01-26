@@ -11,7 +11,7 @@ import {
   c as f,
   a as j,
   d as c,
-  Q as me,
+  Q as de,
   b as e,
   H as u,
   I as ne,
@@ -27,7 +27,7 @@ import {
   G as Ie,
   x as Q,
   u as X,
-  V as de,
+  V as me,
   J as ae,
   K as Se,
   W as Re,
@@ -45,7 +45,7 @@ import {
 import { a as De, b as $ } from './paths-6758d194.js';
 const Z = (n = '') => Y(De, n);
 const Ne = '@reuters-graphics/graphics-svelte-components',
-  He = '0.1.50',
+  He = '0.1.51',
   xe = 'module',
   Fe = 'https://reuters-graphics.github.io/graphics-svelte-components',
   Ge = 'https://github.com/reuters-graphics/graphics-svelte-components',
@@ -182,11 +182,11 @@ var We = (function () {
       w,
       y,
       g,
-      m,
+      d,
       k,
       I;
     function S(o) {
-      typeof ga == 'function' && (m = !0),
+      typeof ga == 'function' && (d = !0),
         typeof _gaq != 'undefined' &&
           typeof _gaq.push == 'function' &&
           (k = !0),
@@ -222,13 +222,13 @@ var We = (function () {
       return function () {
         var A = new Date();
         B || (B = A);
-        var d = _ - (A - B);
+        var m = _ - (A - B);
         return (
           (R = this),
           (H = arguments),
-          d <= 0
+          m <= 0
             ? (clearTimeout(D), (D = null), (B = A), (C = o.apply(R, H)))
-            : D || (D = setTimeout(q, d)),
+            : D || (D = setTimeout(q, m)),
           C
         );
       };
@@ -248,7 +248,7 @@ var We = (function () {
             timingVar: 'First Interaction',
             timingValue: o,
           })
-        : (m && ga('send', 'timing', 'Riveted', 'First Interaction', o),
+        : (d && ga('send', 'timing', 'Riveted', 'First Interaction', o),
           k &&
             _gaq.push([
               '_trackTiming',
@@ -269,7 +269,7 @@ var We = (function () {
               eventValue: w,
               eventNonInteraction: g,
             })
-          : (m &&
+          : (d &&
               ga('send', 'event', 'Riveted', 'Time Spent', o.toString(), w, {
                 nonInteraction: g,
               }),
@@ -355,7 +355,7 @@ function Ze(n) {
     w,
     y,
     g,
-    m,
+    d,
     k,
     I,
     S,
@@ -394,7 +394,7 @@ function Ze(n) {
           (w = h('meta')),
           (y = h('meta')),
           (g = h('meta')),
-          (m = h('meta')),
+          (d = h('meta')),
           (k = h('meta')),
           (S = h('meta')),
           (x = h('meta')),
@@ -415,37 +415,37 @@ function Ze(n) {
           this.h();
       },
       l(A) {
-        const d = be('[data-svelte="svelte-157iplb"]', document.head);
-        (t = f(d, 'HTML', { lang: !0 })),
+        const m = be('[data-svelte="svelte-157iplb"]', document.head);
+        (t = f(m, 'HTML', { lang: !0 })),
           j(t).forEach(c),
-          (a = f(d, 'META', { name: !0, content: !0 })),
-          (s = f(d, 'LINK', { rel: !0, href: !0 })),
-          (i = f(d, 'LINK', { rel: !0, type: !0, href: !0 })),
-          (v = f(d, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
-          (p = f(d, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
-          (b = f(d, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
-          (w = f(d, 'META', { property: !0, content: !0 })),
-          (y = f(d, 'META', { property: !0, content: !0 })),
-          (g = f(d, 'META', { property: !0, content: !0, itemprop: !0 })),
-          (m = f(d, 'META', { property: !0, content: !0, itemprop: !0 })),
-          (k = f(d, 'META', { property: !0, content: !0, itemprop: !0 })),
-          (S = f(d, 'META', { property: !0, content: !0 })),
-          (x = f(d, 'META', { name: !0, content: !0 })),
-          (L = f(d, 'META', { name: !0, content: !0 })),
-          (M = f(d, 'META', { name: !0, content: !0 })),
-          (N = f(d, 'META', { name: !0, content: !0 })),
-          (F = f(d, 'META', { name: !0, content: !0 })),
-          (O = f(d, 'META', { name: !0, content: !0 })),
-          (T = f(d, 'META', { name: !0, content: !0 })),
-          (E = f(d, 'META', { property: !0, content: !0 })),
-          (l = f(d, 'META', { property: !0, content: !0 })),
-          (o = f(d, 'META', { property: !0, content: !0 })),
-          (_ = f(d, 'META', { property: !0, content: !0 })),
-          (R = me(d)),
+          (a = f(m, 'META', { name: !0, content: !0 })),
+          (s = f(m, 'LINK', { rel: !0, href: !0 })),
+          (i = f(m, 'LINK', { rel: !0, type: !0, href: !0 })),
+          (v = f(m, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
+          (p = f(m, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
+          (b = f(m, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
+          (w = f(m, 'META', { property: !0, content: !0 })),
+          (y = f(m, 'META', { property: !0, content: !0 })),
+          (g = f(m, 'META', { property: !0, content: !0, itemprop: !0 })),
+          (d = f(m, 'META', { property: !0, content: !0, itemprop: !0 })),
+          (k = f(m, 'META', { property: !0, content: !0, itemprop: !0 })),
+          (S = f(m, 'META', { property: !0, content: !0 })),
+          (x = f(m, 'META', { name: !0, content: !0 })),
+          (L = f(m, 'META', { name: !0, content: !0 })),
+          (M = f(m, 'META', { name: !0, content: !0 })),
+          (N = f(m, 'META', { name: !0, content: !0 })),
+          (F = f(m, 'META', { name: !0, content: !0 })),
+          (O = f(m, 'META', { name: !0, content: !0 })),
+          (T = f(m, 'META', { name: !0, content: !0 })),
+          (E = f(m, 'META', { property: !0, content: !0 })),
+          (l = f(m, 'META', { property: !0, content: !0 })),
+          (o = f(m, 'META', { property: !0, content: !0 })),
+          (_ = f(m, 'META', { property: !0, content: !0 })),
+          (R = de(m)),
           (C = K()),
-          (D = me(d)),
+          (D = de(m)),
           (q = K()),
-          d.forEach(c),
+          m.forEach(c),
           this.h();
       },
       h() {
@@ -492,9 +492,9 @@ function Ze(n) {
           e(g, 'property', 'og:title'),
           e(g, 'content', n[2]),
           e(g, 'itemprop', 'name'),
-          e(m, 'property', 'og:description'),
-          e(m, 'content', n[3]),
-          e(m, 'itemprop', 'description'),
+          e(d, 'property', 'og:description'),
+          e(d, 'content', n[3]),
+          e(d, 'itemprop', 'description'),
           e(k, 'property', 'og:image'),
           e(k, 'content', (I = Z(n[4]))),
           e(k, 'itemprop', 'image'),
@@ -525,7 +525,7 @@ function Ze(n) {
           (R.a = C),
           (D.a = q);
       },
-      m(A, d) {
+      m(A, m) {
         u(document.head, t),
           u(document.head, a),
           u(document.head, s),
@@ -536,7 +536,7 @@ function Ze(n) {
           u(document.head, w),
           u(document.head, y),
           u(document.head, g),
-          u(document.head, m),
+          u(document.head, d),
           u(document.head, k),
           u(document.head, S),
           u(document.head, x),
@@ -555,17 +555,17 @@ function Ze(n) {
           D.m(B, document.head),
           u(document.head, q);
       },
-      p(A, [d]) {
-        d & 32 && e(t, 'lang', A[5]),
-          d & 1 && r !== (r = A[0]) && (document.title = r),
-          d & 2 && e(a, 'content', A[1]),
-          d & 4 && e(g, 'content', A[2]),
-          d & 8 && e(m, 'content', A[3]),
-          d & 16 && I !== (I = Z(A[4])) && e(k, 'content', I),
-          d & 64 && P !== (P = `https://${A[6]}`) && e(N, 'content', P),
-          d & 4 && e(F, 'content', A[2]),
-          d & 8 && e(O, 'content', A[3]),
-          d & 16 && G !== (G = Z(A[4])) && e(T, 'content', G);
+      p(A, [m]) {
+        m & 32 && e(t, 'lang', A[5]),
+          m & 1 && r !== (r = A[0]) && (document.title = r),
+          m & 2 && e(a, 'content', A[1]),
+          m & 4 && e(g, 'content', A[2]),
+          m & 8 && e(d, 'content', A[3]),
+          m & 16 && I !== (I = Z(A[4])) && e(k, 'content', I),
+          m & 64 && P !== (P = `https://${A[6]}`) && e(N, 'content', P),
+          m & 4 && e(F, 'content', A[2]),
+          m & 8 && e(O, 'content', A[3]),
+          m & 16 && G !== (G = Z(A[4])) && e(T, 'content', G);
       },
       i: ne,
       o: ne,
@@ -580,7 +580,7 @@ function Ze(n) {
           c(w),
           c(y),
           c(g),
-          c(m),
+          c(d),
           c(k),
           c(S),
           c(x),
@@ -604,7 +604,7 @@ function Ze(n) {
 }
 function Ye(n, t, r) {
   let a;
-  we(n, ze, (m) => r(8, (a = m)));
+  we(n, ze, (d) => r(8, (a = d)));
   let { seoTitle: s } = t,
     { seoDescription: i } = t,
     { shareTitle: v } = t,
@@ -627,19 +627,19 @@ function Ye(n, t, r) {
     U(z, 'reuters.graphic.published'),
     U(z, 'reuters.graphic.published'),
     U(z, 'reuters.graphic.updated'),
-    U(z, 'reuters.graphic.authors', []).map(({ name: m, url: k }) => ({
+    U(z, 'reuters.graphic.authors', []).map(({ name: d, url: k }) => ({
       '@type': 'Person',
-      name: m,
+      name: d,
       url: k,
     })),
-    (n.$$set = (m) => {
-      'seoTitle' in m && r(0, (s = m.seoTitle)),
-        'seoDescription' in m && r(1, (i = m.seoDescription)),
-        'shareTitle' in m && r(2, (v = m.shareTitle)),
-        'shareDescription' in m && r(3, (p = m.shareDescription)),
-        'shareImgPath' in m && r(4, (b = m.shareImgPath)),
-        'lang' in m && r(5, (w = m.lang)),
-        'hostname' in m && r(6, (y = m.hostname));
+    (n.$$set = (d) => {
+      'seoTitle' in d && r(0, (s = d.seoTitle)),
+        'seoDescription' in d && r(1, (i = d.seoDescription)),
+        'shareTitle' in d && r(2, (v = d.shareTitle)),
+        'shareDescription' in d && r(3, (p = d.shareDescription)),
+        'shareImgPath' in d && r(4, (b = d.shareImgPath)),
+        'lang' in d && r(5, (w = d.lang)),
+        'hostname' in d && r(6, (y = d.hostname));
     }),
     [s, i, v, p, b, w, y, g]
   );
@@ -675,8 +675,8 @@ function Qe(n) {
     },
     l(g) {
       t = f(g, 'NAV', { class: !0 });
-      var m = j(t);
-      r = f(m, 'DIV', { class: !0 });
+      var d = j(t);
+      r = f(d, 'DIV', { class: !0 });
       var k = j(r);
       a = f(k, 'A', { href: !0 });
       var I = j(a);
@@ -686,9 +686,9 @@ function Qe(n) {
         S.forEach(c),
         I.forEach(c),
         k.forEach(c),
-        (p = W(m)),
-        y && y.l(m),
-        m.forEach(c),
+        (p = W(d)),
+        y && y.l(d),
+        d.forEach(c),
         this.h();
     },
     h() {
@@ -704,8 +704,8 @@ function Qe(n) {
         e(r, 'class', 'logo-container'),
         e(t, 'class', 'nav svelte-ca3v86');
     },
-    m(g, m) {
-      J(g, t, m),
+    m(g, d) {
+      J(g, t, d),
         u(t, r),
         u(r, a),
         u(a, s),
@@ -714,11 +714,11 @@ function Qe(n) {
         y && y.m(t, null),
         (b = !0);
     },
-    p(g, [m]) {
+    p(g, [d]) {
       y &&
         y.p &&
-        (!b || m & 1) &&
-        ke(y, w, g, g[0], b ? Ie(w, g[0], m, null) : Ae(g[0]), null);
+        (!b || d & 1) &&
+        ke(y, w, g, g[0], b ? Ie(w, g[0], d, null) : Ae(g[0]), null);
     },
     i(g) {
       b || (Q(y, g), (b = !0));
@@ -765,7 +765,7 @@ function ge(n) {
       e(t, 'id', 'overlay'), e(t, 'class', 'svelte-253v2x');
     },
     m(s, i) {
-      J(s, t, i), r || ((a = de(t, 'click', n[2])), (r = !0));
+      J(s, t, i), r || ((a = me(t, 'click', n[2])), (r = !0));
     },
     p: ne,
     d(s) {
@@ -844,7 +844,7 @@ function $e(n) {
     w,
     y,
     g,
-    m,
+    d,
     k,
     I,
     S,
@@ -876,7 +876,7 @@ function $e(n) {
         (w = h('a')),
         le(y.$$.fragment),
         (g = se(' Home')),
-        (m = V()),
+        (d = V()),
         (k = h('li')),
         (I = h('a')),
         le(S.$$.fragment),
@@ -907,7 +907,7 @@ function $e(n) {
         (g = ie(D, ' Home')),
         D.forEach(c),
         C.forEach(c),
-        (m = W(H)),
+        (d = W(H)),
         (k = f(H, 'LI', { class: !0 }));
       var B = j(k);
       I = f(B, 'A', { href: !0, rel: !0, class: !0 });
@@ -955,7 +955,7 @@ function $e(n) {
         u(b, w),
         ce(y, w, null),
         u(w, g),
-        u(p, m),
+        u(p, d),
         u(p, k),
         u(k, I),
         ce(S, I, null),
@@ -964,7 +964,7 @@ function $e(n) {
         u(p, M),
         u(p, N);
       for (let _ = 0; _ < E.length; _ += 1) E[_].m(p, null);
-      (P = !0), F || ((O = de(s, 'click', n[3])), (F = !0));
+      (P = !0), F || ((O = me(s, 'click', n[3])), (F = !0));
     },
     p(l, [o]) {
       if (

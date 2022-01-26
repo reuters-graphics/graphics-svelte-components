@@ -3,16 +3,16 @@ import {
   S as N,
   i as M,
   s as q,
-  j as v,
+  j as p,
   k as P,
   l as L,
   m as D,
   n as R,
-  o as f,
+  o as v,
   f as E,
-  u as h,
+  u as b,
   w as B,
-  x as b,
+  x as h,
   v as k,
   d as l,
   A as H,
@@ -32,7 +32,7 @@ import {
   S as C,
   N as z,
   M as J,
-} from '../../chunks/@component-docs_components-be2cc329.js';
+} from '../../chunks/@component-docs_components-86850067.js';
 import '../../chunks/paths-6758d194.js';
 function K(o) {
   switch (o) {
@@ -52,16 +52,16 @@ function K(o) {
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return e(
-        () => import('../../chunks/docs-3d5692a7.js'),
+        () => import('../../chunks/docs-888ab229.js'),
         [
-          'chunks/docs-3d5692a7.js',
+          'chunks/docs-888ab229.js',
           'assets/docs-ea1c5840.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -143,30 +143,30 @@ function K(o) {
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-d13a959d.js'),
+        () => import('../../chunks/docs-30e9839f.js'),
         [
-          'chunks/docs-d13a959d.js',
+          'chunks/docs-30e9839f.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-d53d38e3.js'),
+        () => import('../../chunks/docs-d5fa34b0.js'),
         [
-          'chunks/docs-d53d38e3.js',
+          'chunks/docs-d5fa34b0.js',
           'assets/docs-4a88ca0e.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -192,15 +192,15 @@ function K(o) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-287605c7.js'),
+        () => import('../../chunks/docs-fa784df1.js'),
         [
-          'chunks/docs-287605c7.js',
+          'chunks/docs-fa784df1.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -215,17 +215,17 @@ function K(o) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-604d8b18.js'),
+        () => import('../../chunks/docs-4e913d0b.js'),
         [
-          'chunks/docs-604d8b18.js',
+          'chunks/docs-4e913d0b.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -264,16 +264,16 @@ function Q(o) {
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return e(
-        () => import('../../chunks/docs-3d5692a7.js'),
+        () => import('../../chunks/docs-888ab229.js'),
         [
-          'chunks/docs-3d5692a7.js',
+          'chunks/docs-888ab229.js',
           'assets/docs-ea1c5840.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -355,30 +355,30 @@ function Q(o) {
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-d13a959d.js'),
+        () => import('../../chunks/docs-30e9839f.js'),
         [
-          'chunks/docs-d13a959d.js',
+          'chunks/docs-30e9839f.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-d53d38e3.js'),
+        () => import('../../chunks/docs-d5fa34b0.js'),
         [
-          'chunks/docs-d53d38e3.js',
+          'chunks/docs-d5fa34b0.js',
           'assets/docs-4a88ca0e.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -404,15 +404,15 @@ function Q(o) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-287605c7.js'),
+        () => import('../../chunks/docs-fa784df1.js'),
         [
-          'chunks/docs-287605c7.js',
+          'chunks/docs-fa784df1.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -427,17 +427,17 @@ function Q(o) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-604d8b18.js'),
+        () => import('../../chunks/docs-4e913d0b.js'),
         [
-          'chunks/docs-604d8b18.js',
+          'chunks/docs-4e913d0b.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-be2cc329.js',
-          'assets/@component-docs_components-96349e58.css',
+          'chunks/@component-docs_components-86850067.js',
+          'assets/@component-docs_components-abc99a89.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -513,13 +513,13 @@ function X(o) {
     m && (r = new m(j())),
     {
       c() {
-        v(t.$$.fragment),
+        p(t.$$.fragment),
           (i = P()),
-          v(c.$$.fragment),
+          p(c.$$.fragment),
           (a = P()),
-          v(n.$$.fragment),
+          p(n.$$.fragment),
           (u = P()),
-          r && v(r.$$.fragment),
+          r && p(r.$$.fragment),
           (d = L());
       },
       l(s) {
@@ -533,24 +533,24 @@ function X(o) {
           (d = L());
       },
       m(s, _) {
-        f(t, s, _),
+        v(t, s, _),
           E(s, i, _),
-          f(c, s, _),
+          v(c, s, _),
           E(s, a, _),
-          f(n, s, _),
+          v(n, s, _),
           E(s, u, _),
-          r && f(r, s, _),
+          r && v(r, s, _),
           E(s, d, _),
           ($ = !0);
       },
       p(s, [_]) {
-        const p = {};
-        _ & 1 && (p.seoTitle = `Reuters Graphics components - ${s[0].title}`),
-          _ & 1 && (p.seoDescription = s[0].description),
+        const f = {};
+        _ & 1 && (f.seoTitle = `Reuters Graphics components - ${s[0].title}`),
+          _ & 1 && (f.seoDescription = s[0].description),
           _ & 1 &&
-            (p.shareTitle = `Reuters Graphics components - ${s[0].title}`),
-          _ & 1 && (p.shareDescription = s[0].description),
-          t.$set(p);
+            (f.shareTitle = `Reuters Graphics components - ${s[0].title}`),
+          _ & 1 && (f.shareDescription = s[0].description),
+          t.$set(f);
         const A = {};
         if (
           (_ & 5 && (A.$$scope = { dirty: _, ctx: s }),
@@ -560,32 +560,32 @@ function X(o) {
           if (r) {
             U();
             const I = r;
-            h(I.$$.fragment, 1, 0, () => {
+            b(I.$$.fragment, 1, 0, () => {
               k(I, 1);
             }),
               B();
           }
           m
             ? ((r = new m(j())),
-              v(r.$$.fragment),
-              b(r.$$.fragment, 1),
-              f(r, d.parentNode, d))
+              p(r.$$.fragment),
+              h(r.$$.fragment, 1),
+              v(r, d.parentNode, d))
             : (r = null);
         }
       },
       i(s) {
         $ ||
-          (b(t.$$.fragment, s),
-          b(c.$$.fragment, s),
-          b(n.$$.fragment, s),
-          r && b(r.$$.fragment, s),
-          ($ = !0));
-      },
-      o(s) {
-        h(t.$$.fragment, s),
+          (h(t.$$.fragment, s),
           h(c.$$.fragment, s),
           h(n.$$.fragment, s),
           r && h(r.$$.fragment, s),
+          ($ = !0));
+      },
+      o(s) {
+        b(t.$$.fragment, s),
+          b(c.$$.fragment, s),
+          b(n.$$.fragment, s),
+          r && b(r.$$.fragment, s),
           ($ = !1);
       },
       d(s) {
