@@ -6,11 +6,17 @@
 
   onMount(() => {
     fetch(
-      'https://graphics.thomsonreuters.com/data/reuters-graphics/homepage/latest.json'
+      'https://graphics.thomsonreuters.com/data/reuters-graphics/homepage/graphics.json'
     )
       .then((resp) => resp.json())
       .then((data) => {
         metadata = data
+          .filter(({ url }) => {
+            const pathname = window.location.pathname
+              .replace(/\/index\.html$/, '')
+              .replace(/\/$/, '');
+            return !url.includes(pathname);
+          })
           .slice(0, 4)
           .map(({ url, image, title, description }) => ({
             url,
