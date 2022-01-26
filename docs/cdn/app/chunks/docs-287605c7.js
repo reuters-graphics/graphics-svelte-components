@@ -37,7 +37,7 @@ import {
   B as le,
 } from './vendor-a3a8e12b.js';
 import { D as ae } from './index-95908c5c.js';
-import './@component-docs_components-0ee6c15b.js';
+import './@component-docs_components-be2cc329.js';
 import './paths-6758d194.js';
 const oe = (a) => ({ intersecting: a & 1 }),
   T = (a) => ({ intersecting: a[0] });
@@ -304,7 +304,7 @@ function U(a) {
     u,
     c = a[0],
     f = [];
-  for (let i = 0; i < c.length; i += 1) f[i] = W(F(a, c, i));
+  for (let i = 0; i < c.length; i += 1) f[i] = x(F(a, c, i));
   const g = (i) =>
     $(f[i], 1, 1, () => {
       f[i] = null;
@@ -356,7 +356,7 @@ function U(a) {
           const p = F(i, c, l);
           f[l]
             ? (f[l].p(p, m), w(f[l], 1))
-            : ((f[l] = W(p)), f[l].c(), w(f[l], 1), f[l].m(o, null));
+            : ((f[l] = x(p)), f[l].c(), w(f[l], 1), f[l].m(o, null));
         }
         for (G(), l = c.length; l < f.length; l += 1) g(l);
         P();
@@ -378,7 +378,7 @@ function U(a) {
     },
   };
 }
-function W(a) {
+function x(a) {
   let e, n;
   const t = [a[1]];
   let s = {};
@@ -453,13 +453,19 @@ function ve(a, e, n) {
   return (
     S(() => {
       fetch(
-        'https://graphics.thomsonreuters.com/data/reuters-graphics/homepage/latest.json'
+        'https://graphics.thomsonreuters.com/data/reuters-graphics/homepage/graphics.json'
       )
         .then((s) => s.json())
         .then((s) => {
           n(
             0,
             (t = s
+              .filter(({ url: r }) => {
+                const o = window.location.pathname
+                  .replace(/\/index\.html$/, '')
+                  .replace(/\/$/, '');
+                return !r.includes(o);
+              })
               .slice(0, 4)
               .map(({ url: r, image: o, title: u, description: c }) => ({
                 url: r,
@@ -588,7 +594,7 @@ function $e(a) {
       c() {
         (e = d('section')),
           (n = d('h2')),
-          (t = H(x)),
+          (t = H(W)),
           (s = C()),
           (r = d('p')),
           (o = H(z)),
@@ -603,7 +609,7 @@ function $e(a) {
         var p = b(e);
         n = v(p, 'H2', {});
         var k = b(n);
-        (t = M(k, x)), k.forEach(_), (s = O(p)), (r = v(p, 'P', {}));
+        (t = M(k, W)), k.forEach(_), (s = O(p)), (r = v(p, 'P', {}));
         var A = b(r);
         (o = M(A, z)),
           A.forEach(_),
@@ -651,7 +657,7 @@ const je = {
     description: 'Add a referrals bar with recent graphics stories.',
     slug: 'referrals',
   },
-  { title: x, description: z, slug: Ce } = je;
+  { title: W, description: z, slug: Ce } = je;
 class Ne extends y {
   constructor(e) {
     super();

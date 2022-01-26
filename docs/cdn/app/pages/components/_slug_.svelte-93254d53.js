@@ -3,16 +3,16 @@ import {
   S as N,
   i as M,
   s as q,
-  j as p,
+  j as v,
   k as P,
   l as L,
   m as D,
   n as R,
-  o as v,
+  o as f,
   f as E,
-  u as b,
+  u as h,
   w as B,
-  x as h,
+  x as b,
   v as k,
   d as l,
   A as H,
@@ -32,7 +32,7 @@ import {
   S as C,
   N as z,
   M as J,
-} from '../../chunks/@component-docs_components-0ee6c15b.js';
+} from '../../chunks/@component-docs_components-be2cc329.js';
 import '../../chunks/paths-6758d194.js';
 function K(o) {
   switch (o) {
@@ -52,15 +52,15 @@ function K(o) {
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return e(
-        () => import('../../chunks/docs-25de73e0.js'),
+        () => import('../../chunks/docs-3d5692a7.js'),
         [
-          'chunks/docs-25de73e0.js',
+          'chunks/docs-3d5692a7.js',
           'assets/docs-ea1c5840.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -143,29 +143,29 @@ function K(o) {
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-434490b7.js'),
+        () => import('../../chunks/docs-d13a959d.js'),
         [
-          'chunks/docs-434490b7.js',
+          'chunks/docs-d13a959d.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-a81abb3f.js'),
+        () => import('../../chunks/docs-d53d38e3.js'),
         [
-          'chunks/docs-a81abb3f.js',
+          'chunks/docs-d53d38e3.js',
           'assets/docs-4a88ca0e.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -192,14 +192,14 @@ function K(o) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-d70f2487.js'),
+        () => import('../../chunks/docs-287605c7.js'),
         [
-          'chunks/docs-d70f2487.js',
+          'chunks/docs-287605c7.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -215,16 +215,16 @@ function K(o) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-ff4d4b86.js'),
+        () => import('../../chunks/docs-604d8b18.js'),
         [
-          'chunks/docs-ff4d4b86.js',
+          'chunks/docs-604d8b18.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -264,15 +264,15 @@ function Q(o) {
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return e(
-        () => import('../../chunks/docs-25de73e0.js'),
+        () => import('../../chunks/docs-3d5692a7.js'),
         [
-          'chunks/docs-25de73e0.js',
+          'chunks/docs-3d5692a7.js',
           'assets/docs-ea1c5840.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -355,29 +355,29 @@ function Q(o) {
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-434490b7.js'),
+        () => import('../../chunks/docs-d13a959d.js'),
         [
-          'chunks/docs-434490b7.js',
+          'chunks/docs-d13a959d.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-a81abb3f.js'),
+        () => import('../../chunks/docs-d53d38e3.js'),
         [
-          'chunks/docs-a81abb3f.js',
+          'chunks/docs-d53d38e3.js',
           'assets/docs-4a88ca0e.css',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -404,14 +404,14 @@ function Q(o) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-d70f2487.js'),
+        () => import('../../chunks/docs-287605c7.js'),
         [
-          'chunks/docs-d70f2487.js',
+          'chunks/docs-287605c7.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -427,16 +427,16 @@ function Q(o) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-ff4d4b86.js'),
+        () => import('../../chunks/docs-604d8b18.js'),
         [
-          'chunks/docs-ff4d4b86.js',
+          'chunks/docs-604d8b18.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-a3a8e12b.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-95908c5c.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-0ee6c15b.js',
+          'chunks/@component-docs_components-be2cc329.js',
           'assets/@component-docs_components-96349e58.css',
           'chunks/paths-6758d194.js',
         ]
@@ -513,13 +513,13 @@ function X(o) {
     m && (r = new m(j())),
     {
       c() {
-        p(t.$$.fragment),
+        v(t.$$.fragment),
           (i = P()),
-          p(c.$$.fragment),
+          v(c.$$.fragment),
           (a = P()),
-          p(n.$$.fragment),
+          v(n.$$.fragment),
           (u = P()),
-          r && p(r.$$.fragment),
+          r && v(r.$$.fragment),
           (d = L());
       },
       l(s) {
@@ -533,24 +533,24 @@ function X(o) {
           (d = L());
       },
       m(s, _) {
-        v(t, s, _),
+        f(t, s, _),
           E(s, i, _),
-          v(c, s, _),
+          f(c, s, _),
           E(s, a, _),
-          v(n, s, _),
+          f(n, s, _),
           E(s, u, _),
-          r && v(r, s, _),
+          r && f(r, s, _),
           E(s, d, _),
           ($ = !0);
       },
       p(s, [_]) {
-        const f = {};
-        _ & 1 && (f.seoTitle = `Reuters Graphics components - ${s[0].title}`),
-          _ & 1 && (f.seoDescription = s[0].description),
+        const p = {};
+        _ & 1 && (p.seoTitle = `Reuters Graphics components - ${s[0].title}`),
+          _ & 1 && (p.seoDescription = s[0].description),
           _ & 1 &&
-            (f.shareTitle = `Reuters Graphics components - ${s[0].title}`),
-          _ & 1 && (f.shareDescription = s[0].description),
-          t.$set(f);
+            (p.shareTitle = `Reuters Graphics components - ${s[0].title}`),
+          _ & 1 && (p.shareDescription = s[0].description),
+          t.$set(p);
         const A = {};
         if (
           (_ & 5 && (A.$$scope = { dirty: _, ctx: s }),
@@ -560,32 +560,32 @@ function X(o) {
           if (r) {
             U();
             const I = r;
-            b(I.$$.fragment, 1, 0, () => {
+            h(I.$$.fragment, 1, 0, () => {
               k(I, 1);
             }),
               B();
           }
           m
             ? ((r = new m(j())),
-              p(r.$$.fragment),
-              h(r.$$.fragment, 1),
-              v(r, d.parentNode, d))
+              v(r.$$.fragment),
+              b(r.$$.fragment, 1),
+              f(r, d.parentNode, d))
             : (r = null);
         }
       },
       i(s) {
         $ ||
-          (h(t.$$.fragment, s),
-          h(c.$$.fragment, s),
-          h(n.$$.fragment, s),
-          r && h(r.$$.fragment, s),
-          ($ = !0));
-      },
-      o(s) {
-        b(t.$$.fragment, s),
+          (b(t.$$.fragment, s),
           b(c.$$.fragment, s),
           b(n.$$.fragment, s),
           r && b(r.$$.fragment, s),
+          ($ = !0));
+      },
+      o(s) {
+        h(t.$$.fragment, s),
+          h(c.$$.fragment, s),
+          h(n.$$.fragment, s),
+          r && h(r.$$.fragment, s),
           ($ = !1);
       },
       d(s) {
