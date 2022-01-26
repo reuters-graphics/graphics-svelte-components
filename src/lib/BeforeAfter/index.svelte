@@ -23,9 +23,9 @@
 
   const id = 'before-after-' + random4() + random4();
 
+  let img;
   let imgOffset = null;
   let sliding = false;
-  let img;
   let figure;
   let beforeOverlayWidth = 0;
   let isFocused = false;
@@ -75,7 +75,6 @@
   };
 
   $: w = (imgOffset && imgOffset.width) || 0;
-  $: h = (imgOffset && imgOffset.height) || 0;
   $: x = w * offset;
   $: figStyle = `width:100%;height:${height}px;`;
   $: imgStyle = 'width:100%;height:100%;';
@@ -114,7 +113,6 @@
         on:load="{resize}"
         style="{imgStyle}"
         class="after"
-        role="img"
         aria-describedby="{$$slots.beforeOverlay && `${id}-before`}"
       />
 
@@ -122,9 +120,8 @@
         src="{beforeSrc}"
         alt="{beforeAlt}"
         on:mousedown|preventDefault
-        style="clip: rect(0 {x}px {h}px 0);{imgStyle}"
+        style="clip: rect(0 {x}px {height}px 0);{imgStyle}"
         class="before"
-        role="img"
         aria-describedby="{$$slots.afterOverlay && `${id}-after`}"
       />
       {#if $$slots.beforeOverlay}
