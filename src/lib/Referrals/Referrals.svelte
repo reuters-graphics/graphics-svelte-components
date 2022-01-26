@@ -11,11 +11,12 @@
       .then((resp) => resp.json())
       .then((data) => {
         metadata = data
-          .filter(({ url }) => {
+          .filter(({ canonical }) => {
             const pathname = window.location.pathname
               .replace(/\/index\.html$/, '')
               .replace(/\/$/, '');
-            return !url.includes(pathname);
+            if (!pathname) return true;
+            return !canonical.includes(pathname);
           })
           .slice(0, 4)
           .map(({ url, image, title, description }) => ({
@@ -29,23 +30,9 @@
 </script>
 
 {#if metadata}
-  <section class="referral-container">
-    <figure>
-      <img
-        src="https://graphics.thomsonreuters.com/style-assets/images/logos/reuters-logo/svg/logo-color.svg"
-        alt=""
-      />
-    </figure>
-    <nav class="referral-rail row">
-      {#each metadata as referral}
-        <Link {...referral} />
-      {/each}
-    </nav>
-  </section>
+  <nav class="referral-rail row">
+    {#each metadata as referral}
+      <Link {...referral} />
+    {/each}
+  </nav>
 {/if}
-
-<style>
-  figure {
-    text-align: center;
-  }
-</style>
