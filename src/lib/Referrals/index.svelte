@@ -2,6 +2,8 @@
   import { browser } from '$app/env';
   import Referrals from './Referrals.svelte';
   import IntersectionObserver from './IntersectionObserver.svelte';
+
+  export let referrals = [];
 </script>
 
 <section class="referral-container">
@@ -15,7 +17,7 @@
   {#if browser}
     <IntersectionObserver let:intersecting top="{2400}" once="{true}">
       {#if intersecting}
-        <Referrals />
+        <Referrals referrals="{referrals}" />
       {/if}
     </IntersectionObserver>
   {/if}

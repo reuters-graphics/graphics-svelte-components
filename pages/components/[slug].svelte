@@ -25,8 +25,6 @@
 
   let Docs;
 
-  $: console.log(metadata);
-
   onMount(async () => {
     Docs = (await import(`../../src/lib/${metadata.path}/docs.svx`)).default;
   });

@@ -8,7 +8,7 @@
 
 <div class="referral" title="{description}">
   <a href="{url}">
-    <IntersectionObserver let:intersecting top="{600}">
+    <IntersectionObserver let:intersecting top="{600}" once="{true}">
       {#if intersecting}
         <div class="image" style="{`background-image: url(${image});`}"></div>
       {:else}
