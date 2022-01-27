@@ -1,20 +1,20 @@
 import {
-  S as X,
-  i as Y,
+  S as Y,
+  i as Z,
   s as $,
-  ac as s0,
-  a9 as C,
-  ad as H,
+  ad as s0,
+  aa as C,
+  ae as H,
   j as U,
-  m as Z,
-  o as J,
-  ae as K,
+  m as J,
+  o as K,
+  af as Q,
   x as F,
   u as R,
-  v as Q,
-  Z as r0,
+  v as X,
+  _ as r0,
   A as t0,
-  af as o0,
+  ag as o0,
   z as n0,
   E as l0,
   F as m0,
@@ -34,9 +34,9 @@ import {
   t as b,
   g as A,
   h as O,
-} from './vendor-a3a8e12b.js';
-import { D as p0 } from './index-95908c5c.js';
-import './@component-docs_components-86850067.js';
+} from './vendor-d23a7629.js';
+import { D as p0 } from './index-ab2656dc.js';
+import './@component-docs_components-4df7123e.js';
 import './paths-6758d194.js';
 const u0 = (r) => ({
     scrollerProgress: r & 1,
@@ -191,17 +191,17 @@ function y0(r) {
         U(a.$$.fragment);
       },
       l(l) {
-        Z(a.$$.fragment, l);
+        J(a.$$.fragment, l);
       },
       m(l, x) {
-        J(a, l, x), (e = !0);
+        K(a, l, x), (e = !0);
       },
       p(l, [x]) {
         const u = {};
         x & 66559 && (u.$$scope = { dirty: x, ctx: l }),
-          !i && x & 1 && ((i = !0), (u.progress = l[0]), K(() => (i = !1))),
-          !t && x & 2 && ((t = !0), (u.index = l[1]), K(() => (t = !1))),
-          !s && x & 4 && ((s = !0), (u.offset = l[2]), K(() => (s = !1))),
+          !i && x & 1 && ((i = !0), (u.progress = l[0]), Q(() => (i = !1))),
+          !t && x & 2 && ((t = !0), (u.index = l[1]), Q(() => (t = !1))),
+          !s && x & 4 && ((s = !0), (u.offset = l[2]), Q(() => (s = !1))),
           a.$set(u);
       },
       i(l) {
@@ -211,7 +211,7 @@ function y0(r) {
         R(a.$$.fragment, l), (e = !1);
       },
       d(l) {
-        Q(a, l);
+        X(a, l);
       },
     }
   );
@@ -291,10 +291,10 @@ function g0(r, a, i) {
     [h, d, l, o, x, v, B, y, V, e, n, t, M, T, P, w, s]
   );
 }
-class E0 extends X {
+class E0 extends Y {
   constructor(a) {
     super();
-    Y(this, a, g0, y0, $, {
+    Z(this, a, g0, y0, $, {
       lottieData: 10,
       height: 3,
       scrollerProgress: 0,
@@ -5712,13 +5712,13 @@ function I0(r) {
       l(s) {
         a = D(s, 'SECTION', { class: !0 });
         var e = G(a);
-        Z(i.$$.fragment, e), e.forEach(p), this.h();
+        J(i.$$.fragment, e), e.forEach(p), this.h();
       },
       h() {
         _(a, 'class', 'graphic');
       },
       m(s, e) {
-        I(s, a, e), J(i, a, null), (t = !0);
+        I(s, a, e), K(i, a, null), (t = !0);
       },
       p(s, e) {
         const n = {};
@@ -5731,7 +5731,7 @@ function I0(r) {
         R(i.$$.fragment, s), (t = !1);
       },
       d(s) {
-        s && p(a), Q(i);
+        s && p(a), X(i);
       },
     }
   );
@@ -5759,10 +5759,10 @@ function T0(r) {
           d.forEach(p),
           h.forEach(p),
           (s = W(o)),
-          Z(e.$$.fragment, o);
+          J(e.$$.fragment, o);
       },
       m(o, h) {
-        I(o, a, h), c(a, i), c(i, t), I(o, s, h), J(e, o, h), (n = !0);
+        I(o, a, h), c(a, i), c(i, t), I(o, s, h), K(e, o, h), (n = !0);
       },
       p(o, [h]) {
         const d = {};
@@ -5775,7 +5775,7 @@ function T0(r) {
         R(e.$$.fragment, o), (n = !1);
       },
       d(o) {
-        o && p(a), o && p(s), Q(e, o);
+        o && p(a), o && p(s), X(e, o);
       },
     }
   );
@@ -5786,10 +5786,10 @@ const L0 = {
     slug: 'lottie-scroller',
   },
   { title: i0, description: q0, slug: W0 } = L0;
-class H0 extends X {
+class H0 extends Y {
   constructor(a) {
     super();
-    Y(this, a, null, T0, $, {});
+    Z(this, a, null, T0, $, {});
   }
 }
 export { H0 as default, L0 as metadata };

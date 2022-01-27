@@ -1,6 +1,6 @@
 import {
-  S as b,
-  i as y,
+  S as y,
+  i as b,
   s as D,
   e as i,
   t as _,
@@ -14,7 +14,7 @@ import {
   f as h,
   H as c,
   I as d,
-} from './vendor-a3a8e12b.js';
+} from './vendor-d23a7629.js';
 function I(x) {
   let s,
     e,
@@ -88,10 +88,10 @@ function I(x) {
 }
 const P = { title: 'SEO', description: 'Add SEO to the page.', slug: 'seo' },
   { title: T, description: w, slug: F } = P;
-class G extends b {
+class G extends y {
   constructor(s) {
     super();
-    y(this, s, null, I, D, {});
+    b(this, s, null, I, D, {});
   }
 }
 export { G as default, P as metadata };

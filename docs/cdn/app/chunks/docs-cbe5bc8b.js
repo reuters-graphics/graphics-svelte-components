@@ -43,22 +43,22 @@ import {
   B as it,
   m as z,
   I,
-  aa as ut,
+  ab as ut,
   O as Qp,
   Q as Yp,
-  ac as Jp,
-  a9 as Yo,
-  ad as Jo,
-  ae as Ko,
+  ad as Jp,
+  aa as Yo,
+  ae as Jo,
+  af as Ko,
   t as m,
   g as h,
   V as Kp,
   h as Wp,
-  a1 as fp,
-  a2 as dp,
-} from './vendor-a3a8e12b.js';
-import { D as Xn } from './index-95908c5c.js';
-import './@component-docs_components-86850067.js';
+  a2 as fp,
+  a3 as dp,
+} from './vendor-d23a7629.js';
+import { D as Xn } from './index-ab2656dc.js';
+import './@component-docs_components-4df7123e.js';
 import './paths-6758d194.js';
 function kp(p, n, e) {
   const s = p.slice();
@@ -1528,33 +1528,33 @@ function Or(p) {
   switch (p) {
     case './demos/ai2html/ai-scroller-1.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-1.exclude-ca79c8f7.js'),
+        () => import('./ai-scroller-1.exclude-a0a36f38.js'),
         [
-          'chunks/ai-scroller-1.exclude-ca79c8f7.js',
+          'chunks/ai-scroller-1.exclude-a0a36f38.js',
           'assets/ai-scroller-1.exclude-74bdcb73.css',
-          'chunks/vendor-a3a8e12b.js',
+          'chunks/vendor-d23a7629.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case './demos/ai2html/ai-scroller-2.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-2.exclude-cbbf7fec.js'),
+        () => import('./ai-scroller-2.exclude-0b1ca1b7.js'),
         [
-          'chunks/ai-scroller-2.exclude-cbbf7fec.js',
+          'chunks/ai-scroller-2.exclude-0b1ca1b7.js',
           'assets/ai-scroller-2.exclude-7d0e85bf.css',
-          'chunks/vendor-a3a8e12b.js',
+          'chunks/vendor-d23a7629.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case './demos/ai2html/ai-scroller-3.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-3.exclude-7adbae8e.js'),
+        () => import('./ai-scroller-3.exclude-effd6503.js'),
         [
-          'chunks/ai-scroller-3.exclude-7adbae8e.js',
+          'chunks/ai-scroller-3.exclude-effd6503.js',
           'assets/ai-scroller-3.exclude-e5d75c9d.css',
-          'chunks/vendor-a3a8e12b.js',
+          'chunks/vendor-d23a7629.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]

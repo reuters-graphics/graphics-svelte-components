@@ -11,28 +11,28 @@ import {
   d as p,
   U as Bs,
   b as i,
-  _ as pa,
+  $ as pa,
   f as b,
   H as c,
   V as Y,
-  a3 as Ln,
+  a4 as Ln,
   x as S,
-  $ as mt,
-  a0 as vt,
+  a0 as mt,
+  a1 as vt,
   E as gn,
   F as mn,
   G as vn,
   u as C,
   r as Rs,
   w as Ds,
-  a4 as Gn,
-  a5 as Un,
-  a6 as dt,
-  Z as ht,
-  a7 as bt,
+  a5 as Gn,
+  a6 as Un,
+  a7 as dt,
+  _ as ht,
+  a8 as bt,
   D as dn,
-  a8 as Fn,
-  a9 as Xn,
+  a9 as Fn,
+  aa as Xn,
   t as d,
   j as H,
   g as h,
@@ -40,9 +40,9 @@ import {
   o as L,
   v as G,
   I as Ps,
-} from './vendor-a3a8e12b.js';
-import { D as ya } from './index-95908c5c.js';
-import './@component-docs_components-86850067.js';
+} from './vendor-d23a7629.js';
+import { D as ya } from './index-ab2656dc.js';
+import './@component-docs_components-4df7123e.js';
 import { a as U } from './paths-6758d194.js';
 const { window: Ga } = bt,
   _t = (o) => ({}),
@@ -69,15 +69,15 @@ function Kn(o) {
     X,
     q,
     K,
-    Z,
+    Q,
     T,
     W,
     D,
     I,
     oa,
-    Q,
-    A = o[24].beforeOverlay && Zn(o),
-    M = o[24].afterOverlay && Qn(o),
+    Z,
+    A = o[24].beforeOverlay && Qn(o),
+    M = o[24].afterOverlay && Zn(o),
     j = o[24].caption && xn(o);
   return {
     c() {
@@ -168,7 +168,7 @@ function Kn(o) {
         pa($, '--before-after-handle-inactive-opacity', o[8]),
         i(n, 'style', o[15]),
         i(n, 'class', 'before-after-container svelte-1fkuva'),
-        i(n, 'aria-labelledby', (Z = o[24].caption && `${o[16]}-caption`)),
+        i(n, 'aria-labelledby', (Q = o[24].caption && `${o[16]}-caption`)),
         i(a, 'class', (T = 'photo before-after ' + o[1] + ' svelte-1fkuva')),
         pa(a, 'height', o[2] + 'px');
     },
@@ -194,7 +194,7 @@ function Kn(o) {
         b(v, D, w),
         (I = !0),
         oa ||
-          ((Q = [
+          ((Z = [
             Y(s, 'mousedown', Ln(o[32])),
             Y(s, 'load', o[20]),
             Y(u, 'mousedown', Ln(o[31])),
@@ -228,7 +228,7 @@ function Kn(o) {
         v[24].beforeOverlay
           ? A
             ? (A.p(v, w), w[0] & 16777216 && S(A, 1))
-            : ((A = Zn(v)), A.c(), S(A, 1), A.m(n, V))
+            : ((A = Qn(v)), A.c(), S(A, 1), A.m(n, V))
           : A &&
             (Rs(),
             C(A, 1, 1, () => {
@@ -238,7 +238,7 @@ function Kn(o) {
         v[24].afterOverlay
           ? M
             ? (M.p(v, w), w[0] & 16777216 && S(M, 1))
-            : ((M = Qn(v)), M.c(), S(M, 1), M.m(n, J))
+            : ((M = Zn(v)), M.c(), S(M, 1), M.m(n, J))
           : M &&
             (Rs(),
             C(M, 1, 1, () => {
@@ -252,8 +252,8 @@ function Kn(o) {
         (!I || w[0] & 32768) && i(n, 'style', v[15]),
         (!I ||
           (w[0] & 16777216 &&
-            Z !== (Z = v[24].caption && `${v[16]}-caption`))) &&
-          i(n, 'aria-labelledby', Z),
+            Q !== (Q = v[24].caption && `${v[16]}-caption`))) &&
+          i(n, 'aria-labelledby', Q),
         (!I ||
           (w[0] & 2 &&
             T !== (T = 'photo before-after ' + v[1] + ' svelte-1fkuva'))) &&
@@ -286,11 +286,11 @@ function Kn(o) {
         j && j.d(v),
         v && p(D),
         (oa = !1),
-        Un(Q);
+        Un(Z);
     },
   };
 }
-function Zn(o) {
+function Qn(o) {
   let a, n, s;
   const l = o[30].beforeOverlay,
     e = dn(l, o, o[29], Yn);
@@ -331,7 +331,7 @@ function Zn(o) {
     },
   };
 }
-function Qn(o) {
+function Zn(o) {
   let a, n;
   const s = o[30].afterOverlay,
     l = dn(s, o, o[29], Wn);
@@ -473,7 +473,7 @@ function Et(o, a, n) {
     { afterSrc: X = null } = a,
     { afterAlt: q = null } = a,
     { handleColour: K = 'white' } = a,
-    { handleInactiveOpacity: Z = 0.4 } = a,
+    { handleInactiveOpacity: Q = 0.4 } = a,
     { handleMargin: T = 20 } = a,
     { keyPressStep: W = 0.05 } = a,
     { offset: D = 0.5 } = a;
@@ -482,7 +482,7 @@ function Et(o, a, n) {
         .toString(16)
         .substring(1),
     oa = 'before-after-' + I() + I();
-  let Q,
+  let Z,
     A = null,
     M = !1,
     j,
@@ -501,7 +501,7 @@ function Et(o, a, n) {
     Ua = (_) => {
       _.type === 'load'
         ? n(27, (A = _.target.getBoundingClientRect()))
-        : n(27, (A = Q.getBoundingClientRect()));
+        : n(27, (A = Z.getBoundingClientRect()));
     },
     fa = (_) => {
       const x = _.touches ? _.touches[0] : _;
@@ -529,7 +529,7 @@ function Et(o, a, n) {
   }
   function Ts(_) {
     Xn[_ ? 'unshift' : 'push'](() => {
-      (Q = _), n(11, Q);
+      (Z = _), n(11, Z);
     });
   }
   function Ta() {
@@ -549,7 +549,7 @@ function Et(o, a, n) {
         'afterSrc' in _ && n(5, (X = _.afterSrc)),
         'afterAlt' in _ && n(6, (q = _.afterAlt)),
         'handleColour' in _ && n(7, (K = _.handleColour)),
-        'handleInactiveOpacity' in _ && n(8, (Z = _.handleInactiveOpacity)),
+        'handleInactiveOpacity' in _ && n(8, (Q = _.handleInactiveOpacity)),
         'handleMargin' in _ && n(25, (T = _.handleMargin)),
         'keyPressStep' in _ && n(26, (W = _.keyPressStep)),
         'offset' in _ && n(0, (D = _.offset)),
@@ -571,10 +571,10 @@ function Et(o, a, n) {
       X,
       q,
       K,
-      Z,
+      Q,
       v,
       l,
-      Q,
+      Z,
       j,
       u,
       r,
@@ -1242,13 +1242,13 @@ function Ht(o) {
     X,
     q,
     K,
-    Z,
+    Q,
     T,
     W,
     D,
     I,
     oa,
-    Q,
+    Z,
     A,
     M,
     j,
@@ -1403,12 +1403,12 @@ function Ht(o) {
     Ha,
     ua,
     Ws,
-    Za,
+    Qa,
     Ys,
     Ks,
-    Qa,
-    Zs,
+    Za,
     Qs,
+    Zs,
     _s,
     Ia,
     ot = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
@@ -1533,7 +1533,7 @@ function Ht(o) {
           (X = d('Adjust the size of the image by passing the ')),
           (q = f('code')),
           (K = d('width')),
-          (Z = d(
+          (Q = d(
             ' prop a class name corresponding to one of our well widths: '
           )),
           (T = f('code')),
@@ -1541,7 +1541,7 @@ function Ht(o) {
           (D = d(', ')),
           (I = f('code')),
           (oa = d('wider')),
-          (Q = d(', ')),
+          (Z = d(', ')),
           (A = f('code')),
           (M = d('widest')),
           (j = d(' or ')),
@@ -1606,12 +1606,12 @@ function Ht(o) {
           (Ha = f('section')),
           (ua = f('p')),
           (Ws = d('Target the ')),
-          (Za = f('code')),
+          (Qa = f('code')),
           (Ys = d('.overlay-container')),
           (Ks = d(' with ')),
-          (Qa = f('code')),
-          (Zs = d(':global')),
-          (Qs = d(' SCSS rules to change the overlay positioning.')),
+          (Za = f('code')),
+          (Qs = d(':global')),
+          (Zs = d(' SCSS rules to change the overlay positioning.')),
           (_s = E()),
           (Ia = f('pre')),
           (ys = E()),
@@ -1676,7 +1676,7 @@ function Ht(o) {
         var ps = g(q);
         (K = h(ps, 'width')),
           ps.forEach(p),
-          (Z = h(
+          (Q = h(
             F,
             ' prop a class name corresponding to one of our well widths: '
           )),
@@ -1689,7 +1689,7 @@ function Ht(o) {
         var ls = g(I);
         (oa = h(ls, 'wider')),
           ls.forEach(p),
-          (Q = h(F, ', ')),
+          (Z = h(F, ', ')),
           (A = k(F, 'CODE', {}));
         var hn = g(A);
         (M = h(hn, 'widest')),
@@ -1798,16 +1798,16 @@ function Ht(o) {
         var Mn = g(Ha);
         ua = k(Mn, 'P', {});
         var La = g(ua);
-        (Ws = h(La, 'Target the ')), (Za = k(La, 'CODE', {}));
-        var Cn = g(Za);
+        (Ws = h(La, 'Target the ')), (Qa = k(La, 'CODE', {}));
+        var Cn = g(Qa);
         (Ys = h(Cn, '.overlay-container')),
           Cn.forEach(p),
           (Ks = h(La, ' with ')),
-          (Qa = k(La, 'CODE', {}));
-        var Bn = g(Qa);
-        (Zs = h(Bn, ':global')),
+          (Za = k(La, 'CODE', {}));
+        var Bn = g(Za);
+        (Qs = h(Bn, ':global')),
           Bn.forEach(p),
-          (Qs = h(La, ' SCSS rules to change the overlay positioning.')),
+          (Zs = h(La, ' SCSS rules to change the overlay positioning.')),
           La.forEach(p),
           Mn.forEach(p),
           (_s = O(t)),
@@ -1905,13 +1905,13 @@ function Ht(o) {
           c($, X),
           c($, q),
           c(q, K),
-          c($, Z),
+          c($, Q),
           c($, T),
           c(T, W),
           c($, D),
           c($, I),
           c(I, oa),
-          c($, Q),
+          c($, Z),
           c($, A),
           c(A, M),
           c($, j),
@@ -1981,12 +1981,12 @@ function Ht(o) {
           b(t, Ha, m),
           c(Ha, ua),
           c(ua, Ws),
-          c(ua, Za),
-          c(Za, Ys),
-          c(ua, Ks),
           c(ua, Qa),
-          c(Qa, Zs),
-          c(ua, Qs),
+          c(Qa, Ys),
+          c(ua, Ks),
+          c(ua, Za),
+          c(Za, Qs),
+          c(ua, Zs),
           b(t, _s, m),
           b(t, Ia, m),
           (Ia.innerHTML = ot),

@@ -2,7 +2,7 @@ import {
   S as ns,
   i as ts,
   s as es,
-  D as B,
+  D as J,
   e as v,
   c as b,
   a as j,
@@ -13,25 +13,25 @@ import {
   t as O,
   g as q,
   H as C,
-  h as J,
+  h as K,
   k as D,
   n as G,
-  E as K,
-  F as Q,
-  G as W,
+  E as Q,
+  F as W,
+  G as X,
   r as ps,
   u as y,
   w as os,
   x as P,
-  Z as hs,
+  _ as hs,
   I as F,
   j as N,
   m as U,
   o as V,
   v as Y,
-  U as X,
-} from './vendor-a3a8e12b.js';
-import { D as x } from './index-95908c5c.js';
+  U as Z,
+} from './vendor-d23a7629.js';
+import { D as x } from './index-ab2656dc.js';
 import { a as ss } from './paths-6758d194.js';
 const _s = (p) => ({}),
   ls = (p) => ({}),
@@ -91,7 +91,7 @@ function rs(p) {
       _(n, s, o), C(s, t);
     },
     p(n, o) {
-      o & 8 && J(t, n[3]),
+      o & 8 && K(t, n[3]),
         o & 16 &&
           a !== (a = `section-title color-${n[4]} text-shadow`) &&
           f(s, 'class', a);
@@ -119,7 +119,7 @@ function bs(p) {
       _(n, s, o), C(s, t);
     },
     p(n, o) {
-      o & 1 && J(t, n[0]),
+      o & 1 && K(t, n[0]),
         o & 2 &&
           a !== (a = `text-shadow-darker color-${n[1]} important`) &&
           f(s, 'class', a);
@@ -134,7 +134,7 @@ function bs(p) {
 function ws(p) {
   let s;
   const t = p[12].hed,
-    a = B(t, p, p[11], cs);
+    a = J(t, p, p[11], cs);
   return {
     c() {
       a && a.c();
@@ -149,7 +149,7 @@ function ws(p) {
       a &&
         a.p &&
         (!s || o & 2048) &&
-        K(a, t, n, n[11], s ? W(t, n[11], o, ds) : Q(n[11]), cs);
+        Q(a, t, n, n[11], s ? X(t, n[11], o, ds) : W(n[11]), cs);
     },
     i(n) {
       s || (P(a, n), (s = !0));
@@ -180,7 +180,7 @@ function $s(p) {
       _(a, s, n), C(s, t);
     },
     p(a, n) {
-      n & 4 && J(t, a[2]);
+      n & 4 && K(t, a[2]);
     },
     i: F,
     o: F,
@@ -192,7 +192,7 @@ function $s(p) {
 function Es(p) {
   let s;
   const t = p[12].dek,
-    a = B(t, p, p[11], ls);
+    a = J(t, p, p[11], ls);
   return {
     c() {
       a && a.c();
@@ -207,7 +207,7 @@ function Es(p) {
       a &&
         a.p &&
         (!s || o & 2048) &&
-        K(a, t, n, n[11], s ? W(t, n[11], o, _s) : Q(n[11]), ls);
+        Q(a, t, n, n[11], s ? X(t, n[11], o, _s) : W(n[11]), ls);
     },
     i(n) {
       s || (P(a, n), (s = !0));
@@ -223,15 +223,15 @@ function Es(p) {
 function Cs(p) {
   let s, t, a, n, o, A, g, m, M, r, u, H;
   const T = p[12].image,
-    d = B(T, p, p[11], is);
+    d = J(T, p, p[11], is);
   let k = p[5] && us(p),
     l = p[3] && rs(p);
   const R = [ws, bs],
     $ = [];
-  function Z(e, c) {
+  function z(e, c) {
     return e[10].hed ? 0 : 1;
   }
-  (g = Z(p)), (m = $[g] = R[g](p));
+  (g = z(p)), (m = $[g] = R[g](p));
   const S = [Es, $s],
     w = [];
   function L(e, c) {
@@ -303,7 +303,7 @@ function Cs(p) {
         d &&
           d.p &&
           (!H || c & 2048) &&
-          K(d, T, e, e[11], H ? W(T, e[11], c, vs) : Q(e[11]), is),
+          Q(d, T, e, e[11], H ? X(T, e[11], c, vs) : W(e[11]), is),
           e[5]
             ? k
               ? k.p(e, c)
@@ -315,7 +315,7 @@ function Cs(p) {
               : ((l = rs(e)), l.c(), l.m(o, A))
             : l && (l.d(1), (l = null));
         let I = g;
-        (g = Z(e)),
+        (g = z(e)),
           g === I
             ? $[g].p(e, c)
             : (ps(),
@@ -423,7 +423,7 @@ function Hs(p) {
     },
     h() {
       f(s, 'slot', 'image'),
-        X(s.src, (t = `${ss}/images/polar.jpg`)) || f(s, 'src', t),
+        Z(s.src, (t = `${ss}/images/polar.jpg`)) || f(s, 'src', t),
         f(s, 'alt', 'A polar bear');
     },
     m(a, n) {
@@ -484,7 +484,7 @@ function Is(p) {
     },
     h() {
       f(s, 'slot', 'image'),
-        X(s.src, (t = `${ss}/images/polar.jpg`)) || f(s, 'src', t),
+        Z(s.src, (t = `${ss}/images/polar.jpg`)) || f(s, 'src', t),
         f(s, 'alt', 'A polar bear');
     },
     m(a, n) {
@@ -548,7 +548,7 @@ function Ps(p) {
     },
     h() {
       f(s, 'slot', 'image'),
-        X(s.src, (t = `${ss}/images/polar.jpg`)) || f(s, 'src', t),
+        Z(s.src, (t = `${ss}/images/polar.jpg`)) || f(s, 'src', t),
         f(s, 'alt', 'A polar bear');
     },
     m(a, n) {
@@ -683,7 +683,7 @@ function Ms(p) {
     l,
     R,
     $,
-    Z = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    z = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Headline <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> assets <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$app/paths'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -739,8 +739,8 @@ function Ms(p) {
           c.forEach(i),
           (g = G(e)),
           (m = b(e, 'PRE', { class: !0 }));
-        var z = j(m);
-        z.forEach(i),
+        var B = j(m);
+        B.forEach(i),
           (r = G(e)),
           U(u.$$.fragment, e),
           (H = G(e)),
@@ -778,7 +778,7 @@ function Ms(p) {
           V(l, e, c),
           _(e, R, c),
           _(e, $, c),
-          ($.innerHTML = Z),
+          ($.innerHTML = z),
           _(e, S, c),
           V(w, e, c),
           (L = !0);
@@ -788,8 +788,8 @@ function Ms(p) {
         c & 1 && (I.$$scope = { dirty: c, ctx: e }), u.$set(I);
         const E = {};
         c & 1 && (E.$$scope = { dirty: c, ctx: e }), l.$set(E);
-        const z = {};
-        c & 1 && (z.$$scope = { dirty: c, ctx: e }), w.$set(z);
+        const B = {};
+        c & 1 && (B.$$scope = { dirty: c, ctx: e }), w.$set(B);
       },
       i(e) {
         L ||

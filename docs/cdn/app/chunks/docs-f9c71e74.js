@@ -2,18 +2,18 @@ import {
   S as y,
   i as C,
   s as N,
-  aa as S,
+  ab as S,
   e as m,
   c as f,
   a as d,
-  d as c,
+  d as r,
   b as j,
   f as k,
   I as v,
   t as H,
   k as E,
-  j as P,
-  g as b,
+  j as b,
+  g as P,
   n as w,
   m as D,
   H as g,
@@ -21,8 +21,8 @@ import {
   x as L,
   u as M,
   v as R,
-} from './vendor-a3a8e12b.js';
-import { D as A } from './index-95908c5c.js';
+} from './vendor-d23a7629.js';
+import { D as A } from './index-ab2656dc.js';
 function F(p) {
   let s,
     a = S.parse(p[0]) + '';
@@ -33,7 +33,7 @@ function F(p) {
     l(t) {
       s = f(t, 'SECTION', { class: !0 });
       var e = d(s);
-      e.forEach(c), this.h();
+      e.forEach(r), this.h();
     },
     h() {
       j(s, 'class', 'end-notes');
@@ -47,7 +47,7 @@ function F(p) {
     i: v,
     o: v,
     d(t) {
-      t && c(s);
+      t && r(s);
     },
   };
 }
@@ -76,7 +76,7 @@ function K(p) {
     (s = new J({ props: { text: p[0] } })),
     {
       c() {
-        P(s.$$.fragment);
+        b(s.$$.fragment);
       },
       l(t) {
         D(s.$$.fragment, t);
@@ -120,10 +120,10 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EndNotes</span> <span class="token attr-name">text="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>markdownText<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token punctuation">/></span></span></code>`,
     _,
-    r,
+    c,
     h;
   return (
-    (r = new A({ props: { $$slots: { default: [K] }, $$scope: { ctx: p } } })),
+    (c = new A({ props: { $$slots: { default: [K] }, $$scope: { ctx: p } } })),
     {
       c() {
         (s = m('section')),
@@ -135,7 +135,7 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
           ($ = E()),
           (l = m('pre')),
           (_ = E()),
-          P(r.$$.fragment),
+          b(c.$$.fragment),
           this.h();
       },
       l(n) {
@@ -143,15 +143,15 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
         var o = d(s);
         a = f(o, 'H2', {});
         var u = d(a);
-        (t = b(u, O)), u.forEach(c), (e = w(o)), (i = f(o, 'P', {}));
+        (t = P(u, O)), u.forEach(r), (e = w(o)), (i = f(o, 'P', {}));
         var T = d(i);
-        (x = b(T, q)),
-          T.forEach(c),
-          o.forEach(c),
+        (x = P(T, q)),
+          T.forEach(r),
+          o.forEach(r),
           ($ = w(n)),
           (l = f(n, 'PRE', { class: !0 }));
         var z = d(l);
-        z.forEach(c), (_ = w(n)), D(r.$$.fragment, n), this.h();
+        z.forEach(r), (_ = w(n)), D(c.$$.fragment, n), this.h();
       },
       h() {
         j(l, 'class', 'language-svelte');
@@ -167,21 +167,21 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
           k(n, l, o),
           (l.innerHTML = B),
           k(n, _, o),
-          I(r, n, o),
+          I(c, n, o),
           (h = !0);
       },
       p(n, [o]) {
         const u = {};
-        o & 2 && (u.$$scope = { dirty: o, ctx: n }), r.$set(u);
+        o & 2 && (u.$$scope = { dirty: o, ctx: n }), c.$set(u);
       },
       i(n) {
-        h || (L(r.$$.fragment, n), (h = !0));
+        h || (L(c.$$.fragment, n), (h = !0));
       },
       o(n) {
-        M(r.$$.fragment, n), (h = !1);
+        M(c.$$.fragment, n), (h = !1);
       },
       d(n) {
-        n && c(s), n && c($), n && c(l), n && c(_), R(r, n);
+        n && r(s), n && r($), n && r(l), n && r(_), R(c, n);
       },
     }
   );

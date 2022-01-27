@@ -14,8 +14,8 @@ import {
   f as h,
   H as l,
   I as g,
-} from './vendor-a3a8e12b.js';
-function q(C) {
+} from './vendor-d23a7629.js';
+function q(b) {
   let a,
     p,
     k,
@@ -33,10 +33,10 @@ function q(C) {
     c() {
       (a = i('section')),
         (p = i('h2')),
-        (k = v(b)),
+        (k = v(x)),
         (d = y()),
         (c = i('p')),
-        (m = v(x)),
+        (m = v(C)),
         (o = y()),
         (t = i('pre')),
         this.h();
@@ -46,9 +46,9 @@ function q(C) {
       var n = u(a);
       p = r(n, 'H2', {});
       var f = u(p);
-      (k = E(f, b)), f.forEach(e), (d = P(n)), (c = r(n, 'P', {}));
+      (k = E(f, x)), f.forEach(e), (d = P(n)), (c = r(n, 'P', {}));
       var _ = u(c);
-      (m = E(_, x)),
+      (m = E(_, C)),
         _.forEach(e),
         n.forEach(e),
         (o = P(s)),
@@ -83,7 +83,7 @@ const A = {
     description: 'A Pym.js child instance for embeddables.',
     slug: 'pym-child',
   },
-  { title: b, description: x, slug: L } = A;
+  { title: x, description: C, slug: L } = A;
 class M extends H {
   constructor(a) {
     super();

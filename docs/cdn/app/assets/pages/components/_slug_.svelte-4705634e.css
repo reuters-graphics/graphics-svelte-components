@@ -7766,11 +7766,22 @@ li > code {
   border-radius: 4px;
   font-size: 1rem;
 }
-div.breadcrumb.svelte-9f4kmr.svelte-9f4kmr {
+div.breadcrumb.svelte-zu85oa.svelte-zu85oa {
   line-height: 43px;
   padding-left: 10px;
   font-weight: 200;
 }
-div.breadcrumb.svelte-9f4kmr span.svelte-9f4kmr {
+div.breadcrumb.svelte-zu85oa span.svelte-zu85oa {
   margin-left: 12px;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+div.breadcrumb.svelte-zu85oa a.svelte-zu85oa {
+  margin-left: 5px;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #999;
+}
+div.breadcrumb.svelte-zu85oa a.svelte-zu85oa:hover {
+  color: #3182bd;
 }
