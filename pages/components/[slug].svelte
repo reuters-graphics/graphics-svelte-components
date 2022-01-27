@@ -16,12 +16,16 @@
   import { SEO } from '$lib';
   import Nav from '$lib/_docs/Nav/index.svelte';
   import Menu from '$lib/_docs/Menu/index.svelte';
+  import Fa from 'svelte-fa/src/fa.svelte';
+  import { faCode } from '@fortawesome/free-solid-svg-icons/faCode.js';
 
   import '$lib/_docs/styles/main.scss';
 
   export let metadata;
 
   let Docs;
+
+  $: console.log(metadata);
 
   onMount(async () => {
     Docs = (await import(`../../src/lib/${metadata.path}/docs.svx`)).default;
@@ -44,6 +48,13 @@
 <Nav>
   <div class="breadcrumb font-display">
     > <span>{metadata.title}</span>
+    <a
+      href="{`https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${metadata.path}/index.svelte`}"
+      target="_blank"
+      title="Source code"
+    >
+      <Fa fw icon="{faCode}" />
+    </a>
   </div>
 </Nav>
 <Menu components="{components}" />
@@ -88,6 +99,17 @@
     font-weight: 200;
     span {
       margin-left: 12px;
+      font-size: 1.2rem;
+      line-height: 1rem;
+    }
+    a {
+      margin-left: 5px;
+      font-size: 1rem;
+      line-height: 1rem;
+      color: #999;
+      &:hover {
+        color: #3182bd;
+      }
     }
   }
 </style>
