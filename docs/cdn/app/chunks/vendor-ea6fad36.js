@@ -3136,7 +3136,32 @@ class Fa extends SvelteComponent {
     });
   }
 }
-var Fa$1 = Fa,
+var Fa$1 = Fa;
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */ var faDesktop = {
+    prefix: 'fas',
+    iconName: 'desktop',
+    icon: [
+      576,
+      512,
+      [],
+      'f108',
+      'M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z',
+    ],
+  },
+  faMobileAlt = {
+    prefix: 'fas',
+    iconName: 'mobile-alt',
+    icon: [
+      320,
+      512,
+      [],
+      'f3cd',
+      'M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z',
+    ],
+  },
   commonjsGlobal =
     typeof globalThis != 'undefined'
       ? globalThis
@@ -3545,7 +3570,8 @@ var Fa$1 = Fa,
     );
   });
 })(pym_v1);
-var queryString = {},
+var pym = pym_v1.exports,
+  queryString = {},
   strictUriEncode = (e) =>
     encodeURIComponent(e).replace(
       /[!'()*]/g,
@@ -19826,11 +19852,14 @@ export {
   bubble as a9,
   binding_callbacks as aa,
   marked as ab,
-  classnames as ac,
-  Scroller as ad,
-  bind as ae,
-  add_flush_callback as af,
-  lottie as ag,
+  faMobileAlt as ac,
+  faDesktop as ad,
+  pym as ae,
+  classnames as af,
+  Scroller as ag,
+  bind as ah,
+  add_flush_callback as ai,
+  lottie as aj,
   attr as b,
   claim_element as c,
   detach as d,

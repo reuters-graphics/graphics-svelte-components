@@ -10,7 +10,91 @@ div.svelte-715e2e a.svelte-715e2e {
 div.svelte-715e2e a.svelte-715e2e:hover {
   color: #666;
 }
-header.svelte-qk635w.svelte-qk635w {
+#resizer.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi {
+  width: 250px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 15px;
+}
+#resizer.svelte-ic1kpi .slider.svelte-ic1kpi.svelte-ic1kpi {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#resizer.svelte-ic1kpi .slider.svelte-ic1kpi > div.svelte-ic1kpi {
+  display: inline-block;
+}
+#resizer.svelte-ic1kpi div.label.svelte-ic1kpi.svelte-ic1kpi {
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: center;
+  transition: opacity 0.2s;
+  color: gray;
+  background-color: #fffc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi {
+  font-size: 14px;
+  line-height: 14px;
+  color: #aaa;
+  cursor: pointer;
+}
+#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi:active,
+#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi:focus {
+  outline: none;
+}
+#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi:active {
+  transform: translate(1px, 1px);
+}
+#resizer.svelte-ic1kpi div.icon.left.svelte-ic1kpi.svelte-ic1kpi {
+  text-align: right;
+  padding-right: 3px;
+}
+#resizer.svelte-ic1kpi div.icon.right.svelte-ic1kpi.svelte-ic1kpi {
+  padding-left: 6px;
+  text-align: left;
+}
+#resizer.svelte-ic1kpi div.slider-container.svelte-ic1kpi.svelte-ic1kpi {
+  width: 90px;
+  height: 20px;
+  position: relative;
+}
+#resizer.svelte-ic1kpi
+  div.slider-container
+  div.track.svelte-ic1kpi.svelte-ic1kpi {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  border-radius: 2px;
+  top: calc(50% - 2px);
+  background-color: #d3d3d3;
+}
+.handle.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi {
+  z-index: 30;
+  width: 10px;
+  height: 20px;
+  cursor: ew-resize;
+  background: #bbb;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid grey;
+  top: calc(50% - 10px);
+  box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
+}
+.handle.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi:active,
+.handle.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi:focus {
+  outline: none;
+}
+header.svelte-1oq98q.svelte-1oq98q {
   font-family: Knowledge, Source Sans Pro, Arial, sans-serif;
   font-size: 50px;
   text-align: center;
@@ -18,11 +102,11 @@ header.svelte-qk635w.svelte-qk635w {
   font-weight: 700;
   margin: 20px 0;
 }
-nav.svelte-qk635w.svelte-qk635w {
+nav.svelte-1oq98q.svelte-1oq98q {
   text-align: center;
   margin-bottom: 20px;
 }
-nav.svelte-qk635w button.svelte-qk635w {
+nav.svelte-1oq98q button.svelte-1oq98q {
   margin: 0 4px;
   background-color: transparent;
   border: 0;
@@ -30,55 +114,28 @@ nav.svelte-qk635w button.svelte-qk635w {
   padding: 2px;
   cursor: pointer;
 }
-nav.svelte-qk635w button.active.svelte-qk635w {
+nav.svelte-1oq98q button.active.svelte-1oq98q {
   border-bottom: 2px solid #666;
   color: #666;
 }
-nav.svelte-qk635w button.svelte-qk635w:focus {
+nav.svelte-1oq98q button.svelte-1oq98q:focus {
   outline: none;
 }
-#frame-parent.svelte-qk635w.svelte-qk635w {
+#frame-parent.svelte-1oq98q.svelte-1oq98q {
   border: 1px solid #ddd;
   margin: 0 auto;
   width: var(--width);
 }
-.resizer.svelte-qk635w.svelte-qk635w {
-  padding: 10px;
-  background-color: transparent;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 4px;
-}
-.resizer.svelte-qk635w input.svelte-qk635w {
-  outline: none;
-  font-family: monospace;
-}
-.resizer.svelte-qk635w button.svelte-qk635w {
-  border: 0;
-  color: #ccc;
-  cursor: pointer;
-  outline: none;
-}
-.resizer.svelte-qk635w button.svelte-qk635w:disabled {
-  color: #fff;
-}
-.resizer.svelte-qk635w button.svelte-qk635w:hover {
-  color: #999;
-}
-.resizer.svelte-qk635w button.svelte-qk635w:active {
-  color: #ff8000;
-}
-div#home-link.svelte-qk635w.svelte-qk635w {
+div#home-link.svelte-1oq98q.svelte-1oq98q {
   position: fixed;
   bottom: 5px;
   left: 10px;
   font-size: 18px;
 }
-div#home-link.svelte-qk635w a.svelte-qk635w {
+div#home-link.svelte-1oq98q a.svelte-1oq98q {
   color: #ccc;
 }
-div#home-link.svelte-qk635w a.svelte-qk635w:hover {
+div#home-link.svelte-1oq98q a.svelte-1oq98q:hover {
   color: #666;
 }
 .placeholder.svelte-1g1o650 {

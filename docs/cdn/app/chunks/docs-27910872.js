@@ -15,7 +15,7 @@ import {
   n as D,
   b as h,
   a5 as T,
-  ac as q,
+  af as q,
   I as M,
   A as x,
   aa as $,
@@ -26,9 +26,9 @@ import {
   x as L,
   u as V,
   v as B,
-} from './vendor-d23a7629.js';
-import { D as tt } from './index-ab2656dc.js';
-import { g as J } from './@component-docs_components-4df7123e.js';
+} from './vendor-ea6fad36.js';
+import { D as tt } from './index-3fe6324c.js';
+import { g as J } from './@component-docs_components-2b64be7c.js';
 import './paths-6758d194.js';
 function et(c) {
   let t, e;
@@ -173,16 +173,16 @@ function st(c, t, e) {
     { widest: p = !1 } = t,
     { fluid: I = !1 } = t,
     { lazy: g = !1 } = t,
-    { top: k = 0 } = t,
+    { top: d = 0 } = t,
     { bottom: i = 0 } = t,
     { left: u = 0 } = t,
-    { right: d = 0 } = t,
+    { right: k = 0 } = t,
     E = !1,
     _;
   const O = typeof IntersectionObserver != 'undefined';
   x(() => {
     if (!!g && O) {
-      const s = `${i}px ${u}px ${k}px ${d}px`,
+      const s = `${i}px ${u}px ${d}px ${k}px`,
         S = new IntersectionObserver(
           (Y) => {
             e(9, (E = Y[0].isIntersecting)), E && S.unobserve(_);
@@ -208,12 +208,12 @@ function st(c, t, e) {
         'widest' in s && e(6, (p = s.widest)),
         'fluid' in s && e(7, (I = s.fluid)),
         'lazy' in s && e(8, (g = s.lazy)),
-        'top' in s && e(12, (k = s.top)),
+        'top' in s && e(12, (d = s.top)),
         'bottom' in s && e(13, (i = s.bottom)),
         'left' in s && e(14, (u = s.left)),
-        'right' in s && e(15, (d = s.right));
+        'right' in s && e(15, (k = s.right));
     }),
-    [n, l, m, r, o, a, p, I, g, E, _, O, k, i, u, d, X]
+    [n, l, m, r, o, a, p, I, g, E, _, O, d, i, u, k, X]
   );
 }
 class lt extends P {
@@ -293,7 +293,7 @@ function ct(c) {
 <span class="token punctuation">/></span></span></code>`,
     I,
     g,
-    k;
+    d;
   return (
     (g = new tt({
       props: { $$slots: { default: [it] }, $$scope: { ctx: c } },
@@ -316,8 +316,8 @@ function ct(c) {
         t = b(i, 'SECTION', {});
         var u = j(t);
         e = b(u, 'H2', {});
-        var d = j(e);
-        (n = C(d, Q)), d.forEach(f), (l = D(u)), (m = b(u, 'P', {}));
+        var k = j(e);
+        (n = C(k, Q)), k.forEach(f), (l = D(u)), (m = b(u, 'P', {}));
         var E = j(m);
         (r = C(E, W)),
           E.forEach(f),
@@ -342,17 +342,17 @@ function ct(c) {
           (a.innerHTML = p),
           v(i, I, u),
           U(g, i, u),
-          (k = !0);
+          (d = !0);
       },
       p(i, [u]) {
-        const d = {};
-        u & 1 && (d.$$scope = { dirty: u, ctx: i }), g.$set(d);
+        const k = {};
+        u & 1 && (k.$$scope = { dirty: u, ctx: i }), g.$set(k);
       },
       i(i) {
-        k || (L(g.$$.fragment, i), (k = !0));
+        d || (L(g.$$.fragment, i), (d = !0));
       },
       o(i) {
-        V(g.$$.fragment, i), (k = !1);
+        V(g.$$.fragment, i), (d = !1);
       },
       d(i) {
         i && f(t), i && f(o), i && f(a), i && f(I), B(g, i);

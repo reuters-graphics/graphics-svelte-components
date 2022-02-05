@@ -11,10 +11,10 @@ import {
   d as e,
   n as b,
   b as I,
-  f as g,
+  f,
   H as c,
-  I as h,
-} from './vendor-d23a7629.js';
+  I as g,
+} from './vendor-ea6fad36.js';
 function T(y) {
   let a,
     p,
@@ -45,11 +45,11 @@ function T(y) {
       a = r(s, 'SECTION', {});
       var n = u(a);
       p = r(n, 'H2', {});
-      var v = u(p);
-      (k = w(v, x)), v.forEach(e), (d = b(n)), (o = r(n, 'P', {}));
-      var f = u(o);
-      (m = w(f, P)),
-        f.forEach(e),
+      var h = u(p);
+      (k = w(h, x)), h.forEach(e), (d = b(n)), (o = r(n, 'P', {}));
+      var v = u(o);
+      (m = w(v, P)),
+        v.forEach(e),
         n.forEach(e),
         (l = b(s)),
         (t = r(s, 'PRE', { class: !0 }));
@@ -60,19 +60,19 @@ function T(y) {
       I(t, 'class', 'language-svelte');
     },
     m(s, n) {
-      g(s, a, n),
+      f(s, a, n),
         c(a, p),
         c(p, k),
         c(a, d),
         c(a, o),
         c(o, m),
-        g(s, l, n),
-        g(s, t, n),
+        f(s, l, n),
+        f(s, t, n),
         (t.innerHTML = L);
     },
-    p: h,
-    i: h,
-    o: h,
+    p: g,
+    i: g,
+    o: g,
     d(s) {
       s && e(a), s && e(l), s && e(t);
     },

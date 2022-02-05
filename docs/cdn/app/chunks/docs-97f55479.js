@@ -46,19 +46,19 @@ import {
   ab as ut,
   O as Qp,
   Q as Yp,
-  ad as Jp,
+  ag as Jp,
   aa as Yo,
-  ae as Jo,
-  af as Ko,
+  ah as Jo,
+  ai as Ko,
   t as m,
   g as h,
   V as Kp,
   h as Wp,
   a2 as fp,
   a3 as dp,
-} from './vendor-d23a7629.js';
-import { D as Xn } from './index-ab2656dc.js';
-import './@component-docs_components-4df7123e.js';
+} from './vendor-ea6fad36.js';
+import { D as Xn } from './index-3fe6324c.js';
+import './@component-docs_components-2b64be7c.js';
 import './paths-6758d194.js';
 function kp(p, n, e) {
   const s = p.slice();
@@ -1528,33 +1528,33 @@ function Or(p) {
   switch (p) {
     case './demos/ai2html/ai-scroller-1.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-1.exclude-a0a36f38.js'),
+        () => import('./ai-scroller-1.exclude-22a39bd6.js'),
         [
-          'chunks/ai-scroller-1.exclude-a0a36f38.js',
+          'chunks/ai-scroller-1.exclude-22a39bd6.js',
           'assets/ai-scroller-1.exclude-74bdcb73.css',
-          'chunks/vendor-d23a7629.js',
+          'chunks/vendor-ea6fad36.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case './demos/ai2html/ai-scroller-2.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-2.exclude-0b1ca1b7.js'),
+        () => import('./ai-scroller-2.exclude-bfbe7fe5.js'),
         [
-          'chunks/ai-scroller-2.exclude-0b1ca1b7.js',
+          'chunks/ai-scroller-2.exclude-bfbe7fe5.js',
           'assets/ai-scroller-2.exclude-7d0e85bf.css',
-          'chunks/vendor-d23a7629.js',
+          'chunks/vendor-ea6fad36.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case './demos/ai2html/ai-scroller-3.exclude.svelte':
       return qo(
-        () => import('./ai-scroller-3.exclude-effd6503.js'),
+        () => import('./ai-scroller-3.exclude-dbaf121d.js'),
         [
-          'chunks/ai-scroller-3.exclude-effd6503.js',
+          'chunks/ai-scroller-3.exclude-dbaf121d.js',
           'assets/ai-scroller-3.exclude-e5d75c9d.css',
-          'chunks/vendor-d23a7629.js',
+          'chunks/vendor-ea6fad36.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-6758d194.js',
         ]

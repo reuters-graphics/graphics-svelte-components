@@ -12,8 +12,8 @@ import {
   I as v,
   t as H,
   k as E,
-  j as b,
-  g as P,
+  j as P,
+  g as b,
   n as w,
   m as D,
   H as g,
@@ -21,8 +21,8 @@ import {
   x as L,
   u as M,
   v as R,
-} from './vendor-d23a7629.js';
-import { D as A } from './index-ab2656dc.js';
+} from './vendor-ea6fad36.js';
+import { D as A } from './index-3fe6324c.js';
 function F(p) {
   let s,
     a = S.parse(p[0]) + '';
@@ -76,7 +76,7 @@ function K(p) {
     (s = new J({ props: { text: p[0] } })),
     {
       c() {
-        b(s.$$.fragment);
+        P(s.$$.fragment);
       },
       l(t) {
         D(s.$$.fragment, t);
@@ -135,7 +135,7 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
           ($ = E()),
           (l = m('pre')),
           (_ = E()),
-          b(c.$$.fragment),
+          P(c.$$.fragment),
           this.h();
       },
       l(n) {
@@ -143,9 +143,9 @@ People.</span><span class="token template-punctuation string">&#96;</span></span
         var o = d(s);
         a = f(o, 'H2', {});
         var u = d(a);
-        (t = P(u, O)), u.forEach(r), (e = w(o)), (i = f(o, 'P', {}));
+        (t = b(u, O)), u.forEach(r), (e = w(o)), (i = f(o, 'P', {}));
         var T = d(i);
-        (x = P(T, q)),
+        (x = b(T, q)),
           T.forEach(r),
           o.forEach(r),
           ($ = w(n)),
