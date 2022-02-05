@@ -1,36 +1,26 @@
 <script>
   import Fa from 'svelte-fa/src/fa.svelte';
-  import { faMinus } from '@fortawesome/free-solid-svg-icons';
-  import { faPlus } from '@fortawesome/free-solid-svg-icons';
   import { faDesktop } from '@fortawesome/free-solid-svg-icons';
   import { onMount, afterUpdate } from 'svelte';
   import pym from 'pym.js';
   import urljoin from 'proper-url-join';
+  import Resizer from './Resizer/index.svelte';
+  import { width } from './stores.js';
 
   export let embeds;
 
   let activeEmbed = embeds[0];
 
-  const roundToFive = (x) => Math.ceil(x / 5) * 5;
-  let width = 600;
-  let windowInnerWidth = 1200;
-
   let pymParent;
-
-  const resize = (newWidth) => {
-    localStorage.setItem('previewWidth', newWidth);
-    width = newWidth;
-  };
 
   const reframe = (embed) => {
     pymParent = new pym.Parent(
       'frame-parent',
-      urljoin(window.location.origin, embed)
+      /^http/.test(embed) ? embed : urljoin(window.location.origin, embed)
     );
   };
 
   onMount(() => {
-    width = parseInt(localStorage.getItem('previewWidth')) || 600;
     reframe(activeEmbed);
   });
 
@@ -38,8 +28,6 @@
     reframe(activeEmbed);
   });
 </script>
-
-<svelte:window bind:innerWidth="{windowInnerWidth}" />
 
 <div class="container">
   <header>
@@ -62,29 +50,7 @@
     {/each}
   </nav>
 
-  <div id="frame-parent" style="width:{width}px;"></div>
-</div>
-
-<div class="resizer">
-  <button
-    on:click="{() => resize(roundToFive(width - 5))}"
-    disabled="{width <= 300}"
-  >
-    <Fa icon="{faMinus}" />
-  </button>
-  <input
-    type="number"
-    min="{300}"
-    max="{windowInnerWidth - 25 - width}"
-    on:change="{(e) => resize(parseInt(e.target.value))}"
-    value="{width}"
-  />
-  <button
-    on:click="{() => resize(roundToFive(width + 5))}"
-    disabled="{windowInnerWidth - 25 - width < 5}"
-  >
-    <Fa icon="{faPlus}" />
-  </button>
+  <div id="frame-parent" style="width:{$width}px;"></div>
 </div>
 
 <div id="home-link">
@@ -92,6 +58,8 @@
     <Fa icon="{faDesktop}" />
   </a>
 </div>
+
+<Resizer />
 
 <style lang="scss">
   @import '~@reuters-graphics/style-color/scss/thematic/brand';
@@ -131,39 +99,6 @@
     border: 1px solid #ddd;
     margin: 0 auto;
     width: var(--width);
-  }
-
-  .resizer {
-    padding: 10px;
-    background-color: transparent;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    border-radius: 4px;
-
-    input {
-      outline: none;
-      font-family: monospace;
-    }
-
-    button {
-      border: 0;
-      color: #ccc;
-      cursor: pointer;
-      outline: none;
-
-      &:disabled {
-        color: #fff;
-      }
-
-      &:hover {
-        color: #999;
-      }
-
-      &:active {
-        color: $brand-primary;
-      }
-    }
   }
 
   div#home-link {
