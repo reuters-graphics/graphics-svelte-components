@@ -1,11 +1,12 @@
 <script>
   import Fa from 'svelte-fa/src/fa.svelte';
-  import { faDesktop } from '@fortawesome/free-solid-svg-icons';
+  import { faDesktop, faLink } from '@fortawesome/free-solid-svg-icons';
   import { onMount, afterUpdate } from 'svelte';
   import pym from 'pym.js';
   import urljoin from 'proper-url-join';
   import Resizer from './Resizer/index.svelte';
   import { width } from './stores.js';
+  import getUniqNames from './uniqNames.js';
 
   export let embeds;
   export let breakpoints = [330, 510, 660, 930, 1200];
@@ -13,6 +14,8 @@
   export let maxFrameWidth = 1200;
 
   let activeEmbed = embeds[0];
+
+  $: embedTitles = getUniqNames(embeds);
 
   let pymParent;
 
@@ -41,16 +44,17 @@
   </header>
 
   <nav>
-    {#each embeds as embed}
+    {#each embeds as embed, i}
       <button
         on:click="{() => {
           activeEmbed = embed;
         }}"
         class:active="{activeEmbed === embed}"
       >
-        {embed
-          .replace('/embeds/', '')
-          .replace(/https:\/\/graphics\.reuters\.com/, '')}
+        {embedTitles[i]}
+        <a rel="external" target="_blank" href="{embed}" title="{embed}">
+          <Fa icon="{faLink}" />
+        </a>
       </button>
     {/each}
   </nav>
@@ -100,6 +104,13 @@
       }
       &:focus {
         outline: none;
+      }
+      a {
+        color: #bbb;
+        font-size: 12px;
+        &:hover {
+          color: #666;
+        }
       }
     }
   }
