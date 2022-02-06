@@ -1,6 +1,6 @@
 import {
-  S as y,
-  i as b,
+  S as b,
+  i as y,
   s as D,
   e as i,
   t as _,
@@ -14,9 +14,9 @@ import {
   f as h,
   H as c,
   I as d,
-} from './vendor-ea6fad36.js';
+} from './vendor-85b063f6.js';
 function I(x) {
-  let s,
+  let a,
     e,
     k,
     g,
@@ -39,7 +39,7 @@ function I(x) {
 <span class="token punctuation">/></span></span></code>`;
   return {
     c() {
-      (s = i('section')),
+      (a = i('section')),
         (e = i('h2')),
         (k = _(T)),
         (g = j()),
@@ -49,9 +49,9 @@ function I(x) {
         (t = i('pre')),
         this.h();
     },
-    l(a) {
-      s = r(a, 'SECTION', {});
-      var n = u(s);
+    l(s) {
+      a = r(s, 'SECTION', {});
+      var n = u(a);
       e = r(n, 'H2', {});
       var f = u(e);
       (k = E(f, T)), f.forEach(p), (g = S(n)), (o = r(n, 'P', {}));
@@ -59,39 +59,39 @@ function I(x) {
       (m = E(v, w)),
         v.forEach(p),
         n.forEach(p),
-        (l = S(a)),
-        (t = r(a, 'PRE', { class: !0 }));
+        (l = S(s)),
+        (t = r(s, 'PRE', { class: !0 }));
       var O = u(t);
       O.forEach(p), this.h();
     },
     h() {
       H(t, 'class', 'language-svelte');
     },
-    m(a, n) {
-      h(a, s, n),
-        c(s, e),
+    m(s, n) {
+      h(s, a, n),
+        c(a, e),
         c(e, k),
-        c(s, g),
-        c(s, o),
+        c(a, g),
+        c(a, o),
         c(o, m),
-        h(a, l, n),
-        h(a, t, n),
+        h(s, l, n),
+        h(s, t, n),
         (t.innerHTML = A);
     },
     p: d,
     i: d,
     o: d,
-    d(a) {
-      a && p(s), a && p(l), a && p(t);
+    d(s) {
+      s && p(a), s && p(l), s && p(t);
     },
   };
 }
 const P = { title: 'SEO', description: 'Add SEO to the page.', slug: 'seo' },
   { title: T, description: w, slug: F } = P;
-class G extends y {
-  constructor(s) {
+class G extends b {
+  constructor(a) {
     super();
-    b(this, s, null, I, D, {});
+    y(this, a, null, I, D, {});
   }
 }
 export { G as default, P as metadata };

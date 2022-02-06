@@ -112,7 +112,7 @@ div.svelte-715e2e a.svelte-715e2e:hover {
 .handle.svelte-1o1jkdv.svelte-1o1jkdv.svelte-1o1jkdv:focus {
   outline: none;
 }
-header.svelte-1oq98q.svelte-1oq98q {
+header.svelte-l2mcmd.svelte-l2mcmd {
   font-family: Knowledge, Source Sans Pro, Arial, sans-serif;
   font-size: 50px;
   text-align: center;
@@ -120,11 +120,11 @@ header.svelte-1oq98q.svelte-1oq98q {
   font-weight: 700;
   margin: 20px 0;
 }
-nav.svelte-1oq98q.svelte-1oq98q {
+nav.svelte-l2mcmd.svelte-l2mcmd {
   text-align: center;
   margin-bottom: 20px;
 }
-nav.svelte-1oq98q button.svelte-1oq98q {
+nav.svelte-l2mcmd button.svelte-l2mcmd {
   margin: 0 4px;
   background-color: transparent;
   border: 0;
@@ -132,28 +132,35 @@ nav.svelte-1oq98q button.svelte-1oq98q {
   padding: 2px;
   cursor: pointer;
 }
-nav.svelte-1oq98q button.active.svelte-1oq98q {
+nav.svelte-l2mcmd button.active.svelte-l2mcmd {
   border-bottom: 2px solid #666;
   color: #666;
 }
-nav.svelte-1oq98q button.svelte-1oq98q:focus {
+nav.svelte-l2mcmd button.svelte-l2mcmd:focus {
   outline: none;
 }
-#frame-parent.svelte-1oq98q.svelte-1oq98q {
+nav.svelte-l2mcmd button a.svelte-l2mcmd {
+  color: #bbb;
+  font-size: 12px;
+}
+nav.svelte-l2mcmd button a.svelte-l2mcmd:hover {
+  color: #666;
+}
+#frame-parent.svelte-l2mcmd.svelte-l2mcmd {
   border: 1px solid #ddd;
   margin: 0 auto;
   width: var(--width);
 }
-div#home-link.svelte-1oq98q.svelte-1oq98q {
+div#home-link.svelte-l2mcmd.svelte-l2mcmd {
   position: fixed;
   bottom: 5px;
   left: 10px;
   font-size: 18px;
 }
-div#home-link.svelte-1oq98q a.svelte-1oq98q {
+div#home-link.svelte-l2mcmd a.svelte-l2mcmd {
   color: #ccc;
 }
-div#home-link.svelte-1oq98q a.svelte-1oq98q:hover {
+div#home-link.svelte-l2mcmd a.svelte-l2mcmd:hover {
   color: #666;
 }
 .placeholder.svelte-1g1o650 {

@@ -17,7 +17,7 @@ import {
   I as P,
   a0 as B,
   a1 as F,
-} from './vendor-ea6fad36.js';
+} from './vendor-85b063f6.js';
 import { a as w } from './paths-6758d194.js';
 function A(b) {
   let e, p, _, r, y, t, d, c, u, o, g;
