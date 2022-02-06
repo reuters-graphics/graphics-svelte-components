@@ -45,7 +45,7 @@ import {
 import { a as De, b as $ } from './paths-6758d194.js';
 const Z = (n = '') => Y(De, n);
 const Ne = '@reuters-graphics/graphics-svelte-components',
-  He = '0.1.53',
+  He = '0.1.54',
   xe = 'module',
   Fe = 'https://reuters-graphics.github.io/graphics-svelte-components',
   Ge = 'https://github.com/reuters-graphics/graphics-svelte-components',

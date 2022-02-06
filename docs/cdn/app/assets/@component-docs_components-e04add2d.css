@@ -10,23 +10,24 @@ div.svelte-715e2e a.svelte-715e2e {
 div.svelte-715e2e a.svelte-715e2e:hover {
   color: #666;
 }
-#resizer.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv.svelte-1o1jkdv.svelte-1o1jkdv {
   width: 250px;
   position: fixed;
   bottom: 0px;
   right: 0px;
   padding: 15px;
 }
-#resizer.svelte-ic1kpi .slider.svelte-ic1kpi.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv .slider.svelte-1o1jkdv.svelte-1o1jkdv {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-#resizer.svelte-ic1kpi .slider.svelte-ic1kpi > div.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv .slider.svelte-1o1jkdv > div.svelte-1o1jkdv,
+#resizer.svelte-1o1jkdv .slider button.svelte-1o1jkdv.svelte-1o1jkdv {
   display: inline-block;
 }
-#resizer.svelte-ic1kpi div.label.svelte-ic1kpi.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv div.label.svelte-1o1jkdv.svelte-1o1jkdv {
   font-family: monospace;
   font-size: 13px;
   line-height: 13px;
@@ -38,35 +39,52 @@ div.svelte-715e2e a.svelte-715e2e:hover {
   border-radius: 4px;
   margin-right: 5px;
 }
-#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv button.icon.svelte-1o1jkdv.svelte-1o1jkdv {
   font-size: 14px;
   line-height: 14px;
-  color: #aaa;
+  color: #bbb;
   cursor: pointer;
+  background-color: transparent;
+  border: 0;
 }
-#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi:active,
-#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi:focus {
+#resizer.svelte-1o1jkdv button.icon.svelte-1o1jkdv.svelte-1o1jkdv:active,
+#resizer.svelte-1o1jkdv button.icon.svelte-1o1jkdv.svelte-1o1jkdv:focus {
   outline: none;
 }
-#resizer.svelte-ic1kpi div.icon.svelte-ic1kpi.svelte-ic1kpi:active {
+#resizer.svelte-1o1jkdv button.icon.svelte-1o1jkdv.svelte-1o1jkdv:hover {
+  color: #999;
+}
+#resizer.svelte-1o1jkdv button.icon.svelte-1o1jkdv.svelte-1o1jkdv:active {
   transform: translate(1px, 1px);
 }
-#resizer.svelte-ic1kpi div.icon.left.svelte-ic1kpi.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv button.icon[disabled].svelte-1o1jkdv.svelte-1o1jkdv {
+  color: #ccc;
+  cursor: default;
+}
+#resizer.svelte-1o1jkdv
+  button.icon[disabled].svelte-1o1jkdv.svelte-1o1jkdv:hover {
+  color: #ccc;
+}
+#resizer.svelte-1o1jkdv
+  button.icon[disabled].svelte-1o1jkdv.svelte-1o1jkdv:active {
+  transform: translate(0);
+}
+#resizer.svelte-1o1jkdv button.icon.left.svelte-1o1jkdv.svelte-1o1jkdv {
   text-align: right;
   padding-right: 3px;
 }
-#resizer.svelte-ic1kpi div.icon.right.svelte-ic1kpi.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv button.icon.right.svelte-1o1jkdv.svelte-1o1jkdv {
   padding-left: 6px;
   text-align: left;
 }
-#resizer.svelte-ic1kpi div.slider-container.svelte-ic1kpi.svelte-ic1kpi {
+#resizer.svelte-1o1jkdv div.slider-container.svelte-1o1jkdv.svelte-1o1jkdv {
   width: 90px;
   height: 20px;
   position: relative;
 }
-#resizer.svelte-ic1kpi
+#resizer.svelte-1o1jkdv
   div.slider-container
-  div.track.svelte-ic1kpi.svelte-ic1kpi {
+  div.track.svelte-1o1jkdv.svelte-1o1jkdv {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -74,7 +92,7 @@ div.svelte-715e2e a.svelte-715e2e:hover {
   top: calc(50% - 2px);
   background-color: #d3d3d3;
 }
-.handle.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi {
+.handle.svelte-1o1jkdv.svelte-1o1jkdv.svelte-1o1jkdv {
   z-index: 30;
   width: 10px;
   height: 20px;
@@ -90,8 +108,8 @@ div.svelte-715e2e a.svelte-715e2e:hover {
   top: calc(50% - 10px);
   box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
 }
-.handle.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi:active,
-.handle.svelte-ic1kpi.svelte-ic1kpi.svelte-ic1kpi:focus {
+.handle.svelte-1o1jkdv.svelte-1o1jkdv.svelte-1o1jkdv:active,
+.handle.svelte-1o1jkdv.svelte-1o1jkdv.svelte-1o1jkdv:focus {
   outline: none;
 }
 header.svelte-1oq98q.svelte-1oq98q {

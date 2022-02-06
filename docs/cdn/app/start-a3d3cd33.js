@@ -417,28 +417,28 @@ const S = [
       ),
     () =>
       V(
-        () => import('./pages/index.svelte-3879548f.js'),
+        () => import('./pages/index.svelte-67bb5d55.js'),
         [
-          'pages/index.svelte-3879548f.js',
+          'pages/index.svelte-67bb5d55.js',
           'assets/pages/index.svelte-b23093d4.css',
           'chunks/vendor-ea6fad36.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/@component-docs_components-2b64be7c.js',
-          'assets/@component-docs_components-5c1eae45.css',
+          'chunks/@component-docs_components-c6052726.js',
+          'assets/@component-docs_components-e04add2d.css',
           'chunks/paths-6758d194.js',
         ]
       ),
     () =>
       V(
-        () => import('./pages/components/_slug_.svelte-c12914d5.js'),
+        () => import('./pages/components/_slug_.svelte-46c9c43f.js'),
         [
-          'pages/components/_slug_.svelte-c12914d5.js',
+          'pages/components/_slug_.svelte-46c9c43f.js',
           'assets/pages/components/_slug_.svelte-4705634e.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-ea6fad36.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/@component-docs_components-2b64be7c.js',
-          'assets/@component-docs_components-5c1eae45.css',
+          'chunks/@component-docs_components-c6052726.js',
+          'assets/@component-docs_components-e04add2d.css',
           'chunks/paths-6758d194.js',
         ]
       ),
