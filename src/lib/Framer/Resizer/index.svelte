@@ -3,12 +3,16 @@
   import Fa from 'svelte-fa/src/fa.svelte';
   import { width } from './../stores.js';
 
+  export let breakpoints = [330, 510, 660, 930, 1200];
+  export let maxFrameWidth = 1200;
+  export let minFrameWidth = 320;
+
   let container;
 
   const sliderWidth = 90;
   let windowInnerWidth = 1200;
-  const minWidth = 320;
-  $: maxWidth = Math.min(windowInnerWidth - 70, 1200);
+  $: minWidth = minFrameWidth;
+  $: maxWidth = Math.min(windowInnerWidth - 70, maxFrameWidth);
   $: pixelRange = maxWidth - minWidth;
   $: if ($width > maxWidth) width.set(maxWidth);
   $: offset = ($width - minWidth) / pixelRange;
@@ -56,17 +60,21 @@
     isFocused = false;
   };
   const increment = () => {
-    if ($width + 10 < maxWidth) {
-      width.update((n) => n + 10);
-    } else {
+    const availableBreakpoints = breakpoints
+      .filter((b) => b <= maxWidth)
+      .filter((b) => b > $width);
+    if (availableBreakpoints.length === 0) {
       width.set(maxWidth);
+    } else {
+      width.set(availableBreakpoints[0]);
     }
   };
   const decrement = () => {
-    if ($width - 10 > minWidth) {
-      width.update((n) => n - 10);
-    } else {
+    const availableBreakpoints = breakpoints.filter((b) => b < $width);
+    if (availableBreakpoints.length === 0) {
       width.set(minWidth);
+    } else {
+      width.set(availableBreakpoints.slice(-1)[0]);
     }
   };
 </script>
@@ -83,16 +91,16 @@
     <div class="label" style="{`opacity: ${sliding || isFocused ? 1 : 0};`}">
       {pixelLabel || $width}px
     </div>
-    <div
-      tabindex="0"
+    <button
       class="icon left"
+      disabled="{$width === minWidth}"
       on:click="{decrement}"
       on:focus="{onFocus}"
       on:mouseover="{onFocus}"
       on:mouseleave="{onBlur}"
     >
       <Fa icon="{faMobileAlt}" fw />
-    </div>
+    </button>
     <div class="slider-container" bind:this="{container}">
       <div class="track"></div>
       <div
@@ -104,16 +112,16 @@
         on:blur="{onBlur}"
       ></div>
     </div>
-    <div
-      tabindex="0"
+    <button
       class="icon right"
+      disabled="{$width === maxWidth}"
       on:click="{increment}"
       on:focus="{onFocus}"
       on:mouseover="{onFocus}"
       on:mouseleave="{onBlur}"
     >
       <Fa icon="{faDesktop}" fw />
-    </div>
+    </button>
   </div>
 </div>
 
@@ -130,7 +138,8 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      & > div {
+      & > div,
+      button {
         display: inline-block;
       }
     }
@@ -147,17 +156,32 @@
       border-radius: 4px;
       margin-right: 5px;
     }
-    div.icon {
+    button.icon {
       font-size: 14px;
       line-height: 14px;
-      color: #aaa;
+      color: #bbb;
       cursor: pointer;
+      background-color: transparent;
+      border: 0;
       &:active,
       &:focus {
         outline: none;
       }
+      &:hover {
+        color: #999;
+      }
       &:active {
         transform: translate(1px, 1px);
+      }
+      &[disabled] {
+        color: #ccc;
+        cursor: default;
+        &:hover {
+          color: #ccc;
+        }
+        &:active {
+          transform: translate(0px, 0px);
+        }
       }
       &.left {
         text-align: right;

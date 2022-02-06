@@ -8,6 +8,9 @@
   import { width } from './stores.js';
 
   export let embeds;
+  export let breakpoints = [330, 510, 660, 930, 1200];
+  export let minFrameWidth = 320;
+  export let maxFrameWidth = 1200;
 
   let activeEmbed = embeds[0];
 
@@ -45,7 +48,9 @@
         }}"
         class:active="{activeEmbed === embed}"
       >
-        {embed.replace('/embeds/', '')}
+        {embed
+          .replace('/embeds/', '')
+          .replace(/https:\/\/graphics\.reuters\.com/, '')}
       </button>
     {/each}
   </nav>
@@ -59,7 +64,11 @@
   </a>
 </div>
 
-<Resizer />
+<Resizer
+  breakpoints="{breakpoints}"
+  minFrameWidth="{minFrameWidth}"
+  maxFrameWidth="{maxFrameWidth}"
+/>
 
 <style lang="scss">
   @import '~@reuters-graphics/style-color/scss/thematic/brand';
