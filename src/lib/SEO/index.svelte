@@ -16,13 +16,13 @@
   export let lang = 'en';
   export let hostname = 'graphics.reuters.com';
 
-  const URL = get(pkg, 'homepage') ?
-    urljoin(pkg.homepage, $page.path, { trailingSlash: true }) :
-    get(pkg, 'reuters.preview') ?
-      urljoin(pkg.reuters.preview, $page.path, { trailingSlash: true }) :
-      $page.host ?
-        urljoin('https://' + $page.host, $page.path, { trailingSlash: true }) :
-        `https://${hostname}`;
+  const URL = get(pkg, 'homepage')
+    ? urljoin(pkg.homepage, $page.path, { trailingSlash: true })
+    : get(pkg, 'reuters.preview')
+    ? urljoin(pkg.reuters.preview, $page.path, { trailingSlash: true })
+    : $page.host
+    ? urljoin('https://' + $page.host, $page.path, { trailingSlash: true })
+    : `https://${hostname}`;
 
   // Only fire analytics on prod sites
   if (browser && window.location.host === 'graphics.reuters.com') {
@@ -37,8 +37,7 @@
     name: 'Reuters',
     logo: {
       '@type': 'ImageObject',
-      url:
-        'https://s3.reutersmedia.net/resources_v2/images/reuters_social_logo.png',
+      url: 'https://s3.reutersmedia.net/resources_v2/images/reuters_social_logo.png',
       width: '200',
       height: '200',
     },
@@ -131,16 +130,17 @@
   <meta name="twitter:domain" content="{`https://${hostname}`}" />
   <meta name="twitter:title" content="{shareTitle}" />
   <meta name="twitter:description" content="{shareDescription}" />
-  <meta
-    name="twitter:image:src"
-    content="{getPath(shareImgPath)}"
-  />
+  <meta name="twitter:image:src" content="{getPath(shareImgPath)}" />
 
   <meta property="fb:app_id" content="319194411438328" />
   <meta property="fb:admins" content="616167736" />
   <meta property="fb:admins" content="625796953" />
   <meta property="fb:admins" content="571759798" />
 
-  {@html '<script type="application/ld+json" ✂prettier:content✂="JyArIEpTT04uc3RyaW5naWZ5KG9yZ0xkSnNvbikgKyAn" ✂prettier:content✂="e30=">{}</script>'}
-  {@html '<script type="application/ld+json" ✂prettier:content✂="JyArIEpTT04uc3RyaW5naWZ5KGFydGljbGVMZEpzb24pICsgJw==" ✂prettier:content✂="e30=">{}</script>'}
+  {@html `<${'script'} type="application/ld+json">${JSON.stringify(
+    orgLdJson
+  )}</script>`}
+  {@html `<${'script'} type="application/ld+json">${JSON.stringify(
+    articleLdJson
+  )}</script>`}
 </svelte:head>
