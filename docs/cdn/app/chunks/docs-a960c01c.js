@@ -27,9 +27,9 @@ import {
   x as S,
   u as q,
   v as G,
-  a6 as pe,
+  a6 as de,
   R as ne,
-  aa as de,
+  aa as pe,
   Y as le,
   U as he,
   r as ve,
@@ -43,7 +43,7 @@ import {
   I as We,
 } from './vendor-85b063f6.js';
 import { D as je } from './index-ccd418f9.js';
-import './@component-docs_components-48c10090.js';
+import './@component-docs_components-9311d5b8.js';
 import './paths-6758d194.js';
 const O = ue(650);
 function ye(e) {
@@ -54,7 +54,7 @@ function ye(e) {
     i,
     u,
     k,
-    d,
+    p,
     _,
     m,
     f,
@@ -66,7 +66,7 @@ function ye(e) {
     h,
     V,
     n,
-    p,
+    d,
     y,
     j,
     B;
@@ -81,7 +81,7 @@ function ye(e) {
           (a = D('div')),
           (i = X(o)),
           (u = X('px')),
-          (d = A()),
+          (p = A()),
           (_ = D('button')),
           P(m.$$.fragment),
           (c = A()),
@@ -104,7 +104,7 @@ function ye(e) {
         (i = Y(J, o)),
           (u = Y(J, 'px')),
           J.forEach(b),
-          (d = z(R)),
+          (p = z(R)),
           (_ = I(R, 'BUTTON', { class: !0 }));
         var E = M(_);
         H(m.$$.fragment, E),
@@ -134,7 +134,7 @@ function ye(e) {
           $(w, 'left', 'calc(' + e[8] * 100 + '% - 5px)'),
           v(l, 'class', 'slider-container svelte-1o1jkdv'),
           v(V, 'class', 'icon right svelte-1o1jkdv'),
-          (V.disabled = p = e[3] === e[2]),
+          (V.disabled = d = e[3] === e[2]),
           v(s, 'class', 'slider svelte-1o1jkdv'),
           v(t, 'id', 'resizer'),
           v(t, 'class', 'svelte-1o1jkdv');
@@ -145,7 +145,7 @@ function ye(e) {
           F(s, a),
           F(a, i),
           F(a, u),
-          F(s, d),
+          F(s, p),
           F(s, _),
           L(m, _, null),
           F(s, c),
@@ -184,7 +184,7 @@ function ye(e) {
             v(a, 'style', k),
           (!y || (N & 10 && f !== (f = W[3] === W[1]))) && (_.disabled = f),
           (!y || N & 256) && $(w, 'left', 'calc(' + W[8] * 100 + '% - 5px)'),
-          (!y || (N & 12 && p !== (p = W[3] === W[2]))) && (V.disabled = p);
+          (!y || (N & 12 && d !== (d = W[3] === W[2]))) && (V.disabled = d);
       },
       i(W) {
         y || (S(m.$$.fragment, W), S(n.$$.fragment, W), (y = !0));
@@ -193,7 +193,7 @@ function ye(e) {
         q(m.$$.fragment, W), q(n.$$.fragment, W), (y = !1);
       },
       d(W) {
-        W && b(t), G(m), e[22](null), G(n), (j = !1), pe(B);
+        W && b(t), G(m), e[22](null), G(n), (j = !1), de(B);
       },
     }
   );
@@ -202,7 +202,7 @@ const Q = 90;
 function De(e, t, s) {
   let a, o, i, u, k;
   ne(e, O, (E) => s(3, (k = E)));
-  let { breakpoints: d = [330, 510, 660, 930, 1200] } = t,
+  let { breakpoints: p = [330, 510, 660, 930, 1200] } = t,
     { maxFrameWidth: _ = 1200 } = t,
     { minFrameWidth: m = 320 } = t,
     f,
@@ -226,7 +226,7 @@ function De(e, t, s) {
         : U === 37 && s(8, (u = Math.max(0, u - K / Q))),
         O.set(w());
     },
-    p = (E) => {
+    d = (E) => {
       s(5, (l = !0)), V(E);
     },
     y = () => {
@@ -239,24 +239,24 @@ function De(e, t, s) {
       s(6, (r = !1));
     },
     W = () => {
-      const E = d.filter((U) => U <= o).filter((U) => U > k);
+      const E = p.filter((U) => U <= o).filter((U) => U > k);
       E.length === 0 ? O.set(o) : O.set(E[0]);
     },
     N = () => {
-      const E = d.filter((U) => U < k);
+      const E = p.filter((U) => U < k);
       E.length === 0 ? O.set(a) : O.set(E.slice(-1)[0]);
     };
   function R() {
     s(0, (c = window.innerWidth));
   }
   function J(E) {
-    de[E ? 'unshift' : 'push'](() => {
+    pe[E ? 'unshift' : 'push'](() => {
       (f = E), s(4, f);
     });
   }
   return (
     (e.$$set = (E) => {
-      'breakpoints' in E && s(17, (d = E.breakpoints)),
+      'breakpoints' in E && s(17, (p = E.breakpoints)),
         'maxFrameWidth' in E && s(18, (_ = E.maxFrameWidth)),
         'minFrameWidth' in E && s(19, (m = E.minFrameWidth));
     }),
@@ -267,7 +267,7 @@ function De(e, t, s) {
         e.$$.dirty & 12 && k > o && O.set(o),
         e.$$.dirty & 1048586 && s(8, (u = (k - a) / i));
     }),
-    [c, a, o, k, f, l, r, h, u, V, n, p, y, j, B, W, N, d, _, m, i, R, J]
+    [c, a, o, k, f, l, r, h, u, V, n, d, y, j, B, W, N, p, _, m, i, R, J]
   );
 }
 class Ie extends x {
@@ -314,7 +314,7 @@ function oe(e) {
     i,
     u,
     k,
-    d,
+    p,
     _,
     m,
     f,
@@ -352,7 +352,7 @@ function oe(e) {
       v(i, 'rel', 'external'),
         v(i, 'target', '_blank'),
         v(i, 'href', (k = e[10])),
-        v(i, 'title', (d = e[10])),
+        v(i, 'title', (p = e[10])),
         v(i, 'class', 'svelte-l2mcmd'),
         v(t, 'class', 'svelte-l2mcmd'),
         le(t, 'active', e[4] === e[10]);
@@ -371,7 +371,7 @@ function oe(e) {
       (e = r),
         (!m || g & 32) && s !== (s = e[5][e[12]] + '') && ae(a, s),
         (!m || (g & 1 && k !== (k = e[10]))) && v(i, 'href', k),
-        (!m || (g & 1 && d !== (d = e[10]))) && v(i, 'title', d),
+        (!m || (g & 1 && p !== (p = e[10]))) && v(i, 'title', p),
         g & 17 && le(t, 'active', e[4] === e[10]);
     },
     i(r) {
@@ -393,7 +393,7 @@ function Ve(e) {
     i,
     u,
     k,
-    d,
+    p,
     _,
     m,
     f,
@@ -422,7 +422,7 @@ function Ve(e) {
           (u = D('nav'));
         for (let n = 0; n < h.length; n += 1) h[n].c();
         (k = A()),
-          (d = D('div')),
+          (p = D('div')),
           (_ = A()),
           (m = D('div')),
           (f = D('a')),
@@ -433,20 +433,20 @@ function Ve(e) {
       },
       l(n) {
         t = I(n, 'DIV', { class: !0 });
-        var p = M(t);
-        s = I(p, 'HEADER', { class: !0 });
+        var d = M(t);
+        s = I(d, 'HEADER', { class: !0 });
         var y = M(s);
         (a = I(y, 'IMG', { src: !0, alt: !0 })),
           y.forEach(b),
-          (i = z(p)),
-          (u = I(p, 'NAV', { class: !0 }));
+          (i = z(d)),
+          (u = I(d, 'NAV', { class: !0 }));
         var j = M(u);
         for (let N = 0; N < h.length; N += 1) h[N].l(j);
         j.forEach(b),
-          (k = z(p)),
-          (d = I(p, 'DIV', { id: !0, style: !0, class: !0 })),
-          M(d).forEach(b),
-          p.forEach(b),
+          (k = z(d)),
+          (p = I(d, 'DIV', { id: !0, style: !0, class: !0 })),
+          M(p).forEach(b),
+          d.forEach(b),
           (_ = z(n)),
           (m = I(n, 'DIV', { id: !0, class: !0 }));
         var B = M(m);
@@ -468,9 +468,9 @@ function Ve(e) {
           v(a, 'alt', ''),
           v(s, 'class', 'svelte-l2mcmd'),
           v(u, 'class', 'svelte-l2mcmd'),
-          v(d, 'id', 'frame-parent'),
-          $(d, 'width', e[6] + 'px'),
-          v(d, 'class', 'svelte-l2mcmd'),
+          v(p, 'id', 'frame-parent'),
+          $(p, 'width', e[6] + 'px'),
+          v(p, 'class', 'svelte-l2mcmd'),
           v(t, 'class', 'container'),
           v(f, 'rel', 'external'),
           v(f, 'href', '/'),
@@ -478,48 +478,48 @@ function Ve(e) {
           v(m, 'id', 'home-link'),
           v(m, 'class', 'svelte-l2mcmd');
       },
-      m(n, p) {
-        C(n, t, p), F(t, s), F(s, a), F(t, i), F(t, u);
+      m(n, d) {
+        C(n, t, d), F(t, s), F(s, a), F(t, i), F(t, u);
         for (let y = 0; y < h.length; y += 1) h[y].m(u, null);
         F(t, k),
-          F(t, d),
-          C(n, _, p),
-          C(n, m, p),
+          F(t, p),
+          C(n, _, d),
+          C(n, m, d),
           F(m, f),
           L(c, f, null),
-          C(n, l, p),
-          L(r, n, p),
+          C(n, l, d),
+          L(r, n, d),
           (g = !0);
       },
-      p(n, [p]) {
-        if (p & 49) {
+      p(n, [d]) {
+        if (d & 49) {
           w = n[0];
           let j;
           for (j = 0; j < w.length; j += 1) {
             const B = re(n, w, j);
             h[j]
-              ? (h[j].p(B, p), S(h[j], 1))
+              ? (h[j].p(B, d), S(h[j], 1))
               : ((h[j] = oe(B)), h[j].c(), S(h[j], 1), h[j].m(u, null));
           }
           for (ve(), j = w.length; j < h.length; j += 1) V(j);
           _e();
         }
-        (!g || p & 64) && $(d, 'width', n[6] + 'px');
+        (!g || d & 64) && $(p, 'width', n[6] + 'px');
         const y = {};
-        p & 2 && (y.breakpoints = n[1]),
-          p & 4 && (y.minFrameWidth = n[2]),
-          p & 8 && (y.maxFrameWidth = n[3]),
+        d & 2 && (y.breakpoints = n[1]),
+          d & 4 && (y.minFrameWidth = n[2]),
+          d & 8 && (y.maxFrameWidth = n[3]),
           r.$set(y);
       },
       i(n) {
         if (!g) {
-          for (let p = 0; p < w.length; p += 1) S(h[p]);
+          for (let d = 0; d < w.length; d += 1) S(h[d]);
           S(c.$$.fragment, n), S(r.$$.fragment, n), (g = !0);
         }
       },
       o(n) {
         h = h.filter(Boolean);
-        for (let p = 0; p < h.length; p += 1) q(h[p]);
+        for (let d = 0; d < h.length; d += 1) q(h[d]);
         q(c.$$.fragment, n), q(r.$$.fragment, n), (g = !1);
       },
       d(n) {
@@ -534,7 +534,7 @@ function Ne(e, t, s) {
   let { embeds: i } = t,
     { breakpoints: u = [330, 510, 660, 930, 1200] } = t,
     { minFrameWidth: k = 320 } = t,
-    { maxFrameWidth: d = 1200 } = t,
+    { maxFrameWidth: p = 1200 } = t,
     _ = i[0];
   const m = (c) => {
     new Fe.Parent(
@@ -556,12 +556,12 @@ function Ne(e, t, s) {
       'embeds' in c && s(0, (i = c.embeds)),
         'breakpoints' in c && s(1, (u = c.breakpoints)),
         'minFrameWidth' in c && s(2, (k = c.minFrameWidth)),
-        'maxFrameWidth' in c && s(3, (d = c.maxFrameWidth));
+        'maxFrameWidth' in c && s(3, (p = c.maxFrameWidth));
     }),
     (e.$$.update = () => {
       e.$$.dirty & 1 && s(5, (a = Me(i)));
     }),
-    [i, u, k, d, _, a, o, f]
+    [i, u, k, p, _, a, o, f]
   );
 }
 class Te extends x {
@@ -610,7 +610,7 @@ function Ae(e) {
     i,
     u,
     k,
-    d,
+    p,
     _ = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Framer <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 
@@ -634,7 +634,7 @@ function Ae(e) {
           (i = D('p')),
           (u = X(ce)),
           (k = A()),
-          (d = D('pre')),
+          (p = D('pre')),
           (m = A()),
           P(f.$$.fragment),
           this.h();
@@ -650,12 +650,12 @@ function Ae(e) {
           w.forEach(b),
           r.forEach(b),
           (k = z(l)),
-          (d = I(l, 'PRE', { class: !0 }));
-        var h = M(d);
+          (p = I(l, 'PRE', { class: !0 }));
+        var h = M(p);
         h.forEach(b), (m = z(l)), H(f.$$.fragment, l), this.h();
       },
       h() {
-        v(d, 'class', 'language-svelte');
+        v(p, 'class', 'language-svelte');
       },
       m(l, r) {
         C(l, t, r),
@@ -665,8 +665,8 @@ function Ae(e) {
           F(t, i),
           F(i, u),
           C(l, k, r),
-          C(l, d, r),
-          (d.innerHTML = _),
+          C(l, p, r),
+          (p.innerHTML = _),
           C(l, m, r),
           L(f, l, r),
           (c = !0);
@@ -682,7 +682,7 @@ function Ae(e) {
         q(f.$$.fragment, l), (c = !1);
       },
       d(l) {
-        l && b(t), l && b(k), l && b(d), l && b(m), G(f, l);
+        l && b(t), l && b(k), l && b(p), l && b(m), G(f, l);
       },
     }
   );

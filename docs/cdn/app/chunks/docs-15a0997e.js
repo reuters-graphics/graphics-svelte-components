@@ -58,7 +58,7 @@ import {
   a3 as dp,
 } from './vendor-85b063f6.js';
 import { D as Xn } from './index-ccd418f9.js';
-import './@component-docs_components-48c10090.js';
+import './@component-docs_components-9311d5b8.js';
 import './paths-6758d194.js';
 function kp(p, n, e) {
   const s = p.slice();

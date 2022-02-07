@@ -28,7 +28,7 @@ import {
   v as B,
 } from './vendor-85b063f6.js';
 import { D as tt } from './index-ccd418f9.js';
-import { g as J } from './@component-docs_components-48c10090.js';
+import { g as J } from './@component-docs_components-9311d5b8.js';
 import './paths-6758d194.js';
 function nt(c) {
   let t, n;
