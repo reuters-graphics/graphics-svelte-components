@@ -30,7 +30,7 @@ import {
   N as ae,
   M as ne,
   c as F,
-} from '../chunks/@component-docs_components-9311d5b8.js';
+} from '../chunks/@component-docs_components-26e03bf3.js';
 import { b as le } from '../chunks/paths-6758d194.js';
 function oe(l) {
   let s, r;
