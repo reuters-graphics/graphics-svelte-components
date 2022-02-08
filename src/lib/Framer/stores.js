@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const width = writable(650);
+export const width = writable(660);
