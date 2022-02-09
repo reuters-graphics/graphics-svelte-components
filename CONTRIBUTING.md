@@ -26,6 +26,8 @@ All new components and component features should be reflected in a [docs page](h
 
 All code contributions should be made through the normal [GitHub Flow](https://www.w3schools.com/git/git_github_flow.asp#:~:text=The%20GitHub%20flow%20is%20a,Make%20changes%20and%20add%20Commits). Basically, make a branch and submit a pull request.
 
+Generally, it's better to avoid bundling several new features or components in a single PR. Breaking them apart into smaller, individual contributions makes them easier to review and manage.
+
 Once you've submitted your PR, tag an editor to review it.
 
 An editor will approve your PR after addressing any issues they see. Once an editor approves and there are no code conflicts, you can merge your PR into master.
