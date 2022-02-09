@@ -16,15 +16,15 @@ If anyone outside our team ever starts using these components, we will happily r
 
 ## How should Reuters Graphics staff contribute?
 
-Code contributions should be made through the normal [GitHub Flow](https://www.w3schools.com/git/git_github_flow.asp#:~:text=The%20GitHub%20flow%20is%20a,Make%20changes%20and%20add%20Commits). Basically, make a branch and submit a pull request (PR) for any new features or changes.
-
-Before you make a PR, we recommend you create an issue on this repo describing what is missing, broken or could be added or improved. (We'll close that issue when we merge your PR.)
+We recommend your first step is to create an issue on this repo describing what is missing, broken or could be added or improved. (We'll close that issue when we merge your code into the main branch.)
 
 It's helpful if that issue describes what changes you propose to make at a high level so we can agree on a general direction before you write code. That's especially true if code you're writing will change how others need to write theirs. If needed, provide any links to best practice guidelines that support the change you want to make. Tag others on the team who may contribute to any discussion needed. Always tag an editor.
 
 Once you're ready to submit code, be sure it's properly formatted before you ask for a review. The easiest way is to ensure the built-in code formatters are working. (They should.) Be sure to add comments around any tricky bits of logic you're adding. Even better, document your code using [JSDoc](https://devhints.io/jsdoc) comments. (Check out [JSDoc shortcuts](https://code.visualstudio.com/docs/languages/javascript#_jsdoc-support) in VS Code for a leg up.)
 
 All new components and component features should be reflected in a [docs page](https://reuters-graphics.github.io/graphics-svelte-components/) included with your PR. See the [README](https://github.com/reuters-graphics/graphics-svelte-components#developing-new-components) for instructions on how to add those docs.
+
+All code contributions should be made through the normal [GitHub Flow](https://www.w3schools.com/git/git_github_flow.asp#:~:text=The%20GitHub%20flow%20is%20a,Make%20changes%20and%20add%20Commits). Basically, make a branch and submit a pull request.
 
 Once you've submitted your PR, tag an editor to review it.
 
