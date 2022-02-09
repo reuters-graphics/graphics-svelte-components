@@ -24,6 +24,8 @@ It's helpful if that issue describes what changes you propose to make at a high 
 
 Once you're ready to submit code, be sure it's properly formatted before you ask for a review. The easiest way is to ensure the built-in code formatters are working. (They should.) Be sure to add comments around any tricky bits of logic you're adding. Even better, document your code using [JSDoc](https://devhints.io/jsdoc) comments. (Check out [JSDoc shortcuts](https://code.visualstudio.com/docs/languages/javascript#_jsdoc-support) in VS Code for a leg up.)
 
+All new components and component features should be reflected in a [docs page](https://reuters-graphics.github.io/graphics-svelte-components/) included with your PR. See the [README](https://github.com/reuters-graphics/graphics-svelte-components#developing-new-components) for instructions on how to add those docs.
+
 Once you've submitted your PR, tag an editor to review it.
 
 An editor will approve your PR after addressing any issues they see. Once an editor approves and there are no code conflicts, you can merge your PR into master.
