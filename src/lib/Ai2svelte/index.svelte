@@ -4,6 +4,7 @@
   export let id = '';
   export let ariaHidden = true;
   export let ariaDescription = null;
+
   // normal, wide, wider, widest or fluid
   export let size = 'normal';
   export let onAiMounted = () => {};
