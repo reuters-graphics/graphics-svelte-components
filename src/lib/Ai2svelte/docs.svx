@@ -27,6 +27,7 @@ Pass a component created by [ai2svelte](https://github.com/reuters-graphics/ai2s
 <script>
   import { Ai2svelte } from '@reuters-graphics/graphics-svelte-components';
   import MyAiChart from './some-chart.svelte';
+
 </script>
 
 <Ai2svelte AiGraphic="{MyAiChart}"
@@ -274,7 +275,7 @@ This is what `<DataTable/>` looks like. You can make an html table using DataWra
 
 
 ```svelte
-<table class="linechart-data">
+<table class="line-chart-data">
   <thead
     ><tr>
       <th data-column="Date" data-row="-1">Date </th><th
@@ -298,7 +299,5 @@ This is what `<DataTable/>` looks like. You can make an html table using DataWra
     ><tr> <td>January 10, 2022</td><td>−2%</td><td>−1</td><td>−4%</td></tr>
   </tbody>
 </table>
-
-
 
 ```

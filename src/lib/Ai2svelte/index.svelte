@@ -3,6 +3,7 @@
   export let AiGraphic;
   export let id = '';
   export let ariaHidden = true;
+
   export let ariaDescription = null;
 
   // normal, wide, wider, widest or fluid
@@ -44,7 +45,7 @@
     width: 1px !important;
     height: 1px !important;
     padding: 0 !important;
-    margin: -1px !important; // Fix for https://github.com/twbs/bootstrap/issues/25686
+    margin: -1px !important; //Fix for https://github.com/twbs/bootstrap/issues/25686
     overflow: hidden !important;
     clip: rect(0, 0, 0, 0) !important;
     clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
