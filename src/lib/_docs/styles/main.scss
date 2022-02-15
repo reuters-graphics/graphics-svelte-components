@@ -3,3 +3,24 @@
 body {
   background-color: #eee;
 }
+
+#svelte-app {
+  padding-bottom: 6rem;
+}
+
+section.note {
+  margin: 2rem auto;
+  padding: 10px;
+  border-left: 10px solid #999;
+  p {
+    font-size: 0.95rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  p > code,
+  li > code {
+    font-size: 0.9rem;
+  }
+}
