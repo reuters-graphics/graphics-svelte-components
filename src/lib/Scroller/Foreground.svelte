@@ -4,12 +4,12 @@
 </script>
 
 {#each steps as step, i}
-  <section class="step-foreground-container">
+  <section class="step-foreground-container step-{i + 1}">
     {#if step.foreground === '' || !step.foreground}
       <!-- Empty foreground -->
-      <div class="empty-step-foreground step-{i + 1}"></div>
+      <div class="empty-step-foreground"></div>
     {:else}
-      <div class="step-foreground step-{i + 1}">
+      <div class="step-foreground">
         {#if typeof step.foreground === 'string'}
           {@html marked.parse(step.foreground)}
         {:else}
