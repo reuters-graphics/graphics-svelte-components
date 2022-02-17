@@ -28,100 +28,100 @@ import {
   v as B,
 } from './vendor-85b063f6.js';
 import { D as tt } from './index-ccd418f9.js';
-import { g as J } from './@component-docs_components-f89dfe3e.js';
+import { g as J } from './@component-docs_components-0f238320.js';
 import './paths-6758d194.js';
-function et(c) {
-  let t, e;
+function nt(c) {
+  let t, n;
   return {
     c() {
       (t = w('div')), this.h();
     },
-    l(n) {
-      (t = b(n, 'DIV', { class: !0, height: !0 })), j(t).forEach(f), this.h();
+    l(e) {
+      (t = b(e, 'DIV', { class: !0, height: !0 })), j(t).forEach(f), this.h();
     },
     h() {
       h(t, 'class', 'placeholder svelte-1g1o650'),
-        h(t, 'height', (e = `${c[3]}px`));
+        h(t, 'height', (n = `${c[3]}px`));
     },
-    m(n, l) {
-      v(n, t, l);
+    m(e, l) {
+      v(e, t, l);
     },
-    p(n, l) {
-      l & 8 && e !== (e = `${n[3]}px`) && h(t, 'height', e);
+    p(e, l) {
+      l & 8 && n !== (n = `${e[3]}px`) && h(t, 'height', n);
     },
-    d(n) {
-      n && f(t);
+    d(e) {
+      e && f(t);
     },
   };
 }
-function nt(c) {
-  let t, e;
+function et(c) {
+  let t, n;
   return {
     c() {
       (t = w('img')), this.h();
     },
-    l(n) {
-      (t = b(n, 'IMG', { src: !0, alt: !0 })), this.h();
+    l(e) {
+      (t = b(e, 'IMG', { src: !0, alt: !0 })), this.h();
     },
     h() {
-      F(t.src, (e = J(c[0]))) || h(t, 'src', e), h(t, 'alt', c[1]);
+      F(t.src, (n = J(c[0]))) || h(t, 'src', n), h(t, 'alt', c[1]);
     },
-    m(n, l) {
-      v(n, t, l);
+    m(e, l) {
+      v(e, t, l);
     },
-    p(n, l) {
-      l & 1 && !F(t.src, (e = J(n[0]))) && h(t, 'src', e),
-        l & 2 && h(t, 'alt', n[1]);
+    p(e, l) {
+      l & 1 && !F(t.src, (n = J(e[0]))) && h(t, 'src', n),
+        l & 2 && h(t, 'alt', e[1]);
     },
-    d(n) {
-      n && f(t);
+    d(e) {
+      e && f(t);
     },
   };
 }
 function K(c) {
-  let t, e;
+  let t, n;
   return {
     c() {
-      (t = w('figcaption')), (e = A(c[2]));
+      (t = w('figcaption')), (n = A(c[2]));
     },
-    l(n) {
-      t = b(n, 'FIGCAPTION', {});
+    l(e) {
+      t = b(e, 'FIGCAPTION', {});
       var l = j(t);
-      (e = C(l, c[2])), l.forEach(f);
+      (n = C(l, c[2])), l.forEach(f);
     },
-    m(n, l) {
-      v(n, t, l), y(t, e);
+    m(e, l) {
+      v(e, t, l), y(t, n);
     },
-    p(n, l) {
-      l & 4 && Z(e, n[2]);
+    p(e, l) {
+      l & 4 && Z(n, e[2]);
     },
-    d(n) {
-      n && f(t);
+    d(e) {
+      e && f(t);
     },
   };
 }
 function st(c) {
-  let t, e, n;
+  let t, n, e;
   function l(s, p) {
-    return !s[8] || (s[11] && s[9]) ? nt : et;
+    return !s[8] || (s[11] && s[9]) ? et : nt;
   }
   let m = l(c),
     r = m(c),
     o = c[2] && K(c);
   return {
     c() {
-      (t = w('figure')), r.c(), (e = z()), o && o.c(), this.h();
+      (t = w('figure')), r.c(), (n = z()), o && o.c(), this.h();
     },
     l(s) {
       t = b(s, 'FIGURE', { class: !0 });
       var p = j(t);
-      r.l(p), (e = D(p)), o && o.l(p), p.forEach(f), this.h();
+      r.l(p), (n = D(p)), o && o.l(p), p.forEach(f), this.h();
     },
     h() {
       h(
         t,
         'class',
-        (n =
+        (e =
           '' +
           (T(
             q('photo', { wide: c[4], wider: c[5], widest: c[6], fluid: c[7] })
@@ -130,20 +130,20 @@ function st(c) {
       );
     },
     m(s, p) {
-      v(s, t, p), r.m(t, null), y(t, e), o && o.m(t, null), c[16](t);
+      v(s, t, p), r.m(t, null), y(t, n), o && o.m(t, null), c[16](t);
     },
     p(s, [p]) {
       m === (m = l(s)) && r
         ? r.p(s, p)
-        : (r.d(1), (r = m(s)), r && (r.c(), r.m(t, e))),
+        : (r.d(1), (r = m(s)), r && (r.c(), r.m(t, n))),
         s[2]
           ? o
             ? o.p(s, p)
             : ((o = K(s)), o.c(), o.m(t, null))
           : o && (o.d(1), (o = null)),
         p & 240 &&
-          n !==
-            (n =
+          e !==
+            (e =
               '' +
               (T(
                 q('photo', {
@@ -154,7 +154,7 @@ function st(c) {
                 })
               ) +
                 ' svelte-1g1o650')) &&
-          h(t, 'class', n);
+          h(t, 'class', e);
     },
     i: M,
     o: M,
@@ -163,8 +163,8 @@ function st(c) {
     },
   };
 }
-function at(c, t, e) {
-  let { src: n } = t,
+function at(c, t, n) {
+  let { src: e } = t,
     { alt: l } = t,
     { caption: m } = t,
     { height: r = 100 } = t,
@@ -185,7 +185,7 @@ function at(c, t, e) {
       const a = `${i}px ${u}px ${d}px ${k}px`,
         S = new IntersectionObserver(
           (Y) => {
-            e(9, (E = Y[0].isIntersecting)), E && S.unobserve(_);
+            n(9, (E = Y[0].isIntersecting)), E && S.unobserve(_);
           },
           { rootMargin: a }
         );
@@ -194,26 +194,26 @@ function at(c, t, e) {
   });
   function X(a) {
     $[a ? 'unshift' : 'push'](() => {
-      (_ = a), e(10, _);
+      (_ = a), n(10, _);
     });
   }
   return (
     (c.$$set = (a) => {
-      'src' in a && e(0, (n = a.src)),
-        'alt' in a && e(1, (l = a.alt)),
-        'caption' in a && e(2, (m = a.caption)),
-        'height' in a && e(3, (r = a.height)),
-        'wide' in a && e(4, (o = a.wide)),
-        'wider' in a && e(5, (s = a.wider)),
-        'widest' in a && e(6, (p = a.widest)),
-        'fluid' in a && e(7, (I = a.fluid)),
-        'lazy' in a && e(8, (g = a.lazy)),
-        'top' in a && e(12, (d = a.top)),
-        'bottom' in a && e(13, (i = a.bottom)),
-        'left' in a && e(14, (u = a.left)),
-        'right' in a && e(15, (k = a.right));
+      'src' in a && n(0, (e = a.src)),
+        'alt' in a && n(1, (l = a.alt)),
+        'caption' in a && n(2, (m = a.caption)),
+        'height' in a && n(3, (r = a.height)),
+        'wide' in a && n(4, (o = a.wide)),
+        'wider' in a && n(5, (s = a.wider)),
+        'widest' in a && n(6, (p = a.widest)),
+        'fluid' in a && n(7, (I = a.fluid)),
+        'lazy' in a && n(8, (g = a.lazy)),
+        'top' in a && n(12, (d = a.top)),
+        'bottom' in a && n(13, (i = a.bottom)),
+        'left' in a && n(14, (u = a.left)),
+        'right' in a && n(15, (k = a.right));
     }),
-    [n, l, m, r, o, s, p, I, g, E, _, O, d, i, u, k, X]
+    [e, l, m, r, o, s, p, I, g, E, _, O, d, i, u, k, X]
   );
 }
 class lt extends P {
@@ -237,7 +237,7 @@ class lt extends P {
   }
 }
 function it(c) {
-  let t, e;
+  let t, n;
   return (
     (t = new lt({
       props: {
@@ -252,29 +252,29 @@ function it(c) {
       c() {
         N(t.$$.fragment);
       },
-      l(n) {
-        R(t.$$.fragment, n);
+      l(e) {
+        R(t.$$.fragment, e);
       },
-      m(n, l) {
-        U(t, n, l), (e = !0);
+      m(e, l) {
+        U(t, e, l), (n = !0);
       },
       p: M,
-      i(n) {
-        e || (L(t.$$.fragment, n), (e = !0));
+      i(e) {
+        n || (L(t.$$.fragment, e), (n = !0));
       },
-      o(n) {
-        V(t.$$.fragment, n), (e = !1);
+      o(e) {
+        V(t.$$.fragment, e), (n = !1);
       },
-      d(n) {
-        B(t, n);
+      d(e) {
+        B(t, e);
       },
     }
   );
 }
 function ct(c) {
   let t,
-    e,
     n,
+    e,
     l,
     m,
     r,
@@ -301,8 +301,8 @@ function ct(c) {
     {
       c() {
         (t = w('section')),
-          (e = w('h2')),
-          (n = A(Q)),
+          (n = w('h2')),
+          (e = A(Q)),
           (l = z()),
           (m = w('p')),
           (r = A(W)),
@@ -315,9 +315,9 @@ function ct(c) {
       l(i) {
         t = b(i, 'SECTION', {});
         var u = j(t);
-        e = b(u, 'H2', {});
-        var k = j(e);
-        (n = C(k, Q)), k.forEach(f), (l = D(u)), (m = b(u, 'P', {}));
+        n = b(u, 'H2', {});
+        var k = j(n);
+        (e = C(k, Q)), k.forEach(f), (l = D(u)), (m = b(u, 'P', {}));
         var E = j(m);
         (r = C(E, W)),
           E.forEach(f),
@@ -332,8 +332,8 @@ function ct(c) {
       },
       m(i, u) {
         v(i, t, u),
-          y(t, e),
-          y(e, n),
+          y(t, n),
+          y(n, e),
           y(t, l),
           y(t, m),
           y(m, r),
