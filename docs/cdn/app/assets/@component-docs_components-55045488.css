@@ -234,6 +234,19 @@ figure.svelte-1dfql50 {
     width: calc(9.5rem + 4px);
   }
 }
+.visually-hidden.svelte-a90v8t {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 .step-background.svelte-va4hxg {
   width: 100%;
   position: absolute;
@@ -580,6 +593,24 @@ pre[class*='language-'] > code[class*='language-'] {
 }
 body {
   background-color: #eee;
+}
+#svelte-app {
+  padding-bottom: 6rem;
+}
+section.note {
+  margin: 2rem auto;
+  padding: 10px;
+  border-left: 10px solid #999;
+}
+section.note p {
+  font-size: 0.95rem;
+}
+section.note p:last-child {
+  margin-bottom: 0;
+}
+section.note p > code,
+section.note li > code {
+  font-size: 0.9rem;
 }
 div#overlay.svelte-253v2x.svelte-253v2x {
   position: fixed;

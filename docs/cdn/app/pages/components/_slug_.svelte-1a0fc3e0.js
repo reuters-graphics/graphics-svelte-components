@@ -34,36 +34,38 @@ import {
   S as J,
   N as Z,
   M as K,
-} from '../../chunks/@component-docs_components-26e03bf3.js';
+} from '../../chunks/@component-docs_components-f89dfe3e.js';
 import '../../chunks/paths-6758d194.js';
-function Q(c) {
-  switch (c) {
+function Q(o) {
+  switch (o) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return e(
-        () => import('../../chunks/docs-d44f7867.js'),
+        () => import('../../chunks/docs-7a2f5707.js'),
         [
-          'chunks/docs-d44f7867.js',
+          'chunks/docs-7a2f5707.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return e(
-        () => import('../../chunks/docs-e1c2ebed.js'),
+        () => import('../../chunks/docs-c25fd122.js'),
         [
-          'chunks/docs-e1c2ebed.js',
+          'chunks/docs-c25fd122.js',
           'assets/docs-ea1c5840.css',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -111,16 +113,16 @@ function Q(c) {
       );
     case '../../src/lib/Framer/docs.svx':
       return e(
-        () => import('../../chunks/docs-18825c00.js'),
+        () => import('../../chunks/docs-b8824f41.js'),
         [
-          'chunks/docs-18825c00.js',
+          'chunks/docs-b8824f41.js',
           'assets/docs-8e82fbe2.css',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -151,30 +153,30 @@ function Q(c) {
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-3c7d9baa.js'),
+        () => import('../../chunks/docs-25ef9952.js'),
         [
-          'chunks/docs-3c7d9baa.js',
+          'chunks/docs-25ef9952.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-8b0c2bd2.js'),
+        () => import('../../chunks/docs-9a3a2f01.js'),
         [
-          'chunks/docs-8b0c2bd2.js',
+          'chunks/docs-9a3a2f01.js',
           'assets/docs-4a88ca0e.css',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -200,15 +202,15 @@ function Q(c) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-da8cb85b.js'),
+        () => import('../../chunks/docs-b02deaff.js'),
         [
-          'chunks/docs-da8cb85b.js',
+          'chunks/docs-b02deaff.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -223,17 +225,17 @@ function Q(c) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-74d21f15.js'),
+        () => import('../../chunks/docs-3691792a.js'),
         [
-          'chunks/docs-74d21f15.js',
+          'chunks/docs-3691792a.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -250,38 +252,40 @@ function Q(c) {
       return new Promise(function (t, i) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(i.bind(null, new Error('Unknown variable dynamic import: ' + c)));
+          : setTimeout)(i.bind(null, new Error('Unknown variable dynamic import: ' + o)));
       });
   }
 }
-function W(c) {
-  switch (c) {
+function W(o) {
+  switch (o) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return e(
-        () => import('../../chunks/docs-d44f7867.js'),
+        () => import('../../chunks/docs-7a2f5707.js'),
         [
-          'chunks/docs-d44f7867.js',
+          'chunks/docs-7a2f5707.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return e(
-        () => import('../../chunks/docs-e1c2ebed.js'),
+        () => import('../../chunks/docs-c25fd122.js'),
         [
-          'chunks/docs-e1c2ebed.js',
+          'chunks/docs-c25fd122.js',
           'assets/docs-ea1c5840.css',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -329,16 +333,16 @@ function W(c) {
       );
     case '../../src/lib/Framer/docs.svx':
       return e(
-        () => import('../../chunks/docs-18825c00.js'),
+        () => import('../../chunks/docs-b8824f41.js'),
         [
-          'chunks/docs-18825c00.js',
+          'chunks/docs-b8824f41.js',
           'assets/docs-8e82fbe2.css',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -369,30 +373,30 @@ function W(c) {
       );
     case '../../src/lib/Image/docs.svx':
       return e(
-        () => import('../../chunks/docs-3c7d9baa.js'),
+        () => import('../../chunks/docs-25ef9952.js'),
         [
-          'chunks/docs-3c7d9baa.js',
+          'chunks/docs-25ef9952.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-8b0c2bd2.js'),
+        () => import('../../chunks/docs-9a3a2f01.js'),
         [
-          'chunks/docs-8b0c2bd2.js',
+          'chunks/docs-9a3a2f01.js',
           'assets/docs-4a88ca0e.css',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -418,15 +422,15 @@ function W(c) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return e(
-        () => import('../../chunks/docs-da8cb85b.js'),
+        () => import('../../chunks/docs-b02deaff.js'),
         [
-          'chunks/docs-da8cb85b.js',
+          'chunks/docs-b02deaff.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -441,17 +445,17 @@ function W(c) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return e(
-        () => import('../../chunks/docs-74d21f15.js'),
+        () => import('../../chunks/docs-3691792a.js'),
         [
-          'chunks/docs-74d21f15.js',
+          'chunks/docs-3691792a.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-85b063f6.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/index-ccd418f9.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-26e03bf3.js',
-          'assets/@component-docs_components-e5eecc12.css',
+          'chunks/@component-docs_components-f89dfe3e.js',
+          'assets/@component-docs_components-55045488.css',
           'chunks/paths-6758d194.js',
         ]
       );
@@ -468,17 +472,17 @@ function W(c) {
       return new Promise(function (t, i) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(i.bind(null, new Error('Unknown variable dynamic import: ' + c)));
+          : setTimeout)(i.bind(null, new Error('Unknown variable dynamic import: ' + o)));
       });
   }
 }
-function X(c) {
+function X(o) {
   let t,
     i,
-    o,
-    u = c[0].title + '',
+    c,
+    u = o[0].title + '',
     n,
-    p,
+    f,
     r,
     d,
     m,
@@ -489,9 +493,9 @@ function X(c) {
       c() {
         (t = I('div')),
           (i = w('> ')),
-          (o = I('span')),
+          (c = I('span')),
           (n = w(u)),
-          (p = A()),
+          (f = A()),
           (r = I('a')),
           E(d.$$.fragment),
           this.h();
@@ -499,21 +503,21 @@ function X(c) {
       l(_) {
         t = L(_, 'DIV', { class: !0 });
         var s = O(t);
-        (i = y(s, '> ')), (o = L(s, 'SPAN', { class: !0 }));
-        var a = O(o);
+        (i = y(s, '> ')), (c = L(s, 'SPAN', { class: !0 }));
+        var a = O(c);
         (n = y(a, u)),
           a.forEach(v),
-          (p = j(s)),
+          (f = j(s)),
           (r = L(s, 'A', { href: !0, target: !0, title: !0, class: !0 }));
-        var f = O(r);
-        P(d.$$.fragment, f), f.forEach(v), s.forEach(v), this.h();
+        var p = O(r);
+        P(d.$$.fragment, p), p.forEach(v), s.forEach(v), this.h();
       },
       h() {
-        h(o, 'class', 'svelte-zu85oa'),
+        h(c, 'class', 'svelte-zu85oa'),
           h(
             r,
             'href',
-            (m = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${c[0].path}/index.svelte`)
+            (m = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${o[0].path}/index.svelte`)
           ),
           h(r, 'target', '_blank'),
           h(r, 'title', 'Source code'),
@@ -523,9 +527,9 @@ function X(c) {
       m(_, s) {
         R(_, t, s),
           T(t, i),
-          T(t, o),
-          T(o, n),
-          T(t, p),
+          T(t, c),
+          T(c, n),
+          T(t, f),
           T(t, r),
           b(d, r, null),
           (l = !0);
@@ -550,22 +554,22 @@ function X(c) {
     }
   );
 }
-function Y(c) {
-  let t, i, o, u, n, p, r, d, m;
+function Y(o) {
+  let t, i, c, u, n, f, r, d, m;
   (t = new J({
     props: {
-      seoTitle: `Reuters Graphics components - ${c[0].title}`,
-      seoDescription: c[0].description,
-      shareTitle: `Reuters Graphics components - ${c[0].title}`,
-      shareDescription: c[0].description,
+      seoTitle: `Reuters Graphics components - ${o[0].title}`,
+      seoDescription: o[0].description,
+      shareTitle: `Reuters Graphics components - ${o[0].title}`,
+      shareDescription: o[0].description,
       shareImgPath: 'images/reuters-graphics.jpg',
       lang: 'en',
       hostname: 'reuters-graphics.github.io',
     },
   })),
-    (o = new Z({ props: { $$slots: { default: [X] }, $$scope: { ctx: c } } })),
+    (c = new Z({ props: { $$slots: { default: [X] }, $$scope: { ctx: o } } })),
     (n = new K({ props: { components: S } }));
-  var l = c[1];
+  var l = o[1];
   function _(s) {
     return {};
   }
@@ -575,46 +579,46 @@ function Y(c) {
       c() {
         E(t.$$.fragment),
           (i = A()),
-          E(o.$$.fragment),
+          E(c.$$.fragment),
           (u = A()),
           E(n.$$.fragment),
-          (p = A()),
+          (f = A()),
           r && E(r.$$.fragment),
           (d = x());
       },
       l(s) {
         P(t.$$.fragment, s),
           (i = j(s)),
-          P(o.$$.fragment, s),
+          P(c.$$.fragment, s),
           (u = j(s)),
           P(n.$$.fragment, s),
-          (p = j(s)),
+          (f = j(s)),
           r && P(r.$$.fragment, s),
           (d = x());
       },
       m(s, a) {
         b(t, s, a),
           R(s, i, a),
-          b(o, s, a),
+          b(c, s, a),
           R(s, u, a),
           b(n, s, a),
-          R(s, p, a),
+          R(s, f, a),
           r && b(r, s, a),
           R(s, d, a),
           (m = !0);
       },
       p(s, [a]) {
-        const f = {};
-        a & 1 && (f.seoTitle = `Reuters Graphics components - ${s[0].title}`),
-          a & 1 && (f.seoDescription = s[0].description),
+        const p = {};
+        a & 1 && (p.seoTitle = `Reuters Graphics components - ${s[0].title}`),
+          a & 1 && (p.seoDescription = s[0].description),
           a & 1 &&
-            (f.shareTitle = `Reuters Graphics components - ${s[0].title}`),
-          a & 1 && (f.shareDescription = s[0].description),
-          t.$set(f);
+            (p.shareTitle = `Reuters Graphics components - ${s[0].title}`),
+          a & 1 && (p.shareDescription = s[0].description),
+          t.$set(p);
         const g = {};
         if (
           (a & 5 && (g.$$scope = { dirty: a, ctx: s }),
-          o.$set(g),
+          c.$set(g),
           l !== (l = s[1]))
         ) {
           if (r) {
@@ -636,14 +640,14 @@ function Y(c) {
       i(s) {
         m ||
           (k(t.$$.fragment, s),
-          k(o.$$.fragment, s),
+          k(c.$$.fragment, s),
           k(n.$$.fragment, s),
           r && k(r.$$.fragment, s),
           (m = !0));
       },
       o(s) {
         $(t.$$.fragment, s),
-          $(o.$$.fragment, s),
+          $(c.$$.fragment, s),
           $(n.$$.fragment, s),
           r && $(r.$$.fragment, s),
           (m = !1);
@@ -651,33 +655,33 @@ function Y(c) {
       d(s) {
         D(t, s),
           s && v(i),
-          D(o, s),
+          D(c, s),
           s && v(u),
           D(n, s),
-          s && v(p),
+          s && v(f),
           s && v(d),
           r && D(r, s);
       },
     }
   );
 }
-async function os({ page: c }) {
-  return { props: { metadata: S.find((i) => i.slug === c.params.slug) } };
+async function cs({ page: o }) {
+  return { props: { metadata: S.find((i) => i.slug === o.params.slug) } };
 }
-function ss(c, t, i) {
-  let { metadata: o } = t,
+function ss(o, t, i) {
+  let { metadata: c } = t,
     u;
   return (
     C(async () => {
-      i(1, (u = (await W(`../../src/lib/${o.path}/docs.svx`)).default));
+      i(1, (u = (await W(`../../src/lib/${c.path}/docs.svx`)).default));
     }),
     F(async () => {
-      i(1, (u = (await Q(`../../src/lib/${o.path}/docs.svx`)).default));
+      i(1, (u = (await Q(`../../src/lib/${c.path}/docs.svx`)).default));
     }),
-    (c.$$set = (n) => {
-      'metadata' in n && i(0, (o = n.metadata));
+    (o.$$set = (n) => {
+      'metadata' in n && i(0, (c = n.metadata));
     }),
-    [o, u]
+    [c, u]
   );
 }
 class is extends N {
@@ -686,4 +690,4 @@ class is extends N {
     M(this, t, ss, Y, q, { metadata: 0 });
   }
 }
-export { is as default, os as load };
+export { is as default, cs as load };

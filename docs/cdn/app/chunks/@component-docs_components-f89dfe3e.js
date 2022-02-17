@@ -35,8 +35,8 @@ import {
   t as ae,
   g as ie,
   h as Re,
-  j as oe,
-  m as le,
+  j as le,
+  m as oe,
   Y as he,
   o as ce,
   v as ue,
@@ -45,7 +45,7 @@ import {
 import { a as je, b as Z } from './paths-6758d194.js';
 const Y = (r = '') => W(je, r);
 const De = '@reuters-graphics/graphics-svelte-components',
-  He = '0.1.57',
+  He = '0.2.0',
   Oe = 'module',
   xe = 'https://reuters-graphics.github.io/graphics-svelte-components',
   Pe = 'https://github.com/reuters-graphics/graphics-svelte-components',
@@ -185,7 +185,7 @@ var Ke = (function () {
       T,
       A,
       g;
-    function S(l) {
+    function S(o) {
       typeof ga == 'function' && (T = !0),
         typeof _gaq != 'undefined' &&
           typeof _gaq.push == 'function' &&
@@ -193,31 +193,31 @@ var Ke = (function () {
         typeof dataLayer != 'undefined' &&
           typeof dataLayer.push == 'function' &&
           (g = !0),
-        (l = l || {}),
-        (w = parseInt(l.reportInterval, 10) || 5),
-        (y = parseInt(l.idleTimeout, 10) || 30),
-        typeof l.eventHandler == 'function' && (p = l.eventHandler),
-        typeof l.userTimingHandler == 'function' && (b = l.userTimingHandler),
-        'nonInteraction' in l &&
-        (l.nonInteraction === !1 || l.nonInteraction === 'false')
+        (o = o || {}),
+        (w = parseInt(o.reportInterval, 10) || 5),
+        (y = parseInt(o.idleTimeout, 10) || 30),
+        typeof o.eventHandler == 'function' && (p = o.eventHandler),
+        typeof o.userTimingHandler == 'function' && (b = o.userTimingHandler),
+        'nonInteraction' in o &&
+        (o.nonInteraction === !1 || o.nonInteraction === 'false')
           ? (f = !1)
           : (f = !0),
-        M(document, 'keydown', o),
-        M(document, 'click', o),
-        M(window, 'mousemove', O(o, 500)),
-        M(window, 'scroll', O(o, 500)),
+        M(document, 'keydown', l),
+        M(document, 'click', l),
+        M(window, 'mousemove', O(l, 500)),
+        M(window, 'scroll', O(l, 500)),
         M(document, 'visibilitychange', D),
         M(document, 'webkitvisibilitychange', D),
         p(0);
     }
-    function O(l, _) {
+    function O(o, _) {
       var L,
         H,
         G,
         j = null,
         B = 0,
         q = function () {
-          (B = new Date()), (j = null), (G = l.apply(L, H));
+          (B = new Date()), (j = null), (G = o.apply(L, H));
         };
       return function () {
         var I = new Date();
@@ -227,50 +227,50 @@ var Ke = (function () {
           (L = this),
           (H = arguments),
           d <= 0
-            ? (clearTimeout(j), (j = null), (B = I), (G = l.apply(L, H)))
+            ? (clearTimeout(j), (j = null), (B = I), (G = o.apply(L, H)))
             : j || (j = setTimeout(q, d)),
           G
         );
       };
     }
-    function M(l, _, L) {
-      l.addEventListener
-        ? l.addEventListener(_, L, !1)
-        : l.attachEvent
-        ? l.attachEvent('on' + _, L)
-        : (l['on' + _] = L);
+    function M(o, _, L) {
+      o.addEventListener
+        ? o.addEventListener(_, L, !1)
+        : o.attachEvent
+        ? o.attachEvent('on' + _, L)
+        : (o['on' + _] = L);
     }
-    (b = function (l) {
+    (b = function (o) {
       g
         ? dataLayer.push({
             event: 'RivetedTiming',
             eventCategory: 'Riveted',
             timingVar: 'First Interaction',
-            timingValue: l,
+            timingValue: o,
           })
-        : (T && ga('send', 'timing', 'Riveted', 'First Interaction', l),
+        : (T && ga('send', 'timing', 'Riveted', 'First Interaction', o),
           A &&
             _gaq.push([
               '_trackTiming',
               'Riveted',
               'First Interaction',
-              l,
+              o,
               null,
               100,
             ]));
     }),
-      (p = function (l) {
+      (p = function (o) {
         g
           ? dataLayer.push({
               event: 'Riveted',
               eventCategory: 'Riveted',
               eventAction: 'Time Spent',
-              eventLabel: l,
+              eventLabel: o,
               eventValue: w,
               eventNonInteraction: f,
             })
           : (T &&
-              ga('send', 'event', 'Riveted', 'Time Spent', l.toString(), w, {
+              ga('send', 'event', 'Riveted', 'Time Spent', o.toString(), w, {
                 nonInteraction: f,
               }),
             A &&
@@ -278,7 +278,7 @@ var Ke = (function () {
                 '_trackEvent',
                 'Riveted',
                 'Time Spent',
-                l.toString(),
+                o.toString(),
                 w,
                 f,
               ]));
@@ -305,18 +305,18 @@ var Ke = (function () {
       (t = !1), clearTimeout(i), (i = setInterval(F, 1e3));
     }
     function k() {
-      var l = new Date(),
-        _ = l - a;
+      var o = new Date(),
+        _ = o - a;
       (r = !0), b(_), (i = setInterval(F, 1e3));
     }
-    function o() {
+    function l() {
       n ||
         (r || k(),
         t && P(),
         clearTimeout(v),
         (v = setTimeout(R, y * 1e3 + 100)));
     }
-    return { init: S, trigger: o, setIdle: R, on: E, off: C };
+    return { init: S, trigger: l, setIdle: R, on: E, off: C };
   })(),
   $e = () => {
     const r = window.googletag || {};
@@ -369,8 +369,8 @@ function Ye(r) {
     E,
     P,
     k,
-    o,
     l,
+    o,
     _,
     L,
     H = `<script type="application/ld+json">${JSON.stringify(r[8])}<\/script>`,
@@ -403,8 +403,8 @@ function Ye(r) {
           (C = m('meta')),
           (E = m('meta')),
           (k = m('meta')),
-          (o = m('meta')),
           (l = m('meta')),
+          (o = m('meta')),
           (_ = m('meta')),
           (L = new pe()),
           (G = U()),
@@ -436,8 +436,8 @@ function Ye(r) {
           (C = h(d, 'META', { name: !0, content: !0 })),
           (E = h(d, 'META', { name: !0, content: !0 })),
           (k = h(d, 'META', { property: !0, content: !0 })),
-          (o = h(d, 'META', { property: !0, content: !0 })),
           (l = h(d, 'META', { property: !0, content: !0 })),
+          (o = h(d, 'META', { property: !0, content: !0 })),
           (_ = h(d, 'META', { property: !0, content: !0 })),
           (L = de(d)),
           (G = U()),
@@ -514,10 +514,10 @@ function Ye(r) {
           e(E, 'content', (P = Y(r[4]))),
           e(k, 'property', 'fb:app_id'),
           e(k, 'content', '319194411438328'),
-          e(o, 'property', 'fb:admins'),
-          e(o, 'content', '616167736'),
           e(l, 'property', 'fb:admins'),
-          e(l, 'content', '625796953'),
+          e(l, 'content', '616167736'),
+          e(o, 'property', 'fb:admins'),
+          e(o, 'content', '625796953'),
           e(_, 'property', 'fb:admins'),
           e(_, 'content', '571759798'),
           (L.a = G),
@@ -545,8 +545,8 @@ function Ye(r) {
           u(document.head, C),
           u(document.head, E),
           u(document.head, k),
-          u(document.head, o),
           u(document.head, l),
+          u(document.head, o),
           u(document.head, _),
           L.m(H, document.head),
           u(document.head, G),
@@ -589,8 +589,8 @@ function Ye(r) {
           c(C),
           c(E),
           c(k),
-          c(o),
           c(l),
+          c(o),
           c(_),
           c(G),
           I && L.d(),
@@ -886,7 +886,7 @@ function Ze(r) {
     (S = new se({ props: { fw: !0, icon: Me.faGithubAlt } }));
   let P = r[0],
     k = [];
-  for (let o = 0; o < P.length; o += 1) k[o] = _e(ge(r, P, o));
+  for (let l = 0; l < P.length; l += 1) k[l] = _e(ge(r, P, l));
   return {
     c() {
       E && E.c(),
@@ -894,32 +894,32 @@ function Ze(r) {
         (n = m('nav')),
         (s = m('div')),
         (a = m('button')),
-        oe(i.$$.fragment),
+        le(i.$$.fragment),
         (v = J()),
         (p = m('ul')),
         (b = m('li')),
         (w = m('a')),
-        oe(y.$$.fragment),
+        le(y.$$.fragment),
         (f = ae(' Home')),
         (T = J()),
         (A = m('li')),
         (g = m('a')),
-        oe(S.$$.fragment),
+        le(S.$$.fragment),
         (O = ae(' Repo')),
         (M = J()),
         (R = m('hr')),
         (D = J());
-      for (let o = 0; o < k.length; o += 1) k[o].c();
+      for (let l = 0; l < k.length; l += 1) k[l].c();
       this.h();
     },
-    l(o) {
-      E && E.l(o), (t = K(o)), (n = h(o, 'NAV', { class: !0 }));
-      var l = N(n);
-      s = h(l, 'DIV', { class: !0 });
+    l(l) {
+      E && E.l(l), (t = K(l)), (n = h(l, 'NAV', { class: !0 }));
+      var o = N(n);
+      s = h(o, 'DIV', { class: !0 });
       var _ = N(s);
       a = h(_, 'BUTTON', { class: !0 });
       var L = N(a);
-      le(i.$$.fragment, L),
+      oe(i.$$.fragment, L),
         L.forEach(c),
         (v = K(_)),
         (p = h(_, 'UL', { class: !0 }));
@@ -928,7 +928,7 @@ function Ze(r) {
       var G = N(b);
       w = h(G, 'A', { href: !0, rel: !0, class: !0 });
       var j = N(w);
-      le(y.$$.fragment, j),
+      oe(y.$$.fragment, j),
         (f = ie(j, ' Home')),
         j.forEach(c),
         G.forEach(c),
@@ -937,7 +937,7 @@ function Ze(r) {
       var B = N(A);
       g = h(B, 'A', { href: !0, rel: !0, class: !0 });
       var q = N(g);
-      le(S.$$.fragment, q),
+      oe(S.$$.fragment, q),
         (O = ie(q, ' Repo')),
         q.forEach(c),
         B.forEach(c),
@@ -945,7 +945,7 @@ function Ze(r) {
         (R = h(H, 'HR', { class: !0 })),
         (D = K(H));
       for (let I = 0; I < k.length; I += 1) k[I].l(H);
-      H.forEach(c), _.forEach(c), l.forEach(c), this.h();
+      H.forEach(c), _.forEach(c), o.forEach(c), this.h();
     },
     h() {
       e(a, 'class', 'svelte-253v2x'),
@@ -967,10 +967,10 @@ function Ze(r) {
         e(n, 'class', 'svelte-253v2x'),
         he(n, 'open', r[1]);
     },
-    m(o, l) {
-      E && E.m(o, l),
-        $(o, t, l),
-        $(o, n, l),
+    m(l, o) {
+      E && E.m(l, o),
+        $(l, t, o),
+        $(l, n, o),
         u(n, s),
         u(s, a),
         ce(i, a, null),
@@ -991,44 +991,44 @@ function Ze(r) {
       for (let _ = 0; _ < k.length; _ += 1) k[_].m(p, null);
       (F = !0), x || ((C = me(a, 'click', r[3])), (x = !0));
     },
-    p(o, [l]) {
+    p(l, [o]) {
       if (
-        (o[1]
+        (l[1]
           ? E
-            ? E.p(o, l)
-            : ((E = fe(o)), E.c(), E.m(t.parentNode, t))
+            ? E.p(l, o)
+            : ((E = fe(l)), E.c(), E.m(t.parentNode, t))
           : E && (E.d(1), (E = null)),
-        l & 1)
+        o & 1)
       ) {
-        P = o[0];
+        P = l[0];
         let _;
         for (_ = 0; _ < P.length; _ += 1) {
-          const L = ge(o, P, _);
-          k[_] ? k[_].p(L, l) : ((k[_] = _e(L)), k[_].c(), k[_].m(p, null));
+          const L = ge(l, P, _);
+          k[_] ? k[_].p(L, o) : ((k[_] = _e(L)), k[_].c(), k[_].m(p, null));
         }
         for (; _ < k.length; _ += 1) k[_].d(1);
         k.length = P.length;
       }
-      l & 2 && he(n, 'open', o[1]);
+      o & 2 && he(n, 'open', l[1]);
     },
-    i(o) {
+    i(l) {
       F ||
-        (Q(i.$$.fragment, o),
-        Q(y.$$.fragment, o),
-        Q(S.$$.fragment, o),
+        (Q(i.$$.fragment, l),
+        Q(y.$$.fragment, l),
+        Q(S.$$.fragment, l),
         (F = !0));
     },
-    o(o) {
-      X(i.$$.fragment, o), X(y.$$.fragment, o), X(S.$$.fragment, o), (F = !1);
+    o(l) {
+      X(i.$$.fragment, l), X(y.$$.fragment, l), X(S.$$.fragment, l), (F = !1);
     },
-    d(o) {
-      E && E.d(o),
-        o && c(t),
-        o && c(n),
+    d(l) {
+      E && E.d(l),
+        l && c(t),
+        l && c(n),
         ue(i),
         ue(y),
         ue(S),
-        Ne(k, o),
+        Ne(k, l),
         (x = !1),
         C();
     },

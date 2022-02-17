@@ -37,7 +37,7 @@ import {
   U as Ce,
 } from './vendor-85b063f6.js';
 import { D as oe } from './index-ccd418f9.js';
-import './@component-docs_components-26e03bf3.js';
+import './@component-docs_components-f89dfe3e.js';
 import './paths-6758d194.js';
 const De = (l) => ({ intersecting: l & 1 }),
   le = (l) => ({ intersecting: l[0] });
