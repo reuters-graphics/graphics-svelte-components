@@ -90,9 +90,10 @@
 
   nav {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    max-width: 900px;
     button {
-      margin: 0 4px;
+      margin: 0 4px 5px;
       background-color: transparent;
       border: 0;
       color: #999;

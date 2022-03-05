@@ -15,17 +15,36 @@ export default (embeds) => {
 
   // If many, test each path part for unique-ness
   const test = nakedEmbeds[0];
-  let replacement = 0;
+  let replacementForward = 0;
   for (const i in test.split('/')) {
     const pathPart = test.split('/')[i];
     const notUniq = nakedEmbeds.every((e) => e.split('/')[i] === pathPart);
     if (notUniq) {
-      replacement += 1;
+      replacementForward += 1;
     } else {
       break;
     }
   }
 
-  if (replacement === test.split('/').length) return nakedEmbeds;
-  return nakedEmbeds.map((e) => e.split('/').slice(replacement).join('/'));
+  if (replacementForward === test.split('/').length) return nakedEmbeds;
+
+  let replacementBackward = 0;
+  for (const i in test.split('/').reverse()) {
+    const pathPart = test.split('/').reverse()[i];
+    const notUniq = nakedEmbeds.every(
+      (e) => e.split('/').reverse()[i] === pathPart
+    );
+    if (notUniq) {
+      replacementBackward += 1;
+    } else {
+      break;
+    }
+  }
+
+  return nakedEmbeds.map((e) =>
+    e
+      .split('/')
+      .slice(replacementForward, replacementBackward * -1)
+      .join('/')
+  );
 };
