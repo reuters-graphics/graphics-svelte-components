@@ -37,7 +37,7 @@ import {
   a3 as ko,
 } from './vendor-85b063f6.js';
 import { D as rn } from './index-ccd418f9.js';
-import './@component-docs_components-0f238320.js';
+import './@component-docs_components-e77fd343.js';
 import { a as Un } from './paths-6758d194.js';
 const fo = (_) => ({}),
   He = (_) => ({}),

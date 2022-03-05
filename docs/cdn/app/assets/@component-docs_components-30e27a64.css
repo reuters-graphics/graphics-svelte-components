@@ -112,7 +112,7 @@ div.svelte-715e2e a.svelte-715e2e:hover {
 .handle.svelte-1o1jkdv.svelte-1o1jkdv.svelte-1o1jkdv:focus {
   outline: none;
 }
-header.svelte-l2mcmd.svelte-l2mcmd {
+header.svelte-97ib6o.svelte-97ib6o {
   font-family: Knowledge, Source Sans Pro, Arial, sans-serif;
   font-size: 50px;
   text-align: center;
@@ -120,47 +120,48 @@ header.svelte-l2mcmd.svelte-l2mcmd {
   font-weight: 700;
   margin: 20px 0;
 }
-nav.svelte-l2mcmd.svelte-l2mcmd {
+nav.svelte-97ib6o.svelte-97ib6o {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  max-width: 900px;
 }
-nav.svelte-l2mcmd button.svelte-l2mcmd {
-  margin: 0 4px;
+nav.svelte-97ib6o button.svelte-97ib6o {
+  margin: 0 4px 5px;
   background-color: transparent;
   border: 0;
   color: #999;
   padding: 2px;
   cursor: pointer;
 }
-nav.svelte-l2mcmd button.active.svelte-l2mcmd {
+nav.svelte-97ib6o button.active.svelte-97ib6o {
   border-bottom: 2px solid #666;
   color: #666;
 }
-nav.svelte-l2mcmd button.svelte-l2mcmd:focus {
+nav.svelte-97ib6o button.svelte-97ib6o:focus {
   outline: none;
 }
-nav.svelte-l2mcmd button a.svelte-l2mcmd {
+nav.svelte-97ib6o button a.svelte-97ib6o {
   color: #bbb;
   font-size: 12px;
 }
-nav.svelte-l2mcmd button a.svelte-l2mcmd:hover {
+nav.svelte-97ib6o button a.svelte-97ib6o:hover {
   color: #666;
 }
-#frame-parent.svelte-l2mcmd.svelte-l2mcmd {
+#frame-parent.svelte-97ib6o.svelte-97ib6o {
   border: 1px solid #ddd;
   margin: 0 auto;
   width: var(--width);
 }
-div#home-link.svelte-l2mcmd.svelte-l2mcmd {
+div#home-link.svelte-97ib6o.svelte-97ib6o {
   position: fixed;
   bottom: 5px;
   left: 10px;
   font-size: 18px;
 }
-div#home-link.svelte-l2mcmd a.svelte-l2mcmd {
+div#home-link.svelte-97ib6o a.svelte-97ib6o {
   color: #ccc;
 }
-div#home-link.svelte-l2mcmd a.svelte-l2mcmd:hover {
+div#home-link.svelte-97ib6o a.svelte-97ib6o:hover {
   color: #666;
 }
 .placeholder.svelte-1g1o650 {
