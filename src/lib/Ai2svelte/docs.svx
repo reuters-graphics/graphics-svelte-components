@@ -127,6 +127,7 @@ Add additional chart chatter through slots.
 <Ai2svelte
   AiGraphic="{MyAiChart}"
   id="ai-map"
+  size="wide"
   ariaDescription="A map of Haiti shows the epicenter of an earthquake in the southwest of the country." 
 >
   <!-- Add a title and/or notes with slots -->
@@ -151,6 +152,7 @@ Add additional chart chatter through slots.
 <DemoContainer>
   <Ai2svelte AiGraphic="{AiChart}" id="ai-map"
    ariaHidden = {true}
+   size="wide"
   ariaDescription="A map of Haiti shows the epicenter of an earthquake in the southwest of the country." >
     <!-- Add a title and/or notes with slots -->
     <div slot="title" class="title">

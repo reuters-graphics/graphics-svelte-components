@@ -20,7 +20,9 @@
 <section class="ai2svelte-container graphic {size}" id="{id}">
   {#if (ariaHidden && (ariaDescription || $$slots.hidden)) || !ariaHidden}
     {#if $$slots.title}
-      <slot name="title" />
+      <div class="chatter-container">
+        <slot name="title" />
+      </div>
     {/if}
     {#if ariaDescription}
       <p class="visually-hidden">{ariaDescription}</p>
@@ -34,12 +36,18 @@
       <svelte:component this="{AiGraphic}" onAiMounted="{onAiMounted}" />
     </div>
     {#if $$slots.notes}
-      <slot name="notes" />
+      <div class="chatter-container">
+        <slot name="notes" />
+      </div>
     {/if}
   {/if}
 </section>
 
 <style lang="scss">
+  @import '~@reuters-graphics/style-theme-eisbaer/scss/components/containers/widths';
+  .chatter-container {
+    @extend .well;
+  }
   .visually-hidden {
     position: absolute !important;
     width: 1px !important;
