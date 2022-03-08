@@ -12,24 +12,24 @@ import {
   a as o,
   m as Hs,
   d as t,
-  b as l,
-  f as A,
+  b as p,
+  f as P,
   o as Is,
   x as ua,
   E as on,
-  F as ln,
-  G as pn,
+  F as pn,
+  G as ln,
   u as Aa,
   r as Dt,
   w as Pt,
-  t as r,
-  g as u,
+  t as i,
+  g as r,
   H as a,
-  h as po,
+  h as lo,
   v as $s,
   _ as co,
   D as cn,
-  $ as p,
+  $ as l,
   I as xa,
   a0 as io,
   a1 as ro,
@@ -37,100 +37,100 @@ import {
   a3 as ko,
 } from './vendor-85b063f6.js';
 import { D as rn } from './index-ccd418f9.js';
-import './@component-docs_components-e77fd343.js';
+import './@component-docs_components-432303bb.js';
 import { a as Un } from './paths-6758d194.js';
-const fo = (_) => ({}),
-  He = (_) => ({}),
-  go = (_) => ({}),
-  Se = (_) => ({}),
-  vo = (_) => ({}),
-  Le = (_) => ({});
-function Me(_) {
+const fo = (E) => ({}),
+  He = (E) => ({}),
+  go = (E) => ({}),
+  Se = (E) => ({}),
+  vo = (E) => ({}),
+  Le = (E) => ({});
+function Me(E) {
   let s,
-    g,
-    i,
-    c,
+    f,
     d,
-    E,
+    c,
+    u,
+    m,
     y,
     b,
-    D = _[6].title && Re(_),
-    x = _[3] && Oe(_),
-    z = _[6].hidden && Ge(_);
-  var $ = _[0];
-  function Q(m) {
-    return { props: { onAiMounted: m[5] } };
+    D = E[6].title && Re(E),
+    x = E[3] && Oe(E),
+    z = E[6].hidden && Ge(E);
+  var $ = E[0];
+  function Q(_) {
+    return { props: { onAiMounted: _[5] } };
   }
-  $ && (d = new $(Q(_)));
-  let I = _[6].notes && Ne(_);
+  $ && (u = new $(Q(E)));
+  let I = E[6].notes && Ne(E);
   return {
     c() {
       D && D.c(),
         (s = v()),
         x && x.c(),
-        (g = v()),
+        (f = v()),
         z && z.c(),
-        (i = v()),
+        (d = v()),
         (c = n('div')),
-        d && xs(d.$$.fragment),
-        (E = v()),
+        u && xs(u.$$.fragment),
+        (m = v()),
         I && I.c(),
         (y = en()),
         this.h();
     },
-    l(m) {
-      D && D.l(m),
-        (s = h(m)),
-        x && x.l(m),
-        (g = h(m)),
-        z && z.l(m),
-        (i = h(m)),
-        (c = e(m, 'DIV', { class: !0, 'aria-hidden': !0 }));
+    l(_) {
+      D && D.l(_),
+        (s = h(_)),
+        x && x.l(_),
+        (f = h(_)),
+        z && z.l(_),
+        (d = h(_)),
+        (c = e(_, 'DIV', { class: !0, 'aria-hidden': !0 }));
       var w = o(c);
-      d && Hs(d.$$.fragment, w),
+      u && Hs(u.$$.fragment, w),
         w.forEach(t),
-        (E = h(m)),
-        I && I.l(m),
+        (m = h(_)),
+        I && I.l(_),
         (y = en()),
         this.h();
     },
     h() {
-      l(c, 'class', 'ai-wrapper'), l(c, 'aria-hidden', _[2]);
+      p(c, 'class', 'ai-wrapper'), p(c, 'aria-hidden', E[2]);
     },
-    m(m, w) {
-      D && D.m(m, w),
-        A(m, s, w),
-        x && x.m(m, w),
-        A(m, g, w),
-        z && z.m(m, w),
-        A(m, i, w),
-        A(m, c, w),
-        d && Is(d, c, null),
-        A(m, E, w),
-        I && I.m(m, w),
-        A(m, y, w),
+    m(_, w) {
+      D && D.m(_, w),
+        P(_, s, w),
+        x && x.m(_, w),
+        P(_, f, w),
+        z && z.m(_, w),
+        P(_, d, w),
+        P(_, c, w),
+        u && Is(u, c, null),
+        P(_, m, w),
+        I && I.m(_, w),
+        P(_, y, w),
         (b = !0);
     },
-    p(m, w) {
-      m[6].title
+    p(_, w) {
+      _[6].title
         ? D
-          ? (D.p(m, w), w & 64 && ua(D, 1))
-          : ((D = Re(m)), D.c(), ua(D, 1), D.m(s.parentNode, s))
+          ? (D.p(_, w), w & 64 && ua(D, 1))
+          : ((D = Re(_)), D.c(), ua(D, 1), D.m(s.parentNode, s))
         : D &&
           (Dt(),
           Aa(D, 1, 1, () => {
             D = null;
           }),
           Pt()),
-        m[3]
+        _[3]
           ? x
-            ? x.p(m, w)
-            : ((x = Oe(m)), x.c(), x.m(g.parentNode, g))
+            ? x.p(_, w)
+            : ((x = Oe(_)), x.c(), x.m(f.parentNode, f))
           : x && (x.d(1), (x = null)),
-        m[6].hidden
+        _[6].hidden
           ? z
-            ? (z.p(m, w), w & 64 && ua(z, 1))
-            : ((z = Ge(m)), z.c(), ua(z, 1), z.m(i.parentNode, i))
+            ? (z.p(_, w), w & 64 && ua(z, 1))
+            : ((z = Ge(_)), z.c(), ua(z, 1), z.m(d.parentNode, d))
           : z &&
             (Dt(),
             Aa(z, 1, 1, () => {
@@ -138,27 +138,27 @@ function Me(_) {
             }),
             Pt());
       const ma = {};
-      if ((w & 32 && (ma.onAiMounted = m[5]), $ !== ($ = m[0]))) {
-        if (d) {
+      if ((w & 32 && (ma.onAiMounted = _[5]), $ !== ($ = _[0]))) {
+        if (u) {
           Dt();
-          const Ca = d;
-          Aa(Ca.$$.fragment, 1, 0, () => {
-            $s(Ca, 1);
+          const Va = u;
+          Aa(Va.$$.fragment, 1, 0, () => {
+            $s(Va, 1);
           }),
             Pt();
         }
         $
-          ? ((d = new $(Q(m))),
-            xs(d.$$.fragment),
-            ua(d.$$.fragment, 1),
-            Is(d, c, null))
-          : (d = null);
-      } else $ && d.$set(ma);
-      (!b || w & 4) && l(c, 'aria-hidden', m[2]),
-        m[6].notes
+          ? ((u = new $(Q(_))),
+            xs(u.$$.fragment),
+            ua(u.$$.fragment, 1),
+            Is(u, c, null))
+          : (u = null);
+      } else $ && u.$set(ma);
+      (!b || w & 4) && p(c, 'aria-hidden', _[2]),
+        _[6].notes
           ? I
-            ? (I.p(m, w), w & 64 && ua(I, 1))
-            : ((I = Ne(m)), I.c(), ua(I, 1), I.m(y.parentNode, y))
+            ? (I.p(_, w), w & 64 && ua(I, 1))
+            : ((I = Ne(_)), I.c(), ua(I, 1), I.m(y.parentNode, y))
           : I &&
             (Dt(),
             Aa(I, 1, 1, () => {
@@ -166,209 +166,219 @@ function Me(_) {
             }),
             Pt());
     },
-    i(m) {
-      b || (ua(D), ua(z), d && ua(d.$$.fragment, m), ua(I), (b = !0));
+    i(_) {
+      b || (ua(D), ua(z), u && ua(u.$$.fragment, _), ua(I), (b = !0));
     },
-    o(m) {
-      Aa(D), Aa(z), d && Aa(d.$$.fragment, m), Aa(I), (b = !1);
+    o(_) {
+      Aa(D), Aa(z), u && Aa(u.$$.fragment, _), Aa(I), (b = !1);
     },
-    d(m) {
-      D && D.d(m),
-        m && t(s),
-        x && x.d(m),
-        m && t(g),
-        z && z.d(m),
-        m && t(i),
-        m && t(c),
-        d && $s(d),
-        m && t(E),
-        I && I.d(m),
-        m && t(y);
-    },
-  };
-}
-function Re(_) {
-  let s;
-  const g = _[8].title,
-    i = cn(g, _, _[7], Le);
-  return {
-    c() {
-      i && i.c();
-    },
-    l(c) {
-      i && i.l(c);
-    },
-    m(c, d) {
-      i && i.m(c, d), (s = !0);
-    },
-    p(c, d) {
-      i &&
-        i.p &&
-        (!s || d & 128) &&
-        on(i, g, c, c[7], s ? pn(g, c[7], d, vo) : ln(c[7]), Le);
-    },
-    i(c) {
-      s || (ua(i, c), (s = !0));
-    },
-    o(c) {
-      Aa(i, c), (s = !1);
-    },
-    d(c) {
-      i && i.d(c);
+    d(_) {
+      D && D.d(_),
+        _ && t(s),
+        x && x.d(_),
+        _ && t(f),
+        z && z.d(_),
+        _ && t(d),
+        _ && t(c),
+        u && $s(u),
+        _ && t(m),
+        I && I.d(_),
+        _ && t(y);
     },
   };
 }
-function Oe(_) {
-  let s, g;
-  return {
-    c() {
-      (s = n('p')), (g = r(_[3])), this.h();
-    },
-    l(i) {
-      s = e(i, 'P', { class: !0 });
-      var c = o(s);
-      (g = u(c, _[3])), c.forEach(t), this.h();
-    },
-    h() {
-      l(s, 'class', 'visually-hidden svelte-a90v8t');
-    },
-    m(i, c) {
-      A(i, s, c), a(s, g);
-    },
-    p(i, c) {
-      c & 8 && po(g, i[3]);
-    },
-    d(i) {
-      i && t(s);
-    },
-  };
-}
-function Ge(_) {
-  let s, g;
-  const i = _[8].hidden,
-    c = cn(i, _, _[7], Se);
+function Re(E) {
+  let s, f;
+  const d = E[8].title,
+    c = cn(d, E, E[7], Le);
   return {
     c() {
       (s = n('div')), c && c.c(), this.h();
     },
-    l(d) {
-      s = e(d, 'DIV', { class: !0 });
-      var E = o(s);
-      c && c.l(E), E.forEach(t), this.h();
+    l(u) {
+      s = e(u, 'DIV', { class: !0 });
+      var m = o(s);
+      c && c.l(m), m.forEach(t), this.h();
     },
     h() {
-      l(s, 'class', 'visually-hidden custom svelte-a90v8t');
+      p(s, 'class', 'chatter-container svelte-kfp841');
     },
-    m(d, E) {
-      A(d, s, E), c && c.m(s, null), (g = !0);
+    m(u, m) {
+      P(u, s, m), c && c.m(s, null), (f = !0);
     },
-    p(d, E) {
+    p(u, m) {
       c &&
         c.p &&
-        (!g || E & 128) &&
-        on(c, i, d, d[7], g ? pn(i, d[7], E, go) : ln(d[7]), Se);
+        (!f || m & 128) &&
+        on(c, d, u, u[7], f ? ln(d, u[7], m, vo) : pn(u[7]), Le);
     },
-    i(d) {
-      g || (ua(c, d), (g = !0));
+    i(u) {
+      f || (ua(c, u), (f = !0));
     },
-    o(d) {
-      Aa(c, d), (g = !1);
+    o(u) {
+      Aa(c, u), (f = !1);
     },
-    d(d) {
-      d && t(s), c && c.d(d);
+    d(u) {
+      u && t(s), c && c.d(u);
     },
   };
 }
-function Ne(_) {
-  let s;
-  const g = _[8].notes,
-    i = cn(g, _, _[7], He);
+function Oe(E) {
+  let s, f;
   return {
     c() {
-      i && i.c();
+      (s = n('p')), (f = i(E[3])), this.h();
     },
-    l(c) {
-      i && i.l(c);
+    l(d) {
+      s = e(d, 'P', { class: !0 });
+      var c = o(s);
+      (f = r(c, E[3])), c.forEach(t), this.h();
     },
-    m(c, d) {
-      i && i.m(c, d), (s = !0);
+    h() {
+      p(s, 'class', 'visually-hidden svelte-kfp841');
     },
-    p(c, d) {
-      i &&
-        i.p &&
-        (!s || d & 128) &&
-        on(i, g, c, c[7], s ? pn(g, c[7], d, fo) : ln(c[7]), He);
+    m(d, c) {
+      P(d, s, c), a(s, f);
     },
-    i(c) {
-      s || (ua(i, c), (s = !0));
+    p(d, c) {
+      c & 8 && lo(f, d[3]);
     },
-    o(c) {
-      Aa(i, c), (s = !1);
-    },
-    d(c) {
-      i && i.d(c);
+    d(d) {
+      d && t(s);
     },
   };
 }
-function ho(_) {
+function Ge(E) {
+  let s, f;
+  const d = E[8].hidden,
+    c = cn(d, E, E[7], Se);
+  return {
+    c() {
+      (s = n('div')), c && c.c(), this.h();
+    },
+    l(u) {
+      s = e(u, 'DIV', { class: !0 });
+      var m = o(s);
+      c && c.l(m), m.forEach(t), this.h();
+    },
+    h() {
+      p(s, 'class', 'visually-hidden custom svelte-kfp841');
+    },
+    m(u, m) {
+      P(u, s, m), c && c.m(s, null), (f = !0);
+    },
+    p(u, m) {
+      c &&
+        c.p &&
+        (!f || m & 128) &&
+        on(c, d, u, u[7], f ? ln(d, u[7], m, go) : pn(u[7]), Se);
+    },
+    i(u) {
+      f || (ua(c, u), (f = !0));
+    },
+    o(u) {
+      Aa(c, u), (f = !1);
+    },
+    d(u) {
+      u && t(s), c && c.d(u);
+    },
+  };
+}
+function Ne(E) {
+  let s, f;
+  const d = E[8].notes,
+    c = cn(d, E, E[7], He);
+  return {
+    c() {
+      (s = n('div')), c && c.c(), this.h();
+    },
+    l(u) {
+      s = e(u, 'DIV', { class: !0 });
+      var m = o(s);
+      c && c.l(m), m.forEach(t), this.h();
+    },
+    h() {
+      p(s, 'class', 'chatter-container svelte-kfp841');
+    },
+    m(u, m) {
+      P(u, s, m), c && c.m(s, null), (f = !0);
+    },
+    p(u, m) {
+      c &&
+        c.p &&
+        (!f || m & 128) &&
+        on(c, d, u, u[7], f ? ln(d, u[7], m, fo) : pn(u[7]), He);
+    },
+    i(u) {
+      f || (ua(c, u), (f = !0));
+    },
+    o(u) {
+      Aa(c, u), (f = !1);
+    },
+    d(u) {
+      u && t(s), c && c.d(u);
+    },
+  };
+}
+function ho(E) {
   let s,
-    g,
-    i,
-    c = ((_[2] && (_[3] || _[6].hidden)) || !_[2]) && Me(_);
+    f,
+    d,
+    c = ((E[2] && (E[3] || E[6].hidden)) || !E[2]) && Me(E);
   return {
     c() {
       (s = n('section')), c && c.c(), this.h();
     },
-    l(d) {
-      s = e(d, 'SECTION', { class: !0, id: !0 });
-      var E = o(s);
-      c && c.l(E), E.forEach(t), this.h();
+    l(u) {
+      s = e(u, 'SECTION', { class: !0, id: !0 });
+      var m = o(s);
+      c && c.l(m), m.forEach(t), this.h();
     },
     h() {
-      l(
+      p(
         s,
         'class',
-        (g = 'ai2svelte-container graphic ' + _[4] + ' svelte-a90v8t')
+        (f = 'ai2svelte-container graphic ' + E[4] + ' svelte-kfp841')
       ),
-        l(s, 'id', _[1]);
+        p(s, 'id', E[1]);
     },
-    m(d, E) {
-      A(d, s, E), c && c.m(s, null), (i = !0);
+    m(u, m) {
+      P(u, s, m), c && c.m(s, null), (d = !0);
     },
-    p(d, [E]) {
-      (d[2] && (d[3] || d[6].hidden)) || !d[2]
+    p(u, [m]) {
+      (u[2] && (u[3] || u[6].hidden)) || !u[2]
         ? c
-          ? (c.p(d, E), E & 76 && ua(c, 1))
-          : ((c = Me(d)), c.c(), ua(c, 1), c.m(s, null))
+          ? (c.p(u, m), m & 76 && ua(c, 1))
+          : ((c = Me(u)), c.c(), ua(c, 1), c.m(s, null))
         : c &&
           (Dt(),
           Aa(c, 1, 1, () => {
             c = null;
           }),
           Pt()),
-        (!i ||
-          (E & 16 &&
-            g !==
-              (g =
-                'ai2svelte-container graphic ' + d[4] + ' svelte-a90v8t'))) &&
-          l(s, 'class', g),
-        (!i || E & 2) && l(s, 'id', d[1]);
+        (!d ||
+          (m & 16 &&
+            f !==
+              (f =
+                'ai2svelte-container graphic ' + u[4] + ' svelte-kfp841'))) &&
+          p(s, 'class', f),
+        (!d || m & 2) && p(s, 'id', u[1]);
     },
-    i(d) {
-      i || (ua(c), (i = !0));
+    i(u) {
+      d || (ua(c), (d = !0));
     },
-    o(d) {
-      Aa(c), (i = !1);
+    o(u) {
+      Aa(c), (d = !1);
     },
-    d(d) {
-      d && t(s), c && c.d();
+    d(u) {
+      u && t(s), c && c.d();
     },
   };
 }
-function mo(_, s, g) {
-  let { $$slots: i = {}, $$scope: c } = s;
-  const d = co(i);
-  let { AiGraphic: E } = s,
+function mo(E, s, f) {
+  let { $$slots: d = {}, $$scope: c } = s;
+  const u = co(d);
+  let { AiGraphic: m } = s,
     { id: y = '' } = s,
     { ariaHidden: b = !0 } = s,
     { ariaDescription: D = null } = s,
@@ -380,16 +390,16 @@ function mo(_, s, g) {
       console.warn(
         'Must provide aria description for ai2svelte components if ariaHidden is true.'
       ),
-    (_.$$set = ($) => {
-      'AiGraphic' in $ && g(0, (E = $.AiGraphic)),
-        'id' in $ && g(1, (y = $.id)),
-        'ariaHidden' in $ && g(2, (b = $.ariaHidden)),
-        'ariaDescription' in $ && g(3, (D = $.ariaDescription)),
-        'size' in $ && g(4, (x = $.size)),
-        'onAiMounted' in $ && g(5, (z = $.onAiMounted)),
-        '$$scope' in $ && g(7, (c = $.$$scope));
+    (E.$$set = ($) => {
+      'AiGraphic' in $ && f(0, (m = $.AiGraphic)),
+        'id' in $ && f(1, (y = $.id)),
+        'ariaHidden' in $ && f(2, (b = $.ariaHidden)),
+        'ariaDescription' in $ && f(3, (D = $.ariaDescription)),
+        'size' in $ && f(4, (x = $.size)),
+        'onAiMounted' in $ && f(5, (z = $.onAiMounted)),
+        '$$scope' in $ && f(7, (c = $.$$scope));
     }),
-    [E, y, b, D, x, z, d, c, i]
+    [m, y, b, D, x, z, u, c, d]
   );
 }
 class un extends sn {
@@ -405,13 +415,13 @@ class un extends sn {
     });
   }
 }
-function je(_) {
+function je(E) {
   let s,
-    g,
-    i,
-    c,
+    f,
     d,
-    E,
+    c,
+    u,
+    m,
     y,
     b,
     D,
@@ -420,15 +430,15 @@ function je(_) {
     $,
     Q,
     I,
-    m,
+    _,
     w,
     ma,
-    Ca,
+    Va,
     H,
     aa,
     Ia,
     ja,
-    C,
+    V,
     W,
     ya,
     Ha,
@@ -440,7 +450,7 @@ function je(_) {
     F,
     Sa,
     $a,
-    T,
+    A,
     ta,
     La,
     qa,
@@ -449,9 +459,9 @@ function je(_) {
     _a,
     L,
     ca,
-    la,
+    pa,
     da,
-    V,
+    C,
     ea,
     Ra,
     Ua,
@@ -472,7 +482,7 @@ function je(_) {
     Oa,
     B,
     q,
-    Va,
+    Ca,
     Da,
     N,
     Y,
@@ -481,391 +491,391 @@ function je(_) {
     U,
     ra,
     Pa,
-    pa,
+    la,
     R,
     K,
     Ka;
   return {
     c() {
       (s = n('div')),
-        (g = n('div')),
-        (i = v()),
+        (f = n('div')),
+        (d = v()),
         (c = n('div')),
-        (E = v()),
+        (m = v()),
         (y = n('div')),
         (b = n('p')),
-        (D = r('Shake intensity')),
+        (D = i('Shake intensity')),
         (x = v()),
         (z = n('div')),
         ($ = n('p')),
-        (Q = r('Light')),
+        (Q = i('Light')),
         (I = v()),
-        (m = n('div')),
+        (_ = n('div')),
         (w = n('p')),
-        (ma = r('Moderate')),
-        (Ca = v()),
+        (ma = i('Moderate')),
+        (Va = v()),
         (H = n('div')),
         (aa = n('p')),
-        (Ia = r('Cap-Haitien')),
+        (Ia = i('Cap-Haitien')),
         (ja = v()),
-        (C = n('div')),
+        (V = n('div')),
         (W = n('p')),
-        (ya = r('Strong')),
+        (ya = i('Strong')),
         (Ha = v()),
         (S = n('div')),
         (sa = n('p')),
-        (Ja = r('Very strong')),
+        (Ja = i('Very strong')),
         (ba = v()),
         (O = n('div')),
         (F = n('p')),
-        (Sa = r('Gona\xEFves')),
+        (Sa = i('Gona\xEFves')),
         ($a = v()),
-        (T = n('div')),
+        (A = n('div')),
         (ta = n('p')),
-        (La = r('Caribbean')),
+        (La = i('Caribbean')),
         (qa = v()),
         (na = n('p')),
-        (Ma = r('Sea')),
+        (Ma = i('Sea')),
         (_a = v()),
         (L = n('div')),
         (ca = n('p')),
-        (la = r('HAITI')),
+        (pa = i('HAITI')),
         (da = v()),
-        (V = n('div')),
+        (C = n('div')),
         (ea = n('p')),
-        (Ra = r('Jeremie')),
+        (Ra = i('Jeremie')),
         (Ua = v()),
         (M = n('div')),
         (ka = n('p')),
-        (Ba = r('Port-au-Prince')),
+        (Ba = i('Port-au-Prince')),
         (X = v()),
         (J = n('div')),
         (fa = n('p')),
-        (Ya = r('Epicenter')),
+        (Ya = i('Epicenter')),
         (Z = v()),
         (G = n('div')),
         (oa = n('p')),
-        (za = r('Jacmel')),
+        (za = i('Jacmel')),
         (ga = v()),
         (j = n('div')),
         (wa = n('p')),
-        (Oa = r('Les Cayes')),
+        (Oa = i('Les Cayes')),
         (B = v()),
         (q = n('div')),
-        (Va = n('p')),
-        (Da = r('50 mi')),
+        (Ca = n('p')),
+        (Da = i('50 mi')),
         (N = v()),
         (Y = n('div')),
         (ia = n('p')),
-        (Wa = r('Dominican')),
+        (Wa = i('Dominican')),
         (U = v()),
         (ra = n('p')),
-        (Pa = r('Republic')),
-        (pa = v()),
+        (Pa = i('Republic')),
+        (la = v()),
         (R = n('div')),
         (K = n('p')),
-        (Ka = r('50 km')),
+        (Ka = i('50 km')),
         this.h();
     },
     l(va) {
       s = e(va, 'DIV', { id: !0, class: !0, style: !0 });
-      var f = o(s);
-      (g = e(f, 'DIV', { style: !0 })),
-        o(g).forEach(t),
-        (i = h(f)),
-        (c = e(f, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
+      var g = o(s);
+      (f = e(g, 'DIV', { style: !0 })),
+        o(f).forEach(t),
+        (d = h(g)),
+        (c = e(g, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
         o(c).forEach(t),
-        (E = h(f)),
-        (y = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (m = h(g)),
+        (y = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ds = o(y);
       b = e(ds, 'P', { class: !0 });
       var ks = o(b);
-      (D = u(ks, 'Shake intensity')),
+      (D = r(ks, 'Shake intensity')),
         ks.forEach(t),
         ds.forEach(t),
-        (x = h(f)),
-        (z = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (x = h(g)),
+        (z = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ts = o(z);
       $ = e(ts, 'P', { class: !0 });
       var Ga = o($);
-      (Q = u(Ga, 'Light')),
+      (Q = r(Ga, 'Light')),
         Ga.forEach(t),
         ts.forEach(t),
-        (I = h(f)),
-        (m = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Qa = o(m);
+        (I = h(g)),
+        (_ = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Qa = o(_);
       w = e(Qa, 'P', { class: !0 });
       var ns = o(w);
-      (ma = u(ns, 'Moderate')),
+      (ma = r(ns, 'Moderate')),
         ns.forEach(t),
         Qa.forEach(t),
-        (Ca = h(f)),
-        (H = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Va = h(g)),
+        (H = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var fs = o(H);
       aa = e(fs, 'P', { class: !0 });
       var gs = o(aa);
-      (Ia = u(gs, 'Cap-Haitien')),
+      (Ia = r(gs, 'Cap-Haitien')),
         gs.forEach(t),
         fs.forEach(t),
-        (ja = h(f)),
-        (C = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var vs = o(C);
+        (ja = h(g)),
+        (V = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var vs = o(V);
       W = e(vs, 'P', { class: !0 });
       var Ta = o(W);
-      (ya = u(Ta, 'Strong')),
+      (ya = r(Ta, 'Strong')),
         Ta.forEach(t),
         vs.forEach(t),
-        (Ha = h(f)),
-        (S = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Ha = h(g)),
+        (S = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var hs = o(S);
       sa = e(hs, 'P', { class: !0 });
       var es = o(sa);
-      (Ja = u(es, 'Very strong')),
+      (Ja = r(es, 'Very strong')),
         es.forEach(t),
         hs.forEach(t),
-        (ba = h(f)),
-        (O = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (ba = h(g)),
+        (O = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ms = o(O);
       F = e(ms, 'P', { class: !0 });
       var _s = o(F);
-      (Sa = u(_s, 'Gona\xEFves')),
+      (Sa = r(_s, 'Gona\xEFves')),
         _s.forEach(t),
         ms.forEach(t),
-        ($a = h(f)),
-        (T = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Ea = o(T);
+        ($a = h(g)),
+        (A = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Ea = o(A);
       ta = e(Ea, 'P', { class: !0 });
       var Es = o(ta);
-      (La = u(Es, 'Caribbean')),
+      (La = r(Es, 'Caribbean')),
         Es.forEach(t),
         (qa = h(Ea)),
         (na = e(Ea, 'P', { class: !0 }));
       var ys = o(na);
-      (Ma = u(ys, 'Sea')),
+      (Ma = r(ys, 'Sea')),
         ys.forEach(t),
         Ea.forEach(t),
-        (_a = h(f)),
-        (L = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (_a = h(g)),
+        (L = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var rs = o(L);
       ca = e(rs, 'P', { class: !0 });
       var Fa = o(ca);
-      (la = u(Fa, 'HAITI')),
+      (pa = r(Fa, 'HAITI')),
         Fa.forEach(t),
         rs.forEach(t),
-        (da = h(f)),
-        (V = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Xa = o(V);
+        (da = h(g)),
+        (C = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Xa = o(C);
       ea = e(Xa, 'P', { class: !0 });
       var us = o(ea);
-      (Ra = u(us, 'Jeremie')),
+      (Ra = r(us, 'Jeremie')),
         us.forEach(t),
         Xa.forEach(t),
-        (Ua = h(f)),
-        (M = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Ua = h(g)),
+        (M = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var Na = o(M);
       ka = e(Na, 'P', { class: !0 });
       var os = o(ka);
-      (Ba = u(os, 'Port-au-Prince')),
+      (Ba = r(os, 'Port-au-Prince')),
         os.forEach(t),
         Na.forEach(t),
-        (X = h(f)),
-        (J = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (X = h(g)),
+        (J = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var bs = o(J);
       fa = e(bs, 'P', { class: !0 });
       var Za = o(fa);
-      (Ya = u(Za, 'Epicenter')),
+      (Ya = r(Za, 'Epicenter')),
         Za.forEach(t),
         bs.forEach(t),
-        (Z = h(f)),
-        (G = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Z = h(g)),
+        (G = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ha = o(G);
       oa = e(ha, 'P', { class: !0 });
       var zs = o(oa);
-      (za = u(zs, 'Jacmel')),
+      (za = r(zs, 'Jacmel')),
         zs.forEach(t),
         ha.forEach(t),
-        (ga = h(f)),
-        (j = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ls = o(j);
-      wa = e(ls, 'P', { class: !0 });
+        (ga = h(g)),
+        (j = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var ps = o(j);
+      wa = e(ps, 'P', { class: !0 });
       var ws = o(wa);
-      (Oa = u(ws, 'Les Cayes')),
+      (Oa = r(ws, 'Les Cayes')),
         ws.forEach(t),
-        ls.forEach(t),
-        (B = h(f)),
-        (q = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var as = o(q);
-      Va = e(as, 'P', { class: !0 });
-      var ps = o(Va);
-      (Da = u(ps, '50 mi')),
         ps.forEach(t),
+        (B = h(g)),
+        (q = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var as = o(q);
+      Ca = e(as, 'P', { class: !0 });
+      var ls = o(Ca);
+      (Da = r(ls, '50 mi')),
+        ls.forEach(t),
         as.forEach(t),
-        (N = h(f)),
-        (Y = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (N = h(g)),
+        (Y = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var cs = o(Y);
       ia = e(cs, 'P', { class: !0 });
       var Ds = o(ia);
-      (Wa = u(Ds, 'Dominican')),
+      (Wa = r(Ds, 'Dominican')),
         Ds.forEach(t),
         (U = h(cs)),
         (ra = e(cs, 'P', { class: !0 }));
       var is = o(ra);
-      (Pa = u(is, 'Republic')),
+      (Pa = r(is, 'Republic')),
         is.forEach(t),
         cs.forEach(t),
-        (pa = h(f)),
-        (R = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (la = h(g)),
+        (R = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ss = o(R);
       K = e(ss, 'P', { class: !0 });
       var Ps = o(K);
-      (Ka = u(Ps, '50 km')),
+      (Ka = r(Ps, '50 km')),
         Ps.forEach(t),
         ss.forEach(t),
-        f.forEach(t),
+        g.forEach(t),
         this.h();
     },
     h() {
-      p(g, 'padding', '0 0 91.7004% 0'),
-        l(c, 'id', 'g-_ai-chart-xs-img'),
-        l(c, 'class', 'g-aiImg svelte-zofauz'),
-        l(c, 'alt', ''),
-        l(
+      l(f, 'padding', '0 0 91.7004% 0'),
+        p(c, 'id', 'g-_ai-chart-xs-img'),
+        p(c, 'class', 'g-aiImg svelte-zofauz'),
+        p(c, 'alt', ''),
+        p(
           c,
           'style',
-          (d = `background-image: url(${Un}/images/graphics/ai-chart-xs.png);`)
+          (u = `background-image: url(${Un}/images/graphics/ai-chart-xs.png);`)
         ),
-        l(b, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(y, 'id', 'g-ai0-1'),
-        l(y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(y, 'top', '3.216%'),
-        p(y, 'margin-top', '-7.7px'),
-        p(y, 'left', '0.5952%'),
-        p(y, 'width', '99px'),
-        l($, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(z, 'id', 'g-ai0-2'),
-        l(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(z, 'top', '9.8251%'),
-        p(z, 'margin-top', '-7.7px'),
-        p(z, 'left', '4.9821%'),
-        p(z, 'width', '47px'),
-        l(w, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(m, 'id', 'g-ai0-3'),
-        l(m, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(m, 'top', '15.7733%'),
-        p(m, 'margin-top', '-7.7px'),
-        p(m, 'left', '4.9821%'),
-        p(m, 'width', '69px'),
-        l(aa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(H, 'id', 'g-ai0-4'),
-        l(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(H, 'top', '16.4343%'),
-        p(H, 'margin-top', '-7.7px'),
-        p(H, 'left', '79.0675%'),
-        p(H, 'width', '82px'),
-        l(W, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(C, 'id', 'g-ai0-5'),
-        l(C, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(C, 'top', '21.7216%'),
-        p(C, 'margin-top', '-7.7px'),
-        p(C, 'left', '4.9821%'),
-        p(C, 'width', '55px'),
-        l(sa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(S, 'id', 'g-ai0-6'),
-        l(S, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(S, 'top', '28.0002%'),
-        p(S, 'margin-top', '-7.7px'),
-        p(S, 'left', '4.9821%'),
-        p(S, 'width', '78px'),
-        l(F, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(O, 'id', 'g-ai0-7'),
-        l(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(O, 'top', '28.9916%'),
-        p(O, 'margin-top', '-7.7px'),
-        p(O, 'left', '62.2348%'),
-        p(O, 'width', '68px'),
-        l(ta, 'class', 'g-pstyle1 svelte-zofauz'),
-        l(na, 'class', 'g-pstyle1 svelte-zofauz'),
-        l(T, 'id', 'g-ai0-8'),
-        l(T, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(T, 'top', '39.9449%'),
-        p(T, 'margin-top', '-14.9px'),
-        p(T, 'left', '28.714%'),
-        p(T, 'margin-left', '-36.5px'),
-        p(T, 'width', '73px'),
-        l(ca, 'class', 'g-pstyle2 svelte-zofauz'),
-        l(L, 'id', 'g-ai0-9'),
-        l(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(L, 'top', '42.6579%'),
-        p(L, 'margin-top', '-10.1px'),
-        p(L, 'left', '68.5061%'),
-        p(L, 'width', '77px'),
-        l(ea, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(V, 'id', 'g-ai0-10'),
-        l(V, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(V, 'top', '59.0632%'),
-        p(V, 'margin-top', '-7.7px'),
-        p(V, 'left', '11.2526%'),
-        p(V, 'width', '63px'),
-        l(ka, 'class', 'g-pstyle3 svelte-zofauz'),
-        l(M, 'id', 'g-ai0-11'),
-        l(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(M, 'top', '61.1155%'),
-        p(M, 'margin-top', '-8.9px'),
-        p(M, 'left', '70.5455%'),
-        p(M, 'width', '106px'),
-        l(fa, 'class', 'g-pstyle3 svelte-zofauz'),
-        l(J, 'id', 'g-ai0-12'),
-        l(J, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(J, 'top', '62.1069%'),
-        p(J, 'margin-top', '-8.9px'),
-        p(J, 'left', '32.6015%'),
-        p(J, 'width', '77px'),
-        l(oa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(G, 'id', 'g-ai0-13'),
-        l(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(G, 'top', '78.8906%'),
-        p(G, 'margin-top', '-7.7px'),
-        p(G, 'left', '63.9138%'),
-        p(G, 'width', '58px'),
-        l(wa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(j, 'id', 'g-ai0-14'),
-        l(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(j, 'top', '80.2124%'),
-        p(j, 'margin-top', '-7.7px'),
-        p(j, 'left', '22.5649%'),
-        p(j, 'width', '71px'),
-        l(Va, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(q, 'id', 'g-ai0-15'),
-        l(q, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(q, 'top', '87.8129%'),
-        p(q, 'margin-top', '-7.7px'),
-        p(q, 'left', '0.6179%'),
-        p(q, 'width', '49px'),
-        l(ia, 'class', 'g-pstyle4 svelte-zofauz'),
-        l(ra, 'class', 'g-pstyle4 svelte-zofauz'),
-        l(Y, 'id', 'g-ai0-16'),
-        l(Y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(Y, 'top', '91.0202%'),
-        p(Y, 'margin-top', '-11.4px'),
-        p(Y, 'right', '10.4418%'),
-        p(Y, 'width', '70px'),
-        l(K, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(R, 'id', 'g-ai0-17'),
-        l(R, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(R, 'top', '93.7611%'),
-        p(R, 'margin-top', '-7.7px'),
-        p(R, 'left', '0.6179%'),
-        p(R, 'width', '52px'),
-        l(s, 'id', 'g-_ai-chart-xs'),
-        l(s, 'class', 'g-artboard svelte-zofauz'),
-        l(s, 'style', '');
+        p(b, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(y, 'id', 'g-ai0-1'),
+        p(y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(y, 'top', '3.216%'),
+        l(y, 'margin-top', '-7.7px'),
+        l(y, 'left', '0.5952%'),
+        l(y, 'width', '99px'),
+        p($, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(z, 'id', 'g-ai0-2'),
+        p(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(z, 'top', '9.8251%'),
+        l(z, 'margin-top', '-7.7px'),
+        l(z, 'left', '4.9821%'),
+        l(z, 'width', '47px'),
+        p(w, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(_, 'id', 'g-ai0-3'),
+        p(_, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(_, 'top', '15.7733%'),
+        l(_, 'margin-top', '-7.7px'),
+        l(_, 'left', '4.9821%'),
+        l(_, 'width', '69px'),
+        p(aa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(H, 'id', 'g-ai0-4'),
+        p(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(H, 'top', '16.4343%'),
+        l(H, 'margin-top', '-7.7px'),
+        l(H, 'left', '79.0675%'),
+        l(H, 'width', '82px'),
+        p(W, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(V, 'id', 'g-ai0-5'),
+        p(V, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(V, 'top', '21.7216%'),
+        l(V, 'margin-top', '-7.7px'),
+        l(V, 'left', '4.9821%'),
+        l(V, 'width', '55px'),
+        p(sa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(S, 'id', 'g-ai0-6'),
+        p(S, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(S, 'top', '28.0002%'),
+        l(S, 'margin-top', '-7.7px'),
+        l(S, 'left', '4.9821%'),
+        l(S, 'width', '78px'),
+        p(F, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(O, 'id', 'g-ai0-7'),
+        p(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(O, 'top', '28.9916%'),
+        l(O, 'margin-top', '-7.7px'),
+        l(O, 'left', '62.2348%'),
+        l(O, 'width', '68px'),
+        p(ta, 'class', 'g-pstyle1 svelte-zofauz'),
+        p(na, 'class', 'g-pstyle1 svelte-zofauz'),
+        p(A, 'id', 'g-ai0-8'),
+        p(A, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(A, 'top', '39.9449%'),
+        l(A, 'margin-top', '-14.9px'),
+        l(A, 'left', '28.714%'),
+        l(A, 'margin-left', '-36.5px'),
+        l(A, 'width', '73px'),
+        p(ca, 'class', 'g-pstyle2 svelte-zofauz'),
+        p(L, 'id', 'g-ai0-9'),
+        p(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(L, 'top', '42.6579%'),
+        l(L, 'margin-top', '-10.1px'),
+        l(L, 'left', '68.5061%'),
+        l(L, 'width', '77px'),
+        p(ea, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(C, 'id', 'g-ai0-10'),
+        p(C, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(C, 'top', '59.0632%'),
+        l(C, 'margin-top', '-7.7px'),
+        l(C, 'left', '11.2526%'),
+        l(C, 'width', '63px'),
+        p(ka, 'class', 'g-pstyle3 svelte-zofauz'),
+        p(M, 'id', 'g-ai0-11'),
+        p(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(M, 'top', '61.1155%'),
+        l(M, 'margin-top', '-8.9px'),
+        l(M, 'left', '70.5455%'),
+        l(M, 'width', '106px'),
+        p(fa, 'class', 'g-pstyle3 svelte-zofauz'),
+        p(J, 'id', 'g-ai0-12'),
+        p(J, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(J, 'top', '62.1069%'),
+        l(J, 'margin-top', '-8.9px'),
+        l(J, 'left', '32.6015%'),
+        l(J, 'width', '77px'),
+        p(oa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(G, 'id', 'g-ai0-13'),
+        p(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(G, 'top', '78.8906%'),
+        l(G, 'margin-top', '-7.7px'),
+        l(G, 'left', '63.9138%'),
+        l(G, 'width', '58px'),
+        p(wa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(j, 'id', 'g-ai0-14'),
+        p(j, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(j, 'top', '80.2124%'),
+        l(j, 'margin-top', '-7.7px'),
+        l(j, 'left', '22.5649%'),
+        l(j, 'width', '71px'),
+        p(Ca, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(q, 'id', 'g-ai0-15'),
+        p(q, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(q, 'top', '87.8129%'),
+        l(q, 'margin-top', '-7.7px'),
+        l(q, 'left', '0.6179%'),
+        l(q, 'width', '49px'),
+        p(ia, 'class', 'g-pstyle4 svelte-zofauz'),
+        p(ra, 'class', 'g-pstyle4 svelte-zofauz'),
+        p(Y, 'id', 'g-ai0-16'),
+        p(Y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(Y, 'top', '91.0202%'),
+        l(Y, 'margin-top', '-11.4px'),
+        l(Y, 'right', '10.4418%'),
+        l(Y, 'width', '70px'),
+        p(K, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(R, 'id', 'g-ai0-17'),
+        p(R, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(R, 'top', '93.7611%'),
+        l(R, 'margin-top', '-7.7px'),
+        l(R, 'left', '0.6179%'),
+        l(R, 'width', '52px'),
+        p(s, 'id', 'g-_ai-chart-xs'),
+        p(s, 'class', 'g-artboard svelte-zofauz'),
+        p(s, 'style', '');
     },
-    m(va, f) {
-      A(va, s, f),
-        a(s, g),
-        a(s, i),
+    m(va, g) {
+      P(va, s, g),
+        a(s, f),
+        a(s, d),
         a(s, c),
-        a(s, E),
+        a(s, m),
         a(s, y),
         a(y, b),
         a(b, D),
@@ -874,16 +884,16 @@ function je(_) {
         a(z, $),
         a($, Q),
         a(s, I),
-        a(s, m),
-        a(m, w),
+        a(s, _),
+        a(_, w),
         a(w, ma),
-        a(s, Ca),
+        a(s, Va),
         a(s, H),
         a(H, aa),
         a(aa, Ia),
         a(s, ja),
-        a(s, C),
-        a(C, W),
+        a(s, V),
+        a(V, W),
         a(W, ya),
         a(s, Ha),
         a(s, S),
@@ -894,19 +904,19 @@ function je(_) {
         a(O, F),
         a(F, Sa),
         a(s, $a),
-        a(s, T),
-        a(T, ta),
+        a(s, A),
+        a(A, ta),
         a(ta, La),
-        a(T, qa),
-        a(T, na),
+        a(A, qa),
+        a(A, na),
         a(na, Ma),
         a(s, _a),
         a(s, L),
         a(L, ca),
-        a(ca, la),
+        a(ca, pa),
         a(s, da),
-        a(s, V),
-        a(V, ea),
+        a(s, C),
+        a(C, ea),
         a(ea, Ra),
         a(s, Ua),
         a(s, M),
@@ -926,8 +936,8 @@ function je(_) {
         a(wa, Oa),
         a(s, B),
         a(s, q),
-        a(q, Va),
-        a(Va, Da),
+        a(q, Ca),
+        a(Ca, Da),
         a(s, N),
         a(s, Y),
         a(Y, ia),
@@ -935,7 +945,7 @@ function je(_) {
         a(Y, U),
         a(Y, ra),
         a(ra, Pa),
-        a(s, pa),
+        a(s, la),
         a(s, R),
         a(R, K),
         a(K, Ka);
@@ -946,13 +956,13 @@ function je(_) {
     },
   };
 }
-function Je(_) {
+function Je(E) {
   let s,
-    g,
-    i,
-    c,
+    f,
     d,
-    E,
+    c,
+    u,
+    m,
     y,
     b,
     D,
@@ -961,15 +971,15 @@ function Je(_) {
     $,
     Q,
     I,
-    m,
+    _,
     w,
     ma,
-    Ca,
+    Va,
     H,
     aa,
     Ia,
     ja,
-    C,
+    V,
     W,
     ya,
     Ha,
@@ -981,7 +991,7 @@ function Je(_) {
     F,
     Sa,
     $a,
-    T,
+    A,
     ta,
     La,
     qa,
@@ -990,9 +1000,9 @@ function Je(_) {
     _a,
     L,
     ca,
-    la,
+    pa,
     da,
-    V,
+    C,
     ea,
     Ra,
     Ua,
@@ -1013,7 +1023,7 @@ function Je(_) {
     Oa,
     B,
     q,
-    Va,
+    Ca,
     Da,
     N,
     Y,
@@ -1022,392 +1032,392 @@ function Je(_) {
     U,
     ra,
     Pa,
-    pa,
+    la,
     R,
     K,
     Ka;
   return {
     c() {
       (s = n('div')),
-        (g = n('div')),
-        (i = v()),
+        (f = n('div')),
+        (d = v()),
         (c = n('div')),
-        (E = v()),
+        (m = v()),
         (y = n('div')),
         (b = n('p')),
-        (D = r('Shake intensity')),
+        (D = i('Shake intensity')),
         (x = v()),
         (z = n('div')),
         ($ = n('p')),
-        (Q = r('Light')),
+        (Q = i('Light')),
         (I = v()),
-        (m = n('div')),
+        (_ = n('div')),
         (w = n('p')),
-        (ma = r('Moderate')),
-        (Ca = v()),
+        (ma = i('Moderate')),
+        (Va = v()),
         (H = n('div')),
         (aa = n('p')),
-        (Ia = r('Cap-Haitien')),
+        (Ia = i('Cap-Haitien')),
         (ja = v()),
-        (C = n('div')),
+        (V = n('div')),
         (W = n('p')),
-        (ya = r('Strong')),
+        (ya = i('Strong')),
         (Ha = v()),
         (S = n('div')),
         (sa = n('p')),
-        (Ja = r('Very strong')),
+        (Ja = i('Very strong')),
         (ba = v()),
         (O = n('div')),
         (F = n('p')),
-        (Sa = r('Gona\xEFves')),
+        (Sa = i('Gona\xEFves')),
         ($a = v()),
-        (T = n('div')),
+        (A = n('div')),
         (ta = n('p')),
-        (La = r('Caribbean')),
+        (La = i('Caribbean')),
         (qa = v()),
         (na = n('p')),
-        (Ma = r('Sea')),
+        (Ma = i('Sea')),
         (_a = v()),
         (L = n('div')),
         (ca = n('p')),
-        (la = r('HAITI')),
+        (pa = i('HAITI')),
         (da = v()),
-        (V = n('div')),
+        (C = n('div')),
         (ea = n('p')),
-        (Ra = r('Jeremie')),
+        (Ra = i('Jeremie')),
         (Ua = v()),
         (M = n('div')),
         (ka = n('p')),
-        (Ba = r('Port-au-Prince')),
+        (Ba = i('Port-au-Prince')),
         (X = v()),
         (J = n('div')),
         (fa = n('p')),
-        (Ya = r('Epicenter')),
+        (Ya = i('Epicenter')),
         (Z = v()),
         (G = n('div')),
         (oa = n('p')),
-        (za = r('Dominican')),
+        (za = i('Dominican')),
         (ga = v()),
         (j = n('p')),
-        (wa = r('Republic')),
+        (wa = i('Republic')),
         (Oa = v()),
         (B = n('div')),
         (q = n('p')),
-        (Va = r('Jacmel')),
+        (Ca = i('Jacmel')),
         (Da = v()),
         (N = n('div')),
         (Y = n('p')),
-        (ia = r('Les Cayes')),
+        (ia = i('Les Cayes')),
         (Wa = v()),
         (U = n('div')),
         (ra = n('p')),
-        (Pa = r('50 mi')),
-        (pa = v()),
+        (Pa = i('50 mi')),
+        (la = v()),
         (R = n('div')),
         (K = n('p')),
-        (Ka = r('50 km')),
+        (Ka = i('50 km')),
         this.h();
     },
     l(va) {
       s = e(va, 'DIV', { id: !0, class: !0, style: !0 });
-      var f = o(s);
-      (g = e(f, 'DIV', { style: !0 })),
-        o(g).forEach(t),
-        (i = h(f)),
-        (c = e(f, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
+      var g = o(s);
+      (f = e(g, 'DIV', { style: !0 })),
+        o(f).forEach(t),
+        (d = h(g)),
+        (c = e(g, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
         o(c).forEach(t),
-        (E = h(f)),
-        (y = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (m = h(g)),
+        (y = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ds = o(y);
       b = e(ds, 'P', { class: !0 });
       var ks = o(b);
-      (D = u(ks, 'Shake intensity')),
+      (D = r(ks, 'Shake intensity')),
         ks.forEach(t),
         ds.forEach(t),
-        (x = h(f)),
-        (z = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (x = h(g)),
+        (z = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ts = o(z);
       $ = e(ts, 'P', { class: !0 });
       var Ga = o($);
-      (Q = u(Ga, 'Light')),
+      (Q = r(Ga, 'Light')),
         Ga.forEach(t),
         ts.forEach(t),
-        (I = h(f)),
-        (m = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Qa = o(m);
+        (I = h(g)),
+        (_ = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Qa = o(_);
       w = e(Qa, 'P', { class: !0 });
       var ns = o(w);
-      (ma = u(ns, 'Moderate')),
+      (ma = r(ns, 'Moderate')),
         ns.forEach(t),
         Qa.forEach(t),
-        (Ca = h(f)),
-        (H = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Va = h(g)),
+        (H = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var fs = o(H);
       aa = e(fs, 'P', { class: !0 });
       var gs = o(aa);
-      (Ia = u(gs, 'Cap-Haitien')),
+      (Ia = r(gs, 'Cap-Haitien')),
         gs.forEach(t),
         fs.forEach(t),
-        (ja = h(f)),
-        (C = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var vs = o(C);
+        (ja = h(g)),
+        (V = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var vs = o(V);
       W = e(vs, 'P', { class: !0 });
       var Ta = o(W);
-      (ya = u(Ta, 'Strong')),
+      (ya = r(Ta, 'Strong')),
         Ta.forEach(t),
         vs.forEach(t),
-        (Ha = h(f)),
-        (S = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Ha = h(g)),
+        (S = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var hs = o(S);
       sa = e(hs, 'P', { class: !0 });
       var es = o(sa);
-      (Ja = u(es, 'Very strong')),
+      (Ja = r(es, 'Very strong')),
         es.forEach(t),
         hs.forEach(t),
-        (ba = h(f)),
-        (O = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (ba = h(g)),
+        (O = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ms = o(O);
       F = e(ms, 'P', { class: !0 });
       var _s = o(F);
-      (Sa = u(_s, 'Gona\xEFves')),
+      (Sa = r(_s, 'Gona\xEFves')),
         _s.forEach(t),
         ms.forEach(t),
-        ($a = h(f)),
-        (T = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Ea = o(T);
+        ($a = h(g)),
+        (A = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Ea = o(A);
       ta = e(Ea, 'P', { class: !0 });
       var Es = o(ta);
-      (La = u(Es, 'Caribbean')),
+      (La = r(Es, 'Caribbean')),
         Es.forEach(t),
         (qa = h(Ea)),
         (na = e(Ea, 'P', { class: !0 }));
       var ys = o(na);
-      (Ma = u(ys, 'Sea')),
+      (Ma = r(ys, 'Sea')),
         ys.forEach(t),
         Ea.forEach(t),
-        (_a = h(f)),
-        (L = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (_a = h(g)),
+        (L = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var rs = o(L);
       ca = e(rs, 'P', { class: !0 });
       var Fa = o(ca);
-      (la = u(Fa, 'HAITI')),
+      (pa = r(Fa, 'HAITI')),
         Fa.forEach(t),
         rs.forEach(t),
-        (da = h(f)),
-        (V = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Xa = o(V);
+        (da = h(g)),
+        (C = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Xa = o(C);
       ea = e(Xa, 'P', { class: !0 });
       var us = o(ea);
-      (Ra = u(us, 'Jeremie')),
+      (Ra = r(us, 'Jeremie')),
         us.forEach(t),
         Xa.forEach(t),
-        (Ua = h(f)),
-        (M = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Ua = h(g)),
+        (M = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var Na = o(M);
       ka = e(Na, 'P', { class: !0 });
       var os = o(ka);
-      (Ba = u(os, 'Port-au-Prince')),
+      (Ba = r(os, 'Port-au-Prince')),
         os.forEach(t),
         Na.forEach(t),
-        (X = h(f)),
-        (J = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (X = h(g)),
+        (J = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var bs = o(J);
       fa = e(bs, 'P', { class: !0 });
       var Za = o(fa);
-      (Ya = u(Za, 'Epicenter')),
+      (Ya = r(Za, 'Epicenter')),
         Za.forEach(t),
         bs.forEach(t),
-        (Z = h(f)),
-        (G = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Z = h(g)),
+        (G = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ha = o(G);
       oa = e(ha, 'P', { class: !0 });
       var zs = o(oa);
-      (za = u(zs, 'Dominican')),
+      (za = r(zs, 'Dominican')),
         zs.forEach(t),
         (ga = h(ha)),
         (j = e(ha, 'P', { class: !0 }));
-      var ls = o(j);
-      (wa = u(ls, 'Republic')),
-        ls.forEach(t),
+      var ps = o(j);
+      (wa = r(ps, 'Republic')),
+        ps.forEach(t),
         ha.forEach(t),
-        (Oa = h(f)),
-        (B = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Oa = h(g)),
+        (B = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ws = o(B);
       q = e(ws, 'P', { class: !0 });
       var as = o(q);
-      (Va = u(as, 'Jacmel')),
+      (Ca = r(as, 'Jacmel')),
         as.forEach(t),
         ws.forEach(t),
-        (Da = h(f)),
-        (N = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ps = o(N);
-      Y = e(ps, 'P', { class: !0 });
+        (Da = h(g)),
+        (N = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var ls = o(N);
+      Y = e(ls, 'P', { class: !0 });
       var cs = o(Y);
-      (ia = u(cs, 'Les Cayes')),
+      (ia = r(cs, 'Les Cayes')),
         cs.forEach(t),
-        ps.forEach(t),
-        (Wa = h(f)),
-        (U = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        ls.forEach(t),
+        (Wa = h(g)),
+        (U = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ds = o(U);
       ra = e(Ds, 'P', { class: !0 });
       var is = o(ra);
-      (Pa = u(is, '50 mi')),
+      (Pa = r(is, '50 mi')),
         is.forEach(t),
         Ds.forEach(t),
-        (pa = h(f)),
-        (R = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (la = h(g)),
+        (R = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ss = o(R);
       K = e(ss, 'P', { class: !0 });
       var Ps = o(K);
-      (Ka = u(Ps, '50 km')),
+      (Ka = r(Ps, '50 km')),
         Ps.forEach(t),
         ss.forEach(t),
-        f.forEach(t),
+        g.forEach(t),
         this.h();
     },
     h() {
-      p(g, 'padding', '0 0 82.703% 0'),
-        l(c, 'id', 'g-_ai-chart-sm-img'),
-        l(c, 'class', 'g-aiImg svelte-zofauz'),
-        l(c, 'alt', ''),
-        l(
+      l(f, 'padding', '0 0 82.703% 0'),
+        p(c, 'id', 'g-_ai-chart-sm-img'),
+        p(c, 'class', 'g-aiImg svelte-zofauz'),
+        p(c, 'alt', ''),
+        p(
           c,
           'style',
-          (d = `background-image: url(${Un}/images/graphics/ai-chart-sm.png);`)
+          (u = `background-image: url(${Un}/images/graphics/ai-chart-sm.png);`)
         ),
-        l(b, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(y, 'id', 'g-ai1-1'),
-        l(y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(y, 'top', '3.8773%'),
-        p(y, 'margin-top', '-9.4px'),
-        p(y, 'left', '0.3278%'),
-        p(y, 'width', '111px'),
-        l($, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(z, 'id', 'g-ai1-2'),
-        l(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(z, 'top', '9.0933%'),
-        p(z, 'margin-top', '-9.4px'),
-        p(z, 'left', '3.0258%'),
-        p(z, 'width', '52px'),
-        l(w, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(m, 'id', 'g-ai1-3'),
-        l(m, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(m, 'top', '13.5979%'),
-        p(m, 'margin-top', '-9.4px'),
-        p(m, 'left', '3.0259%'),
-        p(m, 'width', '77px'),
-        l(aa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(H, 'id', 'g-ai1-4'),
-        l(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(H, 'top', '16.6801%'),
-        p(H, 'margin-top', '-9.4px'),
-        p(H, 'left', '70.3255%'),
-        p(H, 'width', '92px'),
-        l(W, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(C, 'id', 'g-ai1-5'),
-        l(C, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(C, 'top', '18.3397%'),
-        p(C, 'margin-top', '-9.4px'),
-        p(C, 'left', '3.0258%'),
-        p(C, 'width', '61px'),
-        l(sa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(S, 'id', 'g-ai1-6'),
-        l(S, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(S, 'top', '22.6073%'),
-        p(S, 'margin-top', '-9.4px'),
-        p(S, 'left', '3.0258%'),
-        p(S, 'width', '88px'),
-        l(F, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(O, 'id', 'g-ai1-7'),
-        l(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(O, 'top', '28.5344%'),
-        p(O, 'margin-top', '-9.4px'),
-        p(O, 'left', '55.9181%'),
-        p(O, 'width', '76px'),
-        l(ta, 'class', 'g-pstyle1 svelte-zofauz'),
-        l(na, 'class', 'g-pstyle1 svelte-zofauz'),
-        l(T, 'id', 'g-ai1-8'),
-        l(T, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(T, 'top', '38.8091%'),
-        p(T, 'margin-top', '-17.7px'),
-        p(T, 'left', '27.2818%'),
-        p(T, 'margin-left', '-41px'),
-        p(T, 'width', '82px'),
-        l(ca, 'class', 'g-pstyle2 svelte-zofauz'),
-        l(L, 'id', 'g-ai1-9'),
-        l(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(L, 'top', '39.9724%'),
-        p(L, 'margin-top', '-8.6px'),
-        p(L, 'left', '61.2858%'),
-        p(L, 'width', '67px'),
-        l(ea, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(V, 'id', 'g-ai1-10'),
-        l(V, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(V, 'top', '56.985%'),
-        p(V, 'margin-top', '-9.4px'),
-        p(V, 'left', '12.2815%'),
-        p(V, 'width', '69px'),
-        l(ka, 'class', 'g-pstyle3 svelte-zofauz'),
-        l(M, 'id', 'g-ai1-11'),
-        l(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(M, 'top', '59.1569%'),
-        p(M, 'margin-top', '-9.5px'),
-        p(M, 'left', '63.0314%'),
-        p(M, 'width', '112px'),
-        l(fa, 'class', 'g-pstyle3 svelte-zofauz'),
-        l(J, 'id', 'g-ai1-12'),
-        l(J, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(J, 'top', '60.1053%'),
-        p(J, 'margin-top', '-9.5px'),
-        p(J, 'left', '30.5543%'),
-        p(J, 'width', '81px'),
-        l(oa, 'class', 'g-pstyle4 svelte-zofauz'),
-        l(j, 'class', 'g-pstyle4 svelte-zofauz'),
-        l(G, 'id', 'g-ai1-13'),
-        l(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(G, 'top', '62.7194%'),
-        p(G, 'margin-top', '-16.5px'),
-        p(G, 'left', '91.2282%'),
-        p(G, 'margin-left', '-57px'),
-        p(G, 'width', '114px'),
-        l(q, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(B, 'id', 'g-ai1-14'),
-        l(B, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(B, 'top', '75.4778%'),
-        p(B, 'margin-top', '-9.4px'),
-        p(B, 'left', '57.3552%'),
-        p(B, 'width', '64px'),
-        l(Y, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(N, 'id', 'g-ai1-15'),
-        l(N, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(N, 'top', '76.6632%'),
-        p(N, 'margin-top', '-9.4px'),
-        p(N, 'left', '21.9639%'),
-        p(N, 'width', '79px'),
-        l(ra, 'class', 'g-pstyle5 svelte-zofauz'),
-        l(U, 'id', 'g-ai1-16'),
-        l(U, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(U, 'top', '85.5251%'),
-        p(U, 'margin-top', '-7.7px'),
-        p(U, 'left', '0.1344%'),
-        p(U, 'width', '49px'),
-        l(K, 'class', 'g-pstyle5 svelte-zofauz'),
-        l(R, 'id', 'g-ai1-17'),
-        l(R, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(R, 'top', '90.0297%'),
-        p(R, 'margin-top', '-7.7px'),
-        p(R, 'left', '0.1344%'),
-        p(R, 'width', '52px'),
-        l(s, 'id', 'g-_ai-chart-sm'),
-        l(s, 'class', 'g-artboard svelte-zofauz'),
-        l(s, 'style', '');
+        p(b, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(y, 'id', 'g-ai1-1'),
+        p(y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(y, 'top', '3.8773%'),
+        l(y, 'margin-top', '-9.4px'),
+        l(y, 'left', '0.3278%'),
+        l(y, 'width', '111px'),
+        p($, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(z, 'id', 'g-ai1-2'),
+        p(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(z, 'top', '9.0933%'),
+        l(z, 'margin-top', '-9.4px'),
+        l(z, 'left', '3.0258%'),
+        l(z, 'width', '52px'),
+        p(w, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(_, 'id', 'g-ai1-3'),
+        p(_, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(_, 'top', '13.5979%'),
+        l(_, 'margin-top', '-9.4px'),
+        l(_, 'left', '3.0259%'),
+        l(_, 'width', '77px'),
+        p(aa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(H, 'id', 'g-ai1-4'),
+        p(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(H, 'top', '16.6801%'),
+        l(H, 'margin-top', '-9.4px'),
+        l(H, 'left', '70.3255%'),
+        l(H, 'width', '92px'),
+        p(W, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(V, 'id', 'g-ai1-5'),
+        p(V, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(V, 'top', '18.3397%'),
+        l(V, 'margin-top', '-9.4px'),
+        l(V, 'left', '3.0258%'),
+        l(V, 'width', '61px'),
+        p(sa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(S, 'id', 'g-ai1-6'),
+        p(S, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(S, 'top', '22.6073%'),
+        l(S, 'margin-top', '-9.4px'),
+        l(S, 'left', '3.0258%'),
+        l(S, 'width', '88px'),
+        p(F, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(O, 'id', 'g-ai1-7'),
+        p(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(O, 'top', '28.5344%'),
+        l(O, 'margin-top', '-9.4px'),
+        l(O, 'left', '55.9181%'),
+        l(O, 'width', '76px'),
+        p(ta, 'class', 'g-pstyle1 svelte-zofauz'),
+        p(na, 'class', 'g-pstyle1 svelte-zofauz'),
+        p(A, 'id', 'g-ai1-8'),
+        p(A, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(A, 'top', '38.8091%'),
+        l(A, 'margin-top', '-17.7px'),
+        l(A, 'left', '27.2818%'),
+        l(A, 'margin-left', '-41px'),
+        l(A, 'width', '82px'),
+        p(ca, 'class', 'g-pstyle2 svelte-zofauz'),
+        p(L, 'id', 'g-ai1-9'),
+        p(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(L, 'top', '39.9724%'),
+        l(L, 'margin-top', '-8.6px'),
+        l(L, 'left', '61.2858%'),
+        l(L, 'width', '67px'),
+        p(ea, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(C, 'id', 'g-ai1-10'),
+        p(C, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(C, 'top', '56.985%'),
+        l(C, 'margin-top', '-9.4px'),
+        l(C, 'left', '12.2815%'),
+        l(C, 'width', '69px'),
+        p(ka, 'class', 'g-pstyle3 svelte-zofauz'),
+        p(M, 'id', 'g-ai1-11'),
+        p(M, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(M, 'top', '59.1569%'),
+        l(M, 'margin-top', '-9.5px'),
+        l(M, 'left', '63.0314%'),
+        l(M, 'width', '112px'),
+        p(fa, 'class', 'g-pstyle3 svelte-zofauz'),
+        p(J, 'id', 'g-ai1-12'),
+        p(J, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(J, 'top', '60.1053%'),
+        l(J, 'margin-top', '-9.5px'),
+        l(J, 'left', '30.5543%'),
+        l(J, 'width', '81px'),
+        p(oa, 'class', 'g-pstyle4 svelte-zofauz'),
+        p(j, 'class', 'g-pstyle4 svelte-zofauz'),
+        p(G, 'id', 'g-ai1-13'),
+        p(G, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(G, 'top', '62.7194%'),
+        l(G, 'margin-top', '-16.5px'),
+        l(G, 'left', '91.2282%'),
+        l(G, 'margin-left', '-57px'),
+        l(G, 'width', '114px'),
+        p(q, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(B, 'id', 'g-ai1-14'),
+        p(B, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(B, 'top', '75.4778%'),
+        l(B, 'margin-top', '-9.4px'),
+        l(B, 'left', '57.3552%'),
+        l(B, 'width', '64px'),
+        p(Y, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(N, 'id', 'g-ai1-15'),
+        p(N, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(N, 'top', '76.6632%'),
+        l(N, 'margin-top', '-9.4px'),
+        l(N, 'left', '21.9639%'),
+        l(N, 'width', '79px'),
+        p(ra, 'class', 'g-pstyle5 svelte-zofauz'),
+        p(U, 'id', 'g-ai1-16'),
+        p(U, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(U, 'top', '85.5251%'),
+        l(U, 'margin-top', '-7.7px'),
+        l(U, 'left', '0.1344%'),
+        l(U, 'width', '49px'),
+        p(K, 'class', 'g-pstyle5 svelte-zofauz'),
+        p(R, 'id', 'g-ai1-17'),
+        p(R, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(R, 'top', '90.0297%'),
+        l(R, 'margin-top', '-7.7px'),
+        l(R, 'left', '0.1344%'),
+        l(R, 'width', '52px'),
+        p(s, 'id', 'g-_ai-chart-sm'),
+        p(s, 'class', 'g-artboard svelte-zofauz'),
+        p(s, 'style', '');
     },
-    m(va, f) {
-      A(va, s, f),
-        a(s, g),
-        a(s, i),
+    m(va, g) {
+      P(va, s, g),
+        a(s, f),
+        a(s, d),
         a(s, c),
-        a(s, E),
+        a(s, m),
         a(s, y),
         a(y, b),
         a(b, D),
@@ -1416,16 +1426,16 @@ function Je(_) {
         a(z, $),
         a($, Q),
         a(s, I),
-        a(s, m),
-        a(m, w),
+        a(s, _),
+        a(_, w),
         a(w, ma),
-        a(s, Ca),
+        a(s, Va),
         a(s, H),
         a(H, aa),
         a(aa, Ia),
         a(s, ja),
-        a(s, C),
-        a(C, W),
+        a(s, V),
+        a(V, W),
         a(W, ya),
         a(s, Ha),
         a(s, S),
@@ -1436,19 +1446,19 @@ function Je(_) {
         a(O, F),
         a(F, Sa),
         a(s, $a),
-        a(s, T),
-        a(T, ta),
+        a(s, A),
+        a(A, ta),
         a(ta, La),
-        a(T, qa),
-        a(T, na),
+        a(A, qa),
+        a(A, na),
         a(na, Ma),
         a(s, _a),
         a(s, L),
         a(L, ca),
-        a(ca, la),
+        a(ca, pa),
         a(s, da),
-        a(s, V),
-        a(V, ea),
+        a(s, C),
+        a(C, ea),
         a(ea, Ra),
         a(s, Ua),
         a(s, M),
@@ -1468,7 +1478,7 @@ function Je(_) {
         a(s, Oa),
         a(s, B),
         a(B, q),
-        a(q, Va),
+        a(q, Ca),
         a(s, Da),
         a(s, N),
         a(N, Y),
@@ -1477,7 +1487,7 @@ function Je(_) {
         a(s, U),
         a(U, ra),
         a(ra, Pa),
-        a(s, pa),
+        a(s, la),
         a(s, R),
         a(R, K),
         a(K, Ka);
@@ -1488,13 +1498,13 @@ function Je(_) {
     },
   };
 }
-function qe(_) {
+function qe(E) {
   let s,
-    g,
-    i,
-    c,
+    f,
     d,
-    E,
+    c,
+    u,
+    m,
     y,
     b,
     D,
@@ -1503,15 +1513,15 @@ function qe(_) {
     $,
     Q,
     I,
-    m,
+    _,
     w,
     ma,
-    Ca,
+    Va,
     H,
     aa,
     Ia,
     ja,
-    C,
+    V,
     W,
     ya,
     Ha,
@@ -1523,7 +1533,7 @@ function qe(_) {
     F,
     Sa,
     $a,
-    T,
+    A,
     ta,
     La,
     qa,
@@ -1532,9 +1542,9 @@ function qe(_) {
     _a,
     L,
     ca,
-    la,
+    pa,
     da,
-    V,
+    C,
     ea,
     Ra,
     Ua,
@@ -1555,7 +1565,7 @@ function qe(_) {
     Oa,
     B,
     q,
-    Va,
+    Ca,
     Da,
     N,
     Y,
@@ -1564,392 +1574,392 @@ function qe(_) {
     U,
     ra,
     Pa,
-    pa,
+    la,
     R,
     K,
     Ka;
   return {
     c() {
       (s = n('div')),
-        (g = n('div')),
-        (i = v()),
+        (f = n('div')),
+        (d = v()),
         (c = n('div')),
-        (E = v()),
+        (m = v()),
         (y = n('div')),
         (b = n('p')),
-        (D = r('Shake intensity')),
+        (D = i('Shake intensity')),
         (x = v()),
         (z = n('div')),
         ($ = n('p')),
-        (Q = r('Light')),
+        (Q = i('Light')),
         (I = v()),
-        (m = n('div')),
+        (_ = n('div')),
         (w = n('p')),
-        (ma = r('Moderate')),
-        (Ca = v()),
+        (ma = i('Moderate')),
+        (Va = v()),
         (H = n('div')),
         (aa = n('p')),
-        (Ia = r('Cap-Haitien')),
+        (Ia = i('Cap-Haitien')),
         (ja = v()),
-        (C = n('div')),
+        (V = n('div')),
         (W = n('p')),
-        (ya = r('Strong')),
+        (ya = i('Strong')),
         (Ha = v()),
         (S = n('div')),
         (sa = n('p')),
-        (Ja = r('Very strong')),
+        (Ja = i('Very strong')),
         (ba = v()),
         (O = n('div')),
         (F = n('p')),
-        (Sa = r('Gona\xEFves')),
+        (Sa = i('Gona\xEFves')),
         ($a = v()),
-        (T = n('div')),
+        (A = n('div')),
         (ta = n('p')),
-        (La = r('Caribbean')),
+        (La = i('Caribbean')),
         (qa = v()),
         (na = n('p')),
-        (Ma = r('Sea')),
+        (Ma = i('Sea')),
         (_a = v()),
         (L = n('div')),
         (ca = n('p')),
-        (la = r('HAITI')),
+        (pa = i('HAITI')),
         (da = v()),
-        (V = n('div')),
+        (C = n('div')),
         (ea = n('p')),
-        (Ra = r('Dominican')),
+        (Ra = i('Dominican')),
         (Ua = v()),
         (M = n('p')),
-        (ka = r('Republic')),
+        (ka = i('Republic')),
         (Ba = v()),
         (X = n('div')),
         (J = n('p')),
-        (fa = r('Jeremie')),
+        (fa = i('Jeremie')),
         (Ya = v()),
         (Z = n('div')),
         (G = n('p')),
-        (oa = r('Epicenter')),
+        (oa = i('Epicenter')),
         (za = v()),
         (ga = n('div')),
         (j = n('p')),
-        (wa = r('Port-au-Prince')),
+        (wa = i('Port-au-Prince')),
         (Oa = v()),
         (B = n('div')),
         (q = n('p')),
-        (Va = r('Jacmel')),
+        (Ca = i('Jacmel')),
         (Da = v()),
         (N = n('div')),
         (Y = n('p')),
-        (ia = r('Les Cayes')),
+        (ia = i('Les Cayes')),
         (Wa = v()),
         (U = n('div')),
         (ra = n('p')),
-        (Pa = r('50 mi')),
-        (pa = v()),
+        (Pa = i('50 mi')),
+        (la = v()),
         (R = n('div')),
         (K = n('p')),
-        (Ka = r('50 km')),
+        (Ka = i('50 km')),
         this.h();
     },
     l(va) {
       s = e(va, 'DIV', { id: !0, class: !0, style: !0 });
-      var f = o(s);
-      (g = e(f, 'DIV', { style: !0 })),
-        o(g).forEach(t),
-        (i = h(f)),
-        (c = e(f, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
+      var g = o(s);
+      (f = e(g, 'DIV', { style: !0 })),
+        o(f).forEach(t),
+        (d = h(g)),
+        (c = e(g, 'DIV', { id: !0, class: !0, alt: !0, style: !0 })),
         o(c).forEach(t),
-        (E = h(f)),
-        (y = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (m = h(g)),
+        (y = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ds = o(y);
       b = e(ds, 'P', { class: !0 });
       var ks = o(b);
-      (D = u(ks, 'Shake intensity')),
+      (D = r(ks, 'Shake intensity')),
         ks.forEach(t),
         ds.forEach(t),
-        (x = h(f)),
-        (z = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (x = h(g)),
+        (z = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ts = o(z);
       $ = e(ts, 'P', { class: !0 });
       var Ga = o($);
-      (Q = u(Ga, 'Light')),
+      (Q = r(Ga, 'Light')),
         Ga.forEach(t),
         ts.forEach(t),
-        (I = h(f)),
-        (m = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Qa = o(m);
+        (I = h(g)),
+        (_ = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Qa = o(_);
       w = e(Qa, 'P', { class: !0 });
       var ns = o(w);
-      (ma = u(ns, 'Moderate')),
+      (ma = r(ns, 'Moderate')),
         ns.forEach(t),
         Qa.forEach(t),
-        (Ca = h(f)),
-        (H = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Va = h(g)),
+        (H = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var fs = o(H);
       aa = e(fs, 'P', { class: !0 });
       var gs = o(aa);
-      (Ia = u(gs, 'Cap-Haitien')),
+      (Ia = r(gs, 'Cap-Haitien')),
         gs.forEach(t),
         fs.forEach(t),
-        (ja = h(f)),
-        (C = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var vs = o(C);
+        (ja = h(g)),
+        (V = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var vs = o(V);
       W = e(vs, 'P', { class: !0 });
       var Ta = o(W);
-      (ya = u(Ta, 'Strong')),
+      (ya = r(Ta, 'Strong')),
         Ta.forEach(t),
         vs.forEach(t),
-        (Ha = h(f)),
-        (S = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Ha = h(g)),
+        (S = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var hs = o(S);
       sa = e(hs, 'P', { class: !0 });
       var es = o(sa);
-      (Ja = u(es, 'Very strong')),
+      (Ja = r(es, 'Very strong')),
         es.forEach(t),
         hs.forEach(t),
-        (ba = h(f)),
-        (O = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (ba = h(g)),
+        (O = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ms = o(O);
       F = e(ms, 'P', { class: !0 });
       var _s = o(F);
-      (Sa = u(_s, 'Gona\xEFves')),
+      (Sa = r(_s, 'Gona\xEFves')),
         _s.forEach(t),
         ms.forEach(t),
-        ($a = h(f)),
-        (T = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Ea = o(T);
+        ($a = h(g)),
+        (A = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Ea = o(A);
       ta = e(Ea, 'P', { class: !0 });
       var Es = o(ta);
-      (La = u(Es, 'Caribbean')),
+      (La = r(Es, 'Caribbean')),
         Es.forEach(t),
         (qa = h(Ea)),
         (na = e(Ea, 'P', { class: !0 }));
       var ys = o(na);
-      (Ma = u(ys, 'Sea')),
+      (Ma = r(ys, 'Sea')),
         ys.forEach(t),
         Ea.forEach(t),
-        (_a = h(f)),
-        (L = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (_a = h(g)),
+        (L = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var rs = o(L);
       ca = e(rs, 'P', { class: !0 });
       var Fa = o(ca);
-      (la = u(Fa, 'HAITI')),
+      (pa = r(Fa, 'HAITI')),
         Fa.forEach(t),
         rs.forEach(t),
-        (da = h(f)),
-        (V = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var Xa = o(V);
+        (da = h(g)),
+        (C = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var Xa = o(C);
       ea = e(Xa, 'P', { class: !0 });
       var us = o(ea);
-      (Ra = u(us, 'Dominican')),
+      (Ra = r(us, 'Dominican')),
         us.forEach(t),
         (Ua = h(Xa)),
         (M = e(Xa, 'P', { class: !0 }));
       var Na = o(M);
-      (ka = u(Na, 'Republic')),
+      (ka = r(Na, 'Republic')),
         Na.forEach(t),
         Xa.forEach(t),
-        (Ba = h(f)),
-        (X = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Ba = h(g)),
+        (X = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var os = o(X);
       J = e(os, 'P', { class: !0 });
       var bs = o(J);
-      (fa = u(bs, 'Jeremie')),
+      (fa = r(bs, 'Jeremie')),
         bs.forEach(t),
         os.forEach(t),
-        (Ya = h(f)),
-        (Z = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Ya = h(g)),
+        (Z = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var Za = o(Z);
       G = e(Za, 'P', { class: !0 });
       var ha = o(G);
-      (oa = u(ha, 'Epicenter')),
+      (oa = r(ha, 'Epicenter')),
         ha.forEach(t),
         Za.forEach(t),
-        (za = h(f)),
-        (ga = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (za = h(g)),
+        (ga = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var zs = o(ga);
       j = e(zs, 'P', { class: !0 });
-      var ls = o(j);
-      (wa = u(ls, 'Port-au-Prince')),
-        ls.forEach(t),
+      var ps = o(j);
+      (wa = r(ps, 'Port-au-Prince')),
+        ps.forEach(t),
         zs.forEach(t),
-        (Oa = h(f)),
-        (B = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (Oa = h(g)),
+        (B = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ws = o(B);
       q = e(ws, 'P', { class: !0 });
       var as = o(q);
-      (Va = u(as, 'Jacmel')),
+      (Ca = r(as, 'Jacmel')),
         as.forEach(t),
         ws.forEach(t),
-        (Da = h(f)),
-        (N = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
-      var ps = o(N);
-      Y = e(ps, 'P', { class: !0 });
+        (Da = h(g)),
+        (N = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
+      var ls = o(N);
+      Y = e(ls, 'P', { class: !0 });
       var cs = o(Y);
-      (ia = u(cs, 'Les Cayes')),
+      (ia = r(cs, 'Les Cayes')),
         cs.forEach(t),
-        ps.forEach(t),
-        (Wa = h(f)),
-        (U = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        ls.forEach(t),
+        (Wa = h(g)),
+        (U = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var Ds = o(U);
       ra = e(Ds, 'P', { class: !0 });
       var is = o(ra);
-      (Pa = u(is, '50 mi')),
+      (Pa = r(is, '50 mi')),
         is.forEach(t),
         Ds.forEach(t),
-        (pa = h(f)),
-        (R = e(f, 'DIV', { id: !0, class: !0, style: !0 }));
+        (la = h(g)),
+        (R = e(g, 'DIV', { id: !0, class: !0, style: !0 }));
       var ss = o(R);
       K = e(ss, 'P', { class: !0 });
       var Ps = o(K);
-      (Ka = u(Ps, '50 km')),
+      (Ka = r(Ps, '50 km')),
         Ps.forEach(t),
         ss.forEach(t),
-        f.forEach(t),
+        g.forEach(t),
         this.h();
     },
     h() {
-      p(g, 'padding', '0 0 79.6009% 0'),
-        l(c, 'id', 'g-_ai-chart-md-img'),
-        l(c, 'class', 'g-aiImg svelte-zofauz'),
-        l(c, 'alt', ''),
-        l(
+      l(f, 'padding', '0 0 79.6009% 0'),
+        p(c, 'id', 'g-_ai-chart-md-img'),
+        p(c, 'class', 'g-aiImg svelte-zofauz'),
+        p(c, 'alt', ''),
+        p(
           c,
           'style',
-          (d = `background-image: url(${Un}/images/graphics/ai-chart-md.png);`)
+          (u = `background-image: url(${Un}/images/graphics/ai-chart-md.png);`)
         ),
-        l(b, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(y, 'id', 'g-ai2-1'),
-        l(y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(y, 'top', '2.3515%'),
-        p(y, 'margin-top', '-9.4px'),
-        p(y, 'left', '0.3608%'),
-        p(y, 'width', '111px'),
-        l($, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(z, 'id', 'g-ai2-2'),
-        l(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(z, 'top', '7.6811%'),
-        p(z, 'margin-top', '-9.4px'),
-        p(z, 'left', '2.6603%'),
-        p(z, 'width', '52px'),
-        l(w, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(m, 'id', 'g-ai2-3'),
-        l(m, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(m, 'top', '12.2494%'),
-        p(m, 'margin-top', '-9.4px'),
-        p(m, 'left', '2.6604%'),
-        p(m, 'width', '77px'),
-        l(aa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(H, 'id', 'g-ai2-4'),
-        l(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(H, 'top', '15.4852%'),
-        p(H, 'margin-top', '-9.4px'),
-        p(H, 'left', '70.3606%'),
-        p(H, 'width', '92px'),
-        l(W, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(C, 'id', 'g-ai2-5'),
-        l(C, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(C, 'top', '17.1983%'),
-        p(C, 'margin-top', '-9.4px'),
-        p(C, 'left', '2.6603%'),
-        p(C, 'width', '61px'),
-        l(sa, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(S, 'id', 'g-ai2-6'),
-        l(S, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
-        p(S, 'top', '21.7666%'),
-        p(S, 'margin-top', '-9.4px'),
-        p(S, 'left', '2.6603%'),
-        p(S, 'width', '88px'),
-        l(F, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(O, 'id', 'g-ai2-7'),
-        l(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(O, 'top', '27.6672%'),
-        p(O, 'margin-top', '-9.4px'),
-        p(O, 'left', '55.993%'),
-        p(O, 'width', '76px'),
-        l(ta, 'class', 'g-pstyle1 svelte-zofauz'),
-        l(na, 'class', 'g-pstyle1 svelte-zofauz'),
-        l(T, 'id', 'g-ai2-8'),
-        l(T, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(T, 'top', '38.0099%'),
-        p(T, 'margin-top', '-17.7px'),
-        p(T, 'left', '27.2388%'),
-        p(T, 'margin-left', '-41px'),
-        p(T, 'width', '82px'),
-        l(ca, 'class', 'g-pstyle2 svelte-zofauz'),
-        l(L, 'id', 'g-ai2-9'),
-        l(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(L, 'top', '42.7626%'),
-        p(L, 'margin-top', '-10.7px'),
-        p(L, 'left', '62.8914%'),
-        p(L, 'width', '80px'),
-        l(ea, 'class', 'g-pstyle3 svelte-zofauz'),
-        l(M, 'class', 'g-pstyle3 svelte-zofauz'),
-        l(V, 'id', 'g-ai2-10'),
-        l(V, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(V, 'top', '50.0029%'),
-        p(V, 'margin-top', '-17.7px'),
-        p(V, 'left', '92.295%'),
-        p(V, 'margin-left', '-60.5px'),
-        p(V, 'width', '121px'),
-        l(J, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(X, 'id', 'g-ai2-11'),
-        l(X, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(X, 'top', '57.3608%'),
-        p(X, 'margin-top', '-9.4px'),
-        p(X, 'left', '12.2815%'),
-        p(X, 'width', '69px'),
-        l(G, 'class', 'g-pstyle4 svelte-zofauz'),
-        l(Z, 'id', 'g-ai2-12'),
-        l(Z, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(Z, 'top', '60.2742%'),
-        p(Z, 'margin-top', '-10.7px'),
-        p(Z, 'left', '30.6995%'),
-        p(Z, 'width', '89px'),
-        l(j, 'class', 'g-pstyle4 svelte-zofauz'),
-        l(ga, 'id', 'g-ai2-13'),
-        l(ga, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(ga, 'top', '62.5583%'),
-        p(ga, 'margin-top', '-10.7px'),
-        p(ga, 'left', '66.3403%'),
-        p(ga, 'width', '125px'),
-        l(q, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(B, 'id', 'g-ai2-14'),
-        l(B, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(B, 'top', '75.6338%'),
-        p(B, 'margin-top', '-9.4px'),
-        p(B, 'left', '57.8174%'),
-        p(B, 'width', '64px'),
-        l(Y, 'class', 'g-pstyle0 svelte-zofauz'),
-        l(N, 'id', 'g-ai2-15'),
-        l(N, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(N, 'top', '77.3469%'),
-        p(N, 'margin-top', '-9.4px'),
-        p(N, 'left', '22.5239%'),
-        p(N, 'width', '79px'),
-        l(ra, 'class', 'g-pstyle5 svelte-zofauz'),
-        l(U, 'id', 'g-ai2-16'),
-        l(U, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(U, 'top', '86.936%'),
-        p(U, 'margin-top', '-7.7px'),
-        p(U, 'left', '0.1678%'),
-        p(U, 'width', '49px'),
-        l(K, 'class', 'g-pstyle5 svelte-zofauz'),
-        l(R, 'id', 'g-ai2-17'),
-        l(R, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
-        p(R, 'top', '91.5043%'),
-        p(R, 'margin-top', '-7.7px'),
-        p(R, 'left', '0.1678%'),
-        p(R, 'width', '52px'),
-        l(s, 'id', 'g-_ai-chart-md'),
-        l(s, 'class', 'g-artboard svelte-zofauz'),
-        l(s, 'style', '');
+        p(b, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(y, 'id', 'g-ai2-1'),
+        p(y, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(y, 'top', '2.3515%'),
+        l(y, 'margin-top', '-9.4px'),
+        l(y, 'left', '0.3608%'),
+        l(y, 'width', '111px'),
+        p($, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(z, 'id', 'g-ai2-2'),
+        p(z, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(z, 'top', '7.6811%'),
+        l(z, 'margin-top', '-9.4px'),
+        l(z, 'left', '2.6603%'),
+        l(z, 'width', '52px'),
+        p(w, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(_, 'id', 'g-ai2-3'),
+        p(_, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(_, 'top', '12.2494%'),
+        l(_, 'margin-top', '-9.4px'),
+        l(_, 'left', '2.6604%'),
+        l(_, 'width', '77px'),
+        p(aa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(H, 'id', 'g-ai2-4'),
+        p(H, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(H, 'top', '15.4852%'),
+        l(H, 'margin-top', '-9.4px'),
+        l(H, 'left', '70.3606%'),
+        l(H, 'width', '92px'),
+        p(W, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(V, 'id', 'g-ai2-5'),
+        p(V, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(V, 'top', '17.1983%'),
+        l(V, 'margin-top', '-9.4px'),
+        l(V, 'left', '2.6603%'),
+        l(V, 'width', '61px'),
+        p(sa, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(S, 'id', 'g-ai2-6'),
+        p(S, 'class', 'g-legend g-aiAbs g-aiPointText svelte-zofauz'),
+        l(S, 'top', '21.7666%'),
+        l(S, 'margin-top', '-9.4px'),
+        l(S, 'left', '2.6603%'),
+        l(S, 'width', '88px'),
+        p(F, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(O, 'id', 'g-ai2-7'),
+        p(O, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(O, 'top', '27.6672%'),
+        l(O, 'margin-top', '-9.4px'),
+        l(O, 'left', '55.993%'),
+        l(O, 'width', '76px'),
+        p(ta, 'class', 'g-pstyle1 svelte-zofauz'),
+        p(na, 'class', 'g-pstyle1 svelte-zofauz'),
+        p(A, 'id', 'g-ai2-8'),
+        p(A, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(A, 'top', '38.0099%'),
+        l(A, 'margin-top', '-17.7px'),
+        l(A, 'left', '27.2388%'),
+        l(A, 'margin-left', '-41px'),
+        l(A, 'width', '82px'),
+        p(ca, 'class', 'g-pstyle2 svelte-zofauz'),
+        p(L, 'id', 'g-ai2-9'),
+        p(L, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(L, 'top', '42.7626%'),
+        l(L, 'margin-top', '-10.7px'),
+        l(L, 'left', '62.8914%'),
+        l(L, 'width', '80px'),
+        p(ea, 'class', 'g-pstyle3 svelte-zofauz'),
+        p(M, 'class', 'g-pstyle3 svelte-zofauz'),
+        p(C, 'id', 'g-ai2-10'),
+        p(C, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(C, 'top', '50.0029%'),
+        l(C, 'margin-top', '-17.7px'),
+        l(C, 'left', '92.295%'),
+        l(C, 'margin-left', '-60.5px'),
+        l(C, 'width', '121px'),
+        p(J, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(X, 'id', 'g-ai2-11'),
+        p(X, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(X, 'top', '57.3608%'),
+        l(X, 'margin-top', '-9.4px'),
+        l(X, 'left', '12.2815%'),
+        l(X, 'width', '69px'),
+        p(G, 'class', 'g-pstyle4 svelte-zofauz'),
+        p(Z, 'id', 'g-ai2-12'),
+        p(Z, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(Z, 'top', '60.2742%'),
+        l(Z, 'margin-top', '-10.7px'),
+        l(Z, 'left', '30.6995%'),
+        l(Z, 'width', '89px'),
+        p(j, 'class', 'g-pstyle4 svelte-zofauz'),
+        p(ga, 'id', 'g-ai2-13'),
+        p(ga, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(ga, 'top', '62.5583%'),
+        l(ga, 'margin-top', '-10.7px'),
+        l(ga, 'left', '66.3403%'),
+        l(ga, 'width', '125px'),
+        p(q, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(B, 'id', 'g-ai2-14'),
+        p(B, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(B, 'top', '75.6338%'),
+        l(B, 'margin-top', '-9.4px'),
+        l(B, 'left', '57.8174%'),
+        l(B, 'width', '64px'),
+        p(Y, 'class', 'g-pstyle0 svelte-zofauz'),
+        p(N, 'id', 'g-ai2-15'),
+        p(N, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(N, 'top', '77.3469%'),
+        l(N, 'margin-top', '-9.4px'),
+        l(N, 'left', '22.5239%'),
+        l(N, 'width', '79px'),
+        p(ra, 'class', 'g-pstyle5 svelte-zofauz'),
+        p(U, 'id', 'g-ai2-16'),
+        p(U, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(U, 'top', '86.936%'),
+        l(U, 'margin-top', '-7.7px'),
+        l(U, 'left', '0.1678%'),
+        l(U, 'width', '49px'),
+        p(K, 'class', 'g-pstyle5 svelte-zofauz'),
+        p(R, 'id', 'g-ai2-17'),
+        p(R, 'class', 'g-map-labels g-aiAbs g-aiPointText svelte-zofauz'),
+        l(R, 'top', '91.5043%'),
+        l(R, 'margin-top', '-7.7px'),
+        l(R, 'left', '0.1678%'),
+        l(R, 'width', '52px'),
+        p(s, 'id', 'g-_ai-chart-md'),
+        p(s, 'class', 'g-artboard svelte-zofauz'),
+        p(s, 'style', '');
     },
-    m(va, f) {
-      A(va, s, f),
-        a(s, g),
-        a(s, i),
+    m(va, g) {
+      P(va, s, g),
+        a(s, f),
+        a(s, d),
         a(s, c),
-        a(s, E),
+        a(s, m),
         a(s, y),
         a(y, b),
         a(b, D),
@@ -1958,16 +1968,16 @@ function qe(_) {
         a(z, $),
         a($, Q),
         a(s, I),
-        a(s, m),
-        a(m, w),
+        a(s, _),
+        a(_, w),
         a(w, ma),
-        a(s, Ca),
+        a(s, Va),
         a(s, H),
         a(H, aa),
         a(aa, Ia),
         a(s, ja),
-        a(s, C),
-        a(C, W),
+        a(s, V),
+        a(V, W),
         a(W, ya),
         a(s, Ha),
         a(s, S),
@@ -1978,22 +1988,22 @@ function qe(_) {
         a(O, F),
         a(F, Sa),
         a(s, $a),
-        a(s, T),
-        a(T, ta),
+        a(s, A),
+        a(A, ta),
         a(ta, La),
-        a(T, qa),
-        a(T, na),
+        a(A, qa),
+        a(A, na),
         a(na, Ma),
         a(s, _a),
         a(s, L),
         a(L, ca),
-        a(ca, la),
+        a(ca, pa),
         a(s, da),
-        a(s, V),
-        a(V, ea),
+        a(s, C),
+        a(C, ea),
         a(ea, Ra),
-        a(V, Ua),
-        a(V, M),
+        a(C, Ua),
+        a(C, M),
         a(M, ka),
         a(s, Ba),
         a(s, X),
@@ -2010,7 +2020,7 @@ function qe(_) {
         a(s, Oa),
         a(s, B),
         a(B, q),
-        a(q, Va),
+        a(q, Ca),
         a(s, Da),
         a(s, N),
         a(N, Y),
@@ -2019,7 +2029,7 @@ function qe(_) {
         a(s, U),
         a(U, ra),
         a(ra, Pa),
-        a(s, pa),
+        a(s, la),
         a(s, R),
         a(R, K),
         a(K, Ka);
@@ -2030,60 +2040,60 @@ function qe(_) {
     },
   };
 }
-function _o(_) {
+function _o(E) {
   let s,
-    g,
-    i,
+    f,
+    d,
     c,
-    d = _[0] && _[0] >= 0 && _[0] < 510 && je(),
-    E = _[0] && _[0] >= 510 && _[0] < 660 && Je(),
-    y = _[0] && _[0] >= 660 && qe();
+    u = E[0] && E[0] >= 0 && E[0] < 510 && je(),
+    m = E[0] && E[0] >= 510 && E[0] < 660 && Je(),
+    y = E[0] && E[0] >= 660 && qe();
   return {
     c() {
       (s = n('div')),
-        d && d.c(),
-        (g = v()),
-        E && E.c(),
-        (i = v()),
+        u && u.c(),
+        (f = v()),
+        m && m.c(),
+        (d = v()),
         y && y.c(),
         this.h();
     },
     l(b) {
       s = e(b, 'DIV', { id: !0, class: !0 });
       var D = o(s);
-      d && d.l(D),
-        (g = h(D)),
-        E && E.l(D),
-        (i = h(D)),
+      u && u.l(D),
+        (f = h(D)),
+        m && m.l(D),
+        (d = h(D)),
         y && y.l(D),
         D.forEach(t),
         this.h();
     },
     h() {
-      l(s, 'id', 'g-_ai-chart-box'),
-        l(s, 'class', 'svelte-zofauz'),
-        io(() => _[1].call(s));
+      p(s, 'id', 'g-_ai-chart-box'),
+        p(s, 'class', 'svelte-zofauz'),
+        io(() => E[1].call(s));
     },
     m(b, D) {
-      A(b, s, D),
-        d && d.m(s, null),
-        a(s, g),
-        E && E.m(s, null),
-        a(s, i),
+      P(b, s, D),
+        u && u.m(s, null),
+        a(s, f),
+        m && m.m(s, null),
+        a(s, d),
         y && y.m(s, null),
-        (c = ro(s, _[1].bind(s)));
+        (c = ro(s, E[1].bind(s)));
     },
     p(b, [D]) {
       b[0] && b[0] >= 0 && b[0] < 510
-        ? d
-          ? d.p(b, D)
-          : ((d = je()), d.c(), d.m(s, g))
-        : d && (d.d(1), (d = null)),
+        ? u
+          ? u.p(b, D)
+          : ((u = je()), u.c(), u.m(s, f))
+        : u && (u.d(1), (u = null)),
         b[0] && b[0] >= 510 && b[0] < 660
-          ? E
-            ? E.p(b, D)
-            : ((E = Je()), E.c(), E.m(s, i))
-          : E && (E.d(1), (E = null)),
+          ? m
+            ? m.p(b, D)
+            : ((m = Je()), m.c(), m.m(s, d))
+          : m && (m.d(1), (m = null)),
         b[0] && b[0] >= 660
           ? y
             ? y.p(b, D)
@@ -2093,16 +2103,16 @@ function _o(_) {
     i: xa,
     o: xa,
     d(b) {
-      b && t(s), d && d.d(), E && E.d(), y && y.d(), c();
+      b && t(s), u && u.d(), m && m.d(), y && y.d(), c();
     },
   };
 }
-function Eo(_, s, g) {
-  let i = null;
+function Eo(E, s, f) {
+  let d = null;
   function c() {
-    (i = this.clientWidth), g(0, i);
+    (d = this.clientWidth), f(0, d);
   }
-  return [i, c];
+  return [d, c];
 }
 class dn extends sn {
   constructor(s) {
@@ -2115,13 +2125,13 @@ var yo = Object.freeze({
   [Symbol.toStringTag]: 'Module',
   default: dn,
 });
-function bo(_) {
+function bo(E) {
   let s,
-    g,
-    i,
-    c,
+    f,
     d,
-    E,
+    c,
+    u,
+    m,
     y,
     b,
     D,
@@ -2130,15 +2140,15 @@ function bo(_) {
     $,
     Q,
     I,
-    m,
+    _,
     w,
     ma,
-    Ca,
+    Va,
     H,
     aa,
     Ia,
     ja,
-    C,
+    V,
     W,
     ya,
     Ha,
@@ -2150,7 +2160,7 @@ function bo(_) {
     F,
     Sa,
     $a,
-    T,
+    A,
     ta,
     La,
     qa,
@@ -2159,9 +2169,9 @@ function bo(_) {
     _a,
     L,
     ca,
-    la,
+    pa,
     da,
-    V,
+    C,
     ea,
     Ra,
     Ua,
@@ -2182,7 +2192,7 @@ function bo(_) {
     Oa,
     B,
     q,
-    Va,
+    Ca,
     Da,
     N,
     Y,
@@ -2191,102 +2201,102 @@ function bo(_) {
     U,
     ra,
     Pa,
-    pa;
+    la;
   return {
     c() {
       (s = n('table')),
-        (g = n('thead')),
-        (i = n('tr')),
+        (f = n('thead')),
+        (d = n('tr')),
         (c = n('th')),
-        (d = r('Date ')),
-        (E = n('th')),
-        (y = r(`S&P 500
+        (u = i('Date ')),
+        (m = n('th')),
+        (y = i(`S&P 500
       `)),
         (b = n('th')),
-        (D = r('Dow ')),
+        (D = i('Dow ')),
         (x = n('th')),
-        (z = r('Nasdaq')),
+        (z = i('Nasdaq')),
         ($ = v()),
         (Q = n('tbody')),
         (I = n('tr')),
-        (m = n('td')),
-        (w = r('December 31, 2021')),
+        (_ = n('td')),
+        (w = i('December 31, 2021')),
         (ma = n('td')),
-        (Ca = r('0%')),
+        (Va = i('0%')),
         (H = n('td')),
-        (aa = r('0')),
+        (aa = i('0')),
         (Ia = n('td')),
-        (ja = r('0%')),
-        (C = n('tr')),
+        (ja = i('0%')),
+        (V = n('tr')),
         (W = n('td')),
-        (ya = r('January 3, 2022')),
+        (ya = i('January 3, 2022')),
         (Ha = n('td')),
-        (S = r('1%')),
+        (S = i('1%')),
         (sa = n('td')),
-        (Ja = r('1')),
+        (Ja = i('1')),
         (ba = n('td')),
-        (O = r('1%')),
+        (O = i('1%')),
         (F = n('tr')),
         (Sa = n('td')),
-        ($a = r('January 4, 2022')),
-        (T = n('td')),
-        (ta = r('1%')),
+        ($a = i('January 4, 2022')),
+        (A = n('td')),
+        (ta = i('1%')),
         (La = n('td')),
-        (qa = r('1')),
+        (qa = i('1')),
         (na = n('td')),
-        (Ma = r('\u22120%')),
+        (Ma = i('\u22120%')),
         (_a = n('tr')),
         (L = n('td')),
-        (ca = r('January 5, 2022')),
-        (la = n('td')),
-        (da = r('\u22121%')),
-        (V = n('td')),
-        (ea = r('0')),
+        (ca = i('January 5, 2022')),
+        (pa = n('td')),
+        (da = i('\u22121%')),
+        (C = n('td')),
+        (ea = i('0')),
         (Ra = n('td')),
-        (Ua = r('\u22123%')),
+        (Ua = i('\u22123%')),
         (M = n('tr')),
         (ka = n('td')),
-        (Ba = r('January 6, 2022')),
+        (Ba = i('January 6, 2022')),
         (X = n('td')),
-        (J = r('\u22121%')),
+        (J = i('\u22121%')),
         (fa = n('td')),
-        (Ya = r('\u22120')),
+        (Ya = i('\u22120')),
         (Z = n('td')),
-        (G = r('\u22124%')),
+        (G = i('\u22124%')),
         (oa = n('tr')),
         (za = n('td')),
-        (ga = r('January 7, 2022')),
+        (ga = i('January 7, 2022')),
         (j = n('td')),
-        (wa = r('\u22122%')),
+        (wa = i('\u22122%')),
         (Oa = n('td')),
-        (B = r('\u22120')),
+        (B = i('\u22120')),
         (q = n('td')),
-        (Va = r('\u22125%')),
+        (Ca = i('\u22125%')),
         (Da = n('tr')),
         (N = n('td')),
-        (Y = r('January 10, 2022')),
+        (Y = i('January 10, 2022')),
         (ia = n('td')),
-        (Wa = r('\u22122%')),
+        (Wa = i('\u22122%')),
         (U = n('td')),
-        (ra = r('\u22121')),
+        (ra = i('\u22121')),
         (Pa = n('td')),
-        (pa = r('\u22124%')),
+        (la = i('\u22124%')),
         this.h();
     },
     l(R) {
       s = e(R, 'TABLE', { class: !0 });
       var K = o(s);
-      g = e(K, 'THEAD', {});
-      var Ka = o(g);
-      i = e(Ka, 'TR', {});
-      var va = o(i);
+      f = e(K, 'THEAD', {});
+      var Ka = o(f);
+      d = e(Ka, 'TR', {});
+      var va = o(d);
       c = e(va, 'TH', { 'data-column': !0, 'data-row': !0 });
-      var f = o(c);
-      (d = u(f, 'Date ')),
-        f.forEach(t),
-        (E = e(va, 'TH', { 'data-column': !0, 'data-row': !0 }));
-      var ds = o(E);
-      (y = u(
+      var g = o(c);
+      (u = r(g, 'Date ')),
+        g.forEach(t),
+        (m = e(va, 'TH', { 'data-column': !0, 'data-row': !0 }));
+      var ds = o(m);
+      (y = r(
         ds,
         `S&P 500
       `
@@ -2294,11 +2304,11 @@ function bo(_) {
         ds.forEach(t),
         (b = e(va, 'TH', { 'data-column': !0, 'data-row': !0 }));
       var ks = o(b);
-      (D = u(ks, 'Dow ')),
+      (D = r(ks, 'Dow ')),
         ks.forEach(t),
         (x = e(va, 'TH', { 'data-column': !0, 'data-row': !0 }));
       var ts = o(x);
-      (z = u(ts, 'Nasdaq')),
+      (z = r(ts, 'Nasdaq')),
         ts.forEach(t),
         va.forEach(t),
         Ka.forEach(t),
@@ -2307,141 +2317,141 @@ function bo(_) {
       var Ga = o(Q);
       I = e(Ga, 'TR', {});
       var Qa = o(I);
-      m = e(Qa, 'TD', {});
-      var ns = o(m);
-      (w = u(ns, 'December 31, 2021')), ns.forEach(t), (ma = e(Qa, 'TD', {}));
+      _ = e(Qa, 'TD', {});
+      var ns = o(_);
+      (w = r(ns, 'December 31, 2021')), ns.forEach(t), (ma = e(Qa, 'TD', {}));
       var fs = o(ma);
-      (Ca = u(fs, '0%')), fs.forEach(t), (H = e(Qa, 'TD', {}));
+      (Va = r(fs, '0%')), fs.forEach(t), (H = e(Qa, 'TD', {}));
       var gs = o(H);
-      (aa = u(gs, '0')), gs.forEach(t), (Ia = e(Qa, 'TD', {}));
+      (aa = r(gs, '0')), gs.forEach(t), (Ia = e(Qa, 'TD', {}));
       var vs = o(Ia);
-      (ja = u(vs, '0%')), vs.forEach(t), Qa.forEach(t), (C = e(Ga, 'TR', {}));
-      var Ta = o(C);
+      (ja = r(vs, '0%')), vs.forEach(t), Qa.forEach(t), (V = e(Ga, 'TR', {}));
+      var Ta = o(V);
       W = e(Ta, 'TD', {});
       var hs = o(W);
-      (ya = u(hs, 'January 3, 2022')), hs.forEach(t), (Ha = e(Ta, 'TD', {}));
+      (ya = r(hs, 'January 3, 2022')), hs.forEach(t), (Ha = e(Ta, 'TD', {}));
       var es = o(Ha);
-      (S = u(es, '1%')), es.forEach(t), (sa = e(Ta, 'TD', {}));
+      (S = r(es, '1%')), es.forEach(t), (sa = e(Ta, 'TD', {}));
       var ms = o(sa);
-      (Ja = u(ms, '1')), ms.forEach(t), (ba = e(Ta, 'TD', {}));
+      (Ja = r(ms, '1')), ms.forEach(t), (ba = e(Ta, 'TD', {}));
       var _s = o(ba);
-      (O = u(_s, '1%')), _s.forEach(t), Ta.forEach(t), (F = e(Ga, 'TR', {}));
+      (O = r(_s, '1%')), _s.forEach(t), Ta.forEach(t), (F = e(Ga, 'TR', {}));
       var Ea = o(F);
       Sa = e(Ea, 'TD', {});
       var Es = o(Sa);
-      ($a = u(Es, 'January 4, 2022')), Es.forEach(t), (T = e(Ea, 'TD', {}));
-      var ys = o(T);
-      (ta = u(ys, '1%')), ys.forEach(t), (La = e(Ea, 'TD', {}));
+      ($a = r(Es, 'January 4, 2022')), Es.forEach(t), (A = e(Ea, 'TD', {}));
+      var ys = o(A);
+      (ta = r(ys, '1%')), ys.forEach(t), (La = e(Ea, 'TD', {}));
       var rs = o(La);
-      (qa = u(rs, '1')), rs.forEach(t), (na = e(Ea, 'TD', {}));
+      (qa = r(rs, '1')), rs.forEach(t), (na = e(Ea, 'TD', {}));
       var Fa = o(na);
-      (Ma = u(Fa, '\u22120%')),
+      (Ma = r(Fa, '\u22120%')),
         Fa.forEach(t),
         Ea.forEach(t),
         (_a = e(Ga, 'TR', {}));
       var Xa = o(_a);
       L = e(Xa, 'TD', {});
       var us = o(L);
-      (ca = u(us, 'January 5, 2022')), us.forEach(t), (la = e(Xa, 'TD', {}));
-      var Na = o(la);
-      (da = u(Na, '\u22121%')), Na.forEach(t), (V = e(Xa, 'TD', {}));
-      var os = o(V);
-      (ea = u(os, '0')), os.forEach(t), (Ra = e(Xa, 'TD', {}));
+      (ca = r(us, 'January 5, 2022')), us.forEach(t), (pa = e(Xa, 'TD', {}));
+      var Na = o(pa);
+      (da = r(Na, '\u22121%')), Na.forEach(t), (C = e(Xa, 'TD', {}));
+      var os = o(C);
+      (ea = r(os, '0')), os.forEach(t), (Ra = e(Xa, 'TD', {}));
       var bs = o(Ra);
-      (Ua = u(bs, '\u22123%')),
+      (Ua = r(bs, '\u22123%')),
         bs.forEach(t),
         Xa.forEach(t),
         (M = e(Ga, 'TR', {}));
       var Za = o(M);
       ka = e(Za, 'TD', {});
       var ha = o(ka);
-      (Ba = u(ha, 'January 6, 2022')), ha.forEach(t), (X = e(Za, 'TD', {}));
+      (Ba = r(ha, 'January 6, 2022')), ha.forEach(t), (X = e(Za, 'TD', {}));
       var zs = o(X);
-      (J = u(zs, '\u22121%')), zs.forEach(t), (fa = e(Za, 'TD', {}));
-      var ls = o(fa);
-      (Ya = u(ls, '\u22120')), ls.forEach(t), (Z = e(Za, 'TD', {}));
+      (J = r(zs, '\u22121%')), zs.forEach(t), (fa = e(Za, 'TD', {}));
+      var ps = o(fa);
+      (Ya = r(ps, '\u22120')), ps.forEach(t), (Z = e(Za, 'TD', {}));
       var ws = o(Z);
-      (G = u(ws, '\u22124%')),
+      (G = r(ws, '\u22124%')),
         ws.forEach(t),
         Za.forEach(t),
         (oa = e(Ga, 'TR', {}));
       var as = o(oa);
       za = e(as, 'TD', {});
-      var ps = o(za);
-      (ga = u(ps, 'January 7, 2022')), ps.forEach(t), (j = e(as, 'TD', {}));
+      var ls = o(za);
+      (ga = r(ls, 'January 7, 2022')), ls.forEach(t), (j = e(as, 'TD', {}));
       var cs = o(j);
-      (wa = u(cs, '\u22122%')), cs.forEach(t), (Oa = e(as, 'TD', {}));
+      (wa = r(cs, '\u22122%')), cs.forEach(t), (Oa = e(as, 'TD', {}));
       var Ds = o(Oa);
-      (B = u(Ds, '\u22120')), Ds.forEach(t), (q = e(as, 'TD', {}));
+      (B = r(Ds, '\u22120')), Ds.forEach(t), (q = e(as, 'TD', {}));
       var is = o(q);
-      (Va = u(is, '\u22125%')),
+      (Ca = r(is, '\u22125%')),
         is.forEach(t),
         as.forEach(t),
         (Da = e(Ga, 'TR', {}));
       var ss = o(Da);
       N = e(ss, 'TD', {});
       var Ps = o(N);
-      (Y = u(Ps, 'January 10, 2022')), Ps.forEach(t), (ia = e(ss, 'TD', {}));
+      (Y = r(Ps, 'January 10, 2022')), Ps.forEach(t), (ia = e(ss, 'TD', {}));
       var Ls = o(ia);
-      (Wa = u(Ls, '\u22122%')), Ls.forEach(t), (U = e(ss, 'TD', {}));
+      (Wa = r(Ls, '\u22122%')), Ls.forEach(t), (U = e(ss, 'TD', {}));
       var ot = o(U);
-      (ra = u(ot, '\u22121')), ot.forEach(t), (Pa = e(ss, 'TD', {}));
-      var lt = o(Pa);
-      (pa = u(lt, '\u22124%')),
-        lt.forEach(t),
+      (ra = r(ot, '\u22121')), ot.forEach(t), (Pa = e(ss, 'TD', {}));
+      var pt = o(Pa);
+      (la = r(pt, '\u22124%')),
+        pt.forEach(t),
         ss.forEach(t),
         Ga.forEach(t),
         K.forEach(t),
         this.h();
     },
     h() {
-      l(c, 'data-column', 'Date'),
-        l(c, 'data-row', '-1'),
-        l(E, 'data-column', 'S&P 500'),
-        l(E, 'data-row', '-1'),
-        l(b, 'data-column', 'Dow'),
-        l(b, 'data-row', '-1'),
-        l(x, 'data-column', 'Nasdaq'),
-        l(x, 'data-row', '-1'),
-        l(s, 'class', 'linechart-data');
+      p(c, 'data-column', 'Date'),
+        p(c, 'data-row', '-1'),
+        p(m, 'data-column', 'S&P 500'),
+        p(m, 'data-row', '-1'),
+        p(b, 'data-column', 'Dow'),
+        p(b, 'data-row', '-1'),
+        p(x, 'data-column', 'Nasdaq'),
+        p(x, 'data-row', '-1'),
+        p(s, 'class', 'linechart-data');
     },
     m(R, K) {
-      A(R, s, K),
-        a(s, g),
-        a(g, i),
-        a(i, c),
-        a(c, d),
-        a(i, E),
-        a(E, y),
-        a(i, b),
+      P(R, s, K),
+        a(s, f),
+        a(f, d),
+        a(d, c),
+        a(c, u),
+        a(d, m),
+        a(m, y),
+        a(d, b),
         a(b, D),
-        a(i, x),
+        a(d, x),
         a(x, z),
         a(s, $),
         a(s, Q),
         a(Q, I),
-        a(I, m),
-        a(m, w),
+        a(I, _),
+        a(_, w),
         a(I, ma),
-        a(ma, Ca),
+        a(ma, Va),
         a(I, H),
         a(H, aa),
         a(I, Ia),
         a(Ia, ja),
-        a(Q, C),
-        a(C, W),
+        a(Q, V),
+        a(V, W),
         a(W, ya),
-        a(C, Ha),
+        a(V, Ha),
         a(Ha, S),
-        a(C, sa),
+        a(V, sa),
         a(sa, Ja),
-        a(C, ba),
+        a(V, ba),
         a(ba, O),
         a(Q, F),
         a(F, Sa),
         a(Sa, $a),
-        a(F, T),
-        a(T, ta),
+        a(F, A),
+        a(A, ta),
         a(F, La),
         a(La, qa),
         a(F, na),
@@ -2449,10 +2459,10 @@ function bo(_) {
         a(Q, _a),
         a(_a, L),
         a(L, ca),
-        a(_a, la),
-        a(la, da),
-        a(_a, V),
-        a(V, ea),
+        a(_a, pa),
+        a(pa, da),
+        a(_a, C),
+        a(C, ea),
         a(_a, Ra),
         a(Ra, Ua),
         a(Q, M),
@@ -2472,7 +2482,7 @@ function bo(_) {
         a(oa, Oa),
         a(Oa, B),
         a(oa, q),
-        a(q, Va),
+        a(q, Ca),
         a(Q, Da),
         a(Da, N),
         a(N, Y),
@@ -2481,7 +2491,7 @@ function bo(_) {
         a(Da, U),
         a(U, ra),
         a(Da, Pa),
-        a(Pa, pa);
+        a(Pa, la);
     },
     p: xa,
     i: xa,
@@ -2502,8 +2512,8 @@ var zo = Object.freeze({
   [Symbol.toStringTag]: 'Module',
   default: Ue,
 });
-function wo(_) {
-  switch (_) {
+function wo(E) {
+  switch (E) {
     case './ai2svelte/ai-chart.exclude.svelte':
       return qn(
         () =>
@@ -2532,17 +2542,17 @@ function wo(_) {
         void 0
       );
     default:
-      return new Promise(function (s, g) {
+      return new Promise(function (s, f) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(g.bind(null, new Error('Unknown variable dynamic import: ' + _)));
+          : setTimeout)(f.bind(null, new Error('Unknown variable dynamic import: ' + E)));
       });
   }
 }
-const Do = (_) => ({}),
-  Be = (_) => ({ slot: 'hidden' });
-function Po(_) {
-  let s, g;
+const Do = (E) => ({}),
+  Be = (E) => ({ slot: 'hidden' });
+function Po(E) {
+  let s, f;
   return (
     (s = new un({
       props: {
@@ -2556,27 +2566,27 @@ function Po(_) {
       c() {
         xs(s.$$.fragment);
       },
-      l(i) {
-        Hs(s.$$.fragment, i);
+      l(d) {
+        Hs(s.$$.fragment, d);
       },
-      m(i, c) {
-        Is(s, i, c), (g = !0);
+      m(d, c) {
+        Is(s, d, c), (f = !0);
       },
       p: xa,
-      i(i) {
-        g || (ua(s.$$.fragment, i), (g = !0));
+      i(d) {
+        f || (ua(s.$$.fragment, d), (f = !0));
       },
-      o(i) {
-        Aa(s.$$.fragment, i), (g = !1);
+      o(d) {
+        Aa(s.$$.fragment, d), (f = !1);
       },
-      d(i) {
-        $s(s, i);
+      d(d) {
+        $s(s, d);
       },
     }
   );
 }
-function To(_) {
-  let s, g;
+function To(E) {
+  let s, f;
   return (
     (s = new un({
       props: {
@@ -2590,298 +2600,299 @@ function To(_) {
       c() {
         xs(s.$$.fragment);
       },
-      l(i) {
-        Hs(s.$$.fragment, i);
+      l(d) {
+        Hs(s.$$.fragment, d);
       },
-      m(i, c) {
-        Is(s, i, c), (g = !0);
+      m(d, c) {
+        Is(s, d, c), (f = !0);
       },
       p: xa,
-      i(i) {
-        g || (ua(s.$$.fragment, i), (g = !0));
+      i(d) {
+        f || (ua(s.$$.fragment, d), (f = !0));
       },
-      o(i) {
-        Aa(s.$$.fragment, i), (g = !1);
+      o(d) {
+        Aa(s.$$.fragment, d), (f = !1);
       },
-      d(i) {
-        $s(s, i);
+      d(d) {
+        $s(s, d);
       },
     }
   );
 }
-function Ao(_) {
-  let s, g, i, c, d, E;
+function Ao(E) {
+  let s, f, d, c, u, m;
   return {
     c() {
       (s = n('div')),
-        (g = n('h4')),
-        (i = r('Earthquake in Haiti')),
+        (f = n('h4')),
+        (d = i('Earthquake in Haiti')),
         (c = v()),
-        (d = n('p')),
-        (E = r('A 7.0 magnitude earthquake struck the island on Tuesday.')),
+        (u = n('p')),
+        (m = i('A 7.0 magnitude earthquake struck the island on Tuesday.')),
         this.h();
     },
     l(y) {
       s = e(y, 'DIV', { slot: !0, class: !0 });
       var b = o(s);
-      g = e(b, 'H4', { class: !0 });
-      var D = o(g);
-      (i = u(D, 'Earthquake in Haiti')),
+      f = e(b, 'H4', { class: !0 });
+      var D = o(f);
+      (d = r(D, 'Earthquake in Haiti')),
         D.forEach(t),
         (c = h(b)),
-        (d = e(b, 'P', {}));
-      var x = o(d);
-      (E = u(x, 'A 7.0 magnitude earthquake struck the island on Tuesday.')),
+        (u = e(b, 'P', {}));
+      var x = o(u);
+      (m = r(x, 'A 7.0 magnitude earthquake struck the island on Tuesday.')),
         x.forEach(t),
         b.forEach(t),
         this.h();
     },
     h() {
-      l(g, 'class', 'svelte-xmoab3'),
-        l(s, 'slot', 'title'),
-        l(s, 'class', 'title svelte-xmoab3');
+      p(f, 'class', 'svelte-xmoab3'),
+        p(s, 'slot', 'title'),
+        p(s, 'class', 'title svelte-xmoab3');
     },
     m(y, b) {
-      A(y, s, b), a(s, g), a(g, i), a(s, c), a(s, d), a(d, E);
+      P(y, s, b), a(s, f), a(f, d), a(s, c), a(s, u), a(u, m);
     },
     d(y) {
       y && t(s);
     },
   };
 }
-function xo(_) {
-  let s, g, i, c, d, E;
+function xo(E) {
+  let s, f, d, c, u, m;
   return {
     c() {
       (s = n('aside')),
-        (g = n('p')),
-        (i = r('Note: Data current as of Wednesday.')),
+        (f = n('p')),
+        (d = i('Note: Data current as of Wednesday.')),
         (c = v()),
-        (d = n('p')),
-        (E = r('Source: USGIS')),
+        (u = n('p')),
+        (m = i('Source: USGIS')),
         this.h();
     },
     l(y) {
       s = e(y, 'ASIDE', { slot: !0 });
       var b = o(s);
-      g = e(b, 'P', { class: !0 });
-      var D = o(g);
-      (i = u(D, 'Note: Data current as of Wednesday.')),
+      f = e(b, 'P', { class: !0 });
+      var D = o(f);
+      (d = r(D, 'Note: Data current as of Wednesday.')),
         D.forEach(t),
         (c = h(b)),
-        (d = e(b, 'P', { class: !0 }));
-      var x = o(d);
-      (E = u(x, 'Source: USGIS')), x.forEach(t), b.forEach(t), this.h();
+        (u = e(b, 'P', { class: !0 }));
+      var x = o(u);
+      (m = r(x, 'Source: USGIS')), x.forEach(t), b.forEach(t), this.h();
     },
     h() {
-      l(g, 'class', 'note'), l(d, 'class', 'source'), l(s, 'slot', 'notes');
+      p(f, 'class', 'note'), p(u, 'class', 'source'), p(s, 'slot', 'notes');
     },
     m(y, b) {
-      A(y, s, b), a(s, g), a(g, i), a(s, c), a(s, d), a(d, E);
+      P(y, s, b), a(s, f), a(f, d), a(s, c), a(s, u), a(u, m);
     },
     d(y) {
       y && t(s);
     },
   };
 }
-function Io(_) {
-  let s, g;
+function Io(E) {
+  let s, f;
   return (
     (s = new un({
       props: {
         AiGraphic: dn,
         id: 'ai-map',
         ariaHidden: !0,
+        size: 'wide',
         ariaDescription:
           'A map of Haiti shows the epicenter of an earthquake in the southwest of the country.',
         $$slots: { notes: [xo], title: [Ao] },
-        $$scope: { ctx: _ },
+        $$scope: { ctx: E },
       },
     })),
     {
       c() {
         xs(s.$$.fragment);
       },
-      l(i) {
-        Hs(s.$$.fragment, i);
+      l(d) {
+        Hs(s.$$.fragment, d);
       },
-      m(i, c) {
-        Is(s, i, c), (g = !0);
+      m(d, c) {
+        Is(s, d, c), (f = !0);
       },
-      p(i, c) {
-        const d = {};
-        c & 4 && (d.$$scope = { dirty: c, ctx: i }), s.$set(d);
+      p(d, c) {
+        const u = {};
+        c & 4 && (u.$$scope = { dirty: c, ctx: d }), s.$set(u);
       },
-      i(i) {
-        g || (ua(s.$$.fragment, i), (g = !0));
+      i(d) {
+        f || (ua(s.$$.fragment, d), (f = !0));
       },
-      o(i) {
-        Aa(s.$$.fragment, i), (g = !1);
+      o(d) {
+        Aa(s.$$.fragment, d), (f = !1);
       },
-      d(i) {
-        $s(s, i);
+      d(d) {
+        $s(s, d);
       },
     }
   );
 }
-function $o(_) {
+function $o(E) {
   return { c: xa, l: xa, m: xa, p: xa, i: xa, o: xa, d: xa };
 }
-function Co(_) {
-  let s, g;
+function Vo(E) {
+  let s, f;
   return (
     (s = new un({
       props: {
-        AiGraphic: _[3],
+        AiGraphic: E[3],
         ariaDescription:
           'A map of Haiti shows the epicenter of an earthquake in the southwest of the country.',
         $$slots: { hidden: [Ho] },
-        $$scope: { ctx: _ },
+        $$scope: { ctx: E },
       },
     })),
     {
       c() {
         xs(s.$$.fragment);
       },
-      l(i) {
-        Hs(s.$$.fragment, i);
+      l(d) {
+        Hs(s.$$.fragment, d);
       },
-      m(i, c) {
-        Is(s, i, c), (g = !0);
+      m(d, c) {
+        Is(s, d, c), (f = !0);
       },
-      p(i, c) {
-        const d = {};
-        c & 4 && (d.$$scope = { dirty: c, ctx: i }), s.$set(d);
+      p(d, c) {
+        const u = {};
+        c & 4 && (u.$$scope = { dirty: c, ctx: d }), s.$set(u);
       },
-      i(i) {
-        g || (ua(s.$$.fragment, i), (g = !0));
+      i(d) {
+        f || (ua(s.$$.fragment, d), (f = !0));
       },
-      o(i) {
-        Aa(s.$$.fragment, i), (g = !1);
+      o(d) {
+        Aa(s.$$.fragment, d), (f = !1);
       },
-      d(i) {
-        $s(s, i);
+      d(d) {
+        $s(s, d);
       },
     }
   );
 }
-function Vo(_) {
-  let s, g;
+function Co(E) {
+  let s, f;
   return (
     (s = new Ue({})),
     {
       c() {
         xs(s.$$.fragment);
       },
-      l(i) {
-        Hs(s.$$.fragment, i);
+      l(d) {
+        Hs(s.$$.fragment, d);
       },
-      m(i, c) {
-        Is(s, i, c), (g = !0);
+      m(d, c) {
+        Is(s, d, c), (f = !0);
       },
-      i(i) {
-        g || (ua(s.$$.fragment, i), (g = !0));
+      i(d) {
+        f || (ua(s.$$.fragment, d), (f = !0));
       },
-      o(i) {
-        Aa(s.$$.fragment, i), (g = !1);
+      o(d) {
+        Aa(s.$$.fragment, d), (f = !1);
       },
-      d(i) {
-        $s(s, i);
+      d(d) {
+        $s(s, d);
       },
     }
   );
 }
-function Ho(_) {
+function Ho(E) {
   let s;
-  const g = _[1].default,
-    i = cn(g, _, _[2], Be),
-    c = i || Vo();
+  const f = E[1].default,
+    d = cn(f, E, E[2], Be),
+    c = d || Co();
   return {
     c() {
       c && c.c();
     },
-    l(d) {
-      c && c.l(d);
+    l(u) {
+      c && c.l(u);
     },
-    m(d, E) {
-      c && c.m(d, E), (s = !0);
+    m(u, m) {
+      c && c.m(u, m), (s = !0);
     },
-    p(d, E) {
-      i &&
-        i.p &&
-        (!s || E & 4) &&
-        on(i, g, d, d[2], s ? pn(g, d[2], E, Do) : ln(d[2]), Be);
+    p(u, m) {
+      d &&
+        d.p &&
+        (!s || m & 4) &&
+        on(d, f, u, u[2], s ? ln(f, u[2], m, Do) : pn(u[2]), Be);
     },
-    i(d) {
-      s || (ua(c, d), (s = !0));
+    i(u) {
+      s || (ua(c, u), (s = !0));
     },
-    o(d) {
-      Aa(c, d), (s = !1);
+    o(u) {
+      Aa(c, u), (s = !1);
     },
-    d(d) {
-      c && c.d(d);
+    d(u) {
+      c && c.d(u);
     },
   };
 }
-function So(_) {
+function So(E) {
   return { c: xa, l: xa, m: xa, p: xa, i: xa, o: xa, d: xa };
 }
-function Lo(_) {
+function Lo(E) {
   let s,
-    g,
-    i = {
-      ctx: _,
+    f,
+    d = {
+      ctx: E,
       current: null,
       token: null,
       hasCatch: !1,
       pending: So,
-      then: Co,
+      then: Vo,
       catch: $o,
       value: 3,
       blocks: [, , ,],
     };
   return (
-    uo(_[0]('ai-linechart'), i),
+    uo(E[0]('ai-linechart'), d),
     {
       c() {
-        (s = en()), i.block.c();
+        (s = en()), d.block.c();
       },
       l(c) {
-        (s = en()), i.block.l(c);
+        (s = en()), d.block.l(c);
       },
-      m(c, d) {
-        A(c, s, d),
-          i.block.m(c, (i.anchor = d)),
-          (i.mount = () => s.parentNode),
-          (i.anchor = s),
-          (g = !0);
+      m(c, u) {
+        P(c, s, u),
+          d.block.m(c, (d.anchor = u)),
+          (d.mount = () => s.parentNode),
+          (d.anchor = s),
+          (f = !0);
       },
-      p(c, d) {
-        (_ = c), ko(i, _, d);
+      p(c, u) {
+        (E = c), ko(d, E, u);
       },
       i(c) {
-        g || (ua(i.block), (g = !0));
+        f || (ua(d.block), (f = !0));
       },
       o(c) {
-        for (let d = 0; d < 3; d += 1) {
-          const E = i.blocks[d];
-          Aa(E);
+        for (let u = 0; u < 3; u += 1) {
+          const m = d.blocks[u];
+          Aa(m);
         }
-        g = !1;
+        f = !1;
       },
       d(c) {
-        c && t(s), i.block.d(c), (i.token = null), (i = null);
+        c && t(s), d.block.d(c), (d.token = null), (d = null);
       },
     }
   );
 }
-function Mo(_) {
+function Mo(E) {
   let s,
-    g,
-    i,
-    c,
+    f,
     d,
-    E,
+    c,
+    u,
+    m,
     y,
     b,
     D,
@@ -2898,15 +2909,15 @@ function Mo(_) {
 <span class="token punctuation">/></span></span></code>`,
     Q,
     I,
-    m,
+    _,
     w,
     ma,
-    Ca,
+    Va,
     H,
     aa,
     Ia,
     ja,
-    C,
+    V,
     W,
     ya,
     Ha,
@@ -2918,7 +2929,7 @@ function Mo(_) {
     F,
     Sa,
     $a,
-    T,
+    A,
     ta,
     La,
     qa,
@@ -2927,9 +2938,9 @@ function Mo(_) {
     _a,
     L,
     ca,
-    la,
+    pa,
     da,
-    V,
+    C,
     ea,
     Ra,
     Ua,
@@ -2950,7 +2961,7 @@ function Mo(_) {
     Oa,
     B,
     q,
-    Va,
+    Ca,
     Da,
     N,
     Y,
@@ -2959,12 +2970,12 @@ function Mo(_) {
     U,
     ra,
     Pa,
-    pa,
+    la,
     R,
     K,
     Ka,
     va,
-    f,
+    g,
     ds,
     ks,
     ts,
@@ -3001,10 +3012,10 @@ AriaDescription: Add a descriptive line on the graphic <span class="token keywor
     Za,
     ha,
     zs,
-    ls,
+    ps,
     ws,
     as,
-    ps,
+    ls,
     cs,
     Ds,
     is,
@@ -3012,7 +3023,7 @@ AriaDescription: Add a descriptive line on the graphic <span class="token keywor
     Ps,
     Ls,
     ot,
-    lt,
+    pt,
     Tt,
     Us,
     We = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
@@ -3045,6 +3056,7 @@ AriaDescription: Add a descriptive line on the graphic <span class="token keywor
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Ai2svelte</span>
   <span class="token attr-name">AiGraphic="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>MyAiChart<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
   <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ai-map<span class="token punctuation">"</span></span>
+  <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wide<span class="token punctuation">"</span></span>
   <span class="token attr-name">ariaDescription</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>A map of Haiti shows the epicenter of an earthquake in the southwest of the country.<span class="token punctuation">"</span></span> 
 <span class="token punctuation">></span></span>
   <span class="token comment">&lt;!-- Add a title and/or notes with slots --></span>
@@ -3066,7 +3078,7 @@ AriaDescription: Add a descriptive line on the graphic <span class="token keywor
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code>`,
     $t,
     Os,
-    Ct,
+    Vt,
     Gs,
     vt,
     vn,
@@ -3076,7 +3088,7 @@ AriaDescription: Add a descriptive line on the graphic <span class="token keywor
     Ws,
     _n,
     En,
-    Vt,
+    Ct,
     Fs,
     Ke = `<code class="language-bash"><span class="token comment"># In your Google doc...</span>
 <span class="token punctuation">[</span>blocks<span class="token punctuation">]</span>
@@ -3116,7 +3128,7 @@ ComponentName: my-chart
   <span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">&#125;</span></span>
 <span class="token each"><span class="token punctuation">&#123;</span><span class="token keyword">/each</span><span class="token punctuation">&#125;</span></span></code>`,
     St,
-    pt,
+    lt,
     Ss,
     yn,
     ht,
@@ -3137,8 +3149,8 @@ ComponentName: my-chart
     In,
     Et,
     $n,
-    Cn,
     Vn,
+    Cn,
     Zs,
     Hn,
     yt,
@@ -3202,157 +3214,157 @@ ComponentName: my-chart
     jt;
   return (
     (I = new rn({
-      props: { $$slots: { default: [Po] }, $$scope: { ctx: _ } },
+      props: { $$slots: { default: [Po] }, $$scope: { ctx: E } },
     })),
     (Ms = new rn({
-      props: { $$slots: { default: [To] }, $$scope: { ctx: _ } },
+      props: { $$slots: { default: [To] }, $$scope: { ctx: E } },
     })),
     (Os = new rn({
-      props: { $$slots: { default: [Io] }, $$scope: { ctx: _ } },
+      props: { $$slots: { default: [Io] }, $$scope: { ctx: E } },
     })),
     (Ns = new rn({
-      props: { $$slots: { default: [Lo] }, $$scope: { ctx: _ } },
+      props: { $$slots: { default: [Lo] }, $$scope: { ctx: E } },
     })),
     {
       c() {
         (s = n('section')),
-          (g = n('h2')),
-          (i = r(Ye)),
+          (f = n('h2')),
+          (d = i(Ye)),
           (c = v()),
-          (d = n('p')),
-          (E = r('Pass a component created by ')),
+          (u = n('p')),
+          (m = i('Pass a component created by ')),
           (y = n('a')),
-          (b = r('ai2svelte')),
-          (D = r(
+          (b = i('ai2svelte')),
+          (D = i(
             ' to this component, which will wrap it in a graphics section tag.'
           )),
           (x = v()),
           (z = n('pre')),
           (Q = v()),
           xs(I.$$.fragment),
-          (m = v()),
+          (_ = v()),
           (w = n('section')),
           (ma = n('h2')),
-          (Ca = r('Accessibility props')),
+          (Va = i('Accessibility props')),
           (H = v()),
           (aa = n('p')),
           (Ia = n('code')),
-          (ja = r('ariaHidden')),
-          (C = v()),
+          (ja = i('ariaHidden')),
+          (V = v()),
           (W = n('ul')),
           (ya = n('li')),
-          (Ha = r('Set to ')),
+          (Ha = i('Set to ')),
           (S = n('code')),
-          (sa = r('true')),
-          (Ja = r(` by default, which means HTML text content in the
+          (sa = i('true')),
+          (Ja = i(` by default, which means HTML text content in the
 ai2svelte component are visible on the page but not read aloud by screen readers.
 (Read more about aria-hidden elements `)),
           (ba = n('a')),
-          (O = r('here')),
-          (F = r('.)')),
+          (O = i('here')),
+          (F = i('.)')),
           (Sa = v()),
           ($a = n('li')),
-          (T = r('Set it to ')),
+          (A = i('Set it to ')),
           (ta = n('code')),
-          (La = r('false')),
-          (qa = r(
+          (La = i('false')),
+          (qa = i(
             ' to make the screen reader read aloud HTML text content in ai2svelte.'
           )),
           (na = v()),
           (Ma = n('p')),
           (_a = n('code')),
-          (L = r('ariaDescription')),
+          (L = i('ariaDescription')),
           (ca = v()),
-          (la = n('ul')),
+          (pa = n('ul')),
           (da = n('li')),
-          (V = r('If ')),
+          (C = i('If ')),
           (ea = n('code')),
-          (Ra = r('ariaHidden')),
-          (Ua = r(' is ')),
+          (Ra = i('ariaHidden')),
+          (Ua = i(' is ')),
           (M = n('code')),
-          (ka = r('true')),
-          (Ba = r(', make sure you add an ')),
+          (ka = i('true')),
+          (Ba = i(', make sure you add an ')),
           (X = n('code')),
-          (J = r('ariaDescription')),
-          (fa = r(
+          (J = i('ariaDescription')),
+          (fa = i(
             ', which is invisible on the page but is read aloud by screen readers.'
           )),
           (Ya = v()),
           (Z = n('li')),
-          (G = r('This prop takes a string, like altText for an image.')),
+          (G = i('This prop takes a string, like altText for an image.')),
           (oa = v()),
           (za = n('li')),
-          (ga = r(
+          (ga = i(
             'It should describe what the chart is showing and why it\u2019s important. This is helpful for:'
           )),
           (j = n('ul')),
           (wa = n('li')),
-          (Oa = r(
+          (Oa = i(
             'Blind readers using screen-reading or Braille conversion software'
           )),
           (B = v()),
           (q = n('li')),
-          (Va = r(
+          (Ca = i(
             'All readers if the image is unavailable or takes too long to load'
           )),
           (Da = v()),
           (N = n('li')),
-          (Y = r(
+          (Y = i(
             'Read about writing aria description, also known as alt text, '
           )),
           (ia = n('a')),
-          (Wa = r('here')),
-          (U = r('.')),
+          (Wa = i('here')),
+          (U = i('.')),
           (ra = v()),
           (Pa = n('section')),
-          (pa = n('p')),
-          (R = r('\u{1F6A8} ')),
+          (la = n('p')),
+          (R = i('\u{1F6A8} ')),
           (K = n('strong')),
-          (Ka = r('Important:')),
-          (va = r(' If ')),
-          (f = n('code')),
-          (ds = r('ariaHidden')),
-          (ks = r(' is ')),
+          (Ka = i('Important:')),
+          (va = i(' If ')),
+          (g = n('code')),
+          (ds = i('ariaHidden')),
+          (ks = i(' is ')),
           (ts = n('code')),
-          (Ga = r('true')),
-          (Qa = r(' but you are missing ')),
+          (Ga = i('true')),
+          (Qa = i(' but you are missing ')),
           (ns = n('code')),
-          (fs = r('ariaDescription')),
-          (gs = r(
+          (fs = i('ariaDescription')),
+          (gs = i(
             ' or some other special alternative for screen readers (more on this later), your graphic will be hidden from the page and you will see a warning in your console.'
           )),
           (vs = v()),
           (Ta = n('p')),
-          (hs = r('Graphics kit users can set your ')),
+          (hs = i('Graphics kit users can set your ')),
           (es = n('code')),
-          (ms = r('ariaHidden')),
-          (_s = r(' prop and write your  ')),
+          (ms = i('ariaHidden')),
+          (_s = i(' prop and write your  ')),
           (Ea = n('code')),
-          (Es = r('ariaDescription')),
-          (ys = r(' in the google doc like this:')),
+          (Es = i('ariaDescription')),
+          (ys = i(' in the google doc like this:')),
           (rs = v()),
           (Fa = n('pre')),
           (us = v()),
           (Na = n('section')),
           (os = n('h2')),
-          (bs = r('Graphic width')),
+          (bs = i('Graphic width')),
           (Za = v()),
           (ha = n('p')),
-          (zs = r(
+          (zs = i(
             'Adjust the size of the graphic by passing a class name corresponding to one of our well widths: '
           )),
-          (ls = n('code')),
-          (ws = r('wide')),
-          (as = r(', ')),
           (ps = n('code')),
-          (cs = r('wider')),
-          (Ds = r(', ')),
+          (ws = i('wide')),
+          (as = i(', ')),
+          (ls = n('code')),
+          (cs = i('wider')),
+          (Ds = i(', ')),
           (is = n('code')),
-          (ss = r('widest')),
-          (Ps = r(' or ')),
+          (ss = i('widest')),
+          (Ps = i(' or ')),
           (Ls = n('code')),
-          (ot = r('fluid')),
-          (lt = r('.')),
+          (ot = i('fluid')),
+          (pt = i('.')),
           (Tt = v()),
           (Us = n('pre')),
           (At = v()),
@@ -3360,63 +3372,63 @@ ai2svelte component are visible on the page but not read aloud by screen readers
           (xt = v()),
           (Rs = n('section')),
           (ft = n('h2')),
-          (kn = r('Chart title, description, source and note')),
+          (kn = i('Chart title, description, source and note')),
           (fn = v()),
           (gt = n('p')),
-          (gn = r('Add additional chart chatter through slots.')),
+          (gn = i('Add additional chart chatter through slots.')),
           (It = v()),
           (Bs = n('pre')),
           ($t = v()),
           xs(Os.$$.fragment),
-          (Ct = v()),
+          (Vt = v()),
           (Gs = n('section')),
           (vt = n('h2')),
-          (vn = r('Using ArchieML google doc')),
+          (vn = i('Using ArchieML google doc')),
           (hn = v()),
           (Ys = n('p')),
-          (mn = r('You can use this component to layout AI graphics via an ')),
+          (mn = i('You can use this component to layout AI graphics via an ')),
           (Ws = n('a')),
-          (_n = r('ArchieML')),
-          (En = r(
+          (_n = i('ArchieML')),
+          (En = i(
             '-formatted Google doc by using the following pattern to dynamically import an ai2svelte component:'
           )),
-          (Vt = v()),
+          (Ct = v()),
           (Fs = n('pre')),
           (Ht = v()),
           (Ks = n('pre')),
           (St = v()),
-          (pt = n('section')),
+          (lt = n('section')),
           (Ss = n('p')),
-          (yn = r('This comes with some restrictions, though. Be sure your ')),
+          (yn = i('This comes with some restrictions, though. Be sure your ')),
           (ht = n('code')),
-          (bn = r('fetchComponent')),
-          (zn = r(' function follows ')),
+          (bn = i('fetchComponent')),
+          (zn = i(' function follows ')),
           (Qs = n('a')),
-          (wn = r('the limits on dynamic imports')),
-          (Dn = r('.')),
+          (wn = i('the limits on dynamic imports')),
+          (Dn = i('.')),
           (Lt = v()),
           (As = n('section')),
           (mt = n('h2')),
-          (Pn = r('Customising data for screen readers')),
+          (Pn = i('Customising data for screen readers')),
           (Tn = v()),
           (_t = n('p')),
           (An =
-            r(`Sometimes, in addition to or instead of adding an aria description for graphics,
+            i(`Sometimes, in addition to or instead of adding an aria description for graphics,
 we want to also provide a data table, a lengthier description with more complex element structure or something else.`)),
           (xn = v()),
           (Xs = n('p')),
-          (In = r(
+          (In = i(
             'You can add custom information for screen readers only by using the '
           )),
           (Et = n('code')),
-          ($n = r('hidden')),
-          (Cn = r(' slot.')),
-          (Vn = v()),
+          ($n = i('hidden')),
+          (Vn = i(' slot.')),
+          (Cn = v()),
           (Zs = n('p')),
-          (Hn = r('For example, for the line chart below, we can add a ')),
+          (Hn = i('For example, for the line chart below, we can add a ')),
           (yt = n('strong')),
-          (Sn = r('data table')),
-          (Ln = r(' that helps screen-reader users navigate the data.')),
+          (Sn = i('data table')),
+          (Ln = i(' that helps screen-reader users navigate the data.')),
           (Mt = v()),
           (at = n('pre')),
           (Rt = v()),
@@ -3424,10 +3436,10 @@ we want to also provide a data table, a lengthier description with more complex 
           (Ot = v()),
           (ct = n('section')),
           (st = n('p')),
-          (Mn = r('This is what ')),
+          (Mn = i('This is what ')),
           (bt = n('code')),
-          (Rn = r('<SRDataTable/>')),
-          (On = r(
+          (Rn = i('<SRDataTable/>')),
+          (On = i(
             ' looks like. (You can make an HTML table using DataWrapper.)'
           )),
           (Gt = v()),
@@ -3436,61 +3448,61 @@ we want to also provide a data table, a lengthier description with more complex 
           (it = n('section')),
           (rt = n('p')),
           (nt = n('a')),
-          (Gn = r('Read this')),
-          (Nn = r(
+          (Gn = i('Read this')),
+          (Nn = i(
             ' for more information on screen-reader data tables for charts.'
           )),
           this.h();
       },
       l(k) {
         s = e(k, 'SECTION', {});
-        var P = o(s);
-        g = e(P, 'H2', {});
-        var zt = o(g);
-        (i = u(zt, Ye)), zt.forEach(t), (c = h(P)), (d = e(P, 'P', {}));
-        var et = o(d);
-        (E = u(et, 'Pass a component created by ')),
+        var T = o(s);
+        f = e(T, 'H2', {});
+        var zt = o(f);
+        (d = r(zt, Ye)), zt.forEach(t), (c = h(T)), (u = e(T, 'P', {}));
+        var et = o(u);
+        (m = r(et, 'Pass a component created by ')),
           (y = e(et, 'A', { href: !0, rel: !0 }));
         var wt = o(y);
-        (b = u(wt, 'ai2svelte')),
+        (b = r(wt, 'ai2svelte')),
           wt.forEach(t),
-          (D = u(
+          (D = r(
             et,
             ' to this component, which will wrap it in a graphics section tag.'
           )),
           et.forEach(t),
-          P.forEach(t),
+          T.forEach(t),
           (x = h(k)),
           (z = e(k, 'PRE', { class: !0 }));
         var Jt = o(z);
         Jt.forEach(t),
           (Q = h(k)),
           Hs(I.$$.fragment, k),
-          (m = h(k)),
+          (_ = h(k)),
           (w = e(k, 'SECTION', {}));
         var Ts = o(w);
         ma = e(Ts, 'H2', {});
         var Bn = o(ma);
-        (Ca = u(Bn, 'Accessibility props')),
+        (Va = r(Bn, 'Accessibility props')),
           Bn.forEach(t),
           (H = h(Ts)),
           (aa = e(Ts, 'P', {}));
         var Yn = o(aa);
         Ia = e(Yn, 'CODE', {});
         var Wn = o(Ia);
-        (ja = u(Wn, 'ariaHidden')),
+        (ja = r(Wn, 'ariaHidden')),
           Wn.forEach(t),
           Yn.forEach(t),
-          (C = h(Ts)),
+          (V = h(Ts)),
           (W = e(Ts, 'UL', {}));
         var qt = o(W);
         ya = e(qt, 'LI', {});
         var ut = o(ya);
-        (Ha = u(ut, 'Set to ')), (S = e(ut, 'CODE', {}));
+        (Ha = r(ut, 'Set to ')), (S = e(ut, 'CODE', {}));
         var Fn = o(S);
-        (sa = u(Fn, 'true')),
+        (sa = r(Fn, 'true')),
           Fn.forEach(t),
-          (Ja = u(
+          (Ja = r(
             ut,
             ` by default, which means HTML text content in the
 ai2svelte component are visible on the page but not read aloud by screen readers.
@@ -3498,18 +3510,18 @@ ai2svelte component are visible on the page but not read aloud by screen readers
           )),
           (ba = e(ut, 'A', { href: !0, rel: !0 }));
         var Kn = o(ba);
-        (O = u(Kn, 'here')),
+        (O = r(Kn, 'here')),
           Kn.forEach(t),
-          (F = u(ut, '.)')),
+          (F = r(ut, '.)')),
           ut.forEach(t),
           (Sa = h(qt)),
           ($a = e(qt, 'LI', {}));
         var Ut = o($a);
-        (T = u(Ut, 'Set it to ')), (ta = e(Ut, 'CODE', {}));
+        (A = r(Ut, 'Set it to ')), (ta = e(Ut, 'CODE', {}));
         var Qn = o(ta);
-        (La = u(Qn, 'false')),
+        (La = r(Qn, 'false')),
           Qn.forEach(t),
-          (qa = u(
+          (qa = r(
             Ut,
             ' to make the screen reader read aloud HTML text content in ai2svelte.'
           )),
@@ -3520,29 +3532,29 @@ ai2svelte component are visible on the page but not read aloud by screen readers
         var Xn = o(Ma);
         _a = e(Xn, 'CODE', {});
         var Zn = o(_a);
-        (L = u(Zn, 'ariaDescription')),
+        (L = r(Zn, 'ariaDescription')),
           Zn.forEach(t),
           Xn.forEach(t),
           (ca = h(Ts)),
-          (la = e(Ts, 'UL', {}));
-        var js = o(la);
+          (pa = e(Ts, 'UL', {}));
+        var js = o(pa);
         da = e(js, 'LI', {});
         var Js = o(da);
-        (V = u(Js, 'If ')), (ea = e(Js, 'CODE', {}));
+        (C = r(Js, 'If ')), (ea = e(Js, 'CODE', {}));
         var ae = o(ea);
-        (Ra = u(ae, 'ariaHidden')),
+        (Ra = r(ae, 'ariaHidden')),
           ae.forEach(t),
-          (Ua = u(Js, ' is ')),
+          (Ua = r(Js, ' is ')),
           (M = e(Js, 'CODE', {}));
         var se = o(M);
-        (ka = u(se, 'true')),
+        (ka = r(se, 'true')),
           se.forEach(t),
-          (Ba = u(Js, ', make sure you add an ')),
+          (Ba = r(Js, ', make sure you add an ')),
           (X = e(Js, 'CODE', {}));
         var te = o(X);
-        (J = u(te, 'ariaDescription')),
+        (J = r(te, 'ariaDescription')),
           te.forEach(t),
-          (fa = u(
+          (fa = r(
             Js,
             ', which is invisible on the page but is read aloud by screen readers.'
           )),
@@ -3550,12 +3562,12 @@ ai2svelte component are visible on the page but not read aloud by screen readers
           (Ya = h(js)),
           (Z = e(js, 'LI', {}));
         var ne = o(Z);
-        (G = u(ne, 'This prop takes a string, like altText for an image.')),
+        (G = r(ne, 'This prop takes a string, like altText for an image.')),
           ne.forEach(t),
           (oa = h(js)),
           (za = e(js, 'LI', {}));
         var jn = o(za);
-        (ga = u(
+        (ga = r(
           jn,
           'It should describe what the chart is showing and why it\u2019s important. This is helpful for:'
         )),
@@ -3563,7 +3575,7 @@ ai2svelte component are visible on the page but not read aloud by screen readers
         var Bt = o(j);
         wa = e(Bt, 'LI', {});
         var ee = o(wa);
-        (Oa = u(
+        (Oa = r(
           ee,
           'Blind readers using screen-reading or Braille conversion software'
         )),
@@ -3571,7 +3583,7 @@ ai2svelte component are visible on the page but not read aloud by screen readers
           (B = h(Bt)),
           (q = e(Bt, 'LI', {}));
         var oe = o(q);
-        (Va = u(
+        (Ca = r(
           oe,
           'All readers if the image is unavailable or takes too long to load'
         )),
@@ -3581,61 +3593,61 @@ ai2svelte component are visible on the page but not read aloud by screen readers
           (Da = h(js)),
           (N = e(js, 'LI', {}));
         var Yt = o(N);
-        (Y = u(
+        (Y = r(
           Yt,
           'Read about writing aria description, also known as alt text, '
         )),
           (ia = e(Yt, 'A', { href: !0, rel: !0 }));
-        var le = o(ia);
-        (Wa = u(le, 'here')),
-          le.forEach(t),
-          (U = u(Yt, '.')),
+        var pe = o(ia);
+        (Wa = r(pe, 'here')),
+          pe.forEach(t),
+          (U = r(Yt, '.')),
           Yt.forEach(t),
           js.forEach(t),
           (ra = h(Ts)),
           (Pa = e(Ts, 'SECTION', { class: !0 }));
-        var pe = o(Pa);
-        pa = e(pe, 'P', {});
-        var Cs = o(pa);
-        (R = u(Cs, '\u{1F6A8} ')), (K = e(Cs, 'STRONG', {}));
+        var le = o(Pa);
+        la = e(le, 'P', {});
+        var Vs = o(la);
+        (R = r(Vs, '\u{1F6A8} ')), (K = e(Vs, 'STRONG', {}));
         var ce = o(K);
-        (Ka = u(ce, 'Important:')),
+        (Ka = r(ce, 'Important:')),
           ce.forEach(t),
-          (va = u(Cs, ' If ')),
-          (f = e(Cs, 'CODE', {}));
-        var ie = o(f);
-        (ds = u(ie, 'ariaHidden')),
+          (va = r(Vs, ' If ')),
+          (g = e(Vs, 'CODE', {}));
+        var ie = o(g);
+        (ds = r(ie, 'ariaHidden')),
           ie.forEach(t),
-          (ks = u(Cs, ' is ')),
-          (ts = e(Cs, 'CODE', {}));
+          (ks = r(Vs, ' is ')),
+          (ts = e(Vs, 'CODE', {}));
         var re = o(ts);
-        (Ga = u(re, 'true')),
+        (Ga = r(re, 'true')),
           re.forEach(t),
-          (Qa = u(Cs, ' but you are missing ')),
-          (ns = e(Cs, 'CODE', {}));
+          (Qa = r(Vs, ' but you are missing ')),
+          (ns = e(Vs, 'CODE', {}));
         var ue = o(ns);
-        (fs = u(ue, 'ariaDescription')),
+        (fs = r(ue, 'ariaDescription')),
           ue.forEach(t),
-          (gs = u(
-            Cs,
+          (gs = r(
+            Vs,
             ' or some other special alternative for screen readers (more on this later), your graphic will be hidden from the page and you will see a warning in your console.'
           )),
-          Cs.forEach(t),
-          pe.forEach(t),
+          Vs.forEach(t),
+          le.forEach(t),
           (vs = h(Ts)),
           (Ta = e(Ts, 'P', {}));
         var dt = o(Ta);
-        (hs = u(dt, 'Graphics kit users can set your ')),
+        (hs = r(dt, 'Graphics kit users can set your ')),
           (es = e(dt, 'CODE', {}));
         var de = o(es);
-        (ms = u(de, 'ariaHidden')),
+        (ms = r(de, 'ariaHidden')),
           de.forEach(t),
-          (_s = u(dt, ' prop and write your  ')),
+          (_s = r(dt, ' prop and write your  ')),
           (Ea = e(dt, 'CODE', {}));
         var ke = o(Ea);
-        (Es = u(ke, 'ariaDescription')),
+        (Es = r(ke, 'ariaDescription')),
           ke.forEach(t),
-          (ys = u(dt, ' in the google doc like this:')),
+          (ys = r(dt, ' in the google doc like this:')),
           dt.forEach(t),
           Ts.forEach(t),
           (rs = h(k)),
@@ -3645,36 +3657,36 @@ ai2svelte component are visible on the page but not read aloud by screen readers
         var Wt = o(Na);
         os = e(Wt, 'H2', {});
         var fe = o(os);
-        (bs = u(fe, 'Graphic width')),
+        (bs = r(fe, 'Graphic width')),
           fe.forEach(t),
           (Za = h(Wt)),
           (ha = e(Wt, 'P', {}));
-        var Vs = o(ha);
-        (zs = u(
-          Vs,
+        var Cs = o(ha);
+        (zs = r(
+          Cs,
           'Adjust the size of the graphic by passing a class name corresponding to one of our well widths: '
         )),
-          (ls = e(Vs, 'CODE', {}));
-        var ge = o(ls);
-        (ws = u(ge, 'wide')),
+          (ps = e(Cs, 'CODE', {}));
+        var ge = o(ps);
+        (ws = r(ge, 'wide')),
           ge.forEach(t),
-          (as = u(Vs, ', ')),
-          (ps = e(Vs, 'CODE', {}));
-        var ve = o(ps);
-        (cs = u(ve, 'wider')),
+          (as = r(Cs, ', ')),
+          (ls = e(Cs, 'CODE', {}));
+        var ve = o(ls);
+        (cs = r(ve, 'wider')),
           ve.forEach(t),
-          (Ds = u(Vs, ', ')),
-          (is = e(Vs, 'CODE', {}));
+          (Ds = r(Cs, ', ')),
+          (is = e(Cs, 'CODE', {}));
         var he = o(is);
-        (ss = u(he, 'widest')),
+        (ss = r(he, 'widest')),
           he.forEach(t),
-          (Ps = u(Vs, ' or ')),
-          (Ls = e(Vs, 'CODE', {}));
+          (Ps = r(Cs, ' or ')),
+          (Ls = e(Cs, 'CODE', {}));
         var me = o(Ls);
-        (ot = u(me, 'fluid')),
+        (ot = r(me, 'fluid')),
           me.forEach(t),
-          (lt = u(Vs, '.')),
-          Vs.forEach(t),
+          (pt = r(Cs, '.')),
+          Cs.forEach(t),
           Wt.forEach(t),
           (Tt = h(k)),
           (Us = e(k, 'PRE', { class: !0 }));
@@ -3687,12 +3699,12 @@ ai2svelte component are visible on the page but not read aloud by screen readers
         var Ft = o(Rs);
         ft = e(Ft, 'H2', {});
         var _e = o(ft);
-        (kn = u(_e, 'Chart title, description, source and note')),
+        (kn = r(_e, 'Chart title, description, source and note')),
           _e.forEach(t),
           (fn = h(Ft)),
           (gt = e(Ft, 'P', {}));
         var Ee = o(gt);
-        (gn = u(Ee, 'Add additional chart chatter through slots.')),
+        (gn = r(Ee, 'Add additional chart chatter through slots.')),
           Ee.forEach(t),
           Ft.forEach(t),
           (It = h(k)),
@@ -3701,53 +3713,53 @@ ai2svelte component are visible on the page but not read aloud by screen readers
         to.forEach(t),
           ($t = h(k)),
           Hs(Os.$$.fragment, k),
-          (Ct = h(k)),
+          (Vt = h(k)),
           (Gs = e(k, 'SECTION', {}));
         var Kt = o(Gs);
         vt = e(Kt, 'H2', {});
         var ye = o(vt);
-        (vn = u(ye, 'Using ArchieML google doc')),
+        (vn = r(ye, 'Using ArchieML google doc')),
           ye.forEach(t),
           (hn = h(Kt)),
           (Ys = e(Kt, 'P', {}));
         var Qt = o(Ys);
-        (mn = u(
+        (mn = r(
           Qt,
           'You can use this component to layout AI graphics via an '
         )),
           (Ws = e(Qt, 'A', { href: !0, rel: !0 }));
         var be = o(Ws);
-        (_n = u(be, 'ArchieML')),
+        (_n = r(be, 'ArchieML')),
           be.forEach(t),
-          (En = u(
+          (En = r(
             Qt,
             '-formatted Google doc by using the following pattern to dynamically import an ai2svelte component:'
           )),
           Qt.forEach(t),
           Kt.forEach(t),
-          (Vt = h(k)),
+          (Ct = h(k)),
           (Fs = e(k, 'PRE', { class: !0 }));
         var no = o(Fs);
         no.forEach(t), (Ht = h(k)), (Ks = e(k, 'PRE', { class: !0 }));
         var eo = o(Ks);
-        eo.forEach(t), (St = h(k)), (pt = e(k, 'SECTION', {}));
-        var ze = o(pt);
+        eo.forEach(t), (St = h(k)), (lt = e(k, 'SECTION', {}));
+        var ze = o(lt);
         Ss = e(ze, 'P', {});
         var kt = o(Ss);
-        (yn = u(
+        (yn = r(
           kt,
           'This comes with some restrictions, though. Be sure your '
         )),
           (ht = e(kt, 'CODE', {}));
         var we = o(ht);
-        (bn = u(we, 'fetchComponent')),
+        (bn = r(we, 'fetchComponent')),
           we.forEach(t),
-          (zn = u(kt, ' function follows ')),
+          (zn = r(kt, ' function follows ')),
           (Qs = e(kt, 'A', { href: !0, rel: !0 }));
         var De = o(Qs);
-        (wn = u(De, 'the limits on dynamic imports')),
+        (wn = r(De, 'the limits on dynamic imports')),
           De.forEach(t),
-          (Dn = u(kt, '.')),
+          (Dn = r(kt, '.')),
           kt.forEach(t),
           ze.forEach(t),
           (Lt = h(k)),
@@ -3755,12 +3767,12 @@ ai2svelte component are visible on the page but not read aloud by screen readers
         var qs = o(As);
         mt = e(qs, 'H2', {});
         var Pe = o(mt);
-        (Pn = u(Pe, 'Customising data for screen readers')),
+        (Pn = r(Pe, 'Customising data for screen readers')),
           Pe.forEach(t),
           (Tn = h(qs)),
           (_t = e(qs, 'P', {}));
         var Te = o(_t);
-        (An = u(
+        (An = r(
           Te,
           `Sometimes, in addition to or instead of adding an aria description for graphics,
 we want to also provide a data table, a lengthier description with more complex element structure or something else.`
@@ -3769,25 +3781,25 @@ we want to also provide a data table, a lengthier description with more complex 
           (xn = h(qs)),
           (Xs = e(qs, 'P', {}));
         var Xt = o(Xs);
-        (In = u(
+        (In = r(
           Xt,
           'You can add custom information for screen readers only by using the '
         )),
           (Et = e(Xt, 'CODE', {}));
         var Ae = o(Et);
-        ($n = u(Ae, 'hidden')),
+        ($n = r(Ae, 'hidden')),
           Ae.forEach(t),
-          (Cn = u(Xt, ' slot.')),
+          (Vn = r(Xt, ' slot.')),
           Xt.forEach(t),
-          (Vn = h(qs)),
+          (Cn = h(qs)),
           (Zs = e(qs, 'P', {}));
         var Zt = o(Zs);
-        (Hn = u(Zt, 'For example, for the line chart below, we can add a ')),
+        (Hn = r(Zt, 'For example, for the line chart below, we can add a ')),
           (yt = e(Zt, 'STRONG', {}));
         var xe = o(yt);
-        (Sn = u(xe, 'data table')),
+        (Sn = r(xe, 'data table')),
           xe.forEach(t),
-          (Ln = u(Zt, ' that helps screen-reader users navigate the data.')),
+          (Ln = r(Zt, ' that helps screen-reader users navigate the data.')),
           Zt.forEach(t),
           qs.forEach(t),
           (Mt = h(k)),
@@ -3801,11 +3813,11 @@ we want to also provide a data table, a lengthier description with more complex 
         var Ie = o(ct);
         st = e(Ie, 'P', {});
         var an = o(st);
-        (Mn = u(an, 'This is what ')), (bt = e(an, 'CODE', {}));
+        (Mn = r(an, 'This is what ')), (bt = e(an, 'CODE', {}));
         var $e = o(bt);
-        (Rn = u($e, '<SRDataTable/>')),
+        (Rn = r($e, '<SRDataTable/>')),
           $e.forEach(t),
-          (On = u(
+          (On = r(
             an,
             ' looks like. (You can make an HTML table using DataWrapper.)'
           )),
@@ -3813,83 +3825,83 @@ we want to also provide a data table, a lengthier description with more complex 
           Ie.forEach(t),
           (Gt = h(k)),
           (tt = e(k, 'PRE', { class: !0 }));
-        var lo = o(tt);
-        lo.forEach(t), (Nt = h(k)), (it = e(k, 'SECTION', {}));
-        var Ce = o(it);
-        rt = e(Ce, 'P', {});
+        var po = o(tt);
+        po.forEach(t), (Nt = h(k)), (it = e(k, 'SECTION', {}));
+        var Ve = o(it);
+        rt = e(Ve, 'P', {});
         var Jn = o(rt);
         nt = e(Jn, 'A', { href: !0, rel: !0 });
-        var Ve = o(nt);
-        (Gn = u(Ve, 'Read this')),
-          Ve.forEach(t),
-          (Nn = u(
+        var Ce = o(nt);
+        (Gn = r(Ce, 'Read this')),
+          Ce.forEach(t),
+          (Nn = r(
             Jn,
             ' for more information on screen-reader data tables for charts.'
           )),
           Jn.forEach(t),
-          Ce.forEach(t),
+          Ve.forEach(t),
           this.h();
       },
       h() {
-        l(y, 'href', 'https://github.com/reuters-graphics/ai2svelte'),
-          l(y, 'rel', 'nofollow'),
-          l(z, 'class', 'language-svelte'),
-          l(
+        p(y, 'href', 'https://github.com/reuters-graphics/ai2svelte'),
+          p(y, 'rel', 'nofollow'),
+          p(z, 'class', 'language-svelte'),
+          p(
             ba,
             'href',
             'https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden'
           ),
-          l(ba, 'rel', 'nofollow'),
-          l(
+          p(ba, 'rel', 'nofollow'),
+          p(
             ia,
             'href',
             'https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81'
           ),
-          l(ia, 'rel', 'nofollow'),
-          l(Pa, 'class', 'note'),
-          l(Fa, 'class', 'language-bash'),
-          l(Us, 'class', 'language-svelte'),
-          l(Bs, 'class', 'language-svelte'),
-          l(Ws, 'href', 'http://archieml.org/'),
-          l(Ws, 'rel', 'nofollow'),
-          l(Fs, 'class', 'language-bash'),
-          l(Ks, 'class', 'language-svelte'),
-          l(
+          p(ia, 'rel', 'nofollow'),
+          p(Pa, 'class', 'note'),
+          p(Fa, 'class', 'language-bash'),
+          p(Us, 'class', 'language-svelte'),
+          p(Bs, 'class', 'language-svelte'),
+          p(Ws, 'href', 'http://archieml.org/'),
+          p(Ws, 'rel', 'nofollow'),
+          p(Fs, 'class', 'language-bash'),
+          p(Ks, 'class', 'language-svelte'),
+          p(
             Qs,
             'href',
             'https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations'
           ),
-          l(Qs, 'rel', 'nofollow'),
-          l(As, 'class', 'pt-5'),
-          l(at, 'class', 'language-svelte'),
-          l(tt, 'class', 'language-svelte'),
-          l(nt, 'href', 'https://accessibility.psu.edu/images/charts/'),
-          l(nt, 'rel', 'nofollow');
+          p(Qs, 'rel', 'nofollow'),
+          p(As, 'class', 'pt-5'),
+          p(at, 'class', 'language-svelte'),
+          p(tt, 'class', 'language-svelte'),
+          p(nt, 'href', 'https://accessibility.psu.edu/images/charts/'),
+          p(nt, 'rel', 'nofollow');
       },
-      m(k, P) {
-        A(k, s, P),
-          a(s, g),
-          a(g, i),
+      m(k, T) {
+        P(k, s, T),
+          a(s, f),
+          a(f, d),
           a(s, c),
-          a(s, d),
-          a(d, E),
-          a(d, y),
+          a(s, u),
+          a(u, m),
+          a(u, y),
           a(y, b),
-          a(d, D),
-          A(k, x, P),
-          A(k, z, P),
+          a(u, D),
+          P(k, x, T),
+          P(k, z, T),
           (z.innerHTML = $),
-          A(k, Q, P),
-          Is(I, k, P),
-          A(k, m, P),
-          A(k, w, P),
+          P(k, Q, T),
+          Is(I, k, T),
+          P(k, _, T),
+          P(k, w, T),
           a(w, ma),
-          a(ma, Ca),
+          a(ma, Va),
           a(w, H),
           a(w, aa),
           a(aa, Ia),
           a(Ia, ja),
-          a(w, C),
+          a(w, V),
           a(w, W),
           a(W, ya),
           a(ya, Ha),
@@ -3901,7 +3913,7 @@ we want to also provide a data table, a lengthier description with more complex 
           a(ya, F),
           a(W, Sa),
           a(W, $a),
-          a($a, T),
+          a($a, A),
           a($a, ta),
           a(ta, La),
           a($a, qa),
@@ -3910,9 +3922,9 @@ we want to also provide a data table, a lengthier description with more complex 
           a(Ma, _a),
           a(_a, L),
           a(w, ca),
-          a(w, la),
-          a(la, da),
-          a(da, V),
+          a(w, pa),
+          a(pa, da),
+          a(da, C),
           a(da, ea),
           a(ea, Ra),
           a(da, Ua),
@@ -3922,40 +3934,40 @@ we want to also provide a data table, a lengthier description with more complex 
           a(da, X),
           a(X, J),
           a(da, fa),
-          a(la, Ya),
-          a(la, Z),
+          a(pa, Ya),
+          a(pa, Z),
           a(Z, G),
-          a(la, oa),
-          a(la, za),
+          a(pa, oa),
+          a(pa, za),
           a(za, ga),
           a(za, j),
           a(j, wa),
           a(wa, Oa),
           a(j, B),
           a(j, q),
-          a(q, Va),
-          a(la, Da),
-          a(la, N),
+          a(q, Ca),
+          a(pa, Da),
+          a(pa, N),
           a(N, Y),
           a(N, ia),
           a(ia, Wa),
           a(N, U),
           a(w, ra),
           a(w, Pa),
-          a(Pa, pa),
-          a(pa, R),
-          a(pa, K),
+          a(Pa, la),
+          a(la, R),
+          a(la, K),
           a(K, Ka),
-          a(pa, va),
-          a(pa, f),
-          a(f, ds),
-          a(pa, ks),
-          a(pa, ts),
+          a(la, va),
+          a(la, g),
+          a(g, ds),
+          a(la, ks),
+          a(la, ts),
           a(ts, Ga),
-          a(pa, Qa),
-          a(pa, ns),
+          a(la, Qa),
+          a(la, ns),
           a(ns, fs),
-          a(pa, gs),
+          a(la, gs),
           a(w, vs),
           a(w, Ta),
           a(Ta, hs),
@@ -3965,47 +3977,47 @@ we want to also provide a data table, a lengthier description with more complex 
           a(Ta, Ea),
           a(Ea, Es),
           a(Ta, ys),
-          A(k, rs, P),
-          A(k, Fa, P),
+          P(k, rs, T),
+          P(k, Fa, T),
           (Fa.innerHTML = Xa),
-          A(k, us, P),
-          A(k, Na, P),
+          P(k, us, T),
+          P(k, Na, T),
           a(Na, os),
           a(os, bs),
           a(Na, Za),
           a(Na, ha),
           a(ha, zs),
-          a(ha, ls),
-          a(ls, ws),
-          a(ha, as),
           a(ha, ps),
-          a(ps, cs),
+          a(ps, ws),
+          a(ha, as),
+          a(ha, ls),
+          a(ls, cs),
           a(ha, Ds),
           a(ha, is),
           a(is, ss),
           a(ha, Ps),
           a(ha, Ls),
           a(Ls, ot),
-          a(ha, lt),
-          A(k, Tt, P),
-          A(k, Us, P),
+          a(ha, pt),
+          P(k, Tt, T),
+          P(k, Us, T),
           (Us.innerHTML = We),
-          A(k, At, P),
-          Is(Ms, k, P),
-          A(k, xt, P),
-          A(k, Rs, P),
+          P(k, At, T),
+          Is(Ms, k, T),
+          P(k, xt, T),
+          P(k, Rs, T),
           a(Rs, ft),
           a(ft, kn),
           a(Rs, fn),
           a(Rs, gt),
           a(gt, gn),
-          A(k, It, P),
-          A(k, Bs, P),
+          P(k, It, T),
+          P(k, Bs, T),
           (Bs.innerHTML = Fe),
-          A(k, $t, P),
-          Is(Os, k, P),
-          A(k, Ct, P),
-          A(k, Gs, P),
+          P(k, $t, T),
+          Is(Os, k, T),
+          P(k, Vt, T),
+          P(k, Gs, T),
           a(Gs, vt),
           a(vt, vn),
           a(Gs, hn),
@@ -4014,15 +4026,15 @@ we want to also provide a data table, a lengthier description with more complex 
           a(Ys, Ws),
           a(Ws, _n),
           a(Ys, En),
-          A(k, Vt, P),
-          A(k, Fs, P),
+          P(k, Ct, T),
+          P(k, Fs, T),
           (Fs.innerHTML = Ke),
-          A(k, Ht, P),
-          A(k, Ks, P),
+          P(k, Ht, T),
+          P(k, Ks, T),
           (Ks.innerHTML = Qe),
-          A(k, St, P),
-          A(k, pt, P),
-          a(pt, Ss),
+          P(k, St, T),
+          P(k, lt, T),
+          a(lt, Ss),
           a(Ss, yn),
           a(Ss, ht),
           a(ht, bn),
@@ -4030,8 +4042,8 @@ we want to also provide a data table, a lengthier description with more complex 
           a(Ss, Qs),
           a(Qs, wn),
           a(Ss, Dn),
-          A(k, Lt, P),
-          A(k, As, P),
+          P(k, Lt, T),
+          P(k, As, T),
           a(As, mt),
           a(mt, Pn),
           a(As, Tn),
@@ -4042,45 +4054,45 @@ we want to also provide a data table, a lengthier description with more complex 
           a(Xs, In),
           a(Xs, Et),
           a(Et, $n),
-          a(Xs, Cn),
-          a(As, Vn),
+          a(Xs, Vn),
+          a(As, Cn),
           a(As, Zs),
           a(Zs, Hn),
           a(Zs, yt),
           a(yt, Sn),
           a(Zs, Ln),
-          A(k, Mt, P),
-          A(k, at, P),
+          P(k, Mt, T),
+          P(k, at, T),
           (at.innerHTML = Xe),
-          A(k, Rt, P),
-          Is(Ns, k, P),
-          A(k, Ot, P),
-          A(k, ct, P),
+          P(k, Rt, T),
+          Is(Ns, k, T),
+          P(k, Ot, T),
+          P(k, ct, T),
           a(ct, st),
           a(st, Mn),
           a(st, bt),
           a(bt, Rn),
           a(st, On),
-          A(k, Gt, P),
-          A(k, tt, P),
+          P(k, Gt, T),
+          P(k, tt, T),
           (tt.innerHTML = Ze),
-          A(k, Nt, P),
-          A(k, it, P),
+          P(k, Nt, T),
+          P(k, it, T),
           a(it, rt),
           a(rt, nt),
           a(nt, Gn),
           a(rt, Nn),
           (jt = !0);
       },
-      p(k, [P]) {
+      p(k, [T]) {
         const zt = {};
-        P & 4 && (zt.$$scope = { dirty: P, ctx: k }), I.$set(zt);
+        T & 4 && (zt.$$scope = { dirty: T, ctx: k }), I.$set(zt);
         const et = {};
-        P & 4 && (et.$$scope = { dirty: P, ctx: k }), Ms.$set(et);
+        T & 4 && (et.$$scope = { dirty: T, ctx: k }), Ms.$set(et);
         const wt = {};
-        P & 4 && (wt.$$scope = { dirty: P, ctx: k }), Os.$set(wt);
+        T & 4 && (wt.$$scope = { dirty: T, ctx: k }), Os.$set(wt);
         const Jt = {};
-        P & 4 && (Jt.$$scope = { dirty: P, ctx: k }), Ns.$set(Jt);
+        T & 4 && (Jt.$$scope = { dirty: T, ctx: k }), Ns.$set(Jt);
       },
       i(k) {
         jt ||
@@ -4103,7 +4115,7 @@ we want to also provide a data table, a lengthier description with more complex 
           k && t(z),
           k && t(Q),
           $s(I, k),
-          k && t(m),
+          k && t(_),
           k && t(w),
           k && t(rs),
           k && t(Fa),
@@ -4119,14 +4131,14 @@ we want to also provide a data table, a lengthier description with more complex 
           k && t(Bs),
           k && t($t),
           $s(Os, k),
-          k && t(Ct),
-          k && t(Gs),
           k && t(Vt),
+          k && t(Gs),
+          k && t(Ct),
           k && t(Fs),
           k && t(Ht),
           k && t(Ks),
           k && t(St),
-          k && t(pt),
+          k && t(lt),
           k && t(Lt),
           k && t(As),
           k && t(Mt),
@@ -4149,14 +4161,14 @@ const Ro = {
     slug: 'ai2svelte',
   },
   { title: Ye, description: Uo, slug: Bo } = Ro;
-function Oo(_, s, g) {
-  let { $$slots: i = {}, $$scope: c } = s;
-  const d = async (E) => (await wo(`./ai2svelte/${E}.exclude.svelte`)).default;
+function Oo(E, s, f) {
+  let { $$slots: d = {}, $$scope: c } = s;
+  const u = async (m) => (await wo(`./ai2svelte/${m}.exclude.svelte`)).default;
   return (
-    (_.$$set = (E) => {
-      '$$scope' in E && g(2, (c = E.$$scope));
+    (E.$$set = (m) => {
+      '$$scope' in m && f(2, (c = m.$$scope));
     }),
-    [d, i, c]
+    [u, d, c]
   );
 }
 class Yo extends sn {

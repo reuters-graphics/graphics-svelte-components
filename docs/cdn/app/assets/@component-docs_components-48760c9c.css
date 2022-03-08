@@ -235,7 +235,31 @@ figure.svelte-1dfql50 {
     width: calc(9.5rem + 4px);
   }
 }
-.visually-hidden.svelte-a90v8t {
+.well.svelte-kfp841,
+.chatter-container.svelte-kfp841 {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.well.wide.svelte-kfp841,
+.wide.chatter-container.svelte-kfp841 {
+  max-width: 930px;
+}
+.well.wider.svelte-kfp841,
+.wider.chatter-container.svelte-kfp841 {
+  max-width: 1200px;
+}
+.well.widest.svelte-kfp841,
+.widest.chatter-container.svelte-kfp841 {
+  max-width: 100%;
+}
+.well.fluid.svelte-kfp841,
+.fluid.chatter-container.svelte-kfp841 {
+  width: 100vw;
+  margin-left: -15px;
+  max-width: none;
+}
+.visually-hidden.svelte-kfp841 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
