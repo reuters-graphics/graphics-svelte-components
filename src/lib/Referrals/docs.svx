@@ -46,6 +46,36 @@ Add a referrals bar with recent graphics from the [graphics homepage](https://gr
 
 <section>
 
+Customise the Reuters logo and image style.
+
+</section>
+
+```svelte
+<script>
+  import { Referrals } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<Referrals monocolourLogo={true} lightLogo={false} />
+
+<style lang="scss">
+  :global {
+    section.referral-container {
+      div.image {
+        filter: grayscale(75%);
+      }
+    }
+  }
+</style>
+```
+
+<div class="grey-images">
+<DemoContainer>
+  <Referrals monocolourLogo={true} lightLogo={false} />
+</DemoContainer>
+</div>
+
+<section>
+
 Pass up to four custom referrals to the `referrals` prop.
 
 </section>
@@ -78,3 +108,13 @@ Pass up to four custom referrals to the `referrals` prop.
 <DemoContainer>
   <Referrals referrals={customReferrals} />
 </DemoContainer>
+
+<style lang="scss">
+div.grey-images {
+  :global {
+    div.image {
+      filter: grayscale(75%);
+    }
+  }
+}
+</style>
