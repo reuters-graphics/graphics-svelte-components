@@ -1,0 +1,39 @@
+name: Build docs site
+permissions:
+  contents: read
+  issues: write
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-app:
+    name: Build site
+    runs-on: ubuntu-latest
+    env:
+      TESTING: true
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.17.0'
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install
+      - name: Config git
+        run: git config user.name github-actions
+        run: git config user.email github-actions@github.com
+      - name: Build docs
+        run: yarn build:docs
+      - name: Create issue on fail
+        uses: JasonEtco/create-an-issue@v2
+        if: ${{ failure() }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/COMMIT_ERROR_ISSUE_TEMPLATE.md
+      - name: Commit docs
+        if: ${{ success() }}
+        run: git add .
+        run: git commit -m "build docs"
+        run: git push origin
