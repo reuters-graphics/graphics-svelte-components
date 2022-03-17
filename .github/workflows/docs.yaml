@@ -21,8 +21,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Config git
-        run: git config user.name github-actions
-        run: git config user.email github-actions@github.com
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
       - name: Build docs
         run: yarn build:docs
       - name: Create issue on fail
@@ -34,6 +35,7 @@ jobs:
           filename: .github/COMMIT_ERROR_ISSUE_TEMPLATE.md
       - name: Commit docs
         if: ${{ success() }}
-        run: git add .
-        run: git commit -m "build docs"
-        run: git push origin
+        run: |
+          git add .
+          git commit -m "build docs"
+          git push origin
