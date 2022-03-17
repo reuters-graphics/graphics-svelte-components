@@ -338,7 +338,7 @@ Lorem ipsum...
   import content from '$locales/en/content.json';
   import { Scroller } from '@reuters-graphics/graphics-svelte-components';
   import { fetchComponent, makeScrollerSteps } from '$utils/dynamicComponents';
-
+  import { truthyString } from '$utils/truthyString';
 </script>
 
 {#each content.blocks as block}
@@ -347,10 +347,12 @@ Lorem ipsum...
       <div></div>
     {:then steps}
       <Scroller
-        steps="{steps}"
-        backgroundSize="{block.BackgroundSize}"
-        foregroundPosition="{block.ForegroundPosition}"
-        id="{block.ID}"
+          steps="{steps}"
+          backgroundSize="{block.BackgroundSize}"
+          foregroundPosition="{block.ForegroundPosition}"
+          id="{block.ID}"
+          embedded="{embedded}"
+          stackBackground="{truthyString(block.StackBackground)}"
       />
     {:catch error}
       {console.error('Error making steps for scroller', error)}
@@ -363,8 +365,9 @@ Lorem ipsum...
 
 This pattern comes with some restrictions, though. Be sure your `fetchComponent` function follows [the limits on dynamic imports](https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations).
 
-</section>
-
+**NOTE**: Make sure you wrap the function `truthyString()` around `block.StackBackground`. `truthyString()` converts the string pulled from Google docs ('true', 'false', etc.)
+into a Boolean.
+</section> 
 
 <section class='note'>
 
