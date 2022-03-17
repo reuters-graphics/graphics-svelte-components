@@ -1,6 +1,6 @@
 name: Build docs site
 permissions:
-  contents: read
+  contents: write
   issues: write
 on:
   push:
