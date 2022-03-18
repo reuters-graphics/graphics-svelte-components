@@ -78,7 +78,7 @@ Graphics kit users can set your `ariaHidden` prop and write your  `ariaDescripti
 Type: ai2svelte
 ComponentName: my-chart
 AriaHidden: true // or false
-AriaDescription: Add a descriptive line on the graphic for screen readers. 
+AltText: Add a descriptive line on the graphic for screen readers. 
 
 []
 ```
