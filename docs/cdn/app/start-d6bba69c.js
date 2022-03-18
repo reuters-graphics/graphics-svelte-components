@@ -430,9 +430,9 @@ const S = [
       ),
     () =>
       V(
-        () => import('./pages/components/_slug_.svelte-8851666d.js'),
+        () => import('./pages/components/_slug_.svelte-3d1382dd.js'),
         [
-          'pages/components/_slug_.svelte-8851666d.js',
+          'pages/components/_slug_.svelte-3d1382dd.js',
           'assets/pages/components/_slug_.svelte-4705634e.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-362b926b.js',

@@ -3002,7 +3002,7 @@ function so(E) {
 Type: ai2svelte
 ComponentName: my-chart
 AriaHidden: <span class="token boolean">true</span> // or <span class="token boolean">false</span>
-AriaDescription: Add a descriptive line on the graphic <span class="token keyword">for</span> <span class="token function">screen</span> readers. 
+AltText: Add a descriptive line on the graphic <span class="token keyword">for</span> <span class="token function">screen</span> readers. 
 
 <span class="token punctuation">[</span><span class="token punctuation">]</span></code>`,
     us,

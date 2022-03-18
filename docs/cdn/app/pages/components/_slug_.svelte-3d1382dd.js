@@ -40,9 +40,9 @@ function Q(c) {
   switch (c) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return e(
-        () => import('../../chunks/docs-67edd2d4.js'),
+        () => import('../../chunks/docs-a30a4dba.js'),
         [
-          'chunks/docs-67edd2d4.js',
+          'chunks/docs-a30a4dba.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-362b926b.js',
@@ -250,10 +250,10 @@ function Q(c) {
         ]
       );
     default:
-      return new Promise(function (t, i) {
+      return new Promise(function (t, a) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(i.bind(null, new Error('Unknown variable dynamic import: ' + c)));
+          : setTimeout)(a.bind(null, new Error('Unknown variable dynamic import: ' + c)));
       });
   }
 }
@@ -261,9 +261,9 @@ function W(c) {
   switch (c) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return e(
-        () => import('../../chunks/docs-67edd2d4.js'),
+        () => import('../../chunks/docs-a30a4dba.js'),
         [
-          'chunks/docs-67edd2d4.js',
+          'chunks/docs-a30a4dba.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-438f94a3.js',
           'chunks/vendor-362b926b.js',
@@ -471,16 +471,16 @@ function W(c) {
         ]
       );
     default:
-      return new Promise(function (t, i) {
+      return new Promise(function (t, a) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(i.bind(null, new Error('Unknown variable dynamic import: ' + c)));
+          : setTimeout)(a.bind(null, new Error('Unknown variable dynamic import: ' + c)));
       });
   }
 }
 function X(c) {
   let t,
-    i,
+    a,
     o,
     u = c[0].title + '',
     n,
@@ -494,7 +494,7 @@ function X(c) {
     {
       c() {
         (t = I('div')),
-          (i = w('> ')),
+          (a = w('> ')),
           (o = I('span')),
           (n = w(u)),
           (p = A()),
@@ -505,10 +505,10 @@ function X(c) {
       l(_) {
         t = L(_, 'DIV', { class: !0 });
         var s = O(t);
-        (i = y(s, '> ')), (o = L(s, 'SPAN', { class: !0 }));
-        var a = O(o);
-        (n = y(a, u)),
-          a.forEach(v),
+        (a = y(s, '> ')), (o = L(s, 'SPAN', { class: !0 }));
+        var i = O(o);
+        (n = y(i, u)),
+          i.forEach(v),
           (p = j(s)),
           (r = L(s, 'A', { href: !0, target: !0, title: !0, class: !0 }));
         var f = O(r);
@@ -528,7 +528,7 @@ function X(c) {
       },
       m(_, s) {
         R(_, t, s),
-          T(t, i),
+          T(t, a),
           T(t, o),
           T(o, n),
           T(t, p),
@@ -557,7 +557,7 @@ function X(c) {
   );
 }
 function Y(c) {
-  let t, i, o, u, n, p, r, d, m;
+  let t, a, o, u, n, p, r, d, m;
   (t = new J({
     props: {
       seoTitle: `Reuters Graphics components - ${c[0].title}`,
@@ -580,7 +580,7 @@ function Y(c) {
     {
       c() {
         E(t.$$.fragment),
-          (i = A()),
+          (a = A()),
           E(o.$$.fragment),
           (u = A()),
           E(n.$$.fragment),
@@ -590,7 +590,7 @@ function Y(c) {
       },
       l(s) {
         P(t.$$.fragment, s),
-          (i = j(s)),
+          (a = j(s)),
           P(o.$$.fragment, s),
           (u = j(s)),
           P(n.$$.fragment, s),
@@ -598,28 +598,28 @@ function Y(c) {
           r && P(r.$$.fragment, s),
           (d = x());
       },
-      m(s, a) {
-        b(t, s, a),
-          R(s, i, a),
-          b(o, s, a),
-          R(s, u, a),
-          b(n, s, a),
-          R(s, p, a),
-          r && b(r, s, a),
-          R(s, d, a),
+      m(s, i) {
+        b(t, s, i),
+          R(s, a, i),
+          b(o, s, i),
+          R(s, u, i),
+          b(n, s, i),
+          R(s, p, i),
+          r && b(r, s, i),
+          R(s, d, i),
           (m = !0);
       },
-      p(s, [a]) {
+      p(s, [i]) {
         const f = {};
-        a & 1 && (f.seoTitle = `Reuters Graphics components - ${s[0].title}`),
-          a & 1 && (f.seoDescription = s[0].description),
-          a & 1 &&
+        i & 1 && (f.seoTitle = `Reuters Graphics components - ${s[0].title}`),
+          i & 1 && (f.seoDescription = s[0].description),
+          i & 1 &&
             (f.shareTitle = `Reuters Graphics components - ${s[0].title}`),
-          a & 1 && (f.shareDescription = s[0].description),
+          i & 1 && (f.shareDescription = s[0].description),
           t.$set(f);
         const g = {};
         if (
-          (a & 5 && (g.$$scope = { dirty: a, ctx: s }),
+          (i & 5 && (g.$$scope = { dirty: i, ctx: s }),
           o.$set(g),
           l !== (l = s[1]))
         ) {
@@ -656,7 +656,7 @@ function Y(c) {
       },
       d(s) {
         D(t, s),
-          s && v(i),
+          s && v(a),
           D(o, s),
           s && v(u),
           D(n, s),
@@ -668,28 +668,28 @@ function Y(c) {
   );
 }
 async function os({ page: c }) {
-  return { props: { metadata: S.find((i) => i.slug === c.params.slug) } };
+  return { props: { metadata: S.find((a) => a.slug === c.params.slug) } };
 }
-function ss(c, t, i) {
+function ss(c, t, a) {
   let { metadata: o } = t,
     u;
   return (
     C(async () => {
-      i(1, (u = (await W(`../../src/lib/${o.path}/docs.svx`)).default));
+      a(1, (u = (await W(`../../src/lib/${o.path}/docs.svx`)).default));
     }),
     F(async () => {
-      i(1, (u = (await Q(`../../src/lib/${o.path}/docs.svx`)).default));
+      a(1, (u = (await Q(`../../src/lib/${o.path}/docs.svx`)).default));
     }),
     (c.$$set = (n) => {
-      'metadata' in n && i(0, (o = n.metadata));
+      'metadata' in n && a(0, (o = n.metadata));
     }),
     [o, u]
   );
 }
-class is extends N {
+class as extends N {
   constructor(t) {
     super();
     M(this, t, ss, Y, q, { metadata: 0 });
   }
 }
-export { is as default, os as load };
+export { as as default, os as load };
