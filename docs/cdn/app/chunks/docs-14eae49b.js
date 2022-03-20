@@ -34,9 +34,9 @@ import {
   t as E,
   h as D,
   j,
-} from './vendor-5176a1fc.js';
-import { D as p0 } from './index-9949a7c2.js';
-import './@component-docs_components-1cbd3c11.js';
+} from './vendor-f398e5e0.js';
+import { D as p0 } from './index-9e15525f.js';
+import './@component-docs_components-5a6e1a36.js';
 import './paths-396f020f.js';
 const u0 = (r) => ({
     scrollerProgress: r & 1,

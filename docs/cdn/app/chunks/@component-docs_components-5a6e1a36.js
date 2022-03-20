@@ -41,11 +41,11 @@ import {
   y as ne,
   B as se,
   N as Ne,
-} from './vendor-5176a1fc.js';
+} from './vendor-f398e5e0.js';
 import { a as je, b as Z } from './paths-396f020f.js';
 const $ = (r = '') => W(je, r);
 const De = '@reuters-graphics/graphics-svelte-components',
-  He = '0.3.1',
+  He = '0.3.3',
   Oe = 'module',
   xe = 'https://reuters-graphics.github.io/graphics-svelte-components',
   Pe = 'https://github.com/reuters-graphics/graphics-svelte-components',
@@ -54,7 +54,7 @@ const De = '@reuters-graphics/graphics-svelte-components',
     package: 'svelte-kit package && npm run build:commit',
     'build:docs': 'svelte-kit build && touch docs/.nojekyll',
     'build:commit':
-      'git add . && git commit -m build && git push origin master',
+      'npm run build:docs && git add . && git commit -m build && git push origin master',
     postinstall: 'husky install',
     release: 'npm run package && npm publish dist',
     postversion:
