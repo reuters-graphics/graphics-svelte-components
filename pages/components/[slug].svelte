@@ -1,8 +1,8 @@
 <script context="module">
   import components from '@component-docs:components';
 
-  export async function load({ page }) {
-    const metadata = components.find((c) => c.slug === page.params.slug);
+  export async function load({ params }) {
+    const metadata = components.find((c) => c.slug === params.slug);
     return {
       props: {
         metadata,

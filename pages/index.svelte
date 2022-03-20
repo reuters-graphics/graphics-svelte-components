@@ -26,9 +26,8 @@
   <section>
     <h1><Cog /> Components</h1>
 
-    <pre>
-      <code>yarn add @reuters-graphics/graphics-svelte-components</code>
-    </pre>
+    <pre><code>yarn add @reuters-graphics/graphics-svelte-components</code
+      ></pre>
 
     <ul>
       {#each components as component}

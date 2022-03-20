@@ -17,11 +17,13 @@
   export let hostname = 'graphics.reuters.com';
 
   const URL = get(pkg, 'homepage')
-    ? urljoin(pkg.homepage, $page.path, { trailingSlash: true })
+    ? urljoin(pkg.homepage, $page.url.pathame, { trailingSlash: true })
     : get(pkg, 'reuters.preview')
-    ? urljoin(pkg.reuters.preview, $page.path, { trailingSlash: true })
+    ? urljoin(pkg.reuters.preview, $page.url.pathame, { trailingSlash: true })
     : $page.host
-    ? urljoin('https://' + $page.host, $page.path, { trailingSlash: true })
+    ? urljoin('https://' + $page.host, $page.url.pathame, {
+        trailingSlash: true,
+      })
     : `https://${hostname}`;
 
   // Only fire analytics on prod sites

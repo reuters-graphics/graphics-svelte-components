@@ -59,13 +59,14 @@ export default {
       assets: 'docs/cdn',
       fallback: null,
     }),
+    prerender: { default: true },
+    trailingSlash: 'always',
     files: {
       assets: 'src/statics',
       lib: 'src/lib',
       routes: 'pages',
       template: 'src/template.html',
     },
-    target: '#svelte-app',
     package: {
       dir: 'dist',
       emitTypes: false,
