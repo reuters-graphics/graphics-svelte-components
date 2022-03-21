@@ -27,7 +27,11 @@
     : `https://${hostname}`;
 
   // Only fire analytics on prod sites
-  if (browser && window.location.host === 'graphics.reuters.com') {
+  if (
+    browser &&
+    window.location.host === 'graphics.reuters.com' &&
+    window.location === window.parent.location
+  ) {
     analytics(URL, seoTitle);
     publisherTags();
   }
