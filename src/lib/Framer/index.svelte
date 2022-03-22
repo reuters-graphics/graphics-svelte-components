@@ -63,7 +63,7 @@
 </div>
 
 <div id="home-link">
-  <a rel="external" href="/">
+  <a rel="external" href="./../">
     <Fa icon="{faDesktop}" />
   </a>
 </div>
