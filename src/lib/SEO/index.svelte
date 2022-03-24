@@ -17,11 +17,11 @@
   export let hostname = 'graphics.reuters.com';
 
   const URL = get(pkg, 'homepage')
-    ? urljoin(pkg.homepage, $page.url.pathame, { trailingSlash: true })
+    ? urljoin(pkg.homepage, $page.url.pathname, { trailingSlash: true })
     : get(pkg, 'reuters.preview')
-    ? urljoin(pkg.reuters.preview, $page.url.pathame, { trailingSlash: true })
+    ? urljoin(pkg.reuters.preview, $page.url.pathname, { trailingSlash: true })
     : $page.host
-    ? urljoin('https://' + $page.host, $page.url.pathame, {
+    ? urljoin('https://' + $page.host, $page.url.pathname, {
         trailingSlash: true,
       })
     : `https://${hostname}`;
