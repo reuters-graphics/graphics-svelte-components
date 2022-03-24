@@ -41,7 +41,7 @@ import {
   y as ne,
   B as se,
   N as Ne,
-} from './vendor-f398e5e0.js';
+} from './vendor-5176a1fc.js';
 import { a as je, b as Z } from './paths-396f020f.js';
 const $ = (r = '') => W(je, r);
 const De = '@reuters-graphics/graphics-svelte-components',
