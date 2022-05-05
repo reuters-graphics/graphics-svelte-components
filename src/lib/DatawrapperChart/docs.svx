@@ -1,0 +1,75 @@
+---
+title: DatawrapperChart
+description: Easily add a responsive Datawrapper embed on your page. 
+slug: datawrapper-chart
+---
+
+<script>
+  import DatawrapperChart from './index.svelte';
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+</script>
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { DatawrapperChart } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<DatawrapperChart
+  title='Global abortion access'
+  ariaLabel='map'
+  id='abortion-rights-map'
+  src='https://graphics.reuters.com/USA-ABORTION/lgpdwggnwvo/media-embed.html'
+  maxWidth='660'
+ />
+```
+
+<DemoContainer>
+  <DatawrapperChart 
+    title='Global abortion access'
+    ariaLabel='map'
+    id='abortion-rights-map'
+    src='https://graphics.reuters.com/USA-ABORTION/lgpdwggnwvo/media-embed.html'
+    maxWidth='660'
+  />
+</DemoContainer>
+
+
+<section>
+
+Copy the source url for the Datawrapper chart in the `src` prop. 
+You can get this either from the published url on Reuters graphics, or from the Datawrapper url. 
+The former is preferrable, as it is likely to be more stable. 
+
+Getting the url from Reuters:
+- Publish the chart on Datawrapper.
+- Go to the **Datawrapper charts** Teams channel, wait for the graph to finish publishing.
+- Inside **Embed code (for developers only)**, find and copy the url inside the `scr` 
+
+Getting the url from Datawrapper:
+- After publishing, go to the **4 Publish & Embed** tab.
+- In **Share & Embed** copy the link inside **Link to your visualization:**
+
+Note: There is no need to update the url if you update the chart inside Datawrapper. 
+Any changes will be automatically reflected. 
+
+The `maxWidth` prop defines the maximum width up to which the chart can stretch. The default is *660*px.
+
+Add a `title` and `ariaLabel` for screenreaders. 
+
+Give your chart a unique id in the `id` prop.
+
+</section>
+
+
+
+<style>
+
+</style>
