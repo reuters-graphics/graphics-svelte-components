@@ -15,3 +15,4 @@ export { default as Ai2svelte } from './Ai2svelte/index.svelte';
 export { default as Scroller } from './Scroller/index.svelte';
 export { default as LottieScroller } from './LottieScroller/index.svelte';
 export { default as BeforeAfter } from './BeforeAfter/index.svelte';
+export { default as DatawrapperChart } from './DatawrapperChart/index.svelte';
