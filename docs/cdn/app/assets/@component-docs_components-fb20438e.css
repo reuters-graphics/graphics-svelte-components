@@ -484,6 +484,33 @@ figure.before-after-container.svelte-1fkuva
   top: 7px;
   border-right: 10px solid var(--before-after-handle-colour);
 }
+.well.svelte-7yl63n,
+.chatter-container.svelte-7yl63n {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.well.wide.svelte-7yl63n,
+.wide.chatter-container.svelte-7yl63n {
+  max-width: 930px;
+}
+.well.wider.svelte-7yl63n,
+.wider.chatter-container.svelte-7yl63n {
+  max-width: 1200px;
+}
+.well.widest.svelte-7yl63n,
+.widest.chatter-container.svelte-7yl63n {
+  max-width: 100%;
+}
+.well.fluid.svelte-7yl63n,
+.fluid.chatter-container.svelte-7yl63n {
+  width: 100vw;
+  margin-left: -15px;
+  max-width: none;
+}
+.datawrapper-chart.svelte-7yl63n {
+  margin: auto;
+}
 nav.svelte-ca3v86 {
   margin-bottom: 3rem;
 }

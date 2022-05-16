@@ -1,8 +1,8 @@
 import { _ as r } from '../../chunks/preload-helper-092457a4.js';
 import {
-  S as M,
-  i as q,
-  s as B,
+  S as C,
+  i as M,
+  s as q,
   w as $,
   k as I,
   l as y,
@@ -11,7 +11,7 @@ import {
   y as b,
   g as A,
   o as D,
-  p as C,
+  p as B,
   q as P,
   B as h,
   d as f,
@@ -21,231 +21,245 @@ import {
   $ as U,
   e as O,
   t as S,
-  c as g,
-  a as V,
+  c as V,
+  a as g,
   h as k,
   b as E,
   J as R,
   j as z,
   n as j,
-} from '../../chunks/vendor-5176a1fc.js';
+} from '../../chunks/vendor-f398e5e0.js';
 import {
   c as N,
   S as J,
   N as K,
   M as Q,
-} from '../../chunks/@component-docs_components-82ace5d5.js';
+} from '../../chunks/@component-docs_components-2a0c7bac.js';
 import '../../chunks/paths-396f020f.js';
 function W(i) {
   switch (i) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return r(
-        () => import('../../chunks/docs-3ea6980e.js'),
+        () => import('../../chunks/docs-1aae8d17.js'),
         [
-          'chunks/docs-3ea6980e.js',
+          'chunks/docs-1aae8d17.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-092457a4.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return r(
-        () => import('../../chunks/docs-f8952e68.js'),
+        () => import('../../chunks/docs-25b526f7.js'),
         [
-          'chunks/docs-f8952e68.js',
+          'chunks/docs-25b526f7.js',
           'assets/docs-ea1c5840.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return r(
-        () => import('../../chunks/docs-0fa70dc3.js'),
+        () => import('../../chunks/docs-eea82684.js'),
         [
-          'chunks/docs-0fa70dc3.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-eea82684.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
+          'assets/index-2df4dd7a.css',
+        ]
+      );
+    case '../../src/lib/DatawrapperChart/docs.svx':
+      return r(
+        () => import('../../chunks/docs-b3795aa7.js'),
+        [
+          'chunks/docs-b3795aa7.js',
+          'chunks/vendor-f398e5e0.js',
+          'assets/vendor-c9bf64b2.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
+          'chunks/paths-396f020f.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/EmbedPreviewerLink/docs.svx':
       return r(
-        () => import('../../chunks/docs-b54ea9e4.js'),
+        () => import('../../chunks/docs-0dfca9d4.js'),
         [
-          'chunks/docs-b54ea9e4.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-0dfca9d4.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/EndNotes/docs.svx':
       return r(
-        () => import('../../chunks/docs-37dccaf1.js'),
+        () => import('../../chunks/docs-e8652da0.js'),
         [
-          'chunks/docs-37dccaf1.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-e8652da0.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Footer/docs.svx':
       return r(
-        () => import('../../chunks/docs-113723ee.js'),
+        () => import('../../chunks/docs-aab88f47.js'),
         [
-          'chunks/docs-113723ee.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-aab88f47.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Framer/docs.svx':
       return r(
-        () => import('../../chunks/docs-3d1c148f.js'),
+        () => import('../../chunks/docs-aba126bb.js'),
         [
-          'chunks/docs-3d1c148f.js',
+          'chunks/docs-aba126bb.js',
           'assets/docs-8e82fbe2.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Headline/docs.svx':
       return r(
-        () => import('../../chunks/docs-7dec961a.js'),
+        () => import('../../chunks/docs-9ad0b012.js'),
         [
-          'chunks/docs-7dec961a.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-9ad0b012.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Hero/docs.svx':
       return r(
-        () => import('../../chunks/docs-f89ddd9a.js'),
+        () => import('../../chunks/docs-74bf4439.js'),
         [
-          'chunks/docs-f89ddd9a.js',
+          'chunks/docs-74bf4439.js',
           'assets/docs-b2c6cc18.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Image/docs.svx':
       return r(
-        () => import('../../chunks/docs-e544ccd8.js'),
+        () => import('../../chunks/docs-e90b2da4.js'),
         [
-          'chunks/docs-e544ccd8.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-e90b2da4.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-eaa0d587.js'),
+        () => import('../../chunks/docs-e75da0dd.js'),
         [
-          'chunks/docs-eaa0d587.js',
+          'chunks/docs-e75da0dd.js',
           'assets/docs-4a88ca0e.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Nav/docs.svx':
       return r(
-        () => import('../../chunks/docs-2c48b6dc.js'),
+        () => import('../../chunks/docs-06f8c276.js'),
         [
-          'chunks/docs-2c48b6dc.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-06f8c276.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/PymChild/docs.svx':
       return r(
-        () => import('../../chunks/docs-cba16867.js'),
+        () => import('../../chunks/docs-b0841715.js'),
         [
-          'chunks/docs-cba16867.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-b0841715.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Referrals/docs.svx':
       return r(
-        () => import('../../chunks/docs-c9856310.js'),
+        () => import('../../chunks/docs-1122cf3b.js'),
         [
-          'chunks/docs-c9856310.js',
+          'chunks/docs-1122cf3b.js',
           'assets/docs-00bc6279.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/SEO/docs.svx':
       return r(
-        () => import('../../chunks/docs-586a32f9.js'),
+        () => import('../../chunks/docs-c13fe479.js'),
         [
-          'chunks/docs-586a32f9.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-c13fe479.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Scroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-192f7aa1.js'),
+        () => import('../../chunks/docs-2d31da95.js'),
         [
-          'chunks/docs-192f7aa1.js',
+          'chunks/docs-2d31da95.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-092457a4.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Sharer/docs.svx':
       return r(
-        () => import('../../chunks/docs-e258c21b.js'),
+        () => import('../../chunks/docs-b12200a1.js'),
         [
-          'chunks/docs-e258c21b.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-b12200a1.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
@@ -261,212 +275,226 @@ function X(i) {
   switch (i) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return r(
-        () => import('../../chunks/docs-3ea6980e.js'),
+        () => import('../../chunks/docs-1aae8d17.js'),
         [
-          'chunks/docs-3ea6980e.js',
+          'chunks/docs-1aae8d17.js',
           'assets/docs-6a37c65a.css',
           'chunks/preload-helper-092457a4.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return r(
-        () => import('../../chunks/docs-f8952e68.js'),
+        () => import('../../chunks/docs-25b526f7.js'),
         [
-          'chunks/docs-f8952e68.js',
+          'chunks/docs-25b526f7.js',
           'assets/docs-ea1c5840.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return r(
-        () => import('../../chunks/docs-0fa70dc3.js'),
+        () => import('../../chunks/docs-eea82684.js'),
         [
-          'chunks/docs-0fa70dc3.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-eea82684.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
+          'assets/index-2df4dd7a.css',
+        ]
+      );
+    case '../../src/lib/DatawrapperChart/docs.svx':
+      return r(
+        () => import('../../chunks/docs-b3795aa7.js'),
+        [
+          'chunks/docs-b3795aa7.js',
+          'chunks/vendor-f398e5e0.js',
+          'assets/vendor-c9bf64b2.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
+          'chunks/paths-396f020f.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/EmbedPreviewerLink/docs.svx':
       return r(
-        () => import('../../chunks/docs-b54ea9e4.js'),
+        () => import('../../chunks/docs-0dfca9d4.js'),
         [
-          'chunks/docs-b54ea9e4.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-0dfca9d4.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/EndNotes/docs.svx':
       return r(
-        () => import('../../chunks/docs-37dccaf1.js'),
+        () => import('../../chunks/docs-e8652da0.js'),
         [
-          'chunks/docs-37dccaf1.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-e8652da0.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Footer/docs.svx':
       return r(
-        () => import('../../chunks/docs-113723ee.js'),
+        () => import('../../chunks/docs-aab88f47.js'),
         [
-          'chunks/docs-113723ee.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-aab88f47.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/Framer/docs.svx':
       return r(
-        () => import('../../chunks/docs-3d1c148f.js'),
+        () => import('../../chunks/docs-aba126bb.js'),
         [
-          'chunks/docs-3d1c148f.js',
+          'chunks/docs-aba126bb.js',
           'assets/docs-8e82fbe2.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Headline/docs.svx':
       return r(
-        () => import('../../chunks/docs-7dec961a.js'),
+        () => import('../../chunks/docs-9ad0b012.js'),
         [
-          'chunks/docs-7dec961a.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-9ad0b012.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Hero/docs.svx':
       return r(
-        () => import('../../chunks/docs-f89ddd9a.js'),
+        () => import('../../chunks/docs-74bf4439.js'),
         [
-          'chunks/docs-f89ddd9a.js',
+          'chunks/docs-74bf4439.js',
           'assets/docs-b2c6cc18.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Image/docs.svx':
       return r(
-        () => import('../../chunks/docs-e544ccd8.js'),
+        () => import('../../chunks/docs-e90b2da4.js'),
         [
-          'chunks/docs-e544ccd8.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-e90b2da4.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-eaa0d587.js'),
+        () => import('../../chunks/docs-e75da0dd.js'),
         [
-          'chunks/docs-eaa0d587.js',
+          'chunks/docs-e75da0dd.js',
           'assets/docs-4a88ca0e.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Nav/docs.svx':
       return r(
-        () => import('../../chunks/docs-2c48b6dc.js'),
+        () => import('../../chunks/docs-06f8c276.js'),
         [
-          'chunks/docs-2c48b6dc.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-06f8c276.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
         ]
       );
     case '../../src/lib/PymChild/docs.svx':
       return r(
-        () => import('../../chunks/docs-cba16867.js'),
+        () => import('../../chunks/docs-b0841715.js'),
         [
-          'chunks/docs-cba16867.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-b0841715.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Referrals/docs.svx':
       return r(
-        () => import('../../chunks/docs-c9856310.js'),
+        () => import('../../chunks/docs-1122cf3b.js'),
         [
-          'chunks/docs-c9856310.js',
+          'chunks/docs-1122cf3b.js',
           'assets/docs-00bc6279.css',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/SEO/docs.svx':
       return r(
-        () => import('../../chunks/docs-586a32f9.js'),
+        () => import('../../chunks/docs-c13fe479.js'),
         [
-          'chunks/docs-586a32f9.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-c13fe479.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
     case '../../src/lib/Scroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-192f7aa1.js'),
+        () => import('../../chunks/docs-2d31da95.js'),
         [
-          'chunks/docs-192f7aa1.js',
+          'chunks/docs-2d31da95.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-092457a4.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
-          'chunks/index-9949a7c2.js',
+          'chunks/index-9e15525f.js',
           'assets/index-2df4dd7a.css',
-          'chunks/@component-docs_components-82ace5d5.js',
-          'assets/@component-docs_components-48760c9c.css',
+          'chunks/@component-docs_components-2a0c7bac.js',
+          'assets/@component-docs_components-fb20438e.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/Sharer/docs.svx':
       return r(
-        () => import('../../chunks/docs-e258c21b.js'),
+        () => import('../../chunks/docs-b12200a1.js'),
         [
-          'chunks/docs-e258c21b.js',
-          'chunks/vendor-5176a1fc.js',
+          'chunks/docs-b12200a1.js',
+          'chunks/vendor-f398e5e0.js',
           'assets/vendor-c9bf64b2.css',
         ]
       );
@@ -484,10 +512,10 @@ function Y(i) {
     o,
     u = i[0].title + '',
     n,
-    p,
+    d,
     t,
     l,
-    d,
+    p,
     m;
   return (
     (l = new H({ props: { fw: !0, icon: U.faCode } })),
@@ -497,21 +525,21 @@ function Y(i) {
           (_ = S('> ')),
           (o = O('span')),
           (n = S(u)),
-          (p = I()),
+          (d = I()),
           (t = O('a')),
           $(l.$$.fragment),
           this.h();
       },
       l(c) {
-        s = g(c, 'DIV', { class: !0 });
-        var e = V(s);
-        (_ = k(e, '> ')), (o = g(e, 'SPAN', { class: !0 }));
-        var a = V(o);
+        s = V(c, 'DIV', { class: !0 });
+        var e = g(s);
+        (_ = k(e, '> ')), (o = V(e, 'SPAN', { class: !0 }));
+        var a = g(o);
         (n = k(a, u)),
           a.forEach(f),
-          (p = L(e)),
-          (t = g(e, 'A', { href: !0, target: !0, title: !0, class: !0 }));
-        var v = V(t);
+          (d = L(e)),
+          (t = V(e, 'A', { href: !0, target: !0, title: !0, class: !0 }));
+        var v = g(t);
         T(l.$$.fragment, v), v.forEach(f), e.forEach(f), this.h();
       },
       h() {
@@ -519,7 +547,7 @@ function Y(i) {
           E(
             t,
             'href',
-            (d = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${i[0].path}/index.svelte`)
+            (p = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${i[0].path}/index.svelte`)
           ),
           E(t, 'target', '_blank'),
           E(t, 'title', 'Source code'),
@@ -531,7 +559,7 @@ function Y(i) {
           R(s, _),
           R(s, o),
           R(o, n),
-          R(s, p),
+          R(s, d),
           R(s, t),
           b(l, t, null),
           (m = !0);
@@ -540,9 +568,9 @@ function Y(i) {
         (!m || e & 1) && u !== (u = c[0].title + '') && z(n, u),
           (!m ||
             (e & 1 &&
-              d !==
-                (d = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${c[0].path}/index.svelte`))) &&
-            E(t, 'href', d);
+              p !==
+                (p = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${c[0].path}/index.svelte`))) &&
+            E(t, 'href', p);
       },
       i(c) {
         m || (P(l.$$.fragment, c), (m = !0));
@@ -557,7 +585,7 @@ function Y(i) {
   );
 }
 function Z(i) {
-  let s, _, o, u, n, p, t, l, d;
+  let s, _, o, u, n, d, t, l, p;
   (s = new J({
     props: {
       seoTitle: `Reuters Graphics components - ${i[0].title}`,
@@ -584,7 +612,7 @@ function Z(i) {
           $(o.$$.fragment),
           (u = I()),
           $(n.$$.fragment),
-          (p = I()),
+          (d = I()),
           t && $(t.$$.fragment),
           (l = y());
       },
@@ -594,7 +622,7 @@ function Z(i) {
           T(o.$$.fragment, e),
           (u = L(e)),
           T(n.$$.fragment, e),
-          (p = L(e)),
+          (d = L(e)),
           t && T(t.$$.fragment, e),
           (l = y());
       },
@@ -604,10 +632,10 @@ function Z(i) {
           b(o, e, a),
           A(e, u, a),
           b(n, e, a),
-          A(e, p, a),
+          A(e, d, a),
           t && b(t, e, a),
           A(e, l, a),
-          (d = !0);
+          (p = !0);
       },
       p(e, [a]) {
         const v = {};
@@ -629,7 +657,7 @@ function Z(i) {
             D(w.$$.fragment, 1, 0, () => {
               h(w, 1);
             }),
-              C();
+              B();
           }
           m
             ? ((t = new m(c())),
@@ -640,19 +668,19 @@ function Z(i) {
         }
       },
       i(e) {
-        d ||
+        p ||
           (P(s.$$.fragment, e),
           P(o.$$.fragment, e),
           P(n.$$.fragment, e),
           t && P(t.$$.fragment, e),
-          (d = !0));
+          (p = !0));
       },
       o(e) {
         D(s.$$.fragment, e),
           D(o.$$.fragment, e),
           D(n.$$.fragment, e),
           t && D(t.$$.fragment, e),
-          (d = !1);
+          (p = !1);
       },
       d(e) {
         h(s, e),
@@ -660,7 +688,7 @@ function Z(i) {
           h(o, e),
           e && f(u),
           h(n, e),
-          e && f(p),
+          e && f(d),
           e && f(l),
           t && h(t, e);
       },
@@ -686,10 +714,10 @@ function ee(i, s, _) {
     [o, u]
   );
 }
-class _e extends M {
+class _e extends C {
   constructor(s) {
     super();
-    q(this, s, ee, Z, B, { metadata: 0 });
+    M(this, s, ee, Z, q, { metadata: 0 });
   }
 }
 export { _e as default, oe as load };

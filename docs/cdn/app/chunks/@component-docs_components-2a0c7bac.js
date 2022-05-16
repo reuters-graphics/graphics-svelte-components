@@ -6,20 +6,20 @@ import {
   s as ue,
   e as m,
   Q as pe,
-  l as K,
+  l as J,
   R as be,
   c as h,
-  a as N,
+  a as D,
   d as c,
   T as de,
   b as e,
   J as u,
-  K as ae,
+  K as se,
   U as we,
   V as U,
   F as Te,
   k as V,
-  m as J,
+  m as $,
   W as Ee,
   g as Y,
   G as ke,
@@ -39,15 +39,15 @@ import {
   x as re,
   _ as me,
   y as ne,
-  B as se,
-  N as Ne,
-} from './vendor-5176a1fc.js';
-import { a as je, b as Z } from './paths-396f020f.js';
-const $ = (r = '') => W(je, r);
-const De = '@reuters-graphics/graphics-svelte-components',
-  He = '0.3.5',
-  Oe = 'module',
-  xe = 'https://reuters-graphics.github.io/graphics-svelte-components',
+  B as ae,
+  N as De,
+} from './vendor-f398e5e0.js';
+import { a as Ne, b as Z } from './paths-396f020f.js';
+const K = (r = '') => W(Ne, r);
+const je = '@reuters-graphics/graphics-svelte-components',
+  He = '0.3.6',
+  xe = 'module',
+  Oe = 'https://reuters-graphics.github.io/graphics-svelte-components',
   Pe = 'https://github.com/reuters-graphics/graphics-svelte-components',
   Fe = {
     start: 'svelte-kit dev --open',
@@ -61,7 +61,7 @@ const De = '@reuters-graphics/graphics-svelte-components',
       'git push origin master && git push origin master --tags && npm run release',
     prepublishOnly: `echo "Did you mean to run 'yarn release'?" && exit 1`,
   },
-  qe = {
+  Ce = {
     '@reuters-graphics/eslint-config': '^0.0.2',
     '@rollup/plugin-dsv': '^2.0.1',
     '@sveltejs/adapter-static': '1.0.0-next.29',
@@ -83,7 +83,7 @@ const De = '@reuters-graphics/graphics-svelte-components',
     svelte: '^3.46.4',
     'svelte-preprocess': '^4.10.4',
   },
-  Ce = { node: '>= 14.17.0' },
+  qe = { node: '>= 14.17.0' },
   Ge = {
     '@fortawesome/free-brands-svg-icons': '^5.15.4',
     '@fortawesome/free-regular-svg-icons': '^5.15.3',
@@ -100,19 +100,19 @@ const De = '@reuters-graphics/graphics-svelte-components',
     'ua-parser-js': '^0.7.27',
   };
 var z = {
-  name: De,
+  name: je,
   version: He,
-  type: Oe,
+  type: xe,
   private: !1,
-  homepage: xe,
+  homepage: Oe,
   repository: Pe,
   scripts: Fe,
   'lint-staged': {
     '*.js': 'eslint --cache --fix',
     '*.{js,css,md,svelte}': 'prettier --write',
   },
-  devDependencies: qe,
-  engines: Ce,
+  devDependencies: Ce,
+  engines: qe,
   dependencies: Ge,
 };
 const Be = () => {
@@ -137,18 +137,18 @@ const Be = () => {
       return Be().page.subscribe(r);
     },
   },
-  Ue = function (r, t, n, s, a, i, v) {
-    (r.GoogleAnalyticsObject = a),
-      (r[a] =
-        r[a] ||
+  Ue = function (r, t, n, a, s, i, v) {
+    (r.GoogleAnalyticsObject = s),
+      (r[s] =
+        r[s] ||
         function () {
-          (r[a].q = r[a].q || []).push(arguments);
+          (r[s].q = r[s].q || []).push(arguments);
         }),
-      (r[a].l = 1 * new Date()),
+      (r[s].l = 1 * new Date()),
       (i = t.createElement(n)),
       (v = t.getElementsByTagName(n)[0]),
       (i.async = 1),
-      (i.src = s),
+      (i.src = a),
       v.parentNode.insertBefore(i, v);
   };
 var Ve = (r, t) => {
@@ -162,21 +162,21 @@ var Ve = (r, t) => {
     window.ga('create', 'UA-41619329-3', { cookieDomain: 'auto' }),
     window.ga('require', 'linkid', 'linkid.js'),
     window.ga('send', 'pageview', { page: r, title: t }),
-    Je() || Ke.init({ reportInterval: 30 });
+    $e() || Je.init({ reportInterval: 30 });
 };
-function Je() {
+function $e() {
   try {
     return window.self !== window.top;
   } catch {
     return !0;
   }
 }
-var Ke = (function () {
+var Je = (function () {
     var r = !1,
       t = !1,
       n = !1,
-      s = 0,
-      a = new Date(),
+      a = 0,
+      s = new Date(),
       i = null,
       v = null,
       p,
@@ -206,20 +206,20 @@ var Ke = (function () {
           : (f = !0),
         M(document, 'keydown', l),
         M(document, 'click', l),
-        M(window, 'mousemove', O(l, 500)),
-        M(window, 'scroll', O(l, 500)),
-        M(document, 'visibilitychange', D),
-        M(document, 'webkitvisibilitychange', D),
+        M(window, 'mousemove', x(l, 500)),
+        M(window, 'scroll', x(l, 500)),
+        M(document, 'visibilitychange', j),
+        M(document, 'webkitvisibilitychange', j),
         p(0);
     }
-    function O(o, _) {
+    function x(o, _) {
       var L,
         H,
-        C,
-        j = null,
+        q,
+        N = null,
         B = 0,
         G = function () {
-          (B = new Date()), (j = null), (C = o.apply(L, H));
+          (B = new Date()), (N = null), (q = o.apply(L, H));
         };
       return function () {
         var I = new Date();
@@ -229,9 +229,9 @@ var Ke = (function () {
           (L = this),
           (H = arguments),
           d <= 0
-            ? (clearTimeout(j), (j = null), (B = I), (C = o.apply(L, H)))
-            : j || (j = setTimeout(G, d)),
-          C
+            ? (clearTimeout(N), (N = null), (B = I), (q = o.apply(L, H)))
+            : N || (N = setTimeout(G, d)),
+          q
         );
       };
     }
@@ -286,18 +286,18 @@ var Ke = (function () {
               ]));
       });
     function R() {
-      clearTimeout(v), x();
+      clearTimeout(v), O();
     }
-    function D() {
+    function j() {
       (document.hidden || document.webkitHidden) && R();
     }
     function F() {
-      (s += 1), s > 0 && s % w === 0 && p(s);
+      (a += 1), a > 0 && a % w === 0 && p(a);
     }
-    function x() {
+    function O() {
       (t = !0), clearTimeout(i);
     }
-    function q() {
+    function C() {
       R(), (n = !0);
     }
     function E() {
@@ -308,7 +308,7 @@ var Ke = (function () {
     }
     function k() {
       var o = new Date(),
-        _ = o - a;
+        _ = o - s;
       (r = !0), b(_), (i = setInterval(F, 1e3));
     }
     function l() {
@@ -318,9 +318,9 @@ var Ke = (function () {
         clearTimeout(v),
         (v = setTimeout(R, y * 1e3 + 100)));
     }
-    return { init: S, trigger: l, setIdle: R, on: E, off: q };
+    return { init: S, trigger: l, setIdle: R, on: E, off: C };
   })(),
-  $e = () => {
+  Ke = () => {
     const r = window.googletag || {};
     (r.cmd = r.cmd || []),
       (function () {
@@ -330,8 +330,8 @@ var Ke = (function () {
         t.src =
           (n ? 'https:' : 'http:') +
           '//www.googletagservices.com/tag/js/gpt.js';
-        const s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
+        const a = document.getElementsByTagName('script')[0];
+        a.parentNode.insertBefore(t, a);
       })(),
       r.cmd.push(function () {
         r
@@ -348,8 +348,8 @@ var Ke = (function () {
 function Ye(r) {
   let t,
     n,
-    s,
     a,
+    s,
     i,
     v,
     p,
@@ -361,13 +361,13 @@ function Ye(r) {
     A,
     g,
     S,
-    O,
+    x,
     M,
     R,
-    D,
+    j,
     F,
-    x,
-    q,
+    O,
+    C,
     E,
     P,
     k,
@@ -376,8 +376,8 @@ function Ye(r) {
     _,
     L,
     H = `<script type="application/ld+json">${JSON.stringify(r[8])}<\/script>`,
-    C,
-    j,
+    q,
+    N,
     B = `<script type="application/ld+json">${JSON.stringify(r[9])}<\/script>`,
     G;
   return (
@@ -385,8 +385,8 @@ function Ye(r) {
     {
       c() {
         (t = m('html')),
-          (s = m('meta')),
-          (a = m('link')),
+          (a = m('meta')),
+          (s = m('link')),
           (i = m('link')),
           (v = m('link')),
           (p = m('link')),
@@ -397,29 +397,29 @@ function Ye(r) {
           (T = m('meta')),
           (A = m('meta')),
           (S = m('meta')),
-          (O = m('meta')),
+          (x = m('meta')),
           (M = m('meta')),
           (R = m('meta')),
-          (D = m('meta')),
-          (x = m('meta')),
-          (q = m('meta')),
+          (j = m('meta')),
+          (O = m('meta')),
+          (C = m('meta')),
           (E = m('meta')),
           (k = m('meta')),
           (l = m('meta')),
           (o = m('meta')),
           (_ = m('meta')),
           (L = new pe()),
-          (C = K()),
-          (j = new pe()),
-          (G = K()),
+          (q = J()),
+          (N = new pe()),
+          (G = J()),
           this.h();
       },
       l(I) {
         const d = be('[data-svelte="svelte-2dftuh"]', document.head);
         (t = h(d, 'HTML', { lang: !0 })),
-          N(t).forEach(c),
-          (s = h(d, 'META', { name: !0, content: !0 })),
-          (a = h(d, 'LINK', { rel: !0, href: !0 })),
+          D(t).forEach(c),
+          (a = h(d, 'META', { name: !0, content: !0 })),
+          (s = h(d, 'LINK', { rel: !0, href: !0 })),
           (i = h(d, 'LINK', { rel: !0, type: !0, href: !0 })),
           (v = h(d, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
           (p = h(d, 'LINK', { rel: !0, type: !0, href: !0, sizes: !0 })),
@@ -430,30 +430,30 @@ function Ye(r) {
           (T = h(d, 'META', { property: !0, content: !0, itemprop: !0 })),
           (A = h(d, 'META', { property: !0, content: !0, itemprop: !0 })),
           (S = h(d, 'META', { property: !0, content: !0 })),
-          (O = h(d, 'META', { name: !0, content: !0 })),
+          (x = h(d, 'META', { name: !0, content: !0 })),
           (M = h(d, 'META', { name: !0, content: !0 })),
           (R = h(d, 'META', { name: !0, content: !0 })),
-          (D = h(d, 'META', { name: !0, content: !0 })),
-          (x = h(d, 'META', { name: !0, content: !0 })),
-          (q = h(d, 'META', { name: !0, content: !0 })),
+          (j = h(d, 'META', { name: !0, content: !0 })),
+          (O = h(d, 'META', { name: !0, content: !0 })),
+          (C = h(d, 'META', { name: !0, content: !0 })),
           (E = h(d, 'META', { name: !0, content: !0 })),
           (k = h(d, 'META', { property: !0, content: !0 })),
           (l = h(d, 'META', { property: !0, content: !0 })),
           (o = h(d, 'META', { property: !0, content: !0 })),
           (_ = h(d, 'META', { property: !0, content: !0 })),
           (L = de(d)),
-          (C = K()),
-          (j = de(d)),
-          (G = K()),
+          (q = J()),
+          (N = de(d)),
+          (G = J()),
           d.forEach(c),
           this.h();
       },
       h() {
         e(t, 'lang', r[5]),
-          e(s, 'name', 'description'),
-          e(s, 'content', r[1]),
-          e(a, 'rel', 'canonical'),
-          e(a, 'href', r[7]),
+          e(a, 'name', 'description'),
+          e(a, 'content', r[1]),
+          e(s, 'rel', 'canonical'),
+          e(s, 'href', r[7]),
           e(i, 'rel', 'shortcut icon'),
           e(i, 'type', 'image/x-icon'),
           e(
@@ -496,24 +496,24 @@ function Ye(r) {
           e(T, 'content', r[3]),
           e(T, 'itemprop', 'description'),
           e(A, 'property', 'og:image'),
-          e(A, 'content', (g = $(r[4]))),
+          e(A, 'content', (g = K(r[4]))),
           e(A, 'itemprop', 'image'),
           e(S, 'property', 'og:site_name'),
           e(S, 'content', 'Reuters'),
-          e(O, 'name', 'twitter:card'),
-          e(O, 'content', 'summary_large_image'),
+          e(x, 'name', 'twitter:card'),
+          e(x, 'content', 'summary_large_image'),
           e(M, 'name', 'twitter:site'),
           e(M, 'content', '@ReutersGraphics'),
           e(R, 'name', 'twitter:creator'),
           e(R, 'content', '@ReutersGraphics'),
-          e(D, 'name', 'twitter:domain'),
-          e(D, 'content', (F = `https://${r[6]}`)),
-          e(x, 'name', 'twitter:title'),
-          e(x, 'content', r[2]),
-          e(q, 'name', 'twitter:description'),
-          e(q, 'content', r[3]),
+          e(j, 'name', 'twitter:domain'),
+          e(j, 'content', (F = `https://${r[6]}`)),
+          e(O, 'name', 'twitter:title'),
+          e(O, 'content', r[2]),
+          e(C, 'name', 'twitter:description'),
+          e(C, 'content', r[3]),
           e(E, 'name', 'twitter:image:src'),
-          e(E, 'content', (P = $(r[4]))),
+          e(E, 'content', (P = K(r[4]))),
           e(k, 'property', 'fb:app_id'),
           e(k, 'content', '319194411438328'),
           e(l, 'property', 'fb:admins'),
@@ -522,13 +522,13 @@ function Ye(r) {
           e(o, 'content', '625796953'),
           e(_, 'property', 'fb:admins'),
           e(_, 'content', '571759798'),
-          (L.a = C),
-          (j.a = G);
+          (L.a = q),
+          (N.a = G);
       },
       m(I, d) {
         u(document.head, t),
-          u(document.head, s),
           u(document.head, a),
+          u(document.head, s),
           u(document.head, i),
           u(document.head, v),
           u(document.head, p),
@@ -539,40 +539,40 @@ function Ye(r) {
           u(document.head, T),
           u(document.head, A),
           u(document.head, S),
-          u(document.head, O),
+          u(document.head, x),
           u(document.head, M),
           u(document.head, R),
-          u(document.head, D),
-          u(document.head, x),
-          u(document.head, q),
+          u(document.head, j),
+          u(document.head, O),
+          u(document.head, C),
           u(document.head, E),
           u(document.head, k),
           u(document.head, l),
           u(document.head, o),
           u(document.head, _),
           L.m(H, document.head),
-          u(document.head, C),
-          j.m(B, document.head),
+          u(document.head, q),
+          N.m(B, document.head),
           u(document.head, G);
       },
       p(I, [d]) {
         d & 32 && e(t, 'lang', I[5]),
           d & 1 && n !== (n = I[0]) && (document.title = n),
-          d & 2 && e(s, 'content', I[1]),
+          d & 2 && e(a, 'content', I[1]),
           d & 4 && e(f, 'content', I[2]),
           d & 8 && e(T, 'content', I[3]),
-          d & 16 && g !== (g = $(I[4])) && e(A, 'content', g),
-          d & 64 && F !== (F = `https://${I[6]}`) && e(D, 'content', F),
-          d & 4 && e(x, 'content', I[2]),
-          d & 8 && e(q, 'content', I[3]),
-          d & 16 && P !== (P = $(I[4])) && e(E, 'content', P);
+          d & 16 && g !== (g = K(I[4])) && e(A, 'content', g),
+          d & 64 && F !== (F = `https://${I[6]}`) && e(j, 'content', F),
+          d & 4 && e(O, 'content', I[2]),
+          d & 8 && e(C, 'content', I[3]),
+          d & 16 && P !== (P = K(I[4])) && e(E, 'content', P);
       },
-      i: ae,
-      o: ae,
+      i: se,
+      o: se,
       d(I) {
         c(t),
-          c(s),
           c(a),
+          c(s),
           c(i),
           c(v),
           c(p),
@@ -583,29 +583,29 @@ function Ye(r) {
           c(T),
           c(A),
           c(S),
-          c(O),
+          c(x),
           c(M),
           c(R),
-          c(D),
-          c(x),
-          c(q),
+          c(j),
+          c(O),
+          c(C),
           c(E),
           c(k),
           c(l),
           c(o),
           c(_),
-          c(C),
+          c(q),
           I && L.d(),
           c(G),
-          I && j.d();
+          I && N.d();
       },
     }
   );
 }
 function We(r, t, n) {
-  let s;
-  we(r, ze, (g) => n(10, (s = g)));
-  let { seoTitle: a } = t,
+  let a;
+  we(r, ze, (g) => n(10, (a = g)));
+  let { seoTitle: s } = t,
     { seoDescription: i } = t,
     { shareTitle: v } = t,
     { shareDescription: p } = t,
@@ -613,13 +613,13 @@ function We(r, t, n) {
     { lang: w = 'en' } = t,
     { hostname: y = 'graphics.reuters.com' } = t;
   const f = U(z, 'homepage')
-    ? W(z.homepage, s.url.pathname, { trailingSlash: !0 })
+    ? W(z.homepage, a.url.pathname, { trailingSlash: !0 })
     : U(z, 'reuters.preview')
-    ? W(z.reuters.preview, s.url.pathname, { trailingSlash: !0 })
-    : s.host
-    ? W('https://' + s.host, s.url.pathname, { trailingSlash: !0 })
+    ? W(z.reuters.preview, a.url.pathname, { trailingSlash: !0 })
+    : a.host
+    ? W('https://' + a.host, a.url.pathname, { trailingSlash: !0 })
     : `https://${y}`;
-  window.location.host === 'graphics.reuters.com' && (Ve(f, a), $e());
+  window.location.host === 'graphics.reuters.com' && (Ve(f, s), Ke());
   const T = {
       '@context': 'http://schema.org',
       '@type': 'NewsMediaOrganization',
@@ -636,12 +636,12 @@ function We(r, t, n) {
     A = {
       '@context': 'http://schema.org',
       '@type': 'NewsArticle',
-      headline: a,
+      headline: s,
       url: f,
       mainEntityOfPage: { '@type': 'WebPage', '@id': f },
-      thumbnailUrl: $(b),
+      thumbnailUrl: K(b),
       image: [
-        { '@context': 'http://schema.org', '@type': 'ImageObject', url: $(b) },
+        { '@context': 'http://schema.org', '@type': 'ImageObject', url: K(b) },
       ],
       publisher: { '@id': 'https://www.reuters.com/#publisher' },
       copyrightHolder: { '@id': 'https://www.reuters.com/#publisher' },
@@ -660,7 +660,7 @@ function We(r, t, n) {
     };
   return (
     (r.$$set = (g) => {
-      'seoTitle' in g && n(0, (a = g.seoTitle)),
+      'seoTitle' in g && n(0, (s = g.seoTitle)),
         'seoDescription' in g && n(1, (i = g.seoDescription)),
         'shareTitle' in g && n(2, (v = g.shareTitle)),
         'shareDescription' in g && n(3, (p = g.shareDescription)),
@@ -668,7 +668,7 @@ function We(r, t, n) {
         'lang' in g && n(5, (w = g.lang)),
         'hostname' in g && n(6, (y = g.hostname));
     }),
-    [a, i, v, p, b, w, y, f, T, A]
+    [s, i, v, p, b, w, y, f, T, A]
   );
 }
 class nt extends oe {
@@ -686,15 +686,15 @@ class nt extends oe {
   }
 }
 function Qe(r) {
-  let t, n, s, a, i, v, p, b;
+  let t, n, a, s, i, v, p, b;
   const w = r[1].default,
     y = Te(w, r, r[0], null);
   return {
     c() {
       (t = m('nav')),
         (n = m('div')),
-        (s = m('a')),
-        (a = m('figure')),
+        (a = m('a')),
+        (s = m('figure')),
         (i = m('img')),
         (p = V()),
         y && y.c(),
@@ -702,18 +702,18 @@ function Qe(r) {
     },
     l(f) {
       t = h(f, 'NAV', { class: !0 });
-      var T = N(t);
+      var T = D(t);
       n = h(T, 'DIV', { class: !0 });
-      var A = N(n);
-      s = h(A, 'A', { href: !0 });
-      var g = N(s);
-      a = h(g, 'FIGURE', { class: !0 });
-      var S = N(a);
+      var A = D(n);
+      a = h(A, 'A', { href: !0 });
+      var g = D(a);
+      s = h(g, 'FIGURE', { class: !0 });
+      var S = D(s);
       (i = h(S, 'IMG', { class: !0, src: !0, alt: !0 })),
         S.forEach(c),
         g.forEach(c),
         A.forEach(c),
-        (p = J(T)),
+        (p = $(T)),
         y && y.l(T),
         T.forEach(c),
         this.h();
@@ -726,17 +726,17 @@ function Qe(r) {
             'https://graphics.thomsonreuters.com/style-assets/images/logos/reuters-graphics-logo/svg/graphics-logo-dark.svg')
         ) || e(i, 'src', v),
         e(i, 'alt', 'Reuters graphics logo'),
-        e(a, 'class', 'navbar-brand'),
-        e(s, 'href', `${Z}/`),
+        e(s, 'class', 'navbar-brand'),
+        e(a, 'href', `${Z}/`),
         e(n, 'class', 'logo-container'),
         e(t, 'class', 'nav svelte-ca3v86');
     },
     m(f, T) {
       Y(f, t, T),
         u(t, n),
-        u(n, s),
-        u(s, a),
-        u(a, i),
+        u(n, a),
+        u(a, s),
+        u(s, i),
         u(t, p),
         y && y.m(t, null),
         (b = !0);
@@ -759,63 +759,63 @@ function Qe(r) {
   };
 }
 function Xe(r, t, n) {
-  let { $$slots: s = {}, $$scope: a } = t;
+  let { $$slots: a = {}, $$scope: s } = t;
   return (
     (r.$$set = (i) => {
-      '$$scope' in i && n(0, (a = i.$$scope));
+      '$$scope' in i && n(0, (s = i.$$scope));
     }),
-    [a, s]
+    [s, a]
   );
 }
-class st extends oe {
+class at extends oe {
   constructor(t) {
     super();
     ce(this, t, Xe, Qe, ue, {});
   }
 }
 function he(r, t, n) {
-  const s = r.slice();
-  return (s[4] = t[n]), s;
+  const a = r.slice();
+  return (a[4] = t[n]), a;
 }
 function ge(r) {
-  let t, n, s;
+  let t, n, a;
   return {
     c() {
       (t = m('div')), this.h();
     },
-    l(a) {
-      t = h(a, 'DIV', { id: !0, class: !0 });
-      var i = N(t);
+    l(s) {
+      t = h(s, 'DIV', { id: !0, class: !0 });
+      var i = D(t);
       i.forEach(c), this.h();
     },
     h() {
       e(t, 'id', 'overlay'), e(t, 'class', 'svelte-253v2x');
     },
-    m(a, i) {
-      Y(a, t, i), n || ((s = _e(t, 'click', r[2])), (n = !0));
+    m(s, i) {
+      Y(s, t, i), n || ((a = _e(t, 'click', r[2])), (n = !0));
     },
-    p: ae,
-    d(a) {
-      a && c(t), (n = !1), s();
+    p: se,
+    d(s) {
+      s && c(t), (n = !1), a();
     },
   };
 }
 function fe(r) {
   let t,
     n,
-    s = r[4].title + '',
-    a,
+    a = r[4].title + '',
+    s,
     i;
   return {
     c() {
-      (t = m('a')), (n = m('li')), (a = ie(s)), this.h();
+      (t = m('a')), (n = m('li')), (s = ie(a)), this.h();
     },
     l(v) {
       t = h(v, 'A', { href: !0, class: !0 });
-      var p = N(t);
+      var p = D(t);
       n = h(p, 'LI', { class: !0 });
-      var b = N(n);
-      (a = le(b, s)), b.forEach(c), p.forEach(c), this.h();
+      var b = D(n);
+      (s = le(b, a)), b.forEach(c), p.forEach(c), this.h();
     },
     h() {
       e(n, 'class', 'svelte-253v2x'),
@@ -823,10 +823,10 @@ function fe(r) {
         e(t, 'class', 'svelte-253v2x');
     },
     m(v, p) {
-      Y(v, t, p), u(t, n), u(n, a);
+      Y(v, t, p), u(t, n), u(n, s);
     },
     p(v, p) {
-      p & 1 && s !== (s = v[4].title + '') && Re(a, s),
+      p & 1 && a !== (a = v[4].title + '') && Re(s, a),
         p & 1 && i !== (i = `${Z}/components/${v[4].slug}/`) && e(t, 'href', i);
     },
     d(v) {
@@ -839,31 +839,31 @@ function ve(r) {
     n = r[4].title && r[4].slug && fe(r);
   return {
     c() {
-      n && n.c(), (t = K());
+      n && n.c(), (t = J());
     },
-    l(s) {
-      n && n.l(s), (t = K());
+    l(a) {
+      n && n.l(a), (t = J());
     },
-    m(s, a) {
-      n && n.m(s, a), Y(s, t, a);
+    m(a, s) {
+      n && n.m(a, s), Y(a, t, s);
     },
-    p(s, a) {
-      s[4].title && s[4].slug
+    p(a, s) {
+      a[4].title && a[4].slug
         ? n
-          ? n.p(s, a)
-          : ((n = fe(s)), n.c(), n.m(t.parentNode, t))
+          ? n.p(a, s)
+          : ((n = fe(a)), n.c(), n.m(t.parentNode, t))
         : n && (n.d(1), (n = null));
     },
-    d(s) {
-      n && n.d(s), s && c(t);
+    d(a) {
+      n && n.d(a), a && c(t);
     },
   };
 }
 function Ze(r) {
   let t,
     n,
-    s,
     a,
+    s,
     i,
     v,
     p,
@@ -875,13 +875,13 @@ function Ze(r) {
     A,
     g,
     S,
-    O,
+    x,
     M,
     R,
-    D,
+    j,
     F,
-    x,
-    q,
+    O,
+    C,
     E = r[1] && ge(r);
   (i = new ee({ props: { fw: !0, size: 'md', icon: Se.faCog } })),
     (y = new ee({ props: { fw: !0, icon: Le.faHome } })),
@@ -894,8 +894,8 @@ function Ze(r) {
       E && E.c(),
         (t = V()),
         (n = m('nav')),
-        (s = m('div')),
-        (a = m('button')),
+        (a = m('div')),
+        (s = m('button')),
         te(i.$$.fragment),
         (v = V()),
         (p = m('ul')),
@@ -907,50 +907,50 @@ function Ze(r) {
         (A = m('li')),
         (g = m('a')),
         te(S.$$.fragment),
-        (O = ie(' Repo')),
+        (x = ie(' Repo')),
         (M = V()),
         (R = m('hr')),
-        (D = V());
+        (j = V());
       for (let l = 0; l < k.length; l += 1) k[l].c();
       this.h();
     },
     l(l) {
-      E && E.l(l), (t = J(l)), (n = h(l, 'NAV', { class: !0 }));
-      var o = N(n);
-      s = h(o, 'DIV', { class: !0 });
-      var _ = N(s);
-      a = h(_, 'BUTTON', { class: !0 });
-      var L = N(a);
+      E && E.l(l), (t = $(l)), (n = h(l, 'NAV', { class: !0 }));
+      var o = D(n);
+      a = h(o, 'DIV', { class: !0 });
+      var _ = D(a);
+      s = h(_, 'BUTTON', { class: !0 });
+      var L = D(s);
       re(i.$$.fragment, L),
         L.forEach(c),
-        (v = J(_)),
+        (v = $(_)),
         (p = h(_, 'UL', { class: !0 }));
-      var H = N(p);
+      var H = D(p);
       b = h(H, 'LI', { class: !0 });
-      var C = N(b);
-      w = h(C, 'A', { href: !0, rel: !0, class: !0 });
-      var j = N(w);
-      re(y.$$.fragment, j),
-        (f = le(j, ' Home')),
-        j.forEach(c),
-        C.forEach(c),
-        (T = J(H)),
+      var q = D(b);
+      w = h(q, 'A', { href: !0, rel: !0, class: !0 });
+      var N = D(w);
+      re(y.$$.fragment, N),
+        (f = le(N, ' Home')),
+        N.forEach(c),
+        q.forEach(c),
+        (T = $(H)),
         (A = h(H, 'LI', { class: !0 }));
-      var B = N(A);
+      var B = D(A);
       g = h(B, 'A', { href: !0, rel: !0, class: !0 });
-      var G = N(g);
+      var G = D(g);
       re(S.$$.fragment, G),
-        (O = le(G, ' Repo')),
+        (x = le(G, ' Repo')),
         G.forEach(c),
         B.forEach(c),
-        (M = J(H)),
+        (M = $(H)),
         (R = h(H, 'HR', { class: !0 })),
-        (D = J(H));
+        (j = $(H));
       for (let I = 0; I < k.length; I += 1) k[I].l(H);
       H.forEach(c), _.forEach(c), o.forEach(c), this.h();
     },
     h() {
-      e(a, 'class', 'svelte-253v2x'),
+      e(s, 'class', 'svelte-253v2x'),
         e(w, 'href', `${Z}/`),
         e(w, 'rel', 'external'),
         e(w, 'class', 'svelte-253v2x'),
@@ -965,7 +965,7 @@ function Ze(r) {
         e(A, 'class', 'stationary svelte-253v2x'),
         e(R, 'class', 'svelte-253v2x'),
         e(p, 'class', 'svelte-253v2x'),
-        e(s, 'class', 'nav-container svelte-253v2x'),
+        e(a, 'class', 'nav-container svelte-253v2x'),
         e(n, 'class', 'svelte-253v2x'),
         me(n, 'open', r[1]);
     },
@@ -973,11 +973,11 @@ function Ze(r) {
       E && E.m(l, o),
         Y(l, t, o),
         Y(l, n, o),
-        u(n, s),
-        u(s, a),
-        ne(i, a, null),
-        u(s, v),
-        u(s, p),
+        u(n, a),
+        u(a, s),
+        ne(i, s, null),
+        u(a, v),
+        u(a, p),
         u(p, b),
         u(b, w),
         ne(y, w, null),
@@ -986,12 +986,12 @@ function Ze(r) {
         u(p, A),
         u(A, g),
         ne(S, g, null),
-        u(g, O),
+        u(g, x),
         u(p, M),
         u(p, R),
-        u(p, D);
+        u(p, j);
       for (let _ = 0; _ < k.length; _ += 1) k[_].m(p, null);
-      (F = !0), x || ((q = _e(a, 'click', r[3])), (x = !0));
+      (F = !0), O || ((C = _e(s, 'click', r[3])), (O = !0));
     },
     p(l, [o]) {
       if (
@@ -1027,32 +1027,32 @@ function Ze(r) {
       E && E.d(l),
         l && c(t),
         l && c(n),
-        se(i),
-        se(y),
-        se(S),
-        Ne(k, l),
-        (x = !1),
-        q();
+        ae(i),
+        ae(y),
+        ae(S),
+        De(k, l),
+        (O = !1),
+        C();
     },
   };
 }
 function et(r, t, n) {
-  let { components: s = [] } = t,
-    a = !1;
+  let { components: a = [] } = t,
+    s = !1;
   const i = () => {
-      n(1, (a = !1));
+      n(1, (s = !1));
     },
     v = () => {
-      n(1, (a = !a));
+      n(1, (s = !s));
     };
   return (
     (r.$$set = (p) => {
-      'components' in p && n(0, (s = p.components));
+      'components' in p && n(0, (a = p.components));
     }),
-    [s, a, i, v]
+    [a, s, i, v]
   );
 }
-class at extends oe {
+class st extends oe {
   constructor(t) {
     super();
     ce(this, t, et, Ze, ue, { components: 0 });
@@ -1076,6 +1076,12 @@ var it = [
     description: 'Parse mardown-formatted text.',
     slug: 'body-text',
     path: 'BodyText',
+  },
+  {
+    title: 'DatawrapperChart',
+    description: 'Easily add a responsive Datawrapper embed on your page.',
+    slug: 'datawrapper-chart',
+    path: 'DatawrapperChart',
   },
   {
     title: 'EmbedPreviewerLink',
@@ -1162,4 +1168,4 @@ var it = [
     path: 'Sharer',
   },
 ];
-export { at as M, st as N, nt as S, it as c, $ as g };
+export { st as M, at as N, nt as S, it as c, K as g };
