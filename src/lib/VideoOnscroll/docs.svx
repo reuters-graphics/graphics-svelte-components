@@ -1,0 +1,26 @@
+---
+title: VideoOnscroll
+description: A component that does things.
+slug: video-onscroll
+---
+
+<script>
+  import VideoOnscroll from './index.svelte';
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+</script>
+
+# VideoOnscroll
+
+A component that does things.
+
+```svelte
+<script>
+  import { VideoOnscroll } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<VideoOnscroll />
+```
+
+<DemoContainer>
+  <VideoOnscroll />
+</DemoContainer>
