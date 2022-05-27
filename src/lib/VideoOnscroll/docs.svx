@@ -6,6 +6,7 @@ slug: video-onscroll
 
 <script>
   import VideoOnscroll from './index.svelte';
+  import { assets } from '$app/paths';
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
 </script>
 
@@ -22,5 +23,7 @@ A component that does things.
 ```
 
 <DemoContainer>
-  <VideoOnscroll />
+  <VideoOnscroll 
+    src='{assets}/videos/drone-irpin.mp4'
+  />
 </DemoContainer>
