@@ -1,27 +1,38 @@
 <script>
+  import { onMount } from 'svelte';
   export let src = '';
   export let size = 'normal';
 
   let scrollY;
-  let time;
-  let duration;
+  let time = 0;
+  let duration = 0;
+  let vid, vidSection;
+
+  onMount(() => {
+    function scrollPlay() {
+      vid.currentTime = time;
+      window.requestAnimationFrame(scrollPlay);
+    }
+
+    window.requestAnimationFrame(scrollPlay);
+  });
 
   $: {
-    const totalScroll =
-      document.documentElement.scrollHeight - window.innerHeight;
-    time = duration * (scrollY / totalScroll);
-    // time = +Number.parseFloat(duration * (scrollY / totalScroll)).toFixed(5);
-    // console.log({ duration, time });
+    const totalScroll = vidSection
+      ? vidSection.getBoundingClientRect().height
+      : 1;
+    time = +(duration * (scrollY / totalScroll)).toPrecision(6);
+    console.log({ duration, time });
   }
 </script>
 
 <svelte:window bind:scrollY />
 
-<section class="video-onscroll graphic {size}">
+<section class="video-onscroll graphic {size}" bind:this="{vidSection}">
   <div class="video-wrapper">
     <video
+      bind:this="{vid}"
       preload="metadata"
-      bind:currentTime="{time}"
       bind:duration
       muted
       src="{src}"
