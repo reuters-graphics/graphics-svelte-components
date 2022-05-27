@@ -24,6 +24,6 @@ A component that does things.
 
 <DemoContainer>
   <VideoOnscroll 
-    src='{assets}/videos/drone-irpin.mp4'
+    src='{assets}/videos/video-scroll-demo.mp4'
   />
 </DemoContainer>

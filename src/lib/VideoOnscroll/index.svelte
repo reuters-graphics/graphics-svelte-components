@@ -1,6 +1,6 @@
 <script>
   export let src = '';
-  export let size = 'wide';
+  export let size = 'normal';
 
   let scrollY;
   let time;
@@ -10,6 +10,8 @@
     const totalScroll =
       document.documentElement.scrollHeight - window.innerHeight;
     time = duration * (scrollY / totalScroll);
+    // time = +Number.parseFloat(duration * (scrollY / totalScroll)).toFixed(5);
+    // console.log({ duration, time });
   }
 </script>
 
@@ -18,9 +20,9 @@
 <section class="video-onscroll graphic {size}">
   <div class="video-wrapper">
     <video
+      preload="metadata"
       bind:currentTime="{time}"
       bind:duration
-      preload="metadata"
       muted
       src="{src}"
       type="video/mp4"></video>
