@@ -56,9 +56,9 @@ import {
   j as Np,
   a3 as pp,
   a4 as cp,
-} from './vendor-f398e5e0.js';
-import { D as nn } from './index-9e15525f.js';
-import './@component-docs_components-890b5864.js';
+} from './vendor-5176a1fc.js';
+import { D as nn } from './index-9949a7c2.js';
+import './@component-docs_components-2f133e3d.js';
 import './paths-396f020f.js';
 function xr(p, e, s) {
   const n = p.slice();
@@ -1529,33 +1529,33 @@ function _c(p) {
   switch (p) {
     case './demos/ai2html/ai-scroller-1.exclude.svelte':
       return $l(
-        () => import('./ai-scroller-1.exclude-a84b8fb8.js'),
+        () => import('./ai-scroller-1.exclude-2756d1f6.js'),
         [
-          'chunks/ai-scroller-1.exclude-a84b8fb8.js',
+          'chunks/ai-scroller-1.exclude-2756d1f6.js',
           'assets/ai-scroller-1.exclude-74bdcb73.css',
-          'chunks/vendor-f398e5e0.js',
+          'chunks/vendor-5176a1fc.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case './demos/ai2html/ai-scroller-2.exclude.svelte':
       return $l(
-        () => import('./ai-scroller-2.exclude-92b70cee.js'),
+        () => import('./ai-scroller-2.exclude-689900e5.js'),
         [
-          'chunks/ai-scroller-2.exclude-92b70cee.js',
+          'chunks/ai-scroller-2.exclude-689900e5.js',
           'assets/ai-scroller-2.exclude-7d0e85bf.css',
-          'chunks/vendor-f398e5e0.js',
+          'chunks/vendor-5176a1fc.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case './demos/ai2html/ai-scroller-3.exclude.svelte':
       return $l(
-        () => import('./ai-scroller-3.exclude-aaacc9a8.js'),
+        () => import('./ai-scroller-3.exclude-220dce35.js'),
         [
-          'chunks/ai-scroller-3.exclude-aaacc9a8.js',
+          'chunks/ai-scroller-3.exclude-220dce35.js',
           'assets/ai-scroller-3.exclude-e5d75c9d.css',
-          'chunks/vendor-f398e5e0.js',
+          'chunks/vendor-5176a1fc.js',
           'assets/vendor-c9bf64b2.css',
           'chunks/paths-396f020f.js',
         ]
