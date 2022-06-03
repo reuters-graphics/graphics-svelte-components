@@ -58,6 +58,7 @@ export default {
       pages: 'docs',
       assets: 'docs/cdn',
       fallback: null,
+      precompress: false,
     }),
     prerender: { default: true },
     trailingSlash: 'always',
@@ -72,7 +73,9 @@ export default {
       emitTypes: false,
       exports: (filePath) => {
         return !mm.isMatch(filePath, [
+          '.DS_Store',
           '_docs/**',
+          'demos/**',
           '**/_*',
           '**/*.svx',
           '**/*.exclude.svelte',
@@ -81,6 +84,7 @@ export default {
       files: (filePath) => {
         return !mm.isMatch(filePath, [
           '_docs/**',
+          'demos/**',
           '**/_*',
           '**/*.svx',
           '**/*.exclude.svelte',
@@ -88,6 +92,7 @@ export default {
       },
     },
     vite: {
+      build: { target: 'es2015' },
       server: {
         fs: {
           allow: ['.'],
@@ -95,7 +100,6 @@ export default {
       },
       resolve: {
         alias: {
-          $utils: '/src/utils',
           $pkg: '/package.json',
           $locales: '/locales',
         },

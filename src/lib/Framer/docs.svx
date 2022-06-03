@@ -9,7 +9,7 @@ slug: framer
   import Framer from './index.svelte';
 
   const embeds = [
-    'https://graphics.reuters.com/USA-CONGRESS/FUNDRAISING/zjvqkawjlvx/embeds/en/embed/',
+    'https://graphics.reuters.com/USA-CONGRESS/FUNDRAISING/zjvqkawjlvx/embeds/en/embed/?zzz',
   ];
 </script>
 

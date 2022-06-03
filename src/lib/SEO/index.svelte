@@ -1,12 +1,12 @@
 <script>
   import pkg from '$pkg';
-  import { getPath } from '$utils/statics';
   import { page } from '$app/stores';
   import { get } from 'lodash-es';
   import urljoin from 'proper-url-join';
   import { browser } from '$app/env';
   import analytics from './analytics';
   import publisherTags from './publisherTags';
+  import { assets } from '$app/paths';
 
   export let seoTitle;
   export let seoDescription;
@@ -67,12 +67,12 @@
       '@type': 'WebPage',
       '@id': url,
     },
-    thumbnailUrl: getPath(shareImgPath),
+    thumbnailUrl: urljoin(assets, shareImgPath),
     image: [
       {
         '@context': 'http://schema.org',
         '@type': 'ImageObject',
-        url: getPath(shareImgPath),
+        url: urljoin(assets, shareImgPath),
       },
     ],
     publisher: { '@id': 'https://www.reuters.com/#publisher' },
@@ -133,7 +133,7 @@
   />
   <meta
     property="og:image"
-    content="{getPath(shareImgPath)}"
+    content="{urljoin(assets, shareImgPath)}"
     itemprop="image"
   />
   <meta property="og:site_name" content="Reuters" />
@@ -144,7 +144,7 @@
   <meta name="twitter:domain" content="{`https://${hostname}`}" />
   <meta name="twitter:title" content="{shareTitle}" />
   <meta name="twitter:description" content="{shareDescription}" />
-  <meta name="twitter:image:src" content="{getPath(shareImgPath)}" />
+  <meta name="twitter:image:src" content="{urljoin(assets, shareImgPath)}" />
 
   <meta property="fb:app_id" content="319194411438328" />
   <meta property="fb:admins" content="616167736" />
