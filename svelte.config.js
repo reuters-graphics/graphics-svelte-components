@@ -99,7 +99,6 @@ export default {
       },
       resolve: {
         alias: {
-          $utils: '/src/utils',
           $pkg: '/package.json',
           $locales: '/locales',
         },
