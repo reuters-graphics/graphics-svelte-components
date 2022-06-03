@@ -70,9 +70,10 @@ export default {
     },
     package: {
       dir: 'dist',
-      emitTypes: false,
+      emitTypes: true,
       exports: (filePath) => {
         return !mm.isMatch(filePath, [
+          '.DS_Store',
           '_docs/**',
           'demos/**',
           '**/_*',

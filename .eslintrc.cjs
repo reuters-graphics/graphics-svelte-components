@@ -5,7 +5,7 @@ module.exports = {
   plugins: ['svelte3'],
   env: {
     browser: true,
-    es2017: true,
+    es2022: true,
     node: true,
   },
   settings: {
