@@ -3428,7 +3428,7 @@ const name = '@reuters-graphics/graphics-svelte-components',
     'build:commit':
       'npm run build:docs && git add . && git commit -m build && git push origin master',
     postinstall: 'husky install',
-    release: 'npm run package && npm publish dist',
+    release: 'npm run package && npm publish ./dist/',
     postversion:
       'git push origin master && git push origin master --tags && npm run release',
     prepublishOnly: `echo "Did you mean to run 'yarn release'?" && exit 1`,

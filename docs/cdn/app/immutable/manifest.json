@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-ba6e4912.js",
+    "file": "start-b051a590.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -35,14 +35,14 @@
     ]
   },
   "pages/components/[slug].svelte": {
-    "file": "pages/components/_slug_.svelte-06d58619.js",
+    "file": "pages/components/_slug_.svelte-6006c262.js",
     "src": "pages/components/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ade19073.js",
       "_index-044d379f.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
@@ -70,13 +70,13 @@
     ]
   },
   "pages/index.svelte": {
-    "file": "pages/index.svelte-85d0e63d.js",
+    "file": "pages/index.svelte-5bc984d7.js",
     "src": "pages/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -98,8 +98,8 @@
   "_preload-helper-ade19073.js": {
     "file": "chunks/preload-helper-ade19073.js"
   },
-  "_main-a158c802.js": {
-    "file": "chunks/main-a158c802.js",
+  "_main-fdca696c.js": {
+    "file": "chunks/main-fdca696c.js",
     "imports": [
       "_index-044d379f.js",
       "_paths-396f020f.js"
@@ -109,14 +109,14 @@
     ]
   },
   "src/lib/Ai2svelte/docs.svx": {
-    "file": "chunks/docs-22508a05.js",
+    "file": "chunks/docs-171dd763.js",
     "src": "src/lib/Ai2svelte/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ade19073.js",
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
@@ -136,13 +136,13 @@
     ]
   },
   "src/lib/BeforeAfter/docs.svx": {
-    "file": "chunks/docs-e4d1787f.js",
+    "file": "chunks/docs-8be2c8dc.js",
     "src": "src/lib/BeforeAfter/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -150,23 +150,23 @@
     ]
   },
   "src/lib/BodyText/docs.svx": {
-    "file": "chunks/docs-6b5885b1.js",
+    "file": "chunks/docs-6eb3588f.js",
     "src": "src/lib/BodyText/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ]
   },
   "src/lib/DatawrapperChart/docs.svx": {
-    "file": "chunks/docs-1c53e243.js",
+    "file": "chunks/docs-4bfae2b8.js",
     "src": "src/lib/DatawrapperChart/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_index-42cc7f4d.js",
       "_paths-396f020f.js"
     ]
@@ -180,13 +180,13 @@
     ]
   },
   "src/lib/EndNotes/docs.svx": {
-    "file": "chunks/docs-e23e8c9b.js",
+    "file": "chunks/docs-dcd41b9b.js",
     "src": "src/lib/EndNotes/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ]
   },
@@ -200,13 +200,13 @@
     ]
   },
   "src/lib/Framer/docs.svx": {
-    "file": "chunks/docs-2d70cc14.js",
+    "file": "chunks/docs-995cff14.js",
     "src": "src/lib/Framer/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_index-315a5013.js",
       "_paths-396f020f.js"
     ],
@@ -238,24 +238,24 @@
     ]
   },
   "src/lib/Image/docs.svx": {
-    "file": "chunks/docs-c3e6a14b.js",
+    "file": "chunks/docs-3165917f.js",
     "src": "src/lib/Image/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ]
   },
   "src/lib/LottieScroller/docs.svx": {
-    "file": "chunks/docs-e44a806a.js",
+    "file": "chunks/docs-6cf33999.js",
     "src": "src/lib/LottieScroller/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -280,13 +280,13 @@
     ]
   },
   "src/lib/Referrals/docs.svx": {
-    "file": "chunks/docs-8b5bd1e2.js",
+    "file": "chunks/docs-3a445866.js",
     "src": "src/lib/Referrals/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -302,14 +302,14 @@
     ]
   },
   "src/lib/Scroller/docs.svx": {
-    "file": "chunks/docs-e5b48527.js",
+    "file": "chunks/docs-4dee0205.js",
     "src": "src/lib/Scroller/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ade19073.js",
       "_index-044d379f.js",
       "_index-42cc7f4d.js",
-      "_main-a158c802.js",
+      "_main-fdca696c.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
