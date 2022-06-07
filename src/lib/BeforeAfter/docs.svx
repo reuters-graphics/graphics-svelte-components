@@ -21,6 +21,7 @@ slug: before-after
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
