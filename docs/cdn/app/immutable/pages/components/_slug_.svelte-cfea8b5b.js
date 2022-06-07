@@ -94,9 +94,9 @@ function X(s) {
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return t(
-        () => import('../../chunks/docs-8be2c8dc.js'),
+        () => import('../../chunks/docs-ae74d7a6.js'),
         [
-          'chunks/docs-8be2c8dc.js',
+          'chunks/docs-ae74d7a6.js',
           'assets/docs-ea1c5840.css',
           'chunks/index-044d379f.js',
           'chunks/index-42cc7f4d.js',
@@ -306,9 +306,9 @@ function Y(s) {
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return t(
-        () => import('../../chunks/docs-8be2c8dc.js'),
+        () => import('../../chunks/docs-ae74d7a6.js'),
         [
-          'chunks/docs-8be2c8dc.js',
+          'chunks/docs-ae74d7a6.js',
           'assets/docs-ea1c5840.css',
           'chunks/index-044d379f.js',
           'chunks/index-42cc7f4d.js',
