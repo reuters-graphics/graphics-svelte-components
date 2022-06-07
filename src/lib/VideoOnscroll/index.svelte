@@ -1,55 +1,101 @@
-<!-- https://codepen.io/melo07/pen/Jjozjgw -->
+<!-- https://static01.nyt.com/newsgraphics/2019/10/23/turkey-syria-video-upload/71ab097907156ca46fb7ffd4d21dfbd119fb47e8/syria-turkey-reconstruct-7-1600.mp4 -->
 <script>
   import { onMount } from 'svelte';
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/dist/ScrollTrigger';
   export let src = '';
   export let size = 'normal';
+  export let startOffset = 0.1;
 
-  let scrollY;
   let time = 0;
+
   let duration = 0;
-  let vid, vidSection;
+  let videoEl, scrollerEl;
+  let tl;
+
+  function once(el, event, fn, opts) {
+    var onceFn = function (e) {
+      el.removeEventListener(event, onceFn);
+      fn.apply(this, arguments);
+    };
+    el.addEventListener(event, onceFn, opts);
+    return onceFn;
+  }
 
   onMount(() => {
-    vid.onloadeddata = (event) => {
+    videoEl.onloadeddata = (event) => {
       console.log('video loaded');
     };
-    function scrollPlay() {
-      vid.currentTime = time;
-      window.requestAnimationFrame(scrollPlay);
-    }
 
-    window.requestAnimationFrame(scrollPlay);
+    once(document.documentElement, 'touchstart', function (e) {
+      videoEl.play();
+      videoEl.pause();
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    tl = gsap.timeline({
+      defaults: { duration: 1 },
+      scrollTrigger: {
+        trigger: scrollerEl,
+        start: 'top bottom',
+        end: 'bottom top',
+        markers: true,
+        scrub: true,
+      },
+    });
+
+    once(videoEl, 'loadedmetadata', () => {
+      tl.fromTo(
+        videoEl,
+        {
+          currentTime: 0,
+        },
+        {
+          currentTime: videoEl.duration || 1,
+        }
+      );
+    });
   });
 
-  $: {
-    const totalScroll = vidSection
-      ? vidSection.getBoundingClientRect().height
-      : 1;
-    time = +(duration * (scrollY / totalScroll));
-    console.log({ duration, time });
-  }
+  $: console.log(time);
 </script>
 
-<!-- https://codepen.io/shshaw/pen/vYKBPbv/9e810322d70c306de2d18237d0cb2d78?editors=0010 -->
+<!-- https://codepen.io/melo07/pen/Jjozjgw -->
 
 
-<svelte:window bind:scrollY />
-
-<section class="video-onscroll graphic {size}" bind:this="{vidSection}">
-  <div class="video-wrapper">
-    <video
-      bind:this="{vid}"
-      preload="auto"
-      playsinline
-      bind:duration
-      muted
-      src="{src}"
-      type="video/mp4"></video>
+<section class="video-onscroll graphic {size}">
+  <div class="wrapper">
+    <div class="video">
+      <video
+        bind:this="{videoEl}"
+        preload="auto"
+        playsinline
+        bind:duration
+        muted
+        src="{src}"
+        type="video/mp4"></video>
+    </div>
+    <div class="scroller" bind:this="{scrollerEl}"></div>
   </div>
 </section>
 
 <style lang="scss">
-  video {
-    width: 100%;
+  .wrapper {
+    position: relative;
+  }
+  .video {
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    video {
+      width: 100%;
+    }
+  }
+  .scroller {
+    height: 100vh;
+    outline: 1px solid red;
   }
 </style>
