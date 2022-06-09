@@ -16,3 +16,4 @@ export { default as Scroller } from './Scroller/index.svelte';
 export { default as LottieScroller } from './LottieScroller/index.svelte';
 export { default as BeforeAfter } from './BeforeAfter/index.svelte';
 export { default as DatawrapperChart } from './DatawrapperChart/index.svelte';
+export { default as VideoGeneral } from './VideoGeneral/index.svelte';

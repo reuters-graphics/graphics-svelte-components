@@ -36,7 +36,8 @@
     </div>
   {/if}
 
-  <div class="datawrapper-chart">
+  <p class="visually-hidden">This is the description for screen reader</p>
+  <div class="datawrapper-chart" aria-hidden="{true}">
     <iframe
       title="{title}"
       aria-label="{ariaLabel}"
@@ -61,5 +62,18 @@
   }
   .datawrapper-chart {
     margin: auto;
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    white-space: nowrap !important;
+    border: 0 !important;
   }
 </style>
