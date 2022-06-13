@@ -43,7 +43,6 @@ slug: video
 </DemoContainer>
 
 
-
 <section>
 
 #### When to play and whether to loop

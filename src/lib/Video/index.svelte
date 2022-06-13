@@ -34,6 +34,8 @@
   $: resetCondition = time >= duration; // - 0.1;
 
   // Dimensions etc other useful things
+  let heightVideo;
+  let widthVideo;
   let heightVideoContainer;
   let widthVideoContainer;
   const controlsBorderOffset = 50;
@@ -81,6 +83,8 @@
           bind:this="{element}"
           class="video-wrapper"
           aria-hidden="{ariaHidden}"
+          bind:clientWidth="{widthVideoContainer}"
+          bind:clientHeight="{heightVideoContainer}"
         >
           {#if possibleToPlayPause}
             {#if showControls}
@@ -116,8 +120,8 @@
             bind:currentTime="{time}"
             bind:duration
             bind:paused
-            bind:clientWidth="{widthVideoContainer}"
-            bind:clientHeight="{heightVideoContainer}"
+            bind:clientWidth="{widthVideo}"
+            bind:clientHeight="{heightVideo}"
             style="{showControls
               ? 'position: relative'
               : 'position: absolute; top: 0; left: 0;'}"
@@ -128,7 +132,12 @@
       </IntersectionObserver>
     {:else}
       <!-- Video element without Intersection observer -->
-      <div class="video-wrapper" aria-hidden="{ariaHidden}">
+      <div
+        class="video-wrapper"
+        aria-hidden="{ariaHidden}"
+        bind:clientWidth="{widthVideoContainer}"
+        bind:clientHeight="{heightVideoContainer}"
+      >
         {#if possibleToPlayPause}
           {#if showControls}
             <Controls
@@ -164,8 +173,8 @@
           bind:duration
           bind:paused
           autoplay
-          bind:clientWidth="{widthVideoContainer}"
-          bind:clientHeight="{heightVideoContainer}"
+          bind:clientWidth="{widthVideo}"
+          bind:clientHeight="{heightVideo}"
           style="{showControls
             ? 'position: relative'
             : 'position: absolute; top: 0; left: 0;'}"

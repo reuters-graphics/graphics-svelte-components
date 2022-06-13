@@ -29,7 +29,7 @@
     opacity: {controlsOpacity}; 
     top: {controlsPosition === 'top left' || controlsPosition === 'top right'
     ? `${10}px`
-    : `${heightVideoContainer - 3}px`};
+    : `${heightVideoContainer - controlsBorderOffset}px`};
     left: {controlsPosition === 'top left' || controlsPosition === 'bottom left'
     ? `${10}px`
     : `${widthVideoContainer - controlsBorderOffset}px`};
