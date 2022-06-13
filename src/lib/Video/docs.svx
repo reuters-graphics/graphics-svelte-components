@@ -7,7 +7,6 @@ slug: video
 <script>
   import Video from './index.svelte';
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
-  import LoremIpsum from './loremIpsum.svelte';
 </script>
 
 <section>
