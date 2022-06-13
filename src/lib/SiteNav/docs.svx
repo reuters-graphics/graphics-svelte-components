@@ -1,0 +1,22 @@
+---
+title: SiteNav
+description: Reuters dotcom site nav
+slug: site-nav
+---
+
+<script>
+  import SiteNav from './index.svelte';
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+</script>
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+<DemoContainer fluid={true} containerStyle='padding: 20px 0 20px;'>
+<SiteNav />
+</DemoContainer>

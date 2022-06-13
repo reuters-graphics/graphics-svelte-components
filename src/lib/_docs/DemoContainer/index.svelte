@@ -1,19 +1,21 @@
 <script>
   export let fluid = false;
+  export let style = '';
+  export let containerStyle = '';
 </script>
 
-<div id='demo-container' class:fluid={fluid}>
-  <div>
-    <slot></slot>
+<div id="demo-container" class:fluid style="{style}">
+  <div style="{containerStyle}">
+    <slot />
   </div>
 </div>
 
-<style lang='scss'>
+<style lang="scss">
   #demo-container {
     margin: 2rem auto;
-    
+
     padding: 20px;
-    
+
     div {
       max-width: 1200px;
       margin: 20px auto;
