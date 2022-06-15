@@ -21,6 +21,7 @@ slug: before-after
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
@@ -51,6 +52,7 @@ Adjust the height by passing a number of pixels to the `height` prop.
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
@@ -83,6 +85,7 @@ Change the styling of the swipe handle.
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
@@ -117,6 +120,7 @@ Change the starting position of the swipe with the `offset` prop.
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
@@ -147,6 +151,7 @@ Add and style a caption with the `caption` slot.
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
@@ -186,6 +191,7 @@ Add overlays with the `beforeOverlay` and `afterOverlay` slots.
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
@@ -248,6 +254,7 @@ Target the `.overlay-container` with `:global` SCSS rules to change the overlay 
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter
@@ -294,6 +301,7 @@ Use text elements in your overlays as [ARIA descriptions](https://developer.mozi
 ```svelte
 <script>
   import { BeforeAfter } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <BeforeAfter

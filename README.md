@@ -60,7 +60,9 @@ If you're using the [graphics kit](https://github.com/reuters-graphics/bluprint_
 
 ## Developing new components
 
-Add your component in a folder one level below `src/lib`, for example:
+First step: make a branch for your new component.
+
+Next, add your component in a folder one level below `src/lib`, for example:
 
 ```bash
 src/
@@ -118,6 +120,8 @@ A component that does things.
   <MyComponent />
 </DemoContainer>
 ````
+
+When you're ready, make a pull pequest for your component.
 
 #### Publishing
 

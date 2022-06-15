@@ -1,5 +1,6 @@
 export default (embeds) => {
   const nakedEmbeds = embeds
+    .map((e) => e.replace(/\?.+$/, ''))
     .map((e) => e.replace(/index\.html$/, ''))
     .map((e) => e.replace(/^http[s]*:\/\/[\w.]+\.com/, ''));
 

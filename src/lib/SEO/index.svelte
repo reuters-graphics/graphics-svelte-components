@@ -1,12 +1,12 @@
 <script>
   import pkg from '$pkg';
-  import { getPath } from '$utils/statics';
   import { page } from '$app/stores';
   import { get } from 'lodash-es';
   import urljoin from 'proper-url-join';
   import { browser } from '$app/env';
   import analytics from './analytics';
   import publisherTags from './publisherTags';
+  import { assets } from '$app/paths';
 
   export let seoTitle;
   export let seoDescription;
@@ -16,10 +16,22 @@
   export let lang = 'en';
   export let hostname = 'graphics.reuters.com';
 
-  const URL = get(pkg, 'homepage')
-    ? urljoin(pkg.homepage, $page.url.pathname, { trailingSlash: true })
+  const parseUrl = (url) => {
+    try {
+      return new URL(url);
+    } catch {
+      return {};
+    }
+  };
+
+  const url = get(pkg, 'homepage')
+    ? urljoin(parseUrl(pkg.homepage).origin, $page.url.pathname, {
+        trailingSlash: true,
+      })
     : get(pkg, 'reuters.preview')
-    ? urljoin(pkg.reuters.preview, $page.url.pathname, { trailingSlash: true })
+    ? urljoin(parseUrl(pkg.reuters.preview).origin, $page.url.pathname, {
+        trailingSlash: true,
+      })
     : $page.host
     ? urljoin('https://' + $page.host, $page.url.pathname, {
         trailingSlash: true,
@@ -28,7 +40,7 @@
 
   // Only fire analytics on prod sites
   if (browser && window.location.host === 'graphics.reuters.com') {
-    analytics(URL, seoTitle);
+    analytics(url, seoTitle);
     publisherTags();
   }
 
@@ -50,17 +62,17 @@
     '@context': 'http://schema.org',
     '@type': 'NewsArticle',
     headline: seoTitle,
-    url: URL,
+    url,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': URL,
+      '@id': url,
     },
-    thumbnailUrl: getPath(shareImgPath),
+    thumbnailUrl: urljoin(assets, shareImgPath),
     image: [
       {
         '@context': 'http://schema.org',
         '@type': 'ImageObject',
-        url: getPath(shareImgPath),
+        url: urljoin(assets, shareImgPath),
       },
     ],
     publisher: { '@id': 'https://www.reuters.com/#publisher' },
@@ -86,7 +98,7 @@
   <html lang="{lang}"></html>
   <title>{seoTitle}</title>
   <meta name="description" content="{seoDescription}" />
-  <link rel="canonical" href="{URL}" />
+  <link rel="canonical" href="{url}" />
   <link
     rel="shortcut icon"
     type="image/x-icon"
@@ -111,7 +123,7 @@
     sizes="96x96"
   />
 
-  <meta property="og:url" content="{URL}" />
+  <meta property="og:url" content="{url}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{shareTitle}" itemprop="name" />
   <meta
@@ -121,7 +133,7 @@
   />
   <meta
     property="og:image"
-    content="{getPath(shareImgPath)}"
+    content="{urljoin(assets, shareImgPath)}"
     itemprop="image"
   />
   <meta property="og:site_name" content="Reuters" />
@@ -132,7 +144,7 @@
   <meta name="twitter:domain" content="{`https://${hostname}`}" />
   <meta name="twitter:title" content="{shareTitle}" />
   <meta name="twitter:description" content="{shareDescription}" />
-  <meta name="twitter:image:src" content="{getPath(shareImgPath)}" />
+  <meta name="twitter:image:src" content="{urljoin(assets, shareImgPath)}" />
 
   <meta property="fb:app_id" content="319194411438328" />
   <meta property="fb:admins" content="616167736" />
