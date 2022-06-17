@@ -18,7 +18,7 @@
   export let playVideoThreshold = 0.5; // if video plays with intersection observer, how much of it should be into view to start playing
   export let possibleToPlayPause = true; // whether to have the option to pause and play video
   export let showControls = true; // whetner to show the play / pause buttons
-  export let separateReplyIcon = false; // whether to use a separate replay icon or use the play icon for replay as well
+  export let separateReplayIcon = false; // whether to use a separate replay icon or use the play icon for replay as well
   export let controlsColour = '#333'; // change the colour of the play/pause button
   export let controlsOpacity = 0.5; // change the opacity of the play/pause button
   export let controlsPosition = 'top left'; // have four options for controls position - top right, top left, bottom right, bottom left
@@ -96,7 +96,7 @@
                 heightVideoContainer="{heightVideoContainer}"
                 controlsBorderOffset="{controlsBorderOffset}"
                 resetCondition="{resetCondition}"
-                separateReplyIcon="{separateReplyIcon}"
+                separateReplayIcon="{separateReplayIcon}"
                 controlsColour="{controlsColour}"
               />
             {:else}
@@ -148,7 +148,7 @@
               heightVideoContainer="{heightVideoContainer}"
               controlsBorderOffset="{controlsBorderOffset}"
               resetCondition="{resetCondition}"
-              separateReplyIcon="{separateReplyIcon}"
+              separateReplayIcon="{separateReplayIcon}"
               controlsColour="{controlsColour}"
             />
           {:else}
