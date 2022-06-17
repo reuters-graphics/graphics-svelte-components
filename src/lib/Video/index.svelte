@@ -1,6 +1,4 @@
 <script>
-  import { assets } from '$app/paths';
-  import urljoin from 'proper-url-join';
   import IntersectionObserver from 'svelte-intersection-observer';
   import Controls from './Controls.svelte';
 
@@ -112,7 +110,7 @@
           {/if}
           <video
             bind:this="{videoElement}"
-            src="{urljoin(assets, src)}"
+            src="{src}"
             width="100%"
             muted="{muteVideo}"
             playsinline
@@ -164,7 +162,7 @@
         {/if}
         <video
           bind:this="{videoElement}"
-          src="{urljoin(assets, src)}"
+          src="{src}"
           width="100%"
           muted="{muteVideo}"
           playsinline

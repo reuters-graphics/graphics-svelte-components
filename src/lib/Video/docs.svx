@@ -5,6 +5,8 @@ slug: video
 ---
 
 <script>
+  import { assets } from '$app/paths';
+  import urljoin from 'proper-url-join';
   import Video from './index.svelte';
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
 </script>
@@ -20,12 +22,14 @@ slug: video
 
 ```svelte
 <script>
+  import { assets } from '$app/paths'; // helper if importing video from 'statics'
+  import urljoin from 'proper-url-join';  // if importing video from 'statics'
   import { Video } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
 <Video 
   ariaDescription={"Compulsory description of your video for screen readers."}
-  src={'path-to-video-from-statics-folder'}
+  src={'path-to-video-or-external-url'} // e.g. urljoin(assets, 'myvideo.mp4') if your video is in the 'statics' folder of the repo
   size={'wide'} // normal, wide, wider, widest or fluid
   caption={'Optional caption for your video.'}
 />
@@ -35,7 +39,7 @@ slug: video
 <DemoContainer>
   <Video 
     ariaDescription="Description of your video for screen readers."
-    src={'videos/Sequence silent video_4.mp4'}
+    src={urljoin(assets, 'videos/Sequence silent video_4.mp4')} 
     size='wide'
     caption="World's longest glass bridge opens to public in Vietnam. (c) 2022 Thomson Reuters"
   />
@@ -68,7 +72,7 @@ Here is an example of what the same video would look like with a visibility thre
 
 <Video 
   ariaDescription={"Compulsory description of your video for screen readers."}
-  src={'path-to-video-from-statics-folder'}
+  src={'path-to-video-or-external-url'} 
   size={'normal'}
   loopVideo={false}
   playVideoThreshold={0.9}
@@ -78,7 +82,7 @@ Here is an example of what the same video would look like with a visibility thre
 <DemoContainer>
   <Video 
     ariaDescription="Description of your video for screen readers."
-    src={'videos/Sequence silent video_4.mp4'}
+    src={urljoin(assets,'videos/Sequence silent video_4.mp4')} 
     size='normal'
     caption="World's longest glass bridge opens to public in Vietnam. (c) 2022 Thomson Reuters"
     loopVideo={false}
@@ -117,7 +121,7 @@ Here is an example with bottom right corner white opaque controls, with a replay
 
 <Video 
   ariaDescription={"Compulsory description of your video for screen readers."}
-  src={'path-to-video-from-statics-folder'}
+  src={'path-to-video-or-external-url'} 
   size={'normal'}
   caption={'Optional caption for your video.'}
   playVideoThreshold={0.1}
@@ -132,7 +136,7 @@ Here is an example with bottom right corner white opaque controls, with a replay
 <DemoContainer>
   <Video 
     ariaDescription="Description of your video for screen readers."
-    src={'videos/Sequence silent video_4.mp4'}
+    src={urljoin(assets, 'videos/Sequence silent video_4.mp4')} 
     size='normal'
     caption="World's longest glass bridge opens to public in Vietnam. (c) 2022 Thomson Reuters"
     playVideoThreshold={0.1}
@@ -168,7 +172,7 @@ Nonte that neither autoplay option will work, but you can still loop the video.
 
 <Video 
   ariaDescription={"Compulsory description of your video for screen readers."}
-  src={'path-to-video-from-statics-folder'}
+  src={'path-to-video-or-external-url'} 
   size={'normal'}
   controlsOpacity={1}
   loopVideo={false}
@@ -179,7 +183,7 @@ Nonte that neither autoplay option will work, but you can still loop the video.
 <DemoContainer>
   <Video 
     ariaDescription="Description of your video for screen readers."
-    src={'videos/Sequence sound video.mp4'}
+    src={urljoin(assets, 'videos/Sequence sound video.mp4')} 
     size='normal'
     caption="World's longest glass bridge opens to public in Vietnam. (c) 2022 Thomson Reuters"
     controlsOpacity={1}
