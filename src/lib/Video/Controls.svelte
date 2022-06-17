@@ -12,7 +12,7 @@
   export let heightVideoContainer;
   export let controlsBorderOffset;
   export let resetCondition;
-  export let separateReplyIcon;
+  export let separateReplayIcon;
   export let controlsColour;
 
   function forwardBtnClick() {
@@ -37,7 +37,7 @@
 >
   {#if resetCondition}
     <i class="play-pause-icon replay">
-      {#if separateReplyIcon}
+      {#if separateReplayIcon}
         <Fa icon="{faReply}" size="2x" color="{controlsColour}" />
       {:else}
         <Fa icon="{faPlay}" size="2x" color="{controlsColour}" />

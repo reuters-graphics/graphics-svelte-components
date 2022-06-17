@@ -13,14 +13,20 @@
   export let size = 'normal'; // normal, wide, wider, widest or fluid
   export let preloadVideo = 'auto'; // preload the video by default; this is ignored if autoplay is true; can also be none or metadata
   export let loopVideo = true; // whether the video should loop
+
   export let muteVideo = true; // whther video should have sound or not
+  export let allowSoundToAutoplay = false; // for video with sound, whether video should be allowed to autoplay if the user has previously interacted with DOM **NEW**
+
   export let playVideoWhenInView = true; // whether the video should play when it comes into view or just on page load
   export let playVideoThreshold = 0.5; // if video plays with intersection observer, how much of it should be into view to start playing
   export let possibleToPlayPause = true; // whether to have the option to pause and play video
+
   export let showControls = true; // whetner to show the play / pause buttons
+  export let hoverToSeeControls = false; // whether you need to hover over the view to see the controls **NEW**
   export let separateReplayIcon = false; // whether to use a separate replay icon or use the play icon for replay as well
   export let controlsColour = '#333'; // change the colour of the play/pause button
   export let controlsOpacity = 0.5; // change the opacity of the play/pause button
+  $: interactiveControlsOpacity = 0;
   export let controlsPosition = 'top left'; // have four options for controls position - top right, top left, bottom right, bottom left
 
   /// //////////////////////////////////
@@ -44,9 +50,27 @@
   let element;
   let videoElement;
 
-  // Play the video if it's intersecting; pause when it's no longer intersecting
-  $: if (playVideoWhenInView && intersecting && muteVideo) paused = false; // You will have to manually click on video to play if it has sound
+  // For video with sound, check if there has been an interaction with the DOM
+  let interactedWithDom = false;
+  const setInteractedWithDom = () => {
+    interactedWithDom = true;
+  };
+
+  // Play the video (with no sound) if it's intersecting; pause when it's no longer intersecting
+  $: if (playVideoWhenInView && intersecting && muteVideo) paused = false;
   $: if (playVideoWhenInView && !intersecting) paused = true;
+  // Special case for video with sound
+  // Only ff you've clicked on play button or interacted with DOM in any way previously, video with audio will play
+  $: if (
+    allowSoundToAutoplay &&
+    playVideoWhenInView &&
+    intersecting &&
+    !muteVideo &&
+    interactedWithDom
+  )
+    paused = false;
+  $: if (allowSoundToAutoplay && !muteVideo && !interactedWithDom)
+    paused = true;
 
   $: if (!possibleToPlayPause) showControls = true;
 
@@ -56,7 +80,7 @@
     paused = result;
   };
 
-  // Warining to missing aria attributes
+  // Warning to missing aria attributes
   if (ariaHidden && !ariaDescription) {
     console.warn(
       'Must provide aria description for video components if ariaHidden is true.'
@@ -64,7 +88,26 @@
   }
 </script>
 
-<section class="video-container graphic {size}">
+<svelte:window
+  on:click="{setInteractedWithDom}"
+  on:touchstart="{setInteractedWithDom}"
+/>
+
+<section
+  class="video-container graphic {size}"
+  on:mouseover="{() => {
+    interactiveControlsOpacity = controlsOpacity;
+  }}"
+  on:focus="{() => {
+    interactiveControlsOpacity = controlsOpacity;
+  }}"
+  on:mouseout="{() => {
+    interactiveControlsOpacity = 0;
+  }}"
+  on:blur="{() => {
+    interactiveControlsOpacity = 0;
+  }}"
+>
   {#if (ariaHidden && ariaDescription) || !ariaHidden}
     {#if ariaDescription}
       <p class="visually-hidden">{ariaDescription}</p>
@@ -90,7 +133,9 @@
               <Controls
                 on:pausePlayEvent="{pausePlayEvent}"
                 paused="{paused}"
-                controlsOpacity="{controlsOpacity}"
+                controlsOpacity="{hoverToSeeControls
+                  ? interactiveControlsOpacity
+                  : controlsOpacity}"
                 controlsPosition="{controlsPosition}"
                 widthVideoContainer="{widthVideoContainer}"
                 heightVideoContainer="{heightVideoContainer}"
@@ -104,7 +149,7 @@
                 on:click="{() => {
                   paused === true ? (paused = false) : (paused = true);
                 }}"
-                style="top: 0; left: 0; width: {widthVideoContainer}px; height: {heightVideoContainer}px;"
+                style="position: absolute; top: 0; left: 0; width: {widthVideoContainer}px; height: {heightVideoContainer}px;"
               ></button>
             {/if}
           {/if}
@@ -121,9 +166,7 @@
             bind:paused
             bind:clientWidth="{widthVideo}"
             bind:clientHeight="{heightVideo}"
-            style="{showControls
-              ? 'position: relative'
-              : 'position: absolute; top: 0; left: 0;'}"
+            style="{showControls ? 'position: relative' : 'position: relative'}"
           >
             <track kind="captions" />
           </video>
@@ -156,7 +199,7 @@
               on:click="{() => {
                 paused === true ? (paused = false) : (paused = true);
               }}"
-              style="top: 0; left: 0; width: {widthVideoContainer}px; height: {heightVideoContainer}px;"
+              style="position: absolute; top: 0; left: 0; width: {widthVideoContainer}px; height: {heightVideoContainer}px;"
             ></button>
           {/if}
         {/if}
@@ -174,9 +217,7 @@
           autoplay
           bind:clientWidth="{widthVideo}"
           bind:clientHeight="{heightVideo}"
-          style="{showControls
-            ? 'position: relative'
-            : 'position: absolute; top: 0; left: 0;'}"
+          style="{showControls ? 'position: relative' : 'position: relative'}"
         >
           <track kind="captions" />
         </video>
@@ -211,5 +252,12 @@
   figcaption {
     font-size: 0.8rem;
     color: #666666;
+  }
+
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
   }
 </style>

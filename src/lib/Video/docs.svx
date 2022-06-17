@@ -100,6 +100,7 @@ Here is an example of what the same video would look like with a visibility thre
 `showControls={true}`. If you don't want these, just set `showControls={false}`. 
 When you do that, the icons themselves will disappear but the functionality of playing and pausing remains and can be done by clicking on the video itself. 
 If you don't want to enable any play/pause functionality, add `possibleToPlayPause={false}`. 
+- If you want to show the controls only when the video is hovered, set `hoverToSeeControls={true}`. 
 
 `controlsColour`, `controlsOpacity`,  `controlsPosition`, `separateReplayIcon`
 
@@ -109,7 +110,7 @@ If you do want to leave the controls, you have a couple of options to style them
 - Change the placement of the controls to one of: `top right`, `top left`, `bottom right`, `bottom left` by setting `controlsPosition`. 
 - Change the play button to a replay button at the end of the video with the option `separateReplayIcon={true}`.
 
-Here is an example with bottom right corner white opaque controls, with a replay button. 
+Here is an example with bottom right corner white opaque controls, with a replay button, where you have to hover on the video to see the controls. 
 
 </section>
 
@@ -130,6 +131,7 @@ Here is an example with bottom right corner white opaque controls, with a replay
   controlsPosition={'bottom right'}
   separateReplayIcon={true}
   loopVideo={false} // If you don't set loopVideo to false, you won't see the loop button
+  hoverToSeeControls={true}
 />
 ```
 
@@ -145,6 +147,7 @@ Here is an example with bottom right corner white opaque controls, with a replay
     controlsPosition={'bottom right'}
     separateReplayIcon={true}
     loopVideo={false} 
+    hoverToSeeControls={true}
   />
 </DemoContainer>
 
@@ -153,14 +156,25 @@ Here is an example with bottom right corner white opaque controls, with a replay
 
 #### Videos with sound
 
-This component is mainly intended to work with silent videos. This is because, if you've ever had to put sound on a page in recent years, 
+If you've ever had to put sound on a page in recent years, 
 you'll know that auto-playing sound is not allowed by browsers. The user will need to interact with the page first, and it will depend on your 
-particular use case how and when you'd like this to happen. 
+particular use case how and when you'd like this to happen. This component provides two options to deal with this. 
+If you have a video with sound, make sure to add the prop `muteVideo={false}`.
 
-If you're ok with having the user click on the default play button in the video to make it start, then this component has you covered. 
-Just leave the controls on (default behaviour), style them if you like (see above) and set `muteVideo={false}`. 
-Nonte that neither autoplay option will work, but you can still loop the video. 
+Then you can either:
+-  `allowSoundToAutoplay={false}` (default) : Don't allow the video to autoplay under any circumstances other than when the user clicks the 'play' on the video. Note that this 
+works whether or not you have the controls visible, i.e. with `showControls` being `true` or `false`, as long as you allow 
+play/pause behaviour with `possibleToPlayPause={true}` (default).
 
+- `allowSoundToAutoplay={true}` : Allow the video to autoplay when it comes into view as long as the user has interacted with the page preivously, i.e. they have clicked/tapped 
+anywhere on the page. 
+
+You should keep `playVideoWhenInView={true}` (default). There is no option to autoplay video with sound when the user clicks on the page 
+elsewhere if the video is not in view. In other words, you can't start playing sound for a video which is not in view with this component. 
+This is probably not a behaviour you'd want anyway. 
+
+The example below allows for autoplay if the user has interacted with the page before the video comes into view. To see this, reload the page 
+and go to the top. Click anywhere on the page before scrolling down to the video and you should see it autoplay when it comes into view. 
 
 </section>
 
@@ -177,6 +191,7 @@ Nonte that neither autoplay option will work, but you can still loop the video.
   controlsOpacity={1}
   loopVideo={false}
   muteVideo={false}
+  allowSoundToAutoplay={true}
 />
 ```
 
@@ -189,6 +204,9 @@ Nonte that neither autoplay option will work, but you can still loop the video.
     controlsOpacity={1}
     loopVideo={false}
     muteVideo={false}
+    playVideoWhenInView={true}
+    showControls={true}
+    allowSoundToAutoplay={true}
   />
 </DemoContainer>
 
@@ -219,6 +237,11 @@ options: *'none'* (Don't preload the video on page load),
 
 - **muteVideo** (bool) - default <span class='default'>**true**</span> <span class='separator'></span> options: *true*, *false* 
 
+- **allowSoundToAutoplay** (bool) - default  <span class='default'>**false**</span><span class='separator'></span> options: *true*, *false*.
+For video with sound, whether video should be allowed to autoplay if the user has previously interacted with DOM. You need to set `muteVideo` to `true` 
+for this to work. 
+
+
 - **playVideoWhenInView** (bool) - default <span class='default'>**true**</span> <span class='separator'></span> 
 options: *true* (Only start playing the video when it comes into view), *false* (Start playing as soon as the page and video load)
 
@@ -229,6 +252,9 @@ How much of the video should be into view to start playing when playVideoWhenInV
 
 - **showControls** (bool) - default <span class='default'>**true**</span> <span class='separator'></span> options: *true*, *false*.
 Whether to show the play/pause controls or not.
+
+- **hoverToSeeControls** (bool) - default <span class='default'>**false**</span><span class='separator'></span> options: *true*, *false*.
+Whether you need to hover over the video to see the controls.
 
 - **separateReplayIcon** (bool) - default <span class='default'>**false**</span> <span class='separator'></span> options: *true*, *false*.
 Whether to use a separate replay icon or use the play icon for replay as well.
