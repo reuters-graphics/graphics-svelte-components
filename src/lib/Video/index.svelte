@@ -15,14 +15,14 @@
   export let loopVideo = true; // whether the video should loop
 
   export let muteVideo = true; // whther video should have sound or not
-  export let allowSoundToAutoplay = false; // for video with sound, whether video should be allowed to autoplay if the user has previously interacted with DOM **NEW**
+  export let allowSoundToAutoplay = false; // for video with sound, whether video should be allowed to autoplay if the user has previously interacted with DOM
 
   export let playVideoWhenInView = true; // whether the video should play when it comes into view or just on page load
   export let playVideoThreshold = 0.5; // if video plays with intersection observer, how much of it should be into view to start playing
   export let possibleToPlayPause = true; // whether to have the option to pause and play video
 
   export let showControls = true; // whetner to show the play / pause buttons
-  export let hoverToSeeControls = false; // whether you need to hover over the view to see the controls **NEW**
+  export let hoverToSeeControls = false; // whether you need to hover over the video to see the controls
   export let separateReplayIcon = false; // whether to use a separate replay icon or use the play icon for replay as well
   export let controlsColour = '#333'; // change the colour of the play/pause button
   export let controlsOpacity = 0.5; // change the opacity of the play/pause button
