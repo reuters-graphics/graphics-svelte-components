@@ -1,10 +1,13 @@
 <script>
   import { ReutersLogo } from './../index.js';
-  import NavMenu from './NavMenu/index.svelte';
+  import NavBar from './NavBar/index.svelte';
+  import data from './data.json';
+
+  const { sections } = data;
 </script>
 
 <header>
-  <div class="nav-container">
+  <div class="nav-container show-nav">
     <div class="scroll-container">
       <div class="inner">
         <div class="main-bar">
@@ -15,7 +18,8 @@
               </a>
             </div>
           </div>
-          <NavMenu />
+          <NavBar sections="{sections}" />
+          <!-- Space takes the place of the MyViewMenu, NavSearchBar & Account components... -->
           <div class="spacer-container">
             <div class="spacer"></div>
           </div>
@@ -42,10 +46,6 @@
     height: $nav-height;
     z-index: $zindex-sticky;
     --page-height: 0px;
-
-    &.myview-active {
-      height: ($nav-height + $subnav-height);
-    }
 
     @include for-tablet-down {
       height: ($nav-height + $subnav-height) !important;

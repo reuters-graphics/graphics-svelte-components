@@ -1,41 +1,76 @@
 <script>
-  import sections from './sections.json';
   import DownArrow from './DownArrow.svelte';
+  import { activeSection } from './stores';
+  import SectionDrowdown from './NavDropdown/SectionDrowdown.svelte';
+  import MoreDropdown from './NavDropdown/MoreDropdown.svelte';
+  import { normalizeUrl } from './utils/index';
 
-  $: console.log(sections);
+  export let sections = [];
+
+  let windowWidth = 1200;
+
+  $: getDisplayCount = () => {
+    if (windowWidth >= 1300) return 7;
+    return 5;
+  };
+
+  $: displayCount = getDisplayCount();
+  $: displaySections = sections.slice(0, displayCount);
+  $: hiddenSections = sections.slice(displayCount);
 </script>
+
+<svelte:window bind:innerWidth="{windowWidth}" />
 
 <div class="nav-bar">
   <nav aria-label="Main navigation">
     <ul class="nav-list">
-      {#each sections as section}
-        {#if section.children.length === 0}
-          <li class="nav-item category link">
-            <div class="nav-button link">
-              <a href="https://www.reuters.com{section.url}">
-                {section.name}
-              </a>
-            </div>
-          </li>
-        {:else}
-          <li class="nav-item category">
-            <div class="nav-button">
-              <a href="https://www.reuters.com{section.url}">
+      {#each displaySections as section}
+        {#if section.children}
+          <li
+            class="nav-item category link"
+            on:mouseover="{() => activeSection.set(section.id)}"
+            on:focus="{() => activeSection.set(section.id)}"
+          >
+            <div
+              class="nav-button link"
+              class:open="{section.id === $activeSection}"
+            >
+              <a href="{normalizeUrl(section.url)}">
                 {section.name}
               </a>
               <button class="button">
                 <DownArrow />
               </button>
             </div>
+            {#if $activeSection === section.id}
+              <SectionDrowdown section="{section}" />
+            {/if}
+          </li>
+        {:else}
+          <li class="nav-item category link">
+            <div class="nav-button link">
+              <a href="{normalizeUrl(section.url)}">
+                {section.name}
+              </a>
+            </div>
           </li>
         {/if}
       {/each}
-      <li class="nav-item">
-        <div class="nav-button more">
+      <li
+        class="nav-item"
+        on:mouseover="{() => activeSection.set('more')}"
+        on:focus="{() => activeSection.set('more')}"
+        on:mouseout="{() => activeSection.set(null)}"
+        on:blur="{() => activeSection.set(null)}"
+      >
+        <div class="nav-button more" class:open="{$activeSection === 'more'}">
           <button class="button">
             More <DownArrow />
           </button>
         </div>
+        {#if $activeSection === 'more'}
+          <MoreDropdown hiddenSections="{hiddenSections}" />
+        {/if}
       </li>
     </ul>
   </nav>

@@ -17,6 +17,6 @@ slug: site-nav
 
 </section>
 
-<DemoContainer fluid={true} containerStyle='padding: 20px 0 20px;'>
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
 <SiteNav />
 </DemoContainer>
