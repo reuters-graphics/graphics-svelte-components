@@ -1,32 +1,51 @@
 <script>
   import { afterUpdate } from 'svelte';
-  import { activeSection } from './../stores';
   import StoryCard from './StoryCard/index.svelte';
   import Spinner from './Spinner/index.svelte';
+  import { getContext } from 'svelte';
+
+  const activeSection = getContext('nav-active-section');
+
+  export let headingText = 'Trending Stories';
 
   let stories = [];
   let lastFetched = null;
 
   afterUpdate(async () => {
     if (lastFetched === $activeSection) return;
-    await fetch(
-      'https://www.reuters.com/pf/api/v3/content/fetch/recent-stories-by-sections-v1?' +
-        new URLSearchParams({
-          query: JSON.stringify({
-            section_ids: $activeSection,
-            size: 4,
-            website: 'reuters',
-          }),
-        })
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        stories = data.result.articles;
-        lastFetched = $activeSection;
-      });
+    if ($activeSection === 'more') {
+      await fetch(
+        'https://www.reuters.com/pf/api/v3/content/fetch/articles-by-trends-v1?' +
+          new URLSearchParams({
+            query: JSON.stringify({
+              size: 4,
+              website: 'reuters',
+            }),
+          })
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          stories = data.result.articles;
+          lastFetched = $activeSection;
+        });
+    } else {
+      await fetch(
+        'https://www.reuters.com/pf/api/v3/content/fetch/recent-stories-by-sections-v1?' +
+          new URLSearchParams({
+            query: JSON.stringify({
+              section_ids: $activeSection,
+              size: 4,
+              website: 'reuters',
+            }),
+          })
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          stories = data.result.articles;
+          lastFetched = $activeSection;
+        });
+    }
   });
-
-  $: console.log(stories);
 </script>
 
 <div class="dropdown">
@@ -40,11 +59,14 @@
       <div class="stories-container">
         <div class="inner">
           {#if stories.length > 0}
-            <span class="latest">Trending stories</span>
+            <span class="latest">{headingText}</span>
             <ul class="story-list">
               {#each stories as story}
                 <li class="story-item">
-                  <StoryCard story="{story}" />
+                  <StoryCard
+                    story="{story}"
+                    withSection="{$activeSection === 'more'}"
+                  />
                 </li>
               {/each}
             </ul>
@@ -82,10 +104,10 @@
   }
 
   .dropdown-container {
-    border-top: 1px solid $tr-muted-grey;
+    border-top: 1px solid var(--nav-rules, $tr-muted-grey);
     box-shadow: 0 10px 16px rgba(black, 0.1);
     overflow: hidden;
-    background: white;
+    background: var(--nav-background, $white);
 
     > .inner {
       @include responsive-columns(12);
@@ -128,7 +150,7 @@
 
     .inner {
       @include spacing-single(padding-left);
-      border-left: 1px solid $tr-muted-grey;
+      border-left: 1px solid var(--nav-rules, $tr-muted-grey);
     }
 
     @include for-extra-wide-desktop {
@@ -159,7 +181,7 @@
 
     &:nth-child(1),
     &:nth-child(2) {
-      border-bottom: 1px solid $tr-muted-grey;
+      border-bottom: 1px solid var(--nav-rules, $tr-muted-grey);
     }
 
     &:nth-child(3),
@@ -172,7 +194,7 @@
         padding-top: 20px;
       }
       &:nth-child(3) {
-        border-bottom: 1px solid $tr-muted-grey;
+        border-bottom: 1px solid var(--nav-rules, $tr-muted-grey);
       }
     }
   }
@@ -213,7 +235,7 @@
         top: 0;
         left: 50%;
         height: 100%;
-        border-right: 1px solid $tr-muted-grey;
+        border-right: 1px solid var(--nav-rules, $tr-muted-grey);
       }
     }
   }
@@ -240,6 +262,7 @@
 
   span.latest {
     font-size: 16px;
+    color: var(--nav-primary, $tr-dark-grey);
     @media (min-width: 1300px) {
       font-size: 18px;
     }

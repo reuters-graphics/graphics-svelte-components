@@ -1,11 +1,13 @@
 <script>
   import DownArrow from './DownArrow.svelte';
-  import { activeSection } from './stores';
   import SectionDrowdown from './NavDropdown/SectionDrowdown.svelte';
   import MoreDropdown from './NavDropdown/MoreDropdown.svelte';
   import { normalizeUrl } from './utils/index';
+  import { getContext } from 'svelte';
 
   export let sections = [];
+
+  const activeSection = getContext('nav-active-section');
 
   let windowWidth = 1200;
 
@@ -43,7 +45,10 @@
               </button>
             </div>
             {#if $activeSection === section.id}
-              <SectionDrowdown section="{section}" />
+              <SectionDrowdown
+                section="{section}"
+                headingText="{`Latest in ${section.name}`}"
+              />
             {/if}
           </li>
         {:else}
@@ -60,8 +65,6 @@
         class="nav-item"
         on:mouseover="{() => activeSection.set('more')}"
         on:focus="{() => activeSection.set('more')}"
-        on:mouseout="{() => activeSection.set(null)}"
-        on:blur="{() => activeSection.set(null)}"
       >
         <div class="nav-button more" class:open="{$activeSection === 'more'}">
           <button class="button">
@@ -114,7 +117,7 @@
       cursor: pointer;
 
       a {
-        color: #404040;
+        color: var(--nav-primary, $tr-dark-grey);
         &:hover,
         &:active {
           text-decoration: none;
@@ -133,7 +136,7 @@
         bottom: 0;
         display: block;
         height: 4px;
-        background: $tr-orange;
+        background: var(--nav-accent, $tr-orange);
       }
     }
 
@@ -149,7 +152,7 @@
         bottom: 0;
         display: block;
         height: 4px;
-        background: $tr-orange;
+        background: var(--nav-accent, $tr-orange);
       }
     }
   }
@@ -164,6 +167,7 @@
     @include font-display;
     font-weight: 500;
     font-size: 16px;
+    color: var(--nav-primary, $tr-dark-grey);
 
     &:not(.focused) {
       outline: none;

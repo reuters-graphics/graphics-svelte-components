@@ -1,12 +1,45 @@
+<script context="module">
+  export const themes = {
+    default: {
+      background: '#fff',
+      primary: '#404040',
+      accent: '#fa6400',
+      rules: '#d0d0d0',
+    },
+    dark: {
+      background: '#333',
+      primary: '#eee',
+      accent: '#fa6400',
+      rules: '#999',
+    },
+  };
+</script>
+
 <script>
   import { ReutersLogo } from './../index.js';
   import NavBar from './NavBar/index.svelte';
   import data from './data.json';
+  import { setContext } from 'svelte';
+  import { writable } from 'svelte/store';
+
+  export let theme = {};
+
+  const navTheme = { ...themes.default, ...theme };
+
+  setContext('nav-theme', writable(navTheme));
+  setContext('nav-active-section', writable(null));
 
   const { sections } = data;
 </script>
 
-<header>
+<header
+  style="{`
+    --nav-background: ${navTheme.background};
+    --nav-primary: ${navTheme.primary};
+    --nav-accent: ${navTheme.accent};
+    --nav-rules: ${navTheme.rules};
+  `}"
+>
   <div class="nav-container show-nav">
     <div class="scroll-container">
       <div class="inner">
@@ -14,7 +47,10 @@
           <div class="logo-container">
             <div class="logo">
               <a href="https://www.reuters.com">
-                <ReutersLogo />
+                <ReutersLogo
+                  logoColour="{navTheme.accent}"
+                  textColour="{navTheme.primary}"
+                />
               </a>
             </div>
           </div>
@@ -41,7 +77,7 @@
   $subnav-height: 48px;
 
   .nav-container {
-    background-color: grey;
+    background-color: var(--nav-background, $white);
     position: relative;
     height: $nav-height;
     z-index: $zindex-sticky;
@@ -63,9 +99,9 @@
     .inner {
       position: sticky;
       top: 0;
-      background: white;
+      background: var(--nav-background, $white);
       pointer-events: auto;
-      border-bottom: 1px solid $tr-muted-grey;
+      border-bottom: 1px solid var(--nav-rules, $tr-muted-grey);
 
       @include for-tablet-down {
         border-bottom: none;

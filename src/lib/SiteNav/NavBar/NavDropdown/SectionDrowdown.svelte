@@ -4,11 +4,12 @@
   import NavDropdown from './index.svelte';
 
   export let section = {};
+  export let headingText;
 
   $: console.log(section);
 </script>
 
-<NavDropdown>
+<NavDropdown headingText="{headingText}">
   <span class="heading">
     Browse {section.name}
   </span>
@@ -24,6 +25,8 @@
 </NavDropdown>
 
 <style lang="scss">
+  @import '../../scss/_colors.scss';
+
   .sections {
     list-style: none;
     padding: 0;
@@ -51,6 +54,7 @@
     text-decoration: none;
     text-transform: none;
     font-smooth: always;
+    color: var(--nav-primary, $tr-dark-grey);
     -webkit-font-smoothing: antialiased;
     @media (min-width: 1300px) {
       font-size: 18px;
@@ -61,7 +65,7 @@
     line-height: 1.75;
     letter-spacing: 0;
     font-size: 16px;
-    color: #666;
+    color: var(--nav-primary, $tr-dark-grey);
     font-weight: 400;
     font-smooth: always;
     -webkit-font-smoothing: antialiased;

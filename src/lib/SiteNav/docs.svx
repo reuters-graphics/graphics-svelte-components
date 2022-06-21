@@ -1,11 +1,11 @@
 ---
 title: SiteNav
-description: Reuters dotcom site nav
+description: Reuters dotcom site nav shadow component.
 slug: site-nav
 ---
 
 <script>
-  import SiteNav from './index.svelte';
+  import SiteNav, { themes } from './index.svelte';
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
 </script>
 
@@ -17,6 +17,57 @@ slug: site-nav
 
 </section>
 
+```svelte
+<script>
+  import { SiteNav } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteNav />
+```
+
 <DemoContainer fluid={true} containerStyle='padding: 0;'>
 <SiteNav />
 </DemoContainer>
+
+<section>
+
+Can change to a different colour.
+
+</section>
+
+```svelte
+<script>
+  import { SiteNav, SiteNavThemes } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteNav theme={SiteNavThemes.dark} />
+```
+
+<div class="spacer" />
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteNav theme={themes.dark} />
+</DemoContainer>
+
+<div class="spacer" />
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteNav theme={{ ...themes.dark, background: '#2e3440' }} />
+</DemoContainer>
+
+<div class="spacer" />
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteNav theme={{ ...themes.default, background: '#e0d3b8', rules: '#aaa' }} />
+</DemoContainer>
+
+<div class="spacer" />
+
+<style>
+  .spacer{
+    height: 1px;
+    width: 100%;
+    margin: 20rem 0;
+  }
+
+</style>

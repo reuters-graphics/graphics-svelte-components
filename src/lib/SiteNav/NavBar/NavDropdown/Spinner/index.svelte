@@ -17,6 +17,7 @@
     position: relative;
     height: 0;
     padding-bottom: 100%;
+    color: var(--nav-primary, $tr-dark-grey);
   }
 
   .spinner {
@@ -44,42 +45,5 @@
       border-radius: 50%;
       opacity: 0.25;
     }
-  }
-
-  .orange,
-  .tr-orange {
-    color: $tr-orange;
-  }
-
-  .muted-grey {
-    color: $tr-muted-grey;
-  }
-
-  .dark-grey {
-    color: $tr-dark-grey;
-  }
-
-  .white {
-    color: white;
-  }
-
-  .black {
-    color: black;
-  }
-
-  .inherit {
-    color: inherit;
-  }
-
-  .screenreader-only {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    width: 1px;
-    overflow: hidden;
-    position: absolute !important;
-    word-wrap: normal !important;
   }
 </style>
