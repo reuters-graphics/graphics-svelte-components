@@ -6,6 +6,7 @@
   const dispatch = createEventDispatcher();
 
   export let paused;
+  export let clickedOnPauseBtn;
   export let controlsOpacity;
   export let controlsPosition;
   export let widthVideoContainer;
@@ -16,9 +17,11 @@
   export let controlsColour;
 
   function forwardBtnClick() {
-    paused === true ? (paused = false) : (paused = true);
+    paused = !paused;
+    clickedOnPauseBtn = paused === true; // so video doesn't autoplay when coming into view again if paused previously
     dispatch('pausePlayEvent', {
-      text: paused,
+      paused: paused,
+      clickedOnPauseBtn: clickedOnPauseBtn,
     });
   }
 </script>

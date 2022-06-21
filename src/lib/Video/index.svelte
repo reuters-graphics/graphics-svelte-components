@@ -36,6 +36,7 @@
   let time = 0;
   let duration;
   let paused = true;
+  let clickedOnPauseBtn = false; // special variable to track if user clicked on 'pause' btn to help with audio logic
   $: resetCondition = time >= duration; // - 0.1;
 
   // Dimensions etc other useful things
@@ -66,18 +67,24 @@
     playVideoWhenInView &&
     intersecting &&
     !muteVideo &&
-    interactedWithDom
-  )
+    interactedWithDom &&
+    !clickedOnPauseBtn // so video doesn't autoplay when coming into view again if paused previously
+  ) {
     paused = false;
-  $: if (allowSoundToAutoplay && !muteVideo && !interactedWithDom)
+  }
+
+  $: if (allowSoundToAutoplay && !muteVideo && !interactedWithDom) {
     paused = true;
+  }
 
   $: if (!possibleToPlayPause) showControls = true;
 
   // To get the pause state passed up from the Controls
   const pausePlayEvent = (e) => {
-    const result = e.detail.text;
-    paused = result;
+    const fwdPaused = e.detail.paused;
+    const fwdClickedOnPauseBtn = e.detail.clickedOnPauseBtn;
+    paused = fwdPaused;
+    clickedOnPauseBtn = fwdClickedOnPauseBtn;
   };
 
   // Warning to missing aria attributes
@@ -133,6 +140,7 @@
               <Controls
                 on:pausePlayEvent="{pausePlayEvent}"
                 paused="{paused}"
+                clickedOnPauseBtn="{clickedOnPauseBtn}"
                 controlsOpacity="{hoverToSeeControls
                   ? interactiveControlsOpacity
                   : controlsOpacity}"
@@ -185,6 +193,7 @@
             <Controls
               on:pausePlayEvent="{pausePlayEvent}"
               paused="{paused}"
+              clickedOnPauseBtn="{clickedOnPauseBtn}"
               controlsOpacity="{controlsOpacity}"
               controlsPosition="{controlsPosition}"
               widthVideoContainer="{widthVideoContainer}"
