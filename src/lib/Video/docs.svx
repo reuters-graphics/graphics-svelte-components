@@ -27,7 +27,7 @@ slug: video
 
 <Video 
   ariaDescription={"Compulsory description of your video for screen readers."}
-  src={'path-to-video-or-external-url'} // e.g. `${assets}/videos/myVideo.mp4` if your video is in the 'statics' folder of the repo
+  src={`${assets}/videos/myVideo.mp4`} // or a URL to an external video
   size={'wide'} // normal, wide, wider, widest or fluid
   caption={'Optional caption for your video.'}
 />
