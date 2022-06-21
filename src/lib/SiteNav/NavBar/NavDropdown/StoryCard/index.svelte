@@ -6,13 +6,16 @@
   export let withSection = false;
 
   $: thumbnail = story.thumbnail;
+  $: console.log(story);
 </script>
 
 <div class="story-card">
   <a href="{normalizeUrl(story.canonical_url)}">
     <div class="story-text" class:has-thumbnail="{thumbnail}">
       {#if withSection}
-        <span class="label">{story.primary_section.name}</span>
+        <a href="{normalizeUrl(story.primary_section.id)}">
+          <span class="label">{story.primary_section.name}</span>
+        </a>
       {/if}
       <span>{story.title}</span>
       {#if !withSection}

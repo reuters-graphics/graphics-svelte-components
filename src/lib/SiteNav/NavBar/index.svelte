@@ -30,8 +30,10 @@
         {#if section.children}
           <li
             class="nav-item category link"
-            on:mouseover="{() => activeSection.set(section.id)}"
+            on:mouseenter="{() => activeSection.set(section.id)}"
             on:focus="{() => activeSection.set(section.id)}"
+            on:mouseleave="{() => activeSection.set(null)}"
+            on:blur="{() => activeSection.set(null)}"
           >
             <div
               class="nav-button link"
@@ -63,8 +65,10 @@
       {/each}
       <li
         class="nav-item"
-        on:mouseover="{() => activeSection.set('more')}"
+        on:mouseenter="{() => activeSection.set('more')}"
         on:focus="{() => activeSection.set('more')}"
+        on:mouseleave="{() => activeSection.set(null)}"
+        on:blur="{() => activeSection.set(null)}"
       >
         <div class="nav-button more" class:open="{$activeSection === 'more'}">
           <button class="button">
@@ -72,7 +76,7 @@
           </button>
         </div>
         {#if $activeSection === 'more'}
-          <MoreDropdown hiddenSections="{hiddenSections}" />
+          <MoreDropdown sections="{hiddenSections}" />
         {/if}
       </li>
     </ul>

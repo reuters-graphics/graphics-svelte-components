@@ -43,13 +43,9 @@ Can change to a different colour.
 <SiteNav theme={SiteNavThemes.dark} />
 ```
 
-<div class="spacer" />
-
 <DemoContainer fluid={true} containerStyle='padding: 0;'>
 <SiteNav theme={themes.dark} />
 </DemoContainer>
-
-<div class="spacer" />
 
 <DemoContainer fluid={true} containerStyle='padding: 0;'>
 <SiteNav theme={{ ...themes.dark, background: '#2e3440' }} />

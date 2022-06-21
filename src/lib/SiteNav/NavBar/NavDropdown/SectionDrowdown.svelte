@@ -5,8 +5,6 @@
 
   export let section = {};
   export let headingText;
-
-  $: console.log(section);
 </script>
 
 <NavDropdown headingText="{headingText}">

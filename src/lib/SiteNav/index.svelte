@@ -83,13 +83,13 @@
     z-index: $zindex-sticky;
     --page-height: 0px;
 
-    @include for-tablet-down {
-      height: ($nav-height + $subnav-height) !important;
-    }
+    // @include for-tablet-down {
+    //   height: ($nav-height + $subnav-height) !important;
+    // }
 
-    @include for-mobile {
-      height: ($mobile-nav-height + $subnav-height) !important;
-    }
+    // @include for-mobile {
+    //   height: ($mobile-nav-height + $subnav-height) !important;
+    // }
   }
 
   .scroll-container {
@@ -103,22 +103,12 @@
       pointer-events: auto;
       border-bottom: 1px solid var(--nav-rules, $tr-muted-grey);
 
-      @include for-tablet-down {
-        border-bottom: none;
-        transition: transform 0.25s $principleDefaultEase;
-        transform: translateY(-100%);
-        will-change: transform;
-      }
-    }
-  }
-
-  .with-mobile-leaderboard {
-    .scroll-container {
-      .inner {
-        @include for-mobile {
-          // top: 50px; // assuming there will be permanently fixed leaderboard adslot
-        }
-      }
+      // @include for-tablet-down {
+      //   border-bottom: none;
+      //   transition: transform 0.25s $principleDefaultEase;
+      //   transform: translateY(-100%);
+      //   will-change: transform;
+      // }
     }
   }
 
@@ -175,22 +165,10 @@
     .spacer {
       width: 193.47px;
       height: 64px;
+      @media (max-width: 1225px) {
+        width: 88px;
+      }
     }
-
-    // @include for-tablet-down {
-    //     width: 180px;
-    //     min-width: 180px;
-    //   }
-
-    //   @include for-desktop {
-    //     width: 30%;
-    //     min-width: 30%;
-    //   }
-
-    //   @include for-wide-desktop {
-    //     width: 315px;
-    //     min-width: 315px;
-    //   }
   }
 
   .mobile-menu {
