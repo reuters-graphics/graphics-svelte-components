@@ -42,10 +42,13 @@ export default (embeds) => {
     }
   }
 
-  return nakedEmbeds.map((e) =>
-    e
-      .split('/')
-      .slice(replacementForward, replacementBackward * -1)
-      .join('/')
-  );
+  return nakedEmbeds.map((e) => {
+    if (replacementBackward > 0) {
+      return e
+        .split('/')
+        .slice(replacementForward, replacementBackward * -1)
+        .join('/');
+    }
+    return e.split('/').slice(replacementForward).join('/');
+  });
 };

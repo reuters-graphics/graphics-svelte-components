@@ -19,5 +19,6 @@ export { default as DatawrapperChart } from './DatawrapperChart/index.svelte';
 export { default as ReutersLogo } from './ReutersLogo/index.svelte';
 export {
   default as SiteNav,
-  themes as SiteNavThemes,
+  themes as SiteNavThemes
 } from './SiteNav/index.svelte';
+export { default as Video } from './Video/index.svelte';
