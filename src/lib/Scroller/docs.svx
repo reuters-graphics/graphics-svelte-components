@@ -289,12 +289,6 @@ If you're still struggling to make this component work for your design, it may b
 
 You can also use this component to layout an AI-based graphics scroller via an [ArchieML](http://archieml.org/)-formatted Google doc by using the following pattern to dynamically import [ai2svelte](https://github.com/reuters-graphics/ai2svelte) components for the background:
 
-<section class='note'>
-
-If you're using the [graphics kit](https://github.com/reuters-graphics/bluprint_graphics-kit), this pattern is already wired up in the boilerplate included in the Page.svelte component. Free money!
-
-</section>
-
 </section>
 
 ```bash
@@ -337,13 +331,36 @@ Lorem ipsum...
   import { assets } from '$app/paths';
   import content from '$locales/en/content.json';
   import { Scroller } from '@reuters-graphics/graphics-svelte-components';
-  import { fetchComponent, makeScrollerSteps } from '$utils/dynamicComponents';
+  import { makeScrollerStepsStatic } from '$utils/dynamicComponents';
   import { truthyString } from '$utils/truthyString';
+  // Individually import the Ai2Svelte components 
+  import AiScroller1 from '$lib/ai2svelte/ai-scroller-1.svelte'
+  import AiScroller2 from '$lib/ai2svelte/ai-scroller-2.svelte'
+  import AiScroller3 from '$lib/ai2svelte/ai-scroller-3.svelte'
+
+  // Then make a lookup dictionary (JavaScript object)
+  // where the keys are exactly what you have in the 'Background' steps in the Doc
+  // and the values are the corresponding components imported above
+  const aiGraphics = {
+    'ai-scroller-1': AiScroller1,
+    'ai-scroller-2': AiScroller2,
+    'ai-scroller-3': AiScroller3
+  }
+
+  // Helper function that should be moved to utils 
+  const makeScrollerStepsStatic = (steps, aiGraphics) => {
+    const scrollerSteps = steps.map(step => ({
+        background: aiGraphics[step.Background],
+        foreground: step.Foreground,
+      })
+    );
+    return scrollerSteps;
+  };
 </script>
 
 {#each content.blocks as block}
   {#if block.Type === 'ai-scroller'}
-    {#await makeScrollerSteps(block.steps)}
+    {#await makeScrollerStepsStatic(block.steps, aiGraphics)}
       <div></div>
     {:then steps}
       <Scroller
@@ -363,8 +380,6 @@ Lorem ipsum...
 
 <section>
 
-This pattern comes with some restrictions, though. Be sure your `fetchComponent` function follows [the limits on dynamic imports](https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations).
-
 **NOTE**: Make sure you wrap the function `truthyString()` around `block.StackBackground`. `truthyString()` converts the string pulled from Google docs ('true', 'false', etc.)
 into a Boolean.
 </section> 
@@ -378,9 +393,12 @@ Tip: First, make one master .ai file that contains graphics for all steps. Put g
 
 Example workflow:
 
-Make maps-scroll-master.ai
-Make graphics for each step and put them in separate layers: step-1, step-2, etc.
-Once all graphics are ready, show just the step-1 layer and hide all others. Save the file as maps-scroll-1.ai, then run the ai2svelte script. In the google doc, set Background: maps-scroll-1 for step 1.
+1. Make maps-scroll-master.ai
+2. Make graphics for each step and put them in separate layers: step-1, step-2, etc.
+3. Once all graphics are ready, show just the step-1 layer and hide all others. Save the file as maps-scroll-1.ai, then run the ai2svelte script. 
+4. In the google doc, set Background: maps-scroll-1 for step 1. 
+5. Import the corresponding Svelte component as `import MapsScroll1 from $lib/ai2svelte/maps-scroll-1.svelte` (Name of the import doesn't matter but it's a good idea to be consistent). 
+6. Add the imported component to your aiGraphics lookup dictionary. In this case, the entry should be `'maps-scroll-1': MapsScroll1`.
 Do the same for all other layers
 
 </section>
