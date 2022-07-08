@@ -16,4 +16,9 @@ export { default as Scroller } from './Scroller/index.svelte';
 export { default as LottieScroller } from './LottieScroller/index.svelte';
 export { default as BeforeAfter } from './BeforeAfter/index.svelte';
 export { default as DatawrapperChart } from './DatawrapperChart/index.svelte';
+export { default as ReutersLogo } from './ReutersLogo/index.svelte';
+export {
+  default as SiteNav,
+  themes as SiteNavThemes
+} from './SiteNav/index.svelte';
 export { default as Video } from './Video/index.svelte';
