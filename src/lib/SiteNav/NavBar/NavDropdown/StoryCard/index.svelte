@@ -6,7 +6,6 @@
   export let withSection = false;
 
   $: thumbnail = story.thumbnail;
-  $: console.log(story);
 </script>
 
 <div class="story-card">

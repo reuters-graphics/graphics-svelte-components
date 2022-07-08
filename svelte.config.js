@@ -110,7 +110,7 @@ export default {
           '@reuters-graphics/style-theme-eisbaer',
           '@component-docs',
         ],
-        include: ['lodash-es', 'pym.js', 'dayjs'],
+        include: ['lodash-es', 'pym.js'],
       },
       plugins: [dsv(), svelteKitPagesPlugin(), componentDocsPlugin()],
     },

@@ -5,12 +5,14 @@
       primary: '#404040',
       accent: '#fa6400',
       rules: '#d0d0d0',
+      shadow: '0 1px 4px 2px rgb(64 64 64 / 8%)',
     },
     dark: {
       background: '#333',
       primary: '#eee',
       accent: '#fa6400',
       rules: '#999',
+      shadow: '0 1px 4px 2px rgb(255 255 255 / 10%)',
     },
   };
 </script>
@@ -21,6 +23,8 @@
   import data from './data.json';
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
+  import MenuIcon from './svgs/Menu.svelte';
+  import MobileMenu from './MobileMenu/index.svelte';
 
   export let theme = {};
 
@@ -30,6 +34,8 @@
   setContext('nav-active-section', writable(null));
 
   const { sections } = data;
+
+  let isMobileMenuOpen = false;
 </script>
 
 <header
@@ -38,6 +44,7 @@
     --nav-primary: ${navTheme.primary};
     --nav-accent: ${navTheme.accent};
     --nav-rules: ${navTheme.rules};
+    --nav-shadow: ${navTheme.shadow};
   `}"
 >
   <div class="nav-container show-nav">
@@ -59,11 +66,38 @@
           <div class="spacer-container">
             <div class="spacer"></div>
           </div>
+
+          <div class="mobile-button-group">
+            <div class="mobile-menu">
+              <button
+                class="menu-button"
+                aria-label="Menu"
+                aria-haspopup="true"
+                aria-expanded="{isMobileMenuOpen}"
+                on:click="{() => {
+                  isMobileMenuOpen = !isMobileMenuOpen;
+                }}"
+              >
+                <div class="button-container">
+                  <MenuIcon />
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </header>
+
+<MobileMenu
+  theme="{navTheme}"
+  isMobileMenuOpen="{isMobileMenuOpen}"
+  releaseMobileMenu="{() => {
+    isMobileMenuOpen = false;
+  }}"
+  data="{data}"
+/>
 
 <style lang="scss">
   @import './scss/_grids.scss';
@@ -83,13 +117,9 @@
     z-index: $zindex-sticky;
     --page-height: 0px;
 
-    // @include for-tablet-down {
-    //   height: ($nav-height + $subnav-height) !important;
-    // }
-
-    // @include for-mobile {
-    //   height: ($mobile-nav-height + $subnav-height) !important;
-    // }
+    @include for-tablet-down {
+      height: $mobile-nav-height;
+    }
   }
 
   .scroll-container {
@@ -162,6 +192,10 @@
     align-items: center;
     justify-content: flex-end;
 
+    @include for-tablet-down {
+      display: none;
+    }
+
     .spacer {
       width: 193.47px;
       height: 64px;
@@ -171,9 +205,59 @@
     }
   }
 
+  .mobile-button-group {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include for-tablet-up {
+      display: none;
+    }
+  }
+
   .mobile-menu {
     @include for-tablet-up {
       display: none;
+    }
+    margin-left: 8px;
+    .menu-button {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      vertical-align: top;
+      outline: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      line-height: normal;
+
+      .button-container {
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: 2px solid var(--nav-background);
+      }
+
+      &:hover .button-container {
+        box-shadow: var(--nav-shadow);
+      }
+      &:focus-visible .button-container {
+        border: 2px solid var(--nav-accent);
+      }
+
+      .icon {
+        width: 20px;
+      }
     }
   }
 

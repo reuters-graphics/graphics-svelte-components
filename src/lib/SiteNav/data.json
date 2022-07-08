@@ -344,6 +344,12 @@
             ]
         },
         {
+            "id": "/graphics/",
+            "url": "https://graphics.reuters.com/",
+            "name": "Graphics",
+            "type": "link"
+        },
+        {
             "id": "/pictures/",
             "url": "/pictures/",
             "name": "Pictures",

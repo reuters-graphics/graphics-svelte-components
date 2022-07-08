@@ -13,7 +13,7 @@ slug: site-nav
 
 ## {title}
 
-{description}
+A component that shadows our Reuters dotcom site nav.
 
 </section>
 
@@ -29,9 +29,11 @@ slug: site-nav
 <SiteNav />
 </DemoContainer>
 
+<div class="spacer" />
+
 <section>
 
-Can change to a different colour.
+Change the colour theme.
 
 </section>
 
@@ -47,11 +49,21 @@ Can change to a different colour.
 <SiteNav theme={themes.dark} />
 </DemoContainer>
 
-<DemoContainer fluid={true} containerStyle='padding: 0;'>
-<SiteNav theme={{ ...themes.dark, background: '#2e3440' }} />
-</DemoContainer>
-
 <div class="spacer" />
+
+<section>
+
+Customise the colour theme.
+
+</section>
+
+```svelte
+<script>
+  import { SiteNav, SiteNavThemes } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteNav theme={{ ...themes.dark, background: '#e0d3b8', rules: '#aaa' }} />
+```
 
 <DemoContainer fluid={true} containerStyle='padding: 0;'>
 <SiteNav theme={{ ...themes.default, background: '#e0d3b8', rules: '#aaa' }} />
