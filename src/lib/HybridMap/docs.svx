@@ -10,14 +10,30 @@ slug: hybrid-map
   import aiBasemap from './demo/aiBasemap.exclude.svelte';
   import d3Map from './demo/d3Map.exclude.svelte';
 
+  import anno from './demo/d3-map-hillshaded-aoc-mar23.exclude.svelte'
+  import labels from './demo/d3-map-hillshaded-labels.exclude.svelte'
+
   const qgisExtents = [19.9754, 43.5692, 42.1681, 53.1777];
+
 </script>
+
+<style>
+  section.aiMapLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+</style>
+
 
 <section>
 
 ## {title}
 
 {description}
+
+  This component allows dynamic maps in graphics projects with basemaps designed in QGIS and Illustrator with a data layer added on top using a D3 map.
 
 </section>
 
@@ -43,7 +59,7 @@ slug: hybrid-map
   <section>
 
   `hillshaded basemap` from Ai2svelte, `brown borders` from D3 map
-  
+
   `cyan box` shows the map extent that aligns the two maps 
 
   </section>
@@ -53,6 +69,106 @@ slug: hybrid-map
 
 <section>
 
-  Simple HybridMap with aiBasemap and d3Map
+## Setting up the project
+
+This component doesn't include any data or map files. If you would like to know more about D3 maps, check out the [D3 maps collection](https://observablehq.com/@deaxmachina/collection-of-maps).
+
+```Tested only with Mercator projection```
+
+##### Making the QGIS map
+
+- Make your *basemap* as you normally would using Natural Earth layers and other data layers that would be constant in the project.
+
+- Adjust the map view to the extent you want to display on the page. This will define the `qgisExtents` property for the D3 map. You can note the map extents from the bottom panel in QGIS which show up as *x1, y1, x2, y2*.
+
+- Export the map to Illusrtator for styling. Make sure to create a clipping mask and resize the artboards' height to match the map extent. This will define the `aiBasemap` property for the Ai2svelte map.
+
+
+##### Making the D3 map
+
+- Make a new component for the *D3 map*. This component will be the `d3Map` property of the `HybridMap` component.
+
+- It is a good idea to export the map borders from QGIS as a topojson and use that in code to ensure that the ai2svelte aligns perfectly with the D3 map.
+
+- The component automatically generates a rectangular bounding box for the d3Map with the `qgisExtents` property. 
+
+
+##### Marrying the maps
+
+The D3 map defines the *geoProjection* based on the `qgisExtents` and the *graphic-width*. This in turn sets the height of the SVG/Canvas map.
+
+- Use the aspect ratio of the D3 map to fine-tune the aspect ratio of the Illustrator artboards. This should take care of those 1px misalignments.
+
+- For mobile versions, it would show the whole map, in a smaller size. You can crop the map using code on the *md* artboard, or use a different `qgisExtents` for the mobile version.
 
 </section>
+
+
+<div class='w-100 py-3'></div>
+
+<section>
+
+## Customising the map
+
+##### Adding labels and annotation layers
+
+- Any labels or layers generated in code can be a part of the `d3Map` component
+
+- Any ai2svelte layers can be added using slots to the `HybridMap` component
+
+</section>
+
+```svelte
+<script>
+  import { HybridMap } from '@reuters-graphics/graphics-svelte-components';
+  import aiBasemap from '$lib/ai2svelte/aiBasemap.svelte';
+  import d3Map from '$lib/components/d3Map/index.svelte';
+  
+  import anno from '$lib/ai2svelte/d3-map-hillshaded-aoc-mar23.svelte'
+  import labels from '$lib/ai2svelte/d3-map-hillshaded-labels.svelte'
+
+  const qgisExtents = [19.9754, 43.5692, 42.1681, 53.1777];
+</script>
+
+<HybridMap qgisExtents = {qgisExtents} aiBasemap = {aiBasemap} d3Map = {d3Map}>
+  <div slot="aiMapLayers">
+    <section class="aiMapLayer" style="z-index:100">
+      <svelte:component this="{labels}" />
+    </section>
+    <section class="aiMapLayer">
+      <svelte:component this="{anno}" />
+    </section>
+  </div>
+</HybridMap>
+
+<style>
+  section.aiMapLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+</style>
+```
+
+<DemoContainer>
+  <HybridMap qgisExtents = {qgisExtents} aiBasemap = {aiBasemap} d3Map = {d3Map}>
+  
+  <div slot="aiMapLayers">
+    <section class="aiMapLayer" style="z-index:100">
+      <svelte:component this="{labels}" />
+    </section>
+    <section class="aiMapLayer">
+      <svelte:component this="{anno}" />
+    </section>
+  </div>
+
+  </HybridMap>
+
+  <section>
+
+  `labels` layer is added to be always on top. `anno` layers can be added and can be changed with ease by changing the content of the `aiMapLayers` slot.
+
+  </section>
+
+</DemoContainer>

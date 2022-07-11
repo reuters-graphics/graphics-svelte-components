@@ -18,6 +18,7 @@
 
   export let aiBasemap;
   export let d3Map;
+  export let aiMapLayers;
 
   export let ariaHidden = true;
   export let ariaDescription = null;
@@ -69,6 +70,11 @@
     <div class="d3-map">
       <svelte:component this="{d3Map}" bind:loading="{showLoader}" bind:bbox />
     </div>
+  {/if}
+
+  <!-- Top labels layer -->
+  {#if $$slots.aiMapLayers}
+    <slot name="aiMapLayers" />
   {/if}
 </section>
 

@@ -1,7 +1,7 @@
 <script>
   import { geoMercator, geoPath, selection, select } from 'd3';
   import { appendSelect } from 'd3-appendselect';
-  import { feature, mesh } from 'topojson-client';
+  import { feature } from 'topojson-client';
   import { onMount } from 'svelte';
 
   const d3 = Object.assign({}, { select, selection }, { geoMercator, geoPath });
