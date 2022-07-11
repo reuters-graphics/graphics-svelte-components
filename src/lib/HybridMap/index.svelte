@@ -18,7 +18,6 @@
 
   export let aiBasemap;
   export let d3Map;
-  export let aiMapLayers;
 
   export let ariaHidden = true;
   export let ariaDescription = null;
@@ -85,7 +84,7 @@
     &.customMaxWidth {
       max-width: var(--maxWidth);
 
-      section.graphic {
+      [slot='aiMapLayers'] {
         max-width: var(--maxWidth);
       }
     }

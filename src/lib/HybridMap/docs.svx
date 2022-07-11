@@ -7,6 +7,7 @@ slug: hybrid-map
 <script>
   import HybridMap from './index.svelte';
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import { fade } from 'svelte/transition';
   import aiBasemap from './demo/aiBasemap.exclude.svelte';
   import d3Map from './demo/d3Map.exclude.svelte';
 
@@ -23,6 +24,7 @@ slug: hybrid-map
     top: 0;
     left: 0;
     width: 100%;
+    max-width: inherit;
   }
 </style>
 
@@ -86,11 +88,106 @@ This component doesn't include any data or map files. If you would like to know 
 
 ##### Making the D3 map
 
-- Make a new component for the *D3 map*. This component will be the `d3Map` property of the `HybridMap` component.
+- Make a new component for the *D3 map*. This component will be the `d3Map` property of the `HybridMap` component. 
 
 - It is a good idea to export the map borders from QGIS as a topojson and use that in code to ensure that the ai2svelte aligns perfectly with the D3 map.
 
 - The component automatically generates a rectangular bounding box for the d3Map with the `qgisExtents` property. 
+
+Below is a sample map `draw` function – Ideally this will be a reusable chart class that you can import in `Map.svelte`
+```js
+  function drawMap(container, props, data) {
+    // Projection
+    const geoProjection = d3.geoMercator().fitWidth(props.width, props.extents);
+
+    const bounds = d3.geoPath(geoProjection).bounds(props.extents);
+
+    const height = Math.round(bounds[1][1]);
+
+    // Path generator for the projection
+    const geoPathGenerator = d3.geoPath().projection(geoProjection);
+
+    const svg = d3
+      .select(container)
+      .appendSelect('svg.d3-map')
+      .attr('class', 'd3-map')
+      .attr('width', props.width)
+      .attr('height', height);
+
+    svg
+      .appendSelect('path#bbox')
+      .attr('id', 'bbox')
+      .attr('d', geoPathGenerator(props.extents))
+      .style('fill', 'none')
+      .style('stroke', '#00FFFF')
+      .style('stroke-width', 1);
+
+    svg
+      .appendSelect('path#land')
+      .attr('id', 'land')
+      .attr('d', geoPathGenerator(data))
+      .style('fill', 'none')
+      .style('stroke', '#964B00')
+      .style('stroke-width', 1);
+  }
+
+```
+Sample code for `Map.svelte` –
+Notice the use of `loading` and `bbox` props
+```svelte
+<script>
+  import { geoMercator, geoPath, selection, select } from 'd3';
+  import { appendSelect } from 'd3-appendselect';
+  import { feature } from 'topojson-client';
+  import { onMount } from 'svelte';
+
+  const d3 = Object.assign({}, { select, selection }, { geoMercator, geoPath });
+  d3.selection.prototype.appendSelect = appendSelect;
+
+  export let bbox;
+  export let loading = true;
+
+  let chartData;
+
+  onMount(async () => {
+    // fetch data
+    try {
+      const world = await Promise.all(
+        ['https://cdn.jsdelivr.net/npm/world-atlas@2/countries-10m.json'].map(
+          (url) => fetch(url).then((res) => res.json())
+        )
+      );
+
+      chartData = feature(world[0], world[0].objects.countries);
+      loading = false;
+    } catch (error) {
+      console.log('Error', error);
+    }
+  });
+
+  let mapContainer, containerWidth;
+
+  function drawMap(container, props, data) {
+    ...
+  }
+
+  $: props = {
+    extents: bbox,
+    width: containerWidth,
+  };
+
+  $: {
+    if (mapContainer) {
+      drawMap(mapContainer, props, chartData);
+    }
+  }
+</script>
+
+<div bind:this="{mapContainer}" bind:clientWidth="{containerWidth}"></div>
+
+
+```
+
 
 
 ##### Marrying the maps
@@ -104,7 +201,7 @@ The D3 map defines the *geoProjection* based on the `qgisExtents` and the *graph
 </section>
 
 
-<div class='w-100 py-3'></div>
+<div class='w-100 py-5'></div>
 
 <section>
 
@@ -147,6 +244,7 @@ The D3 map defines the *geoProjection* based on the `qgisExtents` and the *graph
     top: 0;
     left: 0;
     width: 100%;
+    max-width: inherit;
   }
 </style>
 ```
@@ -171,4 +269,72 @@ The D3 map defines the *geoProjection* based on the `qgisExtents` and the *graph
 
   </section>
 
+</DemoContainer>
+
+
+<section>
+
+##### Loading animation
+
+- Loading is shown by default. Check the `Map.svelte` code for how to wire it up.
+
+- You can change the message shown by changing `showLoader`. It can be styled using CSS.
+
+```js
+showLoader="Fetching the data...";
+```
+
+</section>
+
+<DemoContainer>
+  <HybridMap qgisExtents = {qgisExtents} aiBasemap = {aiBasemap} d3Map = {d3Map} loaderMessage="Fetching the data...">
+  
+  <div slot="aiMapLayers">
+    <section class="aiMapLayer" style="z-index:100">
+      <svelte:component this="{labels}" />
+    </section>
+    <section class="aiMapLayer">
+      <svelte:component this="{anno}" />
+    </section>
+  </div>
+
+  </HybridMap>
+</DemoContainer>
+
+
+<section>
+
+##### True fluid scaling for the map
+
+In some cases you might need the map to best fit the screen (e.g. for scrolly) based on the aspect ratio so that it doesn't get cropped verticaly. 
+
+For this you can use the props - `artboardAspect` and `customMaxWidth`
+
+```js
+  artboardAspect = 1.75;
+  customMaxWidth = true;
+```
+
+</section>
+
+<DemoContainer>
+  <HybridMap 
+  qgisExtents = {qgisExtents} 
+  aiBasemap = {aiBasemap} 
+  d3Map = {d3Map} 
+  loaderMessage="Fetching the data..."
+  artboardAspect = 1.75
+  customMaxWidth = true
+  >
+  
+  <div slot="aiMapLayers">
+    <section class="aiMapLayer" style="z-index:100">
+      <svelte:component this="{labels}" />
+    </section>
+    <section class="aiMapLayer">
+      <svelte:component this="{anno}" />
+    </section>
+  </div>
+
+  </HybridMap>
 </DemoContainer>
