@@ -1,0 +1,58 @@
+---
+title: HybridMap
+description: Combine the power of d3 maps with ai2svelte basemaps
+slug: hybrid-map
+---
+
+<script>
+  import HybridMap from './index.svelte';
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+  import aiBasemap from './demo/aiBasemap.exclude.svelte';
+  import d3Map from './demo/d3Map.exclude.svelte';
+
+  const qgisExtents = [19.9754, 43.5692, 42.1681, 53.1777];
+</script>
+
+<section>
+
+## {title}
+
+{description}
+
+</section>
+
+```svelte
+<script>
+  import { HybridMap } from '@reuters-graphics/graphics-svelte-components';
+  import aiBasemap from '$lib/ai2svelte/aiBasemap.svelte';
+  import d3Map from '$lib/components/d3Map/index.svelte';
+
+  const qgisExtents = [19.9754, 43.5692, 42.1681, 53.1777];
+</script>
+
+<HybridMap qgisExtents={qgisExtents} aiBasemap={aiBasemap} d3Map={d3Map}/>
+```
+
+<DemoContainer>
+  <HybridMap 
+  qgisExtents = {qgisExtents}
+  aiBasemap = {aiBasemap}
+  d3Map = {d3Map}
+  />
+
+  <section>
+
+  `hillshaded basemap` from Ai2svelte, `brown borders` from D3 map
+  
+  `cyan box` shows the map extent that aligns the two maps 
+
+  </section>
+
+</DemoContainer>
+
+
+<section>
+
+  Simple HybridMap with aiBasemap and d3Map
+
+</section>
