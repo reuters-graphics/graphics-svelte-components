@@ -8,9 +8,11 @@
 </script>
 
 <NavDropdown headingText="{headingText}">
-  <span class="heading">
-    Browse {section.name}
-  </span>
+  <a href="{normalizeUrl(section.url)}">
+    <span class="heading">
+      Browse {section.name}
+    </span>
+  </a>
   <ul class="sections">
     {#each section.children as sub}
       <li>

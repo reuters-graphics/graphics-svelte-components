@@ -33,7 +33,7 @@
   setContext('nav-theme', writable(navTheme));
   setContext('nav-active-section', writable(null));
 
-  const { sections } = data;
+  const { sections } = data[0];
 
   let isMobileMenuOpen = false;
 </script>
