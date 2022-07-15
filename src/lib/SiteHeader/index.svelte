@@ -96,7 +96,7 @@
   releaseMobileMenu="{() => {
     isMobileMenuOpen = false;
   }}"
-  data="{data}"
+  data="{data[0]}"
 />
 
 <style lang="scss">
