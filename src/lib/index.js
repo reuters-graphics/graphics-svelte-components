@@ -18,7 +18,11 @@ export { default as BeforeAfter } from './BeforeAfter/index.svelte';
 export { default as DatawrapperChart } from './DatawrapperChart/index.svelte';
 export { default as ReutersLogo } from './ReutersLogo/index.svelte';
 export {
-  default as SiteNav,
-  themes as SiteNavThemes
-} from './SiteNav/index.svelte';
+  default as SiteHeader,
+  themes as SiteHeaderThemes
+} from './SiteHeader/index.svelte';
+export {
+  default as SiteFooter,
+  themes as SiteFooterThemes
+} from './SiteFooter/index.svelte';
 export { default as Video } from './Video/index.svelte';

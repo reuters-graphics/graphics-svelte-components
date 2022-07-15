@@ -60,16 +60,6 @@
 
   $mobile-nav-height: 56px;
 
-  .menu-button {
-    width: 40px;
-    height: 40px;
-
-    .icon {
-      width: 20px;
-      fill: $tr-dark-grey;
-    }
-  }
-
   .overlay {
     position: fixed;
     z-index: $zindex-modal;
@@ -134,29 +124,9 @@
     &:focus-visible .button-container {
       border: 2px solid var(--nav-accent);
     }
-
-    .icon {
-      width: 20px;
-    }
   }
 
-  .account {
-    display: flex;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid $tr-muted-grey;
-
-    .button {
-      flex: 1;
-
-      &:first-child {
-        margin-right: 20px;
-      }
-    }
-  }
-
-  .header,
-  .account {
+  .header {
     @include spacing-single(padding-left padding-right);
     border-bottom: 1px solid var(--nav-rules, $tr-muted-grey);
   }

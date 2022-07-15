@@ -60,11 +60,6 @@
     }
   }
 
-  .sections .subsection {
-    line-height: 1.55;
-  }
-
-  .section-link,
   .subsection-link {
     &:hover {
       text-decoration: underline;

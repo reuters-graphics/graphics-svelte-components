@@ -198,18 +198,6 @@
     }
   }
 
-  .dropdown {
-    position: absolute;
-    z-index: $zindex-dropdown;
-    left: 0;
-    top: $nav-height;
-    width: 100%;
-
-    @include for-mobile {
-      top: $mobile-nav-height;
-    }
-  }
-
   .category {
     display: none;
 
