@@ -174,10 +174,16 @@ var components = [
     path: 'Sharer',
   },
   {
-    title: 'SiteNav',
-    description: 'Reuters dotcom site nav shadow component.',
-    slug: 'site-nav',
-    path: 'SiteNav',
+    title: 'SiteFooter',
+    description: 'Reuters dotcom site footer shadow component.',
+    slug: 'site-footer',
+    path: 'SiteFooter',
+  },
+  {
+    title: 'SiteHeader',
+    description: 'Reuters dotcom site header.',
+    slug: 'site-header',
+    path: 'SiteHeader',
   },
   {
     title: 'Video',
@@ -2586,7 +2592,7 @@ class Fa extends SvelteComponent {
   }
 }
 var Fa$1 = Fa,
-  index_svelte_svelte_type_style_lang$j = '',
+  index_svelte_svelte_type_style_lang$k = '',
   commonjsGlobal =
     typeof globalThis != 'undefined'
       ? globalThis
@@ -3399,8 +3405,8 @@ const defaultUrlRegExp = /^(\w+:\/\/[^/?]+)?(.*?)(\?.+)?$/,
     const i = parseParts(e, r);
     return buildUrl(i, r);
   };
-var index_svelte_svelte_type_style_lang$i = '',
-  index_svelte_svelte_type_style_lang$h = '',
+var index_svelte_svelte_type_style_lang$j = '',
+  index_svelte_svelte_type_style_lang$i = '',
   classnames$1 = { exports: {} };
 /*!
   Copyright (c) 2018 Jed Watson.
@@ -3432,9 +3438,9 @@ var index_svelte_svelte_type_style_lang$i = '',
   })();
 })(classnames$1);
 var classnames = classnames$1.exports,
-  index_svelte_svelte_type_style_lang$g = '',
+  index_svelte_svelte_type_style_lang$h = '',
   Link_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$f = '';
+  index_svelte_svelte_type_style_lang$g = '';
 const name = '@reuters-graphics/graphics-svelte-components',
   version = '0.3.12',
   type = 'module',
@@ -4510,7 +4516,7 @@ var uaParser = { exports: {} };
       O = 'Opera',
       G = 'Samsung',
       N = 'Sony',
-      U = 'Xiaomi',
+      Y = 'Xiaomi',
       $ = 'Zebra',
       ee = 'Facebook',
       te = function (q, W) {
@@ -4521,7 +4527,7 @@ var uaParser = { exports: {} };
             : (H[Z] = q[Z]);
         return H;
       },
-      Y = function (q) {
+      U = function (q) {
         for (var W = {}, H = 0; H < q.length; H++) W[q[H].toUpperCase()] = q[H];
         return W;
       },
@@ -4765,13 +4771,13 @@ var uaParser = { exports: {} };
           ],
           [
             [m, /_/g, ' '],
-            [c, U],
+            [c, Y],
             [p, h],
           ],
           [/\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i],
           [
             [m, /_/g, ' '],
-            [c, U],
+            [c, Y],
             [p, f],
           ],
           [
@@ -5161,10 +5167,10 @@ var uaParser = { exports: {} };
         );
       };
     (ie.VERSION = s),
-      (ie.BROWSER = Y([g, b, _])),
-      (ie.CPU = Y([l])),
-      (ie.DEVICE = Y([m, c, p, a, h, v, f, k, x])),
-      (ie.ENGINE = ie.OS = Y([g, b])),
+      (ie.BROWSER = U([g, b, _])),
+      (ie.CPU = U([l])),
+      (ie.DEVICE = U([m, c, p, a, h, v, f, k, x])),
+      (ie.ENGINE = ie.OS = U([g, b])),
       e.exports && (t = e.exports = ie),
       (t.UAParser = ie);
     var ne = typeof r !== d && (r.jQuery || r.Zepto);
@@ -5182,8 +5188,8 @@ var uaParser = { exports: {} };
     }
   })(typeof window == 'object' ? window : commonjsGlobal);
 })(uaParser, uaParser.exports);
-var index_svelte_svelte_type_style_lang$e = '',
-  index_svelte_svelte_type_style_lang$d = '',
+var index_svelte_svelte_type_style_lang$f = '',
+  index_svelte_svelte_type_style_lang$e = '',
   Scroller_svelte_svelte_type_style_lang = '';
 const { window: window_1 } = globals,
   get_foreground_slot_changes = (e) => ({}),
@@ -5389,8 +5395,8 @@ function instance$2(e, t, r) {
         ? (r(17, (A = p ? z - O : z - G)), r(16, (I = !1)))
         : (r(17, (A = p ? Math.round(i - a * (O - G)) : i)), r(16, (I = !0)));
     for (let N = 0; N < C.length; N++) {
-      const U = C[N],
-        { top: $ } = U.getBoundingClientRect(),
+      const Y = C[N],
+        { top: $ } = Y.getBoundingClientRect(),
         ee = C[N + 1],
         te = ee ? ee.getBoundingClientRect().top : T.bottom;
       if ((r(8, (l = (n - $) / (te - $))), te >= n)) {
@@ -5480,7 +5486,7 @@ class Scroller extends SvelteComponent {
 var Background_svelte_svelte_type_style_lang = '',
   Foreground_svelte_svelte_type_style_lang$1 = '',
   Foreground_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$c = '',
+  index_svelte_svelte_type_style_lang$d = '',
   lottie = { exports: {} };
 (function (module) {
   typeof navigator != 'undefined' &&
@@ -5904,7 +5910,7 @@ var Background_svelte_svelte_type_style_lang = '',
               : this._t(S, 0, 0, 0, 0, E, 0, 0, 0, 0, T, 0, 0, 0, 0, 1)
           );
         }
-        function g(S, E, T, L, z, O, G, N, U, $, ee, te, Y, Q, K, re) {
+        function g(S, E, T, L, z, O, G, N, Y, $, ee, te, U, Q, K, re) {
           return (
             (this.props[0] = S),
             (this.props[1] = E),
@@ -5914,11 +5920,11 @@ var Background_svelte_svelte_type_style_lang = '',
             (this.props[5] = O),
             (this.props[6] = G),
             (this.props[7] = N),
-            (this.props[8] = U),
+            (this.props[8] = Y),
             (this.props[9] = $),
             (this.props[10] = ee),
             (this.props[11] = te),
-            (this.props[12] = Y),
+            (this.props[12] = U),
             (this.props[13] = Q),
             (this.props[14] = K),
             (this.props[15] = re),
@@ -5933,7 +5939,7 @@ var Background_svelte_svelte_type_style_lang = '',
               : this
           );
         }
-        function c(S, E, T, L, z, O, G, N, U, $, ee, te, Y, Q, K, re) {
+        function c(S, E, T, L, z, O, G, N, Y, $, ee, te, U, Q, K, re) {
           var B = this.props;
           if (
             S === 1 &&
@@ -5944,13 +5950,13 @@ var Background_svelte_svelte_type_style_lang = '',
             O === 1 &&
             G === 0 &&
             N === 0 &&
-            U === 0 &&
+            Y === 0 &&
             $ === 0 &&
             ee === 1 &&
             te === 0
           )
             return (
-              (B[12] = B[12] * S + B[15] * Y),
+              (B[12] = B[12] * S + B[15] * U),
               (B[13] = B[13] * O + B[15] * Q),
               (B[14] = B[14] * ee + B[15] * K),
               (B[15] *= re),
@@ -5974,19 +5980,19 @@ var Background_svelte_svelte_type_style_lang = '',
             X = B[14],
             ce = B[15];
           return (
-            (B[0] = J * S + ae * z + fe * U + le * Y),
+            (B[0] = J * S + ae * z + fe * Y + le * U),
             (B[1] = J * E + ae * O + fe * $ + le * Q),
             (B[2] = J * T + ae * G + fe * ee + le * K),
             (B[3] = J * L + ae * N + fe * te + le * re),
-            (B[4] = oe * S + ie * z + ne * U + se * Y),
+            (B[4] = oe * S + ie * z + ne * Y + se * U),
             (B[5] = oe * E + ie * O + ne * $ + se * Q),
             (B[6] = oe * T + ie * G + ne * ee + se * K),
             (B[7] = oe * L + ie * N + ne * te + se * re),
-            (B[8] = q * S + W * z + H * U + Z * Y),
+            (B[8] = q * S + W * z + H * Y + Z * U),
             (B[9] = q * E + W * O + H * $ + Z * Q),
             (B[10] = q * T + W * G + H * ee + Z * K),
             (B[11] = q * L + W * N + H * te + Z * re),
-            (B[12] = j * S + he * z + X * U + ce * Y),
+            (B[12] = j * S + he * z + X * Y + ce * U),
             (B[13] = j * E + he * O + X * $ + ce * Q),
             (B[14] = j * T + he * G + X * ee + ce * K),
             (B[15] = j * L + he * N + X * te + ce * re),
@@ -6129,13 +6135,13 @@ var Background_svelte_svelte_type_style_lang = '',
               O = this.props[1],
               G = this.props[4],
               N = this.props[5],
-              U = this.props[12],
+              Y = this.props[12],
               $ = this.props[13];
-            (L[0] = S[0] * z + S[1] * G + U),
+            (L[0] = S[0] * z + S[1] * G + Y),
               (L[1] = S[0] * O + S[1] * N + $),
-              (L[2] = E[0] * z + E[1] * G + U),
+              (L[2] = E[0] * z + E[1] * G + Y),
               (L[3] = E[0] * O + E[1] * N + $),
-              (L[4] = T[0] * z + T[1] * G + U),
+              (L[4] = T[0] * z + T[1] * G + Y),
               (L[5] = T[0] * O + T[1] * N + $);
           }
           return L;
@@ -7582,7 +7588,7 @@ var Background_svelte_svelte_type_style_lang = '',
                   (l._lastKeyframeIndex = v);
               }
             } else {
-              var U, $, ee, te, Y;
+              var Y, $, ee, te, U;
               if (((k = C.s.length), (T = R.s || C.e), this.sh && C.h !== 1))
                 if (b >= S) (h[0] = T[0]), (h[1] = T[1]), (h[2] = T[2]);
                 else if (b <= E)
@@ -7604,7 +7610,7 @@ var Background_svelte_svelte_type_style_lang = '',
                           ? (I.__fnct || (I.__fnct = []),
                             I.__fnct[v]
                               ? (P = I.__fnct[v])
-                              : ((U =
+                              : ((Y =
                                   C.o.x[v] === void 0 ? C.o.x[0] : C.o.x[v]),
                                 ($ = C.o.y[v] === void 0 ? C.o.y[0] : C.o.y[v]),
                                 (ee =
@@ -7612,7 +7618,7 @@ var Background_svelte_svelte_type_style_lang = '',
                                 (te =
                                   C.i.y[v] === void 0 ? C.i.y[0] : C.i.y[v]),
                                 (P = BezierFactory.getBezierEasing(
-                                  U,
+                                  Y,
                                   $,
                                   ee,
                                   te
@@ -7620,12 +7626,12 @@ var Background_svelte_svelte_type_style_lang = '',
                                 (I.__fnct[v] = P)))
                           : I.__fnct
                           ? (P = I.__fnct)
-                          : ((U = C.o.x),
+                          : ((Y = C.o.x),
                             ($ = C.o.y),
                             (ee = C.i.x),
                             (te = C.i.y),
                             (P = BezierFactory.getBezierEasing(
-                              U,
+                              Y,
                               $,
                               ee,
                               te
@@ -7633,8 +7639,8 @@ var Background_svelte_svelte_type_style_lang = '',
                             (C.keyframeMetadata = P)),
                         (M = P((b - E) / (S - E))))),
                     (T = R.s || C.e),
-                    (Y = C.h === 1 ? C.s[v] : C.s[v] + (T[v] - C.s[v]) * M),
-                    this.propType === 'multidimensional' ? (h[v] = Y) : (h = Y);
+                    (U = C.h === 1 ? C.s[v] : C.s[v] + (T[v] - C.s[v]) * M),
+                    this.propType === 'multidimensional' ? (h[v] = U) : (h = U);
             }
             return (l.lastIndex = f), h;
           }
@@ -10405,11 +10411,11 @@ var Background_svelte_svelte_type_style_lang = '',
               O = -1,
               G,
               N,
-              U,
+              Y,
               $ = p,
               ee = h,
               te = a,
-              Y = -1,
+              U = -1,
               Q,
               K,
               re,
@@ -10469,7 +10475,7 @@ var Background_svelte_svelte_type_style_lang = '',
                   (ie = this.defaultPropsArray);
               else {
                 if (this._hasMaskedPath) {
-                  if (Y !== m[w].line) {
+                  if (U !== m[w].line) {
                     switch (e.j) {
                       case 1:
                         p += C - e.lineWidths[m[w].line];
@@ -10478,7 +10484,7 @@ var Background_svelte_svelte_type_style_lang = '',
                         p += (C - e.lineWidths[m[w].line]) / 2;
                         break;
                     }
-                    Y = m[w].line;
+                    U = m[w].line;
                   }
                   O !== m[w].ind &&
                     (m[O] && (p += m[O].extra),
@@ -10518,7 +10524,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     b + x >= p + j || !v
                       ? ((R = (p + j - b) / c.partialLength),
                         (N = f.point[0] + (c.point[0] - f.point[0]) * R),
-                        (U = f.point[1] + (c.point[1] - f.point[1]) * R),
+                        (Y = f.point[1] + (c.point[1] - f.point[1]) * R),
                         n.translate(
                           -r[0] * m[w].an * 0.005,
                           -(r[1] * D) * 0.01
@@ -10705,7 +10711,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     c.point[0] < f.point[0] && (he += 180),
                       n.rotate((-he * Math.PI) / 180);
                   }
-                  n.translate(N, U, 0),
+                  n.translate(N, Y, 0),
                     (p -= r[0] * m[w].an * 0.005),
                     m[w + 1] &&
                       O !== m[w + 1].ind &&
@@ -19740,9 +19746,9 @@ var Background_svelte_svelte_type_style_lang = '',
       return lottie;
     });
 })(lottie);
-var index_svelte_svelte_type_style_lang$b = '',
+var index_svelte_svelte_type_style_lang$c = '',
+  index_svelte_svelte_type_style_lang$b = '',
   index_svelte_svelte_type_style_lang$a = '',
-  index_svelte_svelte_type_style_lang$9 = '',
   DownArrow_svelte_svelte_type_style_lang = '',
   advancedFormat$1 = { exports: {} };
 (function (e, t) {
@@ -19995,18 +20001,18 @@ var advancedFormat = advancedFormat$1.exports,
             var S = this,
               E = !!I.u(P) || P,
               T = I.p(F),
-              L = function (te, Y) {
+              L = function (te, U) {
                 var Q = I.w(
-                  S.$u ? Date.UTC(S.$y, Y, te) : new Date(S.$y, Y, te),
+                  S.$u ? Date.UTC(S.$y, U, te) : new Date(S.$y, U, te),
                   S
                 );
                 return E ? Q : Q.endOf(y);
               },
-              z = function (te, Y) {
+              z = function (te, U) {
                 return I.w(
                   S.toDate()[te].apply(
                     S.toDate('s'),
-                    (E ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(Y)
+                    (E ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(U)
                   ),
                   S
                 );
@@ -20014,7 +20020,7 @@ var advancedFormat = advancedFormat$1.exports,
               O = this.$W,
               G = this.$M,
               N = this.$D,
-              U = 'set' + (this.$u ? 'UTC' : '');
+              Y = 'set' + (this.$u ? 'UTC' : '');
             switch (T) {
               case g:
                 return E ? L(1, 0) : L(31, 11);
@@ -20026,13 +20032,13 @@ var advancedFormat = advancedFormat$1.exports,
                 return L(E ? N - ee : N + (6 - ee), G);
               case y:
               case p:
-                return z(U + 'Hours', 0);
+                return z(Y + 'Hours', 0);
               case d:
-                return z(U + 'Minutes', 1);
+                return z(Y + 'Minutes', 1);
               case u:
-                return z(U + 'Seconds', 2);
+                return z(Y + 'Seconds', 2);
               case o:
-                return z(U + 'Milliseconds', 3);
+                return z(Y + 'Milliseconds', 3);
               default:
                 return this.clone();
             }
@@ -20100,16 +20106,16 @@ var advancedFormat = advancedFormat$1.exports,
               O = this.$M,
               G = S.weekdays,
               N = S.months,
-              U = function (Y, Q, K, re) {
-                return (Y && (Y[Q] || Y(P, E))) || K[Q].slice(0, re);
+              Y = function (U, Q, K, re) {
+                return (U && (U[Q] || U(P, E))) || K[Q].slice(0, re);
               },
-              $ = function (Y) {
-                return I.s(L % 12 || 12, Y, '0');
+              $ = function (U) {
+                return I.s(L % 12 || 12, U, '0');
               },
               ee =
                 S.meridiem ||
-                function (Y, Q, K) {
-                  var re = Y < 12 ? 'AM' : 'PM';
+                function (U, Q, K) {
+                  var re = U < 12 ? 'AM' : 'PM';
                   return K ? re.toLowerCase() : re;
                 },
               te = {
@@ -20117,13 +20123,13 @@ var advancedFormat = advancedFormat$1.exports,
                 YYYY: this.$y,
                 M: O + 1,
                 MM: I.s(O + 1, 2, '0'),
-                MMM: U(S.monthsShort, O, N, 3),
-                MMMM: U(N, O),
+                MMM: Y(S.monthsShort, O, N, 3),
+                MMMM: Y(N, O),
                 D: this.$D,
                 DD: I.s(this.$D, 2, '0'),
                 d: String(this.$W),
-                dd: U(S.weekdaysMin, this.$W, G, 2),
-                ddd: U(S.weekdaysShort, this.$W, G, 3),
+                dd: Y(S.weekdaysMin, this.$W, G, 2),
+                ddd: Y(S.weekdaysShort, this.$W, G, 3),
                 dddd: G[this.$W],
                 H: String(L),
                 HH: I.s(L, 2, '0'),
@@ -20138,8 +20144,8 @@ var advancedFormat = advancedFormat$1.exports,
                 SSS: I.s(this.$ms, 3, '0'),
                 Z: T,
               };
-            return E.replace(l, function (Y, Q) {
-              return Q || te[Y] || T.replace(':', '');
+            return E.replace(l, function (U, Q) {
+              return Q || te[U] || T.replace(':', '');
             });
           }),
           (D.utcOffset = function () {
@@ -20657,15 +20663,27 @@ const getTimeZone = (e) => (e ? dayjs.tz.guess() : 'UTC'),
       ? dayjs(e).tz(s).format('h:mm A z')
       : t.format('MMMM D, YYYY');
   };
-var index_svelte_svelte_type_style_lang$8 = '',
+var index_svelte_svelte_type_style_lang$9 = '',
+  index_svelte_svelte_type_style_lang$8 = '',
   index_svelte_svelte_type_style_lang$7 = '',
-  index_svelte_svelte_type_style_lang$6 = '',
   SectionDrowdown_svelte_svelte_type_style_lang = '',
   MoreDropdown_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$5 = '',
+  index_svelte_svelte_type_style_lang$6 = '',
   Menu_svelte_svelte_type_style_lang = '',
   Close_svelte_svelte_type_style_lang = '',
+  index_svelte_svelte_type_style_lang$5 = '',
   index_svelte_svelte_type_style_lang$4 = '',
+  Graphics_svelte_svelte_type_style_lang = '',
+  Pictures_svelte_svelte_type_style_lang = '',
+  Videos_svelte_svelte_type_style_lang = '',
+  QuickLinks_svelte_svelte_type_style_lang = '',
+  Twitter_svelte_svelte_type_style_lang = '',
+  YouTube_svelte_svelte_type_style_lang = '',
+  Facebook_svelte_svelte_type_style_lang = '',
+  Instagram_svelte_svelte_type_style_lang = '',
+  LinkedIn_svelte_svelte_type_style_lang = '',
+  CompanyLinks_svelte_svelte_type_style_lang = '',
+  LegalLinks_svelte_svelte_type_style_lang = '',
   index_svelte_svelte_type_style_lang$3 = '',
   Controls_svelte_svelte_type_style_lang = '',
   index_svelte_svelte_type_style_lang$2 = '',
