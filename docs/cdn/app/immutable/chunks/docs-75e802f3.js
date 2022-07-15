@@ -8,7 +8,7 @@ var Ze = (r, e, s) =>
     e in r
       ? ft(r, e, { enumerable: !0, configurable: !0, writable: !0, value: s })
       : (r[e] = s),
-  Le = (r, e) => {
+  Ce = (r, e) => {
     for (var s in e || (e = {})) dt.call(e, s) && Ze(r, s, e[s]);
     if (He) for (var s of He(e)) mt.call(e, s) && Ze(r, s, e[s]);
     return r;
@@ -27,7 +27,7 @@ import {
   b as i,
   g as R,
   J as u,
-  E as W,
+  E as z,
   T as _t,
   e as k,
   k as M,
@@ -36,7 +36,7 @@ import {
   n as ve,
   o as P,
   p as ke,
-  q as F,
+  q,
   j as me,
   B as oe,
   w as ie,
@@ -48,8 +48,8 @@ import {
   f as ge,
 } from './index-83a5d9f9.js';
 import { n as K } from './index-c889ff85.js';
-import './main-1dd8568d.js';
-import { D as Ce } from './index-16ec1060.js';
+import './main-d0cec6fc.js';
+import { D as xe } from './index-16ec1060.js';
 import './paths-396f020f.js';
 function kt(r) {
   let e, s, t, l, a;
@@ -104,9 +104,9 @@ function kt(r) {
     m(f, o) {
       R(f, e, o), u(e, s), u(s, t), u(e, l), u(e, a);
     },
-    p: W,
-    i: W,
-    o: W,
+    p: z,
+    i: z,
+    o: z,
     d(f) {
       f && c(e);
     },
@@ -162,9 +162,9 @@ function wt(r) {
     m(a, f) {
       R(a, e, f), u(e, s), u(s, t), u(e, l);
     },
-    p: W,
-    i: W,
-    o: W,
+    p: z,
+    i: z,
+    o: z,
     d(a) {
       a && c(e);
     },
@@ -220,9 +220,9 @@ function bt(r) {
     m(a, f) {
       R(a, e, f), u(e, s), u(s, t), u(e, l);
     },
-    p: W,
-    i: W,
-    o: W,
+    p: z,
+    i: z,
+    o: z,
     d(a) {
       a && c(e);
     },
@@ -241,15 +241,15 @@ function Oe(r, e, s) {
   const t = r.slice();
   return (t[4] = e[s]), t;
 }
+function qe(r, e, s) {
+  const t = r.slice();
+  return (t[4] = e[s]), t;
+}
 function Fe(r, e, s) {
   const t = r.slice();
   return (t[4] = e[s]), t;
 }
 function Ue(r, e, s) {
-  const t = r.slice();
-  return (t[4] = e[s]), t;
-}
-function ze(r, e, s) {
   const t = r.slice();
   return (t[4] = e[s]), t;
 }
@@ -276,7 +276,7 @@ function Ge(r) {
     b,
     $,
     y,
-    L,
+    C,
     S,
     A,
     j,
@@ -284,21 +284,21 @@ function Ge(r) {
     D,
     _,
     Z,
-    C,
-    z,
+    x,
     U,
+    F,
     Q,
     B,
     T;
-  const G = [xt, yt],
-    x = [];
+  const G = [Lt, yt],
+    L = [];
   function le(E, X) {
     return E[1] < Ie ? 0 : 1;
   }
-  (f = le(r)), (o = x[f] = G[f](r));
+  (f = le(r)), (o = L[f] = G[f](r));
   let ne = r[0].browse_links,
-    q = [];
-  for (let E = 0; E < ne.length; E += 1) q[E] = Je(Ue(r, ne, E));
+    W = [];
+  for (let E = 0; E < ne.length; E += 1) W[E] = Je(Fe(r, ne, E));
   let p = r[1] >= Ie && Ke(r),
     H = r[0].about_links,
     Y = [];
@@ -320,10 +320,10 @@ function Ge(r) {
         (v = N('Browse')),
         (b = M()),
         ($ = k('ul'));
-      for (let E = 0; E < q.length; E += 1) q[E].c();
+      for (let E = 0; E < W.length; E += 1) W[E].c();
       (y = M()),
         p && p.c(),
-        (L = M()),
+        (C = M()),
         (S = k('div')),
         (A = k('section')),
         (j = k('h3')),
@@ -332,9 +332,9 @@ function Ge(r) {
         (_ = k('ul'));
       for (let E = 0; E < Y.length; E += 1) Y[E].c();
       (Z = M()),
-        (C = k('section')),
-        (z = k('h3')),
-        (U = N('Stay Informed')),
+        (x = k('section')),
+        (U = k('h3')),
+        (F = N('Stay Informed')),
         (Q = M()),
         (B = k('ul'));
       for (let E = 0; E < J.length; E += 1) J[E].c();
@@ -359,12 +359,12 @@ function Ge(r) {
         (b = V(re)),
         ($ = g(re, 'UL', { class: !0 }));
       var be = h($);
-      for (let de = 0; de < q.length; de += 1) q[de].l(be);
+      for (let de = 0; de < W.length; de += 1) W[de].l(be);
       be.forEach(c),
         re.forEach(c),
         (y = V(I)),
         p && p.l(I),
-        (L = V(I)),
+        (C = V(I)),
         (S = g(I, 'DIV', { class: !0 }));
       var Ee = h(S);
       A = g(Ee, 'SECTION', { class: !0 });
@@ -380,18 +380,18 @@ function Ge(r) {
       Me.forEach(c),
         ye.forEach(c),
         (Z = V(Ee)),
-        (C = g(Ee, 'SECTION', { class: !0 }));
-      var xe = h(C);
-      z = g(xe, 'H3', { class: !0 });
-      var Ve = h(z);
-      (U = O(Ve, 'Stay Informed')),
+        (x = g(Ee, 'SECTION', { class: !0 }));
+      var Le = h(x);
+      U = g(Le, 'H3', { class: !0 });
+      var Ve = h(U);
+      (F = O(Ve, 'Stay Informed')),
         Ve.forEach(c),
-        (Q = V(xe)),
-        (B = g(xe, 'UL', { class: !0 }));
+        (Q = V(Le)),
+        (B = g(Le, 'UL', { class: !0 }));
       var Be = h(B);
       for (let de = 0; de < J.length; de += 1) J[de].l(Be);
       Be.forEach(c),
-        xe.forEach(c),
+        Le.forEach(c),
         Ee.forEach(c),
         I.forEach(c),
         X.forEach(c),
@@ -405,9 +405,9 @@ function Ge(r) {
         i(j, 'class', 'svelte-fhk6t1'),
         i(_, 'class', 'svelte-fhk6t1'),
         i(A, 'class', 'about'),
-        i(z, 'class', 'svelte-fhk6t1'),
+        i(U, 'class', 'svelte-fhk6t1'),
         i(B, 'class', 'svelte-fhk6t1'),
-        i(C, 'class', 'stay-informed svelte-fhk6t1'),
+        i(x, 'class', 'stay-informed svelte-fhk6t1'),
         i(S, 'class', 'about-and-stay-informed svelte-fhk6t1'),
         i(a, 'class', 'content-container svelte-fhk6t1'),
         i(e, 'class', 'quick-links svelte-fhk6t1');
@@ -418,17 +418,17 @@ function Ge(r) {
         u(s, t),
         u(e, l),
         u(e, a),
-        x[f].m(a, null),
+        L[f].m(a, null),
         u(a, n),
         u(a, d),
         u(d, m),
         u(m, v),
         u(d, b),
         u(d, $);
-      for (let ee = 0; ee < q.length; ee += 1) q[ee].m($, null);
+      for (let ee = 0; ee < W.length; ee += 1) W[ee].m($, null);
       u(a, y),
         p && p.m(a, null),
-        u(a, L),
+        u(a, C),
         u(a, S),
         u(S, A),
         u(A, j),
@@ -436,7 +436,7 @@ function Ge(r) {
         u(A, D),
         u(A, _);
       for (let ee = 0; ee < Y.length; ee += 1) Y[ee].m(_, null);
-      u(S, Z), u(S, C), u(C, z), u(z, U), u(C, Q), u(C, B);
+      u(S, Z), u(S, x), u(x, U), u(U, F), u(x, Q), u(x, B);
       for (let ee = 0; ee < J.length; ee += 1) J[ee].m(B, null);
       T = !0;
     },
@@ -445,32 +445,32 @@ function Ge(r) {
       if (
         ((f = le(E)),
         f === ee
-          ? x[f].p(E, X)
+          ? L[f].p(E, X)
           : (ve(),
-            P(x[ee], 1, 1, () => {
-              x[ee] = null;
+            P(L[ee], 1, 1, () => {
+              L[ee] = null;
             }),
             ke(),
-            (o = x[f]),
-            o ? o.p(E, X) : ((o = x[f] = G[f](E)), o.c()),
-            F(o, 1),
+            (o = L[f]),
+            o ? o.p(E, X) : ((o = L[f] = G[f](E)), o.c()),
+            q(o, 1),
             o.m(a, n)),
         X & 1)
       ) {
         ne = E[0].browse_links;
         let I;
         for (I = 0; I < ne.length; I += 1) {
-          const re = Ue(E, ne, I);
-          q[I] ? q[I].p(re, X) : ((q[I] = Je(re)), q[I].c(), q[I].m($, null));
+          const re = Fe(E, ne, I);
+          W[I] ? W[I].p(re, X) : ((W[I] = Je(re)), W[I].c(), W[I].m($, null));
         }
-        for (; I < q.length; I += 1) q[I].d(1);
-        q.length = ne.length;
+        for (; I < W.length; I += 1) W[I].d(1);
+        W.length = ne.length;
       }
       if (
         (E[1] >= Ie
           ? p
-            ? (p.p(E, X), X & 2 && F(p, 1))
-            : ((p = Ke(E)), p.c(), F(p, 1), p.m(a, L))
+            ? (p.p(E, X), X & 2 && q(p, 1))
+            : ((p = Ke(E)), p.c(), q(p, 1), p.m(a, C))
           : p &&
             (ve(),
             P(p, 1, 1, () => {
@@ -500,13 +500,13 @@ function Ge(r) {
       }
     },
     i(E) {
-      T || (F(o), F(p), (T = !0));
+      T || (q(o), q(p), (T = !0));
     },
     o(E) {
       P(o), P(p), (T = !1);
     },
     d(E) {
-      E && c(e), x[f].d(), _e(q, E), p && p.d(), _e(Y, E), _e(J, E);
+      E && c(e), L[f].d(), _e(W, E), p && p.d(), _e(Y, E), _e(J, E);
     },
   };
 }
@@ -518,7 +518,7 @@ function yt(r) {
     a,
     f = r[0].latest_links,
     o = [];
-  for (let n = 0; n < f.length; n += 1) o[n] = qe(ze(r, f, n));
+  for (let n = 0; n < f.length; n += 1) o[n] = We(Ue(r, f, n));
   return {
     c() {
       (e = k('section')),
@@ -556,21 +556,21 @@ function yt(r) {
         f = n[0].latest_links;
         let m;
         for (m = 0; m < f.length; m += 1) {
-          const v = ze(n, f, m);
-          o[m] ? o[m].p(v, d) : ((o[m] = qe(v)), o[m].c(), o[m].m(a, null));
+          const v = Ue(n, f, m);
+          o[m] ? o[m].p(v, d) : ((o[m] = We(v)), o[m].c(), o[m].m(a, null));
         }
         for (; m < o.length; m += 1) o[m].d(1);
         o.length = f.length;
       }
     },
-    i: W,
-    o: W,
+    i: z,
+    o: z,
     d(n) {
       n && c(e), _e(o, n);
     },
   };
 }
-function xt(r) {
+function Lt(r) {
   let e,
     s,
     t,
@@ -585,8 +585,8 @@ function xt(r) {
     b,
     $,
     y = r[0].latest_links,
-    L = [];
-  for (let w = 0; w < y.length; w += 1) L[w] = We(je(r, y, w));
+    C = [];
+  for (let w = 0; w < y.length; w += 1) C[w] = ze(je(r, y, w));
   let S = r[0].media_links,
     A = [];
   for (let w = 0; w < S.length; w += 1) A[w] = Ye(Pe(r, S, w));
@@ -602,7 +602,7 @@ function xt(r) {
         (l = N('Latest')),
         (a = M()),
         (f = k('ul'));
-      for (let w = 0; w < L.length; w += 1) L[w].c();
+      for (let w = 0; w < C.length; w += 1) C[w].c();
       (o = M()),
         (n = k('section')),
         (d = k('h3')),
@@ -623,22 +623,22 @@ function xt(r) {
         Z.forEach(c),
         (a = V(_)),
         (f = g(_, 'UL', { class: !0 }));
-      var C = h(f);
-      for (let B = 0; B < L.length; B += 1) L[B].l(C);
-      C.forEach(c),
+      var x = h(f);
+      for (let B = 0; B < C.length; B += 1) C[B].l(x);
+      x.forEach(c),
         _.forEach(c),
         (o = V(D)),
         (n = g(D, 'SECTION', { class: !0 }));
-      var z = h(n);
-      d = g(z, 'H3', { class: !0 });
-      var U = h(d);
-      (m = O(U, 'Media')),
-        U.forEach(c),
-        (v = V(z)),
-        (b = g(z, 'UL', { class: !0 }));
+      var U = h(n);
+      d = g(U, 'H3', { class: !0 });
+      var F = h(d);
+      (m = O(F, 'Media')),
+        F.forEach(c),
+        (v = V(U)),
+        (b = g(U, 'UL', { class: !0 }));
       var Q = h(b);
       for (let B = 0; B < A.length; B += 1) A[B].l(Q);
-      Q.forEach(c), z.forEach(c), D.forEach(c), this.h();
+      Q.forEach(c), U.forEach(c), D.forEach(c), this.h();
     },
     h() {
       i(t, 'class', 'svelte-fhk6t1'),
@@ -651,7 +651,7 @@ function xt(r) {
     },
     m(w, D) {
       R(w, e, D), u(e, s), u(s, t), u(t, l), u(s, a), u(s, f);
-      for (let _ = 0; _ < L.length; _ += 1) L[_].m(f, null);
+      for (let _ = 0; _ < C.length; _ += 1) C[_].m(f, null);
       u(e, o), u(e, n), u(n, d), u(d, m), u(n, v), u(n, b);
       for (let _ = 0; _ < A.length; _ += 1) A[_].m(b, null);
       $ = !0;
@@ -662,10 +662,10 @@ function xt(r) {
         let _;
         for (_ = 0; _ < y.length; _ += 1) {
           const Z = je(w, y, _);
-          L[_] ? L[_].p(Z, D) : ((L[_] = We(Z)), L[_].c(), L[_].m(f, null));
+          C[_] ? C[_].p(Z, D) : ((C[_] = ze(Z)), C[_].c(), C[_].m(f, null));
         }
-        for (; _ < L.length; _ += 1) L[_].d(1);
-        L.length = y.length;
+        for (; _ < C.length; _ += 1) C[_].d(1);
+        C.length = y.length;
       }
       if (D & 5) {
         S = w[0].media_links;
@@ -673,8 +673,8 @@ function xt(r) {
         for (_ = 0; _ < S.length; _ += 1) {
           const Z = Pe(w, S, _);
           A[_]
-            ? (A[_].p(Z, D), F(A[_], 1))
-            : ((A[_] = Ye(Z)), A[_].c(), F(A[_], 1), A[_].m(b, null));
+            ? (A[_].p(Z, D), q(A[_], 1))
+            : ((A[_] = Ye(Z)), A[_].c(), q(A[_], 1), A[_].m(b, null));
         }
         for (ve(), _ = S.length; _ < A.length; _ += 1) j(_);
         ke();
@@ -682,7 +682,7 @@ function xt(r) {
     },
     i(w) {
       if (!$) {
-        for (let D = 0; D < S.length; D += 1) F(A[D]);
+        for (let D = 0; D < S.length; D += 1) q(A[D]);
         $ = !0;
       }
     },
@@ -692,11 +692,11 @@ function xt(r) {
       $ = !1;
     },
     d(w) {
-      w && c(e), _e(L, w), _e(A, w);
+      w && c(e), _e(C, w), _e(A, w);
     },
   };
 }
-function qe(r) {
+function We(r) {
   let e,
     s,
     t = r[4].text + '',
@@ -731,7 +731,7 @@ function qe(r) {
     },
   };
 }
-function We(r) {
+function ze(r) {
   let e,
     s,
     t = r[4].text + '',
@@ -798,9 +798,9 @@ function Ye(r) {
         e = g($, 'LI', { class: !0 });
         var y = h(e);
         s = g(y, 'DIV', { class: !0 });
-        var L = h(s);
-        t && pe(t.$$.fragment, L),
-          L.forEach(c),
+        var C = h(s);
+        t && pe(t.$$.fragment, C),
+          C.forEach(c),
           (l = V(y)),
           (a = g(y, 'A', { href: !0, class: !0 }));
         var S = h(a);
@@ -826,16 +826,16 @@ function Ye(r) {
         if (v !== (v = $[2][$[4].symbol])) {
           if (t) {
             ve();
-            const L = t;
-            P(L.$$.fragment, 1, 0, () => {
-              oe(L, 1);
+            const C = t;
+            P(C.$$.fragment, 1, 0, () => {
+              oe(C, 1);
             }),
               ke();
           }
           v
             ? ((t = new v(b())),
               ie(t.$$.fragment),
-              F(t.$$.fragment, 1),
+              q(t.$$.fragment, 1),
               ce(t, s, null))
             : (t = null);
         }
@@ -843,7 +843,7 @@ function Ye(r) {
           (!m || (y & 1 && n !== (n = K($[4].url)))) && i(a, 'href', n);
       },
       i($) {
-        m || (t && F(t.$$.fragment, $), (m = !0));
+        m || (t && q(t.$$.fragment, $), (m = !0));
       },
       o($) {
         t && P(t.$$.fragment, $), (m = !1);
@@ -898,7 +898,7 @@ function Ke(r) {
     f,
     o = r[0].media_links,
     n = [];
-  for (let m = 0; m < o.length; m += 1) n[m] = Qe(Fe(r, o, m));
+  for (let m = 0; m < o.length; m += 1) n[m] = Qe(qe(r, o, m));
   const d = (m) =>
     P(n[m], 1, 1, () => {
       n[m] = null;
@@ -941,10 +941,10 @@ function Ke(r) {
         o = m[0].media_links;
         let b;
         for (b = 0; b < o.length; b += 1) {
-          const $ = Fe(m, o, b);
+          const $ = qe(m, o, b);
           n[b]
-            ? (n[b].p($, v), F(n[b], 1))
-            : ((n[b] = Qe($)), n[b].c(), F(n[b], 1), n[b].m(a, null));
+            ? (n[b].p($, v), q(n[b], 1))
+            : ((n[b] = Qe($)), n[b].c(), q(n[b], 1), n[b].m(a, null));
         }
         for (ve(), b = o.length; b < n.length; b += 1) d(b);
         ke();
@@ -952,7 +952,7 @@ function Ke(r) {
     },
     i(m) {
       if (!f) {
-        for (let v = 0; v < o.length; v += 1) F(n[v]);
+        for (let v = 0; v < o.length; v += 1) q(n[v]);
         f = !0;
       }
     },
@@ -998,9 +998,9 @@ function Qe(r) {
         e = g($, 'LI', { class: !0 });
         var y = h(e);
         s = g(y, 'DIV', { class: !0 });
-        var L = h(s);
-        t && pe(t.$$.fragment, L),
-          L.forEach(c),
+        var C = h(s);
+        t && pe(t.$$.fragment, C),
+          C.forEach(c),
           (l = V(y)),
           (a = g(y, 'A', { href: !0, class: !0 }));
         var S = h(a);
@@ -1026,16 +1026,16 @@ function Qe(r) {
         if (v !== (v = $[2][$[4].symbol])) {
           if (t) {
             ve();
-            const L = t;
-            P(L.$$.fragment, 1, 0, () => {
-              oe(L, 1);
+            const C = t;
+            P(C.$$.fragment, 1, 0, () => {
+              oe(C, 1);
             }),
               ke();
           }
           v
             ? ((t = new v(b())),
               ie(t.$$.fragment),
-              F(t.$$.fragment, 1),
+              q(t.$$.fragment, 1),
               ce(t, s, null))
             : (t = null);
         }
@@ -1043,7 +1043,7 @@ function Qe(r) {
           (!m || (y & 1 && n !== (n = K($[4].url)))) && i(a, 'href', n);
       },
       i($) {
-        m || (t && F(t.$$.fragment, $), (m = !0));
+        m || (t && q(t.$$.fragment, $), (m = !0));
       },
       o($) {
         t && P(t.$$.fragment, $), (m = !1);
@@ -1124,7 +1124,7 @@ function et(r) {
     },
   };
 }
-function Lt(r) {
+function Ct(r) {
   let e, s, t, l;
   _t(r[3]);
   let a = r[0].latest_links && Ge(r);
@@ -1144,8 +1144,8 @@ function Lt(r) {
     p(f, [o]) {
       f[0].latest_links
         ? a
-          ? (a.p(f, o), o & 1 && F(a, 1))
-          : ((a = Ge(f)), a.c(), F(a, 1), a.m(e.parentNode, e))
+          ? (a.p(f, o), o & 1 && q(a, 1))
+          : ((a = Ge(f)), a.c(), q(a, 1), a.m(e.parentNode, e))
         : a &&
           (ve(),
           P(a, 1, 1, () => {
@@ -1154,7 +1154,7 @@ function Lt(r) {
           ke());
     },
     i(f) {
-      s || (F(a), (s = !0));
+      s || (q(a), (s = !0));
     },
     o(f) {
       P(a), (s = !1);
@@ -1165,7 +1165,7 @@ function Lt(r) {
   };
 }
 const Ie = 745;
-function Ct(r, e, s) {
+function xt(r, e, s) {
   const t = { graphics: gt, pictures: $t, videos: Et };
   let { links: l = {} } = e,
     a = 1200;
@@ -1181,7 +1181,7 @@ function Ct(r, e, s) {
 }
 class It extends ue {
   constructor(e) {
-    super(), fe(this, e, Ct, Lt, he, { links: 0 });
+    super(), fe(this, e, xt, Ct, he, { links: 0 });
   }
 }
 function At(r) {
@@ -1221,8 +1221,8 @@ function At(r) {
     p(t, [l]) {
       l & 1 && ge(e, 'width', t[0] + 'px');
     },
-    i: W,
-    o: W,
+    i: z,
+    o: z,
     d(t) {
       t && c(e);
     },
@@ -1279,8 +1279,8 @@ function Rt(r) {
     p(t, [l]) {
       l & 1 && ge(e, 'width', t[0] + 'px');
     },
-    i: W,
-    o: W,
+    i: z,
+    o: z,
     d(t) {
       t && c(e);
     },
@@ -1337,8 +1337,8 @@ function Bt(r) {
     p(t, [l]) {
       l & 1 && ge(e, 'width', t[0] + 'px');
     },
-    i: W,
-    o: W,
+    i: z,
+    o: z,
     d(t) {
       t && c(e);
     },
@@ -1405,8 +1405,8 @@ function Dt(r) {
     p(l, [a]) {
       a & 1 && ge(e, 'width', l[0] + 'px');
     },
-    i: W,
-    o: W,
+    i: z,
+    o: z,
     d(l) {
       l && c(e);
     },
@@ -1426,7 +1426,7 @@ class Ot extends ue {
     super(), fe(this, e, Nt, Dt, he, { width: 0 });
   }
 }
-function Ft(r) {
+function qt(r) {
   let e, s;
   return {
     c() {
@@ -1463,14 +1463,14 @@ function Ft(r) {
     p(t, [l]) {
       l & 1 && ge(e, 'width', t[0] + 'px');
     },
-    i: W,
-    o: W,
+    i: z,
+    o: z,
     d(t) {
       t && c(e);
     },
   };
 }
-function Ut(r, e, s) {
+function Ft(r, e, s) {
   let { width: t = 20 } = e;
   return (
     (r.$$set = (l) => {
@@ -1479,9 +1479,9 @@ function Ut(r, e, s) {
     [t]
   );
 }
-class zt extends ue {
+class Ut extends ue {
   constructor(e) {
-    super(), fe(this, e, Ut, Ft, he, { width: 0 });
+    super(), fe(this, e, Ft, qt, he, { width: 0 });
   }
 }
 function tt(r, e, s) {
@@ -1503,7 +1503,7 @@ function st(r) {
     b,
     $,
     y,
-    L,
+    C,
     S,
     A,
     j = r[0].social_links,
@@ -1528,7 +1528,7 @@ function st(r) {
         (b = k('h2')),
         ($ = N('Follow Us')),
         (y = M()),
-        (L = k('div')),
+        (C = k('div')),
         (S = k('ul'));
       for (let _ = 0; _ < w.length; _ += 1) w[_].c();
       this.h();
@@ -1537,45 +1537,45 @@ function st(r) {
       e = g(_, 'SECTION', { class: !0 });
       var Z = h(e);
       s = g(Z, 'DIV', { class: !0 });
-      var C = h(s);
-      t = g(C, 'ARTICLE', { class: !0 });
-      var z = h(t);
-      l = g(z, 'H2', { class: !0 });
-      var U = h(l);
-      (a = O(U, 'Information you can trust')),
-        U.forEach(c),
-        (f = V(z)),
-        (o = g(z, 'P', { class: !0 }));
+      var x = h(s);
+      t = g(x, 'ARTICLE', { class: !0 });
+      var U = h(t);
+      l = g(U, 'H2', { class: !0 });
+      var F = h(l);
+      (a = O(F, 'Information you can trust')),
+        F.forEach(c),
+        (f = V(U)),
+        (o = g(U, 'P', { class: !0 }));
       var Q = h(o);
       (d = O(Q, n)),
         Q.forEach(c),
-        z.forEach(c),
-        (m = V(C)),
-        (v = g(C, 'DIV', { class: !0 }));
+        U.forEach(c),
+        (m = V(x)),
+        (v = g(x, 'DIV', { class: !0 }));
       var B = h(v);
       b = g(B, 'H2', { class: !0 });
       var T = h(b);
-      ($ = O(T, 'Follow Us')), T.forEach(c), (y = V(B)), (L = g(B, 'DIV', {}));
-      var G = h(L);
+      ($ = O(T, 'Follow Us')), T.forEach(c), (y = V(B)), (C = g(B, 'DIV', {}));
+      var G = h(C);
       S = g(G, 'UL', { class: !0 });
-      var x = h(S);
-      for (let le = 0; le < w.length; le += 1) w[le].l(x);
-      x.forEach(c),
+      var L = h(S);
+      for (let le = 0; le < w.length; le += 1) w[le].l(L);
+      L.forEach(c),
         G.forEach(c),
         B.forEach(c),
-        C.forEach(c),
+        x.forEach(c),
         Z.forEach(c),
         this.h();
     },
     h() {
-      i(l, 'class', 'svelte-x2xz2d'),
-        i(o, 'class', 'svelte-x2xz2d'),
-        i(t, 'class', 'company-info svelte-x2xz2d'),
-        i(b, 'class', 'svelte-x2xz2d'),
-        i(S, 'class', 'links svelte-x2xz2d'),
-        i(v, 'class', 'social svelte-x2xz2d'),
-        i(s, 'class', 'content-container svelte-x2xz2d'),
-        i(e, 'class', 'company svelte-x2xz2d');
+      i(l, 'class', 'svelte-eccq59'),
+        i(o, 'class', 'svelte-eccq59'),
+        i(t, 'class', 'company-info svelte-eccq59'),
+        i(b, 'class', 'svelte-eccq59'),
+        i(S, 'class', 'links svelte-eccq59'),
+        i(v, 'class', 'social svelte-eccq59'),
+        i(s, 'class', 'content-container svelte-eccq59'),
+        i(e, 'class', 'company svelte-eccq59');
     },
     m(_, Z) {
       R(_, e, Z),
@@ -1591,9 +1591,9 @@ function st(r) {
         u(v, b),
         u(b, $),
         u(v, y),
-        u(v, L),
-        u(L, S);
-      for (let C = 0; C < w.length; C += 1) w[C].m(S, null);
+        u(v, C),
+        u(C, S);
+      for (let x = 0; x < w.length; x += 1) w[x].m(S, null);
       A = !0;
     },
     p(_, Z) {
@@ -1602,20 +1602,20 @@ function st(r) {
         Z & 3)
       ) {
         j = _[0].social_links;
-        let C;
-        for (C = 0; C < j.length; C += 1) {
-          const z = tt(_, j, C);
-          w[C]
-            ? (w[C].p(z, Z), F(w[C], 1))
-            : ((w[C] = lt(z)), w[C].c(), F(w[C], 1), w[C].m(S, null));
+        let x;
+        for (x = 0; x < j.length; x += 1) {
+          const U = tt(_, j, x);
+          w[x]
+            ? (w[x].p(U, Z), q(w[x], 1))
+            : ((w[x] = lt(U)), w[x].c(), q(w[x], 1), w[x].m(S, null));
         }
-        for (ve(), C = j.length; C < w.length; C += 1) D(C);
+        for (ve(), x = j.length; x < w.length; x += 1) D(x);
         ke();
       }
     },
     i(_) {
       if (!A) {
-        for (let Z = 0; Z < j.length; Z += 1) F(w[Z]);
+        for (let Z = 0; Z < j.length; Z += 1) q(w[Z]);
         A = !0;
       }
     },
@@ -1655,9 +1655,9 @@ function lt(r) {
         t = g($, 'DIV', { class: !0 });
         var y = h(t);
         l = g(y, 'DIV', { class: !0 });
-        var L = h(l);
-        a && pe(a.$$.fragment, L),
-          L.forEach(c),
+        var C = h(l);
+        a && pe(a.$$.fragment, C),
+          C.forEach(c),
           y.forEach(c),
           $.forEach(c),
           (o = V(b)),
@@ -1665,10 +1665,10 @@ function lt(r) {
           this.h();
       },
       h() {
-        i(l, 'class', 'social svelte-x2xz2d'),
-          i(t, 'class', 'button svelte-x2xz2d'),
+        i(l, 'class', 'social svelte-eccq59'),
+          i(t, 'class', 'button svelte-eccq59'),
           i(s, 'href', (f = K(r[2].url))),
-          i(e, 'class', 'social-links symbol svelte-x2xz2d');
+          i(e, 'class', 'social-links symbol svelte-eccq59');
       },
       m(v, b) {
         R(v, e, b),
@@ -1692,14 +1692,14 @@ function lt(r) {
           d
             ? ((a = new d(m())),
               ie(a.$$.fragment),
-              F(a.$$.fragment, 1),
+              q(a.$$.fragment, 1),
               ce(a, l, null))
             : (a = null);
         }
         (!n || (b & 1 && f !== (f = K(v[2].url)))) && i(s, 'href', f);
       },
       i(v) {
-        n || (a && F(a.$$.fragment, v), (n = !0));
+        n || (a && q(a.$$.fragment, v), (n = !0));
       },
       o(v) {
         a && P(a.$$.fragment, v), (n = !1);
@@ -1727,8 +1727,8 @@ function Pt(r) {
     p(l, [a]) {
       l[0].social_links
         ? t
-          ? (t.p(l, a), a & 1 && F(t, 1))
-          : ((t = st(l)), t.c(), F(t, 1), t.m(e.parentNode, e))
+          ? (t.p(l, a), a & 1 && q(t, 1))
+          : ((t = st(l)), t.c(), q(t, 1), t.m(e.parentNode, e))
         : t &&
           (ve(),
           P(t, 1, 1, () => {
@@ -1737,7 +1737,7 @@ function Pt(r) {
           ke());
     },
     i(l) {
-      s || (F(t), (s = !0));
+      s || (q(t), (s = !0));
     },
     o(l) {
       P(t), (s = !1);
@@ -1753,7 +1753,7 @@ function jt(r, e, s) {
     facebook: Zt,
     instagram: Ot,
     youtube: Vt,
-    linkedin: zt,
+    linkedin: Ut,
   };
   let { links: l = {} } = e;
   return (
@@ -1791,7 +1791,7 @@ function rt(r) {
     b,
     $,
     y,
-    L,
+    C,
     S,
     A,
     j = r[0].copyright_year + '',
@@ -1799,17 +1799,17 @@ function rt(r) {
     D,
     _,
     Z,
-    C,
-    z = r[0].ad_links,
-    U = [];
-  for (let T = 0; T < z.length; T += 1) U[T] = ot(nt(r, z, T));
+    x,
+    U = r[0].ad_links,
+    F = [];
+  for (let T = 0; T < U.length; T += 1) F[T] = ot(nt(r, U, T));
   let Q = r[0].misc_links.filter(ct),
     B = [];
   for (let T = 0; T < Q.length; T += 1) B[T] = it(at(r, Q, T));
   return {
     c() {
       (e = k('section')), (s = k('div')), (t = k('section')), (l = k('ul'));
-      for (let T = 0; T < U.length; T += 1) U[T].c();
+      for (let T = 0; T < F.length; T += 1) F[T].c();
       (a = M()),
         (f = k('p')),
         (o = N('All quotes delayed a minimum of 15 minutes. ')),
@@ -1820,7 +1820,7 @@ function rt(r) {
         ($ = k('section')),
         (y = k('ul'));
       for (let T = 0; T < B.length; T += 1) B[T].c();
-      (L = M()),
+      (C = M()),
         (S = k('p')),
         (A = N('\xA9 ')),
         (w = N(j)),
@@ -1834,28 +1834,28 @@ function rt(r) {
       e = g(T, 'SECTION', { class: !0 });
       var G = h(e);
       s = g(G, 'DIV', { class: !0 });
-      var x = h(s);
-      t = g(x, 'SECTION', { class: !0 });
+      var L = h(s);
+      t = g(L, 'SECTION', { class: !0 });
       var le = h(t);
       l = g(le, 'UL', { class: !0 });
       var ne = h(l);
-      for (let E = 0; E < U.length; E += 1) U[E].l(ne);
-      ne.forEach(c), le.forEach(c), (a = V(x)), (f = g(x, 'P', { class: !0 }));
-      var q = h(f);
-      (o = O(q, 'All quotes delayed a minimum of 15 minutes. ')),
-        (n = g(q, 'A', { href: !0, class: !0 }));
+      for (let E = 0; E < F.length; E += 1) F[E].l(ne);
+      ne.forEach(c), le.forEach(c), (a = V(L)), (f = g(L, 'P', { class: !0 }));
+      var W = h(f);
+      (o = O(W, 'All quotes delayed a minimum of 15 minutes. ')),
+        (n = g(W, 'A', { href: !0, class: !0 }));
       var p = h(n);
       (d = O(p, 'See here for a complete list of exchanges and delays')),
         p.forEach(c),
-        (v = O(q, '.')),
-        q.forEach(c),
-        (b = V(x)),
-        ($ = g(x, 'SECTION', { class: !0 }));
+        (v = O(W, '.')),
+        W.forEach(c),
+        (b = V(L)),
+        ($ = g(L, 'SECTION', { class: !0 }));
       var H = h($);
       y = g(H, 'UL', { class: !0 });
       var Y = h(y);
       for (let E = 0; E < B.length; E += 1) B[E].l(Y);
-      Y.forEach(c), H.forEach(c), (L = V(x)), (S = g(x, 'P', { class: !0 }));
+      Y.forEach(c), H.forEach(c), (C = V(L)), (S = g(L, 'P', { class: !0 }));
       var ae = h(S);
       (A = O(ae, '\xA9 ')),
         (w = O(ae, j)),
@@ -1869,7 +1869,7 @@ function rt(r) {
       (Z = O(J, 'All rights reserved')),
         J.forEach(c),
         ae.forEach(c),
-        x.forEach(c),
+        L.forEach(c),
         G.forEach(c),
         this.h();
     },
@@ -1881,7 +1881,7 @@ function rt(r) {
         i(f, 'class', 'disclaimer svelte-1wk8lrk'),
         i(y, 'class', 'link-group svelte-1wk8lrk'),
         i($, 'class', 'misc-links svelte-1wk8lrk'),
-        i(_, 'href', (C = K(r[0].copyright_link))),
+        i(_, 'href', (x = K(r[0].copyright_link))),
         i(_, 'class', 'svelte-1wk8lrk'),
         i(S, 'class', 'copyright svelte-1wk8lrk'),
         i(s, 'class', 'content-container svelte-1wk8lrk'),
@@ -1889,7 +1889,7 @@ function rt(r) {
     },
     m(T, G) {
       R(T, e, G), u(e, s), u(s, t), u(t, l);
-      for (let x = 0; x < U.length; x += 1) U[x].m(l, null);
+      for (let L = 0; L < F.length; L += 1) F[L].m(l, null);
       u(s, a),
         u(s, f),
         u(f, o),
@@ -1899,37 +1899,37 @@ function rt(r) {
         u(s, b),
         u(s, $),
         u($, y);
-      for (let x = 0; x < B.length; x += 1) B[x].m(y, null);
-      u(s, L), u(s, S), u(S, A), u(S, w), u(S, D), u(S, _), u(_, Z);
+      for (let L = 0; L < B.length; L += 1) B[L].m(y, null);
+      u(s, C), u(s, S), u(S, A), u(S, w), u(S, D), u(S, _), u(_, Z);
     },
     p(T, G) {
       if (G & 1) {
-        z = T[0].ad_links;
-        let x;
-        for (x = 0; x < z.length; x += 1) {
-          const le = nt(T, z, x);
-          U[x] ? U[x].p(le, G) : ((U[x] = ot(le)), U[x].c(), U[x].m(l, null));
+        U = T[0].ad_links;
+        let L;
+        for (L = 0; L < U.length; L += 1) {
+          const le = nt(T, U, L);
+          F[L] ? F[L].p(le, G) : ((F[L] = ot(le)), F[L].c(), F[L].m(l, null));
         }
-        for (; x < U.length; x += 1) U[x].d(1);
-        U.length = z.length;
+        for (; L < F.length; L += 1) F[L].d(1);
+        F.length = U.length;
       }
       if (
         (G & 1 && m !== (m = K(T[0].disclaimer_link)) && i(n, 'href', m), G & 1)
       ) {
         Q = T[0].misc_links.filter(ct);
-        let x;
-        for (x = 0; x < Q.length; x += 1) {
-          const le = at(T, Q, x);
-          B[x] ? B[x].p(le, G) : ((B[x] = it(le)), B[x].c(), B[x].m(y, null));
+        let L;
+        for (L = 0; L < Q.length; L += 1) {
+          const le = at(T, Q, L);
+          B[L] ? B[L].p(le, G) : ((B[L] = it(le)), B[L].c(), B[L].m(y, null));
         }
-        for (; x < B.length; x += 1) B[x].d(1);
+        for (; L < B.length; L += 1) B[L].d(1);
         B.length = Q.length;
       }
       G & 1 && j !== (j = T[0].copyright_year + '') && me(w, j),
-        G & 1 && C !== (C = K(T[0].copyright_link)) && i(_, 'href', C);
+        G & 1 && x !== (x = K(T[0].copyright_link)) && i(_, 'href', x);
     },
     d(T) {
-      T && c(e), _e(U, T), _e(B, T);
+      T && c(e), _e(F, T), _e(B, T);
     },
   };
 }
@@ -2003,7 +2003,7 @@ function it(r) {
     },
   };
 }
-function qt(r) {
+function Wt(r) {
   let e,
     s = r[0].ad_links && rt(r);
   return {
@@ -2023,15 +2023,15 @@ function qt(r) {
           : ((s = rt(t)), s.c(), s.m(e.parentNode, e))
         : s && (s.d(1), (s = null));
     },
-    i: W,
-    o: W,
+    i: z,
+    o: z,
     d(t) {
       s && s.d(t), t && c(e);
     },
   };
 }
 const ct = (r) => !r.self;
-function Wt(r, e, s) {
+function zt(r, e, s) {
   let { links: t = {} } = e;
   return (
     (r.$$set = (l) => {
@@ -2042,7 +2042,7 @@ function Wt(r, e, s) {
 }
 class Yt extends ue {
   constructor(e) {
-    super(), fe(this, e, Wt, qt, he, { links: 0 });
+    super(), fe(this, e, zt, Wt, he, { links: 0 });
   }
 }
 var Ae = [
@@ -2252,12 +2252,12 @@ function Jt(r) {
           ce(f, e, null),
           (o = !0);
       },
-      p: W,
+      p: z,
       i(n) {
         o ||
-          (F(s.$$.fragment, n),
-          F(l.$$.fragment, n),
-          F(f.$$.fragment, n),
+          (q(s.$$.fragment, n),
+          q(l.$$.fragment, n),
+          q(f.$$.fragment, n),
           (o = !0));
       },
       o(n) {
@@ -2275,7 +2275,7 @@ const Se = {
 };
 function Kt(r, e, s) {
   let { theme: t = {} } = e;
-  const l = Le(Le({}, Se.default), t);
+  const l = Ce(Ce({}, Se.default), t);
   return (
     (r.$$set = (a) => {
       'theme' in a && s(1, (t = a.theme));
@@ -2303,7 +2303,7 @@ function Qt(r) {
         ce(e, t, l), (s = !0);
       },
       i(t) {
-        s || (F(e.$$.fragment, t), (s = !0));
+        s || (q(e.$$.fragment, t), (s = !0));
       },
       o(t) {
         P(e.$$.fragment, t), (s = !1);
@@ -2328,9 +2328,9 @@ function Xt(r) {
       m(t, l) {
         ce(e, t, l), (s = !0);
       },
-      p: W,
+      p: z,
       i(t) {
-        s || (F(e.$$.fragment, t), (s = !0));
+        s || (q(e.$$.fragment, t), (s = !0));
       },
       o(t) {
         P(e.$$.fragment, t), (s = !1);
@@ -2346,7 +2346,7 @@ function es(r) {
   return (
     (e = new Te({
       props: {
-        theme: De(Le({}, Se.default), { background: '#e0d3b8', rules: '#aaa' }),
+        theme: De(Ce({}, Se.default), { background: '#e0d3b8', rules: '#aaa' }),
       },
     })),
     {
@@ -2359,9 +2359,9 @@ function es(r) {
       m(t, l) {
         ce(e, t, l), (s = !0);
       },
-      p: W,
+      p: z,
       i(t) {
-        s || (F(e.$$.fragment, t), (s = !0));
+        s || (q(e.$$.fragment, t), (s = !0));
       },
       o(t) {
         P(e.$$.fragment, t), (s = !1);
@@ -2391,7 +2391,7 @@ function ts(r) {
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteFooter</span> <span class="token punctuation">/></span></span></code>`,
     $,
     y,
-    L,
+    C,
     S,
     A,
     j,
@@ -2403,14 +2403,14 @@ function ts(r) {
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteFooter</span> <span class="token attr-name">theme=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>SiteFooterThemes<span class="token punctuation">.</span>dark<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code>`,
     Z,
-    C,
-    z,
+    x,
     U,
+    F,
     Q,
     B,
     T,
     G,
-    x = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    L = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteFooter<span class="token punctuation">,</span> SiteFooterThemes <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -2424,9 +2424,9 @@ function ts(r) {
 <span class="token punctuation">&#125;</span></span></code>`,
     le,
     ne,
-    q;
+    W;
   return (
-    (y = new Ce({
+    (y = new xe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
@@ -2434,7 +2434,7 @@ function ts(r) {
         $$scope: { ctx: r },
       },
     })),
-    (C = new Ce({
+    (x = new xe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
@@ -2442,7 +2442,7 @@ function ts(r) {
         $$scope: { ctx: r },
       },
     })),
-    (ne = new Ce({
+    (ne = new xe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
@@ -2465,16 +2465,16 @@ function ts(r) {
           (v = k('pre')),
           ($ = M()),
           ie(y.$$.fragment),
-          (L = M()),
+          (C = M()),
           (S = k('section')),
           (A = k('p')),
           (j = N('Change colours with exported themes.')),
           (w = M()),
           (D = k('pre')),
           (Z = M()),
-          ie(C.$$.fragment),
-          (z = M()),
-          (U = k('section')),
+          ie(x.$$.fragment),
+          (U = M()),
+          (F = k('section')),
           (Q = k('p')),
           (B = N('You can customise a colour theme.')),
           (T = M()),
@@ -2504,7 +2504,7 @@ function ts(r) {
         E.forEach(c),
           ($ = V(p)),
           pe(y.$$.fragment, p),
-          (L = V(p)),
+          (C = V(p)),
           (S = g(p, 'SECTION', {}));
         var X = h(S);
         A = g(X, 'P', {});
@@ -2517,10 +2517,10 @@ function ts(r) {
         var I = h(D);
         I.forEach(c),
           (Z = V(p)),
-          pe(C.$$.fragment, p),
-          (z = V(p)),
-          (U = g(p, 'SECTION', {}));
-        var re = h(U);
+          pe(x.$$.fragment, p),
+          (U = V(p)),
+          (F = g(p, 'SECTION', {}));
+        var re = h(F);
         Q = g(re, 'P', {});
         var $e = h(Q);
         (B = O($e, 'You can customise a colour theme.')),
@@ -2557,7 +2557,7 @@ function ts(r) {
           (v.innerHTML = b),
           R(p, $, H),
           ce(y, p, H),
-          R(p, L, H),
+          R(p, C, H),
           R(p, S, H),
           u(S, A),
           u(A, j),
@@ -2565,38 +2565,38 @@ function ts(r) {
           R(p, D, H),
           (D.innerHTML = _),
           R(p, Z, H),
-          ce(C, p, H),
-          R(p, z, H),
+          ce(x, p, H),
           R(p, U, H),
-          u(U, Q),
+          R(p, F, H),
+          u(F, Q),
           u(Q, B),
           R(p, T, H),
           R(p, G, H),
-          (G.innerHTML = x),
+          (G.innerHTML = L),
           R(p, le, H),
           ce(ne, p, H),
-          (q = !0);
+          (W = !0);
       },
       p(p, [H]) {
         const Y = {};
         H & 1 && (Y.$$scope = { dirty: H, ctx: p }), y.$set(Y);
         const ae = {};
-        H & 1 && (ae.$$scope = { dirty: H, ctx: p }), C.$set(ae);
+        H & 1 && (ae.$$scope = { dirty: H, ctx: p }), x.$set(ae);
         const J = {};
         H & 1 && (J.$$scope = { dirty: H, ctx: p }), ne.$set(J);
       },
       i(p) {
-        q ||
-          (F(y.$$.fragment, p),
-          F(C.$$.fragment, p),
-          F(ne.$$.fragment, p),
-          (q = !0));
+        W ||
+          (q(y.$$.fragment, p),
+          q(x.$$.fragment, p),
+          q(ne.$$.fragment, p),
+          (W = !0));
       },
       o(p) {
         P(y.$$.fragment, p),
-          P(C.$$.fragment, p),
+          P(x.$$.fragment, p),
           P(ne.$$.fragment, p),
-          (q = !1);
+          (W = !1);
       },
       d(p) {
         p && c(e),
@@ -2604,14 +2604,14 @@ function ts(r) {
           p && c(v),
           p && c($),
           oe(y, p),
-          p && c(L),
+          p && c(C),
           p && c(S),
           p && c(w),
           p && c(D),
           p && c(Z),
-          oe(C, p),
-          p && c(z),
+          oe(x, p),
           p && c(U),
+          p && c(F),
           p && c(T),
           p && c(G),
           p && c(le),
