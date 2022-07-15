@@ -76,9 +76,12 @@
           }
         }}"
       >
-        <div class="nav-button more" class:open="{$activeSection === 'more'}">
+        <div
+          class="nav-button more link"
+          class:open="{$activeSection === 'more'}"
+        >
           <button class="button">
-            More <DownArrow rotate="{$activeSection === 'more'}" />
+            <span>More <DownArrow rotate="{$activeSection === 'more'}" /></span>
           </button>
         </div>
         {#if $activeSection === 'more'}
@@ -132,17 +135,17 @@
         &:hover,
         &:active {
           text-decoration: none;
-          &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            height: 4px;
-            background: var(--nav-accent, $tr-orange);
-            opacity: 0.5;
-          }
+          // &:after {
+          //   content: '';
+          //   position: absolute;
+          //   left: 0;
+          //   right: 0;
+          //   bottom: 0;
+          //   display: block;
+          //   height: 4px;
+          //   background: var(--nav-accent, $tr-orange);
+          //   opacity: 0.5;
+          // }
         }
       }
 
