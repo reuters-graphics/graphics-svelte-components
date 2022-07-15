@@ -3442,16 +3442,14 @@ var classnames = classnames$1.exports,
   Link_svelte_svelte_type_style_lang = '',
   index_svelte_svelte_type_style_lang$g = '';
 const name = '@reuters-graphics/graphics-svelte-components',
-  version = '0.3.15',
+  version = '0.3.17',
   type = 'module',
   homepage = 'https://reuters-graphics.github.io/graphics-svelte-components',
   repository = 'https://github.com/reuters-graphics/graphics-svelte-components',
   scripts = {
     start: 'svelte-kit dev --open',
-    package: 'svelte-kit package && npm run build:commit',
+    package: 'svelte-kit package',
     'build:docs': 'svelte-kit build && touch docs/.nojekyll',
-    'build:commit':
-      'git add . && git commit -m build && git push origin master',
     postinstall: 'husky install',
     release: 'npm run package && npm publish ./dist/',
     postversion:
