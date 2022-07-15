@@ -1,0 +1,39 @@
+---
+title: SiteFooter
+description: Reuters dotcom site footer shadow component.
+slug: site-footer
+---
+
+<script>
+  import SiteFooter from './index.svelte';
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+</script>
+
+<section>
+
+## {title}
+
+A component that shadows our Reuters dotcom site footer.
+
+</section>
+
+```svelte
+<script>
+  import { SiteFooter } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteFooter />
+```
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteFooter />
+</DemoContainer>
+
+<style>
+  .spacer{
+    height: 1px;
+    width: 100%;
+    margin: 20rem 0;
+  }
+
+</style>

@@ -5,6 +5,11 @@
 
   export let section = {};
   export let headingText;
+
+  $: splitCount =
+    section.children && section.children.length > 7
+      ? Math.ceil(section.children.length / 2)
+      : 0;
 </script>
 
 <NavDropdown headingText="{headingText}">
@@ -13,24 +18,46 @@
       Browse {section.name}
     </span>
   </a>
-  <ul class="sections">
-    {#each section.children as sub}
-      <li>
-        <a class="subsection-link" href="{normalizeUrl(sub.url)}">
-          {sub.name}
-        </a>
-      </li>
-    {/each}
-  </ul>
+  <div class="sections">
+    {#if splitCount > 0}
+      <ul class="sections-group">
+        {#each section.children.slice(0, splitCount) as sub}
+          <li>
+            <a class="subsection-link" href="{normalizeUrl(sub.url)}">
+              {sub.name}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    {/if}
+    <ul class="sections-group">
+      {#each section.children.slice(splitCount) as sub}
+        <li>
+          <a class="subsection-link" href="{normalizeUrl(sub.url)}">
+            {sub.name}
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </div>
 </NavDropdown>
 
 <style lang="scss">
   @import '../../scss/_colors.scss';
 
   .sections {
-    list-style: none;
-    padding: 0;
-    margin: 12px 0 0 0;
+    display: flex;
+
+    .sections-group {
+      width: 50%;
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0 0;
+
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
   }
 
   .sections .subsection {
@@ -69,8 +96,5 @@
     font-weight: 400;
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
-    @media (min-width: 1300px) {
-      font-size: 18px;
-    }
   }
 </style>
