@@ -150,6 +150,7 @@
       }
     }
     p {
+      @include font-display;
       line-height: 1.43;
       font-size: 14px;
       color: var(--nav-primary, $tr-dark-grey);
