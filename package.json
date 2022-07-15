@@ -7,9 +7,8 @@
   "repository": "https://github.com/reuters-graphics/graphics-svelte-components",
   "scripts": {
     "start": "svelte-kit dev --open",
-    "package": "svelte-kit package && npm run build:commit",
+    "package": "svelte-kit package",
     "build:docs": "svelte-kit build && touch docs/.nojekyll",
-    "build:commit": "git add . && git commit -m build && git push origin master",
     "postinstall": "husky install",
     "release": "npm run package && npm publish ./dist/",
     "postversion": "git push origin master && git push origin master --tags && npm run release",
