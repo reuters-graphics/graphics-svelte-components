@@ -1,4 +1,6 @@
 <script>
+  import { normalizeUrl } from '../SiteHeader/NavBar/utils';
+
   export let links = {};
 </script>
 
@@ -9,7 +11,7 @@
         <ul class="link-group">
           {#each links.ad_links as link}
             <li>
-              <a href="{link.url}">
+              <a href="{normalizeUrl(link.url)}">
                 {link.text}
               </a>
             </li>
@@ -18,7 +20,7 @@
       </section>
       <p class="disclaimer">
         All quotes delayed a minimum of 15 minutes. <a
-          href="{links.disclaimer_link}"
+          href="{normalizeUrl(links.disclaimer_link)}"
           >See here for a complete list of exchanges and delays</a
         >.
       </p>
@@ -26,7 +28,7 @@
         <ul class="link-group">
           {#each links.misc_links.filter((d) => !d.self) as link}
             <li>
-              <a href="{link.url}">
+              <a href="{normalizeUrl(link.url)}">
                 {link.text}
               </a>
             </li>
@@ -35,7 +37,7 @@
       </section>
       <p class="copyright">
         © {links.copyright_year} Reuters.
-        <a href="{links.copyright_link}">All rights reserved</a>
+        <a href="{normalizeUrl(links.copyright_link)}">All rights reserved</a>
       </p>
     </div>
   </section>

@@ -4,6 +4,7 @@
   import Facebook from './svgs/Facebook.svelte';
   import Instagram from './svgs/Instagram.svelte';
   import LinkedIn from './svgs/LinkedIn.svelte';
+  import { normalizeUrl } from '../SiteHeader/NavBar/utils';
 
   const symbols = {
     twitter: Twitter,
@@ -29,7 +30,7 @@
           <ul class="links">
             {#each links.social_links as link}
               <li class="social-links symbol">
-                <a href="{link.url}">
+                <a href="{normalizeUrl(link.url)}">
                   <div class="button">
                     <div class="social">
                       <svelte:component this="{symbols[link.type]}" />
