@@ -33,7 +33,7 @@
   setContext('nav-theme', writable(navTheme));
   setContext('nav-active-section', writable(null));
 
-  const { sections } = data;
+  const { sections } = data[0];
 
   let isMobileMenuOpen = false;
 </script>
@@ -156,12 +156,6 @@
     }
   }
 
-  .container.show-nav .inner,
-  .container.in-view .inner,
-  .container:hover .inner {
-    transform: translateY(0);
-  }
-
   .logo-container {
     align-self: center;
 
@@ -254,15 +248,6 @@
       &:focus-visible .button-container {
         border: 2px solid var(--nav-accent);
       }
-
-      .icon {
-        width: 20px;
-      }
     }
-  }
-
-  .skiptolink {
-    @include spacing-single(margin-left);
-    margin-bottom: 16px;
   }
 </style>

@@ -1,0 +1,90 @@
+---
+title: SiteHeader
+description: Reuters dotcom site header.
+slug: site-header
+---
+
+<script>
+  import SiteHeader, { themes } from './index.svelte';
+  import DemoContainer from '../_docs/DemoContainer/index.svelte';
+</script>
+
+<section>
+
+## {title}
+
+Reuters dotcom site header, ported from [Raptor UI components](https://github.com/tr/rcom-arc_raptor-ui/tree/develop/packages/rcom-raptor-ui_common/src/components/site-header).
+
+</section>
+
+```svelte
+<script>
+  import { SiteHeader } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteHeader />
+```
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteHeader />
+</DemoContainer>
+
+<div class="spacer" />
+
+<section>
+
+Change colours with exported themes.
+
+</section>
+
+```svelte
+<script>
+  import { SiteHeader, SiteHeaderThemes } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteHeader theme={SiteHeaderThemes.dark} />
+```
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteHeader theme={themes.dark} />
+</DemoContainer>
+
+<div class="spacer" />
+
+<section>
+
+You can customise a colour theme.
+
+</section>
+
+```svelte
+<script>
+  import { SiteHeader, SiteHeaderThemes } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteHeader theme={{ ...themes.default, background: '#e0d3b8', rules: '#aaa' }} />
+
+// Customisable props
+{
+  background: '#fff',
+  primary: '#404040',
+  accent: '#fa6400',
+  rules: '#d0d0d0',
+  shadow: '0 1px 4px 2px rgb(64 64 64 / 8%)',
+}
+```
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteHeader theme={{ ...themes.default, background: '#e0d3b8', rules: '#aaa' }} />
+</DemoContainer>
+
+<div class="spacer" />
+
+<style>
+  .spacer{
+    height: 1px;
+    width: 100%;
+    margin: 20rem 0;
+  }
+
+</style>

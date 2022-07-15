@@ -47,10 +47,6 @@
       display: flex;
       flex-direction: row;
       column-gap: 64px;
-
-      .group-container {
-        width: 50%;
-      }
     }
   }
 

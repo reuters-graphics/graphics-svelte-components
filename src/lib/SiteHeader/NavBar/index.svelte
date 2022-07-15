@@ -30,20 +30,23 @@
         {#if section.children}
           <li
             class="nav-item category link"
-            on:mouseenter="{() => activeSection.set(section.id)}"
-            on:focus="{() => activeSection.set(section.id)}"
-            on:mouseleave="{() => activeSection.set(null)}"
-            on:blur="{() => activeSection.set(null)}"
+            on:click="{() => {
+              if ($activeSection === section.id) {
+                activeSection.set(null);
+              } else {
+                activeSection.set(section.id);
+              }
+            }}"
           >
             <div
               class="nav-button link"
               class:open="{section.id === $activeSection}"
             >
-              <a href="{normalizeUrl(section.url)}">
+              <span>
                 {section.name}
-              </a>
+              </span>
               <button class="button">
-                <DownArrow />
+                <DownArrow rotate="{section.id === $activeSection}" />
               </button>
             </div>
             {#if $activeSection === section.id}
@@ -65,14 +68,17 @@
       {/each}
       <li
         class="nav-item"
-        on:mouseenter="{() => activeSection.set('more')}"
-        on:focus="{() => activeSection.set('more')}"
-        on:mouseleave="{() => activeSection.set(null)}"
-        on:blur="{() => activeSection.set(null)}"
+        on:click="{() => {
+          if ($activeSection === 'more') {
+            activeSection.set(null);
+          } else {
+            activeSection.set('more');
+          }
+        }}"
       >
         <div class="nav-button more" class:open="{$activeSection === 'more'}">
           <button class="button">
-            More <DownArrow />
+            More <DownArrow rotate="{$activeSection === 'more'}" />
           </button>
         </div>
         {#if $activeSection === 'more'}
@@ -120,11 +126,23 @@
       align-items: center;
       cursor: pointer;
 
-      a {
+      a,
+      span {
         color: var(--nav-primary, $tr-dark-grey);
         &:hover,
         &:active {
           text-decoration: none;
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            height: 4px;
+            background: var(--nav-accent, $tr-orange);
+            opacity: 0.5;
+          }
         }
       }
 
@@ -141,6 +159,7 @@
         display: block;
         height: 4px;
         background: var(--nav-accent, $tr-orange);
+        opacity: 1 !important;
       }
     }
 
@@ -157,6 +176,7 @@
         display: block;
         height: 4px;
         background: var(--nav-accent, $tr-orange);
+        opacity: 0.5;
       }
     }
   }
@@ -175,18 +195,6 @@
 
     &:not(.focused) {
       outline: none;
-    }
-  }
-
-  .dropdown {
-    position: absolute;
-    z-index: $zindex-dropdown;
-    left: 0;
-    top: $nav-height;
-    width: 100%;
-
-    @include for-mobile {
-      top: $mobile-nav-height;
     }
   }
 
