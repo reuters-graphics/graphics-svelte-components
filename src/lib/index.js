@@ -26,3 +26,4 @@ export {
   themes as SiteFooterThemes
 } from './SiteFooter/index.svelte';
 export { default as Video } from './Video/index.svelte';
+export { default as HybridMap } from './HybridMap/index.svelte';
