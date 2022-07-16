@@ -17,10 +17,12 @@
   import QuickLinks from './QuickLinks.svelte';
   import CompanyLinks from './CompanyLinks.svelte';
   import LegalLinks from './LegalLinks.svelte';
+  import Referrals from './Referrals/index.svelte';
 
   import data from './data.json';
 
   export let theme = {};
+  export let referrals = [];
 
   const navTheme = { ...themes.default, ...theme };
 </script>
@@ -32,13 +34,20 @@
     --nav-rules: ${navTheme.rules};
   `}"
 >
-  <QuickLinks links="{data[0]}" />
-  <CompanyLinks links="{data[0]}" />
-  <LegalLinks links="{data[0]}" />
+  <div>
+    <Referrals referrals="{referrals}" />
+    <QuickLinks links="{data[0]}" />
+    <CompanyLinks links="{data[0]}" />
+    <LegalLinks links="{data[0]}" />
+  </div>
 </footer>
 
 <style lang="scss">
   footer {
     background-color: var(--nav-background, #fff);
+    div {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
   }
 </style>
