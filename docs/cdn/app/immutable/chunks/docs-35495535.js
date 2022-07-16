@@ -22,7 +22,7 @@ import {
   t as O,
   L as se,
   a as d,
-  h as q,
+  h as j,
   d as u,
   b as c,
   g as I,
@@ -57,7 +57,7 @@ import {
   C as Tt,
 } from './index-83a5d9f9.js';
 import { n as K } from './index-c889ff85.js';
-import './main-17f5a974.js';
+import './main-899ce102.js';
 import { D as Ie } from './index-16ec1060.js';
 import './paths-396f020f.js';
 function Vt(a) {
@@ -83,7 +83,7 @@ function Vt(a) {
       var o = d(e);
       s = se(o, 'title', {});
       var r = d(s);
-      (t = q(r, 'Gallery')),
+      (t = j(r, 'Gallery')),
         r.forEach(u),
         (l = se(o, 'path', { d: !0 })),
         d(l).forEach(u),
@@ -148,7 +148,7 @@ function Bt(a) {
       var i = d(e);
       s = se(i, 'title', {});
       var o = d(s);
-      (t = q(o, 'Pictures')),
+      (t = j(o, 'Pictures')),
         o.forEach(u),
         (l = se(i, 'path', { d: !0 })),
         d(l).forEach(u),
@@ -206,7 +206,7 @@ function Dt(a) {
       var i = d(e);
       s = se(i, 'title', {});
       var o = d(s);
-      (t = q(o, 'Videos')),
+      (t = j(o, 'Videos')),
         o.forEach(u),
         (l = se(i, 'path', { d: !0 })),
         d(l).forEach(u),
@@ -250,6 +250,10 @@ function Oe(a, e, s) {
   const t = a.slice();
   return (t[4] = e[s]), t;
 }
+function je(a, e, s) {
+  const t = a.slice();
+  return (t[4] = e[s]), t;
+}
 function qe(a, e, s) {
   const t = a.slice();
   return (t[4] = e[s]), t;
@@ -259,10 +263,6 @@ function Fe(a, e, s) {
   return (t[4] = e[s]), t;
 }
 function Ue(a, e, s) {
-  const t = a.slice();
-  return (t[4] = e[s]), t;
-}
-function je(a, e, s) {
   const t = a.slice();
   return (t[4] = e[s]), t;
 }
@@ -290,12 +290,12 @@ function ze(a) {
     T,
     P,
     b,
-    F,
+    q,
     w,
     Z,
     A,
-    j,
     U,
+    F,
     Q,
     D,
     V;
@@ -307,7 +307,7 @@ function ze(a) {
   (i = le(a)), (o = L[i] = z[i](a));
   let ie = a[0].browse_links,
     G = [];
-  for (let y = 0; y < ie.length; y += 1) G[y] = Je(Fe(a, ie, y));
+  for (let y = 0; y < ie.length; y += 1) G[y] = Je(qe(a, ie, y));
   let k = a[1] >= xe && Ke(a),
     N = a[0].about_links,
     Y = [];
@@ -337,13 +337,13 @@ function ze(a) {
         (T = v('section')),
         (P = v('h3')),
         (b = O('About Reuters')),
-        (F = M()),
+        (q = M()),
         (w = v('ul'));
       for (let y = 0; y < Y.length; y += 1) Y[y].c();
       (Z = M()),
         (A = v('section')),
-        (j = v('h3')),
-        (U = O('Stay Informed')),
+        (U = v('h3')),
+        (F = O('Stay Informed')),
         (Q = M()),
         (D = v('ul'));
       for (let y = 0; y < J.length; y += 1) J[y].c();
@@ -354,7 +354,7 @@ function ze(a) {
       var X = d(e);
       s = g(X, 'H2', { class: !0 });
       var ee = d(s);
-      (t = q(ee, 'Site Index')),
+      (t = j(ee, 'Site Index')),
         ee.forEach(u),
         (l = B(X)),
         (n = g(X, 'DIV', { class: !0 }));
@@ -363,7 +363,7 @@ function ze(a) {
       var pe = d(h);
       _ = g(pe, 'H3', { class: !0 });
       var $e = d(_);
-      (p = q($e, 'Browse')),
+      (p = j($e, 'Browse')),
         $e.forEach(u),
         ($ = B(pe)),
         (m = g(pe, 'UL', { class: !0 }));
@@ -380,9 +380,9 @@ function ze(a) {
       var ye = d(T);
       P = g(ye, 'H3', { class: !0 });
       var Te = d(P);
-      (b = q(Te, 'About Reuters')),
+      (b = j(Te, 'About Reuters')),
         Te.forEach(u),
-        (F = B(ye)),
+        (q = B(ye)),
         (w = g(ye, 'UL', { class: !0 }));
       var Ve = d(w);
       for (let ge = 0; ge < Y.length; ge += 1) Y[ge].l(Ve);
@@ -391,9 +391,9 @@ function ze(a) {
         (Z = B(Ee)),
         (A = g(Ee, 'SECTION', { class: !0 }));
       var Le = d(A);
-      j = g(Le, 'H3', { class: !0 });
-      var Me = d(j);
-      (U = q(Me, 'Stay Informed')),
+      U = g(Le, 'H3', { class: !0 });
+      var Me = d(U);
+      (F = j(Me, 'Stay Informed')),
         Me.forEach(u),
         (Q = B(Le)),
         (D = g(Le, 'UL', { class: !0 }));
@@ -414,7 +414,7 @@ function ze(a) {
         c(P, 'class', 'svelte-fhk6t1'),
         c(w, 'class', 'svelte-fhk6t1'),
         c(T, 'class', 'about'),
-        c(j, 'class', 'svelte-fhk6t1'),
+        c(U, 'class', 'svelte-fhk6t1'),
         c(D, 'class', 'svelte-fhk6t1'),
         c(A, 'class', 'stay-informed svelte-fhk6t1'),
         c(S, 'class', 'about-and-stay-informed svelte-fhk6t1'),
@@ -442,10 +442,10 @@ function ze(a) {
         f(S, T),
         f(T, P),
         f(P, b),
-        f(T, F),
+        f(T, q),
         f(T, w);
       for (let ee = 0; ee < Y.length; ee += 1) Y[ee].m(w, null);
-      f(S, Z), f(S, A), f(A, j), f(j, U), f(A, Q), f(A, D);
+      f(S, Z), f(S, A), f(A, U), f(U, F), f(A, Q), f(A, D);
       for (let ee = 0; ee < J.length; ee += 1) J[ee].m(D, null);
       V = !0;
     },
@@ -469,7 +469,7 @@ function ze(a) {
         ie = y[0].browse_links;
         let R;
         for (R = 0; R < ie.length; R += 1) {
-          const pe = Fe(y, ie, R);
+          const pe = qe(y, ie, R);
           G[R] ? G[R].p(pe, X) : ((G[R] = Je(pe)), G[R].c(), G[R].m(m, null));
         }
         for (; R < G.length; R += 1) G[R].d(1);
@@ -527,7 +527,7 @@ function Zt(a) {
     n,
     i = a[0].latest_links,
     o = [];
-  for (let r = 0; r < i.length; r += 1) o[r] = Ge(Ue(a, i, r));
+  for (let r = 0; r < i.length; r += 1) o[r] = Ge(Fe(a, i, r));
   return {
     c() {
       (e = v('section')),
@@ -543,7 +543,7 @@ function Zt(a) {
       var h = d(e);
       s = g(h, 'H3', { class: !0 });
       var _ = d(s);
-      (t = q(_, 'Latest')),
+      (t = j(_, 'Latest')),
         _.forEach(u),
         (l = B(h)),
         (n = g(h, 'UL', { class: !0 }));
@@ -565,7 +565,7 @@ function Zt(a) {
         i = r[0].latest_links;
         let _;
         for (_ = 0; _ < i.length; _ += 1) {
-          const p = Ue(r, i, _);
+          const p = Fe(r, i, _);
           o[_] ? o[_].p(p, h) : ((o[_] = Ge(p)), o[_].c(), o[_].m(n, null));
         }
         for (; _ < o.length; _ += 1) o[_].d(1);
@@ -598,7 +598,7 @@ function Ot(a) {
   for (let b = 0; b < E.length; b += 1) C[b] = We(Pe(a, E, b));
   let S = a[0].media_links,
     T = [];
-  for (let b = 0; b < S.length; b += 1) T[b] = Ye(je(a, S, b));
+  for (let b = 0; b < S.length; b += 1) T[b] = Ye(Ue(a, S, b));
   const P = (b) =>
     H(T[b], 1, 1, () => {
       T[b] = null;
@@ -623,12 +623,12 @@ function Ot(a) {
     },
     l(b) {
       e = g(b, 'DIV', { class: !0 });
-      var F = d(e);
-      s = g(F, 'SECTION', { class: !0 });
+      var q = d(e);
+      s = g(q, 'SECTION', { class: !0 });
       var w = d(s);
       t = g(w, 'H3', { class: !0 });
       var Z = d(t);
-      (l = q(Z, 'Latest')),
+      (l = j(Z, 'Latest')),
         Z.forEach(u),
         (n = B(w)),
         (i = g(w, 'UL', { class: !0 }));
@@ -636,18 +636,18 @@ function Ot(a) {
       for (let D = 0; D < C.length; D += 1) C[D].l(A);
       A.forEach(u),
         w.forEach(u),
-        (o = B(F)),
-        (r = g(F, 'SECTION', { class: !0 }));
-      var j = d(r);
-      h = g(j, 'H3', { class: !0 });
-      var U = d(h);
-      (_ = q(U, 'Media')),
-        U.forEach(u),
-        (p = B(j)),
-        ($ = g(j, 'UL', { class: !0 }));
+        (o = B(q)),
+        (r = g(q, 'SECTION', { class: !0 }));
+      var U = d(r);
+      h = g(U, 'H3', { class: !0 });
+      var F = d(h);
+      (_ = j(F, 'Media')),
+        F.forEach(u),
+        (p = B(U)),
+        ($ = g(U, 'UL', { class: !0 }));
       var Q = d($);
       for (let D = 0; D < T.length; D += 1) T[D].l(Q);
-      Q.forEach(u), j.forEach(u), F.forEach(u), this.h();
+      Q.forEach(u), U.forEach(u), q.forEach(u), this.h();
     },
     h() {
       c(t, 'class', 'svelte-fhk6t1'),
@@ -658,31 +658,31 @@ function Ot(a) {
         c(r, 'class', 'link-group media svelte-fhk6t1'),
         c(e, 'class', 'latest-and-media svelte-fhk6t1');
     },
-    m(b, F) {
-      I(b, e, F), f(e, s), f(s, t), f(t, l), f(s, n), f(s, i);
+    m(b, q) {
+      I(b, e, q), f(e, s), f(s, t), f(t, l), f(s, n), f(s, i);
       for (let w = 0; w < C.length; w += 1) C[w].m(i, null);
       f(e, o), f(e, r), f(r, h), f(h, _), f(r, p), f(r, $);
       for (let w = 0; w < T.length; w += 1) T[w].m($, null);
       m = !0;
     },
-    p(b, F) {
-      if (F & 1) {
+    p(b, q) {
+      if (q & 1) {
         E = b[0].latest_links;
         let w;
         for (w = 0; w < E.length; w += 1) {
           const Z = Pe(b, E, w);
-          C[w] ? C[w].p(Z, F) : ((C[w] = We(Z)), C[w].c(), C[w].m(i, null));
+          C[w] ? C[w].p(Z, q) : ((C[w] = We(Z)), C[w].c(), C[w].m(i, null));
         }
         for (; w < C.length; w += 1) C[w].d(1);
         C.length = E.length;
       }
-      if (F & 5) {
+      if (q & 5) {
         S = b[0].media_links;
         let w;
         for (w = 0; w < S.length; w += 1) {
-          const Z = je(b, S, w);
+          const Z = Ue(b, S, w);
           T[w]
-            ? (T[w].p(Z, F), x(T[w], 1))
+            ? (T[w].p(Z, q), x(T[w], 1))
             : ((T[w] = Ye(Z)), T[w].c(), x(T[w], 1), T[w].m($, null));
         }
         for (de(), w = S.length; w < T.length; w += 1) P(w);
@@ -691,13 +691,13 @@ function Ot(a) {
     },
     i(b) {
       if (!m) {
-        for (let F = 0; F < S.length; F += 1) x(T[F]);
+        for (let q = 0; q < S.length; q += 1) x(T[q]);
         m = !0;
       }
     },
     o(b) {
       T = T.filter(Boolean);
-      for (let F = 0; F < T.length; F += 1) H(T[F]);
+      for (let q = 0; q < T.length; q += 1) H(T[q]);
       m = !1;
     },
     d(b) {
@@ -721,7 +721,7 @@ function Ge(a) {
       var r = d(e);
       s = g(r, 'A', { href: !0, class: !0 });
       var h = d(s);
-      (l = q(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
+      (l = j(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
     },
     h() {
       c(s, 'href', (n = K(a[4].url))),
@@ -756,7 +756,7 @@ function We(a) {
       var r = d(e);
       s = g(r, 'A', { href: !0, class: !0 });
       var h = d(s);
-      (l = q(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
+      (l = j(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
     },
     h() {
       c(s, 'href', (n = K(a[4].url))),
@@ -813,7 +813,7 @@ function Ye(a) {
           (l = B(E)),
           (n = g(E, 'A', { href: !0, class: !0 }));
         var S = d(n);
-        (o = q(S, i)), S.forEach(u), (h = B(E)), E.forEach(u), this.h();
+        (o = j(S, i)), S.forEach(u), (h = B(E)), E.forEach(u), this.h();
       },
       h() {
         c(s, 'class', 'symbol svelte-fhk6t1'),
@@ -879,7 +879,7 @@ function Je(a) {
       var r = d(e);
       s = g(r, 'A', { href: !0, class: !0 });
       var h = d(s);
-      (l = q(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
+      (l = j(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
     },
     h() {
       c(s, 'href', (n = K(a[4].url))),
@@ -907,7 +907,7 @@ function Ke(a) {
     i,
     o = a[0].media_links,
     r = [];
-  for (let _ = 0; _ < o.length; _ += 1) r[_] = Qe(qe(a, o, _));
+  for (let _ = 0; _ < o.length; _ += 1) r[_] = Qe(je(a, o, _));
   const h = (_) =>
     H(r[_], 1, 1, () => {
       r[_] = null;
@@ -927,7 +927,7 @@ function Ke(a) {
       var p = d(e);
       s = g(p, 'H3', { class: !0 });
       var $ = d(s);
-      (t = q($, 'Media')),
+      (t = j($, 'Media')),
         $.forEach(u),
         (l = B(p)),
         (n = g(p, 'UL', { class: !0 }));
@@ -950,7 +950,7 @@ function Ke(a) {
         o = _[0].media_links;
         let $;
         for ($ = 0; $ < o.length; $ += 1) {
-          const m = qe(_, o, $);
+          const m = je(_, o, $);
           r[$]
             ? (r[$].p(m, p), x(r[$], 1))
             : ((r[$] = Qe(m)), r[$].c(), x(r[$], 1), r[$].m(n, null));
@@ -1013,7 +1013,7 @@ function Qe(a) {
           (l = B(E)),
           (n = g(E, 'A', { href: !0, class: !0 }));
         var S = d(n);
-        (o = q(S, i)), S.forEach(u), (h = B(E)), E.forEach(u), this.h();
+        (o = j(S, i)), S.forEach(u), (h = B(E)), E.forEach(u), this.h();
       },
       h() {
         c(s, 'class', 'symbol svelte-fhk6t1'),
@@ -1079,7 +1079,7 @@ function Xe(a) {
       var r = d(e);
       s = g(r, 'A', { href: !0, class: !0 });
       var h = d(s);
-      (l = q(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
+      (l = j(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
     },
     h() {
       c(s, 'href', (n = K(a[4].url))),
@@ -1114,7 +1114,7 @@ function et(a) {
       var r = d(e);
       s = g(r, 'A', { href: !0, class: !0 });
       var h = d(s);
-      (l = q(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
+      (l = j(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
     },
     h() {
       c(s, 'href', (n = K(a[4].url))),
@@ -1133,7 +1133,7 @@ function et(a) {
     },
   };
 }
-function qt(a) {
+function jt(a) {
   let e, s, t, l;
   Et(a[3]);
   let n = a[0].latest_links && ze(a);
@@ -1174,7 +1174,7 @@ function qt(a) {
   };
 }
 const xe = 745;
-function Ft(a, e, s) {
+function qt(a, e, s) {
   const t = { graphics: Mt, pictures: Ht, videos: Nt };
   let { links: l = {} } = e,
     n = 1200;
@@ -1188,12 +1188,12 @@ function Ft(a, e, s) {
     [l, n, t, i]
   );
 }
-class Ut extends ue {
+class Ft extends ue {
   constructor(e) {
-    super(), fe(this, e, Ft, qt, he, { links: 0 });
+    super(), fe(this, e, qt, jt, he, { links: 0 });
   }
 }
-function jt(a) {
+function Ut(a) {
   let e, s;
   return {
     c() {
@@ -1248,7 +1248,7 @@ function Pt(a, e, s) {
 }
 class zt extends ue {
   constructor(e) {
-    super(), fe(this, e, Pt, jt, he, { width: 0 });
+    super(), fe(this, e, Pt, Ut, he, { width: 0 });
   }
 }
 function Gt(a) {
@@ -1518,7 +1518,7 @@ function st(a) {
     P = a[0].social_links,
     b = [];
   for (let w = 0; w < P.length; w += 1) b[w] = lt(tt(a, P, w));
-  const F = (w) =>
+  const q = (w) =>
     H(b[w], 1, 1, () => {
       b[w] = null;
     });
@@ -1548,23 +1548,23 @@ function st(a) {
       s = g(Z, 'DIV', { class: !0 });
       var A = d(s);
       t = g(A, 'ARTICLE', { class: !0 });
-      var j = d(t);
-      l = g(j, 'H2', { class: !0 });
-      var U = d(l);
-      (n = q(U, 'Information you can trust')),
-        U.forEach(u),
-        (i = B(j)),
-        (o = g(j, 'P', { class: !0 }));
+      var U = d(t);
+      l = g(U, 'H2', { class: !0 });
+      var F = d(l);
+      (n = j(F, 'Information you can trust')),
+        F.forEach(u),
+        (i = B(U)),
+        (o = g(U, 'P', { class: !0 }));
       var Q = d(o);
-      (h = q(Q, r)),
+      (h = j(Q, r)),
         Q.forEach(u),
-        j.forEach(u),
+        U.forEach(u),
         (_ = B(A)),
         (p = g(A, 'DIV', { class: !0 }));
       var D = d(p);
       $ = g(D, 'H2', { class: !0 });
       var V = d($);
-      (m = q(V, 'Follow Us')), V.forEach(u), (E = B(D)), (C = g(D, 'DIV', {}));
+      (m = j(V, 'Follow Us')), V.forEach(u), (E = B(D)), (C = g(D, 'DIV', {}));
       var z = d(C);
       S = g(z, 'UL', { class: !0 });
       var L = d(S);
@@ -1613,12 +1613,12 @@ function st(a) {
         P = w[0].social_links;
         let A;
         for (A = 0; A < P.length; A += 1) {
-          const j = tt(w, P, A);
+          const U = tt(w, P, A);
           b[A]
-            ? (b[A].p(j, Z), x(b[A], 1))
-            : ((b[A] = lt(j)), b[A].c(), x(b[A], 1), b[A].m(S, null));
+            ? (b[A].p(U, Z), x(b[A], 1))
+            : ((b[A] = lt(U)), b[A].c(), x(b[A], 1), b[A].m(S, null));
         }
-        for (de(), A = P.length; A < b.length; A += 1) F(A);
+        for (de(), A = P.length; A < b.length; A += 1) q(A);
         _e();
       }
     },
@@ -1805,20 +1805,20 @@ function at(a) {
     T,
     P = a[0].copyright_year + '',
     b,
-    F,
+    q,
     w,
     Z,
     A,
-    j = a[0].ad_links,
-    U = [];
-  for (let V = 0; V < j.length; V += 1) U[V] = ot(rt(a, j, V));
+    U = a[0].ad_links,
+    F = [];
+  for (let V = 0; V < U.length; V += 1) F[V] = ot(rt(a, U, V));
   let Q = a[0].misc_links.filter(ct),
     D = [];
   for (let V = 0; V < Q.length; V += 1) D[V] = it(nt(a, Q, V));
   return {
     c() {
       (e = v('section')), (s = v('div')), (t = v('section')), (l = v('ul'));
-      for (let V = 0; V < U.length; V += 1) U[V].c();
+      for (let V = 0; V < F.length; V += 1) F[V].c();
       (n = M()),
         (i = v('p')),
         (o = O('All quotes delayed a minimum of 15 minutes. ')),
@@ -1833,7 +1833,7 @@ function at(a) {
         (S = v('p')),
         (T = O('\xA9 ')),
         (b = O(P)),
-        (F = O(` Reuters.
+        (q = O(` Reuters.
         `)),
         (w = v('a')),
         (Z = O('All rights reserved')),
@@ -1848,15 +1848,15 @@ function at(a) {
       var le = d(t);
       l = g(le, 'UL', { class: !0 });
       var ie = d(l);
-      for (let y = 0; y < U.length; y += 1) U[y].l(ie);
+      for (let y = 0; y < F.length; y += 1) F[y].l(ie);
       ie.forEach(u), le.forEach(u), (n = B(L)), (i = g(L, 'P', { class: !0 }));
       var G = d(i);
-      (o = q(G, 'All quotes delayed a minimum of 15 minutes. ')),
+      (o = j(G, 'All quotes delayed a minimum of 15 minutes. ')),
         (r = g(G, 'A', { href: !0, class: !0 }));
       var k = d(r);
-      (h = q(k, 'See here for a complete list of exchanges and delays')),
+      (h = j(k, 'See here for a complete list of exchanges and delays')),
         k.forEach(u),
-        (p = q(G, '.')),
+        (p = j(G, '.')),
         G.forEach(u),
         ($ = B(L)),
         (m = g(L, 'SECTION', { class: !0 }));
@@ -1866,16 +1866,16 @@ function at(a) {
       for (let y = 0; y < D.length; y += 1) D[y].l(Y);
       Y.forEach(u), N.forEach(u), (C = B(L)), (S = g(L, 'P', { class: !0 }));
       var ne = d(S);
-      (T = q(ne, '\xA9 ')),
-        (b = q(ne, P)),
-        (F = q(
+      (T = j(ne, '\xA9 ')),
+        (b = j(ne, P)),
+        (q = j(
           ne,
           ` Reuters.
         `
         )),
         (w = g(ne, 'A', { href: !0, class: !0 }));
       var J = d(w);
-      (Z = q(J, 'All rights reserved')),
+      (Z = j(J, 'All rights reserved')),
         J.forEach(u),
         ne.forEach(u),
         L.forEach(u),
@@ -1898,7 +1898,7 @@ function at(a) {
     },
     m(V, z) {
       I(V, e, z), f(e, s), f(s, t), f(t, l);
-      for (let L = 0; L < U.length; L += 1) U[L].m(l, null);
+      for (let L = 0; L < F.length; L += 1) F[L].m(l, null);
       f(s, n),
         f(s, i),
         f(i, o),
@@ -1909,18 +1909,18 @@ function at(a) {
         f(s, m),
         f(m, E);
       for (let L = 0; L < D.length; L += 1) D[L].m(E, null);
-      f(s, C), f(s, S), f(S, T), f(S, b), f(S, F), f(S, w), f(w, Z);
+      f(s, C), f(s, S), f(S, T), f(S, b), f(S, q), f(S, w), f(w, Z);
     },
     p(V, z) {
       if (z & 1) {
-        j = V[0].ad_links;
+        U = V[0].ad_links;
         let L;
-        for (L = 0; L < j.length; L += 1) {
-          const le = rt(V, j, L);
-          U[L] ? U[L].p(le, z) : ((U[L] = ot(le)), U[L].c(), U[L].m(l, null));
+        for (L = 0; L < U.length; L += 1) {
+          const le = rt(V, U, L);
+          F[L] ? F[L].p(le, z) : ((F[L] = ot(le)), F[L].c(), F[L].m(l, null));
         }
-        for (; L < U.length; L += 1) U[L].d(1);
-        U.length = j.length;
+        for (; L < F.length; L += 1) F[L].d(1);
+        F.length = U.length;
       }
       if (
         (z & 1 && _ !== (_ = K(V[0].disclaimer_link)) && c(r, 'href', _), z & 1)
@@ -1938,7 +1938,7 @@ function at(a) {
         z & 1 && A !== (A = K(V[0].copyright_link)) && c(w, 'href', A);
     },
     d(V) {
-      V && u(e), ke(U, V), ke(D, V);
+      V && u(e), ke(F, V), ke(D, V);
     },
   };
 }
@@ -1958,7 +1958,7 @@ function ot(a) {
       var r = d(e);
       s = g(r, 'A', { href: !0, class: !0 });
       var h = d(s);
-      (l = q(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
+      (l = j(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
     },
     h() {
       c(s, 'href', (n = K(a[1].url))),
@@ -1993,7 +1993,7 @@ function it(a) {
       var r = d(e);
       s = g(r, 'A', { href: !0, class: !0 });
       var h = d(s);
-      (l = q(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
+      (l = j(h, t)), h.forEach(u), (i = B(r)), r.forEach(u), this.h();
     },
     h() {
       c(s, 'href', (n = K(a[1].url))),
@@ -2263,7 +2263,7 @@ function vs(a) {
         var _ = d(s);
         ce(t.$$.fragment, _), (l = B(_)), (n = g(_, 'P', { class: !0 }));
         var p = d(n);
-        (i = q(p, a[2])), p.forEach(u), _.forEach(u), h.forEach(u), this.h();
+        (i = j(p, a[2])), p.forEach(u), _.forEach(u), h.forEach(u), this.h();
       },
       h() {
         c(n, 'class', 'svelte-1sz614n'),
@@ -2638,7 +2638,7 @@ function Ls(a) {
       var _ = d(s);
       t = g(_, 'A', { href: !0, class: !0 });
       var p = d(t);
-      (l = q(p, 'More from Reuters Graphics')),
+      (l = j(p, 'More from Reuters Graphics')),
         p.forEach(u),
         _.forEach(u),
         (n = B(h)),
@@ -2852,7 +2852,7 @@ function xs(a) {
   let e, s, t, l, n, i, o, r, h, _;
   return (
     (t = new Is({ props: { referrals: a[0] } })),
-    (n = new Ut({ props: { links: Ae[0] } })),
+    (n = new Ft({ props: { links: Ae[0] } })),
     (o = new os({ props: { links: Ae[0] } })),
     (h = new us({ props: { links: Ae[0] } })),
     {
@@ -2885,7 +2885,7 @@ function xs(a) {
           this.h();
       },
       h() {
-        c(s, 'class', 'svelte-1qd1kdn'),
+        c(s, 'class', 'svelte-1w89kaj'),
           c(
             e,
             'style',
@@ -2895,7 +2895,7 @@ function xs(a) {
     --nav-rules: ${a[1].rules};
   `
           ),
-          c(e, 'class', 'svelte-1qd1kdn');
+          c(e, 'class', 'svelte-1w89kaj');
       },
       m(p, $) {
         I(p, e, $),
@@ -3063,7 +3063,7 @@ function Vs(a) {
     T,
     P,
     b,
-    F,
+    q,
     w = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteFooter<span class="token punctuation">,</span> SiteFooterThemes <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -3071,8 +3071,8 @@ function Vs(a) {
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteFooter</span> <span class="token attr-name">theme=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>SiteFooterThemes<span class="token punctuation">.</span>dark<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code>`,
     Z,
     A,
-    j,
     U,
+    F,
     Q,
     D,
     V,
@@ -3137,11 +3137,11 @@ function Vs(a) {
           (T = v('p')),
           (P = O('Change colours with exported themes.')),
           (b = M()),
-          (F = v('pre')),
+          (q = v('pre')),
           (Z = M()),
           ae(A.$$.fragment),
-          (j = M()),
-          (U = v('section')),
+          (U = M()),
+          (F = v('section')),
           (Q = v('p')),
           (D = O('You can customise a colour theme.')),
           (V = M()),
@@ -3155,14 +3155,14 @@ function Vs(a) {
         var N = d(e);
         s = g(N, 'H2', {});
         var Y = d(s);
-        (t = q(Y, _t)), Y.forEach(u), (l = B(N)), (n = g(N, 'P', {}));
+        (t = j(Y, _t)), Y.forEach(u), (l = B(N)), (n = g(N, 'P', {}));
         var ne = d(n);
-        (i = q(ne, 'Reuters dotcom site footer, ported from ')),
+        (i = j(ne, 'Reuters dotcom site footer, ported from ')),
           (o = g(ne, 'A', { href: !0, rel: !0 }));
         var J = d(o);
-        (r = q(J, 'Raptor UI components')),
+        (r = j(J, 'Raptor UI components')),
           J.forEach(u),
-          (h = q(ne, '.')),
+          (h = j(ne, '.')),
           ne.forEach(u),
           N.forEach(u),
           (_ = B(k)),
@@ -3176,21 +3176,21 @@ function Vs(a) {
         var X = d(S);
         T = g(X, 'P', {});
         var ee = d(T);
-        (P = q(ee, 'Change colours with exported themes.')),
+        (P = j(ee, 'Change colours with exported themes.')),
           ee.forEach(u),
           X.forEach(u),
           (b = B(k)),
-          (F = g(k, 'PRE', { class: !0 }));
-        var R = d(F);
+          (q = g(k, 'PRE', { class: !0 }));
+        var R = d(q);
         R.forEach(u),
           (Z = B(k)),
           ce(A.$$.fragment, k),
-          (j = B(k)),
-          (U = g(k, 'SECTION', {}));
-        var pe = d(U);
+          (U = B(k)),
+          (F = g(k, 'SECTION', {}));
+        var pe = d(F);
         Q = g(pe, 'P', {});
         var $e = d(Q);
-        (D = q($e, 'You can customise a colour theme.')),
+        (D = j($e, 'You can customise a colour theme.')),
           $e.forEach(u),
           pe.forEach(u),
           (V = B(k)),
@@ -3206,7 +3206,7 @@ function Vs(a) {
         ),
           c(o, 'rel', 'nofollow'),
           c(p, 'class', 'language-svelte'),
-          c(F, 'class', 'language-svelte'),
+          c(q, 'class', 'language-svelte'),
           c(z, 'class', 'language-svelte');
       },
       m(k, N) {
@@ -3229,13 +3229,13 @@ function Vs(a) {
           f(S, T),
           f(T, P),
           I(k, b, N),
-          I(k, F, N),
-          (F.innerHTML = w),
+          I(k, q, N),
+          (q.innerHTML = w),
           I(k, Z, N),
           oe(A, k, N),
-          I(k, j, N),
           I(k, U, N),
-          f(U, Q),
+          I(k, F, N),
+          f(F, Q),
           f(Q, D),
           I(k, V, N),
           I(k, z, N),
@@ -3274,11 +3274,11 @@ function Vs(a) {
           k && u(C),
           k && u(S),
           k && u(b),
-          k && u(F),
+          k && u(q),
           k && u(Z),
           re(A, k),
-          k && u(j),
           k && u(U),
+          k && u(F),
           k && u(V),
           k && u(z),
           k && u(le),
@@ -3292,10 +3292,10 @@ const Ms = {
     description: 'Reuters dotcom site footer shadow component.',
     slug: 'site-footer',
   },
-  { title: _t, description: qs, slug: Fs } = Ms;
-class Us extends ue {
+  { title: _t, description: js, slug: qs } = Ms;
+class Fs extends ue {
   constructor(e) {
     super(), fe(this, e, null, Vs, he, {});
   }
 }
-export { Us as default, Ms as metadata };
+export { Fs as default, Ms as metadata };
