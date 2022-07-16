@@ -1904,10 +1904,11 @@ section.referrals.svelte-1pp4aaj h2.svelte-1pp4aaj {
 section.referrals.svelte-1pp4aaj h2 a.svelte-1pp4aaj {
   color: var(--nav-primary, #666);
 }
-footer.svelte-1qd1kdn.svelte-1qd1kdn {
+footer.svelte-1w89kaj.svelte-1w89kaj {
+  margin-top: 3rem;
   background-color: var(--nav-background, #fff);
 }
-footer.svelte-1qd1kdn div.svelte-1qd1kdn {
+footer.svelte-1w89kaj div.svelte-1w89kaj {
   max-width: 1400px;
   margin: 0 auto;
 }
