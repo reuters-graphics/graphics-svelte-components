@@ -25,5 +25,6 @@ export {
   default as SiteFooter,
   themes as SiteFooterThemes
 } from './SiteFooter/index.svelte';
+export { default as Spinner } from './Spinner/index.svelte';
 export { default as Video } from './Video/index.svelte';
 export { default as Visible } from './Visible/index.svelte';
