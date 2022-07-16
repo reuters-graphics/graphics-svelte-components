@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-58031b56.js",
+    "file": "start-aaa2f88a.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -35,14 +35,14 @@
     ]
   },
   "pages/components/[slug].svelte": {
-    "file": "pages/components/_slug_.svelte-df9d2b39.js",
+    "file": "pages/components/_slug_.svelte-aa67feef.js",
     "src": "pages/components/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ade19073.js",
       "_index-83a5d9f9.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
@@ -67,6 +67,7 @@
       "src/lib/Sharer/docs.svx",
       "src/lib/SiteFooter/docs.svx",
       "src/lib/SiteHeader/docs.svx",
+      "src/lib/Spinner/docs.svx",
       "src/lib/Video/docs.svx",
       "src/lib/Visible/docs.svx"
     ],
@@ -75,13 +76,13 @@
     ]
   },
   "pages/index.svelte": {
-    "file": "pages/index.svelte-2f65d344.js",
+    "file": "pages/index.svelte-9ace47d6.js",
     "src": "pages/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -103,25 +104,25 @@
   "_preload-helper-ade19073.js": {
     "file": "chunks/preload-helper-ade19073.js"
   },
-  "_main-da543ed8.js": {
-    "file": "chunks/main-da543ed8.js",
+  "_main-08bea4b0.js": {
+    "file": "chunks/main-08bea4b0.js",
     "imports": [
       "_index-83a5d9f9.js",
       "_paths-396f020f.js"
     ],
     "css": [
-      "assets/main-ef475a35.css"
+      "assets/main-0ce3135d.css"
     ]
   },
   "src/lib/Ai2svelte/docs.svx": {
-    "file": "chunks/docs-d348fdc4.js",
+    "file": "chunks/docs-b3e5c1ff.js",
     "src": "src/lib/Ai2svelte/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ade19073.js",
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
@@ -141,13 +142,13 @@
     ]
   },
   "src/lib/BeforeAfter/docs.svx": {
-    "file": "chunks/docs-49a04161.js",
+    "file": "chunks/docs-f9f7ce76.js",
     "src": "src/lib/BeforeAfter/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -155,23 +156,23 @@
     ]
   },
   "src/lib/BodyText/docs.svx": {
-    "file": "chunks/docs-91a1f997.js",
+    "file": "chunks/docs-7eed4ffc.js",
     "src": "src/lib/BodyText/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ]
   },
   "src/lib/DatawrapperChart/docs.svx": {
-    "file": "chunks/docs-cf37e8cf.js",
+    "file": "chunks/docs-4126a2b1.js",
     "src": "src/lib/DatawrapperChart/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_index-16ec1060.js",
       "_paths-396f020f.js"
     ]
@@ -185,13 +186,13 @@
     ]
   },
   "src/lib/EndNotes/docs.svx": {
-    "file": "chunks/docs-dcd4f30a.js",
+    "file": "chunks/docs-f1b1c377.js",
     "src": "src/lib/EndNotes/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ]
   },
@@ -205,13 +206,13 @@
     ]
   },
   "src/lib/Framer/docs.svx": {
-    "file": "chunks/docs-6a4acf33.js",
+    "file": "chunks/docs-c953d11e.js",
     "src": "src/lib/Framer/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_index.es-99e9c10a.js",
       "_index-5b18af3d.js",
       "_paths-396f020f.js"
@@ -247,24 +248,24 @@
     ]
   },
   "src/lib/Image/docs.svx": {
-    "file": "chunks/docs-3bc545b2.js",
+    "file": "chunks/docs-84cc2fb3.js",
     "src": "src/lib/Image/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ]
   },
   "src/lib/LottieScroller/docs.svx": {
-    "file": "chunks/docs-30cf3903.js",
+    "file": "chunks/docs-57464e87.js",
     "src": "src/lib/LottieScroller/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -289,13 +290,13 @@
     ]
   },
   "src/lib/Referrals/docs.svx": {
-    "file": "chunks/docs-61a4820f.js",
+    "file": "chunks/docs-76cadc9f.js",
     "src": "src/lib/Referrals/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -327,14 +328,14 @@
     ]
   },
   "src/lib/Scroller/docs.svx": {
-    "file": "chunks/docs-0a598631.js",
+    "file": "chunks/docs-7ca98614.js",
     "src": "src/lib/Scroller/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ade19073.js",
       "_index-83a5d9f9.js",
       "_index-16ec1060.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
@@ -355,13 +356,13 @@
     ]
   },
   "src/lib/SiteFooter/docs.svx": {
-    "file": "chunks/docs-8bcf9fd9.js",
+    "file": "chunks/docs-9e03bfa8.js",
     "src": "src/lib/SiteFooter/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_index-c889ff85.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_index-16ec1060.js",
       "_paths-396f020f.js"
     ],
@@ -373,12 +374,12 @@
     "file": "chunks/index-c889ff85.js"
   },
   "src/lib/SiteHeader/docs.svx": {
-    "file": "chunks/docs-7faebc95.js",
+    "file": "chunks/docs-e6eba659.js",
     "src": "src/lib/SiteHeader/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_index-5b18af3d.js",
       "_index-83a1f0ce.js",
       "_index-c889ff85.js",
@@ -389,14 +390,25 @@
       "assets/docs-06bba01a.css"
     ]
   },
+  "src/lib/Spinner/docs.svx": {
+    "file": "chunks/docs-db80af71.js",
+    "src": "src/lib/Spinner/docs.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-83a5d9f9.js",
+      "_main-08bea4b0.js",
+      "_index-16ec1060.js",
+      "_paths-396f020f.js"
+    ]
+  },
   "src/lib/Video/docs.svx": {
-    "file": "chunks/docs-6e875f77.js",
+    "file": "chunks/docs-ee524d1f.js",
     "src": "src/lib/Video/docs.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-83a5d9f9.js",
       "_paths-396f020f.js",
-      "_main-da543ed8.js",
+      "_main-08bea4b0.js",
       "_index.es-99e9c10a.js",
       "_index-16ec1060.js"
     ],
