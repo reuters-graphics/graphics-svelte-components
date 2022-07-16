@@ -1762,8 +1762,154 @@ p.copyright.svelte-1wk8lrk a.svelte-1wk8lrk,
 p.disclaimer.svelte-1wk8lrk a.svelte-1wk8lrk {
   color: inherit;
 }
-footer.svelte-1g1nlaw {
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+}
+.svelte-1sz614n.svelte-1sz614n,
+.svelte-1sz614n.svelte-1sz614n:before,
+.svelte-1sz614n.svelte-1sz614n:after {
+  box-sizing: border-box;
+}
+p.svelte-1sz614n.svelte-1sz614n {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+a.svelte-1sz614n.svelte-1sz614n {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+a.svelte-1sz614n.svelte-1sz614n:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+a.svelte-1sz614n.svelte-1sz614n:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+a.svelte-1sz614n.svelte-1sz614n:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+.svelte-1sz614n.svelte-1sz614n::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+.image.svelte-1sz614n.svelte-1sz614n {
+  width: 100%;
+  padding-bottom: 50%;
+  background-size: cover;
+  background-position: 50%;
+}
+.referral.svelte-1sz614n.svelte-1sz614n {
+  width: 25%;
+  padding: 0 10px;
+}
+.referral.svelte-1sz614n div.image.svelte-1sz614n {
+  margin-bottom: 5px;
+  border: 1px solid var(--nav-rules, #efefef);
+  border-radius: 8px;
+}
+.referral.svelte-1sz614n a.svelte-1sz614n:hover {
+  text-decoration: none;
+}
+.referral.svelte-1sz614n a:hover p.svelte-1sz614n {
+  text-decoration: underline;
+}
+.referral.svelte-1sz614n p.svelte-1sz614n {
+  font-family: Knowledge, Source Sans Pro, Arial, sans-serif;
+  color: var(--nav-primary, #666);
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  text-transform: none;
+  margin: 0;
+  font-weight: 400;
+}
+@media (max-width: 767.98px) {
+  .referral.svelte-1sz614n.svelte-1sz614n {
+    width: 33.33333%;
+  }
+  .referral.svelte-1sz614n.svelte-1sz614n:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .referral.svelte-1sz614n.svelte-1sz614n {
+    width: 50%;
+  }
+  .referral.svelte-1sz614n.svelte-1sz614n:nth-child(3) {
+    display: none;
+  }
+}
+.row.svelte-5ls690 {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+section.referrals.svelte-1pp4aaj.svelte-1pp4aaj {
+  margin: 0;
+  max-width: 1400px;
+  padding: 20px 0 25px;
+  padding-left: 2.2222222222vw;
+  padding-right: 2.2222222222vw;
+  border-top: 1px solid var(--nav-rules, #999);
+}
+@media (max-width: 1023px) {
+  section.referrals.svelte-1pp4aaj.svelte-1pp4aaj {
+    padding-left: 4.2666666667vw;
+    padding-right: 4.2666666667vw;
+  }
+}
+@media (min-width: 1440px) {
+  section.referrals.svelte-1pp4aaj.svelte-1pp4aaj {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+section.referrals.svelte-1pp4aaj h2.svelte-1pp4aaj {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: var(--nav-primary, #666);
+}
+section.referrals.svelte-1pp4aaj h2 a.svelte-1pp4aaj {
+  color: var(--nav-primary, #666);
+}
+footer.svelte-1qd1kdn.svelte-1qd1kdn {
   background-color: var(--nav-background, #fff);
+}
+footer.svelte-1qd1kdn div.svelte-1qd1kdn {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 button.svelte-1rmu17u {
   z-index: 2;

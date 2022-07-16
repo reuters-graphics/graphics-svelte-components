@@ -2592,7 +2592,7 @@ class Fa extends SvelteComponent {
   }
 }
 var Fa$1 = Fa,
-  index_svelte_svelte_type_style_lang$k = '',
+  index_svelte_svelte_type_style_lang$l = '',
   commonjsGlobal =
     typeof globalThis != 'undefined'
       ? globalThis
@@ -3405,8 +3405,8 @@ const defaultUrlRegExp = /^(\w+:\/\/[^/?]+)?(.*?)(\?.+)?$/,
     const i = parseParts(e, r);
     return buildUrl(i, r);
   };
-var index_svelte_svelte_type_style_lang$j = '',
-  index_svelte_svelte_type_style_lang$i = '',
+var index_svelte_svelte_type_style_lang$k = '',
+  index_svelte_svelte_type_style_lang$j = '',
   classnames$1 = { exports: {} };
 /*!
   Copyright (c) 2018 Jed Watson.
@@ -3438,11 +3438,11 @@ var index_svelte_svelte_type_style_lang$j = '',
   })();
 })(classnames$1);
 var classnames = classnames$1.exports,
-  index_svelte_svelte_type_style_lang$h = '',
-  Link_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$g = '';
+  index_svelte_svelte_type_style_lang$i = '',
+  Link_svelte_svelte_type_style_lang$1 = '',
+  index_svelte_svelte_type_style_lang$h = '';
 const name = '@reuters-graphics/graphics-svelte-components',
-  version = '0.3.20',
+  version = '0.3.22',
   type = 'module',
   homepage = 'https://reuters-graphics.github.io/graphics-svelte-components',
   repository = 'https://github.com/reuters-graphics/graphics-svelte-components',
@@ -5186,8 +5186,8 @@ var uaParser = { exports: {} };
     }
   })(typeof window == 'object' ? window : commonjsGlobal);
 })(uaParser, uaParser.exports);
-var index_svelte_svelte_type_style_lang$f = '',
-  index_svelte_svelte_type_style_lang$e = '',
+var index_svelte_svelte_type_style_lang$g = '',
+  index_svelte_svelte_type_style_lang$f = '',
   Scroller_svelte_svelte_type_style_lang = '';
 const { window: window_1 } = globals,
   get_foreground_slot_changes = (e) => ({}),
@@ -5484,7 +5484,7 @@ class Scroller extends SvelteComponent {
 var Background_svelte_svelte_type_style_lang = '',
   Foreground_svelte_svelte_type_style_lang$1 = '',
   Foreground_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$d = '',
+  index_svelte_svelte_type_style_lang$e = '',
   lottie = { exports: {} };
 (function (module) {
   typeof navigator != 'undefined' &&
@@ -19744,9 +19744,9 @@ var Background_svelte_svelte_type_style_lang = '',
       return lottie;
     });
 })(lottie);
-var index_svelte_svelte_type_style_lang$c = '',
+var index_svelte_svelte_type_style_lang$d = '',
+  index_svelte_svelte_type_style_lang$c = '',
   index_svelte_svelte_type_style_lang$b = '',
-  index_svelte_svelte_type_style_lang$a = '',
   DownArrow_svelte_svelte_type_style_lang = '',
   advancedFormat$1 = { exports: {} };
 (function (e, t) {
@@ -20661,16 +20661,16 @@ const getTimeZone = (e) => (e ? dayjs.tz.guess() : 'UTC'),
       ? dayjs(e).tz(s).format('h:mm A z')
       : t.format('MMMM D, YYYY');
   };
-var index_svelte_svelte_type_style_lang$9 = '',
+var index_svelte_svelte_type_style_lang$a = '',
+  index_svelte_svelte_type_style_lang$9 = '',
   index_svelte_svelte_type_style_lang$8 = '',
-  index_svelte_svelte_type_style_lang$7 = '',
   SectionDrowdown_svelte_svelte_type_style_lang = '',
   MoreDropdown_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$6 = '',
+  index_svelte_svelte_type_style_lang$7 = '',
   Menu_svelte_svelte_type_style_lang = '',
   Close_svelte_svelte_type_style_lang = '',
+  index_svelte_svelte_type_style_lang$6 = '',
   index_svelte_svelte_type_style_lang$5 = '',
-  index_svelte_svelte_type_style_lang$4 = '',
   Graphics_svelte_svelte_type_style_lang = '',
   Pictures_svelte_svelte_type_style_lang = '',
   Videos_svelte_svelte_type_style_lang = '',
@@ -20682,6 +20682,9 @@ var index_svelte_svelte_type_style_lang$9 = '',
   LinkedIn_svelte_svelte_type_style_lang = '',
   CompanyLinks_svelte_svelte_type_style_lang = '',
   LegalLinks_svelte_svelte_type_style_lang = '',
+  Link_svelte_svelte_type_style_lang = '',
+  Referrals_svelte_svelte_type_style_lang = '',
+  index_svelte_svelte_type_style_lang$4 = '',
   index_svelte_svelte_type_style_lang$3 = '',
   Controls_svelte_svelte_type_style_lang = '',
   index_svelte_svelte_type_style_lang$2 = '',
