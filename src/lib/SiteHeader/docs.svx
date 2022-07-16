@@ -53,7 +53,7 @@ Change colours with exported themes.
 
 <section>
 
-You can customise a colour theme.
+Customise a colour theme.
 
 </section>
 
@@ -62,7 +62,7 @@ You can customise a colour theme.
   import { SiteHeader, SiteHeaderThemes } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<SiteHeader theme={{ ...themes.default, background: '#e0d3b8', rules: '#aaa' }} />
+<SiteHeader theme={{ ...SiteHeaderThemes.default, background: '#e0d3b8', rules: '#aaa' }} />
 
 // Customisable props
 {

@@ -1,19 +1,34 @@
 ---
 title: SiteFooter
-description: Reuters dotcom site footer shadow component.
+description: Reuters dotcom site footer component.
 slug: site-footer
 ---
 
 <script>
   import SiteFooter, { themes } from './index.svelte';
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
+
+  const customReferrals = [
+    {
+      url: 'https://graphics.reuters.com/world-coronavirus-tracker-and-maps/',
+      title: 'COVID-19: the latest global statistics, charts and maps',
+      description: 'Tracking the global coronavirus outbreak, updated daily',
+      image: 'https://graphics.thomsonreuters.com/cdn/2020/covid-global-tracker/share-cards/global/en/share.png',
+    },
+    {
+      url: 'https://graphics.reuters.com/world-coronavirus-tracker-and-maps/regions/europe',
+      title: 'Coronavirus in Europe: the latest counts, charts and maps',
+      description: 'Tracking the global coronavirus outbreak, updated daily',
+      image: 'https://graphics.thomsonreuters.com/cdn/2020/covid-global-tracker/share-cards/regions/en/europe.png',
+    },
+  ];
 </script>
 
 <section>
 
 ## {title}
 
-Reuters dotcom site footer, ported from [Raptor UI components](https://github.com/tr/rcom-arc_raptor-ui/tree/develop/packages/rcom-raptor-ui_common/src/components/site-footer).
+Reuters dotcom site footer with graphics referrals, ported from [Raptor UI components](https://github.com/tr/rcom-arc_raptor-ui/tree/develop/packages/rcom-raptor-ui_common/src/components/site-footer).
 
 </section>
 
@@ -49,7 +64,7 @@ Change colours with exported themes.
 
 <section>
 
-You can customise a colour theme.
+Customise a colour theme.
 
 </section>
 
@@ -58,7 +73,7 @@ You can customise a colour theme.
   import { SiteFooter, SiteFooterThemes } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<SiteFooter theme={{ ...themes.default, background: '#e0d3b8', rules: '#aaa' }} />
+<SiteFooter theme={{ ...SiteFooterThemes.default, background: '#e0d3b8', rules: '#aaa' }} />
 
 // Customisable props
 {
@@ -71,3 +86,78 @@ You can customise a colour theme.
 <DemoContainer fluid={true} containerStyle='padding: 0;'>
 <SiteFooter theme={{ ...themes.default, background: '#e0d3b8', rules: '#aaa' }} />
 </DemoContainer>
+
+<section>
+
+Pass up to four custom referrals to the `referrals` prop.
+
+</section>
+
+```svelte
+<script>
+  import { SiteFooter } from '@reuters-graphics/graphics-svelte-components';
+  
+  const customReferrals = [
+    {
+      url: 'https://graphics.reuters.com/world-coronavirus-tracker-and-maps/',
+      title: 'COVID-19: the latest global statistics, charts and maps',
+      description: 'Tracking the global coronavirus outbreak, updated daily',
+      image:
+        'https://graphics.thomsonreuters.com/cdn/2020/covid-global-tracker/share-cards/global/en/share.png',
+    },
+    {
+      url: 'https://graphics.reuters.com/world-coronavirus-tracker-and-maps/regions/europe',
+      title: 'Coronavirus in Europe: the latest counts, charts and maps',
+      description: 'Tracking the global coronavirus outbreak, updated daily',
+      image:
+        'https://graphics.thomsonreuters.com/cdn/2020/covid-global-tracker/share-cards/regions/en/europe.png',
+    },
+  ];
+</script>
+
+<SiteFooter referrals="{customReferrals}" />
+```
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<SiteFooter referrals="{customReferrals}" />
+</DemoContainer>
+
+<section>
+
+Customise graphics referral image style.
+
+</section>
+
+```svelte
+<script>
+  import { SiteFooter } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SiteFooter />
+
+<style lang="scss">
+  :global {
+    section.referrals {
+      div.image {
+        filter: grayscale(80%) brightness(70%);
+      }
+    }
+  }
+</style>
+```
+
+<DemoContainer fluid={true} containerStyle='padding: 0;'>
+<div id="custom-image">
+<SiteFooter />
+</div>
+</DemoContainer>
+
+<style lang="scss">
+  :global {
+    div#custom-image section.referrals {
+      div.image {
+        filter: grayscale(80%) brightness(70%);
+      }
+    }
+  }
+</style>

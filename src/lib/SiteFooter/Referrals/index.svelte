@@ -6,18 +6,18 @@
   export let referrals = [];
 </script>
 
-<section class="referrals">
-  <h2>
-    <a href="https://graphics.reuters.com/">More from Reuters Graphics</a>
-  </h2>
-  {#if browser}
-    <IntersectionObserver let:intersecting top="{2400}" once="{true}">
-      {#if intersecting}
+<IntersectionObserver let:intersecting top="{2400}" once="{true}">
+  {#if intersecting}
+    <section class="referrals">
+      <h2>
+        <a href="https://graphics.reuters.com/">More from Reuters Graphics</a>
+      </h2>
+      {#if browser}
         <Referrals referrals="{referrals}" />
       {/if}
-    </IntersectionObserver>
+    </section>
   {/if}
-</section>
+</IntersectionObserver>
 
 <style lang="scss">
   @import '@reuters-graphics/style-main/scss/fonts/mixins';
@@ -27,7 +27,7 @@
   section.referrals {
     margin: 0;
     max-width: 1400px;
-    padding: 20px 0 25px;
+    padding: 25px 0;
     @include spacing-single(padding-left padding-right);
     border-top: 1px solid var(--nav-rules, #999);
 
