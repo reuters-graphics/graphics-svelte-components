@@ -192,6 +192,12 @@ var components = [
     slug: 'video',
     path: 'Video',
   },
+  {
+    title: 'Visible',
+    description: 'Wrapper to determine if content is visible.',
+    slug: 'visible',
+    path: 'Visible',
+  },
 ];
 function getDefaults() {
   return {
@@ -3442,7 +3448,7 @@ var classnames = classnames$1.exports,
   Link_svelte_svelte_type_style_lang$1 = '',
   index_svelte_svelte_type_style_lang$h = '';
 const name = '@reuters-graphics/graphics-svelte-components',
-  version = '0.3.24',
+  version = '0.3.25',
   type = 'module',
   homepage = 'https://reuters-graphics.github.io/graphics-svelte-components',
   repository = 'https://github.com/reuters-graphics/graphics-svelte-components',
