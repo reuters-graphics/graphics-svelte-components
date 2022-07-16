@@ -78,7 +78,7 @@ import {
   a8 as Lt,
   r as je,
 } from './index-83a5d9f9.js';
-import { g as He } from './main-5a0c9f3a.js';
+import { g as He } from './main-27a685c1.js';
 import { w as Oe } from './index-5b18af3d.js';
 import { R as dt } from './index-83a1f0ce.js';
 import { n as G } from './index-c889ff85.js';
@@ -2368,7 +2368,7 @@ function fs(a) {
         theme: a[1],
         isMobileMenuOpen: a[0],
         releaseMobileMenu: a[5],
-        data: vt,
+        data: vt[0],
       },
     })),
     {
