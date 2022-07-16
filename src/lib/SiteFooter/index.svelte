@@ -44,6 +44,7 @@
 
 <style lang="scss">
   footer {
+    margin-top: 3rem;
     background-color: var(--nav-background, #fff);
     div {
       max-width: 1400px;
