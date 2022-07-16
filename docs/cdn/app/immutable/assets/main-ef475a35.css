@@ -1875,33 +1875,33 @@ a.svelte-1sz614n.svelte-1sz614n:not([href]):not([class]):hover {
   margin-right: -10px;
   margin-left: -10px;
 }
-section.referrals.svelte-1pp4aaj.svelte-1pp4aaj {
+section.referrals.svelte-h53uyh.svelte-h53uyh {
   margin: 0;
   max-width: 1400px;
-  padding: 20px 0 25px;
+  padding: 25px 0;
   padding-left: 2.2222222222vw;
   padding-right: 2.2222222222vw;
   border-top: 1px solid var(--nav-rules, #999);
 }
 @media (max-width: 1023px) {
-  section.referrals.svelte-1pp4aaj.svelte-1pp4aaj {
+  section.referrals.svelte-h53uyh.svelte-h53uyh {
     padding-left: 4.2666666667vw;
     padding-right: 4.2666666667vw;
   }
 }
 @media (min-width: 1440px) {
-  section.referrals.svelte-1pp4aaj.svelte-1pp4aaj {
+  section.referrals.svelte-h53uyh.svelte-h53uyh {
     padding-left: 32px;
     padding-right: 32px;
   }
 }
-section.referrals.svelte-1pp4aaj h2.svelte-1pp4aaj {
+section.referrals.svelte-h53uyh h2.svelte-h53uyh {
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 10px;
   color: var(--nav-primary, #666);
 }
-section.referrals.svelte-1pp4aaj h2 a.svelte-1pp4aaj {
+section.referrals.svelte-h53uyh h2 a.svelte-h53uyh {
   color: var(--nav-primary, #666);
 }
 footer.svelte-1w89kaj.svelte-1w89kaj {

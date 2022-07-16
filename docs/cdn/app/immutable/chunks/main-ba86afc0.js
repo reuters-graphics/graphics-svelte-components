@@ -175,7 +175,7 @@ var components = [
   },
   {
     title: 'SiteFooter',
-    description: 'Reuters dotcom site footer shadow component.',
+    description: 'Reuters dotcom site footer component.',
     slug: 'site-footer',
     path: 'SiteFooter',
   },
@@ -3442,7 +3442,7 @@ var classnames = classnames$1.exports,
   Link_svelte_svelte_type_style_lang$1 = '',
   index_svelte_svelte_type_style_lang$h = '';
 const name = '@reuters-graphics/graphics-svelte-components',
-  version = '0.3.23',
+  version = '0.3.24',
   type = 'module',
   homepage = 'https://reuters-graphics.github.io/graphics-svelte-components',
   repository = 'https://github.com/reuters-graphics/graphics-svelte-components',

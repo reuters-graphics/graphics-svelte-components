@@ -50,7 +50,7 @@ import {
   t as O,
   c as g,
   h as U,
-  j as Y,
+  j as K,
   Y as Ne,
   k as V,
   m as L,
@@ -74,11 +74,11 @@ import {
   l as we,
   V as ke,
   a4 as Vt,
-  f as Re,
+  f as He,
   a8 as Lt,
-  r as je,
+  r as Re,
 } from './index-83a5d9f9.js';
-import { g as He } from './main-899ce102.js';
+import { g as je } from './main-ba86afc0.js';
 import { w as Oe } from './index-5b18af3d.js';
 import { R as dt } from './index-83a1f0ce.js';
 import { n as G } from './index-c889ff85.js';
@@ -167,7 +167,7 @@ function Ue(a) {
       M(r, e, i), h(e, s), h(s, n);
     },
     p(r, i) {
-      i & 1 && t !== (t = r[0].primary_section.name + '') && Y(n, t),
+      i & 1 && t !== (t = r[0].primary_section.name + '') && K(n, t),
         i & 1 && l !== (l = G(r[0].primary_section.id)) && f(e, 'href', l);
     },
     d(r) {
@@ -177,7 +177,7 @@ function Ue(a) {
 }
 function Be(a) {
   let e,
-    s = He(a[0].display_time) + '',
+    s = je(a[0].display_time) + '',
     t,
     n;
   return {
@@ -197,7 +197,7 @@ function Be(a) {
       M(l, e, r), h(e, t);
     },
     p(l, r) {
-      r & 1 && s !== (s = He(l[0].display_time) + '') && Y(t, s),
+      r & 1 && s !== (s = je(l[0].display_time) + '') && K(t, s),
         r & 1 && n !== (n = l[0].display_time) && f(e, 'datetime', n);
     },
     d(l) {
@@ -238,7 +238,7 @@ function Pe(a) {
     },
   };
 }
-function Rt(a) {
+function Ht(a) {
   let e,
     s,
     t,
@@ -314,7 +314,7 @@ function Rt(a) {
           ? m.p(b, w)
           : ((m = Ue(b)), m.c(), m.m(t, n))
         : m && (m.d(1), (m = null)),
-        w & 1 && r !== (r = b[0].title + '') && Y(i, r),
+        w & 1 && r !== (r = b[0].title + '') && K(i, r),
         b[1]
           ? S && (S.d(1), (S = null))
           : S
@@ -335,7 +335,7 @@ function Rt(a) {
     },
   };
 }
-function jt(a, e, s) {
+function Rt(a, e, s) {
   let t,
     { story: n } = e,
     { withSection: l = !1 } = e;
@@ -350,9 +350,9 @@ function jt(a, e, s) {
     [n, l, t]
   );
 }
-class Ht extends Q {
+class jt extends Q {
   constructor(e) {
-    super(), X(this, e, jt, Rt, x, { story: 0, withSection: 1 });
+    super(), X(this, e, Rt, Ht, x, { story: 0, withSection: 1 });
   }
 }
 function Ot(a) {
@@ -468,7 +468,7 @@ function Pt(a) {
       l = !0;
     },
     p(u, p) {
-      if (((!l || p & 1) && Y(s, u[0]), p & 6)) {
+      if (((!l || p & 1) && K(s, u[0]), p & 6)) {
         r = u[1];
         let m;
         for (m = 0; m < r.length; m += 1) {
@@ -500,7 +500,7 @@ function Pt(a) {
 function Fe(a) {
   let e, s, t, n;
   return (
-    (s = new Ht({ props: { story: a[7], withSection: a[2] === 'more' } })),
+    (s = new jt({ props: { story: a[7], withSection: a[2] === 'more' } })),
     {
       c() {
         (e = _('li')), B(s.$$.fragment), (t = V()), this.h();
@@ -568,12 +568,12 @@ function qt(a) {
         t = g(E, 'DIV', { class: !0 });
         var C = v(t);
         n = g(C, 'DIV', { class: !0 });
-        var j = v(n);
-        l = g(j, 'DIV', { class: !0 });
+        var R = v(n);
+        l = g(R, 'DIV', { class: !0 });
         var D = v(l);
         k && k.l(D),
           D.forEach(c),
-          j.forEach(c),
+          R.forEach(c),
           (r = L(C)),
           (i = g(C, 'DIV', { class: !0 }));
         var Z = v(i);
@@ -767,7 +767,7 @@ function We(a) {
       M(i, e, o), h(e, s), h(s, n), h(e, r);
     },
     p(i, o) {
-      o & 5 && t !== (t = i[3].name + '') && Y(n, t),
+      o & 5 && t !== (t = i[3].name + '') && K(n, t),
         o & 5 && l !== (l = G(i[3].url)) && f(s, 'href', l);
     },
     d(i) {
@@ -802,7 +802,7 @@ function Je(a) {
       M(i, e, o), h(e, s), h(s, n), h(e, r);
     },
     p(i, o) {
-      o & 5 && t !== (t = i[3].name + '') && Y(n, t),
+      o & 5 && t !== (t = i[3].name + '') && K(n, t),
         o & 5 && l !== (l = G(i[3].url)) && f(s, 'href', l);
     },
     d(i) {
@@ -876,7 +876,7 @@ function Gt(a) {
     },
     p(b, w) {
       if (
-        (w & 1 && n !== (n = b[0].name + '') && Y(l, n),
+        (w & 1 && n !== (n = b[0].name + '') && K(l, n),
         w & 1 && r !== (r = G(b[0].url)) && f(e, 'href', r),
         b[2] > 0
           ? m
@@ -965,11 +965,11 @@ class Wt extends Q {
     super(), X(this, e, zt, Zt, x, { section: 0, headingText: 1 });
   }
 }
-function Ye(a, e, s) {
+function Ke(a, e, s) {
   const t = a.slice();
   return (t[1] = e[s]), t;
 }
-function Ke(a, e, s) {
+function Ye(a, e, s) {
   const t = a.slice();
   return (t[4] = e[s]), t;
 }
@@ -977,7 +977,7 @@ function Qe(a) {
   let e,
     s = a[1].children,
     t = [];
-  for (let n = 0; n < s.length; n += 1) t[n] = Xe(Ke(a, s, n));
+  for (let n = 0; n < s.length; n += 1) t[n] = Xe(Ye(a, s, n));
   return {
     c() {
       e = _('ul');
@@ -1002,7 +1002,7 @@ function Qe(a) {
         s = n[1].children;
         let r;
         for (r = 0; r < s.length; r += 1) {
-          const i = Ke(n, s, r);
+          const i = Ye(n, s, r);
           t[r] ? t[r].p(i, l) : ((t[r] = Xe(i)), t[r].c(), t[r].m(e, null));
         }
         for (; r < t.length; r += 1) t[r].d(1);
@@ -1040,7 +1040,7 @@ function Xe(a) {
       M(i, e, o), h(e, s), h(s, n), h(e, r);
     },
     p(i, o) {
-      o & 1 && t !== (t = i[4].name + '') && Y(n, t),
+      o & 1 && t !== (t = i[4].name + '') && K(n, t),
         o & 1 && l !== (l = G(i[4].url)) && f(s, 'href', l);
     },
     d(i) {
@@ -1090,7 +1090,7 @@ function xe(a) {
       M(u, e, p), h(e, s), h(s, n), h(e, r), o && o.m(e, null), h(e, i);
     },
     p(u, p) {
-      p & 1 && t !== (t = u[1].name + '') && Y(n, t),
+      p & 1 && t !== (t = u[1].name + '') && K(n, t),
         p & 1 && l !== (l = G(u[1].url)) && f(s, 'href', l),
         u[1].children
           ? o
@@ -1109,7 +1109,7 @@ function Jt(a) {
     s,
     t = a[0],
     n = [];
-  for (let l = 0; l < t.length; l += 1) n[l] = xe(Ye(a, t, l));
+  for (let l = 0; l < t.length; l += 1) n[l] = xe(Ke(a, t, l));
   return {
     c() {
       (e = _('div')), (s = _('div'));
@@ -1137,7 +1137,7 @@ function Jt(a) {
         t = l[0];
         let i;
         for (i = 0; i < t.length; i += 1) {
-          const o = Ye(l, t, i);
+          const o = Ke(l, t, i);
           n[i] ? n[i].p(o, r) : ((n[i] = xe(o)), n[i].c(), n[i].m(s, null));
         }
         for (; i < n.length; i += 1) n[i].d(1);
@@ -1149,7 +1149,7 @@ function Jt(a) {
     },
   };
 }
-function Yt(a) {
+function Kt(a) {
   let e, s;
   return (
     (e = new mt({
@@ -1181,7 +1181,7 @@ function Yt(a) {
     }
   );
 }
-function Kt(a, e, s) {
+function Yt(a, e, s) {
   let { sections: t = [] } = e;
   return (
     (a.$$set = (n) => {
@@ -1192,7 +1192,7 @@ function Kt(a, e, s) {
 }
 class Qt extends Q {
   constructor(e) {
-    super(), X(this, e, Kt, Yt, x, { sections: 0 });
+    super(), X(this, e, Yt, Kt, x, { sections: 0 });
   }
 }
 function et(a, e, s) {
@@ -1229,7 +1229,7 @@ function Xt(a) {
       M(i, e, o), h(e, s), h(s, t), h(t, l);
     },
     p(i, o) {
-      o & 4 && n !== (n = i[11].name + '') && Y(l, n),
+      o & 4 && n !== (n = i[11].name + '') && K(l, n),
         o & 4 && r !== (r = G(i[11].url)) && f(t, 'href', r);
     },
     i: z,
@@ -1311,7 +1311,7 @@ function xt(a) {
         m || ((S = ke(e, 'click', b)), (m = !0));
     },
     p(w, d) {
-      (a = w), (!p || d & 4) && n !== (n = a[11].name + '') && Y(l, n);
+      (a = w), (!p || d & 4) && n !== (n = a[11].name + '') && K(l, n);
       const I = {};
       d & 12 && (I.rotate = a[11].id === a[3]),
         o.$set(I),
@@ -1480,10 +1480,10 @@ function es(a) {
       e = g(E, 'DIV', { class: !0 });
       var C = v(e);
       s = g(C, 'NAV', { 'aria-label': !0 });
-      var j = v(s);
-      t = g(j, 'UL', { class: !0 });
+      var R = v(s);
+      t = g(R, 'UL', { class: !0 });
       var D = v(t);
-      for (let H = 0; H < d.length; H += 1) d[H].l(D);
+      for (let j = 0; j < d.length; j += 1) d[j].l(D);
       (n = L(D)), (l = g(D, 'LI', { class: !0 }));
       var Z = v(l);
       r = g(Z, 'DIV', { class: !0 });
@@ -1491,17 +1491,17 @@ function es(a) {
       i = g(W, 'BUTTON', { class: !0 });
       var J = v(i);
       o = g(J, 'SPAN', { class: !0 });
-      var R = v(o);
-      (u = U(R, 'More ')),
-        P(p.$$.fragment, R),
-        R.forEach(c),
+      var H = v(o);
+      (u = U(H, 'More ')),
+        P(p.$$.fragment, H),
+        H.forEach(c),
         J.forEach(c),
         W.forEach(c),
         (m = L(Z)),
         y && y.l(Z),
         Z.forEach(c),
         D.forEach(c),
-        j.forEach(c),
+        R.forEach(c),
         C.forEach(c),
         this.h();
     },
@@ -1517,7 +1517,7 @@ function es(a) {
     },
     m(E, C) {
       M(E, e, C), h(e, s), h(s, t);
-      for (let j = 0; j < d.length; j += 1) d[j].m(t, null);
+      for (let R = 0; R < d.length; R += 1) d[R].m(t, null);
       h(t, n),
         h(t, l),
         h(l, r),
@@ -1544,9 +1544,9 @@ function es(a) {
         for (de(), D = w.length; D < d.length; D += 1) I(D);
         he();
       }
-      const j = {};
-      C & 8 && (j.rotate = E[3] === 'more'),
-        p.$set(j),
+      const R = {};
+      C & 8 && (R.rotate = E[3] === 'more'),
+        p.$set(R),
         C & 8 && ne(r, 'open', E[3] === 'more'),
         E[3] === 'more'
           ? y
@@ -1955,14 +1955,14 @@ function ns(a) {
         f(e, 'viewBox', '0 0 16 12'),
         f(e, 'aria-hidden', 'true'),
         f(e, 'focusable', 'false'),
-        Re(e, 'width', a[0] + 'px'),
+        He(e, 'width', a[0] + 'px'),
         f(e, 'class', 'svelte-17648ki');
     },
     m(t, n) {
       M(t, e, n), h(e, s);
     },
     p(t, [n]) {
-      n & 1 && Re(e, 'width', t[0] + 'px');
+      n & 1 && He(e, 'width', t[0] + 'px');
     },
     i: z,
     o: z,
@@ -2080,8 +2080,8 @@ function rt(a) {
         (r = g(y, 'BUTTON', { class: !0 }));
       var C = v(r);
       i = g(C, 'DIV', { class: !0 });
-      var j = v(i);
-      P(o.$$.fragment, j), j.forEach(c), C.forEach(c), y.forEach(c), (u = L(I));
+      var R = v(i);
+      P(o.$$.fragment, R), R.forEach(c), C.forEach(c), y.forEach(c), (u = L(I));
       for (let D = 0; D < w.length; D += 1) w[D].l(I);
       I.forEach(c), this.h();
     },
@@ -2230,7 +2230,7 @@ function ot(a) {
       M(i, e, o), h(e, s), h(s, n), h(e, r);
     },
     p(i, o) {
-      o & 1 && t !== (t = i[7].name + '') && Y(n, t),
+      o & 1 && t !== (t = i[7].name + '') && K(n, t),
         o & 1 && l !== (l = G(i[7].url)) && f(s, 'href', l);
     },
     d(i) {
@@ -2279,7 +2279,7 @@ function ct(a) {
       M(u, e, p), h(e, s), h(s, n), h(e, r), o && o.m(e, null), h(e, i);
     },
     p(u, p) {
-      p & 1 && t !== (t = u[4].name + '') && Y(n, t),
+      p & 1 && t !== (t = u[4].name + '') && K(n, t),
         p & 1 && l !== (l = G(u[4].url)) && f(s, 'href', l),
         u[4].children
           ? o
@@ -2356,7 +2356,7 @@ class us extends Q {
   }
 }
 function fs(a) {
-  let e, s, t, n, l, r, i, o, u, p, m, S, k, b, w, d, I, y, E, C, j, D, Z, W, J;
+  let e, s, t, n, l, r, i, o, u, p, m, S, k, b, w, d, I, y, E, C, R, D, Z, W, J;
   return (
     (u = new dt({
       props: { logoColour: a[1].accent, textColour: a[1].primary },
@@ -2393,22 +2393,22 @@ function fs(a) {
           (y = _('button')),
           (E = _('div')),
           B(C.$$.fragment),
-          (j = V()),
+          (R = V()),
           B(D.$$.fragment),
           this.h();
       },
-      l(R) {
-        e = g(R, 'HEADER', { style: !0 });
-        var H = v(e);
-        s = g(H, 'DIV', { class: !0 });
+      l(H) {
+        e = g(H, 'HEADER', { style: !0 });
+        var j = v(e);
+        s = g(j, 'DIV', { class: !0 });
         var ee = v(s);
         t = g(ee, 'DIV', { class: !0 });
         var ae = v(t);
         n = g(ae, 'DIV', { class: !0 });
         var re = v(n);
         l = g(re, 'DIV', { class: !0 });
-        var K = v(l);
-        r = g(K, 'DIV', { class: !0 });
+        var Y = v(l);
+        r = g(Y, 'DIV', { class: !0 });
         var oe = v(r);
         i = g(oe, 'DIV', { class: !0 });
         var se = v(i);
@@ -2418,16 +2418,16 @@ function fs(a) {
           be.forEach(c),
           se.forEach(c),
           oe.forEach(c),
-          (p = L(K)),
-          P(m.$$.fragment, K),
-          (S = L(K)),
-          (k = g(K, 'DIV', { class: !0 }));
+          (p = L(Y)),
+          P(m.$$.fragment, Y),
+          (S = L(Y)),
+          (k = g(Y, 'DIV', { class: !0 }));
         var ce = v(k);
         (b = g(ce, 'DIV', { class: !0 })),
           v(b).forEach(c),
           ce.forEach(c),
-          (w = L(K)),
-          (d = g(K, 'DIV', { class: !0 }));
+          (w = L(Y)),
+          (d = g(Y, 'DIV', { class: !0 }));
         var te = v(d);
         I = g(te, 'DIV', { class: !0 });
         var ue = v(I);
@@ -2445,13 +2445,13 @@ function fs(a) {
           le.forEach(c),
           ue.forEach(c),
           te.forEach(c),
-          K.forEach(c),
+          Y.forEach(c),
           re.forEach(c),
           ae.forEach(c),
           ee.forEach(c),
-          H.forEach(c),
-          (j = L(R)),
-          P(D.$$.fragment, R),
+          j.forEach(c),
+          (R = L(H)),
+          P(D.$$.fragment, H),
           this.h();
       },
       h() {
@@ -2483,8 +2483,8 @@ function fs(a) {
   `
           );
       },
-      m(R, H) {
-        M(R, e, H),
+      m(H, j) {
+        M(H, e, j),
           h(e, s),
           h(s, t),
           h(t, n),
@@ -2504,35 +2504,35 @@ function fs(a) {
           h(I, y),
           h(y, E),
           q(C, E, null),
-          M(R, j, H),
-          q(D, R, H),
+          M(H, R, j),
+          q(D, H, j),
           (Z = !0),
           W || ((J = ke(y, 'click', a[4])), (W = !0));
       },
-      p(R, [H]) {
-        (!Z || H & 1) && f(y, 'aria-expanded', R[0]);
+      p(H, [j]) {
+        (!Z || j & 1) && f(y, 'aria-expanded', H[0]);
         const ee = {};
-        H & 1 && (ee.isMobileMenuOpen = R[0]),
-          H & 1 && (ee.releaseMobileMenu = R[5]),
+        j & 1 && (ee.isMobileMenuOpen = H[0]),
+          j & 1 && (ee.releaseMobileMenu = H[5]),
           D.$set(ee);
       },
-      i(R) {
+      i(H) {
         Z ||
-          (T(u.$$.fragment, R),
-          T(m.$$.fragment, R),
-          T(C.$$.fragment, R),
-          T(D.$$.fragment, R),
+          (T(u.$$.fragment, H),
+          T(m.$$.fragment, H),
+          T(C.$$.fragment, H),
+          T(D.$$.fragment, H),
           (Z = !0));
       },
-      o(R) {
-        N(u.$$.fragment, R),
-          N(m.$$.fragment, R),
-          N(C.$$.fragment, R),
-          N(D.$$.fragment, R),
+      o(H) {
+        N(u.$$.fragment, H),
+          N(m.$$.fragment, H),
+          N(C.$$.fragment, H),
+          N(D.$$.fragment, H),
           (Z = !1);
       },
-      d(R) {
-        R && c(e), F(u), F(m), F(C), R && c(j), F(D, R), (W = !1), J();
+      d(H) {
+        H && c(e), F(u), F(m), F(C), H && c(R), F(D, H), (W = !1), J();
       },
     }
   );
@@ -2556,7 +2556,7 @@ const ye = {
 function ps(a, e, s) {
   let { theme: t = {} } = e;
   const n = $e($e({}, ye.default), t);
-  je('nav-theme', Oe(n)), je('nav-active-section', Oe(null));
+  Re('nav-theme', Oe(n)), Re('nav-active-section', Oe(null));
   const { sections: l } = vt[0];
   let r = !1;
   const i = () => {
@@ -2686,7 +2686,7 @@ function vs(a) {
     y,
     E,
     C,
-    j,
+    R,
     D,
     Z = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteHeader<span class="token punctuation">,</span> SiteHeaderThemes <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
@@ -2695,19 +2695,19 @@ function vs(a) {
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteHeader</span> <span class="token attr-name">theme=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>SiteHeaderThemes<span class="token punctuation">.</span>dark<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code>`,
     W,
     J,
-    R,
     H,
+    j,
     ee,
     ae,
     re,
-    K,
+    Y,
     oe,
     se,
     be = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteHeader<span class="token punctuation">,</span> SiteHeaderThemes <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteHeader</span> <span class="token attr-name">theme=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> <span class="token operator">...</span>themes<span class="token punctuation">.</span>default<span class="token punctuation">,</span> <span class="token literal-property property">background</span><span class="token operator">:</span> <span class="token string">'#e0d3b8'</span><span class="token punctuation">,</span> <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token string">'#aaa'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteHeader</span> <span class="token attr-name">theme=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> <span class="token operator">...</span>SiteHeaderThemes<span class="token punctuation">.</span>default<span class="token punctuation">,</span> <span class="token literal-property property">background</span><span class="token operator">:</span> <span class="token string">'#e0d3b8'</span><span class="token punctuation">,</span> <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token string">'#aaa'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
 
 // Customisable props
 <span class="token language-javascript"><span class="token punctuation">&#123;</span>
@@ -2768,16 +2768,16 @@ function vs(a) {
           (y = _('section')),
           (E = _('p')),
           (C = O('Change colours with exported themes.')),
-          (j = V()),
+          (R = V()),
           (D = _('pre')),
           (W = V()),
           B(J.$$.fragment),
-          (R = V()),
-          (H = _('div')),
+          (H = V()),
+          (j = _('div')),
           (ee = V()),
           (ae = _('section')),
           (re = _('p')),
-          (K = O('You can customise a colour theme.')),
+          (Y = O('Customise a colour theme.')),
           (oe = V()),
           (se = _('pre')),
           (ce = V()),
@@ -2818,21 +2818,21 @@ function vs(a) {
         (C = U(Se, 'Change colours with exported themes.')),
           Se.forEach(c),
           Me.forEach(c),
-          (j = L($)),
+          (R = L($)),
           (D = g($, 'PRE', { class: !0 }));
         var gt = v(D);
         gt.forEach(c),
           (W = L($)),
           P(J.$$.fragment, $),
-          (R = L($)),
-          (H = g($, 'DIV', { class: !0 })),
-          v(H).forEach(c),
+          (H = L($)),
+          (j = g($, 'DIV', { class: !0 })),
+          v(j).forEach(c),
           (ee = L($)),
           (ae = g($, 'SECTION', {}));
         var De = v(ae);
         re = g(De, 'P', {});
         var Ce = v(re);
-        (K = U(Ce, 'You can customise a colour theme.')),
+        (Y = U(Ce, 'Customise a colour theme.')),
           Ce.forEach(c),
           De.forEach(c),
           (oe = L($)),
@@ -2856,7 +2856,7 @@ function vs(a) {
           f(m, 'class', 'language-svelte'),
           f(d, 'class', 'spacer svelte-1ess2x0'),
           f(D, 'class', 'language-svelte'),
-          f(H, 'class', 'spacer svelte-1ess2x0'),
+          f(j, 'class', 'spacer svelte-1ess2x0'),
           f(se, 'class', 'language-svelte'),
           f(le, 'class', 'spacer svelte-1ess2x0');
       },
@@ -2881,17 +2881,17 @@ function vs(a) {
           M($, y, A),
           h(y, E),
           h(E, C),
-          M($, j, A),
+          M($, R, A),
           M($, D, A),
           (D.innerHTML = Z),
           M($, W, A),
           q(J, $, A),
-          M($, R, A),
           M($, H, A),
+          M($, j, A),
           M($, ee, A),
           M($, ae, A),
           h(ae, re),
-          h(re, K),
+          h(re, Y),
           M($, oe, A),
           M($, se, A),
           (se.innerHTML = be),
@@ -2932,12 +2932,12 @@ function vs(a) {
           $ && c(d),
           $ && c(I),
           $ && c(y),
-          $ && c(j),
+          $ && c(R),
           $ && c(D),
           $ && c(W),
           F(J, $),
-          $ && c(R),
           $ && c(H),
+          $ && c(j),
           $ && c(ee),
           $ && c(ae),
           $ && c(oe),
