@@ -7,7 +7,7 @@
 </script>
 
 <div class="referral" title="{description}">
-  <a href="{url}">
+  <a href="{url.replace('index.html', '')}">
     <IntersectionObserver let:intersecting top="{600}" once="{true}">
       {#if intersecting}
         <div class="image" style="{`background-image: url(${image});`}"></div>
