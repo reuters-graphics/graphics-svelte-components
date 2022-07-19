@@ -186,6 +186,12 @@ var components = [
     path: 'SiteHeader',
   },
   {
+    title: 'Spinner',
+    description: 'Spinner component.',
+    slug: 'spinner',
+    path: 'Spinner',
+  },
+  {
     title: 'Video',
     description:
       'General-purpose video component. Can play on load or when the video comes into view and has play/pause controls. Supports videos with or without audio.',
@@ -2598,7 +2604,7 @@ class Fa extends SvelteComponent {
   }
 }
 var Fa$1 = Fa,
-  index_svelte_svelte_type_style_lang$l = '',
+  index_svelte_svelte_type_style_lang$m = '',
   commonjsGlobal =
     typeof globalThis != 'undefined'
       ? globalThis
@@ -3411,8 +3417,8 @@ const defaultUrlRegExp = /^(\w+:\/\/[^/?]+)?(.*?)(\?.+)?$/,
     const i = parseParts(e, r);
     return buildUrl(i, r);
   };
-var index_svelte_svelte_type_style_lang$k = '',
-  index_svelte_svelte_type_style_lang$j = '',
+var index_svelte_svelte_type_style_lang$l = '',
+  index_svelte_svelte_type_style_lang$k = '',
   classnames$1 = { exports: {} };
 /*!
   Copyright (c) 2018 Jed Watson.
@@ -3444,11 +3450,11 @@ var index_svelte_svelte_type_style_lang$k = '',
   })();
 })(classnames$1);
 var classnames = classnames$1.exports,
-  index_svelte_svelte_type_style_lang$i = '',
+  index_svelte_svelte_type_style_lang$j = '',
   Link_svelte_svelte_type_style_lang$1 = '',
-  index_svelte_svelte_type_style_lang$h = '';
+  index_svelte_svelte_type_style_lang$i = '';
 const name = '@reuters-graphics/graphics-svelte-components',
-  version = '0.3.25',
+  version = '0.3.26',
   type = 'module',
   homepage = 'https://reuters-graphics.github.io/graphics-svelte-components',
   repository = 'https://github.com/reuters-graphics/graphics-svelte-components',
@@ -5192,8 +5198,8 @@ var uaParser = { exports: {} };
     }
   })(typeof window == 'object' ? window : commonjsGlobal);
 })(uaParser, uaParser.exports);
-var index_svelte_svelte_type_style_lang$g = '',
-  index_svelte_svelte_type_style_lang$f = '',
+var index_svelte_svelte_type_style_lang$h = '',
+  index_svelte_svelte_type_style_lang$g = '',
   Scroller_svelte_svelte_type_style_lang = '';
 const { window: window_1 } = globals,
   get_foreground_slot_changes = (e) => ({}),
@@ -5490,7 +5496,7 @@ class Scroller extends SvelteComponent {
 var Background_svelte_svelte_type_style_lang = '',
   Foreground_svelte_svelte_type_style_lang$1 = '',
   Foreground_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$e = '',
+  index_svelte_svelte_type_style_lang$f = '',
   lottie = { exports: {} };
 (function (module) {
   typeof navigator != 'undefined' &&
@@ -19750,9 +19756,9 @@ var Background_svelte_svelte_type_style_lang = '',
       return lottie;
     });
 })(lottie);
-var index_svelte_svelte_type_style_lang$d = '',
+var index_svelte_svelte_type_style_lang$e = '',
+  index_svelte_svelte_type_style_lang$d = '',
   index_svelte_svelte_type_style_lang$c = '',
-  index_svelte_svelte_type_style_lang$b = '',
   DownArrow_svelte_svelte_type_style_lang = '',
   advancedFormat$1 = { exports: {} };
 (function (e, t) {
@@ -20667,16 +20673,16 @@ const getTimeZone = (e) => (e ? dayjs.tz.guess() : 'UTC'),
       ? dayjs(e).tz(s).format('h:mm A z')
       : t.format('MMMM D, YYYY');
   };
-var index_svelte_svelte_type_style_lang$a = '',
+var index_svelte_svelte_type_style_lang$b = '',
+  index_svelte_svelte_type_style_lang$a = '',
   index_svelte_svelte_type_style_lang$9 = '',
-  index_svelte_svelte_type_style_lang$8 = '',
   SectionDrowdown_svelte_svelte_type_style_lang = '',
   MoreDropdown_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$7 = '',
+  index_svelte_svelte_type_style_lang$8 = '',
   Menu_svelte_svelte_type_style_lang = '',
   Close_svelte_svelte_type_style_lang = '',
+  index_svelte_svelte_type_style_lang$7 = '',
   index_svelte_svelte_type_style_lang$6 = '',
-  index_svelte_svelte_type_style_lang$5 = '',
   Graphics_svelte_svelte_type_style_lang = '',
   Pictures_svelte_svelte_type_style_lang = '',
   Videos_svelte_svelte_type_style_lang = '',
@@ -20690,6 +20696,7 @@ var index_svelte_svelte_type_style_lang$a = '',
   LegalLinks_svelte_svelte_type_style_lang = '',
   Link_svelte_svelte_type_style_lang = '',
   Referrals_svelte_svelte_type_style_lang = '',
+  index_svelte_svelte_type_style_lang$5 = '',
   index_svelte_svelte_type_style_lang$4 = '',
   index_svelte_svelte_type_style_lang$3 = '',
   Controls_svelte_svelte_type_style_lang = '',

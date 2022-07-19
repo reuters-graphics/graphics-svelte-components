@@ -1,4 +1,4 @@
-var A = (s, i, _) =>
+var I = (s, i, _) =>
   new Promise((o, c) => {
     var n = (a) => {
         try {
@@ -23,17 +23,17 @@ import {
   i as q,
   s as B,
   w as b,
-  k as I,
+  k as V,
   l as y,
   x as T,
-  m as V,
+  m as h,
   y as D,
-  g as h,
+  g as A,
   o as L,
   p as H,
   q as P,
-  B as $,
-  d as f,
+  B as R,
+  d as E,
   v as G,
   u as U,
   e as O,
@@ -41,8 +41,8 @@ import {
   c as g,
   a as x,
   h as N,
-  b as E,
-  J as R,
+  b as f,
+  J as $,
   j,
   n as z,
 } from '../../chunks/index-83a5d9f9.js';
@@ -52,7 +52,7 @@ import {
   N as K,
   M as Q,
   F as W,
-} from '../../chunks/main-da543ed8.js';
+} from '../../chunks/main-08bea4b0.js';
 import '../../chunks/paths-396f020f.js';
 var C = {};
 (function (s) {
@@ -79,54 +79,54 @@ function X(s) {
   switch (s) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return r(
-        () => import('../../chunks/docs-d348fdc4.js'),
+        () => import('../../chunks/docs-b3e5c1ff.js'),
         [
-          'chunks/docs-d348fdc4.js',
+          'chunks/docs-b3e5c1ff.js',
           'assets/docs-f27f17c1.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return r(
-        () => import('../../chunks/docs-49a04161.js'),
+        () => import('../../chunks/docs-f9f7ce76.js'),
         [
-          'chunks/docs-49a04161.js',
+          'chunks/docs-f9f7ce76.js',
           'assets/docs-ea1c5840.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return r(
-        () => import('../../chunks/docs-91a1f997.js'),
+        () => import('../../chunks/docs-7eed4ffc.js'),
         [
-          'chunks/docs-91a1f997.js',
+          'chunks/docs-7eed4ffc.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/DatawrapperChart/docs.svx':
       return r(
-        () => import('../../chunks/docs-cf37e8cf.js'),
+        () => import('../../chunks/docs-4126a2b1.js'),
         [
-          'chunks/docs-cf37e8cf.js',
+          'chunks/docs-4126a2b1.js',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -139,14 +139,14 @@ function X(s) {
       );
     case '../../src/lib/EndNotes/docs.svx':
       return r(
-        () => import('../../chunks/docs-dcd4f30a.js'),
+        () => import('../../chunks/docs-f1b1c377.js'),
         [
-          'chunks/docs-dcd4f30a.js',
+          'chunks/docs-f1b1c377.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -162,15 +162,15 @@ function X(s) {
       );
     case '../../src/lib/Framer/docs.svx':
       return r(
-        () => import('../../chunks/docs-6a4acf33.js'),
+        () => import('../../chunks/docs-c953d11e.js'),
         [
-          'chunks/docs-6a4acf33.js',
+          'chunks/docs-c953d11e.js',
           'assets/docs-8e82fbe2.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-5b18af3d.js',
@@ -201,28 +201,28 @@ function X(s) {
       );
     case '../../src/lib/Image/docs.svx':
       return r(
-        () => import('../../chunks/docs-3bc545b2.js'),
+        () => import('../../chunks/docs-84cc2fb3.js'),
         [
-          'chunks/docs-3bc545b2.js',
+          'chunks/docs-84cc2fb3.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-30cf3903.js'),
+        () => import('../../chunks/docs-57464e87.js'),
         [
-          'chunks/docs-30cf3903.js',
+          'chunks/docs-57464e87.js',
           'assets/docs-4a88ca0e.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -243,15 +243,15 @@ function X(s) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return r(
-        () => import('../../chunks/docs-61a4820f.js'),
+        () => import('../../chunks/docs-76cadc9f.js'),
         [
-          'chunks/docs-61a4820f.js',
+          'chunks/docs-76cadc9f.js',
           'assets/docs-00bc6279.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -273,16 +273,16 @@ function X(s) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-0a598631.js'),
+        () => import('../../chunks/docs-7ca98614.js'),
         [
-          'chunks/docs-0a598631.js',
+          'chunks/docs-7ca98614.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -293,14 +293,14 @@ function X(s) {
       );
     case '../../src/lib/SiteFooter/docs.svx':
       return r(
-        () => import('../../chunks/docs-8bcf9fd9.js'),
+        () => import('../../chunks/docs-9e03bfa8.js'),
         [
-          'chunks/docs-8bcf9fd9.js',
+          'chunks/docs-9e03bfa8.js',
           'assets/docs-73e61455.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-c889ff85.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -308,13 +308,13 @@ function X(s) {
       );
     case '../../src/lib/SiteHeader/docs.svx':
       return r(
-        () => import('../../chunks/docs-7faebc95.js'),
+        () => import('../../chunks/docs-e6eba659.js'),
         [
-          'chunks/docs-7faebc95.js',
+          'chunks/docs-e6eba659.js',
           'assets/docs-06bba01a.css',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index-5b18af3d.js',
           'chunks/index-83a1f0ce.js',
@@ -323,16 +323,29 @@ function X(s) {
           'assets/index-2df4dd7a.css',
         ]
       );
+    case '../../src/lib/Spinner/docs.svx':
+      return r(
+        () => import('../../chunks/docs-db80af71.js'),
+        [
+          'chunks/docs-db80af71.js',
+          'chunks/index-83a5d9f9.js',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
+          'chunks/paths-396f020f.js',
+          'chunks/index-16ec1060.js',
+          'assets/index-2df4dd7a.css',
+        ]
+      );
     case '../../src/lib/Video/docs.svx':
       return r(
-        () => import('../../chunks/docs-6e875f77.js'),
+        () => import('../../chunks/docs-ee524d1f.js'),
         [
-          'chunks/docs-6e875f77.js',
+          'chunks/docs-ee524d1f.js',
           'assets/docs-fee898e6.css',
           'chunks/index-83a5d9f9.js',
           'chunks/paths-396f020f.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -355,54 +368,54 @@ function Y(s) {
   switch (s) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return r(
-        () => import('../../chunks/docs-d348fdc4.js'),
+        () => import('../../chunks/docs-b3e5c1ff.js'),
         [
-          'chunks/docs-d348fdc4.js',
+          'chunks/docs-b3e5c1ff.js',
           'assets/docs-f27f17c1.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return r(
-        () => import('../../chunks/docs-49a04161.js'),
+        () => import('../../chunks/docs-f9f7ce76.js'),
         [
-          'chunks/docs-49a04161.js',
+          'chunks/docs-f9f7ce76.js',
           'assets/docs-ea1c5840.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return r(
-        () => import('../../chunks/docs-91a1f997.js'),
+        () => import('../../chunks/docs-7eed4ffc.js'),
         [
-          'chunks/docs-91a1f997.js',
+          'chunks/docs-7eed4ffc.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/DatawrapperChart/docs.svx':
       return r(
-        () => import('../../chunks/docs-cf37e8cf.js'),
+        () => import('../../chunks/docs-4126a2b1.js'),
         [
-          'chunks/docs-cf37e8cf.js',
+          'chunks/docs-4126a2b1.js',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -415,14 +428,14 @@ function Y(s) {
       );
     case '../../src/lib/EndNotes/docs.svx':
       return r(
-        () => import('../../chunks/docs-dcd4f30a.js'),
+        () => import('../../chunks/docs-f1b1c377.js'),
         [
-          'chunks/docs-dcd4f30a.js',
+          'chunks/docs-f1b1c377.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -438,15 +451,15 @@ function Y(s) {
       );
     case '../../src/lib/Framer/docs.svx':
       return r(
-        () => import('../../chunks/docs-6a4acf33.js'),
+        () => import('../../chunks/docs-c953d11e.js'),
         [
-          'chunks/docs-6a4acf33.js',
+          'chunks/docs-c953d11e.js',
           'assets/docs-8e82fbe2.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-5b18af3d.js',
@@ -477,28 +490,28 @@ function Y(s) {
       );
     case '../../src/lib/Image/docs.svx':
       return r(
-        () => import('../../chunks/docs-3bc545b2.js'),
+        () => import('../../chunks/docs-84cc2fb3.js'),
         [
-          'chunks/docs-3bc545b2.js',
+          'chunks/docs-84cc2fb3.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-30cf3903.js'),
+        () => import('../../chunks/docs-57464e87.js'),
         [
-          'chunks/docs-30cf3903.js',
+          'chunks/docs-57464e87.js',
           'assets/docs-4a88ca0e.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -519,15 +532,15 @@ function Y(s) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return r(
-        () => import('../../chunks/docs-61a4820f.js'),
+        () => import('../../chunks/docs-76cadc9f.js'),
         [
-          'chunks/docs-61a4820f.js',
+          'chunks/docs-76cadc9f.js',
           'assets/docs-00bc6279.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -549,16 +562,16 @@ function Y(s) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-0a598631.js'),
+        () => import('../../chunks/docs-7ca98614.js'),
         [
-          'chunks/docs-0a598631.js',
+          'chunks/docs-7ca98614.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -569,14 +582,14 @@ function Y(s) {
       );
     case '../../src/lib/SiteFooter/docs.svx':
       return r(
-        () => import('../../chunks/docs-8bcf9fd9.js'),
+        () => import('../../chunks/docs-9e03bfa8.js'),
         [
-          'chunks/docs-8bcf9fd9.js',
+          'chunks/docs-9e03bfa8.js',
           'assets/docs-73e61455.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-c889ff85.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -584,13 +597,13 @@ function Y(s) {
       );
     case '../../src/lib/SiteHeader/docs.svx':
       return r(
-        () => import('../../chunks/docs-7faebc95.js'),
+        () => import('../../chunks/docs-e6eba659.js'),
         [
-          'chunks/docs-7faebc95.js',
+          'chunks/docs-e6eba659.js',
           'assets/docs-06bba01a.css',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/paths-396f020f.js',
           'chunks/index-5b18af3d.js',
           'chunks/index-83a1f0ce.js',
@@ -599,16 +612,29 @@ function Y(s) {
           'assets/index-2df4dd7a.css',
         ]
       );
+    case '../../src/lib/Spinner/docs.svx':
+      return r(
+        () => import('../../chunks/docs-db80af71.js'),
+        [
+          'chunks/docs-db80af71.js',
+          'chunks/index-83a5d9f9.js',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
+          'chunks/paths-396f020f.js',
+          'chunks/index-16ec1060.js',
+          'assets/index-2df4dd7a.css',
+        ]
+      );
     case '../../src/lib/Video/docs.svx':
       return r(
-        () => import('../../chunks/docs-6e875f77.js'),
+        () => import('../../chunks/docs-ee524d1f.js'),
         [
-          'chunks/docs-6e875f77.js',
+          'chunks/docs-ee524d1f.js',
           'assets/docs-fee898e6.css',
           'chunks/index-83a5d9f9.js',
           'chunks/paths-396f020f.js',
-          'chunks/main-da543ed8.js',
-          'assets/main-ef475a35.css',
+          'chunks/main-08bea4b0.js',
+          'assets/main-0ce3135d.css',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -646,7 +672,7 @@ function Z(s) {
           (_ = k('> ')),
           (o = O('span')),
           (n = k(c)),
-          (d = I()),
+          (d = V()),
           (t = O('a')),
           b(a.$$.fragment),
           this.h();
@@ -657,31 +683,31 @@ function Z(s) {
         (_ = N(e, '> ')), (o = g(e, 'SPAN', { class: !0 }));
         var u = x(o);
         (n = N(u, c)),
-          u.forEach(f),
-          (d = V(e)),
+          u.forEach(E),
+          (d = h(e)),
           (t = g(e, 'A', { href: !0, target: !0, title: !0, class: !0 }));
         var p = x(t);
-        T(a.$$.fragment, p), p.forEach(f), e.forEach(f), this.h();
+        T(a.$$.fragment, p), p.forEach(E), e.forEach(E), this.h();
       },
       h() {
-        E(o, 'class', 'svelte-1o0o1ns'),
-          E(
+        f(o, 'class', 'svelte-1o0o1ns'),
+          f(
             t,
             'href',
             (m = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${s[0].path}/index.svelte`)
           ),
-          E(t, 'target', '_blank'),
-          E(t, 'title', 'Source code'),
-          E(t, 'class', 'svelte-1o0o1ns'),
-          E(i, 'class', 'breadcrumb font-display svelte-1o0o1ns');
+          f(t, 'target', '_blank'),
+          f(t, 'title', 'Source code'),
+          f(t, 'class', 'svelte-1o0o1ns'),
+          f(i, 'class', 'breadcrumb font-display svelte-1o0o1ns');
       },
       m(l, e) {
-        h(l, i, e),
-          R(i, _),
-          R(i, o),
-          R(o, n),
-          R(i, d),
-          R(i, t),
+        A(l, i, e),
+          $(i, _),
+          $(i, o),
+          $(o, n),
+          $(i, d),
+          $(i, t),
           D(a, t, null),
           (v = !0);
       },
@@ -691,7 +717,7 @@ function Z(s) {
             (e & 1 &&
               m !==
                 (m = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${l[0].path}/index.svelte`))) &&
-            E(t, 'href', m);
+            f(t, 'href', m);
       },
       i(l) {
         v || (P(a.$$.fragment, l), (v = !0));
@@ -700,7 +726,7 @@ function Z(s) {
         L(a.$$.fragment, l), (v = !1);
       },
       d(l) {
-        l && f(i), $(a);
+        l && E(i), R(a);
       },
     }
   );
@@ -729,33 +755,33 @@ function ee(s) {
     {
       c() {
         b(i.$$.fragment),
-          (_ = I()),
+          (_ = V()),
           b(o.$$.fragment),
-          (c = I()),
+          (c = V()),
           b(n.$$.fragment),
-          (d = I()),
+          (d = V()),
           t && b(t.$$.fragment),
           (a = y());
       },
       l(e) {
         T(i.$$.fragment, e),
-          (_ = V(e)),
+          (_ = h(e)),
           T(o.$$.fragment, e),
-          (c = V(e)),
+          (c = h(e)),
           T(n.$$.fragment, e),
-          (d = V(e)),
+          (d = h(e)),
           t && T(t.$$.fragment, e),
           (a = y());
       },
       m(e, u) {
         D(i, e, u),
-          h(e, _, u),
+          A(e, _, u),
           D(o, e, u),
-          h(e, c, u),
+          A(e, c, u),
           D(n, e, u),
-          h(e, d, u),
+          A(e, d, u),
           t && D(t, e, u),
-          h(e, a, u),
+          A(e, a, u),
           (m = !0);
       },
       p(e, [u]) {
@@ -776,7 +802,7 @@ function ee(s) {
             z();
             const S = t;
             L(S.$$.fragment, 1, 0, () => {
-              $(S, 1);
+              R(S, 1);
             }),
               H();
           }
@@ -804,20 +830,20 @@ function ee(s) {
           (m = !1);
       },
       d(e) {
-        $(i, e),
-          e && f(_),
-          $(o, e),
-          e && f(c),
-          $(n, e),
-          e && f(d),
-          e && f(a),
-          t && $(t, e);
+        R(i, e),
+          e && E(_),
+          R(o, e),
+          e && E(c),
+          R(n, e),
+          e && E(d),
+          e && E(a),
+          t && R(t, e);
       },
     }
   );
 }
 function ae(i) {
-  return A(this, arguments, function* ({ params: s }) {
+  return I(this, arguments, function* ({ params: s }) {
     return { props: { metadata: M.find((o) => o.slug === s.slug) } };
   });
 }
@@ -826,12 +852,12 @@ function re(s, i, _) {
     c;
   return (
     G(() =>
-      A(this, null, function* () {
+      I(this, null, function* () {
         _(1, (c = (yield Y(`../../src/lib/${o.path}/docs.svx`)).default));
       })
     ),
     U(() =>
-      A(this, null, function* () {
+      I(this, null, function* () {
         _(1, (c = (yield X(`../../src/lib/${o.path}/docs.svx`)).default));
       })
     ),
