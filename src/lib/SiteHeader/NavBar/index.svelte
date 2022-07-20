@@ -16,6 +16,9 @@
     return 5;
   };
 
+  let navTimeout;
+  const timeout = 250;
+
   $: displayCount = getDisplayCount();
   $: displaySections = sections.slice(0, displayCount);
   $: hiddenSections = sections.slice(displayCount);
@@ -30,12 +33,24 @@
         {#if section.children}
           <li
             class="nav-item category link"
-            on:mouseenter="{() => activeSection.set(section.id)}"
+            on:mouseenter="{() => {
+              navTimeout = setTimeout(
+                () => activeSection.set(section.id),
+                timeout
+              );
+            }}"
             on:focus="{() => activeSection.set(section.id)}"
-            on:mouseleave="{() => activeSection.set(null)}"
-            on:blur="{() => activeSection.set(null)}"
+            on:mouseleave="{() => {
+              clearTimeout(navTimeout);
+              activeSection.set(null);
+            }}"
+            on:blur="{() => {
+              clearTimeout(navTimeout);
+              activeSection.set(null);
+            }}"
             on:click="{() => {
               if ($activeSection === section.id) {
+                clearTimeout(navTimeout);
                 activeSection.set(null);
               }
             }}"
@@ -70,12 +85,21 @@
       {/each}
       <li
         class="nav-item"
-        on:mouseenter="{() => activeSection.set('more')}"
+        on:mouseenter="{() => {
+          navTimeout = setTimeout(() => activeSection.set('more'), timeout);
+        }}"
         on:focus="{() => activeSection.set('more')}"
-        on:mouseleave="{() => activeSection.set(null)}"
-        on:blur="{() => activeSection.set(null)}"
+        on:mouseleave="{() => {
+          clearTimeout(navTimeout);
+          activeSection.set(null);
+        }}"
+        on:blur="{() => {
+          clearTimeout(navTimeout);
+          activeSection.set(null);
+        }}"
         on:click="{() => {
           if ($activeSection === 'more') {
+            clearTimeout(navTimeout);
             activeSection.set(null);
           }
         }}"
