@@ -129,11 +129,7 @@
   }
 
   .submenu {
-    grid-column: 2 / span 3;
-
-    // .hide-stories & {
-    //   grid-column: 1 / -1;
-    // }
+    grid-column: 1 / span 4;
 
     @include for-extra-wide-desktop {
       grid-column: 2 / span 3;

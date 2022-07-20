@@ -66,16 +66,20 @@
       .subsection-link {
         font-size: 16px;
         color: var(--nav-primary, $tr-dark-grey);
-        line-height: 1.43;
+        line-height: 18px;
         font-weight: 400;
+        display: inline-block;
+        padding: 4px 0;
+        margin-bottom: 2px;
       }
     }
 
     .section-link {
       grid-column: 1 / -1;
-      margin-bottom: 4px;
-      line-height: 1.75;
+      margin-bottom: 16px;
+      line-height: 18px;
       font-size: 16px;
+      display: inline-block;
       color: var(--nav-primary, $tr-dark-grey);
       @media (min-width: 1300px) {
         font-size: 18px;

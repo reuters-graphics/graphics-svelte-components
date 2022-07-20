@@ -186,7 +186,7 @@
     align-items: center;
     justify-content: flex-end;
 
-    @include for-tablet-down {
+    @include for-mobile {
       display: none;
     }
 

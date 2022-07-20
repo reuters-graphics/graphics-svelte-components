@@ -44,9 +44,14 @@
 
 <style lang="scss">
   @import '../../scss/_colors.scss';
+  @import '../../scss/_breakpoints.scss';
 
   .sections {
     display: flex;
+
+    @include for-tablet-down {
+      display: block;
+    }
 
     .sections-group {
       width: 50%;
@@ -57,10 +62,21 @@
       &:first-child {
         margin-right: 16px;
       }
+
+      @include for-tablet-down {
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
     }
   }
 
   .subsection-link {
+    line-height: 18px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 4px 0;
+    margin-bottom: 2px;
     &:hover {
       text-decoration: underline;
     }
