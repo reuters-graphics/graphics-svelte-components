@@ -30,11 +30,13 @@
         {#if section.children}
           <li
             class="nav-item category link"
+            on:mouseenter="{() => activeSection.set(section.id)}"
+            on:focus="{() => activeSection.set(section.id)}"
+            on:mouseleave="{() => activeSection.set(null)}"
+            on:blur="{() => activeSection.set(null)}"
             on:click="{() => {
               if ($activeSection === section.id) {
                 activeSection.set(null);
-              } else {
-                activeSection.set(section.id);
               }
             }}"
           >
@@ -42,9 +44,9 @@
               class="nav-button link"
               class:open="{section.id === $activeSection}"
             >
-              <span>
+              <a href="{normalizeUrl(section.url)}">
                 {section.name}
-              </span>
+              </a>
               <button class="button">
                 <DownArrow rotate="{section.id === $activeSection}" />
               </button>
@@ -68,11 +70,13 @@
       {/each}
       <li
         class="nav-item"
+        on:mouseenter="{() => activeSection.set('more')}"
+        on:focus="{() => activeSection.set('more')}"
+        on:mouseleave="{() => activeSection.set(null)}"
+        on:blur="{() => activeSection.set(null)}"
         on:click="{() => {
           if ($activeSection === 'more') {
             activeSection.set(null);
-          } else {
-            activeSection.set('more');
           }
         }}"
       >
@@ -179,7 +183,6 @@
         display: block;
         height: 4px;
         background: var(--nav-accent, $tr-orange);
-        opacity: 0.5;
       }
     }
   }
