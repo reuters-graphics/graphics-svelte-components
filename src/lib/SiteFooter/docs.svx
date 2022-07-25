@@ -30,7 +30,12 @@ slug: site-footer
 
 Reuters dotcom site footer with graphics referrals, ported from [Raptor UI components](https://github.com/tr/rcom-arc_raptor-ui/tree/develop/packages/rcom-raptor-ui_common/src/components/site-footer).
 
-The SiteFooter component is likely already included in your page. You can find it in `pages/index.svelte` in your project directory. This is where you should make any prop customizations.
+<section class='note'>
+
+In the [Graphics Kit](https://github.com/reuters-graphics/bluprint_graphics-kit/blob/master/pages/index.svelte), you can find this component in `pages/index.svelte` in order to customise it for the default page.
+
+</section>
+
 </section>
 
 ```svelte
