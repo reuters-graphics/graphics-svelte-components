@@ -1,78 +1,78 @@
-var Nt = Object.defineProperty,
-  Ot = Object.defineProperties;
-var Zt = Object.getOwnPropertyDescriptors;
-var Xe = Object.getOwnPropertySymbols;
-var Ft = Object.prototype.hasOwnProperty,
-  Pt = Object.prototype.propertyIsEnumerable;
-var Ye = (l, e, s) =>
+var Xt = Object.defineProperty,
+  Yt = Object.defineProperties;
+var es = Object.getOwnPropertyDescriptors;
+var ut = Object.getOwnPropertySymbols;
+var ts = Object.prototype.hasOwnProperty,
+  ss = Object.prototype.propertyIsEnumerable;
+var pt = (l, e, s) =>
     e in l
-      ? Nt(l, e, { enumerable: !0, configurable: !0, writable: !0, value: s })
+      ? Xt(l, e, { enumerable: !0, configurable: !0, writable: !0, value: s })
       : (l[e] = s),
-  Fe = (l, e) => {
-    for (var s in e || (e = {})) Ft.call(e, s) && Ye(l, s, e[s]);
-    if (Xe) for (var s of Xe(e)) Pt.call(e, s) && Ye(l, s, e[s]);
+  Ke = (l, e) => {
+    for (var s in e || (e = {})) ts.call(e, s) && pt(l, s, e[s]);
+    if (ut) for (var s of ut(e)) ss.call(e, s) && pt(l, s, e[s]);
     return l;
   },
-  et = (l, e) => Ot(l, Zt(e));
+  ft = (l, e) => Yt(l, es(e));
 import {
-  S as de,
-  i as me,
-  s as ke,
-  K as re,
-  t as N,
-  L as oe,
+  S as ue,
+  i as pe,
+  s as fe,
+  K as le,
+  t as M,
+  L as re,
   a as h,
-  h as O,
+  h as D,
   d as c,
   b as u,
-  g as C,
+  g as L,
   J as p,
   E as z,
-  T as jt,
-  e as g,
-  k as S,
-  c as v,
-  m as A,
+  T as ns,
+  e as _,
+  k as A,
+  c as g,
+  m as T,
   n as _e,
-  o as D,
+  o as O,
   p as ge,
   q as x,
-  j as $e,
+  j as we,
   B as Q,
   w as X,
   y as Y,
-  _ as ye,
-  l as we,
-  V as qt,
-  x as le,
-  f as Le,
-  F as Ut,
-  G as zt,
-  H as Gt,
-  I as Wt,
-  v as Rt,
-  X as Jt,
-  z as Kt,
-  A as Qt,
-  C as Xt,
+  _ as $e,
+  l as ve,
+  V as as,
+  x as ae,
+  f as Ce,
+  F as ls,
+  G as rs,
+  H as os,
+  I as is,
+  v as qt,
+  X as cs,
+  z as us,
+  A as ps,
+  C as fs,
 } from './index-83a5d9f9.js';
 import { n as ee } from './index-c889ff85.js';
 import './main-a9593015.js';
-import { D as Be } from './index-16ec1060.js';
+import { D as Fe } from './index-16ec1060.js';
 import './paths-396f020f.js';
-function Yt(l) {
+function hs(l) {
   let e, s, t, n, a;
   return {
     c() {
-      (e = re('svg')),
-        (s = re('title')),
-        (t = N('Gallery')),
-        (n = re('path')),
-        (a = re('path')),
+      (e = le('svg')),
+        (s = le('title')),
+        (t = M('Gallery')),
+        (n = le('path')),
+        (a = le('path')),
         this.h();
     },
     l(i) {
-      e = oe(i, 'svg', {
+      e = re(i, 'svg', {
         xmlns: !0,
         viewBox: !0,
         role: !0,
@@ -81,13 +81,13 @@ function Yt(l) {
         class: !0,
       });
       var r = h(e);
-      s = oe(r, 'title', {});
+      s = re(r, 'title', {});
       var o = h(s);
-      (t = O(o, 'Gallery')),
+      (t = D(o, 'Gallery')),
         o.forEach(c),
-        (n = oe(r, 'path', { d: !0 })),
+        (n = re(r, 'path', { d: !0 })),
         h(n).forEach(c),
-        (a = oe(r, 'path', { d: !0 })),
+        (a = re(r, 'path', { d: !0 })),
         h(a).forEach(c),
         r.forEach(c),
         this.h();
@@ -111,7 +111,7 @@ function Yt(l) {
         u(e, 'class', 'svelte-17648ki');
     },
     m(i, r) {
-      C(i, e, r), p(e, s), p(s, t), p(e, n), p(e, a);
+      L(i, e, r), p(e, s), p(s, t), p(e, n), p(e, a);
     },
     p: z,
     i: z,
@@ -121,23 +121,23 @@ function Yt(l) {
     },
   };
 }
-class es extends de {
+class ds extends ue {
   constructor(e) {
-    super(), me(this, e, null, Yt, ke, {});
+    super(), pe(this, e, null, hs, fe, {});
   }
 }
-function ts(l) {
+function ms(l) {
   let e, s, t, n;
   return {
     c() {
-      (e = re('svg')),
-        (s = re('title')),
-        (t = N('Pictures')),
-        (n = re('path')),
+      (e = le('svg')),
+        (s = le('title')),
+        (t = M('Pictures')),
+        (n = le('path')),
         this.h();
     },
     l(a) {
-      e = oe(a, 'svg', {
+      e = re(a, 'svg', {
         xmlns: !0,
         viewBox: !0,
         role: !0,
@@ -146,11 +146,11 @@ function ts(l) {
         class: !0,
       });
       var i = h(e);
-      s = oe(i, 'title', {});
+      s = re(i, 'title', {});
       var r = h(s);
-      (t = O(r, 'Pictures')),
+      (t = D(r, 'Pictures')),
         r.forEach(c),
-        (n = oe(i, 'path', { d: !0 })),
+        (n = re(i, 'path', { d: !0 })),
         h(n).forEach(c),
         i.forEach(c),
         this.h();
@@ -169,7 +169,7 @@ function ts(l) {
         u(e, 'class', 'svelte-17648ki');
     },
     m(a, i) {
-      C(a, e, i), p(e, s), p(s, t), p(e, n);
+      L(a, e, i), p(e, s), p(s, t), p(e, n);
     },
     p: z,
     i: z,
@@ -179,23 +179,23 @@ function ts(l) {
     },
   };
 }
-class ss extends de {
+class ks extends ue {
   constructor(e) {
-    super(), me(this, e, null, ts, ke, {});
+    super(), pe(this, e, null, ms, fe, {});
   }
 }
-function ns(l) {
+function _s(l) {
   let e, s, t, n;
   return {
     c() {
-      (e = re('svg')),
-        (s = re('title')),
-        (t = N('Videos')),
-        (n = re('path')),
+      (e = le('svg')),
+        (s = le('title')),
+        (t = M('Videos')),
+        (n = le('path')),
         this.h();
     },
     l(a) {
-      e = oe(a, 'svg', {
+      e = re(a, 'svg', {
         xmlns: !0,
         viewBox: !0,
         role: !0,
@@ -204,11 +204,11 @@ function ns(l) {
         class: !0,
       });
       var i = h(e);
-      s = oe(i, 'title', {});
+      s = re(i, 'title', {});
       var r = h(s);
-      (t = O(r, 'Videos')),
+      (t = D(r, 'Videos')),
         r.forEach(c),
-        (n = oe(i, 'path', { d: !0 })),
+        (n = re(i, 'path', { d: !0 })),
         h(n).forEach(c),
         i.forEach(c),
         this.h();
@@ -227,7 +227,7 @@ function ns(l) {
         u(e, 'class', 'svelte-17648ki');
     },
     m(a, i) {
-      C(a, e, i), p(e, s), p(s, t), p(e, n);
+      L(a, e, i), p(e, s), p(s, t), p(e, n);
     },
     p: z,
     i: z,
@@ -237,40 +237,40 @@ function ns(l) {
     },
   };
 }
-class as extends de {
+class gs extends ue {
   constructor(e) {
-    super(), me(this, e, null, ns, ke, {});
+    super(), pe(this, e, null, _s, fe, {});
   }
 }
-function tt(l, e, s) {
+function ht(l, e, s) {
   const t = l.slice();
   return (t[4] = e[s]), t;
 }
-function st(l, e, s) {
+function dt(l, e, s) {
   const t = l.slice();
   return (t[4] = e[s]), t;
 }
-function nt(l, e, s) {
+function mt(l, e, s) {
   const t = l.slice();
   return (t[4] = e[s]), t;
 }
-function at(l, e, s) {
+function kt(l, e, s) {
   const t = l.slice();
   return (t[4] = e[s]), t;
 }
-function lt(l, e, s) {
+function _t(l, e, s) {
   const t = l.slice();
   return (t[4] = e[s]), t;
 }
-function rt(l, e, s) {
+function gt(l, e, s) {
   const t = l.slice();
   return (t[4] = e[s]), t;
 }
-function ot(l, e, s) {
+function vt(l, e, s) {
   const t = l.slice();
   return (t[4] = e[s]), t;
 }
-function it(l) {
+function wt(l) {
   let e,
     s,
     t,
@@ -283,247 +283,243 @@ function it(l) {
     m,
     d,
     $,
-    _,
-    E,
-    I,
+    v,
+    y,
+    S,
+    B,
     R,
-    M,
-    G,
+    W,
     b,
-    P,
+    j,
     w,
     F,
-    T,
+    H,
+    P,
     q,
-    j,
-    ae,
+    te,
     Z,
-    B;
-  const W = [rs, ls],
-    L = [];
-  function ie(y, ne) {
-    return y[1] < Pe ? 0 : 1;
+    N;
+  const se = [ws, vs],
+    C = [];
+  function ce(E, oe) {
+    return E[1] < Qe ? 0 : 1;
   }
-  (i = ie(l)), (r = L[i] = W[i](l));
-  let ue = l[0].browse_links,
-    J = [];
-  for (let y = 0; y < ue.length; y += 1) J[y] = ft(at(l, ue, y));
-  let U = l[1] >= Pe && ht(l),
+  (i = ce(l)), (r = C[i] = se[i](l));
+  let ke = l[0].browse_links,
+    U = [];
+  for (let E = 0; E < ke.length; E += 1) U[E] = yt(kt(l, ke, E));
+  let G = l[1] >= Qe && Ct(l),
     he = l[0].about_links,
-    te = [];
-  for (let y = 0; y < he.length; y += 1) te[y] = mt(st(l, he, y));
-  let pe = l[0].stay_informed_links,
-    se = [];
-  for (let y = 0; y < pe.length; y += 1) se[y] = kt(tt(l, pe, y));
+    K = [];
+  for (let E = 0; E < he.length; E += 1) K[E] = It(dt(l, he, E));
+  let de = l[0].stay_informed_links,
+    J = [];
+  for (let E = 0; E < de.length; E += 1) J[E] = xt(ht(l, de, E));
   return {
     c() {
-      (e = g('section')),
-        (s = g('h2')),
-        (t = N('Site Index')),
-        (n = S()),
-        (a = g('div')),
+      (e = _('section')),
+        (s = _('h2')),
+        (t = M('Site Index')),
+        (n = A()),
+        (a = _('div')),
         r.c(),
-        (o = S()),
-        (f = g('section')),
-        (m = g('h3')),
-        (d = N('Browse')),
-        ($ = S()),
-        (_ = g('ul'));
-      for (let y = 0; y < J.length; y += 1) J[y].c();
-      (E = S()),
-        U && U.c(),
-        (I = S()),
-        (R = g('div')),
-        (M = g('section')),
-        (G = g('h3')),
-        (b = N('About Reuters')),
-        (P = S()),
-        (w = g('ul'));
-      for (let y = 0; y < te.length; y += 1) te[y].c();
-      (F = S()),
-        (T = g('section')),
-        (q = g('h3')),
-        (j = N('Stay Informed')),
-        (ae = S()),
-        (Z = g('ul'));
-      for (let y = 0; y < se.length; y += 1) se[y].c();
+        (o = A()),
+        (f = _('section')),
+        (m = _('h3')),
+        (d = M('Browse')),
+        ($ = A()),
+        (v = _('ul'));
+      for (let E = 0; E < U.length; E += 1) U[E].c();
+      (y = A()),
+        G && G.c(),
+        (S = A()),
+        (B = _('div')),
+        (R = _('section')),
+        (W = _('h3')),
+        (b = M('About Reuters')),
+        (j = A()),
+        (w = _('ul'));
+      for (let E = 0; E < K.length; E += 1) K[E].c();
+      (F = A()),
+        (H = _('section')),
+        (P = _('h3')),
+        (q = M('Stay Informed')),
+        (te = A()),
+        (Z = _('ul'));
+      for (let E = 0; E < J.length; E += 1) J[E].c();
       this.h();
     },
-    l(y) {
-      e = v(y, 'SECTION', { class: !0 });
-      var ne = h(e);
-      s = v(ne, 'H2', { class: !0 });
-      var K = h(s);
-      (t = O(K, 'Site Index')),
-        K.forEach(c),
-        (n = A(ne)),
-        (a = v(ne, 'DIV', { class: !0 }));
-      var V = h(a);
-      r.l(V), (o = A(V)), (f = v(V, 'SECTION', { class: !0 }));
-      var fe = h(f);
-      m = v(fe, 'H3', { class: !0 });
-      var be = h(m);
-      (d = O(be, 'Browse')),
-        be.forEach(c),
-        ($ = A(fe)),
-        (_ = v(fe, 'UL', { class: !0 }));
-      var Ie = h(_);
-      for (let ce = 0; ce < J.length; ce += 1) J[ce].l(Ie);
-      Ie.forEach(c),
-        fe.forEach(c),
-        (E = A(V)),
-        U && U.l(V),
-        (I = A(V)),
-        (R = v(V, 'DIV', { class: !0 }));
-      var Ee = h(R);
-      M = v(Ee, 'SECTION', { class: !0 });
-      var Ce = h(M);
-      G = v(Ce, 'H3', { class: !0 });
-      var Te = h(G);
-      (b = O(Te, 'About Reuters')),
-        Te.forEach(c),
-        (P = A(Ce)),
-        (w = v(Ce, 'UL', { class: !0 }));
-      var xe = h(w);
-      for (let ce = 0; ce < te.length; ce += 1) te[ce].l(xe);
-      xe.forEach(c),
-        Ce.forEach(c),
-        (F = A(Ee)),
-        (T = v(Ee, 'SECTION', { class: !0 }));
-      var ve = h(T);
-      q = v(ve, 'H3', { class: !0 });
-      var He = h(q);
-      (j = O(He, 'Stay Informed')),
-        He.forEach(c),
-        (ae = A(ve)),
-        (Z = v(ve, 'UL', { class: !0 }));
-      var Se = h(Z);
-      for (let ce = 0; ce < se.length; ce += 1) se[ce].l(Se);
-      Se.forEach(c),
-        ve.forEach(c),
-        Ee.forEach(c),
-        V.forEach(c),
+    l(E) {
+      e = g(E, 'SECTION', { class: !0 });
+      var oe = h(e);
+      s = g(oe, 'H2', { class: !0 });
+      var ne = h(s);
+      (t = D(ne, 'Site Index')),
         ne.forEach(c),
+        (n = T(oe)),
+        (a = g(oe, 'DIV', { class: !0 }));
+      var I = h(a);
+      r.l(I), (o = T(I)), (f = g(I, 'SECTION', { class: !0 }));
+      var ie = h(f);
+      m = g(ie, 'H3', { class: !0 });
+      var Le = h(m);
+      (d = D(Le, 'Browse')),
+        Le.forEach(c),
+        ($ = T(ie)),
+        (v = g(ie, 'UL', { class: !0 }));
+      var be = h(v);
+      for (let me = 0; me < U.length; me += 1) U[me].l(be);
+      be.forEach(c),
+        ie.forEach(c),
+        (y = T(I)),
+        G && G.l(I),
+        (S = T(I)),
+        (B = g(I, 'DIV', { class: !0 }));
+      var Se = h(B);
+      R = g(Se, 'SECTION', { class: !0 });
+      var Ee = h(R);
+      W = g(Ee, 'H3', { class: !0 });
+      var Me = h(W);
+      (b = D(Me, 'About Reuters')),
+        Me.forEach(c),
+        (j = T(Ee)),
+        (w = g(Ee, 'UL', { class: !0 }));
+      var De = h(w);
+      for (let me = 0; me < K.length; me += 1) K[me].l(De);
+      De.forEach(c),
+        Ee.forEach(c),
+        (F = T(Se)),
+        (H = g(Se, 'SECTION', { class: !0 }));
+      var Ie = h(H);
+      P = g(Ie, 'H3', { class: !0 });
+      var ye = h(P);
+      (q = D(ye, 'Stay Informed')),
+        ye.forEach(c),
+        (te = T(Ie)),
+        (Z = g(Ie, 'UL', { class: !0 }));
+      var je = h(Z);
+      for (let me = 0; me < J.length; me += 1) J[me].l(je);
+      je.forEach(c),
+        Ie.forEach(c),
+        Se.forEach(c),
+        I.forEach(c),
+        oe.forEach(c),
         this.h();
     },
     h() {
       u(s, 'class', 'visually-hidden svelte-fhk6t1'),
         u(m, 'class', 'svelte-fhk6t1'),
-        u(_, 'class', 'svelte-fhk6t1'),
+        u(v, 'class', 'svelte-fhk6t1'),
         u(f, 'class', 'link-group svelte-fhk6t1'),
-        u(G, 'class', 'svelte-fhk6t1'),
+        u(W, 'class', 'svelte-fhk6t1'),
         u(w, 'class', 'svelte-fhk6t1'),
-        u(M, 'class', 'about'),
-        u(q, 'class', 'svelte-fhk6t1'),
+        u(R, 'class', 'about'),
+        u(P, 'class', 'svelte-fhk6t1'),
         u(Z, 'class', 'svelte-fhk6t1'),
-        u(T, 'class', 'stay-informed svelte-fhk6t1'),
-        u(R, 'class', 'about-and-stay-informed svelte-fhk6t1'),
+        u(H, 'class', 'stay-informed svelte-fhk6t1'),
+        u(B, 'class', 'about-and-stay-informed svelte-fhk6t1'),
         u(a, 'class', 'content-container svelte-fhk6t1'),
         u(e, 'class', 'quick-links svelte-fhk6t1');
     },
-    m(y, ne) {
-      C(y, e, ne),
+    m(E, oe) {
+      L(E, e, oe),
         p(e, s),
         p(s, t),
         p(e, n),
         p(e, a),
-        L[i].m(a, null),
+        C[i].m(a, null),
         p(a, o),
         p(a, f),
         p(f, m),
         p(m, d),
         p(f, $),
-        p(f, _);
-      for (let K = 0; K < J.length; K += 1) J[K].m(_, null);
-      p(a, E),
-        U && U.m(a, null),
-        p(a, I),
-        p(a, R),
-        p(R, M),
-        p(M, G),
-        p(G, b),
-        p(M, P),
-        p(M, w);
-      for (let K = 0; K < te.length; K += 1) te[K].m(w, null);
-      p(R, F), p(R, T), p(T, q), p(q, j), p(T, ae), p(T, Z);
-      for (let K = 0; K < se.length; K += 1) se[K].m(Z, null);
-      B = !0;
+        p(f, v);
+      for (let ne = 0; ne < U.length; ne += 1) U[ne].m(v, null);
+      p(a, y),
+        G && G.m(a, null),
+        p(a, S),
+        p(a, B),
+        p(B, R),
+        p(R, W),
+        p(W, b),
+        p(R, j),
+        p(R, w);
+      for (let ne = 0; ne < K.length; ne += 1) K[ne].m(w, null);
+      p(B, F), p(B, H), p(H, P), p(P, q), p(H, te), p(H, Z);
+      for (let ne = 0; ne < J.length; ne += 1) J[ne].m(Z, null);
+      N = !0;
     },
-    p(y, ne) {
-      let K = i;
+    p(E, oe) {
+      let ne = i;
       if (
-        ((i = ie(y)),
-        i === K
-          ? L[i].p(y, ne)
+        ((i = ce(E)),
+        i === ne
+          ? C[i].p(E, oe)
           : (_e(),
-            D(L[K], 1, 1, () => {
-              L[K] = null;
+            O(C[ne], 1, 1, () => {
+              C[ne] = null;
             }),
             ge(),
-            (r = L[i]),
-            r ? r.p(y, ne) : ((r = L[i] = W[i](y)), r.c()),
+            (r = C[i]),
+            r ? r.p(E, oe) : ((r = C[i] = se[i](E)), r.c()),
             x(r, 1),
             r.m(a, o)),
-        ne & 1)
+        oe & 1)
       ) {
-        ue = y[0].browse_links;
-        let V;
-        for (V = 0; V < ue.length; V += 1) {
-          const fe = at(y, ue, V);
-          J[V] ? J[V].p(fe, ne) : ((J[V] = ft(fe)), J[V].c(), J[V].m(_, null));
+        ke = E[0].browse_links;
+        let I;
+        for (I = 0; I < ke.length; I += 1) {
+          const ie = kt(E, ke, I);
+          U[I] ? U[I].p(ie, oe) : ((U[I] = yt(ie)), U[I].c(), U[I].m(v, null));
         }
-        for (; V < J.length; V += 1) J[V].d(1);
-        J.length = ue.length;
+        for (; I < U.length; I += 1) U[I].d(1);
+        U.length = ke.length;
       }
       if (
-        (y[1] >= Pe
-          ? U
-            ? (U.p(y, ne), ne & 2 && x(U, 1))
-            : ((U = ht(y)), U.c(), x(U, 1), U.m(a, I))
-          : U &&
+        (E[1] >= Qe
+          ? G
+            ? (G.p(E, oe), oe & 2 && x(G, 1))
+            : ((G = Ct(E)), G.c(), x(G, 1), G.m(a, S))
+          : G &&
             (_e(),
-            D(U, 1, 1, () => {
-              U = null;
+            O(G, 1, 1, () => {
+              G = null;
             }),
             ge()),
-        ne & 1)
+        oe & 1)
       ) {
-        he = y[0].about_links;
-        let V;
-        for (V = 0; V < he.length; V += 1) {
-          const fe = st(y, he, V);
-          te[V]
-            ? te[V].p(fe, ne)
-            : ((te[V] = mt(fe)), te[V].c(), te[V].m(w, null));
+        he = E[0].about_links;
+        let I;
+        for (I = 0; I < he.length; I += 1) {
+          const ie = dt(E, he, I);
+          K[I] ? K[I].p(ie, oe) : ((K[I] = It(ie)), K[I].c(), K[I].m(w, null));
         }
-        for (; V < te.length; V += 1) te[V].d(1);
-        te.length = he.length;
+        for (; I < K.length; I += 1) K[I].d(1);
+        K.length = he.length;
       }
-      if (ne & 1) {
-        pe = y[0].stay_informed_links;
-        let V;
-        for (V = 0; V < pe.length; V += 1) {
-          const fe = tt(y, pe, V);
-          se[V]
-            ? se[V].p(fe, ne)
-            : ((se[V] = kt(fe)), se[V].c(), se[V].m(Z, null));
+      if (oe & 1) {
+        de = E[0].stay_informed_links;
+        let I;
+        for (I = 0; I < de.length; I += 1) {
+          const ie = ht(E, de, I);
+          J[I] ? J[I].p(ie, oe) : ((J[I] = xt(ie)), J[I].c(), J[I].m(Z, null));
         }
-        for (; V < se.length; V += 1) se[V].d(1);
-        se.length = pe.length;
+        for (; I < J.length; I += 1) J[I].d(1);
+        J.length = de.length;
       }
     },
-    i(y) {
-      B || (x(r), x(U), (B = !0));
+    i(E) {
+      N || (x(r), x(G), (N = !0));
     },
-    o(y) {
-      D(r), D(U), (B = !1);
+    o(E) {
+      O(r), O(G), (N = !1);
     },
-    d(y) {
-      y && c(e), L[i].d(), ye(J, y), U && U.d(), ye(te, y), ye(se, y);
+    d(E) {
+      E && c(e), C[i].d(), $e(U, E), G && G.d(), $e(K, E), $e(J, E);
     },
   };
 }
-function ls(l) {
+function vs(l) {
   let e,
     s,
     t,
@@ -531,26 +527,26 @@ function ls(l) {
     a,
     i = l[0].latest_links,
     r = [];
-  for (let o = 0; o < i.length; o += 1) r[o] = ct(lt(l, i, o));
+  for (let o = 0; o < i.length; o += 1) r[o] = $t(_t(l, i, o));
   return {
     c() {
-      (e = g('section')),
-        (s = g('h3')),
-        (t = N('Latest')),
-        (n = S()),
-        (a = g('ul'));
+      (e = _('section')),
+        (s = _('h3')),
+        (t = M('Latest')),
+        (n = A()),
+        (a = _('ul'));
       for (let o = 0; o < r.length; o += 1) r[o].c();
       this.h();
     },
     l(o) {
-      e = v(o, 'SECTION', { class: !0 });
+      e = g(o, 'SECTION', { class: !0 });
       var f = h(e);
-      s = v(f, 'H3', { class: !0 });
+      s = g(f, 'H3', { class: !0 });
       var m = h(s);
-      (t = O(m, 'Latest')),
+      (t = D(m, 'Latest')),
         m.forEach(c),
-        (n = A(f)),
-        (a = v(f, 'UL', { class: !0 }));
+        (n = T(f)),
+        (a = g(f, 'UL', { class: !0 }));
       var d = h(a);
       for (let $ = 0; $ < r.length; $ += 1) r[$].l(d);
       d.forEach(c), f.forEach(c), this.h();
@@ -561,7 +557,7 @@ function ls(l) {
         u(e, 'class', 'link-group svelte-fhk6t1');
     },
     m(o, f) {
-      C(o, e, f), p(e, s), p(s, t), p(e, n), p(e, a);
+      L(o, e, f), p(e, s), p(s, t), p(e, n), p(e, a);
       for (let m = 0; m < r.length; m += 1) r[m].m(a, null);
     },
     p(o, f) {
@@ -569,8 +565,8 @@ function ls(l) {
         i = o[0].latest_links;
         let m;
         for (m = 0; m < i.length; m += 1) {
-          const d = lt(o, i, m);
-          r[m] ? r[m].p(d, f) : ((r[m] = ct(d)), r[m].c(), r[m].m(a, null));
+          const d = _t(o, i, m);
+          r[m] ? r[m].p(d, f) : ((r[m] = $t(d)), r[m].c(), r[m].m(a, null));
         }
         for (; m < r.length; m += 1) r[m].d(1);
         r.length = i.length;
@@ -579,11 +575,11 @@ function ls(l) {
     i: z,
     o: z,
     d(o) {
-      o && c(e), ye(r, o);
+      o && c(e), $e(r, o);
     },
   };
 }
-function rs(l) {
+function ws(l) {
   let e,
     s,
     t,
@@ -596,62 +592,62 @@ function rs(l) {
     m,
     d,
     $,
-    _,
-    E = l[0].latest_links,
-    I = [];
-  for (let b = 0; b < E.length; b += 1) I[b] = ut(ot(l, E, b));
-  let R = l[0].media_links,
-    M = [];
-  for (let b = 0; b < R.length; b += 1) M[b] = pt(rt(l, R, b));
-  const G = (b) =>
-    D(M[b], 1, 1, () => {
-      M[b] = null;
+    v,
+    y = l[0].latest_links,
+    S = [];
+  for (let b = 0; b < y.length; b += 1) S[b] = bt(vt(l, y, b));
+  let B = l[0].media_links,
+    R = [];
+  for (let b = 0; b < B.length; b += 1) R[b] = Et(gt(l, B, b));
+  const W = (b) =>
+    O(R[b], 1, 1, () => {
+      R[b] = null;
     });
   return {
     c() {
-      (e = g('div')),
-        (s = g('section')),
-        (t = g('h3')),
-        (n = N('Latest')),
-        (a = S()),
-        (i = g('ul'));
-      for (let b = 0; b < I.length; b += 1) I[b].c();
-      (r = S()),
-        (o = g('section')),
-        (f = g('h3')),
-        (m = N('Media')),
-        (d = S()),
-        ($ = g('ul'));
-      for (let b = 0; b < M.length; b += 1) M[b].c();
+      (e = _('div')),
+        (s = _('section')),
+        (t = _('h3')),
+        (n = M('Latest')),
+        (a = A()),
+        (i = _('ul'));
+      for (let b = 0; b < S.length; b += 1) S[b].c();
+      (r = A()),
+        (o = _('section')),
+        (f = _('h3')),
+        (m = M('Media')),
+        (d = A()),
+        ($ = _('ul'));
+      for (let b = 0; b < R.length; b += 1) R[b].c();
       this.h();
     },
     l(b) {
-      e = v(b, 'DIV', { class: !0 });
-      var P = h(e);
-      s = v(P, 'SECTION', { class: !0 });
+      e = g(b, 'DIV', { class: !0 });
+      var j = h(e);
+      s = g(j, 'SECTION', { class: !0 });
       var w = h(s);
-      t = v(w, 'H3', { class: !0 });
+      t = g(w, 'H3', { class: !0 });
       var F = h(t);
-      (n = O(F, 'Latest')),
+      (n = D(F, 'Latest')),
         F.forEach(c),
-        (a = A(w)),
-        (i = v(w, 'UL', { class: !0 }));
-      var T = h(i);
-      for (let Z = 0; Z < I.length; Z += 1) I[Z].l(T);
-      T.forEach(c),
+        (a = T(w)),
+        (i = g(w, 'UL', { class: !0 }));
+      var H = h(i);
+      for (let Z = 0; Z < S.length; Z += 1) S[Z].l(H);
+      H.forEach(c),
         w.forEach(c),
-        (r = A(P)),
-        (o = v(P, 'SECTION', { class: !0 }));
-      var q = h(o);
-      f = v(q, 'H3', { class: !0 });
-      var j = h(f);
-      (m = O(j, 'Media')),
-        j.forEach(c),
-        (d = A(q)),
-        ($ = v(q, 'UL', { class: !0 }));
-      var ae = h($);
-      for (let Z = 0; Z < M.length; Z += 1) M[Z].l(ae);
-      ae.forEach(c), q.forEach(c), P.forEach(c), this.h();
+        (r = T(j)),
+        (o = g(j, 'SECTION', { class: !0 }));
+      var P = h(o);
+      f = g(P, 'H3', { class: !0 });
+      var q = h(f);
+      (m = D(q, 'Media')),
+        q.forEach(c),
+        (d = T(P)),
+        ($ = g(P, 'UL', { class: !0 }));
+      var te = h($);
+      for (let Z = 0; Z < R.length; Z += 1) R[Z].l(te);
+      te.forEach(c), P.forEach(c), j.forEach(c), this.h();
     },
     h() {
       u(t, 'class', 'svelte-fhk6t1'),
@@ -662,54 +658,54 @@ function rs(l) {
         u(o, 'class', 'link-group media svelte-fhk6t1'),
         u(e, 'class', 'latest-and-media svelte-fhk6t1');
     },
-    m(b, P) {
-      C(b, e, P), p(e, s), p(s, t), p(t, n), p(s, a), p(s, i);
-      for (let w = 0; w < I.length; w += 1) I[w].m(i, null);
+    m(b, j) {
+      L(b, e, j), p(e, s), p(s, t), p(t, n), p(s, a), p(s, i);
+      for (let w = 0; w < S.length; w += 1) S[w].m(i, null);
       p(e, r), p(e, o), p(o, f), p(f, m), p(o, d), p(o, $);
-      for (let w = 0; w < M.length; w += 1) M[w].m($, null);
-      _ = !0;
+      for (let w = 0; w < R.length; w += 1) R[w].m($, null);
+      v = !0;
     },
-    p(b, P) {
-      if (P & 1) {
-        E = b[0].latest_links;
+    p(b, j) {
+      if (j & 1) {
+        y = b[0].latest_links;
         let w;
-        for (w = 0; w < E.length; w += 1) {
-          const F = ot(b, E, w);
-          I[w] ? I[w].p(F, P) : ((I[w] = ut(F)), I[w].c(), I[w].m(i, null));
+        for (w = 0; w < y.length; w += 1) {
+          const F = vt(b, y, w);
+          S[w] ? S[w].p(F, j) : ((S[w] = bt(F)), S[w].c(), S[w].m(i, null));
         }
-        for (; w < I.length; w += 1) I[w].d(1);
-        I.length = E.length;
+        for (; w < S.length; w += 1) S[w].d(1);
+        S.length = y.length;
       }
-      if (P & 5) {
-        R = b[0].media_links;
+      if (j & 5) {
+        B = b[0].media_links;
         let w;
-        for (w = 0; w < R.length; w += 1) {
-          const F = rt(b, R, w);
-          M[w]
-            ? (M[w].p(F, P), x(M[w], 1))
-            : ((M[w] = pt(F)), M[w].c(), x(M[w], 1), M[w].m($, null));
+        for (w = 0; w < B.length; w += 1) {
+          const F = gt(b, B, w);
+          R[w]
+            ? (R[w].p(F, j), x(R[w], 1))
+            : ((R[w] = Et(F)), R[w].c(), x(R[w], 1), R[w].m($, null));
         }
-        for (_e(), w = R.length; w < M.length; w += 1) G(w);
+        for (_e(), w = B.length; w < R.length; w += 1) W(w);
         ge();
       }
     },
     i(b) {
-      if (!_) {
-        for (let P = 0; P < R.length; P += 1) x(M[P]);
-        _ = !0;
+      if (!v) {
+        for (let j = 0; j < B.length; j += 1) x(R[j]);
+        v = !0;
       }
     },
     o(b) {
-      M = M.filter(Boolean);
-      for (let P = 0; P < M.length; P += 1) D(M[P]);
-      _ = !1;
+      R = R.filter(Boolean);
+      for (let j = 0; j < R.length; j += 1) O(R[j]);
+      v = !1;
     },
     d(b) {
-      b && c(e), ye(I, b), ye(M, b);
+      b && c(e), $e(S, b), $e(R, b);
     },
   };
 }
-function ct(l) {
+function $t(l) {
   let e,
     s,
     t = l[4].text + '',
@@ -718,14 +714,14 @@ function ct(l) {
     i;
   return {
     c() {
-      (e = g('li')), (s = g('a')), (n = N(t)), (i = S()), this.h();
+      (e = _('li')), (s = _('a')), (n = M(t)), (i = A()), this.h();
     },
     l(r) {
-      e = v(r, 'LI', { class: !0 });
+      e = g(r, 'LI', { class: !0 });
       var o = h(e);
-      s = v(o, 'A', { href: !0, class: !0 });
+      s = g(o, 'A', { href: !0, class: !0 });
       var f = h(s);
-      (n = O(f, t)), f.forEach(c), (i = A(o)), o.forEach(c), this.h();
+      (n = D(f, t)), f.forEach(c), (i = T(o)), o.forEach(c), this.h();
     },
     h() {
       u(s, 'href', (a = ee(l[4].url))),
@@ -733,10 +729,10 @@ function ct(l) {
         u(e, 'class', 'svelte-fhk6t1');
     },
     m(r, o) {
-      C(r, e, o), p(e, s), p(s, n), p(e, i);
+      L(r, e, o), p(e, s), p(s, n), p(e, i);
     },
     p(r, o) {
-      o & 1 && t !== (t = r[4].text + '') && $e(n, t),
+      o & 1 && t !== (t = r[4].text + '') && we(n, t),
         o & 1 && a !== (a = ee(r[4].url)) && u(s, 'href', a);
     },
     d(r) {
@@ -744,7 +740,7 @@ function ct(l) {
     },
   };
 }
-function ut(l) {
+function bt(l) {
   let e,
     s,
     t = l[4].text + '',
@@ -753,14 +749,14 @@ function ut(l) {
     i;
   return {
     c() {
-      (e = g('li')), (s = g('a')), (n = N(t)), (i = S()), this.h();
+      (e = _('li')), (s = _('a')), (n = M(t)), (i = A()), this.h();
     },
     l(r) {
-      e = v(r, 'LI', { class: !0 });
+      e = g(r, 'LI', { class: !0 });
       var o = h(e);
-      s = v(o, 'A', { href: !0, class: !0 });
+      s = g(o, 'A', { href: !0, class: !0 });
       var f = h(s);
-      (n = O(f, t)), f.forEach(c), (i = A(o)), o.forEach(c), this.h();
+      (n = D(f, t)), f.forEach(c), (i = T(o)), o.forEach(c), this.h();
     },
     h() {
       u(s, 'href', (a = ee(l[4].url))),
@@ -768,10 +764,10 @@ function ut(l) {
         u(e, 'class', 'svelte-fhk6t1');
     },
     m(r, o) {
-      C(r, e, o), p(e, s), p(s, n), p(e, i);
+      L(r, e, o), p(e, s), p(s, n), p(e, i);
     },
     p(r, o) {
-      o & 1 && t !== (t = r[4].text + '') && $e(n, t),
+      o & 1 && t !== (t = r[4].text + '') && we(n, t),
         o & 1 && a !== (a = ee(r[4].url)) && u(s, 'href', a);
     },
     d(r) {
@@ -779,7 +775,7 @@ function ut(l) {
     },
   };
 }
-function pt(l) {
+function Et(l) {
   let e,
     s,
     t,
@@ -791,33 +787,33 @@ function pt(l) {
     f,
     m;
   var d = l[2][l[4].symbol];
-  function $(_) {
+  function $(v) {
     return {};
   }
   return (
     d && (t = new d($())),
     {
       c() {
-        (e = g('li')),
-          (s = g('div')),
+        (e = _('li')),
+          (s = _('div')),
           t && X(t.$$.fragment),
-          (n = S()),
-          (a = g('a')),
-          (r = N(i)),
-          (f = S()),
+          (n = A()),
+          (a = _('a')),
+          (r = M(i)),
+          (f = A()),
           this.h();
       },
-      l(_) {
-        e = v(_, 'LI', { class: !0 });
-        var E = h(e);
-        s = v(E, 'DIV', { class: !0 });
-        var I = h(s);
-        t && le(t.$$.fragment, I),
-          I.forEach(c),
-          (n = A(E)),
-          (a = v(E, 'A', { href: !0, class: !0 }));
-        var R = h(a);
-        (r = O(R, i)), R.forEach(c), (f = A(E)), E.forEach(c), this.h();
+      l(v) {
+        e = g(v, 'LI', { class: !0 });
+        var y = h(e);
+        s = g(y, 'DIV', { class: !0 });
+        var S = h(s);
+        t && ae(t.$$.fragment, S),
+          S.forEach(c),
+          (n = T(y)),
+          (a = g(y, 'A', { href: !0, class: !0 }));
+        var B = h(a);
+        (r = D(B, i)), B.forEach(c), (f = T(y)), y.forEach(c), this.h();
       },
       h() {
         u(s, 'class', 'symbol svelte-fhk6t1'),
@@ -825,8 +821,8 @@ function pt(l) {
           u(a, 'class', 'svelte-fhk6t1'),
           u(e, 'class', 'svelte-fhk6t1');
       },
-      m(_, E) {
-        C(_, e, E),
+      m(v, y) {
+        L(v, e, y),
           p(e, s),
           t && Y(t, s, null),
           p(e, n),
@@ -835,13 +831,13 @@ function pt(l) {
           p(e, f),
           (m = !0);
       },
-      p(_, E) {
-        if (d !== (d = _[2][_[4].symbol])) {
+      p(v, y) {
+        if (d !== (d = v[2][v[4].symbol])) {
           if (t) {
             _e();
-            const I = t;
-            D(I.$$.fragment, 1, 0, () => {
-              Q(I, 1);
+            const S = t;
+            O(S.$$.fragment, 1, 0, () => {
+              Q(S, 1);
             }),
               ge();
           }
@@ -852,22 +848,22 @@ function pt(l) {
               Y(t, s, null))
             : (t = null);
         }
-        (!m || E & 1) && i !== (i = _[4].text + '') && $e(r, i),
-          (!m || (E & 1 && o !== (o = ee(_[4].url)))) && u(a, 'href', o);
+        (!m || y & 1) && i !== (i = v[4].text + '') && we(r, i),
+          (!m || (y & 1 && o !== (o = ee(v[4].url)))) && u(a, 'href', o);
       },
-      i(_) {
-        m || (t && x(t.$$.fragment, _), (m = !0));
+      i(v) {
+        m || (t && x(t.$$.fragment, v), (m = !0));
       },
-      o(_) {
-        t && D(t.$$.fragment, _), (m = !1);
+      o(v) {
+        t && O(t.$$.fragment, v), (m = !1);
       },
-      d(_) {
-        _ && c(e), t && Q(t);
+      d(v) {
+        v && c(e), t && Q(t);
       },
     }
   );
 }
-function ft(l) {
+function yt(l) {
   let e,
     s,
     t = l[4].text + '',
@@ -876,14 +872,14 @@ function ft(l) {
     i;
   return {
     c() {
-      (e = g('li')), (s = g('a')), (n = N(t)), (i = S()), this.h();
+      (e = _('li')), (s = _('a')), (n = M(t)), (i = A()), this.h();
     },
     l(r) {
-      e = v(r, 'LI', { class: !0 });
+      e = g(r, 'LI', { class: !0 });
       var o = h(e);
-      s = v(o, 'A', { href: !0, class: !0 });
+      s = g(o, 'A', { href: !0, class: !0 });
       var f = h(s);
-      (n = O(f, t)), f.forEach(c), (i = A(o)), o.forEach(c), this.h();
+      (n = D(f, t)), f.forEach(c), (i = T(o)), o.forEach(c), this.h();
     },
     h() {
       u(s, 'href', (a = ee(l[4].url))),
@@ -891,10 +887,10 @@ function ft(l) {
         u(e, 'class', 'svelte-fhk6t1');
     },
     m(r, o) {
-      C(r, e, o), p(e, s), p(s, n), p(e, i);
+      L(r, e, o), p(e, s), p(s, n), p(e, i);
     },
     p(r, o) {
-      o & 1 && t !== (t = r[4].text + '') && $e(n, t),
+      o & 1 && t !== (t = r[4].text + '') && we(n, t),
         o & 1 && a !== (a = ee(r[4].url)) && u(s, 'href', a);
     },
     d(r) {
@@ -902,7 +898,7 @@ function ft(l) {
     },
   };
 }
-function ht(l) {
+function Ct(l) {
   let e,
     s,
     t,
@@ -911,33 +907,33 @@ function ht(l) {
     i,
     r = l[0].media_links,
     o = [];
-  for (let m = 0; m < r.length; m += 1) o[m] = dt(nt(l, r, m));
+  for (let m = 0; m < r.length; m += 1) o[m] = Lt(mt(l, r, m));
   const f = (m) =>
-    D(o[m], 1, 1, () => {
+    O(o[m], 1, 1, () => {
       o[m] = null;
     });
   return {
     c() {
-      (e = g('section')),
-        (s = g('h3')),
-        (t = N('Media')),
-        (n = S()),
-        (a = g('ul'));
+      (e = _('section')),
+        (s = _('h3')),
+        (t = M('Media')),
+        (n = A()),
+        (a = _('ul'));
       for (let m = 0; m < o.length; m += 1) o[m].c();
       this.h();
     },
     l(m) {
-      e = v(m, 'SECTION', { class: !0 });
+      e = g(m, 'SECTION', { class: !0 });
       var d = h(e);
-      s = v(d, 'H3', { class: !0 });
+      s = g(d, 'H3', { class: !0 });
       var $ = h(s);
-      (t = O($, 'Media')),
+      (t = D($, 'Media')),
         $.forEach(c),
-        (n = A(d)),
-        (a = v(d, 'UL', { class: !0 }));
-      var _ = h(a);
-      for (let E = 0; E < o.length; E += 1) o[E].l(_);
-      _.forEach(c), d.forEach(c), this.h();
+        (n = T(d)),
+        (a = g(d, 'UL', { class: !0 }));
+      var v = h(a);
+      for (let y = 0; y < o.length; y += 1) o[y].l(v);
+      v.forEach(c), d.forEach(c), this.h();
     },
     h() {
       u(s, 'class', 'svelte-fhk6t1'),
@@ -945,7 +941,7 @@ function ht(l) {
         u(e, 'class', 'link-group media svelte-fhk6t1');
     },
     m(m, d) {
-      C(m, e, d), p(e, s), p(s, t), p(e, n), p(e, a);
+      L(m, e, d), p(e, s), p(s, t), p(e, n), p(e, a);
       for (let $ = 0; $ < o.length; $ += 1) o[$].m(a, null);
       i = !0;
     },
@@ -954,10 +950,10 @@ function ht(l) {
         r = m[0].media_links;
         let $;
         for ($ = 0; $ < r.length; $ += 1) {
-          const _ = nt(m, r, $);
+          const v = mt(m, r, $);
           o[$]
-            ? (o[$].p(_, d), x(o[$], 1))
-            : ((o[$] = dt(_)), o[$].c(), x(o[$], 1), o[$].m(a, null));
+            ? (o[$].p(v, d), x(o[$], 1))
+            : ((o[$] = Lt(v)), o[$].c(), x(o[$], 1), o[$].m(a, null));
         }
         for (_e(), $ = r.length; $ < o.length; $ += 1) f($);
         ge();
@@ -971,15 +967,15 @@ function ht(l) {
     },
     o(m) {
       o = o.filter(Boolean);
-      for (let d = 0; d < o.length; d += 1) D(o[d]);
+      for (let d = 0; d < o.length; d += 1) O(o[d]);
       i = !1;
     },
     d(m) {
-      m && c(e), ye(o, m);
+      m && c(e), $e(o, m);
     },
   };
 }
-function dt(l) {
+function Lt(l) {
   let e,
     s,
     t,
@@ -991,33 +987,33 @@ function dt(l) {
     f,
     m;
   var d = l[2][l[4].symbol];
-  function $(_) {
+  function $(v) {
     return {};
   }
   return (
     d && (t = new d($())),
     {
       c() {
-        (e = g('li')),
-          (s = g('div')),
+        (e = _('li')),
+          (s = _('div')),
           t && X(t.$$.fragment),
-          (n = S()),
-          (a = g('a')),
-          (r = N(i)),
-          (f = S()),
+          (n = A()),
+          (a = _('a')),
+          (r = M(i)),
+          (f = A()),
           this.h();
       },
-      l(_) {
-        e = v(_, 'LI', { class: !0 });
-        var E = h(e);
-        s = v(E, 'DIV', { class: !0 });
-        var I = h(s);
-        t && le(t.$$.fragment, I),
-          I.forEach(c),
-          (n = A(E)),
-          (a = v(E, 'A', { href: !0, class: !0 }));
-        var R = h(a);
-        (r = O(R, i)), R.forEach(c), (f = A(E)), E.forEach(c), this.h();
+      l(v) {
+        e = g(v, 'LI', { class: !0 });
+        var y = h(e);
+        s = g(y, 'DIV', { class: !0 });
+        var S = h(s);
+        t && ae(t.$$.fragment, S),
+          S.forEach(c),
+          (n = T(y)),
+          (a = g(y, 'A', { href: !0, class: !0 }));
+        var B = h(a);
+        (r = D(B, i)), B.forEach(c), (f = T(y)), y.forEach(c), this.h();
       },
       h() {
         u(s, 'class', 'symbol svelte-fhk6t1'),
@@ -1025,8 +1021,8 @@ function dt(l) {
           u(a, 'class', 'svelte-fhk6t1'),
           u(e, 'class', 'svelte-fhk6t1');
       },
-      m(_, E) {
-        C(_, e, E),
+      m(v, y) {
+        L(v, e, y),
           p(e, s),
           t && Y(t, s, null),
           p(e, n),
@@ -1035,13 +1031,13 @@ function dt(l) {
           p(e, f),
           (m = !0);
       },
-      p(_, E) {
-        if (d !== (d = _[2][_[4].symbol])) {
+      p(v, y) {
+        if (d !== (d = v[2][v[4].symbol])) {
           if (t) {
             _e();
-            const I = t;
-            D(I.$$.fragment, 1, 0, () => {
-              Q(I, 1);
+            const S = t;
+            O(S.$$.fragment, 1, 0, () => {
+              Q(S, 1);
             }),
               ge();
           }
@@ -1052,22 +1048,22 @@ function dt(l) {
               Y(t, s, null))
             : (t = null);
         }
-        (!m || E & 1) && i !== (i = _[4].text + '') && $e(r, i),
-          (!m || (E & 1 && o !== (o = ee(_[4].url)))) && u(a, 'href', o);
+        (!m || y & 1) && i !== (i = v[4].text + '') && we(r, i),
+          (!m || (y & 1 && o !== (o = ee(v[4].url)))) && u(a, 'href', o);
       },
-      i(_) {
-        m || (t && x(t.$$.fragment, _), (m = !0));
+      i(v) {
+        m || (t && x(t.$$.fragment, v), (m = !0));
       },
-      o(_) {
-        t && D(t.$$.fragment, _), (m = !1);
+      o(v) {
+        t && O(t.$$.fragment, v), (m = !1);
       },
-      d(_) {
-        _ && c(e), t && Q(t);
+      d(v) {
+        v && c(e), t && Q(t);
       },
     }
   );
 }
-function mt(l) {
+function It(l) {
   let e,
     s,
     t = l[4].text + '',
@@ -1076,14 +1072,14 @@ function mt(l) {
     i;
   return {
     c() {
-      (e = g('li')), (s = g('a')), (n = N(t)), (i = S()), this.h();
+      (e = _('li')), (s = _('a')), (n = M(t)), (i = A()), this.h();
     },
     l(r) {
-      e = v(r, 'LI', { class: !0 });
+      e = g(r, 'LI', { class: !0 });
       var o = h(e);
-      s = v(o, 'A', { href: !0, class: !0 });
+      s = g(o, 'A', { href: !0, class: !0 });
       var f = h(s);
-      (n = O(f, t)), f.forEach(c), (i = A(o)), o.forEach(c), this.h();
+      (n = D(f, t)), f.forEach(c), (i = T(o)), o.forEach(c), this.h();
     },
     h() {
       u(s, 'href', (a = ee(l[4].url))),
@@ -1091,10 +1087,10 @@ function mt(l) {
         u(e, 'class', 'svelte-fhk6t1');
     },
     m(r, o) {
-      C(r, e, o), p(e, s), p(s, n), p(e, i);
+      L(r, e, o), p(e, s), p(s, n), p(e, i);
     },
     p(r, o) {
-      o & 1 && t !== (t = r[4].text + '') && $e(n, t),
+      o & 1 && t !== (t = r[4].text + '') && we(n, t),
         o & 1 && a !== (a = ee(r[4].url)) && u(s, 'href', a);
     },
     d(r) {
@@ -1102,7 +1098,7 @@ function mt(l) {
     },
   };
 }
-function kt(l) {
+function xt(l) {
   let e,
     s,
     t = l[4].text + '',
@@ -1111,14 +1107,14 @@ function kt(l) {
     i;
   return {
     c() {
-      (e = g('li')), (s = g('a')), (n = N(t)), (i = S()), this.h();
+      (e = _('li')), (s = _('a')), (n = M(t)), (i = A()), this.h();
     },
     l(r) {
-      e = v(r, 'LI', { class: !0 });
+      e = g(r, 'LI', { class: !0 });
       var o = h(e);
-      s = v(o, 'A', { href: !0, class: !0 });
+      s = g(o, 'A', { href: !0, class: !0 });
       var f = h(s);
-      (n = O(f, t)), f.forEach(c), (i = A(o)), o.forEach(c), this.h();
+      (n = D(f, t)), f.forEach(c), (i = T(o)), o.forEach(c), this.h();
     },
     h() {
       u(s, 'href', (a = ee(l[4].url))),
@@ -1126,10 +1122,10 @@ function kt(l) {
         u(e, 'class', 'svelte-fhk6t1');
     },
     m(r, o) {
-      C(r, e, o), p(e, s), p(s, n), p(e, i);
+      L(r, e, o), p(e, s), p(s, n), p(e, i);
     },
     p(r, o) {
-      o & 1 && t !== (t = r[4].text + '') && $e(n, t),
+      o & 1 && t !== (t = r[4].text + '') && we(n, t),
         o & 1 && a !== (a = ee(r[4].url)) && u(s, 'href', a);
     },
     d(r) {
@@ -1137,31 +1133,31 @@ function kt(l) {
     },
   };
 }
-function os(l) {
+function $s(l) {
   let e, s, t, n;
-  jt(l[3]);
-  let a = l[0].latest_links && it(l);
+  ns(l[3]);
+  let a = l[0].latest_links && wt(l);
   return {
     c() {
-      a && a.c(), (e = we());
+      a && a.c(), (e = ve());
     },
     l(i) {
-      a && a.l(i), (e = we());
+      a && a.l(i), (e = ve());
     },
     m(i, r) {
       a && a.m(i, r),
-        C(i, e, r),
+        L(i, e, r),
         (s = !0),
-        t || ((n = qt(window, 'resize', l[3])), (t = !0));
+        t || ((n = as(window, 'resize', l[3])), (t = !0));
     },
     p(i, [r]) {
       i[0].latest_links
         ? a
           ? (a.p(i, r), r & 1 && x(a, 1))
-          : ((a = it(i)), a.c(), x(a, 1), a.m(e.parentNode, e))
+          : ((a = wt(i)), a.c(), x(a, 1), a.m(e.parentNode, e))
         : a &&
           (_e(),
-          D(a, 1, 1, () => {
+          O(a, 1, 1, () => {
             a = null;
           }),
           ge());
@@ -1170,16 +1166,16 @@ function os(l) {
       s || (x(a), (s = !0));
     },
     o(i) {
-      D(a), (s = !1);
+      O(a), (s = !1);
     },
     d(i) {
       a && a.d(i), i && c(e), (t = !1), n();
     },
   };
 }
-const Pe = 745;
-function is(l, e, s) {
-  const t = { graphics: es, pictures: ss, videos: as };
+const Qe = 745;
+function bs(l, e, s) {
+  const t = { graphics: ds, pictures: ks, videos: gs };
   let { links: n = {} } = e,
     a = 1200;
   function i() {
@@ -1192,19 +1188,19 @@ function is(l, e, s) {
     [n, a, t, i]
   );
 }
-class cs extends de {
+class Es extends ue {
   constructor(e) {
-    super(), me(this, e, is, os, ke, { links: 0 });
+    super(), pe(this, e, bs, $s, fe, { links: 0 });
   }
 }
-function us(l) {
+function ys(l) {
   let e, s;
   return {
     c() {
-      (e = re('svg')), (s = re('path')), this.h();
+      (e = le('svg')), (s = le('path')), this.h();
     },
     l(t) {
-      e = oe(t, 'svg', {
+      e = re(t, 'svg', {
         'aria-hidden': !0,
         focusable: !0,
         xmlns: !0,
@@ -1213,7 +1209,7 @@ function us(l) {
         class: !0,
       });
       var n = h(e);
-      (s = oe(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
+      (s = re(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
     },
     h() {
       u(
@@ -1225,14 +1221,14 @@ function us(l) {
         u(e, 'focusable', 'false'),
         u(e, 'xmlns', 'http://www.w3.org/2000/svg'),
         u(e, 'viewBox', '0 0 16 13'),
-        Le(e, 'width', l[0] + 'px'),
+        Ce(e, 'width', l[0] + 'px'),
         u(e, 'class', 'svelte-17648ki');
     },
     m(t, n) {
-      C(t, e, n), p(e, s);
+      L(t, e, n), p(e, s);
     },
     p(t, [n]) {
-      n & 1 && Le(e, 'width', t[0] + 'px');
+      n & 1 && Ce(e, 'width', t[0] + 'px');
     },
     i: z,
     o: z,
@@ -1241,7 +1237,7 @@ function us(l) {
     },
   };
 }
-function ps(l, e, s) {
+function Cs(l, e, s) {
   let { width: t = 20 } = e;
   return (
     (l.$$set = (n) => {
@@ -1250,19 +1246,19 @@ function ps(l, e, s) {
     [t]
   );
 }
-class fs extends de {
+class Ls extends ue {
   constructor(e) {
-    super(), me(this, e, ps, us, ke, { width: 0 });
+    super(), pe(this, e, Cs, ys, fe, { width: 0 });
   }
 }
-function hs(l) {
+function Is(l) {
   let e, s;
   return {
     c() {
-      (e = re('svg')), (s = re('path')), this.h();
+      (e = le('svg')), (s = le('path')), this.h();
     },
     l(t) {
-      e = oe(t, 'svg', {
+      e = re(t, 'svg', {
         'aria-hidden': !0,
         focusable: !0,
         viewBox: !0,
@@ -1271,7 +1267,7 @@ function hs(l) {
         class: !0,
       });
       var n = h(e);
-      (s = oe(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
+      (s = re(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
     },
     h() {
       u(
@@ -1283,14 +1279,14 @@ function hs(l) {
         u(e, 'focusable', 'false'),
         u(e, 'viewBox', '0 0 21 17'),
         u(e, 'xmlns', 'http://www.w3.org/2000/svg'),
-        Le(e, 'width', l[0] + 'px'),
+        Ce(e, 'width', l[0] + 'px'),
         u(e, 'class', 'svelte-17648ki');
     },
     m(t, n) {
-      C(t, e, n), p(e, s);
+      L(t, e, n), p(e, s);
     },
     p(t, [n]) {
-      n & 1 && Le(e, 'width', t[0] + 'px');
+      n & 1 && Ce(e, 'width', t[0] + 'px');
     },
     i: z,
     o: z,
@@ -1299,7 +1295,7 @@ function hs(l) {
     },
   };
 }
-function ds(l, e, s) {
+function xs(l, e, s) {
   let { width: t = 20 } = e;
   return (
     (l.$$set = (n) => {
@@ -1308,19 +1304,19 @@ function ds(l, e, s) {
     [t]
   );
 }
-class ms extends de {
+class Ss extends ue {
   constructor(e) {
-    super(), me(this, e, ds, hs, ke, { width: 0 });
+    super(), pe(this, e, xs, Is, fe, { width: 0 });
   }
 }
-function ks(l) {
+function As(l) {
   let e, s;
   return {
     c() {
-      (e = re('svg')), (s = re('path')), this.h();
+      (e = le('svg')), (s = le('path')), this.h();
     },
     l(t) {
-      e = oe(t, 'svg', {
+      e = re(t, 'svg', {
         'aria-hidden': !0,
         focusable: !0,
         xmlns: !0,
@@ -1329,7 +1325,7 @@ function ks(l) {
         class: !0,
       });
       var n = h(e);
-      (s = oe(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
+      (s = re(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
     },
     h() {
       u(
@@ -1341,14 +1337,14 @@ function ks(l) {
         u(e, 'focusable', 'false'),
         u(e, 'xmlns', 'http://www.w3.org/2000/svg'),
         u(e, 'viewBox', '0 0 16 16'),
-        Le(e, 'width', l[0] + 'px'),
+        Ce(e, 'width', l[0] + 'px'),
         u(e, 'class', 'svelte-17648ki');
     },
     m(t, n) {
-      C(t, e, n), p(e, s);
+      L(t, e, n), p(e, s);
     },
     p(t, [n]) {
-      n & 1 && Le(e, 'width', t[0] + 'px');
+      n & 1 && Ce(e, 'width', t[0] + 'px');
     },
     i: z,
     o: z,
@@ -1357,7 +1353,7 @@ function ks(l) {
     },
   };
 }
-function _s(l, e, s) {
+function Ts(l, e, s) {
   let { width: t = 20 } = e;
   return (
     (l.$$set = (n) => {
@@ -1366,19 +1362,19 @@ function _s(l, e, s) {
     [t]
   );
 }
-class gs extends de {
+class Rs extends ue {
   constructor(e) {
-    super(), me(this, e, _s, ks, ke, { width: 0 });
+    super(), pe(this, e, Ts, As, fe, { width: 0 });
   }
 }
-function vs(l) {
+function Vs(l) {
   let e, s, t;
   return {
     c() {
-      (e = re('svg')), (s = re('path')), (t = re('path')), this.h();
+      (e = le('svg')), (s = le('path')), (t = le('path')), this.h();
     },
     l(n) {
-      e = oe(n, 'svg', {
+      e = re(n, 'svg', {
         'aria-hidden': !0,
         focusable: !0,
         xmlns: !0,
@@ -1387,9 +1383,9 @@ function vs(l) {
         class: !0,
       });
       var a = h(e);
-      (s = oe(a, 'path', { d: !0 })),
+      (s = re(a, 'path', { d: !0 })),
         h(s).forEach(c),
-        (t = oe(a, 'path', { d: !0 })),
+        (t = re(a, 'path', { d: !0 })),
         h(t).forEach(c),
         a.forEach(c),
         this.h();
@@ -1409,14 +1405,14 @@ function vs(l) {
         u(e, 'focusable', 'false'),
         u(e, 'xmlns', 'http://www.w3.org/2000/svg'),
         u(e, 'viewBox', '0 0 16 16'),
-        Le(e, 'width', l[0] + 'px'),
+        Ce(e, 'width', l[0] + 'px'),
         u(e, 'class', 'svelte-17648ki');
     },
     m(n, a) {
-      C(n, e, a), p(e, s), p(e, t);
+      L(n, e, a), p(e, s), p(e, t);
     },
     p(n, [a]) {
-      a & 1 && Le(e, 'width', n[0] + 'px');
+      a & 1 && Ce(e, 'width', n[0] + 'px');
     },
     i: z,
     o: z,
@@ -1425,7 +1421,7 @@ function vs(l) {
     },
   };
 }
-function ws(l, e, s) {
+function Ms(l, e, s) {
   let { width: t = 20 } = e;
   return (
     (l.$$set = (n) => {
@@ -1434,19 +1430,19 @@ function ws(l, e, s) {
     [t]
   );
 }
-class $s extends de {
+class Ds extends ue {
   constructor(e) {
-    super(), me(this, e, ws, vs, ke, { width: 0 });
+    super(), pe(this, e, Ms, Vs, fe, { width: 0 });
   }
 }
-function bs(l) {
+function Bs(l) {
   let e, s;
   return {
     c() {
-      (e = re('svg')), (s = re('path')), this.h();
+      (e = le('svg')), (s = le('path')), this.h();
     },
     l(t) {
-      e = oe(t, 'svg', {
+      e = re(t, 'svg', {
         'aria-hidden': !0,
         focusable: !0,
         xmlns: !0,
@@ -1455,7 +1451,7 @@ function bs(l) {
         class: !0,
       });
       var n = h(e);
-      (s = oe(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
+      (s = re(n, 'path', { d: !0 })), h(s).forEach(c), n.forEach(c), this.h();
     },
     h() {
       u(
@@ -1467,14 +1463,14 @@ function bs(l) {
         u(e, 'focusable', 'false'),
         u(e, 'xmlns', 'http://www.w3.org/2000/svg'),
         u(e, 'viewBox', '0 0 21 21'),
-        Le(e, 'width', l[0] + 'px'),
+        Ce(e, 'width', l[0] + 'px'),
         u(e, 'class', 'svelte-17648ki');
     },
     m(t, n) {
-      C(t, e, n), p(e, s);
+      L(t, e, n), p(e, s);
     },
     p(t, [n]) {
-      n & 1 && Le(e, 'width', t[0] + 'px');
+      n & 1 && Ce(e, 'width', t[0] + 'px');
     },
     i: z,
     o: z,
@@ -1483,7 +1479,7 @@ function bs(l) {
     },
   };
 }
-function Es(l, e, s) {
+function Hs(l, e, s) {
   let { width: t = 20 } = e;
   return (
     (l.$$set = (n) => {
@@ -1492,16 +1488,16 @@ function Es(l, e, s) {
     [t]
   );
 }
-class ys extends de {
+class Os extends ue {
   constructor(e) {
-    super(), me(this, e, Es, bs, ke, { width: 0 });
+    super(), pe(this, e, Hs, Bs, fe, { width: 0 });
   }
 }
-function _t(l, e, s) {
+function St(l, e, s) {
   const t = l.slice();
   return (t[2] = e[s]), t;
 }
-function gt(l) {
+function At(l) {
   let e,
     s,
     t,
@@ -1514,69 +1510,69 @@ function gt(l) {
     m,
     d,
     $,
-    _,
-    E,
-    I,
+    v,
+    y,
+    S,
+    B,
     R,
-    M,
-    G = l[0].social_links,
+    W = l[0].social_links,
     b = [];
-  for (let w = 0; w < G.length; w += 1) b[w] = vt(_t(l, G, w));
-  const P = (w) =>
-    D(b[w], 1, 1, () => {
+  for (let w = 0; w < W.length; w += 1) b[w] = Tt(St(l, W, w));
+  const j = (w) =>
+    O(b[w], 1, 1, () => {
       b[w] = null;
     });
   return {
     c() {
-      (e = g('section')),
-        (s = g('div')),
-        (t = g('article')),
-        (n = g('h2')),
-        (a = N('Information you can trust')),
-        (i = S()),
-        (r = g('p')),
-        (f = N(o)),
-        (m = S()),
-        (d = g('div')),
-        ($ = g('h2')),
-        (_ = N('Follow Us')),
-        (E = S()),
-        (I = g('div')),
-        (R = g('ul'));
+      (e = _('section')),
+        (s = _('div')),
+        (t = _('article')),
+        (n = _('h2')),
+        (a = M('Information you can trust')),
+        (i = A()),
+        (r = _('p')),
+        (f = M(o)),
+        (m = A()),
+        (d = _('div')),
+        ($ = _('h2')),
+        (v = M('Follow Us')),
+        (y = A()),
+        (S = _('div')),
+        (B = _('ul'));
       for (let w = 0; w < b.length; w += 1) b[w].c();
       this.h();
     },
     l(w) {
-      e = v(w, 'SECTION', { class: !0 });
+      e = g(w, 'SECTION', { class: !0 });
       var F = h(e);
-      s = v(F, 'DIV', { class: !0 });
-      var T = h(s);
-      t = v(T, 'ARTICLE', { class: !0 });
-      var q = h(t);
-      n = v(q, 'H2', { class: !0 });
-      var j = h(n);
-      (a = O(j, 'Information you can trust')),
-        j.forEach(c),
-        (i = A(q)),
-        (r = v(q, 'P', { class: !0 }));
-      var ae = h(r);
-      (f = O(ae, o)),
-        ae.forEach(c),
+      s = g(F, 'DIV', { class: !0 });
+      var H = h(s);
+      t = g(H, 'ARTICLE', { class: !0 });
+      var P = h(t);
+      n = g(P, 'H2', { class: !0 });
+      var q = h(n);
+      (a = D(q, 'Information you can trust')),
         q.forEach(c),
-        (m = A(T)),
-        (d = v(T, 'DIV', { class: !0 }));
+        (i = T(P)),
+        (r = g(P, 'P', { class: !0 }));
+      var te = h(r);
+      (f = D(te, o)),
+        te.forEach(c),
+        P.forEach(c),
+        (m = T(H)),
+        (d = g(H, 'DIV', { class: !0 }));
       var Z = h(d);
-      $ = v(Z, 'H2', { class: !0 });
-      var B = h($);
-      (_ = O(B, 'Follow Us')), B.forEach(c), (E = A(Z)), (I = v(Z, 'DIV', {}));
-      var W = h(I);
-      R = v(W, 'UL', { class: !0 });
-      var L = h(R);
-      for (let ie = 0; ie < b.length; ie += 1) b[ie].l(L);
-      L.forEach(c),
-        W.forEach(c),
+      $ = g(Z, 'H2', { class: !0 });
+      var N = h($);
+      (v = D(N, 'Follow Us')), N.forEach(c), (y = T(Z)), (S = g(Z, 'DIV', {}));
+      var se = h(S);
+      B = g(se, 'UL', { class: !0 });
+      var C = h(B);
+      for (let ce = 0; ce < b.length; ce += 1) b[ce].l(C);
+      C.forEach(c),
+        se.forEach(c),
         Z.forEach(c),
-        T.forEach(c),
+        H.forEach(c),
         F.forEach(c),
         this.h();
     },
@@ -1585,13 +1581,13 @@ function gt(l) {
         u(r, 'class', 'svelte-eccq59'),
         u(t, 'class', 'company-info svelte-eccq59'),
         u($, 'class', 'svelte-eccq59'),
-        u(R, 'class', 'links svelte-eccq59'),
+        u(B, 'class', 'links svelte-eccq59'),
         u(d, 'class', 'social svelte-eccq59'),
         u(s, 'class', 'content-container svelte-eccq59'),
         u(e, 'class', 'company svelte-eccq59');
     },
     m(w, F) {
-      C(w, e, F),
+      L(w, e, F),
         p(e, s),
         p(s, t),
         p(t, n),
@@ -1602,47 +1598,47 @@ function gt(l) {
         p(s, m),
         p(s, d),
         p(d, $),
-        p($, _),
-        p(d, E),
-        p(d, I),
-        p(I, R);
-      for (let T = 0; T < b.length; T += 1) b[T].m(R, null);
-      M = !0;
+        p($, v),
+        p(d, y),
+        p(d, S),
+        p(S, B);
+      for (let H = 0; H < b.length; H += 1) b[H].m(B, null);
+      R = !0;
     },
     p(w, F) {
       if (
-        ((!M || F & 1) && o !== (o = w[0].company_description + '') && $e(f, o),
+        ((!R || F & 1) && o !== (o = w[0].company_description + '') && we(f, o),
         F & 3)
       ) {
-        G = w[0].social_links;
-        let T;
-        for (T = 0; T < G.length; T += 1) {
-          const q = _t(w, G, T);
-          b[T]
-            ? (b[T].p(q, F), x(b[T], 1))
-            : ((b[T] = vt(q)), b[T].c(), x(b[T], 1), b[T].m(R, null));
+        W = w[0].social_links;
+        let H;
+        for (H = 0; H < W.length; H += 1) {
+          const P = St(w, W, H);
+          b[H]
+            ? (b[H].p(P, F), x(b[H], 1))
+            : ((b[H] = Tt(P)), b[H].c(), x(b[H], 1), b[H].m(B, null));
         }
-        for (_e(), T = G.length; T < b.length; T += 1) P(T);
+        for (_e(), H = W.length; H < b.length; H += 1) j(H);
         ge();
       }
     },
     i(w) {
-      if (!M) {
-        for (let F = 0; F < G.length; F += 1) x(b[F]);
-        M = !0;
+      if (!R) {
+        for (let F = 0; F < W.length; F += 1) x(b[F]);
+        R = !0;
       }
     },
     o(w) {
       b = b.filter(Boolean);
-      for (let F = 0; F < b.length; F += 1) D(b[F]);
-      M = !1;
+      for (let F = 0; F < b.length; F += 1) O(b[F]);
+      R = !1;
     },
     d(w) {
-      w && c(e), ye(b, w);
+      w && c(e), $e(b, w);
     },
   };
 }
-function vt(l) {
+function Tt(l) {
   let e, s, t, n, a, i, r, o;
   var f = l[1][l[2].type];
   function m(d) {
@@ -1652,28 +1648,28 @@ function vt(l) {
     f && (a = new f(m())),
     {
       c() {
-        (e = g('li')),
-          (s = g('a')),
-          (t = g('div')),
-          (n = g('div')),
+        (e = _('li')),
+          (s = _('a')),
+          (t = _('div')),
+          (n = _('div')),
           a && X(a.$$.fragment),
-          (r = S()),
+          (r = A()),
           this.h();
       },
       l(d) {
-        e = v(d, 'LI', { class: !0 });
+        e = g(d, 'LI', { class: !0 });
         var $ = h(e);
-        s = v($, 'A', { href: !0 });
-        var _ = h(s);
-        t = v(_, 'DIV', { class: !0 });
-        var E = h(t);
-        n = v(E, 'DIV', { class: !0 });
-        var I = h(n);
-        a && le(a.$$.fragment, I),
-          I.forEach(c),
-          E.forEach(c),
-          _.forEach(c),
-          (r = A($)),
+        s = g($, 'A', { href: !0 });
+        var v = h(s);
+        t = g(v, 'DIV', { class: !0 });
+        var y = h(t);
+        n = g(y, 'DIV', { class: !0 });
+        var S = h(n);
+        a && ae(a.$$.fragment, S),
+          S.forEach(c),
+          y.forEach(c),
+          v.forEach(c),
+          (r = T($)),
           $.forEach(c),
           this.h();
       },
@@ -1684,7 +1680,7 @@ function vt(l) {
           u(e, 'class', 'social-links symbol svelte-eccq59');
       },
       m(d, $) {
-        C(d, e, $),
+        L(d, e, $),
           p(e, s),
           p(s, t),
           p(t, n),
@@ -1696,9 +1692,9 @@ function vt(l) {
         if (f !== (f = d[1][d[2].type])) {
           if (a) {
             _e();
-            const _ = a;
-            D(_.$$.fragment, 1, 0, () => {
-              Q(_, 1);
+            const v = a;
+            O(v.$$.fragment, 1, 0, () => {
+              Q(v, 1);
             }),
               ge();
           }
@@ -1715,7 +1711,7 @@ function vt(l) {
         o || (a && x(a.$$.fragment, d), (o = !0));
       },
       o(d) {
-        a && D(a.$$.fragment, d), (o = !1);
+        a && O(a.$$.fragment, d), (o = !1);
       },
       d(d) {
         d && c(e), a && Q(a);
@@ -1723,28 +1719,28 @@ function vt(l) {
     }
   );
 }
-function Cs(l) {
+function Ns(l) {
   let e,
     s,
-    t = l[0].social_links && gt(l);
+    t = l[0].social_links && At(l);
   return {
     c() {
-      t && t.c(), (e = we());
+      t && t.c(), (e = ve());
     },
     l(n) {
-      t && t.l(n), (e = we());
+      t && t.l(n), (e = ve());
     },
     m(n, a) {
-      t && t.m(n, a), C(n, e, a), (s = !0);
+      t && t.m(n, a), L(n, e, a), (s = !0);
     },
     p(n, [a]) {
       n[0].social_links
         ? t
           ? (t.p(n, a), a & 1 && x(t, 1))
-          : ((t = gt(n)), t.c(), x(t, 1), t.m(e.parentNode, e))
+          : ((t = At(n)), t.c(), x(t, 1), t.m(e.parentNode, e))
         : t &&
           (_e(),
-          D(t, 1, 1, () => {
+          O(t, 1, 1, () => {
             t = null;
           }),
           ge());
@@ -1753,20 +1749,20 @@ function Cs(l) {
       s || (x(t), (s = !0));
     },
     o(n) {
-      D(t), (s = !1);
+      O(t), (s = !1);
     },
     d(n) {
       t && t.d(n), n && c(e);
     },
   };
 }
-function Ls(l, e, s) {
+function Zs(l, e, s) {
   const t = {
-    twitter: fs,
-    facebook: gs,
-    instagram: $s,
-    youtube: ms,
-    linkedin: ys,
+    twitter: Ls,
+    facebook: Rs,
+    instagram: Ds,
+    youtube: Ss,
+    linkedin: Os,
   };
   let { links: n = {} } = e;
   return (
@@ -1776,20 +1772,20 @@ function Ls(l, e, s) {
     [n, t]
   );
 }
-class Is extends de {
+class Fs extends ue {
   constructor(e) {
-    super(), me(this, e, Ls, Cs, ke, { links: 0 });
+    super(), pe(this, e, Zs, Ns, fe, { links: 0 });
   }
 }
-function wt(l, e, s) {
+function Rt(l, e, s) {
   const t = l.slice();
   return (t[1] = e[s]), t;
 }
-function $t(l, e, s) {
+function Vt(l, e, s) {
   const t = l.slice();
   return (t[1] = e[s]), t;
 }
-function bt(l) {
+function Mt(l) {
   let e,
     s,
     t,
@@ -1802,88 +1798,88 @@ function bt(l) {
     m,
     d,
     $,
-    _,
-    E,
-    I,
+    v,
+    y,
+    S,
+    B,
     R,
-    M,
-    G = l[0].copyright_year + '',
+    W = l[0].copyright_year + '',
     b,
-    P,
+    j,
     w,
     F,
-    T,
-    q = l[0].ad_links,
-    j = [];
-  for (let B = 0; B < q.length; B += 1) j[B] = Et($t(l, q, B));
-  let ae = l[0].misc_links.filter(Ct),
+    H,
+    P = l[0].ad_links,
+    q = [];
+  for (let N = 0; N < P.length; N += 1) q[N] = Dt(Vt(l, P, N));
+  let te = l[0].misc_links.filter(Ht),
     Z = [];
-  for (let B = 0; B < ae.length; B += 1) Z[B] = yt(wt(l, ae, B));
+  for (let N = 0; N < te.length; N += 1) Z[N] = Bt(Rt(l, te, N));
   return {
     c() {
-      (e = g('section')), (s = g('div')), (t = g('section')), (n = g('ul'));
-      for (let B = 0; B < j.length; B += 1) j[B].c();
-      (a = S()),
-        (i = g('p')),
-        (r = N('All quotes delayed a minimum of 15 minutes. ')),
-        (o = g('a')),
-        (f = N('See here for a complete list of exchanges and delays')),
-        (d = N('.')),
-        ($ = S()),
-        (_ = g('section')),
-        (E = g('ul'));
-      for (let B = 0; B < Z.length; B += 1) Z[B].c();
-      (I = S()),
-        (R = g('p')),
-        (M = N('\xA9 ')),
-        (b = N(G)),
-        (P = N(` Reuters.
+      (e = _('section')), (s = _('div')), (t = _('section')), (n = _('ul'));
+      for (let N = 0; N < q.length; N += 1) q[N].c();
+      (a = A()),
+        (i = _('p')),
+        (r = M('All quotes delayed a minimum of 15 minutes. ')),
+        (o = _('a')),
+        (f = M('See here for a complete list of exchanges and delays')),
+        (d = M('.')),
+        ($ = A()),
+        (v = _('section')),
+        (y = _('ul'));
+      for (let N = 0; N < Z.length; N += 1) Z[N].c();
+      (S = A()),
+        (B = _('p')),
+        (R = M('\xA9 ')),
+        (b = M(W)),
+        (j = M(` Reuters.
         `)),
-        (w = g('a')),
-        (F = N('All rights reserved')),
+        (w = _('a')),
+        (F = M('All rights reserved')),
         this.h();
     },
-    l(B) {
-      e = v(B, 'SECTION', { class: !0 });
-      var W = h(e);
-      s = v(W, 'DIV', { class: !0 });
-      var L = h(s);
-      t = v(L, 'SECTION', { class: !0 });
-      var ie = h(t);
-      n = v(ie, 'UL', { class: !0 });
-      var ue = h(n);
-      for (let y = 0; y < j.length; y += 1) j[y].l(ue);
-      ue.forEach(c), ie.forEach(c), (a = A(L)), (i = v(L, 'P', { class: !0 }));
-      var J = h(i);
-      (r = O(J, 'All quotes delayed a minimum of 15 minutes. ')),
-        (o = v(J, 'A', { href: !0, class: !0 }));
-      var U = h(o);
-      (f = O(U, 'See here for a complete list of exchanges and delays')),
+    l(N) {
+      e = g(N, 'SECTION', { class: !0 });
+      var se = h(e);
+      s = g(se, 'DIV', { class: !0 });
+      var C = h(s);
+      t = g(C, 'SECTION', { class: !0 });
+      var ce = h(t);
+      n = g(ce, 'UL', { class: !0 });
+      var ke = h(n);
+      for (let E = 0; E < q.length; E += 1) q[E].l(ke);
+      ke.forEach(c), ce.forEach(c), (a = T(C)), (i = g(C, 'P', { class: !0 }));
+      var U = h(i);
+      (r = D(U, 'All quotes delayed a minimum of 15 minutes. ')),
+        (o = g(U, 'A', { href: !0, class: !0 }));
+      var G = h(o);
+      (f = D(G, 'See here for a complete list of exchanges and delays')),
+        G.forEach(c),
+        (d = D(U, '.')),
         U.forEach(c),
-        (d = O(J, '.')),
-        J.forEach(c),
-        ($ = A(L)),
-        (_ = v(L, 'SECTION', { class: !0 }));
-      var he = h(_);
-      E = v(he, 'UL', { class: !0 });
-      var te = h(E);
-      for (let y = 0; y < Z.length; y += 1) Z[y].l(te);
-      te.forEach(c), he.forEach(c), (I = A(L)), (R = v(L, 'P', { class: !0 }));
-      var pe = h(R);
-      (M = O(pe, '\xA9 ')),
-        (b = O(pe, G)),
-        (P = O(
-          pe,
+        ($ = T(C)),
+        (v = g(C, 'SECTION', { class: !0 }));
+      var he = h(v);
+      y = g(he, 'UL', { class: !0 });
+      var K = h(y);
+      for (let E = 0; E < Z.length; E += 1) Z[E].l(K);
+      K.forEach(c), he.forEach(c), (S = T(C)), (B = g(C, 'P', { class: !0 }));
+      var de = h(B);
+      (R = D(de, '\xA9 ')),
+        (b = D(de, W)),
+        (j = D(
+          de,
           ` Reuters.
         `
         )),
-        (w = v(pe, 'A', { href: !0, class: !0 }));
-      var se = h(w);
-      (F = O(se, 'All rights reserved')),
+        (w = g(de, 'A', { href: !0, class: !0 }));
+      var J = h(w);
+      (F = D(J, 'All rights reserved')),
+        J.forEach(c),
+        de.forEach(c),
+        C.forEach(c),
         se.forEach(c),
-        pe.forEach(c),
-        L.forEach(c),
-        W.forEach(c),
         this.h();
     },
     h() {
@@ -1892,17 +1888,17 @@ function bt(l) {
         u(o, 'href', (m = ee(l[0].disclaimer_link))),
         u(o, 'class', 'svelte-1wk8lrk'),
         u(i, 'class', 'disclaimer svelte-1wk8lrk'),
-        u(E, 'class', 'link-group svelte-1wk8lrk'),
-        u(_, 'class', 'misc-links svelte-1wk8lrk'),
-        u(w, 'href', (T = ee(l[0].copyright_link))),
+        u(y, 'class', 'link-group svelte-1wk8lrk'),
+        u(v, 'class', 'misc-links svelte-1wk8lrk'),
+        u(w, 'href', (H = ee(l[0].copyright_link))),
         u(w, 'class', 'svelte-1wk8lrk'),
-        u(R, 'class', 'copyright svelte-1wk8lrk'),
+        u(B, 'class', 'copyright svelte-1wk8lrk'),
         u(s, 'class', 'content-container svelte-1wk8lrk'),
         u(e, 'class', 'legal svelte-1wk8lrk');
     },
-    m(B, W) {
-      C(B, e, W), p(e, s), p(s, t), p(t, n);
-      for (let L = 0; L < j.length; L += 1) j[L].m(n, null);
+    m(N, se) {
+      L(N, e, se), p(e, s), p(s, t), p(t, n);
+      for (let C = 0; C < q.length; C += 1) q[C].m(n, null);
       p(s, a),
         p(s, i),
         p(i, r),
@@ -1910,44 +1906,44 @@ function bt(l) {
         p(o, f),
         p(i, d),
         p(s, $),
-        p(s, _),
-        p(_, E);
-      for (let L = 0; L < Z.length; L += 1) Z[L].m(E, null);
-      p(s, I), p(s, R), p(R, M), p(R, b), p(R, P), p(R, w), p(w, F);
+        p(s, v),
+        p(v, y);
+      for (let C = 0; C < Z.length; C += 1) Z[C].m(y, null);
+      p(s, S), p(s, B), p(B, R), p(B, b), p(B, j), p(B, w), p(w, F);
     },
-    p(B, W) {
-      if (W & 1) {
-        q = B[0].ad_links;
-        let L;
-        for (L = 0; L < q.length; L += 1) {
-          const ie = $t(B, q, L);
-          j[L] ? j[L].p(ie, W) : ((j[L] = Et(ie)), j[L].c(), j[L].m(n, null));
+    p(N, se) {
+      if (se & 1) {
+        P = N[0].ad_links;
+        let C;
+        for (C = 0; C < P.length; C += 1) {
+          const ce = Vt(N, P, C);
+          q[C] ? q[C].p(ce, se) : ((q[C] = Dt(ce)), q[C].c(), q[C].m(n, null));
         }
-        for (; L < j.length; L += 1) j[L].d(1);
-        j.length = q.length;
+        for (; C < q.length; C += 1) q[C].d(1);
+        q.length = P.length;
       }
       if (
-        (W & 1 && m !== (m = ee(B[0].disclaimer_link)) && u(o, 'href', m),
-        W & 1)
+        (se & 1 && m !== (m = ee(N[0].disclaimer_link)) && u(o, 'href', m),
+        se & 1)
       ) {
-        ae = B[0].misc_links.filter(Ct);
-        let L;
-        for (L = 0; L < ae.length; L += 1) {
-          const ie = wt(B, ae, L);
-          Z[L] ? Z[L].p(ie, W) : ((Z[L] = yt(ie)), Z[L].c(), Z[L].m(E, null));
+        te = N[0].misc_links.filter(Ht);
+        let C;
+        for (C = 0; C < te.length; C += 1) {
+          const ce = Rt(N, te, C);
+          Z[C] ? Z[C].p(ce, se) : ((Z[C] = Bt(ce)), Z[C].c(), Z[C].m(y, null));
         }
-        for (; L < Z.length; L += 1) Z[L].d(1);
-        Z.length = ae.length;
+        for (; C < Z.length; C += 1) Z[C].d(1);
+        Z.length = te.length;
       }
-      W & 1 && G !== (G = B[0].copyright_year + '') && $e(b, G),
-        W & 1 && T !== (T = ee(B[0].copyright_link)) && u(w, 'href', T);
+      se & 1 && W !== (W = N[0].copyright_year + '') && we(b, W),
+        se & 1 && H !== (H = ee(N[0].copyright_link)) && u(w, 'href', H);
     },
-    d(B) {
-      B && c(e), ye(j, B), ye(Z, B);
+    d(N) {
+      N && c(e), $e(q, N), $e(Z, N);
     },
   };
 }
-function Et(l) {
+function Dt(l) {
   let e,
     s,
     t = l[1].text + '',
@@ -1956,14 +1952,14 @@ function Et(l) {
     i;
   return {
     c() {
-      (e = g('li')), (s = g('a')), (n = N(t)), (i = S()), this.h();
+      (e = _('li')), (s = _('a')), (n = M(t)), (i = A()), this.h();
     },
     l(r) {
-      e = v(r, 'LI', { class: !0 });
+      e = g(r, 'LI', { class: !0 });
       var o = h(e);
-      s = v(o, 'A', { href: !0, class: !0 });
+      s = g(o, 'A', { href: !0, class: !0 });
       var f = h(s);
-      (n = O(f, t)), f.forEach(c), (i = A(o)), o.forEach(c), this.h();
+      (n = D(f, t)), f.forEach(c), (i = T(o)), o.forEach(c), this.h();
     },
     h() {
       u(s, 'href', (a = ee(l[1].url))),
@@ -1971,10 +1967,10 @@ function Et(l) {
         u(e, 'class', 'svelte-1wk8lrk');
     },
     m(r, o) {
-      C(r, e, o), p(e, s), p(s, n), p(e, i);
+      L(r, e, o), p(e, s), p(s, n), p(e, i);
     },
     p(r, o) {
-      o & 1 && t !== (t = r[1].text + '') && $e(n, t),
+      o & 1 && t !== (t = r[1].text + '') && we(n, t),
         o & 1 && a !== (a = ee(r[1].url)) && u(s, 'href', a);
     },
     d(r) {
@@ -1982,7 +1978,7 @@ function Et(l) {
     },
   };
 }
-function yt(l) {
+function Bt(l) {
   let e,
     s,
     t = l[1].text + '',
@@ -1991,14 +1987,14 @@ function yt(l) {
     i;
   return {
     c() {
-      (e = g('li')), (s = g('a')), (n = N(t)), (i = S()), this.h();
+      (e = _('li')), (s = _('a')), (n = M(t)), (i = A()), this.h();
     },
     l(r) {
-      e = v(r, 'LI', { class: !0 });
+      e = g(r, 'LI', { class: !0 });
       var o = h(e);
-      s = v(o, 'A', { href: !0, class: !0 });
+      s = g(o, 'A', { href: !0, class: !0 });
       var f = h(s);
-      (n = O(f, t)), f.forEach(c), (i = A(o)), o.forEach(c), this.h();
+      (n = D(f, t)), f.forEach(c), (i = T(o)), o.forEach(c), this.h();
     },
     h() {
       u(s, 'href', (a = ee(l[1].url))),
@@ -2006,10 +2002,10 @@ function yt(l) {
         u(e, 'class', 'svelte-1wk8lrk');
     },
     m(r, o) {
-      C(r, e, o), p(e, s), p(s, n), p(e, i);
+      L(r, e, o), p(e, s), p(s, n), p(e, i);
     },
     p(r, o) {
-      o & 1 && t !== (t = r[1].text + '') && $e(n, t),
+      o & 1 && t !== (t = r[1].text + '') && we(n, t),
         o & 1 && a !== (a = ee(r[1].url)) && u(s, 'href', a);
     },
     d(r) {
@@ -2017,24 +2013,24 @@ function yt(l) {
     },
   };
 }
-function xs(l) {
+function Ps(l) {
   let e,
-    s = l[0].ad_links && bt(l);
+    s = l[0].ad_links && Mt(l);
   return {
     c() {
-      s && s.c(), (e = we());
+      s && s.c(), (e = ve());
     },
     l(t) {
-      s && s.l(t), (e = we());
+      s && s.l(t), (e = ve());
     },
     m(t, n) {
-      s && s.m(t, n), C(t, e, n);
+      s && s.m(t, n), L(t, e, n);
     },
     p(t, [n]) {
       t[0].ad_links
         ? s
           ? s.p(t, n)
-          : ((s = bt(t)), s.c(), s.m(e.parentNode, e))
+          : ((s = Mt(t)), s.c(), s.m(e.parentNode, e))
         : s && (s.d(1), (s = null));
     },
     i: z,
@@ -2044,8 +2040,8 @@ function xs(l) {
     },
   };
 }
-const Ct = (l) => !l.self;
-function Ss(l, e, s) {
+const Ht = (l) => !l.self;
+function js(l, e, s) {
   let { links: t = {} } = e;
   return (
     (l.$$set = (n) => {
@@ -2054,47 +2050,47 @@ function Ss(l, e, s) {
     [t]
   );
 }
-class As extends de {
+class qs extends ue {
   constructor(e) {
-    super(), me(this, e, Ss, xs, ke, { links: 0 });
+    super(), pe(this, e, js, Ps, fe, { links: 0 });
   }
 }
-const Ts = (l) => ({ intersecting: l & 1 }),
-  Lt = (l) => ({ intersecting: l[0] });
-function Rs(l) {
+const Us = (l) => ({ intersecting: l & 1 }),
+  Ot = (l) => ({ intersecting: l[0] });
+function Gs(l) {
   let e, s;
   const t = l[8].default,
-    n = Ut(t, l, l[7], Lt);
+    n = ls(t, l, l[7], Ot);
   return {
     c() {
-      (e = g('div')), n && n.c();
+      (e = _('div')), n && n.c();
     },
     l(a) {
-      e = v(a, 'DIV', {});
+      e = g(a, 'DIV', {});
       var i = h(e);
       n && n.l(i), i.forEach(c);
     },
     m(a, i) {
-      C(a, e, i), n && n.m(e, null), l[9](e), (s = !0);
+      L(a, e, i), n && n.m(e, null), l[9](e), (s = !0);
     },
     p(a, [i]) {
       n &&
         n.p &&
         (!s || i & 129) &&
-        zt(n, t, a, a[7], s ? Wt(t, a[7], i, Ts) : Gt(a[7]), Lt);
+        rs(n, t, a, a[7], s ? is(t, a[7], i, Us) : os(a[7]), Ot);
     },
     i(a) {
       s || (x(n, a), (s = !0));
     },
     o(a) {
-      D(n, a), (s = !1);
+      O(n, a), (s = !1);
     },
     d(a) {
       a && c(e), n && n.d(a), l[9](null);
     },
   };
 }
-function Vs(l, e, s) {
+function zs(l, e, s) {
   let { $$slots: t = {}, $$scope: n } = e,
     { once: a = !1 } = e,
     { top: i = 0 } = e,
@@ -2103,55 +2099,55 @@ function Vs(l, e, s) {
     { right: f = 0 } = e,
     m = !1,
     d;
-  Rt(() => {
+  qt(() => {
     if (typeof IntersectionObserver != 'undefined') {
-      const E = `${r}px ${o}px ${i}px ${f}px`,
-        I = new IntersectionObserver(
-          (R) => {
-            s(0, (m = R[0].isIntersecting)), m && a && I.unobserve(d);
+      const y = `${r}px ${o}px ${i}px ${f}px`,
+        S = new IntersectionObserver(
+          (B) => {
+            s(0, (m = B[0].isIntersecting)), m && a && S.unobserve(d);
           },
-          { rootMargin: E }
+          { rootMargin: y }
         );
-      return I.observe(d), () => I.unobserve(d);
+      return S.observe(d), () => S.unobserve(d);
     }
-    function _() {
-      const E = d.getBoundingClientRect();
+    function v() {
+      const y = d.getBoundingClientRect();
       s(
         0,
         (m =
-          E.bottom + r > 0 &&
-          E.right + f > 0 &&
-          E.top - i < window.innerHeight &&
-          E.left - o < window.innerWidth)
+          y.bottom + r > 0 &&
+          y.right + f > 0 &&
+          y.top - i < window.innerHeight &&
+          y.left - o < window.innerWidth)
       ),
-        m && a && window.removeEventListener('scroll', _);
+        m && a && window.removeEventListener('scroll', v);
     }
     return (
-      window.addEventListener('scroll', _),
-      () => window.removeEventListener('scroll', _)
+      window.addEventListener('scroll', v),
+      () => window.removeEventListener('scroll', v)
     );
   });
-  function $(_) {
-    Jt[_ ? 'unshift' : 'push'](() => {
-      (d = _), s(1, d);
+  function $(v) {
+    cs[v ? 'unshift' : 'push'](() => {
+      (d = v), s(1, d);
     });
   }
   return (
-    (l.$$set = (_) => {
-      'once' in _ && s(2, (a = _.once)),
-        'top' in _ && s(3, (i = _.top)),
-        'bottom' in _ && s(4, (r = _.bottom)),
-        'left' in _ && s(5, (o = _.left)),
-        'right' in _ && s(6, (f = _.right)),
-        '$$scope' in _ && s(7, (n = _.$$scope));
+    (l.$$set = (v) => {
+      'once' in v && s(2, (a = v.once)),
+        'top' in v && s(3, (i = v.top)),
+        'bottom' in v && s(4, (r = v.bottom)),
+        'left' in v && s(5, (o = v.left)),
+        'right' in v && s(6, (f = v.right)),
+        '$$scope' in v && s(7, (n = v.$$scope));
     }),
     [m, d, a, i, r, o, f, n, t, $]
   );
 }
-class Vt extends de {
+class Ut extends ue {
   constructor(e) {
     super(),
-      me(this, e, Vs, Rs, ke, {
+      pe(this, e, zs, Gs, fe, {
         once: 2,
         top: 3,
         bottom: 4,
@@ -2160,20 +2156,20 @@ class Vt extends de {
       });
   }
 }
-function Ms(l) {
+function Ws(l) {
   let e;
   return {
     c() {
-      (e = g('div')), this.h();
+      (e = _('div')), this.h();
     },
     l(s) {
-      (e = v(s, 'DIV', { class: !0 })), h(e).forEach(c), this.h();
+      (e = g(s, 'DIV', { class: !0 })), h(e).forEach(c), this.h();
     },
     h() {
       u(e, 'class', 'image svelte-1sz614n');
     },
     m(s, t) {
-      C(s, e, t);
+      L(s, e, t);
     },
     p: z,
     d(s) {
@@ -2181,21 +2177,21 @@ function Ms(l) {
     },
   };
 }
-function Bs(l) {
+function Ks(l) {
   let e, s;
   return {
     c() {
-      (e = g('div')), this.h();
+      (e = _('div')), this.h();
     },
     l(t) {
-      (e = v(t, 'DIV', { class: !0, style: !0 })), h(e).forEach(c), this.h();
+      (e = g(t, 'DIV', { class: !0, style: !0 })), h(e).forEach(c), this.h();
     },
     h() {
       u(e, 'class', 'image svelte-1sz614n'),
         u(e, 'style', (s = `background-image: url(${l[1]});`));
     },
     m(t, n) {
-      C(t, e, n);
+      L(t, e, n);
     },
     p(t, n) {
       n & 2 &&
@@ -2207,22 +2203,22 @@ function Bs(l) {
     },
   };
 }
-function Ds(l) {
+function Js(l) {
   let e;
   function s(a, i) {
-    return a[4] ? Bs : Ms;
+    return a[4] ? Ks : Ws;
   }
   let t = s(l),
     n = t(l);
   return {
     c() {
-      n.c(), (e = we());
+      n.c(), (e = ve());
     },
     l(a) {
-      n.l(a), (e = we());
+      n.l(a), (e = ve());
     },
     m(a, i) {
-      n.m(a, i), C(a, e, i);
+      n.m(a, i), L(a, e, i);
     },
     p(a, i) {
       t === (t = s(a)) && n
@@ -2234,16 +2230,16 @@ function Ds(l) {
     },
   };
 }
-function Hs(l) {
+function Qs(l) {
   let e, s, t, n, a, i, r, o;
   return (
-    (t = new Vt({
+    (t = new Ut({
       props: {
         top: 600,
         once: !0,
         $$slots: {
           default: [
-            Ds,
+            Js,
             ({ intersecting: f }) => ({ 4: f }),
             ({ intersecting: f }) => (f ? 16 : 0),
           ],
@@ -2253,22 +2249,22 @@ function Hs(l) {
     })),
     {
       c() {
-        (e = g('div')),
-          (s = g('a')),
+        (e = _('div')),
+          (s = _('a')),
           X(t.$$.fragment),
-          (n = S()),
-          (a = g('p')),
-          (i = N(l[2])),
+          (n = A()),
+          (a = _('p')),
+          (i = M(l[2])),
           this.h();
       },
       l(f) {
-        e = v(f, 'DIV', { class: !0, title: !0 });
+        e = g(f, 'DIV', { class: !0, title: !0 });
         var m = h(e);
-        s = v(m, 'A', { href: !0, class: !0 });
+        s = g(m, 'A', { href: !0, class: !0 });
         var d = h(s);
-        le(t.$$.fragment, d), (n = A(d)), (a = v(d, 'P', { class: !0 }));
+        ae(t.$$.fragment, d), (n = T(d)), (a = g(d, 'P', { class: !0 }));
         var $ = h(a);
-        (i = O($, l[2])), $.forEach(c), d.forEach(c), m.forEach(c), this.h();
+        (i = D($, l[2])), $.forEach(c), d.forEach(c), m.forEach(c), this.h();
       },
       h() {
         u(a, 'class', 'svelte-1sz614n'),
@@ -2278,13 +2274,13 @@ function Hs(l) {
           u(e, 'title', l[3]);
       },
       m(f, m) {
-        C(f, e, m), p(e, s), Y(t, s, null), p(s, n), p(s, a), p(a, i), (o = !0);
+        L(f, e, m), p(e, s), Y(t, s, null), p(s, n), p(s, a), p(a, i), (o = !0);
       },
       p(f, [m]) {
         const d = {};
         m & 50 && (d.$$scope = { dirty: m, ctx: f }),
           t.$set(d),
-          (!o || m & 4) && $e(i, f[2]),
+          (!o || m & 4) && we(i, f[2]),
           (!o || (m & 1 && r !== (r = f[0].replace('index.html', '')))) &&
             u(s, 'href', r),
           (!o || m & 8) && u(e, 'title', f[3]);
@@ -2293,7 +2289,7 @@ function Hs(l) {
         o || (x(t.$$.fragment, f), (o = !0));
       },
       o(f) {
-        D(t.$$.fragment, f), (o = !1);
+        O(t.$$.fragment, f), (o = !1);
       },
       d(f) {
         f && c(e), Q(t);
@@ -2301,7 +2297,7 @@ function Hs(l) {
     }
   );
 }
-function Ns(l, e, s) {
+function Xs(l, e, s) {
   let { url: t } = e,
     { image: n } = e,
     { title: a } = e,
@@ -2316,34 +2312,34 @@ function Ns(l, e, s) {
     [t, n, a, i]
   );
 }
-class Os extends de {
+class Ys extends ue {
   constructor(e) {
     super(),
-      me(this, e, Ns, Hs, ke, { url: 0, image: 1, title: 2, description: 3 });
+      pe(this, e, Xs, Qs, fe, { url: 0, image: 1, title: 2, description: 3 });
   }
 }
-function It(l, e, s) {
+function Nt(l, e, s) {
   const t = l.slice();
   return (t[3] = e[s]), t;
 }
-function xt(l) {
+function Zt(l) {
   let e,
     s,
     t = l[0],
     n = [];
-  for (let i = 0; i < t.length; i += 1) n[i] = St(It(l, t, i));
+  for (let i = 0; i < t.length; i += 1) n[i] = Ft(Nt(l, t, i));
   const a = (i) =>
-    D(n[i], 1, 1, () => {
+    O(n[i], 1, 1, () => {
       n[i] = null;
     });
   return {
     c() {
-      e = g('nav');
+      e = _('nav');
       for (let i = 0; i < n.length; i += 1) n[i].c();
       this.h();
     },
     l(i) {
-      e = v(i, 'NAV', { class: !0 });
+      e = g(i, 'NAV', { class: !0 });
       var r = h(e);
       for (let o = 0; o < n.length; o += 1) n[o].l(r);
       r.forEach(c), this.h();
@@ -2352,7 +2348,7 @@ function xt(l) {
       u(e, 'class', 'referral-rail row svelte-5ls690');
     },
     m(i, r) {
-      C(i, e, r);
+      L(i, e, r);
       for (let o = 0; o < n.length; o += 1) n[o].m(e, null);
       s = !0;
     },
@@ -2361,10 +2357,10 @@ function xt(l) {
         t = i[0];
         let o;
         for (o = 0; o < t.length; o += 1) {
-          const f = It(i, t, o);
+          const f = Nt(i, t, o);
           n[o]
             ? (n[o].p(f, r), x(n[o], 1))
-            : ((n[o] = St(f)), n[o].c(), x(n[o], 1), n[o].m(e, null));
+            : ((n[o] = Ft(f)), n[o].c(), x(n[o], 1), n[o].m(e, null));
         }
         for (_e(), o = t.length; o < n.length; o += 1) a(o);
         ge();
@@ -2378,40 +2374,40 @@ function xt(l) {
     },
     o(i) {
       n = n.filter(Boolean);
-      for (let r = 0; r < n.length; r += 1) D(n[r]);
+      for (let r = 0; r < n.length; r += 1) O(n[r]);
       s = !1;
     },
     d(i) {
-      i && c(e), ye(n, i);
+      i && c(e), $e(n, i);
     },
   };
 }
-function St(l) {
+function Ft(l) {
   let e, s;
   const t = [l[3]];
   let n = {};
-  for (let a = 0; a < t.length; a += 1) n = Xt(n, t[a]);
+  for (let a = 0; a < t.length; a += 1) n = fs(n, t[a]);
   return (
-    (e = new Os({ props: n })),
+    (e = new Ys({ props: n })),
     {
       c() {
         X(e.$$.fragment);
       },
       l(a) {
-        le(e.$$.fragment, a);
+        ae(e.$$.fragment, a);
       },
       m(a, i) {
         Y(e, a, i), (s = !0);
       },
       p(a, i) {
-        const r = i & 1 ? Kt(t, [Qt(a[3])]) : {};
+        const r = i & 1 ? us(t, [ps(a[3])]) : {};
         e.$set(r);
       },
       i(a) {
         s || (x(e.$$.fragment, a), (s = !0));
       },
       o(a) {
-        D(e.$$.fragment, a), (s = !1);
+        O(e.$$.fragment, a), (s = !1);
       },
       d(a) {
         Q(e, a);
@@ -2419,28 +2415,28 @@ function St(l) {
     }
   );
 }
-function Zs(l) {
+function en(l) {
   let e,
     s,
-    t = l[0] && xt(l);
+    t = l[0] && Zt(l);
   return {
     c() {
-      t && t.c(), (e = we());
+      t && t.c(), (e = ve());
     },
     l(n) {
-      t && t.l(n), (e = we());
+      t && t.l(n), (e = ve());
     },
     m(n, a) {
-      t && t.m(n, a), C(n, e, a), (s = !0);
+      t && t.m(n, a), L(n, e, a), (s = !0);
     },
     p(n, [a]) {
       n[0]
         ? t
           ? (t.p(n, a), a & 1 && x(t, 1))
-          : ((t = xt(n)), t.c(), x(t, 1), t.m(e.parentNode, e))
+          : ((t = Zt(n)), t.c(), x(t, 1), t.m(e.parentNode, e))
         : t &&
           (_e(),
-          D(t, 1, 1, () => {
+          O(t, 1, 1, () => {
             t = null;
           }),
           ge());
@@ -2449,19 +2445,19 @@ function Zs(l) {
       s || (x(t), (s = !0));
     },
     o(n) {
-      D(t), (s = !1);
+      O(t), (s = !1);
     },
     d(n) {
       t && t.d(n), n && c(e);
     },
   };
 }
-function Fs(l, e, s) {
+function tn(l, e, s) {
   let t,
     { referrals: n = [] } = e,
     a;
   return (
-    Rt(() => {
+    qt(() => {
       if (t.length === 4) {
         s(0, (a = t));
         return;
@@ -2498,40 +2494,40 @@ function Fs(l, e, s) {
     [a, n]
   );
 }
-class Ps extends de {
+class sn extends ue {
   constructor(e) {
-    super(), me(this, e, Fs, Zs, ke, { referrals: 1 });
+    super(), pe(this, e, tn, en, fe, { referrals: 1 });
   }
 }
-function At(l) {
+function Pt(l) {
   let e,
     s,
     t,
     n,
     a,
     i,
-    r = js(l);
+    r = nn(l);
   return {
     c() {
-      (e = g('section')),
-        (s = g('h2')),
-        (t = g('a')),
-        (n = N('More from Reuters Graphics')),
-        (a = S()),
+      (e = _('section')),
+        (s = _('h2')),
+        (t = _('a')),
+        (n = M('More from Reuters Graphics')),
+        (a = A()),
         r && r.c(),
         this.h();
     },
     l(o) {
-      e = v(o, 'SECTION', { class: !0 });
+      e = g(o, 'SECTION', { class: !0 });
       var f = h(e);
-      s = v(f, 'H2', { class: !0 });
+      s = g(f, 'H2', { class: !0 });
       var m = h(s);
-      t = v(m, 'A', { href: !0, class: !0 });
+      t = g(m, 'A', { href: !0, class: !0 });
       var d = h(t);
-      (n = O(d, 'More from Reuters Graphics')),
+      (n = D(d, 'More from Reuters Graphics')),
         d.forEach(c),
         m.forEach(c),
-        (a = A(f)),
+        (a = T(f)),
         r && r.l(f),
         f.forEach(c),
         this.h();
@@ -2543,7 +2539,7 @@ function At(l) {
         u(e, 'class', 'referrals svelte-h53uyh');
     },
     m(o, f) {
-      C(o, e, f),
+      L(o, e, f),
         p(e, s),
         p(s, t),
         p(t, n),
@@ -2558,23 +2554,23 @@ function At(l) {
       i || (x(r), (i = !0));
     },
     o(o) {
-      D(r), (i = !1);
+      O(r), (i = !1);
     },
     d(o) {
       o && c(e), r && r.d();
     },
   };
 }
-function js(l) {
+function nn(l) {
   let e, s;
   return (
-    (e = new Ps({ props: { referrals: l[0] } })),
+    (e = new sn({ props: { referrals: l[0] } })),
     {
       c() {
         X(e.$$.fragment);
       },
       l(t) {
-        le(e.$$.fragment, t);
+        ae(e.$$.fragment, t);
       },
       m(t, n) {
         Y(e, t, n), (s = !0);
@@ -2587,7 +2583,7 @@ function js(l) {
         s || (x(e.$$.fragment, t), (s = !0));
       },
       o(t) {
-        D(e.$$.fragment, t), (s = !1);
+        O(e.$$.fragment, t), (s = !1);
       },
       d(t) {
         Q(e, t);
@@ -2595,28 +2591,28 @@ function js(l) {
     }
   );
 }
-function qs(l) {
+function an(l) {
   let e,
     s,
-    t = l[1] && At(l);
+    t = l[1] && Pt(l);
   return {
     c() {
-      t && t.c(), (e = we());
+      t && t.c(), (e = ve());
     },
     l(n) {
-      t && t.l(n), (e = we());
+      t && t.l(n), (e = ve());
     },
     m(n, a) {
-      t && t.m(n, a), C(n, e, a), (s = !0);
+      t && t.m(n, a), L(n, e, a), (s = !0);
     },
     p(n, a) {
       n[1]
         ? t
           ? (t.p(n, a), a & 2 && x(t, 1))
-          : ((t = At(n)), t.c(), x(t, 1), t.m(e.parentNode, e))
+          : ((t = Pt(n)), t.c(), x(t, 1), t.m(e.parentNode, e))
         : t &&
           (_e(),
-          D(t, 1, 1, () => {
+          O(t, 1, 1, () => {
             t = null;
           }),
           ge());
@@ -2625,23 +2621,23 @@ function qs(l) {
       s || (x(t), (s = !0));
     },
     o(n) {
-      D(t), (s = !1);
+      O(t), (s = !1);
     },
     d(n) {
       t && t.d(n), n && c(e);
     },
   };
 }
-function Us(l) {
+function ln(l) {
   let e, s;
   return (
-    (e = new Vt({
+    (e = new Ut({
       props: {
         top: 2400,
         once: !0,
         $$slots: {
           default: [
-            qs,
+            an,
             ({ intersecting: t }) => ({ 1: t }),
             ({ intersecting: t }) => (t ? 2 : 0),
           ],
@@ -2654,7 +2650,7 @@ function Us(l) {
         X(e.$$.fragment);
       },
       l(t) {
-        le(e.$$.fragment, t);
+        ae(e.$$.fragment, t);
       },
       m(t, n) {
         Y(e, t, n), (s = !0);
@@ -2667,7 +2663,7 @@ function Us(l) {
         s || (x(e.$$.fragment, t), (s = !0));
       },
       o(t) {
-        D(e.$$.fragment, t), (s = !1);
+        O(e.$$.fragment, t), (s = !1);
       },
       d(t) {
         Q(e, t);
@@ -2675,7 +2671,7 @@ function Us(l) {
     }
   );
 }
-function zs(l, e, s) {
+function rn(l, e, s) {
   let { referrals: t = [] } = e;
   return (
     (l.$$set = (n) => {
@@ -2684,12 +2680,12 @@ function zs(l, e, s) {
     [t]
   );
 }
-class Gs extends de {
+class on extends ue {
   constructor(e) {
-    super(), me(this, e, zs, Us, ke, { referrals: 0 });
+    super(), pe(this, e, rn, ln, fe, { referrals: 0 });
   }
 }
-var je = [
+var Xe = [
   {
     company_description:
       "Reuters, the news and media division of Thomson Reuters, is the world\u2019s largest multimedia news provider, reaching billions of people worldwide every day. Reuters provides business, financial, national and international news to professionals via desktop terminals, the world's media organizations, industry events and directly to consumers.",
@@ -2848,39 +2844,39 @@ var je = [
     ],
   },
 ];
-function Ws(l) {
+function cn(l) {
   let e, s, t, n, a, i, r, o, f, m;
   return (
-    (t = new Gs({ props: { referrals: l[0] } })),
-    (a = new cs({ props: { links: je[0] } })),
-    (r = new Is({ props: { links: je[0] } })),
-    (f = new As({ props: { links: je[0] } })),
+    (t = new on({ props: { referrals: l[0] } })),
+    (a = new Es({ props: { links: Xe[0] } })),
+    (r = new Fs({ props: { links: Xe[0] } })),
+    (f = new qs({ props: { links: Xe[0] } })),
     {
       c() {
-        (e = g('footer')),
-          (s = g('div')),
+        (e = _('footer')),
+          (s = _('div')),
           X(t.$$.fragment),
-          (n = S()),
+          (n = A()),
           X(a.$$.fragment),
-          (i = S()),
+          (i = A()),
           X(r.$$.fragment),
-          (o = S()),
+          (o = A()),
           X(f.$$.fragment),
           this.h();
       },
       l(d) {
-        e = v(d, 'FOOTER', { style: !0, class: !0 });
+        e = g(d, 'FOOTER', { style: !0, class: !0 });
         var $ = h(e);
-        s = v($, 'DIV', { class: !0 });
-        var _ = h(s);
-        le(t.$$.fragment, _),
-          (n = A(_)),
-          le(a.$$.fragment, _),
-          (i = A(_)),
-          le(r.$$.fragment, _),
-          (o = A(_)),
-          le(f.$$.fragment, _),
-          _.forEach(c),
+        s = g($, 'DIV', { class: !0 });
+        var v = h(s);
+        ae(t.$$.fragment, v),
+          (n = T(v)),
+          ae(a.$$.fragment, v),
+          (i = T(v)),
+          ae(r.$$.fragment, v),
+          (o = T(v)),
+          ae(f.$$.fragment, v),
+          v.forEach(c),
           $.forEach(c),
           this.h();
       },
@@ -2898,7 +2894,7 @@ function Ws(l) {
           u(e, 'class', 'svelte-1w89kaj');
       },
       m(d, $) {
-        C(d, e, $),
+        L(d, e, $),
           p(e, s),
           Y(t, s, null),
           p(s, n),
@@ -2910,8 +2906,8 @@ function Ws(l) {
           (m = !0);
       },
       p(d, [$]) {
-        const _ = {};
-        $ & 1 && (_.referrals = d[0]), t.$set(_);
+        const v = {};
+        $ & 1 && (v.referrals = d[0]), t.$set(v);
       },
       i(d) {
         m ||
@@ -2922,10 +2918,10 @@ function Ws(l) {
           (m = !0));
       },
       o(d) {
-        D(t.$$.fragment, d),
-          D(a.$$.fragment, d),
-          D(r.$$.fragment, d),
-          D(f.$$.fragment, d),
+        O(t.$$.fragment, d),
+          O(a.$$.fragment, d),
+          O(r.$$.fragment, d),
+          O(f.$$.fragment, d),
           (m = !1);
       },
       d(d) {
@@ -2934,14 +2930,14 @@ function Ws(l) {
     }
   );
 }
-const qe = {
+const Ye = {
   default: { background: '#fff', primary: '#404040', rules: '#d0d0d0' },
   dark: { background: '#333', primary: '#eee', rules: '#999' },
 };
-function Js(l, e, s) {
+function un(l, e, s) {
   let { theme: t = {} } = e,
     { referrals: n = [] } = e;
-  const a = Fe(Fe({}, qe.default), t);
+  const a = Ke(Ke({}, Ye.default), t);
   return (
     (l.$$set = (i) => {
       'theme' in i && s(2, (t = i.theme)),
@@ -2950,21 +2946,21 @@ function Js(l, e, s) {
     [n, a, t]
   );
 }
-class De extends de {
+class Pe extends ue {
   constructor(e) {
-    super(), me(this, e, Js, Ws, ke, { theme: 2, referrals: 0 });
+    super(), pe(this, e, un, cn, fe, { theme: 2, referrals: 0 });
   }
 }
-function Ks(l) {
+function pn(l) {
   let e, s;
   return (
-    (e = new De({})),
+    (e = new Pe({})),
     {
       c() {
         X(e.$$.fragment);
       },
       l(t) {
-        le(e.$$.fragment, t);
+        ae(e.$$.fragment, t);
       },
       m(t, n) {
         Y(e, t, n), (s = !0);
@@ -2973,7 +2969,7 @@ function Ks(l) {
         s || (x(e.$$.fragment, t), (s = !0));
       },
       o(t) {
-        D(e.$$.fragment, t), (s = !1);
+        O(e.$$.fragment, t), (s = !1);
       },
       d(t) {
         Q(e, t);
@@ -2981,16 +2977,16 @@ function Ks(l) {
     }
   );
 }
-function Qs(l) {
+function fn(l) {
   let e, s;
   return (
-    (e = new De({ props: { theme: qe.dark } })),
+    (e = new Pe({ props: { theme: Ye.dark } })),
     {
       c() {
         X(e.$$.fragment);
       },
       l(t) {
-        le(e.$$.fragment, t);
+        ae(e.$$.fragment, t);
       },
       m(t, n) {
         Y(e, t, n), (s = !0);
@@ -3000,7 +2996,7 @@ function Qs(l) {
         s || (x(e.$$.fragment, t), (s = !0));
       },
       o(t) {
-        D(e.$$.fragment, t), (s = !1);
+        O(e.$$.fragment, t), (s = !1);
       },
       d(t) {
         Q(e, t);
@@ -3008,12 +3004,12 @@ function Qs(l) {
     }
   );
 }
-function Xs(l) {
+function hn(l) {
   let e, s;
   return (
-    (e = new De({
+    (e = new Pe({
       props: {
-        theme: et(Fe({}, qe.default), { background: '#e0d3b8', rules: '#aaa' }),
+        theme: ft(Ke({}, Ye.default), { background: '#e0d3b8', rules: '#aaa' }),
       },
     })),
     {
@@ -3021,7 +3017,7 @@ function Xs(l) {
         X(e.$$.fragment);
       },
       l(t) {
-        le(e.$$.fragment, t);
+        ae(e.$$.fragment, t);
       },
       m(t, n) {
         Y(e, t, n), (s = !0);
@@ -3031,7 +3027,7 @@ function Xs(l) {
         s || (x(e.$$.fragment, t), (s = !0));
       },
       o(t) {
-        D(e.$$.fragment, t), (s = !1);
+        O(e.$$.fragment, t), (s = !1);
       },
       d(t) {
         Q(e, t);
@@ -3039,16 +3035,16 @@ function Xs(l) {
     }
   );
 }
-function Ys(l) {
+function dn(l) {
   let e, s;
   return (
-    (e = new De({ props: { referrals: l[0] } })),
+    (e = new Pe({ props: { referrals: l[0] } })),
     {
       c() {
         X(e.$$.fragment);
       },
       l(t) {
-        le(e.$$.fragment, t);
+        ae(e.$$.fragment, t);
       },
       m(t, n) {
         Y(e, t, n), (s = !0);
@@ -3058,7 +3054,7 @@ function Ys(l) {
         s || (x(e.$$.fragment, t), (s = !0));
       },
       o(t) {
-        D(e.$$.fragment, t), (s = !1);
+        O(e.$$.fragment, t), (s = !1);
       },
       d(t) {
         Q(e, t);
@@ -3066,31 +3062,31 @@ function Ys(l) {
     }
   );
 }
-function en(l) {
+function mn(l) {
   let e, s, t;
   return (
-    (s = new De({})),
+    (s = new Pe({})),
     {
       c() {
-        (e = g('div')), X(s.$$.fragment), this.h();
+        (e = _('div')), X(s.$$.fragment), this.h();
       },
       l(n) {
-        e = v(n, 'DIV', { id: !0 });
+        e = g(n, 'DIV', { id: !0 });
         var a = h(e);
-        le(s.$$.fragment, a), a.forEach(c), this.h();
+        ae(s.$$.fragment, a), a.forEach(c), this.h();
       },
       h() {
         u(e, 'id', 'custom-image');
       },
       m(n, a) {
-        C(n, e, a), Y(s, e, null), (t = !0);
+        L(n, e, a), Y(s, e, null), (t = !0);
       },
       p: z,
       i(n) {
         t || (x(s.$$.fragment, n), (t = !0));
       },
       o(n) {
-        D(s.$$.fragment, n), (t = !1);
+        O(s.$$.fragment, n), (t = !1);
       },
       d(n) {
         n && c(e), Q(s);
@@ -3098,7 +3094,7 @@ function en(l) {
     }
   );
 }
-function tn(l) {
+function kn(l) {
   let e,
     s,
     t,
@@ -3110,33 +3106,43 @@ function tn(l) {
     f,
     m,
     d,
-    $ = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    $,
+    v,
+    y,
+    S,
+    B,
+    R,
+    W,
+    b,
+    j,
+    w,
+    F = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteFooter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteFooter</span> <span class="token punctuation">/></span></span></code>`,
-    _,
-    E,
-    I,
-    R,
-    M,
-    G,
-    b,
+    H,
     P,
-    w = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    q,
+    te,
+    Z,
+    N,
+    se,
+    C,
+    ce = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteFooter<span class="token punctuation">,</span> SiteFooterThemes <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteFooter</span> <span class="token attr-name">theme=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>SiteFooterThemes<span class="token punctuation">.</span>dark<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code>`,
-    F,
-    T,
-    q,
-    j,
-    ae,
-    Z,
-    B,
-    W,
-    L = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    ke,
+    U,
+    G,
+    he,
+    K,
+    de,
+    J,
+    E,
+    oe = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteFooter<span class="token punctuation">,</span> SiteFooterThemes <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -3148,18 +3154,18 @@ function tn(l) {
   <span class="token literal-property property">primary</span><span class="token operator">:</span> <span class="token string">'#404040'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token string">'#d0d0d0'</span><span class="token punctuation">,</span>
 <span class="token punctuation">&#125;</span></span></code>`,
-    ie,
-    ue,
-    J,
-    U,
-    he,
-    te,
-    pe,
-    se,
-    y,
     ne,
-    K,
-    V = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    I,
+    ie,
+    Le,
+    be,
+    Se,
+    Ee,
+    Me,
+    De,
+    Ie,
+    ye,
+    je = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteFooter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
   
   <span class="token keyword">const</span> customReferrals <span class="token operator">=</span> <span class="token punctuation">[</span>
@@ -3181,15 +3187,15 @@ function tn(l) {
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SiteFooter</span> <span class="token attr-name">referrals="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>customReferrals<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span> <span class="token punctuation">/></span></span></code>`,
-    fe,
-    be,
-    Ie,
-    Ee,
-    Ce,
-    Te,
-    xe,
-    ve,
-    He = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    me,
+    Ae,
+    qe,
+    Be,
+    He,
+    Je,
+    Ue,
+    Re,
+    Gt = `<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> SiteFooter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -3204,187 +3210,214 @@ function tn(l) {
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code>`,
-    Se,
-    ce,
-    Ne;
+    Ge,
+    Te,
+    ze;
   return (
-    (E = new Be({
+    (P = new Fe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
-        $$slots: { default: [Ks] },
+        $$slots: { default: [pn] },
         $$scope: { ctx: l },
       },
     })),
-    (T = new Be({
+    (U = new Fe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
-        $$slots: { default: [Qs] },
+        $$slots: { default: [fn] },
         $$scope: { ctx: l },
       },
     })),
-    (ue = new Be({
+    (I = new Fe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
-        $$slots: { default: [Xs] },
+        $$slots: { default: [hn] },
         $$scope: { ctx: l },
       },
     })),
-    (be = new Be({
+    (Ae = new Fe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
-        $$slots: { default: [Ys] },
+        $$slots: { default: [dn] },
         $$scope: { ctx: l },
       },
     })),
-    (ce = new Be({
+    (Te = new Fe({
       props: {
         fluid: !0,
         containerStyle: 'padding: 0;',
-        $$slots: { default: [en] },
+        $$slots: { default: [mn] },
         $$scope: { ctx: l },
       },
     })),
     {
       c() {
-        (e = g('section')),
-          (s = g('h2')),
-          (t = N(Tt)),
-          (n = S()),
-          (a = g('p')),
-          (i = N(
+        (e = _('section')),
+          (s = _('h2')),
+          (t = M(jt)),
+          (n = A()),
+          (a = _('p')),
+          (i = M(
             'Reuters dotcom site footer with graphics referrals, ported from '
           )),
-          (r = g('a')),
-          (o = N('Raptor UI components')),
-          (f = N('.')),
-          (m = S()),
-          (d = g('pre')),
-          (_ = S()),
-          X(E.$$.fragment),
-          (I = S()),
-          (R = g('section')),
-          (M = g('p')),
-          (G = N('Change colours with exported themes.')),
-          (b = S()),
-          (P = g('pre')),
-          (F = S()),
-          X(T.$$.fragment),
-          (q = S()),
-          (j = g('section')),
-          (ae = g('p')),
-          (Z = N('Customise a colour theme.')),
-          (B = S()),
-          (W = g('pre')),
-          (ie = S()),
-          X(ue.$$.fragment),
-          (J = S()),
-          (U = g('section')),
-          (he = g('p')),
-          (te = N('Pass up to four custom referrals to the ')),
-          (pe = g('code')),
-          (se = N('referrals')),
-          (y = N(' prop.')),
-          (ne = S()),
-          (K = g('pre')),
-          (fe = S()),
-          X(be.$$.fragment),
-          (Ie = S()),
-          (Ee = g('section')),
-          (Ce = g('p')),
-          (Te = N('Customise graphics referral image style.')),
-          (xe = S()),
-          (ve = g('pre')),
-          (Se = S()),
-          X(ce.$$.fragment),
+          (r = _('a')),
+          (o = M('Raptor UI components')),
+          (f = M('.')),
+          (m = A()),
+          (d = _('section')),
+          ($ = _('p')),
+          (v = M('In the ')),
+          (y = _('a')),
+          (S = M('Graphics Kit')),
+          (B = M(', you can find this component in ')),
+          (R = _('code')),
+          (W = M('pages/index.svelte')),
+          (b = M(' in order to customise it for the default page.')),
+          (j = A()),
+          (w = _('pre')),
+          (H = A()),
+          X(P.$$.fragment),
+          (q = A()),
+          (te = _('section')),
+          (Z = _('p')),
+          (N = M('Change colours with exported themes.')),
+          (se = A()),
+          (C = _('pre')),
+          (ke = A()),
+          X(U.$$.fragment),
+          (G = A()),
+          (he = _('section')),
+          (K = _('p')),
+          (de = M('Customise a colour theme.')),
+          (J = A()),
+          (E = _('pre')),
+          (ne = A()),
+          X(I.$$.fragment),
+          (ie = A()),
+          (Le = _('section')),
+          (be = _('p')),
+          (Se = M('Pass up to four custom referrals to the ')),
+          (Ee = _('code')),
+          (Me = M('referrals')),
+          (De = M(' prop.')),
+          (Ie = A()),
+          (ye = _('pre')),
+          (me = A()),
+          X(Ae.$$.fragment),
+          (qe = A()),
+          (Be = _('section')),
+          (He = _('p')),
+          (Je = M('Customise graphics referral image style.')),
+          (Ue = A()),
+          (Re = _('pre')),
+          (Ge = A()),
+          X(Te.$$.fragment),
           this.h();
       },
       l(k) {
-        e = v(k, 'SECTION', {});
-        var H = h(e);
-        s = v(H, 'H2', {});
-        var Re = h(s);
-        (t = O(Re, Tt)), Re.forEach(c), (n = A(H)), (a = v(H, 'P', {}));
-        var Ae = h(a);
-        (i = O(
-          Ae,
+        e = g(k, 'SECTION', {});
+        var V = h(e);
+        s = g(V, 'H2', {});
+        var Oe = h(s);
+        (t = D(Oe, jt)), Oe.forEach(c), (n = T(V)), (a = g(V, 'P', {}));
+        var Ve = h(a);
+        (i = D(
+          Ve,
           'Reuters dotcom site footer with graphics referrals, ported from '
         )),
-          (r = v(Ae, 'A', { href: !0, rel: !0 }));
-        var Ve = h(r);
-        (o = O(Ve, 'Raptor UI components')),
+          (r = g(Ve, 'A', { href: !0, rel: !0 }));
+        var Ne = h(r);
+        (o = D(Ne, 'Raptor UI components')),
+          Ne.forEach(c),
+          (f = D(Ve, '.')),
           Ve.forEach(c),
-          (f = O(Ae, '.')),
-          Ae.forEach(c),
-          H.forEach(c),
-          (m = A(k)),
-          (d = v(k, 'PRE', { class: !0 }));
-        var Oe = h(d);
-        Oe.forEach(c),
-          (_ = A(k)),
-          le(E.$$.fragment, k),
-          (I = A(k)),
-          (R = v(k, 'SECTION', {}));
-        var Me = h(R);
-        M = v(Me, 'P', {});
-        var Ue = h(M);
-        (G = O(Ue, 'Change colours with exported themes.')),
-          Ue.forEach(c),
-          Me.forEach(c),
-          (b = A(k)),
-          (P = v(k, 'PRE', { class: !0 }));
-        var Mt = h(P);
-        Mt.forEach(c),
-          (F = A(k)),
-          le(T.$$.fragment, k),
-          (q = A(k)),
-          (j = v(k, 'SECTION', {}));
-        var ze = h(j);
-        ae = v(ze, 'P', {});
-        var Ge = h(ae);
-        (Z = O(Ge, 'Customise a colour theme.')),
-          Ge.forEach(c),
-          ze.forEach(c),
-          (B = A(k)),
-          (W = v(k, 'PRE', { class: !0 }));
-        var Bt = h(W);
-        Bt.forEach(c),
-          (ie = A(k)),
-          le(ue.$$.fragment, k),
-          (J = A(k)),
-          (U = v(k, 'SECTION', {}));
-        var We = h(U);
-        he = v(We, 'P', {});
-        var Ze = h(he);
-        (te = O(Ze, 'Pass up to four custom referrals to the ')),
-          (pe = v(Ze, 'CODE', {}));
-        var Je = h(pe);
-        (se = O(Je, 'referrals')),
-          Je.forEach(c),
-          (y = O(Ze, ' prop.')),
+          (m = T(V)),
+          (d = g(V, 'SECTION', { class: !0 }));
+        var Ze = h(d);
+        $ = g(Ze, 'P', {});
+        var xe = h($);
+        (v = D(xe, 'In the ')), (y = g(xe, 'A', { href: !0, rel: !0 }));
+        var et = h(y);
+        (S = D(et, 'Graphics Kit')),
+          et.forEach(c),
+          (B = D(xe, ', you can find this component in ')),
+          (R = g(xe, 'CODE', {}));
+        var tt = h(R);
+        (W = D(tt, 'pages/index.svelte')),
+          tt.forEach(c),
+          (b = D(xe, ' in order to customise it for the default page.')),
+          xe.forEach(c),
           Ze.forEach(c),
+          V.forEach(c),
+          (j = T(k)),
+          (w = g(k, 'PRE', { class: !0 }));
+        var zt = h(w);
+        zt.forEach(c),
+          (H = T(k)),
+          ae(P.$$.fragment, k),
+          (q = T(k)),
+          (te = g(k, 'SECTION', {}));
+        var st = h(te);
+        Z = g(st, 'P', {});
+        var nt = h(Z);
+        (N = D(nt, 'Change colours with exported themes.')),
+          nt.forEach(c),
+          st.forEach(c),
+          (se = T(k)),
+          (C = g(k, 'PRE', { class: !0 }));
+        var Wt = h(C);
+        Wt.forEach(c),
+          (ke = T(k)),
+          ae(U.$$.fragment, k),
+          (G = T(k)),
+          (he = g(k, 'SECTION', {}));
+        var at = h(he);
+        K = g(at, 'P', {});
+        var lt = h(K);
+        (de = D(lt, 'Customise a colour theme.')),
+          lt.forEach(c),
+          at.forEach(c),
+          (J = T(k)),
+          (E = g(k, 'PRE', { class: !0 }));
+        var Kt = h(E);
+        Kt.forEach(c),
+          (ne = T(k)),
+          ae(I.$$.fragment, k),
+          (ie = T(k)),
+          (Le = g(k, 'SECTION', {}));
+        var rt = h(Le);
+        be = g(rt, 'P', {});
+        var We = h(be);
+        (Se = D(We, 'Pass up to four custom referrals to the ')),
+          (Ee = g(We, 'CODE', {}));
+        var ot = h(Ee);
+        (Me = D(ot, 'referrals')),
+          ot.forEach(c),
+          (De = D(We, ' prop.')),
           We.forEach(c),
-          (ne = A(k)),
-          (K = v(k, 'PRE', { class: !0 }));
-        var Dt = h(K);
-        Dt.forEach(c),
-          (fe = A(k)),
-          le(be.$$.fragment, k),
-          (Ie = A(k)),
-          (Ee = v(k, 'SECTION', {}));
-        var Ke = h(Ee);
-        Ce = v(Ke, 'P', {});
-        var Qe = h(Ce);
-        (Te = O(Qe, 'Customise graphics referral image style.')),
-          Qe.forEach(c),
-          Ke.forEach(c),
-          (xe = A(k)),
-          (ve = v(k, 'PRE', { class: !0 }));
-        var Ht = h(ve);
-        Ht.forEach(c), (Se = A(k)), le(ce.$$.fragment, k), this.h();
+          rt.forEach(c),
+          (Ie = T(k)),
+          (ye = g(k, 'PRE', { class: !0 }));
+        var Jt = h(ye);
+        Jt.forEach(c),
+          (me = T(k)),
+          ae(Ae.$$.fragment, k),
+          (qe = T(k)),
+          (Be = g(k, 'SECTION', {}));
+        var it = h(Be);
+        He = g(it, 'P', {});
+        var ct = h(He);
+        (Je = D(ct, 'Customise graphics referral image style.')),
+          ct.forEach(c),
+          it.forEach(c),
+          (Ue = T(k)),
+          (Re = g(k, 'PRE', { class: !0 }));
+        var Qt = h(Re);
+        Qt.forEach(c), (Ge = T(k)), ae(Te.$$.fragment, k), this.h();
       },
       h() {
         u(
@@ -3393,14 +3426,21 @@ function tn(l) {
           'https://github.com/tr/rcom-arc_raptor-ui/tree/develop/packages/rcom-raptor-ui_common/src/components/site-footer'
         ),
           u(r, 'rel', 'nofollow'),
-          u(d, 'class', 'language-svelte'),
-          u(P, 'class', 'language-svelte'),
-          u(W, 'class', 'language-svelte'),
-          u(K, 'class', 'language-svelte'),
-          u(ve, 'class', 'language-svelte');
+          u(
+            y,
+            'href',
+            'https://github.com/reuters-graphics/bluprint_graphics-kit/blob/master/pages/index.svelte'
+          ),
+          u(y, 'rel', 'nofollow'),
+          u(d, 'class', 'note'),
+          u(w, 'class', 'language-svelte'),
+          u(C, 'class', 'language-svelte'),
+          u(E, 'class', 'language-svelte'),
+          u(ye, 'class', 'language-svelte'),
+          u(Re, 'class', 'language-svelte');
       },
-      m(k, H) {
-        C(k, e, H),
+      m(k, V) {
+        L(k, e, V),
           p(e, s),
           p(s, t),
           p(e, n),
@@ -3409,122 +3449,132 @@ function tn(l) {
           p(a, r),
           p(r, o),
           p(a, f),
-          C(k, m, H),
-          C(k, d, H),
-          (d.innerHTML = $),
-          C(k, _, H),
-          Y(E, k, H),
-          C(k, I, H),
-          C(k, R, H),
-          p(R, M),
-          p(M, G),
-          C(k, b, H),
-          C(k, P, H),
-          (P.innerHTML = w),
-          C(k, F, H),
-          Y(T, k, H),
-          C(k, q, H),
-          C(k, j, H),
-          p(j, ae),
-          p(ae, Z),
-          C(k, B, H),
-          C(k, W, H),
-          (W.innerHTML = L),
-          C(k, ie, H),
-          Y(ue, k, H),
-          C(k, J, H),
-          C(k, U, H),
-          p(U, he),
-          p(he, te),
-          p(he, pe),
-          p(pe, se),
-          p(he, y),
-          C(k, ne, H),
-          C(k, K, H),
-          (K.innerHTML = V),
-          C(k, fe, H),
-          Y(be, k, H),
-          C(k, Ie, H),
-          C(k, Ee, H),
-          p(Ee, Ce),
-          p(Ce, Te),
-          C(k, xe, H),
-          C(k, ve, H),
-          (ve.innerHTML = He),
-          C(k, Se, H),
-          Y(ce, k, H),
-          (Ne = !0);
+          p(e, m),
+          p(e, d),
+          p(d, $),
+          p($, v),
+          p($, y),
+          p(y, S),
+          p($, B),
+          p($, R),
+          p(R, W),
+          p($, b),
+          L(k, j, V),
+          L(k, w, V),
+          (w.innerHTML = F),
+          L(k, H, V),
+          Y(P, k, V),
+          L(k, q, V),
+          L(k, te, V),
+          p(te, Z),
+          p(Z, N),
+          L(k, se, V),
+          L(k, C, V),
+          (C.innerHTML = ce),
+          L(k, ke, V),
+          Y(U, k, V),
+          L(k, G, V),
+          L(k, he, V),
+          p(he, K),
+          p(K, de),
+          L(k, J, V),
+          L(k, E, V),
+          (E.innerHTML = oe),
+          L(k, ne, V),
+          Y(I, k, V),
+          L(k, ie, V),
+          L(k, Le, V),
+          p(Le, be),
+          p(be, Se),
+          p(be, Ee),
+          p(Ee, Me),
+          p(be, De),
+          L(k, Ie, V),
+          L(k, ye, V),
+          (ye.innerHTML = je),
+          L(k, me, V),
+          Y(Ae, k, V),
+          L(k, qe, V),
+          L(k, Be, V),
+          p(Be, He),
+          p(He, Je),
+          L(k, Ue, V),
+          L(k, Re, V),
+          (Re.innerHTML = Gt),
+          L(k, Ge, V),
+          Y(Te, k, V),
+          (ze = !0);
       },
-      p(k, [H]) {
-        const Re = {};
-        H & 2 && (Re.$$scope = { dirty: H, ctx: k }), E.$set(Re);
-        const Ae = {};
-        H & 2 && (Ae.$$scope = { dirty: H, ctx: k }), T.$set(Ae);
-        const Ve = {};
-        H & 2 && (Ve.$$scope = { dirty: H, ctx: k }), ue.$set(Ve);
+      p(k, [V]) {
         const Oe = {};
-        H & 2 && (Oe.$$scope = { dirty: H, ctx: k }), be.$set(Oe);
-        const Me = {};
-        H & 2 && (Me.$$scope = { dirty: H, ctx: k }), ce.$set(Me);
+        V & 2 && (Oe.$$scope = { dirty: V, ctx: k }), P.$set(Oe);
+        const Ve = {};
+        V & 2 && (Ve.$$scope = { dirty: V, ctx: k }), U.$set(Ve);
+        const Ne = {};
+        V & 2 && (Ne.$$scope = { dirty: V, ctx: k }), I.$set(Ne);
+        const Ze = {};
+        V & 2 && (Ze.$$scope = { dirty: V, ctx: k }), Ae.$set(Ze);
+        const xe = {};
+        V & 2 && (xe.$$scope = { dirty: V, ctx: k }), Te.$set(xe);
       },
       i(k) {
-        Ne ||
-          (x(E.$$.fragment, k),
-          x(T.$$.fragment, k),
-          x(ue.$$.fragment, k),
-          x(be.$$.fragment, k),
-          x(ce.$$.fragment, k),
-          (Ne = !0));
+        ze ||
+          (x(P.$$.fragment, k),
+          x(U.$$.fragment, k),
+          x(I.$$.fragment, k),
+          x(Ae.$$.fragment, k),
+          x(Te.$$.fragment, k),
+          (ze = !0));
       },
       o(k) {
-        D(E.$$.fragment, k),
-          D(T.$$.fragment, k),
-          D(ue.$$.fragment, k),
-          D(be.$$.fragment, k),
-          D(ce.$$.fragment, k),
-          (Ne = !1);
+        O(P.$$.fragment, k),
+          O(U.$$.fragment, k),
+          O(I.$$.fragment, k),
+          O(Ae.$$.fragment, k),
+          O(Te.$$.fragment, k),
+          (ze = !1);
       },
       d(k) {
         k && c(e),
-          k && c(m),
-          k && c(d),
-          k && c(_),
-          Q(E, k),
-          k && c(I),
-          k && c(R),
-          k && c(b),
-          k && c(P),
-          k && c(F),
-          Q(T, k),
-          k && c(q),
           k && c(j),
-          k && c(B),
-          k && c(W),
-          k && c(ie),
-          Q(ue, k),
+          k && c(w),
+          k && c(H),
+          Q(P, k),
+          k && c(q),
+          k && c(te),
+          k && c(se),
+          k && c(C),
+          k && c(ke),
+          Q(U, k),
+          k && c(G),
+          k && c(he),
           k && c(J),
-          k && c(U),
+          k && c(E),
           k && c(ne),
-          k && c(K),
-          k && c(fe),
-          Q(be, k),
+          Q(I, k),
+          k && c(ie),
+          k && c(Le),
           k && c(Ie),
-          k && c(Ee),
-          k && c(xe),
-          k && c(ve),
-          k && c(Se),
-          Q(ce, k);
+          k && c(ye),
+          k && c(me),
+          Q(Ae, k),
+          k && c(qe),
+          k && c(Be),
+          k && c(Ue),
+          k && c(Re),
+          k && c(Ge),
+          Q(Te, k);
       },
     }
   );
 }
-const sn = {
+const _n = {
     title: 'SiteFooter',
     description: 'Reuters dotcom site footer component.',
     slug: 'site-footer',
   },
-  { title: Tt, description: pn, slug: fn } = sn;
-function nn(l) {
+  { title: jt, description: Cn, slug: Ln } = _n;
+function gn(l) {
   return [
     [
       {
@@ -3544,9 +3594,9 @@ function nn(l) {
     ],
   ];
 }
-class hn extends de {
+class In extends ue {
   constructor(e) {
-    super(), me(this, e, nn, tn, ke, {});
+    super(), pe(this, e, gn, kn, fe, {});
   }
 }
-export { hn as default, sn as metadata };
+export { In as default, _n as metadata };
