@@ -12,6 +12,6 @@
     "source.fixAll.eslint": true
   },
   "files.associations": {
-    "*.md": "mdx"
+    "*.svx": "mdx"
   }
 }
