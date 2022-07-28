@@ -1,5 +1,6 @@
 <script>
   import { throttle } from 'lodash-es';
+  import { onMount } from 'svelte';
 
   export let width = '';
   export let height = 600;
@@ -43,16 +44,23 @@
     }
   };
 
-  const resize = (e) => {
+  const measureImage = () => {
+    if (img && img.complete) imgOffset = img.getBoundingClientRect();
+  };
+
+  const resize = () => {
+    measureImage();
+  };
+
+  const measureLoadedImage = (e) => {
     if (e.type === 'load') {
       imgOffset = e.target.getBoundingClientRect();
-    } else {
-      imgOffset = img.getBoundingClientRect();
     }
   };
+
   const move = (e) => {
-    const el = e.touches ? e.touches[0] : e;
     if (sliding && imgOffset) {
+      const el = e.touches ? e.touches[0] : e;
       const figureOffset = figure
         ? parseInt(window.getComputedStyle(figure).marginLeft.slice(0, -2))
         : 0;
@@ -84,6 +92,14 @@
   if (!(beforeSrc && beforeAlt && afterSrc && afterAlt)) {
     console.warn('Missing required src or alt props for BeforeAfter component');
   }
+
+  onMount(() => {
+    // This is necessary b/c on:load doesn't reliably fire on the image...
+    const interval = setInterval(() => {
+      if (imgOffset) clearInterval(interval);
+      if (img && img.complete && !imgOffset) measureImage();
+    }, 50);
+  });
 </script>
 
 <svelte:window
@@ -105,12 +121,13 @@
       bind:this="{figure}"
       aria-labelledby="{$$slots.caption && `${id}-caption`}"
     >
+      <!-- Note to self: on:load is not a reliable handler here, see interval in onMount... -->
       <img
         bind:this="{img}"
         src="{afterSrc}"
         alt="{afterAlt}"
+        on:load="{measureLoadedImage}"
         on:mousedown|preventDefault
-        on:load="{resize}"
         style="{imgStyle}"
         class="after"
         aria-describedby="{$$slots.beforeOverlay && `${id}-before`}"
