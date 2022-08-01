@@ -1,8 +1,6 @@
 <script>
   import { onMount } from 'svelte';
   import classnames from 'classnames';
-  import { assets } from '$app/paths';
-  import urljoin from 'proper-url-join';
 
   export let src;
   export let alt;
@@ -53,7 +51,7 @@
   bind:this="{container}"
 >
   {#if !lazy || (intersectable && intersecting)}
-    <img src="{urljoin(assets, src)}" alt="{alt}" />
+    <img src="{src}" alt="{alt}" />
   {:else}
     <div class="placeholder" height="{`${height}px`}"></div>
   {/if}

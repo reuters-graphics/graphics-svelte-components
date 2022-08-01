@@ -7,6 +7,7 @@ slug: image
 <script>
   import DemoContainer from '../_docs/DemoContainer/index.svelte';
   import Image from './index.svelte';
+  import { assets } from '$app/paths';
 </script>
 
 <section>
@@ -20,10 +21,11 @@ slug: image
 ```svelte
 <script>
   import { Image } from '@reuters-graphics/graphics-svelte-components';
+  import { assets } from '$app/paths';
 </script>
 
 <Image
-  src="{'path/to/image.jpg'}"
+  src="{`${assets}/images/myImage.jpg`}"
   alt="{'Some alt text'}"
   caption="{'A caption'}"
   lazy="{true}"
@@ -33,7 +35,7 @@ slug: image
 
 <DemoContainer>
   <Image
-    src="{'images/shark.jpg'}"
+    src="{assets + '/images/shark.jpg'}"
     alt="{'Some alt text'}"
     caption="{'Duh dum.'}"
     lazy="{true}"
