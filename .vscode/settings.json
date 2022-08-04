@@ -13,5 +13,8 @@
   },
   "files.associations": {
     "*.svx": "mdx"
+  },
+  "[mdx]": {
+    "editor.wordWrap": "on"
   }
 }

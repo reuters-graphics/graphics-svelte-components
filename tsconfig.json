@@ -1,0 +1,18 @@
+{
+	"extends": "@tsconfig/svelte/tsconfig.json",
+	"compilerOptions": {
+		"target": "es6",
+		"module": "es6",
+		"baseUrl": ".",
+		"paths": {
+			"$lib":["src/components"],
+  		"$lib/*":["src/components/*"],
+			"$utils":["src/utils"],
+  		"$utils/*":["src/utils/*"]
+		},
+    "esModuleInterop": true,
+    "importsNotUsedAsValues": "remove",
+    "strict": true
+	},
+	"include": ["src/**/*.js", "src/**/*.svelte", "src/**/*.json"]
+}
