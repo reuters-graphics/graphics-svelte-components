@@ -1,4 +1,5 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import sveltePreprocess, { scss } from './bin/preprocess';
 
 const scss = {
   includePaths: ['src/', 'node_modules/bootstrap/scss/'],
@@ -24,7 +25,12 @@ const config = {
       $utils: './src/utils',
     },
   },
-  plugins: [svelte({ configFile: false })],
+  plugins: [
+    svelte({
+      configFile: false,
+      preprocess: sveltePreprocess,
+    }),
+  ],
 };
 
 export default config;

@@ -7,12 +7,14 @@
   "repository": "https://github.com/reuters-graphics/graphics-svelte-components",
   "scripts": {
     "start": "start-storybook -p 3000",
-    "package": "svelte-kit package",
+    "build:package": "node ./bin/buildPackage/index.js",
     "build:docs": "svelte-kit build && touch docs/.nojekyll",
     "release": "npm run package && npm publish ./dist/",
     "postversion": "git push origin master && git push origin master --tags && npm run release",
     "prepublishOnly": "echo \"Did you mean to run 'yarn release'?\" && exit 1"
   },
+  "types": "dist/@types/index.d.ts",
+  "files": ["dist"],
   "engines": {
     "node": ">=16.7"
   },
@@ -23,7 +25,6 @@
     "@babel/preset-env": "^7.15.6",
     "@evilmartians/lefthook": "^1.0.1",
     "@reuters-graphics/eslint-config": "^0.0.2",
-    "@rollup/plugin-dsv": "^2.0.1",
     "@storybook/addon-actions": "6.5.9",
     "@storybook/addon-essentials": "6.5.9",
     "@storybook/addon-interactions": "6.5.9",
@@ -44,16 +45,19 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-storybook": "^0.6.1",
     "eslint-plugin-svelte3": "^4.0.0",
-    "fs-extra": "^10.0.0",
+    "fs-extra": "^10.1.0",
     "postcss": "^8.4.14",
     "postcss-load-config": "^4.0.1",
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.4.0",
     "react-syntax-highlighter": "^15.5.0",
+    "rimraf": "^3.0.2",
     "sass": "^1.54.0",
     "svelte": "^3.49.0",
     "svelte-loader": "^3.1.3",
     "svelte-preprocess": "^4.10.7",
+    "svelte2tsx": "^0.5.13",
+    "tiny-glob": "^0.2.9",
     "typescript": "^4.7.4",
     "vite": "^3.0.4"
   },
@@ -73,5 +77,8 @@
     "svelte-fa": "^2.4.0",
     "svelte-intersection-observer": "^0.10.0",
     "ua-parser-js": "^0.7.27"
+  },
+  "exports": {
+    ".": "./dist/index.js"
   }
 }

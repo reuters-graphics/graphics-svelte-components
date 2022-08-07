@@ -1,18 +1,29 @@
 {
 	"extends": "@tsconfig/svelte/tsconfig.json",
 	"compilerOptions": {
-		"target": "es6",
-		"module": "es6",
+		"types": ["node", "svelte"],
+		"moduleResolution": "node",
+		"module": "es2020",
+		"target": "es2019",
+		"declaration": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"checkJs": false,
+		"emitDeclarationOnly": true,
 		"baseUrl": ".",
+		"outDir": "dist",
 		"paths": {
 			"$lib":["src/components"],
   		"$lib/*":["src/components/*"],
 			"$utils":["src/utils"],
   		"$utils/*":["src/utils/*"]
-		},
-    "esModuleInterop": true,
-    "importsNotUsedAsValues": "remove",
-    "strict": true
+		}
 	},
-	"include": ["src/**/*.js", "src/**/*.svelte", "src/**/*.json"]
+	"include": [
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.svelte"
+	],
+	"exclude": ["dist"]
 }

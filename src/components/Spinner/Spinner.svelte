@@ -1,25 +1,22 @@
 <script lang="ts">
-  /**
-   * Primary colour of the spinner
-   */
+  /** Primary colour of the spinner. */
   export let colour: string = '#666';
   /**
    * Outer width of the spinner
    */
-  export let width: number = 40;
+  export let width = 40;
   /**
    * Width of the spinner ring
    */
-  export let ringWidth: number = 6;
+  export let ringWidth = 6;
   /**
    * How fast the spinner spins
    */
-  export let speed: number = 0.8;
-
+  export let speed = 0.8;
   /**
    * Vertical padding for the spinner's container
    */
-  export let containerPadding: number = 10;
+  export let containerPadding = 10;
 </script>
 
 <div
