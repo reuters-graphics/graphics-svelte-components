@@ -9,7 +9,7 @@
 		"isolatedModules": true,
 		"esModuleInterop": true,
 		"allowJs": true,
-		"checkJs": false,
+		"checkJs": true,
 		"emitDeclarationOnly": true,
 		"baseUrl": ".",
 		"outDir": "dist",
@@ -25,5 +25,5 @@
 		"src/**/*.ts",
 		"src/**/*.svelte"
 	],
-	"exclude": ["dist"]
+	"exclude": ["dist", "src/**/*.stories.svelte"]
 }

@@ -4,19 +4,19 @@
   /**
    * Outer width of the spinner
    */
-  export let width = 40;
+  export let width: number = 40;
   /**
    * Width of the spinner ring
    */
-  export let ringWidth = 6;
+  export let ringWidth: number = 6;
   /**
    * How fast the spinner spins
    */
-  export let speed = 0.8;
+  export let speed: number = 0.8;
   /**
    * Vertical padding for the spinner's container
    */
-  export let containerPadding = 10;
+  export let containerPadding: number = 10;
 </script>
 
 <div

@@ -8,10 +8,7 @@
   "scripts": {
     "start": "start-storybook -p 3000",
     "build:package": "node ./bin/buildPackage/index.js",
-    "build:docs": "svelte-kit build && touch docs/.nojekyll",
-    "release": "npm run package && npm publish ./dist/",
-    "postversion": "git push origin master && git push origin master --tags && npm run release",
-    "prepublishOnly": "echo \"Did you mean to run 'yarn release'?\" && exit 1"
+    "build:docs": "build-storybook -o docs"
   },
   "types": "dist/@types/index.d.ts",
   "files": ["dist"],

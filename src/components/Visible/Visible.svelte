@@ -44,5 +44,6 @@
 </script>
 
 <div bind:this="{container}">
+  <!-- Element or component -->
   <slot visible="{visible}" />
 </div>
