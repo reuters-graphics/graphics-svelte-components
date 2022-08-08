@@ -6,7 +6,7 @@ table.docblock-argstable {
 }
 
 div.sbdocs-content {
-  div > div > h2 {
+  & > h2, & > div > div > h2 {
     margin-top: 4rem;
     margin-bottom: 2rem;
     &:first-of-type {
@@ -19,7 +19,7 @@ div.sbdocs-content {
     margin: 1rem 0;
   }
 
- & > blockquote {
+ & > blockquote, & > div > div > blockquote {
     background-color: #ededed;
     padding: 15px 20px;
     border: 1px solid #ccc;
