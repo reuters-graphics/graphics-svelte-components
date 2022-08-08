@@ -14,9 +14,9 @@ async function transpileTypeScript(filename, source) {
 
 export default async (file) => {
   const filename = path.join(LIB, file);
-  const content = fs.readFileSync(filename, 'utf8');
-  const code = await transpileTypeScript(filename, content);
+  let source = fs.readFileSync(filename, 'utf8');
+  source = await transpileTypeScript(filename, source);
   const writePath = path.join(DIST, file).replace(/\.ts$/, '.js');
   fs.ensureDirSync(path.dirname(writePath));
-  fs.writeFileSync(writePath, code);
+  fs.writeFileSync(writePath, source);
 }

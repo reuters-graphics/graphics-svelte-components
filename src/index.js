@@ -25,6 +25,6 @@
 //   default as SiteFooter,
 //   themes as SiteFooterThemes
 // } from './SiteFooter/index.svelte';
-export { default as Spinner } from './Spinner/Spinner.svelte';
+export { default as Spinner } from './components/Spinner/Spinner.svelte';
 // export { default as Video } from './Video/index.svelte';
-export { default as Visible } from './Visible/Visible.svelte';
+export { default as Visible } from './components/Visible/Visible.svelte';

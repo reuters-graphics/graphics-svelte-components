@@ -1,7 +1,7 @@
-import autoprefixer from 'autoprefixer';
-import sveltePreprocess from 'svelte-preprocess';
+const autoprefixer = require('autoprefixer');
+const preprocess = require('svelte-preprocess');
 
-export const scss = {
+const scss = {
   includePaths: ['src/', 'node_modules/bootstrap/scss/'],
   importer: [
     (url) => {
@@ -13,7 +13,7 @@ export const scss = {
   quietDeps: true,
 };
 
-export default sveltePreprocess({
+const sveltePreprocess = preprocess({
   preserve: ['ld+json'],
   typescript: true,
   scss,
@@ -21,3 +21,8 @@ export default sveltePreprocess({
     plugins: [autoprefixer],
   },
 });
+
+module.exports = {
+  scss,
+  sveltePreprocess
+}

@@ -1,19 +1,20 @@
 const { mergeConfig } = require('vite');
-const sveltePreprocess = require('svelte-preprocess');
-const autoprefixer = require('autoprefixer');
+// const sveltePreprocess = require('svelte-preprocess');
+// const autoprefixer = require('autoprefixer');
+const preprocess = require('../bin/preprocess/index.cjs');
 
-const scss = {
-  includePaths: ['src/', 'node_modules/bootstrap/scss/'],
-  importer: [
-    (url) => {
-      // Redirect tilde-prefixed imports to node_modules
-      if (/^~/.test(url))
-        return { file: `node_modules/${url.replace('~', '')}` };
-      return null;
-    },
-  ],
-  quietDeps: true,
-};
+// const scss = {
+//   includePaths: ['src/', 'node_modules/bootstrap/scss/'],
+//   importer: [
+//     (url) => {
+//       // Redirect tilde-prefixed imports to node_modules
+//       if (/^~/.test(url))
+//         return { file: `node_modules/${url.replace('~', '')}` };
+//       return null;
+//     },
+//   ],
+//   quietDeps: true,
+// };
 
 
 module.exports = {
@@ -40,7 +41,7 @@ module.exports = {
       // customize the Vite config here
       base: configType === 'PRODUCTION' ? 'https://reuters-graphics.github.io/graphics-svelte-components/' : '/',
       css: {
-        preprocessorOptions: { scss },
+        preprocessorOptions: { scss: preprocess.scss },
       },
       resolve: {
         alias: {
@@ -51,13 +52,6 @@ module.exports = {
     });
   },
   svelteOptions: {
-    preprocess: sveltePreprocess({
-      preserve: ['ld+json'],
-      typescript: true,
-      scss,
-      postcss: {
-        plugins: [autoprefixer],
-      },
-    }),
+    preprocess: preprocess.sveltePreprocess,
   },
 }

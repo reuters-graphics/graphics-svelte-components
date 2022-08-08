@@ -1,4 +1,4 @@
-import { DIST, LIB, TYPES } from './locations.js';
+import { DIST, LIB, PACKAGE, TYPES } from './locations.js';
 
 import { createRequire } from 'module';
 import { emitDts } from 'svelte2tsx';
@@ -14,11 +14,18 @@ const require = createRequire(import.meta.url);
 
 const excludePatterns = [
   '**/stories/**/*',
+  '**/docs/**/*',
+  '**/statics/**/*',
   '**/*.exclude.*',
   '**/*.stories.svelte',
 ];
 
-const run = async () => {
+/**
+ * This is a basic port of sveltekit's own packaging method:
+ * https://github.com/sveltejs/kit/tree/master/packages/kit/src/packaging
+ */
+const build = async () => {
+  console.log('📦 Building your package');
   if (fs.existsSync(DIST)) rimraf.sync(DIST);
 
   // Extract types
@@ -28,7 +35,11 @@ const run = async () => {
 		declarationDir: TYPES,
 	});
 
-  const files = await glob('**/*.{js,json,ts,svelte}', { cwd: LIB, filesOnly: true });
+  const pkgExports = {
+    './package.json': './package.json'
+  };
+
+  const files = await glob('**/*.{js,json,ts,svelte,css,scss}', { cwd: LIB, filesOnly: true });
   for (const file of files) {
     if(picomatch.isMatch(file, excludePatterns)) continue;
     if (file.endsWith('.svelte')) {
@@ -38,7 +49,16 @@ const run = async () => {
     } else {
       await processOther(file);
     }
+    if (file === 'index.js') continue; // Always add root index last to exports...
+    pkgExports[`./${file.replace(/\/index\.js$|(\/[^/]+)\.js$/, '$1')}`] = `./dist/${file}`;
   }
+  pkgExports['.'] = './dist/index.js';
+  const pkg = fs.readJSONSync(PACKAGE);
+  pkg.type = 'module';
+  pkg.files = ['dist'];
+  pkg.private = false;
+  pkg.exports = pkgExports;
+  fs.writeFileSync(PACKAGE, JSON.stringify(pkg, null, 2));
 }
 
-run();
+build();

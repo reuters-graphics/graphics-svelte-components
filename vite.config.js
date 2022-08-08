@@ -1,5 +1,5 @@
+import preprocess from './bin/preprocess/index.cjs';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import sveltePreprocess, { scss } from './bin/preprocess';
 
 const scss = {
   includePaths: ['src/', 'node_modules/bootstrap/scss/'],
@@ -17,7 +17,7 @@ const scss = {
 const config = {
   base: 'https://reuters-graphics.github.io/graphics-svelte-components/',
   css: {
-    preprocessorOptions: { scss },
+    preprocessorOptions: { scss: preprocess.scss },
   },
   resolve: {
     alias: {
@@ -28,7 +28,7 @@ const config = {
   plugins: [
     svelte({
       configFile: false,
-      preprocess: sveltePreprocess,
+      preprocess: preprocess.sveltePreprocess,
     }),
   ],
 };

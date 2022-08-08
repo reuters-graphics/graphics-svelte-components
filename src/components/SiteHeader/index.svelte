@@ -18,7 +18,7 @@
 </script>
 
 <script>
-  import { ReutersLogo } from './../index.js';
+  import { ReutersLogo } from '../../index.js';
   import NavBar from './NavBar/index.svelte';
   import data from './data.json';
   import { setContext } from 'svelte';
