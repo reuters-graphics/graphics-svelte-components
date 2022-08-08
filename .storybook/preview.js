@@ -23,11 +23,17 @@ export const parameters = {
   },
   layout: 'fullscreen',
   options: {
+    // https://storybook.js.org/docs/svelte/writing-stories/naming-components-and-hierarchy#sorting-stories
     storySort: {
-      method: 'configure',
       includeNames: true,
       order: [
         'Intro',
+        'Guides',
+        [
+          'Using these docs',
+          'Using with the Graphics Kit',
+          '*',
+        ],
         '*',
         'Contributing',
         [

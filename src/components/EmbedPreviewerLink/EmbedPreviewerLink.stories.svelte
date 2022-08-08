@@ -11,7 +11,7 @@
   } from '$docs/utils/withParams';
 
   const meta = {
-    title: 'Components/EmbedPreviewerLink',
+    title: 'Utilities/EmbedPreviewerLink',
     component: EmbedPreviewerLink,
     ...withComponentDocs(componentDocs),
   };
