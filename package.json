@@ -7,6 +7,7 @@
   "repository": "https://github.com/reuters-graphics/graphics-svelte-components",
   "scripts": {
     "start": "start-storybook -p 3000",
+    "new": "node ./bin/newComponent/index.cjs",
     "build:package": "node ./bin/buildPackage/index.js",
     "build:docs": "build-storybook -o docs"
   },
@@ -41,15 +42,18 @@
     "@typescript-eslint/parser": "^5.32.0",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.5",
+    "change-case": "^4.1.2",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-storybook": "^0.6.1",
     "eslint-plugin-svelte3": "^4.0.0",
     "fs-extra": "^10.1.0",
+    "kleur": "^4.1.5",
     "postcss": "^8.4.14",
     "postcss-load-config": "^4.0.1",
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.4.0",
+    "prompts": "^2.4.2",
     "react-syntax-highlighter": "^15.5.0",
     "rimraf": "^3.0.2",
     "sass": "^1.54.0",
@@ -86,6 +90,7 @@
     "./components/DatawrapperChart/index.svelte": "./dist/components/DatawrapperChart/index.svelte",
     "./components/EmbedPreviewerLink/index.svelte": "./dist/components/EmbedPreviewerLink/index.svelte",
     "./components/EndNotes/index.svelte": "./dist/components/EndNotes/index.svelte",
+    "./components/FakeImage/FakeImage.svelte": "./dist/components/FakeImage/FakeImage.svelte",
     "./components/Footer/index.svelte": "./dist/components/Footer/index.svelte",
     "./components/Framer/Resizer/index.svelte": "./dist/components/Framer/Resizer/index.svelte",
     "./components/Framer/index.svelte": "./dist/components/Framer/index.svelte",
@@ -158,7 +163,6 @@
     "./components/Video/Controls.svelte": "./dist/components/Video/Controls.svelte",
     "./components/Video/index.svelte": "./dist/components/Video/index.svelte",
     "./components/Visible/Visible.svelte": "./dist/components/Visible/Visible.svelte",
-    "./utils/withParams": "./dist/utils/withParams.js",
     ".": "./dist/index.js"
   }
 }

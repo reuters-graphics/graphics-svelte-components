@@ -22,6 +22,7 @@ const config = {
   resolve: {
     alias: {
       '@reuters-graphics/graphics-svelte-components': './src',
+      $lib: './src',
       $docs: './src/docs',
     },
   },

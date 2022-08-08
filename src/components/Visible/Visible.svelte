@@ -1,11 +1,22 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  export let once = false;
+  /**
+   * Whether to change visibility just once. 
+   * 
+   * Useful for loading expensive images or other media and then keeping them around once they're first loaded.
+   */
+  export let once: boolean = false;
+  /** Set Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#rootmargin) `top`. */
   export let top = 0;
+  /** Set Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#rootmargin) `bottom`. */
   export let bottom = 0;
+  /** Set Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#rootmargin) `left`. */
   export let left = 0;
+  /** Set Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#rootmargin) `right`. */
   export let right = 0;
+  /** Set the Intersection Observer [threshold](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#threshold). */
   export let threshold = 0;
+  
   let visible = false;
   let container: HTMLElement;
   
@@ -44,6 +55,6 @@
 </script>
 
 <div bind:this="{container}">
-  <!-- Element or component -->
+  <!-- An element or component -->
   <slot visible="{visible}" />
 </div>

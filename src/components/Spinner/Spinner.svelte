@@ -10,7 +10,7 @@
    */
   export let ringWidth: number = 6;
   /**
-   * How fast the spinner spins
+   * How fast the spinner spins in seconds
    */
   export let speed: number = 0.8;
   /**

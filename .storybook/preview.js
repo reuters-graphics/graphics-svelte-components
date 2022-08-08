@@ -12,6 +12,7 @@ SyntaxHighlighter.registerLanguage('svelte', svelte);
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   viewMode: 'docs',
+  previewTabs: { 'storybook/docs/panel': { index: -1 } },
   controls: {
     expanded: true,
     sort: 'requiredFirst',
@@ -28,6 +29,15 @@ export const parameters = {
       order: [
         'Intro',
         '*',
+        'Contributing',
+        [
+          'Quickstart', 'Component Basics', '*', 'Writing Stories',
+          'Recipes: Basic story',
+          'Recipes: Story with custom docs',
+          'Recipes: Story with custom controls',
+          'Recipes: Story with media',
+          'Recipes: Story for a component with slots'
+        ],
       ],
     },
   }

@@ -9,7 +9,7 @@
   import {
     withSource,
     withComponentDocs
-  } from '$utils/withParams.js';
+  } from '$docs/utils/withParams';
 
   const meta = {
     title: 'Components/Spinner',

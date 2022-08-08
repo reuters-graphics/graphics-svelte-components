@@ -28,3 +28,4 @@
 export { default as Spinner } from './components/Spinner/Spinner.svelte';
 // export { default as Video } from './Video/index.svelte';
 export { default as Visible } from './components/Visible/Visible.svelte';
+export { default as FakeImage } from './components/FakeImage/FakeImage.svelte';

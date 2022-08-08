@@ -1,14 +1,17 @@
 <script>
   import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
 
+  // @ts-ignore
   import componentDocs from './stories/docs/component.md?raw';
+  // @ts-ignore
+  import defaultSnippet from './stories/snippets/default.svelte?raw';
 
   import Visible from './Visible.svelte';
 
   import {
     withSource,
     withComponentDocs
-  } from '$utils/withParams.js';
+  } from '$docs/utils/withParams';
 
   const meta = {
     title: 'Utilities/Visible',
@@ -29,4 +32,7 @@
   </Visible>
 </Template>
 
-<Story name="Default" />
+<Story
+  name="Default"
+  {...withSource({ svelte: defaultSnippet })}
+/>
