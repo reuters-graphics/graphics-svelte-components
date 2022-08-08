@@ -16,7 +16,7 @@
 // export { default as LottieScroller } from './LottieScroller/index.svelte';
 // export { default as BeforeAfter } from './BeforeAfter/index.svelte';
 // export { default as DatawrapperChart } from './DatawrapperChart/index.svelte';
-// export { default as ReutersLogo } from './ReutersLogo/index.svelte';
+export { default as ReutersLogo } from './components/ReutersLogo/ReutersLogo.svelte';
 // export {
 //   default as SiteHeader,
 //   themes as SiteHeaderThemes
@@ -28,4 +28,3 @@
 export { default as Spinner } from './components/Spinner/Spinner.svelte';
 // export { default as Video } from './Video/index.svelte';
 export { default as Visible } from './components/Visible/Visible.svelte';
-export { default as FakeImage } from './components/FakeImage/FakeImage.svelte';

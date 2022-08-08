@@ -1,7 +1,10 @@
-<script>
-  export let logoColour = '#FA6400';
-  export let textColour = '#404040';
-  export let width = '100%';
+<script lang="ts">
+  /** "Kinesis" colour */
+  export let logoColour: string = '#FA6400';
+  /** Text colour */
+  export let textColour: string = '#404040';
+  /** CSS width value */
+  export let width: string = '100%';
 </script>
 
 <svg
