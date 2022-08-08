@@ -11,7 +11,7 @@
   } from '$docs/utils/withParams';
 
   const meta = {
-    title: 'Components/PymChild',
+    title: 'Utilities/PymChild',
     component: PymChild,
     ...withComponentDocs(componentDocs),
   };
