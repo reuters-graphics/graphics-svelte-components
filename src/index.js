@@ -5,7 +5,7 @@
 // export { default as Framer } from './Framer/index.svelte';
 // export { default as Image } from './Image/index.svelte';
 // export { default as Nav } from './Nav/index.svelte';
-// export { default as PymChild } from './PymChild/index.svelte';
+export { default as PymChild } from './components/PymChild/PymChild.svelte';
 // export { default as Referrals } from './Referrals/index.svelte';
 // export { default as SEO } from './SEO/index.svelte';
 // export { default as Sharer } from './Sharer/index.svelte';
