@@ -7,7 +7,7 @@ export { default as PymChild } from './components/PymChild/PymChild.svelte';
 // export { default as Referrals } from './Referrals/index.svelte';
 // export { default as SEO } from './SEO/index.svelte';
 // export { default as Sharer } from './Sharer/index.svelte';
-// export { default as Headline } from './Headline/index.svelte';
+export { default as Headline } from './components/Headline/Headline.svelte';
 // export { default as Hero } from './Hero/index.svelte';
 // export { default as Ai2svelte } from './Ai2svelte/index.svelte';
 // export { default as Scroller } from './Scroller/index.svelte';
