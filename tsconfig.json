@@ -15,10 +15,10 @@
 		"baseUrl": ".",
 		"outDir": "dist",
 		"paths": {
-			"$lib": ["src/components"],
-  		"$lib/*": ["src/components/*"],
-			"$utils": ["src/utils"],
-			"$utils/*": ["src/utils/*"]
+			"$lib": ["src"],
+  		"$lib/*": ["src/*"],
+			"$docs": ["src/docs"],
+			"$docs/*": ["src/docs/*"]
 		}
 	},
 	"include": [

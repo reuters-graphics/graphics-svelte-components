@@ -22,7 +22,7 @@ const config = {
   resolve: {
     alias: {
       '@reuters-graphics/graphics-svelte-components': './src',
-      $utils: './src/utils',
+      $docs: './src/docs',
     },
   },
   plugins: [
