@@ -1,5 +1,4 @@
 <script>
-import classnames from 'classnames';
 import Fa from 'svelte-fa/src/fa.svelte';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -66,27 +65,27 @@ onMount(() => {
 </script>
 
 
-<div class={classnames('sharetool', { active: showShare })}>
-  <div class={classnames('drawer', { active: showSecondaryDialogue })}>
+<div class="sharetool" class:active={showShare}>
+  <div class="drawer" class:active={showSecondaryDialogue }>
     <button
       on:click={handleShare}
       title="Share this!"
       disabled={showSecondaryDialogue}
       class='box-shadow-low'
     >
-      <Fa fw icon={faShareAlt} />
+      <div><Fa fw icon={faShareAlt} /></div>
     </button>
     <button on:click={handleTweet} title="Twitter">
-      <Fa fw icon={faTwitter} />
+      <div><Fa fw icon={faTwitter} /></div>
     </button>
     <button on:click={handlePost} title="Facebook">
-      <Fa fw icon={faFacebookF} />
+      <div><Fa fw icon={faFacebookF} /></div>
     </button>
   </div>
 </div>
 
 
-<style>
+<style lang="scss">
 .sharetool.active {
   bottom: 10px;
 }
@@ -96,6 +95,7 @@ onMount(() => {
   right: 10px;
   transition: all 0.2s;
   z-index: 9999;
+  
 }
 .sharetool button {
   background: #333;
@@ -106,10 +106,16 @@ onMount(() => {
   text-align: center;
   height: 2.25rem;
   width: 2.25rem;
-  padding: 2px 2px 2px 1px;
   outline: none !important;
   transition: color 0.2s;
   cursor: pointer;
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .sharetool button:active {
   transform: translate(1px, 1px);
@@ -136,7 +142,6 @@ onMount(() => {
     font-size: 1.75rem;
     height: 3rem;
     width: 3rem;
-    padding-top: 2px;
   }
   .drawer {
     width: calc(3rem + 4px);

@@ -29,7 +29,6 @@
     primary?: string;
     accent?: string;
     rules?: string;
-    shadow?: string;
   }
 
   /**
