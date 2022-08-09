@@ -29,6 +29,7 @@ module.exports = {
       resolve: {
         alias: {
           '@reuters-graphics/svelte-charts': './src',
+          '$lib': './src',
           '$docs': './src/docs',
         },
       },

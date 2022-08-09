@@ -15,7 +15,7 @@
   import {
     withComponentDocs,
     withStoryDocs,
-  } from '$docs/utils/withParams';
+  } from '$lib/docs/utils/withParams.js';
 
   const meta = {
     title: 'Components/Headline',

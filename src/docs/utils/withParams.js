@@ -1,21 +1,21 @@
-interface SourceType {
-  /** Svelte source code */
-  svelte?: string;
-  /** CSS source code */
-  css?: string;
-  /** SCSS source code */
-  scss?: string;
-  /** JavaScript source code */
-  js?: string;
-}
+// interface SourceType {
+//   /** Svelte source code */
+//   svelte?: string;
+//   /** CSS source code */
+//   css?: string;
+//   /** SCSS source code */
+//   scss?: string;
+//   /** JavaScript source code */
+//   js?: string;
+// }
 
-interface DocsType {
-  docs?: any;
-}
+// interface DocsType {
+//   docs?: any;
+// }
 
-interface OtherOptionsType {
-  parameters?: DocsType;
-}
+// interface OtherOptionsType {
+//   parameters?: DocsType;
+// }
 
 /**
  * Use custom source code in the "Show code" pull down.
@@ -23,7 +23,7 @@ interface OtherOptionsType {
  * @param otherOptions Other props object options, allowing chaining with other methods like withStoryDocs
  * @returns props object including parameters
  */
-export const withSource = (source: SourceType, otherOptions: OtherOptionsType = {}) => {
+export const withSource = (source, otherOptions = {}) => {
   const language = Object.keys(source)[0];
   const code = source[language];
   const docs = {
@@ -40,7 +40,7 @@ export const withSource = (source: SourceType, otherOptions: OtherOptionsType = 
  * @param otherOptions Other props object options, allowing chaining with other methods like withSource
  * @returns props object including parameters
  */
-export const withStoryDocs = (storyDocs: string, otherOptions: OtherOptionsType = {}) => {
+export const withStoryDocs = (storyDocs, otherOptions = {}) => {
   const docs = {
     ...otherOptions?.parameters?.docs,
     description: { story: storyDocs },
@@ -55,7 +55,7 @@ export const withStoryDocs = (storyDocs: string, otherOptions: OtherOptionsType 
  * @param otherOptions Other props object options, allowing chaining with other methods like withSource
  * @returns props object including parameters
  */
-export const withComponentDocs = (componentDocs: string, otherOptions: OtherOptionsType = {}) => {
+export const withComponentDocs = (componentDocs, otherOptions = {}) => {
   const docs = {
     ...otherOptions?.parameters?.docs,
     description: { component: componentDocs },

@@ -1,8 +1,6 @@
 {
 	"extends": "@tsconfig/svelte/tsconfig.json",
 	"compilerOptions": {
-		"types": ["node", "svelte"],
-		"moduleResolution": "node",
 		"module": "es2020",
 		"target": "es2019",
 		"declaration": true,
@@ -27,5 +25,5 @@
 		"src/**/*.svelte",
 		"bin/**/*.{js,cjs}"
 	],
-	"exclude": ["dist", "src/**/*.stories.svelte"]
+	"exclude": ["dist"]
 }

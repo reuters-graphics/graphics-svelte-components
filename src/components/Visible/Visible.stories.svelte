@@ -11,7 +11,7 @@
   import {
     withSource,
     withComponentDocs
-  } from '$docs/utils/withParams';
+  } from '$lib/docs/utils/withParams.js';
 
   const meta = {
     title: 'Utilities/Visible',

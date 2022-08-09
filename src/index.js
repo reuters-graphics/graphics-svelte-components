@@ -7,7 +7,7 @@ export { default as EndNotes } from './components/EndNotes/EndNotes.svelte';
 export { default as FeaturePhoto } from './components/FeaturePhoto/FeaturePhoto.svelte';
 // export { default as Framer } from './Framer/index.svelte';
 export { default as Headline } from './components/Headline/Headline.svelte';
-// export { default as Hero } from './Hero/index.svelte';
+export { default as Hero } from './components/Hero/Hero.svelte';
 export { default as PymChild } from './components/PymChild/PymChild.svelte';
 export { default as ReutersLogo } from './components/ReutersLogo/ReutersLogo.svelte';
 // export { default as Scroller } from './Scroller/index.svelte';
