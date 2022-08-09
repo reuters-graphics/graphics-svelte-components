@@ -1,20 +1,50 @@
-<script>
+<script lang="ts">
   import { throttle } from 'lodash-es';
   import { onMount } from 'svelte';
 
-  export let width = '';
+  type ContainerWidth = 'normal' | 'wide' | 'wider' | 'widest' | 'fluid';
+  /** Width of the chart within the text well. */
+  export let width: ContainerWidth = 'normal'; // options: wide, wider, widest, fluid
+  /** Height of the component */
   export let height = 600;
 
-  export let beforeSrc = null;
-  export let beforeAlt = null;
-  export let afterSrc = null;
-  export let afterAlt = null;
+  /** 
+   * If set, makes the height a ratio of the component's width.
+   * @type {number}
+   */
+  export let heightRatio: number | null = null;
 
+  /**
+   * Before image src
+   * @required
+   */
+  export let beforeSrc: string | null = null;
+  /**
+   * Before image altText
+   * @required
+   */
+  export let beforeAlt: string | null = null;
+  /**
+   * After image src
+   * @required
+   */
+  export let afterSrc: string | null = null;
+  /**
+   * After image altText
+   * @required
+   */
+  export let afterAlt: string | null = null;
+
+  /** Drag handle colour */
   export let handleColour = 'white';
+  /** Drag handle opacity */
   export let handleInactiveOpacity = 0.4;
+  /** Margin at the edge of the image to stop dragging */
   export let handleMargin = 20;
+  /** Percentage of the component width the handle will travel ona key press */
   export let keyPressStep = 0.05;
 
+  /** Initial offset of the handle, between 0 and 1.*/
   export let offset = 0.5;
 
   const random4 = () =>
@@ -30,6 +60,9 @@
   let figure;
   let beforeOverlayWidth = 0;
   let isFocused = false;
+  let containerWidth;
+
+  $: containerHeight = (containerWidth && heightRatio) ? containerWidth * heightRatio : height;
 
   const onFocus = () => (isFocused = true);
   const onBlur = () => (isFocused = false);
@@ -84,7 +117,7 @@
 
   $: w = (imgOffset && imgOffset.width) || 0;
   $: x = w * offset;
-  $: figStyle = `width:100%;height:${height}px;`;
+  $: figStyle = `width:100%;height:${containerHeight}px;`;
   $: imgStyle = 'width:100%;height:100%;';
   $: beforeOverlayClip =
     x < beforeOverlayWidth ? Math.abs(x - beforeOverlayWidth) : 0;
@@ -112,7 +145,11 @@
 />
 
 {#if beforeSrc && beforeAlt && afterSrc && afterAlt}
-  <section class="photo before-after {width}" style="height: {height}px;">
+  <section
+    class="photo before-after {width}"
+    style="height: {containerHeight}px;"
+    bind:clientWidth="{containerWidth}"
+  >
     <figure
       style="{figStyle}"
       class="before-after-container"
@@ -121,7 +158,6 @@
       bind:this="{figure}"
       aria-labelledby="{$$slots.caption && `${id}-caption`}"
     >
-      <!-- Note to self: on:load is not a reliable handler here, see interval in onMount... -->
       <img
         bind:this="{img}"
         src="{afterSrc}"
@@ -137,7 +173,7 @@
         src="{beforeSrc}"
         alt="{beforeAlt}"
         on:mousedown|preventDefault
-        style="clip: rect(0 {x}px {height}px 0);{imgStyle}"
+        style="clip: rect(0 {x}px {containerHeight}px 0);{imgStyle}"
         class="before"
         aria-describedby="{$$slots.afterOverlay && `${id}-after`}"
       />
@@ -148,6 +184,7 @@
           bind:clientWidth="{beforeOverlayWidth}"
           style="clip-path: inset(0 {beforeOverlayClip}px 0 0);"
         >
+          <!-- Overlay for before image -->
           <slot
             name="beforeOverlay"
             description="{`${id}-before-description`}"
@@ -156,6 +193,7 @@
       {/if}
       {#if $$slots.afterOverlay}
         <div id="image-after-label" class="overlay-container after">
+          <!-- Overlay for after image -->
           <slot name="afterOverlay" description="{`${id}-after-description`}" />
         </div>
       {/if}
@@ -173,13 +211,15 @@
     </figure>
   </section>
   {#if $$slots.caption}
-    <section class="{width}" id="{`${id}-caption`}">
+    <section class="graphic caption {width}" id="{`${id}-caption`}">
+      <!-- Caption for image credits -->
       <slot name="caption" />
     </section>
   {/if}
 {/if}
 
 <style lang="scss">
+  @import "@reuters-graphics/style-main/scss/fonts/mixins";
   figure.before-after-container {
     overflow: hidden;
     position: relative;
@@ -204,6 +244,16 @@
     }
     .overlay-container {
       position: absolute;
+      :global {
+        p {
+          @include font-display;
+          font-size: 1rem;
+          line-height: 1.2rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
       &.before {
         left: 0;
         z-index: 23;
@@ -257,13 +307,16 @@
     }
     .arrow-right {
       left: 19px;
-      bottom: 13px;
+      bottom: 14px;
       border-left: 10px solid var(--before-after-handle-colour);
     }
     .arrow-left {
       left: 3px;
-      top: 7px;
+      top: 6px;
       border-right: 10px solid var(--before-after-handle-colour);
     }
+  }
+  section.graphic.caption {
+    margin: 0 auto;
   }
 </style>

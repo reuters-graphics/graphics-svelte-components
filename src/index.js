@@ -1,7 +1,7 @@
 // export { default as Ai2svelte } from './Ai2svelte/index.svelte';
-// export { default as BeforeAfter } from './BeforeAfter/index.svelte';
+export { default as BeforeAfter } from './components/BeforeAfter/BeforeAfter.svelte';
 export { default as BodyText } from './components/BodyText/BodyText.svelte';
-// export { default as DatawrapperChart } from './DatawrapperChart/index.svelte';
+export { default as DatawrapperChart } from './components/DatawrapperChart/DatawrapperChart.svelte';
 export { default as EmbedPreviewerLink } from './components/EmbedPreviewerLink/EmbedPreviewerLink.svelte';
 export { default as EndNotes } from './components/EndNotes/EndNotes.svelte';
 export { default as FeaturePhoto } from './components/FeaturePhoto/FeaturePhoto.svelte';
