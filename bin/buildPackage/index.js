@@ -22,6 +22,12 @@ const excludePatterns = [
   '**/*.stories.svelte.d.ts',
 ];
 
+const excludedTypeDefs = [
+  '**/stories/**/*',
+  '**/docs/**/*',
+  '**/*.stories.svelte.d.ts',
+];
+
 /**
  * This is a basic port of sveltekit's own packaging method:
  * https://github.com/sveltejs/kit/tree/master/packages/kit/src/packaging
@@ -38,9 +44,10 @@ const build = async () => {
 	});
 
   // Cleanup unwanted types
+  fs.rmSync(path.join(TYPES, 'docs'), { recursive: true, force: true });
   const types = await glob('**/*', { cwd: TYPES, filesOnly: true });
   for (const t of types) {
-    if(picomatch.isMatch(t, excludePatterns)) fs.unlinkSync(path.join(TYPES, t));
+    if(picomatch.isMatch(t, excludedTypeDefs)) fs.unlinkSync(path.join(TYPES, t));
   }
 
   const pkgExports = {
