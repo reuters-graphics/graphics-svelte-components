@@ -1,5 +1,4 @@
 <script>
-  import { browser } from '$app/env';
   import Referrals from './Referrals.svelte';
   import IntersectionObserver from './IntersectionObserver.svelte';
 
@@ -12,7 +11,7 @@
       <h2>
         <a href="https://graphics.reuters.com/">More from Reuters Graphics</a>
       </h2>
-      {#if browser}
+      {#if (typeof window !== 'undefined')}
         <Referrals referrals="{referrals}" />
       {/if}
     </section>

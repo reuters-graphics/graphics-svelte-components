@@ -1,4 +1,7 @@
 <script context="module">
+  /**
+   * Exported preset themes you can use to customise the `theme` prop.
+   */
   export const themes = {
     default: {
       background: '#fff',
@@ -13,7 +16,7 @@
   };
 </script>
 
-<script>
+<script lang="ts">
   import QuickLinks from './QuickLinks.svelte';
   import CompanyLinks from './CompanyLinks.svelte';
   import LegalLinks from './LegalLinks.svelte';
@@ -21,8 +24,30 @@
 
   import data from './data.json';
 
-  export let theme = {};
-  export let referrals = [];
+  interface Theme {
+    background?: string;
+    primary?: string;
+    accent?: string;
+    rules?: string;
+    shadow?: string;
+  }
+
+  /**
+   * Pass in a custom theme to control the colours in the header.
+   */
+  export let theme: Theme = {};
+  
+  interface Referral {
+    url: URL;
+    image: URL;
+    title: string;
+    description?: string;
+  }
+  
+  /**
+   * Custom referrals to other Reuters Graphics projects
+   */
+  export let referrals: Referral[] = [];
 
   const navTheme = { ...themes.default, ...theme };
 </script>

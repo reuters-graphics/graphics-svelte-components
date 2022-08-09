@@ -1,4 +1,7 @@
 <script context="module">
+  /**
+   * Exported preset themes you can use to customise the `theme` prop.
+   */
   export const themes = {
     default: {
       background: '#fff',
@@ -17,7 +20,20 @@
   };
 </script>
 
-<script>
+<script lang="ts">
+  interface Theme {
+    background?: string;
+    primary?: string;
+    accent?: string;
+    rules?: string;
+    shadow?: string;
+  }
+
+  /**
+   * Pass in a custom theme to control the colours in the header.
+   */
+  export let theme: Theme = {};
+
   import { ReutersLogo } from '../../index.js';
   import NavBar from './NavBar/index.svelte';
   import data from './data.json';
@@ -25,8 +41,6 @@
   import { writable } from 'svelte/store';
   import MenuIcon from './svgs/Menu.svelte';
   import MobileMenu from './MobileMenu/index.svelte';
-
-  export let theme = {};
 
   const navTheme = { ...themes.default, ...theme };
 

@@ -32,6 +32,8 @@ export const parameters = {
         [
           'Using these docs',
           'Using with the Graphics Kit',
+          'Using with Google docs',
+          'Customising components with SCSS',
           '*',
         ],
         '*',

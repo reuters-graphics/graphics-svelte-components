@@ -13,14 +13,16 @@ export { default as ReutersLogo } from './components/ReutersLogo/ReutersLogo.sve
 // export { default as Scroller } from './Scroller/index.svelte';
 // export { default as SEO } from './SEO/index.svelte';
 // export { default as Sharer } from './Sharer/index.svelte';
-// export {
-//   default as SiteFooter,
-//   themes as SiteFooterThemes
-// } from './SiteFooter/index.svelte';
-// export {
-//   default as SiteHeader,
-//   themes as SiteHeaderThemes
-// } from './SiteHeader/index.svelte';
+export {
+  default as SiteFooter,
+  // @ts-ignore
+  themes as SiteFooterThemes
+} from './components/SiteFooter/SiteFooter.svelte';
+export {
+  default as SiteHeader,
+  // @ts-ignore
+  themes as SiteHeaderThemes
+} from './components/SiteHeader/SiteHeader.svelte';
 export { default as Spinner } from './components/Spinner/Spinner.svelte';
 // export { default as Video } from './Video/index.svelte';
 export { default as Visible } from './components/Visible/Visible.svelte';
