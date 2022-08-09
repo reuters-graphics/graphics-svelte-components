@@ -1,6 +1,6 @@
 /**
  * Use custom source code in the "Show code" pull down.
- * @param {string} source Source code object, where key is the language of the source code and value is the code string.
+ * @param {object} source Source code object, where key is the language of the source code and value is the code string.
  * @param {object} otherOptions Other props object options, allowing chaining with other methods like withStoryDocs
  * @returns props object including parameters
  */
