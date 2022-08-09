@@ -4,6 +4,7 @@ import { createRequire } from 'module';
 import { emitDts } from 'svelte2tsx';
 import fs from 'fs-extra';
 import glob from 'tiny-glob';
+import path from 'path';
 import picomatch from 'picomatch';
 import processOther from './process/other.js';
 import processSvelte from './process/svelte.js';
@@ -18,6 +19,7 @@ const excludePatterns = [
   '**/statics/**/*',
   '**/*.exclude.*',
   '**/*.stories.svelte',
+  '**/*.stories.svelte.d.ts',
 ];
 
 /**
@@ -34,6 +36,12 @@ const build = async () => {
 		svelteShimsPath: require.resolve('svelte2tsx/svelte-shims.d.ts'),
 		declarationDir: TYPES,
 	});
+
+  // Cleanup unwanted types
+  const types = await glob('**/*', { cwd: TYPES, filesOnly: true });
+  for (const t of types) {
+    if(picomatch.isMatch(t, excludePatterns)) fs.unlinkSync(path.join(TYPES, t));
+  }
 
   const pkgExports = {
     './package.json': './package.json'
