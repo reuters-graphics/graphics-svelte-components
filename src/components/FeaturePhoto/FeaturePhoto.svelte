@@ -2,34 +2,36 @@
   import { onMount } from 'svelte';
 
   /**
-   * Image src
+   * Photo src
    * @type {string}
    * @required
    */
   export let src: string;
   /**
-   * Image altText
+   * Photo altText
    * @type {string}
    * @required
    */
   export let altText: string;
   /**
-   * Caption below the image
+   * Caption below the photo
    * @type {string}
    */
   export let caption: string;
   /**
-   * Height of the image placeholder when lazy-loading
+   * Height of the photo placeholder when lazy-loading
    */
   export let height: number = 100;
+
+  type ContainerWidth = 'normal' | 'wide' | 'wider' | 'widest' | 'fluid';
 
   /**
    * Width of the container, one of: normal, wide, wider, widest or fluid
    */
-  export let width = 'normal';
+  export let width: ContainerWidth = 'normal';
 
   /**
-   * Whether to lazy load the image using the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+   * Whether to lazy load the photo using the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
    */
   export let lazy: boolean = false;
 

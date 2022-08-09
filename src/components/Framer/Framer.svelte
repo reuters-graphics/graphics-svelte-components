@@ -17,6 +17,7 @@
 
   $: embedTitles = getUniqNames(embeds);
 
+  // @ts-ignore
   let pymParent;
 
   const reframe = (embed) => {
@@ -77,8 +78,8 @@
 />
 
 <style lang="scss">
-  @import '~@reuters-graphics/style-color/scss/thematic/brand';
-  @import '~@reuters-graphics/style-main/scss/fonts/mixins';
+  @import '@reuters-graphics/style-color/scss/thematic/brand';
+  @import '@reuters-graphics/style-main/scss/fonts/mixins';
 
   header {
     @include font-display;
@@ -101,6 +102,8 @@
       color: #999;
       padding: 2px 2px;
       cursor: pointer;
+      @include font-display;
+      font-weight: 400;
       &.active {
         border-bottom: 2px solid #666;
         color: #666;
