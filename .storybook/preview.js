@@ -1,7 +1,7 @@
-import '@reuters-graphics/style-theme-eisbaer/scss/main.scss';
+import '../src/scss/main.scss';
 import './preview.scss';
 
-import ArticleWrapper from './ArticleWrapper.svelte';
+import Article from '../src/components/Article/Article.svelte';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss';
 import svelte from './svelte-highlighting.js';
@@ -37,6 +37,10 @@ export const parameters = {
           '*',
         ],
         '*',
+        'Actions',
+        ['*'],
+        'Utilities',
+        ['*'],
         'Contributing',
         [
           'Quickstart', 'Component Basics', '*', 'Writing Stories',
@@ -51,4 +55,4 @@ export const parameters = {
   }
 };
 
-export const decorators = [() => ({ Component: ArticleWrapper })];
+export const decorators = [() => ({ Component: Article })];

@@ -10,3 +10,14 @@
   ```
 
 - Commit your component to a new branch and push it to GitHub! 🏁
+
+---
+
+```svelte
+<script>
+  import { YourComponent  } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+
+<YourComponent />
+```

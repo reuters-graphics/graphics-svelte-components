@@ -21,7 +21,7 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-  @import '@reuters-graphics/style-main/scss/bootstrap/imports';
+  @import '../../../scss/bootstrap/imports';
   @import '@reuters-graphics/style-main/scss/fonts/mixins';
 
   .image {
