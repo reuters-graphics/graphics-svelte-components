@@ -6,6 +6,8 @@
   import componentDocs from './stories/docs/component.md?raw';
   // @ts-ignore
   import customLayoutsDocs from './stories/docs/customLayouts.md?raw';
+  // @ts-ignore
+  import snapWidthsDocs from './stories/docs/snapWidths.md?raw';
 
   import Section from './Section.svelte';
   import Article from '../Article/Article.svelte';
@@ -73,6 +75,27 @@
   </Section>
 </Story>
 
+<Story
+  name="Snap widths"
+  {...withStoryDocs(snapWidthsDocs)}
+>
+<Article id="section-demo-article">
+  <div class="article-boundaries">
+    <div class="label">Article</div>
+      <Section width="narrower" snap={true} cls="section-snap-widths-demo">narrower</Section>
+      <Section width="narrow" snap={true} cls="section-snap-widths-demo">narrow</Section>
+      <Section width="normal" snap={true} cls="section-snap-widths-demo">normal</Section>
+      <Section width="wide" snap={true} cls="section-snap-widths-demo">wide</Section>
+      <Section width="wider" snap={true} cls="section-snap-widths-demo">wider</Section>
+      <Section width="narrower" snap={true} cls="section-snap-widths-demo even">narrower</Section>
+      <Section width="narrow" snap={true} cls="section-snap-widths-demo even">narrow</Section>
+      <Section width="normal" snap={true} cls="section-snap-widths-demo even skip-narrow">normal.skip-narrow</Section>
+      <Section width="wide" snap={true} cls="section-snap-widths-demo even skip-normal skip-narrow">wide.skip-normal.skip-narrow</Section>
+      <Section width="wider" snap={true} cls="section-snap-widths-demo even skip-wide">wider.skip-wide</Section>
+    </div>
+</Article>
+</Story>
+
 
 <style lang="scss">
   :global {
@@ -92,8 +115,16 @@
       section {
         height: 100px;
         background: #81a1c1;
+        &.section-snap-widths-demo {
+          margin-bottom: 2px;
+          height: 40px;
+          font-size: 11px;
+          &.even {
+            background: rgb(211, 132, 123);
+          }
+        }
       }
-      .label {
+      .label, section.section-snap-widths-demo {
         padding-left: 3px;
         color: white;
       }

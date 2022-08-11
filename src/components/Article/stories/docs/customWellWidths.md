@@ -26,10 +26,30 @@ When combined with the `Section` component, you can set custom column widths by 
 </Article>
 ```
 
+> Keep in mind, other tools, like our AI templates, use our default column widths, so customising those widths here may have downstream consequences for graphics made outside your code.
+
 If you're not using our `Section` component, you can still inherit the column widths from `Article` to create your own custom container using the article well dimensions by using [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) like this:
 
 ```svelte
 <div class="my-special-container">
+  <!-- Stuffs... -->
+</div>
+
+<style lang="scss">
+  div.my-special-container {
+    max-width: var(--wide-column-width);
+  }
+</style>
+```
+
+... or you can make your component entirely configurable within the article well doing something like this:
+
+```svelte
+<script>
+  export let width = 'normal';
+</script>
+
+<div class="my-special-container {width}">
   <!-- Stuffs... -->
 </div>
 

@@ -7,10 +7,11 @@
   export let text: string;
 
   import { marked } from 'marked';
+  import Section from '../Section/Section.svelte';
 </script>
 
-<section class="body-text">
+<Section cls="body-text">
   {#if text}
     {@html marked.parse(text)}
   {/if}
-</section>
+</Section>

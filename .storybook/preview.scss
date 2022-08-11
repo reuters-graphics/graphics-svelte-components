@@ -19,10 +19,11 @@ div.sbdocs-content {
     margin: 1rem 0;
   }
 
- & > blockquote, & > div > div > blockquote {
+ & > blockquote, & > div > div > blockquote, blockquote.sbdocs {
     background-color: #ededed;
     padding: 15px 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
 }
+
