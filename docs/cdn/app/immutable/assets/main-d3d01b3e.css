@@ -2094,13 +2094,14 @@ nav.svelte-253v2x ul li.svelte-253v2x:hover {
 nav.svelte-253v2x ul li.stationary.svelte-253v2x:hover {
   padding-left: 0;
 }
-div.announcement.svelte-kwzezr.svelte-kwzezr {
+div.announcement.svelte-49jy04.svelte-49jy04 {
   width: 100%;
   margin: 0 auto 1rem;
   background-color: #ccc;
   padding: 15px 25px;
+  text-align: center;
 }
-div.announcement.svelte-kwzezr p.svelte-kwzezr {
+div.announcement.svelte-49jy04 p.svelte-49jy04 {
   margin-bottom: 0;
   font-weight: 600;
   font-size: 1.25rem;

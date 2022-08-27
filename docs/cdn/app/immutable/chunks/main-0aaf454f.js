@@ -21171,7 +21171,9 @@ function create_fragment(e) {
         (s = text('\u{1F6A8} Graphics components have ')),
         (n = element('a')),
         (o = text('a new home')),
-        (u = text(". Don't use these docs for new projects.")),
+        (u = text(
+          ". These docs are likely outdated if you're starting a new project."
+        )),
         this.h();
     },
     l(d) {
@@ -21186,7 +21188,10 @@ function create_fragment(e) {
       var m = children(n);
       (o = claim_text(m, 'a new home')),
         m.forEach(detach),
-        (u = claim_text(b, ". Don't use these docs for new projects.")),
+        (u = claim_text(
+          b,
+          ". These docs are likely outdated if you're starting a new project."
+        )),
         b.forEach(detach),
         w.forEach(detach),
         y.forEach(detach),
@@ -21198,8 +21203,8 @@ function create_fragment(e) {
         'href',
         'https://reuters-graphics.github.io/graphics-components/'
       ),
-        attr(i, 'class', 'svelte-kwzezr'),
-        attr(t, 'class', 'announcement svelte-kwzezr');
+        attr(i, 'class', 'svelte-49jy04'),
+        attr(t, 'class', 'announcement svelte-49jy04');
     },
     m(d, y) {
       insert_hydration(d, t, y),
