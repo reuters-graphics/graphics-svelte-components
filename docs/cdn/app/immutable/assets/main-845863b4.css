@@ -2094,6 +2094,17 @@ nav.svelte-253v2x ul li.svelte-253v2x:hover {
 nav.svelte-253v2x ul li.stationary.svelte-253v2x:hover {
   padding-left: 0;
 }
+div.announcement.svelte-kwzezr.svelte-kwzezr {
+  width: 100%;
+  margin: 0 auto 1rem;
+  background-color: #ccc;
+  padding: 15px 25px;
+}
+div.announcement.svelte-kwzezr p.svelte-kwzezr {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
 pre[class*='language-'],
 code[class*='language-'] {
   color: #5c6e74;
