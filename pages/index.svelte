@@ -5,6 +5,7 @@
   import { base } from '$app/paths';
   import Cog from '$lib/_docs/Cog/index.svelte';
   import Menu from '$lib/_docs/Menu/index.svelte';
+  import Announcement from '$lib/_docs/Announcement/index.svelte';
 
   import components from '@component-docs:components';
 </script>
@@ -18,6 +19,8 @@
   lang="en"
   hostname="reuters-graphics.github.io"
 />
+
+<Announcement />
 
 <Nav />
 <Menu components="{components}" />

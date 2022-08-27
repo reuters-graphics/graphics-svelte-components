@@ -18,6 +18,7 @@
   import Menu from '$lib/_docs/Menu/index.svelte';
   import Fa from 'svelte-fa/src/fa.svelte';
   import { faCode } from '@fortawesome/free-solid-svg-icons/faCode.js';
+  import Announcement from '$lib/_docs/Announcement/index.svelte';
 
   import '$lib/_docs/styles/main.scss';
 
@@ -42,6 +43,8 @@
   lang="en"
   hostname="reuters-graphics.github.io"
 />
+
+<Announcement />
 
 <Nav>
   <div class="breadcrumb font-display">
