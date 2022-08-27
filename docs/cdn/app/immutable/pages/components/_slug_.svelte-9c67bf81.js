@@ -1,132 +1,133 @@
-var I = (s, i, _) =>
-  new Promise((o, c) => {
-    var n = (a) => {
+var g = (t, s, _) =>
+  new Promise((o, n) => {
+    var c = (u) => {
         try {
-          t(_.next(a));
-        } catch (m) {
-          c(m);
+          a(_.next(u));
+        } catch (i) {
+          n(i);
         }
       },
-      d = (a) => {
+      v = (u) => {
         try {
-          t(_.throw(a));
-        } catch (m) {
-          c(m);
+          a(_.throw(u));
+        } catch (i) {
+          n(i);
         }
       },
-      t = (a) => (a.done ? o(a.value) : Promise.resolve(a.value).then(n, d));
-    t((_ = _.apply(s, i)).next());
+      a = (u) => (u.done ? o(u.value) : Promise.resolve(u.value).then(c, v));
+    a((_ = _.apply(t, s)).next());
   });
 import { _ as r } from '../../chunks/preload-helper-ade19073.js';
 import {
-  S as F,
-  i as q,
-  s as B,
+  S as B,
+  i as H,
+  s as G,
   w as b,
-  k as V,
-  l as y,
-  x as T,
+  k as O,
+  l as N,
+  x as R,
   m as h,
-  y as D,
+  y as $,
   g as A,
-  o as L,
-  p as H,
-  q as P,
-  B as R,
-  d as E,
-  v as G,
-  u as U,
-  e as O,
-  t as k,
-  c as g,
-  a as x,
-  h as N,
-  b as f,
-  J as $,
-  j,
-  n as z,
+  o as D,
+  p as U,
+  q as L,
+  B as P,
+  d as f,
+  v as j,
+  u as z,
+  e as x,
+  t as M,
+  c as w,
+  a as S,
+  h as C,
+  b as E,
+  J as V,
+  j as J,
+  n as K,
 } from '../../chunks/index-83a5d9f9.js';
 import {
-  c as M,
-  S as J,
-  N as K,
-  M as Q,
-  F as W,
-} from '../../chunks/main-ccba51e0.js';
+  c as F,
+  S as Q,
+  A as W,
+  N as X,
+  M as Y,
+  F as Z,
+} from '../../chunks/main-92ce8c3f.js';
 import '../../chunks/paths-396f020f.js';
-var C = {};
-(function (s) {
-  Object.defineProperty(s, '__esModule', { value: !0 });
-  var i = 'fas',
+var q = {};
+(function (t) {
+  Object.defineProperty(t, '__esModule', { value: !0 });
+  var s = 'fas',
     _ = 'code',
     o = 640,
-    c = 512,
-    n = [],
-    d = 'f121',
-    t =
+    n = 512,
+    c = [],
+    v = 'f121',
+    a =
       'M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z';
-  (s.definition = { prefix: i, iconName: _, icon: [o, c, n, d, t] }),
-    (s.faCode = s.definition),
-    (s.prefix = i),
-    (s.iconName = _),
-    (s.width = o),
-    (s.height = c),
-    (s.ligatures = n),
-    (s.unicode = d),
-    (s.svgPathData = t);
-})(C);
-function X(s) {
-  switch (s) {
+  (t.definition = { prefix: s, iconName: _, icon: [o, n, c, v, a] }),
+    (t.faCode = t.definition),
+    (t.prefix = s),
+    (t.iconName = _),
+    (t.width = o),
+    (t.height = n),
+    (t.ligatures = c),
+    (t.unicode = v),
+    (t.svgPathData = a);
+})(q);
+function ee(t) {
+  switch (t) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return r(
-        () => import('../../chunks/docs-56085af7.js'),
+        () => import('../../chunks/docs-b96235fa.js'),
         [
-          'chunks/docs-56085af7.js',
+          'chunks/docs-b96235fa.js',
           'assets/docs-f27f17c1.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return r(
-        () => import('../../chunks/docs-6d000bdb.js'),
+        () => import('../../chunks/docs-b31407c6.js'),
         [
-          'chunks/docs-6d000bdb.js',
+          'chunks/docs-b31407c6.js',
           'assets/docs-ea1c5840.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return r(
-        () => import('../../chunks/docs-05739fdd.js'),
+        () => import('../../chunks/docs-35b457e8.js'),
         [
-          'chunks/docs-05739fdd.js',
+          'chunks/docs-35b457e8.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/DatawrapperChart/docs.svx':
       return r(
-        () => import('../../chunks/docs-61b419e8.js'),
+        () => import('../../chunks/docs-5e8d45d3.js'),
         [
-          'chunks/docs-61b419e8.js',
+          'chunks/docs-5e8d45d3.js',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -139,14 +140,14 @@ function X(s) {
       );
     case '../../src/lib/EndNotes/docs.svx':
       return r(
-        () => import('../../chunks/docs-33130525.js'),
+        () => import('../../chunks/docs-e51877ea.js'),
         [
-          'chunks/docs-33130525.js',
+          'chunks/docs-e51877ea.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -162,15 +163,15 @@ function X(s) {
       );
     case '../../src/lib/Framer/docs.svx':
       return r(
-        () => import('../../chunks/docs-cbba70a6.js'),
+        () => import('../../chunks/docs-1ec549a7.js'),
         [
-          'chunks/docs-cbba70a6.js',
+          'chunks/docs-1ec549a7.js',
           'assets/docs-8e82fbe2.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-5b18af3d.js',
@@ -201,28 +202,28 @@ function X(s) {
       );
     case '../../src/lib/Image/docs.svx':
       return r(
-        () => import('../../chunks/docs-8e0671d2.js'),
+        () => import('../../chunks/docs-bf499ea3.js'),
         [
-          'chunks/docs-8e0671d2.js',
+          'chunks/docs-bf499ea3.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-1011ebaf.js'),
+        () => import('../../chunks/docs-6020b7f7.js'),
         [
-          'chunks/docs-1011ebaf.js',
+          'chunks/docs-6020b7f7.js',
           'assets/docs-4a88ca0e.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -243,15 +244,15 @@ function X(s) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return r(
-        () => import('../../chunks/docs-e8ee0abc.js'),
+        () => import('../../chunks/docs-e15870a2.js'),
         [
-          'chunks/docs-e8ee0abc.js',
+          'chunks/docs-e15870a2.js',
           'assets/docs-00bc6279.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -273,16 +274,16 @@ function X(s) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-b5203da1.js'),
+        () => import('../../chunks/docs-f0f6f82a.js'),
         [
-          'chunks/docs-b5203da1.js',
+          'chunks/docs-f0f6f82a.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -293,14 +294,14 @@ function X(s) {
       );
     case '../../src/lib/SiteFooter/docs.svx':
       return r(
-        () => import('../../chunks/docs-13f39309.js'),
+        () => import('../../chunks/docs-a51c439c.js'),
         [
-          'chunks/docs-13f39309.js',
+          'chunks/docs-a51c439c.js',
           'assets/docs-73e61455.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-c889ff85.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -308,13 +309,13 @@ function X(s) {
       );
     case '../../src/lib/SiteHeader/docs.svx':
       return r(
-        () => import('../../chunks/docs-7d4c9bc7.js'),
+        () => import('../../chunks/docs-1ebd63cf.js'),
         [
-          'chunks/docs-7d4c9bc7.js',
+          'chunks/docs-1ebd63cf.js',
           'assets/docs-06bba01a.css',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-5b18af3d.js',
           'chunks/index-83a1f0ce.js',
@@ -325,12 +326,12 @@ function X(s) {
       );
     case '../../src/lib/Spinner/docs.svx':
       return r(
-        () => import('../../chunks/docs-179c1a77.js'),
+        () => import('../../chunks/docs-1544ed7e.js'),
         [
-          'chunks/docs-179c1a77.js',
+          'chunks/docs-1544ed7e.js',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -338,14 +339,14 @@ function X(s) {
       );
     case '../../src/lib/Video/docs.svx':
       return r(
-        () => import('../../chunks/docs-a66d1799.js'),
+        () => import('../../chunks/docs-8cc4cded.js'),
         [
-          'chunks/docs-a66d1799.js',
+          'chunks/docs-8cc4cded.js',
           'assets/docs-fee898e6.css',
           'chunks/index-83a5d9f9.js',
           'chunks/paths-396f020f.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -357,65 +358,65 @@ function X(s) {
         ['chunks/docs-97e25811.js', 'chunks/index-83a5d9f9.js']
       );
     default:
-      return new Promise(function (i, _) {
+      return new Promise(function (s, _) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(_.bind(null, new Error('Unknown variable dynamic import: ' + s)));
+          : setTimeout)(_.bind(null, new Error('Unknown variable dynamic import: ' + t)));
       });
   }
 }
-function Y(s) {
-  switch (s) {
+function re(t) {
+  switch (t) {
     case '../../src/lib/Ai2svelte/docs.svx':
       return r(
-        () => import('../../chunks/docs-56085af7.js'),
+        () => import('../../chunks/docs-b96235fa.js'),
         [
-          'chunks/docs-56085af7.js',
+          'chunks/docs-b96235fa.js',
           'assets/docs-f27f17c1.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BeforeAfter/docs.svx':
       return r(
-        () => import('../../chunks/docs-6d000bdb.js'),
+        () => import('../../chunks/docs-b31407c6.js'),
         [
-          'chunks/docs-6d000bdb.js',
+          'chunks/docs-b31407c6.js',
           'assets/docs-ea1c5840.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/BodyText/docs.svx':
       return r(
-        () => import('../../chunks/docs-05739fdd.js'),
+        () => import('../../chunks/docs-35b457e8.js'),
         [
-          'chunks/docs-05739fdd.js',
+          'chunks/docs-35b457e8.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/DatawrapperChart/docs.svx':
       return r(
-        () => import('../../chunks/docs-61b419e8.js'),
+        () => import('../../chunks/docs-5e8d45d3.js'),
         [
-          'chunks/docs-61b419e8.js',
+          'chunks/docs-5e8d45d3.js',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -428,14 +429,14 @@ function Y(s) {
       );
     case '../../src/lib/EndNotes/docs.svx':
       return r(
-        () => import('../../chunks/docs-33130525.js'),
+        () => import('../../chunks/docs-e51877ea.js'),
         [
-          'chunks/docs-33130525.js',
+          'chunks/docs-e51877ea.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -451,15 +452,15 @@ function Y(s) {
       );
     case '../../src/lib/Framer/docs.svx':
       return r(
-        () => import('../../chunks/docs-cbba70a6.js'),
+        () => import('../../chunks/docs-1ec549a7.js'),
         [
-          'chunks/docs-cbba70a6.js',
+          'chunks/docs-1ec549a7.js',
           'assets/docs-8e82fbe2.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-5b18af3d.js',
@@ -490,28 +491,28 @@ function Y(s) {
       );
     case '../../src/lib/Image/docs.svx':
       return r(
-        () => import('../../chunks/docs-8e0671d2.js'),
+        () => import('../../chunks/docs-bf499ea3.js'),
         [
-          'chunks/docs-8e0671d2.js',
+          'chunks/docs-bf499ea3.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
     case '../../src/lib/LottieScroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-1011ebaf.js'),
+        () => import('../../chunks/docs-6020b7f7.js'),
         [
-          'chunks/docs-1011ebaf.js',
+          'chunks/docs-6020b7f7.js',
           'assets/docs-4a88ca0e.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -532,15 +533,15 @@ function Y(s) {
       );
     case '../../src/lib/Referrals/docs.svx':
       return r(
-        () => import('../../chunks/docs-e8ee0abc.js'),
+        () => import('../../chunks/docs-e15870a2.js'),
         [
-          'chunks/docs-e8ee0abc.js',
+          'chunks/docs-e15870a2.js',
           'assets/docs-00bc6279.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -562,16 +563,16 @@ function Y(s) {
       );
     case '../../src/lib/Scroller/docs.svx':
       return r(
-        () => import('../../chunks/docs-b5203da1.js'),
+        () => import('../../chunks/docs-f0f6f82a.js'),
         [
-          'chunks/docs-b5203da1.js',
+          'chunks/docs-f0f6f82a.js',
           'assets/docs-58c35654.css',
           'chunks/preload-helper-ade19073.js',
           'chunks/index-83a5d9f9.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
         ]
       );
@@ -582,14 +583,14 @@ function Y(s) {
       );
     case '../../src/lib/SiteFooter/docs.svx':
       return r(
-        () => import('../../chunks/docs-13f39309.js'),
+        () => import('../../chunks/docs-a51c439c.js'),
         [
-          'chunks/docs-13f39309.js',
+          'chunks/docs-a51c439c.js',
           'assets/docs-73e61455.css',
           'chunks/index-83a5d9f9.js',
           'chunks/index-c889ff85.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -597,13 +598,13 @@ function Y(s) {
       );
     case '../../src/lib/SiteHeader/docs.svx':
       return r(
-        () => import('../../chunks/docs-7d4c9bc7.js'),
+        () => import('../../chunks/docs-1ebd63cf.js'),
         [
-          'chunks/docs-7d4c9bc7.js',
+          'chunks/docs-1ebd63cf.js',
           'assets/docs-06bba01a.css',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-5b18af3d.js',
           'chunks/index-83a1f0ce.js',
@@ -614,12 +615,12 @@ function Y(s) {
       );
     case '../../src/lib/Spinner/docs.svx':
       return r(
-        () => import('../../chunks/docs-179c1a77.js'),
+        () => import('../../chunks/docs-1544ed7e.js'),
         [
-          'chunks/docs-179c1a77.js',
+          'chunks/docs-1544ed7e.js',
           'chunks/index-83a5d9f9.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/paths-396f020f.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -627,14 +628,14 @@ function Y(s) {
       );
     case '../../src/lib/Video/docs.svx':
       return r(
-        () => import('../../chunks/docs-a66d1799.js'),
+        () => import('../../chunks/docs-8cc4cded.js'),
         [
-          'chunks/docs-a66d1799.js',
+          'chunks/docs-8cc4cded.js',
           'assets/docs-fee898e6.css',
           'chunks/index-83a5d9f9.js',
           'chunks/paths-396f020f.js',
-          'chunks/main-ccba51e0.js',
-          'assets/main-cf45967f.css',
+          'chunks/main-92ce8c3f.js',
+          'assets/main-845863b4.css',
           'chunks/index.es-99e9c10a.js',
           'chunks/index-16ec1060.js',
           'assets/index-2df4dd7a.css',
@@ -646,230 +647,241 @@ function Y(s) {
         ['chunks/docs-97e25811.js', 'chunks/index-83a5d9f9.js']
       );
     default:
-      return new Promise(function (i, _) {
+      return new Promise(function (s, _) {
         (typeof queueMicrotask == 'function'
           ? queueMicrotask
-          : setTimeout)(_.bind(null, new Error('Unknown variable dynamic import: ' + s)));
+          : setTimeout)(_.bind(null, new Error('Unknown variable dynamic import: ' + t)));
       });
   }
 }
-function Z(s) {
-  let i,
+function te(t) {
+  let s,
     _,
     o,
-    c = s[0].title + '',
-    n,
-    d,
-    t,
+    n = t[0].title + '',
+    c,
+    v,
     a,
-    m,
-    v;
+    u,
+    i,
+    p;
   return (
-    (a = new W({ props: { fw: !0, icon: C.faCode } })),
+    (u = new Z({ props: { fw: !0, icon: q.faCode } })),
     {
       c() {
-        (i = O('div')),
-          (_ = k('> ')),
-          (o = O('span')),
-          (n = k(c)),
-          (d = V()),
-          (t = O('a')),
-          b(a.$$.fragment),
+        (s = x('div')),
+          (_ = M('> ')),
+          (o = x('span')),
+          (c = M(n)),
+          (v = O()),
+          (a = x('a')),
+          b(u.$$.fragment),
           this.h();
       },
       l(l) {
-        i = g(l, 'DIV', { class: !0 });
-        var e = x(i);
-        (_ = N(e, '> ')), (o = g(e, 'SPAN', { class: !0 }));
-        var u = x(o);
-        (n = N(u, c)),
-          u.forEach(E),
-          (d = h(e)),
-          (t = g(e, 'A', { href: !0, target: !0, title: !0, class: !0 }));
-        var p = x(t);
-        T(a.$$.fragment, p), p.forEach(E), e.forEach(E), this.h();
+        s = w(l, 'DIV', { class: !0 });
+        var m = S(s);
+        (_ = C(m, '> ')), (o = w(m, 'SPAN', { class: !0 }));
+        var T = S(o);
+        (c = C(T, n)),
+          T.forEach(f),
+          (v = h(m)),
+          (a = w(m, 'A', { href: !0, target: !0, title: !0, class: !0 }));
+        var e = S(a);
+        R(u.$$.fragment, e), e.forEach(f), m.forEach(f), this.h();
       },
       h() {
-        f(o, 'class', 'svelte-1o0o1ns'),
-          f(
-            t,
+        E(o, 'class', 'svelte-1o0o1ns'),
+          E(
+            a,
             'href',
-            (m = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${s[0].path}/index.svelte`)
+            (i = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${t[0].path}/index.svelte`)
           ),
-          f(t, 'target', '_blank'),
-          f(t, 'title', 'Source code'),
-          f(t, 'class', 'svelte-1o0o1ns'),
-          f(i, 'class', 'breadcrumb font-display svelte-1o0o1ns');
+          E(a, 'target', '_blank'),
+          E(a, 'title', 'Source code'),
+          E(a, 'class', 'svelte-1o0o1ns'),
+          E(s, 'class', 'breadcrumb font-display svelte-1o0o1ns');
       },
-      m(l, e) {
-        A(l, i, e),
-          $(i, _),
-          $(i, o),
-          $(o, n),
-          $(i, d),
-          $(i, t),
-          D(a, t, null),
-          (v = !0);
+      m(l, m) {
+        A(l, s, m),
+          V(s, _),
+          V(s, o),
+          V(o, c),
+          V(s, v),
+          V(s, a),
+          $(u, a, null),
+          (p = !0);
       },
-      p(l, e) {
-        (!v || e & 1) && c !== (c = l[0].title + '') && j(n, c),
-          (!v ||
-            (e & 1 &&
-              m !==
-                (m = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${l[0].path}/index.svelte`))) &&
-            f(t, 'href', m);
+      p(l, m) {
+        (!p || m & 1) && n !== (n = l[0].title + '') && J(c, n),
+          (!p ||
+            (m & 1 &&
+              i !==
+                (i = `https://github.com/reuters-graphics/graphics-svelte-components/tree/master/src/lib/${l[0].path}/index.svelte`))) &&
+            E(a, 'href', i);
       },
       i(l) {
-        v || (P(a.$$.fragment, l), (v = !0));
+        p || (L(u.$$.fragment, l), (p = !0));
       },
       o(l) {
-        L(a.$$.fragment, l), (v = !1);
+        D(u.$$.fragment, l), (p = !1);
       },
       d(l) {
-        l && E(i), R(a);
+        l && f(s), P(u);
       },
     }
   );
 }
-function ee(s) {
-  let i, _, o, c, n, d, t, a, m;
-  (i = new J({
+function se(t) {
+  let s, _, o, n, c, v, a, u, i, p, l;
+  (s = new Q({
     props: {
-      seoTitle: `Reuters Graphics components - ${s[0].title}`,
-      seoDescription: s[0].description,
-      shareTitle: `Reuters Graphics components - ${s[0].title}`,
-      shareDescription: s[0].description,
+      seoTitle: `Reuters Graphics components - ${t[0].title}`,
+      seoDescription: t[0].description,
+      shareTitle: `Reuters Graphics components - ${t[0].title}`,
+      shareDescription: t[0].description,
       shareImgPath: 'images/reuters-graphics.jpg',
       lang: 'en',
       hostname: 'reuters-graphics.github.io',
     },
   })),
-    (o = new K({ props: { $$slots: { default: [Z] }, $$scope: { ctx: s } } })),
-    (n = new Q({ props: { components: M } }));
-  var v = s[1];
-  function l(e) {
+    (o = new W({})),
+    (c = new X({ props: { $$slots: { default: [te] }, $$scope: { ctx: t } } })),
+    (a = new Y({ props: { components: F } }));
+  var m = t[1];
+  function T(e) {
     return {};
   }
   return (
-    v && (t = new v(l())),
+    m && (i = new m(T())),
     {
       c() {
-        b(i.$$.fragment),
-          (_ = V()),
+        b(s.$$.fragment),
+          (_ = O()),
           b(o.$$.fragment),
-          (c = V()),
-          b(n.$$.fragment),
-          (d = V()),
-          t && b(t.$$.fragment),
-          (a = y());
+          (n = O()),
+          b(c.$$.fragment),
+          (v = O()),
+          b(a.$$.fragment),
+          (u = O()),
+          i && b(i.$$.fragment),
+          (p = N());
       },
       l(e) {
-        T(i.$$.fragment, e),
+        R(s.$$.fragment, e),
           (_ = h(e)),
-          T(o.$$.fragment, e),
-          (c = h(e)),
-          T(n.$$.fragment, e),
-          (d = h(e)),
-          t && T(t.$$.fragment, e),
-          (a = y());
+          R(o.$$.fragment, e),
+          (n = h(e)),
+          R(c.$$.fragment, e),
+          (v = h(e)),
+          R(a.$$.fragment, e),
+          (u = h(e)),
+          i && R(i.$$.fragment, e),
+          (p = N());
       },
-      m(e, u) {
-        D(i, e, u),
-          A(e, _, u),
-          D(o, e, u),
-          A(e, c, u),
-          D(n, e, u),
-          A(e, d, u),
-          t && D(t, e, u),
-          A(e, a, u),
-          (m = !0);
+      m(e, d) {
+        $(s, e, d),
+          A(e, _, d),
+          $(o, e, d),
+          A(e, n, d),
+          $(c, e, d),
+          A(e, v, d),
+          $(a, e, d),
+          A(e, u, d),
+          i && $(i, e, d),
+          A(e, p, d),
+          (l = !0);
       },
-      p(e, [u]) {
-        const p = {};
-        u & 1 && (p.seoTitle = `Reuters Graphics components - ${e[0].title}`),
-          u & 1 && (p.seoDescription = e[0].description),
-          u & 1 &&
-            (p.shareTitle = `Reuters Graphics components - ${e[0].title}`),
-          u & 1 && (p.shareDescription = e[0].description),
-          i.$set(p);
-        const w = {};
+      p(e, [d]) {
+        const I = {};
+        d & 1 && (I.seoTitle = `Reuters Graphics components - ${e[0].title}`),
+          d & 1 && (I.seoDescription = e[0].description),
+          d & 1 &&
+            (I.shareTitle = `Reuters Graphics components - ${e[0].title}`),
+          d & 1 && (I.shareDescription = e[0].description),
+          s.$set(I);
+        const y = {};
         if (
-          (u & 5 && (w.$$scope = { dirty: u, ctx: e }),
-          o.$set(w),
-          v !== (v = e[1]))
+          (d & 5 && (y.$$scope = { dirty: d, ctx: e }),
+          c.$set(y),
+          m !== (m = e[1]))
         ) {
-          if (t) {
-            z();
-            const S = t;
-            L(S.$$.fragment, 1, 0, () => {
-              R(S, 1);
+          if (i) {
+            K();
+            const k = i;
+            D(k.$$.fragment, 1, 0, () => {
+              P(k, 1);
             }),
-              H();
+              U();
           }
-          v
-            ? ((t = new v(l())),
-              b(t.$$.fragment),
-              P(t.$$.fragment, 1),
-              D(t, a.parentNode, a))
-            : (t = null);
+          m
+            ? ((i = new m(T())),
+              b(i.$$.fragment),
+              L(i.$$.fragment, 1),
+              $(i, p.parentNode, p))
+            : (i = null);
         }
       },
       i(e) {
-        m ||
-          (P(i.$$.fragment, e),
-          P(o.$$.fragment, e),
-          P(n.$$.fragment, e),
-          t && P(t.$$.fragment, e),
-          (m = !0));
+        l ||
+          (L(s.$$.fragment, e),
+          L(o.$$.fragment, e),
+          L(c.$$.fragment, e),
+          L(a.$$.fragment, e),
+          i && L(i.$$.fragment, e),
+          (l = !0));
       },
       o(e) {
-        L(i.$$.fragment, e),
-          L(o.$$.fragment, e),
-          L(n.$$.fragment, e),
-          t && L(t.$$.fragment, e),
-          (m = !1);
+        D(s.$$.fragment, e),
+          D(o.$$.fragment, e),
+          D(c.$$.fragment, e),
+          D(a.$$.fragment, e),
+          i && D(i.$$.fragment, e),
+          (l = !1);
       },
       d(e) {
-        R(i, e),
-          e && E(_),
-          R(o, e),
-          e && E(c),
-          R(n, e),
-          e && E(d),
-          e && E(a),
-          t && R(t, e);
+        P(s, e),
+          e && f(_),
+          P(o, e),
+          e && f(n),
+          P(c, e),
+          e && f(v),
+          P(a, e),
+          e && f(u),
+          e && f(p),
+          i && P(i, e);
       },
     }
   );
 }
-function ae(i) {
-  return I(this, arguments, function* ({ params: s }) {
-    return { props: { metadata: M.find((o) => o.slug === s.slug) } };
+function ue(s) {
+  return g(this, arguments, function* ({ params: t }) {
+    return { props: { metadata: F.find((o) => o.slug === t.slug) } };
   });
 }
-function re(s, i, _) {
-  let { metadata: o } = i,
-    c;
+function ie(t, s, _) {
+  let { metadata: o } = s,
+    n;
   return (
-    G(() =>
-      I(this, null, function* () {
-        _(1, (c = (yield Y(`../../src/lib/${o.path}/docs.svx`)).default));
+    j(() =>
+      g(this, null, function* () {
+        _(1, (n = (yield re(`../../src/lib/${o.path}/docs.svx`)).default));
       })
     ),
-    U(() =>
-      I(this, null, function* () {
-        _(1, (c = (yield X(`../../src/lib/${o.path}/docs.svx`)).default));
+    z(() =>
+      g(this, null, function* () {
+        _(1, (n = (yield ee(`../../src/lib/${o.path}/docs.svx`)).default));
       })
     ),
-    (s.$$set = (n) => {
-      'metadata' in n && _(0, (o = n.metadata));
+    (t.$$set = (c) => {
+      'metadata' in c && _(0, (o = c.metadata));
     }),
-    [o, c]
+    [o, n]
   );
 }
-class ce extends F {
-  constructor(i) {
-    super(), q(this, i, re, ee, B, { metadata: 0 });
+class le extends B {
+  constructor(s) {
+    super(), H(this, s, ie, se, G, { metadata: 0 });
   }
 }
-export { ce as default, ae as load };
+export { le as default, ue as load };

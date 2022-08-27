@@ -508,22 +508,22 @@ class Tokenizer {
         d,
         y,
         w,
-        _,
+        b,
         m,
         g,
         p,
         c = r[1].trim();
-      const b = c.length > 1,
+      const _ = c.length > 1,
         l = {
           type: 'list',
           raw: '',
-          ordered: b,
-          start: b ? +c.slice(0, -1) : '',
+          ordered: _,
+          start: _ ? +c.slice(0, -1) : '',
           loose: !1,
           items: [],
         };
-      (c = b ? `\\d{1,9}\\${c.slice(-1)}` : `\\${c}`),
-        this.options.pedantic && (c = b ? c : '[*+-]');
+      (c = _ ? `\\d{1,9}\\${c.slice(-1)}` : `\\${c}`),
+        this.options.pedantic && (c = _ ? c : '[*+-]');
       const a = new RegExp(`^( {0,3}${c})((?: [^\\n]*)?(?:\\n|$))`);
       for (
         ;
@@ -538,7 +538,7 @@ class Tokenizer {
 `,
             1
           )[0]),
-          (_ = t.split(
+          (b = t.split(
             `
 `,
             1
@@ -551,12 +551,12 @@ class Tokenizer {
               (o += r[1].length)),
           (d = !1),
           !w &&
-            /^ *$/.test(_) &&
+            /^ *$/.test(b) &&
             ((i +=
-              _ +
+              b +
               `
 `),
-            (t = t.substring(_.length + 1)),
+            (t = t.substring(b.length + 1)),
             (p = !0)),
           !p)
         ) {
@@ -840,13 +840,13 @@ class Tokenizer {
         d,
         y = o,
         w = 0;
-      const _ =
+      const b =
         s[0][0] === '*'
           ? this.rules.inline.emStrong.rDelimAst
           : this.rules.inline.emStrong.rDelimUnd;
       for (
-        _.lastIndex = 0, r = r.slice(-1 * t.length + o);
-        (s = _.exec(r)) != null;
+        b.lastIndex = 0, r = r.slice(-1 * t.length + o);
+        (s = b.exec(r)) != null;
 
       ) {
         if (((u = s[1] || s[2] || s[3] || s[4] || s[5] || s[6]), !u)) continue;
@@ -1501,10 +1501,10 @@ class Lexer {
           this.options.extensions && this.options.extensions.startInline)
         ) {
           let w = 1 / 0;
-          const _ = t.slice(1);
+          const b = t.slice(1);
           let m;
           this.options.extensions.startInline.forEach(function (g) {
-            (m = g.call({ lexer: this }, _)),
+            (m = g.call({ lexer: this }, b)),
               typeof m == 'number' && m >= 0 && (w = Math.min(w, m));
           }),
             w < 1 / 0 && w >= 0 && (n = t.substring(0, w + 1));
@@ -1799,12 +1799,12 @@ class Parser {
       d,
       y,
       w,
-      _,
+      b,
       m,
       g,
       p,
       c,
-      b,
+      _,
       l,
       a,
       h,
@@ -1860,13 +1860,13 @@ class Parser {
           continue;
         }
         case 'table': {
-          for (_ = '', w = '', u = g.header.length, n = 0; n < u; n++)
+          for (b = '', w = '', u = g.header.length, n = 0; n < u; n++)
             w += this.renderer.tablecell(this.parseInline(g.header[n].tokens), {
               header: !0,
               align: g.align[n],
             });
           for (
-            _ += this.renderer.tablerow(w), m = '', u = g.rows.length, n = 0;
+            b += this.renderer.tablerow(w), m = '', u = g.rows.length, n = 0;
             n < u;
             n++
           ) {
@@ -1877,7 +1877,7 @@ class Parser {
               });
             m += this.renderer.tablerow(w);
           }
-          i += this.renderer.table(_, m);
+          i += this.renderer.table(b, m);
           continue;
         }
         case 'blockquote': {
@@ -1888,7 +1888,7 @@ class Parser {
           for (
             p = g.ordered,
               c = g.start,
-              b = g.loose,
+              _ = g.loose,
               u = g.items.length,
               m = '',
               n = 0;
@@ -1901,7 +1901,7 @@ class Parser {
               (l = ''),
               a.task &&
                 ((v = this.renderer.checkbox(h)),
-                b
+                _
                   ? a.tokens.length > 0 && a.tokens[0].type === 'paragraph'
                     ? ((a.tokens[0].text = v + ' ' + a.tokens[0].text),
                       a.tokens[0].tokens &&
@@ -1911,7 +1911,7 @@ class Parser {
                           v + ' ' + a.tokens[0].tokens[0].text))
                     : a.tokens.unshift({ type: 'text', text: v })
                   : (l += v)),
-              (l += this.parse(a.tokens, b)),
+              (l += this.parse(a.tokens, _)),
               (m += this.renderer.listitem(l, f, h));
           i += this.renderer.list(m, p, c);
           continue;
@@ -2259,7 +2259,7 @@ function getStyles(e, t, r, i) {
     d,
     y,
     w = '-.125em';
-  const _ = 'visible';
+  const b = 'visible';
   return (
     i && ((y = 'center'), (n = '1.25em')),
     r && (s = r),
@@ -2281,7 +2281,7 @@ function getStyles(e, t, r, i) {
         'text-align': y,
         'vertical-align': w,
         'transform-origin': 'center',
-        overflow: _,
+        overflow: b,
       }),
       e,
     ])
@@ -2310,8 +2310,8 @@ function getTransform(e, t, r, i, s, n = 1, o = '', u = '') {
 var fa_svelte_svelte_type_style_lang = '';
 function create_if_block$1(e) {
   let t, r, i, s, n, o, u;
-  function d(_, m) {
-    return typeof _[7][4] == 'string' ? create_if_block_1$1 : create_else_block;
+  function d(b, m) {
+    return typeof b[7][4] == 'string' ? create_if_block_1$1 : create_else_block;
   }
   let y = d(e),
     w = y(e);
@@ -2323,8 +2323,8 @@ function create_if_block$1(e) {
         w.c(),
         this.h();
     },
-    l(_) {
-      t = claim_svg_element(_, 'svg', {
+    l(b) {
+      t = claim_svg_element(b, 'svg', {
         id: !0,
         class: !0,
         style: !0,
@@ -2352,34 +2352,34 @@ function create_if_block$1(e) {
         attr(t, 'role', 'img'),
         attr(t, 'xmlns', 'http://www.w3.org/2000/svg');
     },
-    m(_, m) {
-      insert_hydration(_, t, m),
+    m(b, m) {
+      insert_hydration(b, t, m),
         append_hydration(t, r),
         append_hydration(r, i),
         w.m(i, null);
     },
-    p(_, m) {
-      y === (y = d(_)) && w
-        ? w.p(_, m)
-        : (w.d(1), (w = y(_)), w && (w.c(), w.m(i, null))),
-        m & 1024 && attr(i, 'transform', _[10]),
+    p(b, m) {
+      y === (y = d(b)) && w
+        ? w.p(b, m)
+        : (w.d(1), (w = y(b)), w && (w.c(), w.m(i, null))),
+        m & 1024 && attr(i, 'transform', b[10]),
         m & 128 &&
-          s !== (s = `translate(${_[7][0] / 2} ${_[7][1] / 2})`) &&
+          s !== (s = `translate(${b[7][0] / 2} ${b[7][1] / 2})`) &&
           attr(r, 'transform', s),
         m & 128 &&
-          n !== (n = `${_[7][0] / 4} 0`) &&
+          n !== (n = `${b[7][0] / 4} 0`) &&
           attr(r, 'transform-origin', n),
-        m & 1 && attr(t, 'id', _[0]),
+        m & 1 && attr(t, 'id', b[0]),
         m & 256 &&
-          o !== (o = null_to_empty(_[8]) + ' svelte-1w3t65e') &&
+          o !== (o = null_to_empty(b[8]) + ' svelte-1w3t65e') &&
           attr(t, 'class', o),
-        m & 512 && attr(t, 'style', _[9]),
+        m & 512 && attr(t, 'style', b[9]),
         m & 128 &&
-          u !== (u = `0 0 ${_[7][0]} ${_[7][1]}`) &&
+          u !== (u = `0 0 ${b[7][0]} ${b[7][1]}`) &&
           attr(t, 'viewBox', u);
     },
-    d(_) {
-      _ && detach(t), w.d();
+    d(b) {
+      b && detach(t), w.d();
     },
   };
 }
@@ -2389,15 +2389,15 @@ function create_else_block(e) {
     c() {
       (t = svg_element('path')), (o = svg_element('path')), this.h();
     },
-    l(_) {
-      (t = claim_svg_element(_, 'path', {
+    l(b) {
+      (t = claim_svg_element(b, 'path', {
         d: !0,
         fill: !0,
         'fill-opacity': !0,
         transform: !0,
       })),
         children(t).forEach(detach),
-        (o = claim_svg_element(_, 'path', {
+        (o = claim_svg_element(b, 'path', {
           d: !0,
           fill: !0,
           'fill-opacity': !0,
@@ -2424,33 +2424,33 @@ function create_else_block(e) {
           (w = `translate(${e[7][0] / -2} ${e[7][1] / -2})`)
         );
     },
-    m(_, m) {
-      insert_hydration(_, t, m), insert_hydration(_, o, m);
+    m(b, m) {
+      insert_hydration(b, t, m), insert_hydration(b, o, m);
     },
-    p(_, m) {
-      m & 128 && r !== (r = _[7][4][0]) && attr(t, 'd', r),
+    p(b, m) {
+      m & 128 && r !== (r = b[7][4][0]) && attr(t, 'd', r),
         m & 10 &&
-          i !== (i = _[3] || _[1] || 'currentColor') &&
+          i !== (i = b[3] || b[1] || 'currentColor') &&
           attr(t, 'fill', i),
         m & 112 &&
-          s !== (s = _[6] != !1 ? _[4] : _[5]) &&
+          s !== (s = b[6] != !1 ? b[4] : b[5]) &&
           attr(t, 'fill-opacity', s),
         m & 128 &&
-          n !== (n = `translate(${_[7][0] / -2} ${_[7][1] / -2})`) &&
+          n !== (n = `translate(${b[7][0] / -2} ${b[7][1] / -2})`) &&
           attr(t, 'transform', n),
-        m & 128 && u !== (u = _[7][4][1]) && attr(o, 'd', u),
+        m & 128 && u !== (u = b[7][4][1]) && attr(o, 'd', u),
         m & 6 &&
-          d !== (d = _[2] || _[1] || 'currentColor') &&
+          d !== (d = b[2] || b[1] || 'currentColor') &&
           attr(o, 'fill', d),
         m & 112 &&
-          y !== (y = _[6] != !1 ? _[5] : _[4]) &&
+          y !== (y = b[6] != !1 ? b[5] : b[4]) &&
           attr(o, 'fill-opacity', y),
         m & 128 &&
-          w !== (w = `translate(${_[7][0] / -2} ${_[7][1] / -2})`) &&
+          w !== (w = `translate(${b[7][0] / -2} ${b[7][1] / -2})`) &&
           attr(o, 'transform', w);
     },
-    d(_) {
-      _ && detach(t), _ && detach(o);
+    d(b) {
+      b && detach(t), b && detach(o);
     },
   };
 }
@@ -2491,7 +2491,7 @@ function create_if_block_1$1(e) {
     },
   };
 }
-function create_fragment$4(e) {
+function create_fragment$5(e) {
   let t,
     r = e[7][4] && create_if_block$1(e);
   return {
@@ -2527,12 +2527,12 @@ function instance$4(e, t, r) {
     { color: d = '' } = t,
     { fw: y = !1 } = t,
     { pull: w = '' } = t,
-    { scale: _ = 1 } = t,
+    { scale: b = 1 } = t,
     { translateX: m = 0 } = t,
     { translateY: g = 0 } = t,
     { rotate: p = '' } = t,
     { flip: c = !1 } = t,
-    { spin: b = !1 } = t,
+    { spin: _ = !1 } = t,
     { pulse: l = !1 } = t,
     { primaryColor: a = '' } = t,
     { secondaryColor: h = '' } = t,
@@ -2553,12 +2553,12 @@ function instance$4(e, t, r) {
         'color' in A && r(1, (d = A.color)),
         'fw' in A && r(15, (y = A.fw)),
         'pull' in A && r(16, (w = A.pull)),
-        'scale' in A && r(17, (_ = A.scale)),
+        'scale' in A && r(17, (b = A.scale)),
         'translateX' in A && r(18, (m = A.translateX)),
         'translateY' in A && r(19, (g = A.translateY)),
         'rotate' in A && r(20, (p = A.rotate)),
         'flip' in A && r(21, (c = A.flip)),
-        'spin' in A && r(22, (b = A.spin)),
+        'spin' in A && r(22, (_ = A.spin)),
         'pulse' in A && r(23, (l = A.pulse)),
         'primaryColor' in A && r(2, (a = A.primaryColor)),
         'secondaryColor' in A && r(3, (h = A.secondaryColor)),
@@ -2569,17 +2569,17 @@ function instance$4(e, t, r) {
     (e.$$.update = () => {
       e.$$.dirty & 8192 && r(7, (x = (o && o.icon) || [0, 0, '', [], ''])),
         e.$$.dirty & 12584960 &&
-          r(8, (C = joinCss([i, 'svelte-fa', b && 'spin', l && 'pulse'], ' '))),
+          r(8, (C = joinCss([i, 'svelte-fa', _ && 'spin', l && 'pulse'], ' '))),
         e.$$.dirty & 118784 && r(9, (R = getStyles(n, u, w, y))),
-        e.$$.dirty & 4063232 && r(10, (I = getTransform(_, m, g, p, c, 512)));
+        e.$$.dirty & 4063232 && r(10, (I = getTransform(b, m, g, p, c, 512)));
     }),
-    [s, d, a, h, f, v, k, x, C, R, I, i, n, o, u, y, w, _, m, g, p, c, b, l]
+    [s, d, a, h, f, v, k, x, C, R, I, i, n, o, u, y, w, b, m, g, p, c, _, l]
   );
 }
 class Fa extends SvelteComponent {
   constructor(t) {
     super(),
-      init(this, t, instance$4, create_fragment$4, safe_not_equal, {
+      init(this, t, instance$4, create_fragment$5, safe_not_equal, {
         class: 11,
         id: 0,
         style: 12,
@@ -2604,7 +2604,7 @@ class Fa extends SvelteComponent {
   }
 }
 var Fa$1 = Fa,
-  index_svelte_svelte_type_style_lang$m = '',
+  index_svelte_svelte_type_style_lang$n = '',
   commonjsGlobal =
     typeof globalThis != 'undefined'
       ? globalThis
@@ -2663,7 +2663,7 @@ var Fa$1 = Fa,
         },
       w = function (m, g, p) {
         var c,
-          b,
+          _,
           l,
           a = null,
           h = 0;
@@ -2671,8 +2671,8 @@ var Fa$1 = Fa,
         var f = function () {
           (h = p.leading === !1 ? 0 : y()),
             (a = null),
-            (l = m.apply(c, b)),
-            a || (c = b = null);
+            (l = m.apply(c, _)),
+            a || (c = _ = null);
         };
         return function () {
           var v = y();
@@ -2680,18 +2680,18 @@ var Fa$1 = Fa,
           var k = g - (v - h);
           return (
             (c = this),
-            (b = arguments),
+            (_ = arguments),
             k <= 0 || k > g
               ? (a && (clearTimeout(a), (a = null)),
                 (h = v),
-                (l = m.apply(c, b)),
-                a || (c = b = null))
+                (l = m.apply(c, _)),
+                a || (c = _ = null))
               : !a && p.trailing !== !1 && (a = setTimeout(f, k)),
             l
           );
         };
       },
-      _ = function () {
+      b = function () {
         for (var m = r.autoInitInstances.length, g = m - 1; g >= 0; g--) {
           var p = r.autoInitInstances[g];
           (p.el.getElementsByTagName('iframe').length &&
@@ -2706,14 +2706,14 @@ var Fa$1 = Fa,
             '[data-pym-src]:not([data-pym-auto-initialized])'
           ),
           p = g.length;
-        _();
+        b();
         for (var c = 0; c < p; ++c) {
-          var b = g[c];
-          b.setAttribute('data-pym-auto-initialized', ''),
-            b.id === '' &&
-              (b.id =
+          var _ = g[c];
+          _.setAttribute('data-pym-auto-initialized', ''),
+            _.id === '' &&
+              (_.id =
                 'pym-' + c + '-' + Math.random().toString(36).substr(2, 5));
-          var l = b.getAttribute('data-pym-src'),
+          var l = _.getAttribute('data-pym-src'),
             a = {
               xdomain: 'string',
               title: 'string',
@@ -2729,22 +2729,22 @@ var Fa$1 = Fa,
             },
             h = {};
           for (var f in a)
-            if (b.getAttribute('data-pym-' + f) !== null)
+            if (_.getAttribute('data-pym-' + f) !== null)
               switch (a[f]) {
                 case 'boolean':
-                  h[f] = b.getAttribute('data-pym-' + f) !== 'false';
+                  h[f] = _.getAttribute('data-pym-' + f) !== 'false';
                   break;
                 case 'string':
-                  h[f] = b.getAttribute('data-pym-' + f);
+                  h[f] = _.getAttribute('data-pym-' + f);
                   break;
                 case 'number':
-                  var v = Number(b.getAttribute('data-pym-' + f));
+                  var v = Number(_.getAttribute('data-pym-' + f));
                   isNaN(v) || (h[f] = v);
                   break;
                 default:
                   console.err('unrecognized attribute type');
               }
-          var k = new r.Parent(b.id, l, h);
+          var k = new r.Parent(_.id, l, h);
           r.autoInitInstances.push(k);
         }
         return m || i('pym-initialized'), r.autoInitInstances;
@@ -2766,7 +2766,7 @@ var Fa$1 = Fa,
           (this.messageHandlers = {}),
           (p = p || {}),
           (this._constructIframe = function () {
-            var b = this.el.offsetWidth.toString();
+            var _ = this.el.offsetWidth.toString();
             this.iframe = document.createElement('iframe');
             var l = '',
               a = this.url.indexOf('#');
@@ -2778,7 +2778,7 @@ var Fa$1 = Fa,
                   ? (this.url += '?')
                   : (this.url += '&'),
                 this.iframe.src =
-                  this.url + 'initialWidth=' + b + '&childId=' + this.id,
+                  this.url + 'initialWidth=' + _ + '&childId=' + this.id,
                 this.settings.optionalparams &&
                   ((this.iframe.src +=
                     '&parentTitle=' + encodeURIComponent(document.title)),
@@ -2821,63 +2821,63 @@ var Fa$1 = Fa,
           (this._onScroll = function () {
             this.sendViewportAndIFramePosition();
           }.bind(this)),
-          (this._fire = function (b, l) {
-            if (b in this.messageHandlers)
-              for (var a = 0; a < this.messageHandlers[b].length; a++)
-                this.messageHandlers[b][a].call(this, l);
+          (this._fire = function (_, l) {
+            if (_ in this.messageHandlers)
+              for (var a = 0; a < this.messageHandlers[_].length; a++)
+                this.messageHandlers[_][a].call(this, l);
           }),
           (this.remove = function () {
             window.removeEventListener('message', this._processMessage),
               window.removeEventListener('resize', this._onResize),
               this.el.removeChild(this.iframe),
-              _();
+              b();
           }),
-          (this._processMessage = function (b) {
-            if (!!n(b, this.settings) && typeof b.data == 'string') {
-              var l = b.data.match(this.messageRegex);
+          (this._processMessage = function (_) {
+            if (!!n(_, this.settings) && typeof _.data == 'string') {
+              var l = _.data.match(this.messageRegex);
               if (!l || l.length !== 3) return !1;
               var a = l[1],
                 h = l[2];
               this._fire(a, h);
             }
           }.bind(this)),
-          (this._onHeightMessage = function (b) {
-            var l = parseInt(b);
+          (this._onHeightMessage = function (_) {
+            var l = parseInt(_);
             this.iframe.setAttribute('height', l + 'px');
           }),
-          (this._onNavigateToMessage = function (b) {
-            !o(b) || (document.location.href = b);
+          (this._onNavigateToMessage = function (_) {
+            !o(_) || (document.location.href = _);
           }),
-          (this._onScrollToChildPosMessage = function (b) {
+          (this._onScrollToChildPosMessage = function (_) {
             var l =
                 document.getElementById(this.id).getBoundingClientRect().top +
                 window.pageYOffset,
-              a = l + parseInt(b);
+              a = l + parseInt(_);
             window.scrollTo(0, a);
           }),
-          (this.onMessage = function (b, l) {
-            b in this.messageHandlers || (this.messageHandlers[b] = []),
-              this.messageHandlers[b].push(l);
+          (this.onMessage = function (_, l) {
+            _ in this.messageHandlers || (this.messageHandlers[_] = []),
+              this.messageHandlers[_].push(l);
           }),
-          (this.sendMessage = function (b, l) {
+          (this.sendMessage = function (_, l) {
             this.el.getElementsByTagName('iframe').length &&
               (this.el.getElementsByTagName('iframe')[0].contentWindow
                 ? this.el
                     .getElementsByTagName('iframe')[0]
-                    .contentWindow.postMessage(u(this.id, b, l), '*')
+                    .contentWindow.postMessage(u(this.id, _, l), '*')
                 : this.remove());
           }),
           (this.sendWidth = function () {
-            var b = this.el.offsetWidth.toString();
-            this.sendMessage('width', b);
+            var _ = this.el.offsetWidth.toString();
+            this.sendMessage('width', _);
           }),
           (this.sendViewportAndIFramePosition = function () {
-            var b = this.iframe.getBoundingClientRect(),
+            var _ = this.iframe.getBoundingClientRect(),
               l = window.innerWidth || document.documentElement.clientWidth,
               a = window.innerHeight || document.documentElement.clientHeight,
               h = l + ' ' + a;
-            (h += ' ' + b.top + ' ' + b.left),
-              (h += ' ' + b.bottom + ' ' + b.right),
+            (h += ' ' + _.top + ' ' + _.left),
+              (h += ' ' + _.bottom + ' ' + _.right),
               this.sendMessage('viewport-iframe-position', h);
           });
         for (var c in p) this.settings[c] = p[c];
@@ -2913,18 +2913,18 @@ var Fa$1 = Fa,
           (this.messageRegex = null),
           (this.messageHandlers = {}),
           (m = m || {}),
-          (this.onMessage = function (b, l) {
-            b in this.messageHandlers || (this.messageHandlers[b] = []),
-              this.messageHandlers[b].push(l);
+          (this.onMessage = function (_, l) {
+            _ in this.messageHandlers || (this.messageHandlers[_] = []),
+              this.messageHandlers[_].push(l);
           }),
-          (this._fire = function (b, l) {
-            if (b in this.messageHandlers)
-              for (var a = 0; a < this.messageHandlers[b].length; a++)
-                this.messageHandlers[b][a].call(this, l);
+          (this._fire = function (_, l) {
+            if (_ in this.messageHandlers)
+              for (var a = 0; a < this.messageHandlers[_].length; a++)
+                this.messageHandlers[_][a].call(this, l);
           }),
-          (this._processMessage = function (b) {
-            if (!!n(b, this.settings) && typeof b.data == 'string') {
-              var l = b.data.match(this.messageRegex);
+          (this._processMessage = function (_) {
+            if (!!n(_, this.settings) && typeof _.data == 'string') {
+              var l = _.data.match(this.messageRegex);
               if (!(!l || l.length !== 3)) {
                 var a = l[1],
                   h = l[2];
@@ -2932,41 +2932,41 @@ var Fa$1 = Fa,
               }
             }
           }.bind(this)),
-          (this._onWidthMessage = function (b) {
-            var l = parseInt(b);
+          (this._onWidthMessage = function (_) {
+            var l = parseInt(_);
             l !== this.parentWidth &&
               ((this.parentWidth = l),
               this.settings.renderCallback && this.settings.renderCallback(l),
               this.sendHeight());
           }),
-          (this.sendMessage = function (b, l) {
-            window.parent.postMessage(u(this.id, b, l), '*');
+          (this.sendMessage = function (_, l) {
+            window.parent.postMessage(u(this.id, _, l), '*');
           }),
           (this.sendHeight = function () {
-            var b = document
+            var _ = document
               .getElementsByTagName('body')[0]
               .offsetHeight.toString();
-            return this.sendMessage('height', b), b;
+            return this.sendMessage('height', _), _;
           }.bind(this)),
           (this.getParentPositionInfo = function () {
             this.sendMessage('parentPositionInfo');
           }),
-          (this.scrollParentTo = function (b) {
-            this.sendMessage('navigateTo', '#' + b);
+          (this.scrollParentTo = function (_) {
+            this.sendMessage('navigateTo', '#' + _);
           }),
-          (this.navigateParentTo = function (b) {
-            this.sendMessage('navigateTo', b);
+          (this.navigateParentTo = function (_) {
+            this.sendMessage('navigateTo', _);
           }),
-          (this.scrollParentToChildEl = function (b) {
+          (this.scrollParentToChildEl = function (_) {
             var l =
-              document.getElementById(b).getBoundingClientRect().top +
+              document.getElementById(_).getBoundingClientRect().top +
               window.pageYOffset;
             this.scrollParentToChildPos(l);
           }),
-          (this.scrollParentToChildPos = function (b) {
-            this.sendMessage('scrollToChildPos', b.toString());
+          (this.scrollParentToChildPos = function (_) {
+            this.sendMessage('scrollToChildPos', _.toString());
           });
-        var g = function (b) {
+        var g = function (_) {
           var l = document.getElementsByTagName('html')[0],
             a,
             h = l.className;
@@ -2979,7 +2979,7 @@ var Fa$1 = Fa,
           }
           h.indexOf(a) < 0 &&
             ((l.className = h ? h + ' ' + a : a),
-            b && b(a),
+            _ && _(a),
             i('marked-embedded'));
         };
         this.remove = function () {
@@ -3209,11 +3209,11 @@ var decodeUriComponent = function (e) {
   function w(l, a) {
     return a.decode ? r(l) : l;
   }
-  function _(l) {
+  function b(l) {
     return Array.isArray(l)
       ? l.sort()
       : typeof l == 'object'
-      ? _(Object.keys(l))
+      ? b(Object.keys(l))
           .sort((a, h) => Number(a) - Number(h))
           .map((a) => l[a])
       : l;
@@ -3246,7 +3246,7 @@ var decodeUriComponent = function (e) {
       l
     );
   }
-  function b(l, a) {
+  function _(l, a) {
     (a = Object.assign(
       {
         decode: !0,
@@ -3289,14 +3289,14 @@ var decodeUriComponent = function (e) {
           const x = f[k];
           return (
             Boolean(x) && typeof x == 'object' && !Array.isArray(x)
-              ? (v[k] = _(x))
+              ? (v[k] = b(x))
               : (v[k] = x),
             v
           );
         }, Object.create(null));
   }
   (e.extract = p),
-    (e.parse = b),
+    (e.parse = _),
     (e.stringify = (l, a) => {
       if (!l) return '';
       (a = Object.assign(
@@ -3336,7 +3336,7 @@ var decodeUriComponent = function (e) {
       a = Object.assign({ decode: !0 }, a);
       const [h, f] = i(l, '#');
       return Object.assign(
-        { url: h.split('?')[0] || '', query: b(p(l), a) },
+        { url: h.split('?')[0] || '', query: _(p(l), a) },
         a && a.parseFragmentIdentifier && f
           ? { fragmentIdentifier: w(f, a) }
           : {}
@@ -3396,10 +3396,10 @@ const defaultUrlRegExp = /^(\w+:\/\/[^/?]+)?(.*?)(\?.+)?$/,
       { parts: n, hasLeading: o, hasTrailing: u } = i,
       { leadingSlash: d, trailingSlash: y } = t,
       w = d === !0 || (d === 'keep' && o),
-      _ = y === !0 || (y === 'keep' && u);
+      b = y === !0 || (y === 'keep' && u);
     let m = r;
     n.length > 0 && ((m || w) && (m += '/'), (m += n.join('/'))),
-      _ && (m += '/'),
+      b && (m += '/'),
       !m && w && (m += '/');
     const g = ue(ue({}, queryString.parse(s, t.queryOptions)), t.query),
       p = queryString.stringify(g, t.queryOptions);
@@ -3417,8 +3417,8 @@ const defaultUrlRegExp = /^(\w+:\/\/[^/?]+)?(.*?)(\?.+)?$/,
     const i = parseParts(e, r);
     return buildUrl(i, r);
   };
-var index_svelte_svelte_type_style_lang$l = '',
-  index_svelte_svelte_type_style_lang$k = '',
+var index_svelte_svelte_type_style_lang$m = '',
+  index_svelte_svelte_type_style_lang$l = '',
   classnames$1 = { exports: {} };
 /*!
   Copyright (c) 2018 Jed Watson.
@@ -3450,9 +3450,9 @@ var index_svelte_svelte_type_style_lang$l = '',
   })();
 })(classnames$1);
 var classnames = classnames$1.exports,
-  index_svelte_svelte_type_style_lang$j = '',
+  index_svelte_svelte_type_style_lang$k = '',
   Link_svelte_svelte_type_style_lang$1 = '',
-  index_svelte_svelte_type_style_lang$i = '';
+  index_svelte_svelte_type_style_lang$j = '';
 const name = '@reuters-graphics/graphics-svelte-components',
   version = '0.3.32',
   type = 'module',
@@ -3940,7 +3940,7 @@ var riveted = (function () {
       d,
       y,
       w,
-      _,
+      b,
       m,
       g,
       p;
@@ -3959,17 +3959,17 @@ var riveted = (function () {
         typeof A.userTimingHandler == 'function' && (d = A.userTimingHandler),
         'nonInteraction' in A &&
         (A.nonInteraction === !1 || A.nonInteraction === 'false')
-          ? (_ = !1)
-          : (_ = !0),
+          ? (b = !1)
+          : (b = !0),
         l(document, 'keydown', I),
         l(document, 'click', I),
-        l(window, 'mousemove', b(I, 500)),
-        l(window, 'scroll', b(I, 500)),
+        l(window, 'mousemove', _(I, 500)),
+        l(window, 'scroll', _(I, 500)),
         l(document, 'visibilitychange', h),
         l(document, 'webkitvisibilitychange', h),
         u(0);
     }
-    function b(A, V) {
+    function _(A, V) {
       var M,
         D,
         F,
@@ -4026,11 +4026,11 @@ var riveted = (function () {
               eventAction: 'Time Spent',
               eventLabel: A,
               eventValue: y,
-              eventNonInteraction: _,
+              eventNonInteraction: b,
             })
           : (m &&
               ga('send', 'event', 'Riveted', 'Time Spent', A.toString(), y, {
-                nonInteraction: _,
+                nonInteraction: b,
               }),
             g &&
               _gaq.push([
@@ -4039,7 +4039,7 @@ var riveted = (function () {
                 'Time Spent',
                 A.toString(),
                 y,
-                _,
+                b,
               ]));
       });
     function a() {
@@ -4102,7 +4102,7 @@ var riveted = (function () {
           e.enableServices();
       });
   };
-function create_fragment$3(e) {
+function create_fragment$4(e) {
   let t,
     r,
     i,
@@ -4113,12 +4113,12 @@ function create_fragment$3(e) {
     d,
     y,
     w,
-    _,
+    b,
     m,
     g,
     p,
     c,
-    b,
+    _,
     l,
     a,
     h,
@@ -4150,11 +4150,11 @@ function create_fragment$3(e) {
           (d = element('link')),
           (y = element('meta')),
           (w = element('meta')),
-          (_ = element('meta')),
+          (b = element('meta')),
           (m = element('meta')),
           (g = element('meta')),
           (c = element('meta')),
-          (b = element('meta')),
+          (_ = element('meta')),
           (l = element('meta')),
           (a = element('meta')),
           (h = element('meta')),
@@ -4201,7 +4201,7 @@ function create_fragment$3(e) {
           })),
           (y = claim_element(L, 'META', { property: !0, content: !0 })),
           (w = claim_element(L, 'META', { property: !0, content: !0 })),
-          (_ = claim_element(L, 'META', {
+          (b = claim_element(L, 'META', {
             property: !0,
             content: !0,
             itemprop: !0,
@@ -4217,7 +4217,7 @@ function create_fragment$3(e) {
             itemprop: !0,
           })),
           (c = claim_element(L, 'META', { property: !0, content: !0 })),
-          (b = claim_element(L, 'META', { name: !0, content: !0 })),
+          (_ = claim_element(L, 'META', { name: !0, content: !0 })),
           (l = claim_element(L, 'META', { name: !0, content: !0 })),
           (a = claim_element(L, 'META', { name: !0, content: !0 })),
           (h = claim_element(L, 'META', { name: !0, content: !0 })),
@@ -4276,9 +4276,9 @@ function create_fragment$3(e) {
           attr(y, 'content', e[7]),
           attr(w, 'property', 'og:type'),
           attr(w, 'content', 'article'),
-          attr(_, 'property', 'og:title'),
-          attr(_, 'content', e[2]),
-          attr(_, 'itemprop', 'name'),
+          attr(b, 'property', 'og:title'),
+          attr(b, 'content', e[2]),
+          attr(b, 'itemprop', 'name'),
           attr(m, 'property', 'og:description'),
           attr(m, 'content', e[3]),
           attr(m, 'itemprop', 'description'),
@@ -4287,8 +4287,8 @@ function create_fragment$3(e) {
           attr(g, 'itemprop', 'image'),
           attr(c, 'property', 'og:site_name'),
           attr(c, 'content', 'Reuters'),
-          attr(b, 'name', 'twitter:card'),
-          attr(b, 'content', 'summary_large_image'),
+          attr(_, 'name', 'twitter:card'),
+          attr(_, 'content', 'summary_large_image'),
           attr(l, 'name', 'twitter:site'),
           attr(l, 'content', '@ReutersGraphics'),
           attr(a, 'name', 'twitter:creator'),
@@ -4322,11 +4322,11 @@ function create_fragment$3(e) {
           append_hydration(document.head, d),
           append_hydration(document.head, y),
           append_hydration(document.head, w),
-          append_hydration(document.head, _),
+          append_hydration(document.head, b),
           append_hydration(document.head, m),
           append_hydration(document.head, g),
           append_hydration(document.head, c),
-          append_hydration(document.head, b),
+          append_hydration(document.head, _),
           append_hydration(document.head, l),
           append_hydration(document.head, a),
           append_hydration(document.head, h),
@@ -4346,7 +4346,7 @@ function create_fragment$3(e) {
         L & 32 && attr(t, 'lang', T[5]),
           L & 1 && r !== (r = T[0]) && (document.title = r),
           L & 2 && attr(i, 'content', T[1]),
-          L & 4 && attr(_, 'content', T[2]),
+          L & 4 && attr(b, 'content', T[2]),
           L & 8 && attr(m, 'content', T[3]),
           L & 16 && p !== (p = urlJoin(assets, T[4])) && attr(g, 'content', p),
           L & 64 && f !== (f = `https://${T[6]}`) && attr(h, 'content', f),
@@ -4366,11 +4366,11 @@ function create_fragment$3(e) {
           detach(d),
           detach(y),
           detach(w),
-          detach(_),
+          detach(b),
           detach(m),
           detach(g),
           detach(c),
-          detach(b),
+          detach(_),
           detach(l),
           detach(a),
           detach(h),
@@ -4399,17 +4399,17 @@ function instance$3(e, t, r) {
     { shareImgPath: d } = t,
     { lang: y = 'en' } = t,
     { hostname: w = 'graphics.reuters.com' } = t;
-  const _ = (c) => {
+  const b = (c) => {
       try {
         return new URL(c);
-      } catch (b) {
+      } catch (_) {
         return {};
       }
     },
     m = get(pkg, 'homepage')
-      ? urlJoin(_(pkg.homepage).origin, i.url.pathname, { trailingSlash: !0 })
+      ? urlJoin(b(pkg.homepage).origin, i.url.pathname, { trailingSlash: !0 })
       : get(pkg, 'reuters.preview')
-      ? urlJoin(_(pkg.reuters.preview).origin, i.url.pathname, {
+      ? urlJoin(b(pkg.reuters.preview).origin, i.url.pathname, {
           trailingSlash: !0,
         })
       : i.host
@@ -4452,7 +4452,7 @@ function instance$3(e, t, r) {
       datePublished: get(pkg, 'reuters.graphic.published'),
       dateModified: get(pkg, 'reuters.graphic.updated'),
       author: get(pkg, 'reuters.graphic.authors', []).map(
-        ({ name: c, url: b }) => ({ '@type': 'Person', name: c, url: b })
+        ({ name: c, url: _ }) => ({ '@type': 'Person', name: c, url: _ })
       ),
       articleSection: 'Graphics',
       isAccessibleForFree: !0,
@@ -4475,7 +4475,7 @@ function instance$3(e, t, r) {
 class SEO extends SvelteComponent {
   constructor(t) {
     super(),
-      init(this, t, instance$3, create_fragment$3, safe_not_equal, {
+      init(this, t, instance$3, create_fragment$4, safe_not_equal, {
         seoTitle: 0,
         seoDescription: 1,
         shareTitle: 2,
@@ -4496,12 +4496,12 @@ var uaParser = { exports: {} };
       d = 'undefined',
       y = 'object',
       w = 'string',
-      _ = 'major',
+      b = 'major',
       m = 'model',
       g = 'name',
       p = 'type',
       c = 'vendor',
-      b = 'version',
+      _ = 'version',
       l = 'architecture',
       a = 'console',
       h = 'mobile',
@@ -4526,8 +4526,8 @@ var uaParser = { exports: {} };
       O = 'Opera',
       G = 'Samsung',
       N = 'Sony',
-      Y = 'Xiaomi',
-      $ = 'Zebra',
+      $ = 'Xiaomi',
+      U = 'Zebra',
       ee = 'Facebook',
       te = function (q, W) {
         var H = {};
@@ -4537,7 +4537,7 @@ var uaParser = { exports: {} };
             : (H[Z] = q[Z]);
         return H;
       },
-      U = function (q) {
+      Y = function (q) {
         for (var W = {}, H = 0; H < q.length; H++) W[q[H].toUpperCase()] = q[H];
         return W;
       },
@@ -4617,19 +4617,19 @@ var uaParser = { exports: {} };
       oe = {
         browser: [
           [/\b(?:crmo|crios)\/([\w\.]+)/i],
-          [b, [g, 'Chrome']],
+          [_, [g, 'Chrome']],
           [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-          [b, [g, 'Edge']],
+          [_, [g, 'Edge']],
           [
             /(opera mini)\/([-\w\.]+)/i,
             /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i,
             /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i,
           ],
-          [g, b],
+          [g, _],
           [/opios[\/ ]+([\w\.]+)/i],
-          [b, [g, O + ' Mini']],
+          [_, [g, O + ' Mini']],
           [/\bopr\/([\w\.]+)/i],
-          [b, [g, O]],
+          [_, [g, O]],
           [
             /(kindle)\/([\w\.]+)/i,
             /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,
@@ -4639,79 +4639,79 @@ var uaParser = { exports: {} };
             /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale|qqbrowserlite|qq)\/([-\w\.]+)/i,
             /(weibo)__([\d\.]+)/i,
           ],
-          [g, b],
+          [g, _],
           [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-          [b, [g, 'UC' + M]],
+          [_, [g, 'UC' + M]],
           [/\bqbcore\/([\w\.]+)/i],
-          [b, [g, 'WeChat(Win) Desktop']],
+          [_, [g, 'WeChat(Win) Desktop']],
           [/micromessenger\/([\w\.]+)/i],
-          [b, [g, 'WeChat']],
+          [_, [g, 'WeChat']],
           [/konqueror\/([\w\.]+)/i],
-          [b, [g, 'Konqueror']],
+          [_, [g, 'Konqueror']],
           [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-          [b, [g, 'IE']],
+          [_, [g, 'IE']],
           [/yabrowser\/([\w\.]+)/i],
-          [b, [g, 'Yandex']],
+          [_, [g, 'Yandex']],
           [/(avast|avg)\/([\w\.]+)/i],
-          [[g, /(.+)/, '$1 Secure ' + M], b],
+          [[g, /(.+)/, '$1 Secure ' + M], _],
           [/\bfocus\/([\w\.]+)/i],
-          [b, [g, P + ' Focus']],
+          [_, [g, P + ' Focus']],
           [/\bopt\/([\w\.]+)/i],
-          [b, [g, O + ' Touch']],
+          [_, [g, O + ' Touch']],
           [/coc_coc\w+\/([\w\.]+)/i],
-          [b, [g, 'Coc Coc']],
+          [_, [g, 'Coc Coc']],
           [/dolfin\/([\w\.]+)/i],
-          [b, [g, 'Dolphin']],
+          [_, [g, 'Dolphin']],
           [/coast\/([\w\.]+)/i],
-          [b, [g, O + ' Coast']],
+          [_, [g, O + ' Coast']],
           [/miuibrowser\/([\w\.]+)/i],
-          [b, [g, 'MIUI ' + M]],
+          [_, [g, 'MIUI ' + M]],
           [/fxios\/([-\w\.]+)/i],
-          [b, [g, P]],
+          [_, [g, P]],
           [/\bqihu|(qi?ho?o?|360)browser/i],
           [[g, '360 ' + M]],
           [/(oculus|samsung|sailfish)browser\/([\w\.]+)/i],
-          [[g, /(.+)/, '$1 ' + M], b],
+          [[g, /(.+)/, '$1 ' + M], _],
           [/(comodo_dragon)\/([\w\.]+)/i],
-          [[g, /_/g, ' '], b],
+          [[g, /_/g, ' '], _],
           [
             /(electron)\/([\w\.]+) safari/i,
             /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,
             /m?(qqbrowser|baiduboxapp|2345Explorer)[\/ ]?([\w\.]+)/i,
           ],
-          [g, b],
+          [g, _],
           [/(metasr)[\/ ]?([\w\.]+)/i, /(lbbrowser)/i],
           [g],
           [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-          [[g, ee], b],
+          [[g, ee], _],
           [
             /safari (line)\/([\w\.]+)/i,
             /\b(line)\/([\w\.]+)\/iab/i,
             /(chromium|instagram)[\/ ]([-\w\.]+)/i,
           ],
-          [g, b],
+          [g, _],
           [/\bgsa\/([\w\.]+) .*safari\//i],
-          [b, [g, 'GSA']],
+          [_, [g, 'GSA']],
           [/headlesschrome(?:\/([\w\.]+)| )/i],
-          [b, [g, D + ' Headless']],
+          [_, [g, D + ' Headless']],
           [/ wv\).+(chrome)\/([\w\.]+)/i],
-          [[g, D + ' WebView'], b],
+          [[g, D + ' WebView'], _],
           [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-          [b, [g, 'Android ' + M]],
+          [_, [g, 'Android ' + M]],
           [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-          [g, b],
+          [g, _],
           [/version\/([\w\.]+) .*mobile\/\w+ (safari)/i],
-          [b, [g, 'Mobile Safari']],
+          [_, [g, 'Mobile Safari']],
           [/version\/([\w\.]+) .*(mobile ?safari|safari)/i],
-          [b, g],
+          [_, g],
           [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-          [g, [b, ae, fe]],
+          [g, [_, ae, fe]],
           [/(webkit|khtml)\/([\w\.]+)/i],
-          [g, b],
+          [g, _],
           [/(navigator|netscape\d?)\/([-\w\.]+)/i],
-          [[g, 'Netscape'], b],
+          [[g, 'Netscape'], _],
           [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-          [b, [g, P + ' Reality']],
+          [_, [g, P + ' Reality']],
           [
             /ekiohf.+(flow)\/([\w\.]+)/i,
             /(swiftfox)/i,
@@ -4722,7 +4722,7 @@ var uaParser = { exports: {} };
             /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
             /(links) \(([\w\.]+)/i,
           ],
-          [g, b],
+          [g, _],
         ],
         cpu: [
           [/(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i],
@@ -4781,13 +4781,13 @@ var uaParser = { exports: {} };
           ],
           [
             [m, /_/g, ' '],
-            [c, Y],
+            [c, $],
             [p, h],
           ],
           [/\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i],
           [
             [m, /_/g, ' '],
-            [c, Y],
+            [c, $],
             [p, f],
           ],
           [
@@ -4960,9 +4960,9 @@ var uaParser = { exports: {} };
             [p, h],
           ],
           [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-          [m, [c, $], [p, f]],
+          [m, [c, U], [p, f]],
           [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-          [m, [c, $], [p, h]],
+          [m, [c, U], [p, h]],
           [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
           [c, m, [p, a]],
           [/droid.+; (shield) bui/i],
@@ -5012,7 +5012,7 @@ var uaParser = { exports: {} };
           [/droid.+; (glass) \d/i],
           [m, [c, S], [p, k]],
           [/droid.+; (wt63?0{2,3})\)/i],
-          [m, [c, $], [p, k]],
+          [m, [c, U], [p, k]],
           [/(quest( 2)?)/i],
           [m, [c, ee], [p, k]],
           [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
@@ -5030,9 +5030,9 @@ var uaParser = { exports: {} };
         ],
         engine: [
           [/windows.+ edge\/([\w\.]+)/i],
-          [b, [g, F + 'HTML']],
+          [_, [g, F + 'HTML']],
           [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-          [b, [g, 'Blink']],
+          [_, [g, 'Blink']],
           [
             /(presto)\/([\w\.]+)/i,
             /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
@@ -5040,60 +5040,60 @@ var uaParser = { exports: {} };
             /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,
             /(icab)[\/ ]([23]\.[\d\.]+)/i,
           ],
-          [g, b],
+          [g, _],
           [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-          [b, g],
+          [_, g],
         ],
         os: [
           [/microsoft (windows) (vista|xp)/i],
-          [g, b],
+          [g, _],
           [
             /(windows) nt 6\.2; (arm)/i,
             /(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i,
             /(windows)[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i,
           ],
-          [g, [b, ae, le]],
+          [g, [_, ae, le]],
           [/(win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
           [
             [g, 'Windows'],
-            [b, ae, le],
+            [_, ae, le],
           ],
           [
             /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,
             /cfnetwork\/.+darwin/i,
           ],
           [
-            [b, /_/g, '.'],
+            [_, /_/g, '.'],
             [g, 'iOS'],
           ],
           [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
           [
             [g, 'Mac OS'],
-            [b, /_/g, '.'],
+            [_, /_/g, '.'],
           ],
           [/droid ([\w\.]+)\b.+(android[- ]x86)/i],
-          [b, g],
+          [_, g],
           [
             /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i,
             /(blackberry)\w*\/([\w\.]*)/i,
             /(tizen|kaios)[\/ ]([\w\.]+)/i,
             /\((series40);/i,
           ],
-          [g, b],
+          [g, _],
           [/\(bb(10);/i],
-          [b, [g, V]],
+          [_, [g, V]],
           [/(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i],
-          [b, [g, 'Symbian']],
+          [_, [g, 'Symbian']],
           [
             /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i,
           ],
-          [b, [g, P + ' OS']],
+          [_, [g, P + ' OS']],
           [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-          [b, [g, 'webOS']],
+          [_, [g, 'webOS']],
           [/crkey\/([\d\.]+)/i],
-          [b, [g, D + 'cast']],
+          [_, [g, D + 'cast']],
           [/(cros) [\w]+ ([\w\.]+\w)/i],
-          [[g, 'Chromium OS'], b],
+          [[g, 'Chromium OS'], _],
           [
             /(nintendo|playstation) ([wids345portablevuch]+)/i,
             /(xbox); +xbox ([^\);]+)/i,
@@ -5106,16 +5106,16 @@ var uaParser = { exports: {} };
             /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,
             /(haiku) (\w+)/i,
           ],
-          [g, b],
+          [g, _],
           [/(sunos) ?([\w\.\d]*)/i],
-          [[g, 'Solaris'], b],
+          [[g, 'Solaris'], _],
           [
             /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,
             /(aix) ((\d)(?=\.|\)| )[\w\.])*/i,
             /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux)/i,
             /(unix) ?([\w\.]*)/i,
           ],
-          [g, b],
+          [g, _],
         ],
       },
       ie = function (q, W) {
@@ -5132,7 +5132,7 @@ var uaParser = { exports: {} };
             var j = {};
             return (
               (j[g] = i),
-              (j[b] = i),
+              (j[_] = i),
               J.call(j, H, Z.browser),
               (j.major = re(j.version)),
               j
@@ -5150,11 +5150,11 @@ var uaParser = { exports: {} };
           }),
           (this.getEngine = function () {
             var j = {};
-            return (j[g] = i), (j[b] = i), J.call(j, H, Z.engine), j;
+            return (j[g] = i), (j[_] = i), J.call(j, H, Z.engine), j;
           }),
           (this.getOS = function () {
             var j = {};
-            return (j[g] = i), (j[b] = i), J.call(j, H, Z.os), j;
+            return (j[g] = i), (j[_] = i), J.call(j, H, Z.os), j;
           }),
           (this.getResult = function () {
             return {
@@ -5177,10 +5177,10 @@ var uaParser = { exports: {} };
         );
       };
     (ie.VERSION = s),
-      (ie.BROWSER = U([g, b, _])),
-      (ie.CPU = U([l])),
-      (ie.DEVICE = U([m, c, p, a, h, v, f, k, x])),
-      (ie.ENGINE = ie.OS = U([g, b])),
+      (ie.BROWSER = Y([g, _, b])),
+      (ie.CPU = Y([l])),
+      (ie.DEVICE = Y([m, c, p, a, h, v, f, k, x])),
+      (ie.ENGINE = ie.OS = Y([g, _])),
       e.exports && (t = e.exports = ie),
       (t.UAParser = ie);
     var ne = typeof r !== d && (r.jQuery || r.Zepto);
@@ -5198,19 +5198,19 @@ var uaParser = { exports: {} };
     }
   })(typeof window == 'object' ? window : commonjsGlobal);
 })(uaParser, uaParser.exports);
-var index_svelte_svelte_type_style_lang$h = '',
-  index_svelte_svelte_type_style_lang$g = '',
+var index_svelte_svelte_type_style_lang$i = '',
+  index_svelte_svelte_type_style_lang$h = '',
   Scroller_svelte_svelte_type_style_lang = '';
 const { window: window_1 } = globals,
   get_foreground_slot_changes = (e) => ({}),
   get_foreground_slot_context = (e) => ({}),
   get_background_slot_changes = (e) => ({}),
   get_background_slot_context = (e) => ({});
-function create_fragment$2(e) {
+function create_fragment$3(e) {
   let t, r, i, s, n, o, u, d, y;
   add_render_callback(e[21]);
   const w = e[20].background,
-    _ = create_slot(w, e, e[19], get_background_slot_context),
+    b = create_slot(w, e, e[19], get_background_slot_context),
     m = e[20].foreground,
     g = create_slot(m, e, e[19], get_foreground_slot_context);
   return {
@@ -5218,7 +5218,7 @@ function create_fragment$2(e) {
       (t = element('svelte-scroller-outer')),
         (r = element('svelte-scroller-background-container')),
         (i = element('svelte-scroller-background')),
-        _ && _.c(),
+        b && b.c(),
         (n = space()),
         (o = element('svelte-scroller-foreground')),
         g && g.c(),
@@ -5231,12 +5231,12 @@ function create_fragment$2(e) {
         class: !0,
         style: !0,
       });
-      var b = children(r);
-      i = claim_element(b, 'SVELTE-SCROLLER-BACKGROUND', { class: !0 });
+      var _ = children(r);
+      i = claim_element(_, 'SVELTE-SCROLLER-BACKGROUND', { class: !0 });
       var l = children(i);
-      _ && _.l(l),
+      b && b.l(l),
         l.forEach(detach),
-        b.forEach(detach),
+        _.forEach(detach),
         (n = claim_space(c)),
         (o = claim_element(c, 'SVELTE-SCROLLER-FOREGROUND', { class: !0 }));
       var a = children(o);
@@ -5257,7 +5257,7 @@ function create_fragment$2(e) {
       insert_hydration(p, t, c),
         append_hydration(t, r),
         append_hydration(r, i),
-        _ && _.m(i, null),
+        b && b.m(i, null),
         e[22](i),
         append_hydration(t, n),
         append_hydration(t, o),
@@ -5268,11 +5268,11 @@ function create_fragment$2(e) {
         d || ((y = listen(window_1, 'resize', e[21])), (d = !0));
     },
     p(p, c) {
-      _ &&
-        _.p &&
+      b &&
+        b.p &&
         (!u || c[0] & 524288) &&
         update_slot_base(
-          _,
+          b,
           w,
           p,
           p[19],
@@ -5298,14 +5298,14 @@ function create_fragment$2(e) {
           );
     },
     i(p) {
-      u || (transition_in(_, p), transition_in(g, p), (u = !0));
+      u || (transition_in(b, p), transition_in(g, p), (u = !0));
     },
     o(p) {
-      transition_out(_, p), transition_out(g, p), (u = !1);
+      transition_out(b, p), transition_out(g, p), (u = !1);
     },
     d(p) {
       p && detach(t),
-        _ && _.d(p),
+        b && b.d(p),
         e[22](null),
         g && g.d(p),
         e[23](null),
@@ -5365,12 +5365,12 @@ function instance$2(e, t, r) {
     u,
     { $$slots: d = {}, $$scope: y } = t,
     { top: w = 0 } = t,
-    { bottom: _ = 1 } = t,
+    { bottom: b = 1 } = t,
     { threshold: m = 0.5 } = t,
     { query: g = 'section' } = t,
     { parallax: p = !1 } = t,
     { index: c = 0 } = t,
-    { count: b = 0 } = t,
+    { count: _ = 0 } = t,
     { offset: l = 0 } = t,
     { progress: a = 0 } = t,
     { visible: h = !1 } = t,
@@ -5384,7 +5384,7 @@ function instance$2(e, t, r) {
     A = 0,
     V = 1;
   onMount(() => {
-    (C = v.querySelectorAll(g)), r(7, (b = C.length)), M();
+    (C = v.querySelectorAll(g)), r(7, (_ = C.length)), M();
     const E = { outer: f, update: M };
     return manager.add(E), () => manager.remove(E);
   });
@@ -5405,11 +5405,11 @@ function instance$2(e, t, r) {
         ? (r(17, (A = p ? z - O : z - G)), r(16, (I = !1)))
         : (r(17, (A = p ? Math.round(i - a * (O - G)) : i)), r(16, (I = !0)));
     for (let N = 0; N < C.length; N++) {
-      const Y = C[N],
-        { top: $ } = Y.getBoundingClientRect(),
+      const $ = C[N],
+        { top: U } = $.getBoundingClientRect(),
         ee = C[N + 1],
         te = ee ? ee.getBoundingClientRect().top : T.bottom;
-      if ((r(8, (l = (n - $) / (te - $))), te >= n)) {
+      if ((r(8, (l = (n - U) / (te - U))), te >= n)) {
         r(6, (c = N));
         break;
       }
@@ -5436,12 +5436,12 @@ function instance$2(e, t, r) {
   return (
     (e.$$set = (E) => {
       'top' in E && r(11, (w = E.top)),
-        'bottom' in E && r(12, (_ = E.bottom)),
+        'bottom' in E && r(12, (b = E.bottom)),
         'threshold' in E && r(13, (m = E.threshold)),
         'query' in E && r(14, (g = E.query)),
         'parallax' in E && r(15, (p = E.parallax)),
         'index' in E && r(6, (c = E.index)),
-        'count' in E && r(7, (b = E.count)),
+        'count' in E && r(7, (_ = E.count)),
         'offset' in E && r(8, (l = E.offset)),
         'progress' in E && r(9, (a = E.progress)),
         'visible' in E && r(10, (h = E.visible)),
@@ -5449,7 +5449,7 @@ function instance$2(e, t, r) {
     }),
     (e.$$.update = () => {
       e.$$.dirty[0] & 2049 && (i = Math.round(w * R)),
-        e.$$.dirty[0] & 4097 && (s = Math.round(_ * R)),
+        e.$$.dirty[0] & 4097 && (s = Math.round(b * R)),
         e.$$.dirty[0] & 8193 && (n = Math.round(m * R)),
         e.$$.dirty[0] & 47104 && M(),
         e.$$.dirty[0] & 196608 &&
@@ -5464,7 +5464,7 @@ function instance$2(e, t, r) {
           ),
         e.$$.dirty[0] & 327680 && r(4, (u = I ? `width:${V}px;` : ''));
     }),
-    [R, f, v, k, u, o, c, b, l, a, h, w, _, m, g, p, I, A, V, y, d, D, F, P, S]
+    [R, f, v, k, u, o, c, _, l, a, h, w, b, m, g, p, I, A, V, y, d, D, F, P, S]
   );
 }
 class Scroller extends SvelteComponent {
@@ -5474,7 +5474,7 @@ class Scroller extends SvelteComponent {
         this,
         t,
         instance$2,
-        create_fragment$2,
+        create_fragment$3,
         safe_not_equal,
         {
           top: 11,
@@ -5496,7 +5496,7 @@ class Scroller extends SvelteComponent {
 var Background_svelte_svelte_type_style_lang = '',
   Foreground_svelte_svelte_type_style_lang$1 = '',
   Foreground_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$f = '',
+  index_svelte_svelte_type_style_lang$g = '',
   lottie = { exports: {} };
 (function (module) {
   typeof navigator != 'undefined' &&
@@ -5905,7 +5905,7 @@ var Background_svelte_svelte_type_style_lang = '',
         function w(S, E) {
           return this.shear(r(S), r(E));
         }
-        function _(S, E) {
+        function b(S, E) {
           var T = e(E),
             L = t(E);
           return this._t(T, L, 0, 0, -L, T, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
@@ -5920,7 +5920,7 @@ var Background_svelte_svelte_type_style_lang = '',
               : this._t(S, 0, 0, 0, 0, E, 0, 0, 0, 0, T, 0, 0, 0, 0, 1)
           );
         }
-        function g(S, E, T, L, z, O, G, N, Y, $, ee, te, U, Q, K, re) {
+        function g(S, E, T, L, z, O, G, N, $, U, ee, te, Y, Q, K, re) {
           return (
             (this.props[0] = S),
             (this.props[1] = E),
@@ -5930,11 +5930,11 @@ var Background_svelte_svelte_type_style_lang = '',
             (this.props[5] = O),
             (this.props[6] = G),
             (this.props[7] = N),
-            (this.props[8] = Y),
-            (this.props[9] = $),
+            (this.props[8] = $),
+            (this.props[9] = U),
             (this.props[10] = ee),
             (this.props[11] = te),
-            (this.props[12] = U),
+            (this.props[12] = Y),
             (this.props[13] = Q),
             (this.props[14] = K),
             (this.props[15] = re),
@@ -5949,7 +5949,7 @@ var Background_svelte_svelte_type_style_lang = '',
               : this
           );
         }
-        function c(S, E, T, L, z, O, G, N, Y, $, ee, te, U, Q, K, re) {
+        function c(S, E, T, L, z, O, G, N, $, U, ee, te, Y, Q, K, re) {
           var B = this.props;
           if (
             S === 1 &&
@@ -5960,13 +5960,13 @@ var Background_svelte_svelte_type_style_lang = '',
             O === 1 &&
             G === 0 &&
             N === 0 &&
-            Y === 0 &&
             $ === 0 &&
+            U === 0 &&
             ee === 1 &&
             te === 0
           )
             return (
-              (B[12] = B[12] * S + B[15] * U),
+              (B[12] = B[12] * S + B[15] * Y),
               (B[13] = B[13] * O + B[15] * Q),
               (B[14] = B[14] * ee + B[15] * K),
               (B[15] *= re),
@@ -5990,27 +5990,27 @@ var Background_svelte_svelte_type_style_lang = '',
             X = B[14],
             ce = B[15];
           return (
-            (B[0] = J * S + ae * z + fe * Y + le * U),
-            (B[1] = J * E + ae * O + fe * $ + le * Q),
+            (B[0] = J * S + ae * z + fe * $ + le * Y),
+            (B[1] = J * E + ae * O + fe * U + le * Q),
             (B[2] = J * T + ae * G + fe * ee + le * K),
             (B[3] = J * L + ae * N + fe * te + le * re),
-            (B[4] = oe * S + ie * z + ne * Y + se * U),
-            (B[5] = oe * E + ie * O + ne * $ + se * Q),
+            (B[4] = oe * S + ie * z + ne * $ + se * Y),
+            (B[5] = oe * E + ie * O + ne * U + se * Q),
             (B[6] = oe * T + ie * G + ne * ee + se * K),
             (B[7] = oe * L + ie * N + ne * te + se * re),
-            (B[8] = q * S + W * z + H * Y + Z * U),
-            (B[9] = q * E + W * O + H * $ + Z * Q),
+            (B[8] = q * S + W * z + H * $ + Z * Y),
+            (B[9] = q * E + W * O + H * U + Z * Q),
             (B[10] = q * T + W * G + H * ee + Z * K),
             (B[11] = q * L + W * N + H * te + Z * re),
-            (B[12] = j * S + he * z + X * Y + ce * U),
-            (B[13] = j * E + he * O + X * $ + ce * Q),
+            (B[12] = j * S + he * z + X * $ + ce * Y),
+            (B[13] = j * E + he * O + X * U + ce * Q),
             (B[14] = j * T + he * G + X * ee + ce * K),
             (B[15] = j * L + he * N + X * te + ce * re),
             (this._identityCalculated = !1),
             this
           );
         }
-        function b() {
+        function _() {
           return (
             this._identityCalculated ||
               ((this._identity = !(
@@ -6145,14 +6145,14 @@ var Background_svelte_svelte_type_style_lang = '',
               O = this.props[1],
               G = this.props[4],
               N = this.props[5],
-              Y = this.props[12],
-              $ = this.props[13];
-            (L[0] = S[0] * z + S[1] * G + Y),
-              (L[1] = S[0] * O + S[1] * N + $),
-              (L[2] = E[0] * z + E[1] * G + Y),
-              (L[3] = E[0] * O + E[1] * N + $),
-              (L[4] = T[0] * z + T[1] * G + Y),
-              (L[5] = T[0] * O + T[1] * N + $);
+              $ = this.props[12],
+              U = this.props[13];
+            (L[0] = S[0] * z + S[1] * G + $),
+              (L[1] = S[0] * O + S[1] * N + U),
+              (L[2] = E[0] * z + E[1] * G + $),
+              (L[3] = E[0] * O + E[1] * N + U),
+              (L[4] = T[0] * z + T[1] * G + $),
+              (L[5] = T[0] * O + T[1] * N + U);
           }
           return L;
         }
@@ -6227,7 +6227,7 @@ var Background_svelte_svelte_type_style_lang = '',
             (this.rotateY = u),
             (this.rotateZ = d),
             (this.skew = w),
-            (this.skewFromAxis = _),
+            (this.skewFromAxis = b),
             (this.shear = y),
             (this.scale = m),
             (this.setTransform = g),
@@ -6249,7 +6249,7 @@ var Background_svelte_svelte_type_style_lang = '',
             (this.inversePoint = R),
             (this.getInverseMatrix = C),
             (this._t = this.transform),
-            (this.isIdentity = b),
+            (this.isIdentity = _),
             (this._identity = !0),
             (this._identityCalculated = !1),
             (this.props = createTypedArray('float32', 16)),
@@ -6266,11 +6266,11 @@ var Background_svelte_svelte_type_style_lang = '',
           d = t.pow(2, n),
           y = d * 2,
           w = i - 1,
-          _;
+          b;
         function m(h, f, v) {
           var k = [];
           f = f === !0 ? { entropy: !0 } : f || {};
-          var x = b(c(f.entropy ? [h, a(e)] : h === null ? l() : h, 3), k),
+          var x = _(c(f.entropy ? [h, a(e)] : h === null ? l() : h, 3), k),
             C = new g(k),
             R = function () {
               for (var I = C.g(s), A = u, V = 0; I < d; )
@@ -6286,7 +6286,7 @@ var Background_svelte_svelte_type_style_lang = '',
               return C.g(4) / 4294967296;
             }),
             (R.double = R),
-            b(a(C.S), e),
+            _(a(C.S), e),
             (
               f.pass ||
               v ||
@@ -6336,7 +6336,7 @@ var Background_svelte_svelte_type_style_lang = '',
               } catch (C) {}
           return v.length ? v : k == 'string' ? h : h + '\0';
         }
-        function b(h, f) {
+        function _(h, f) {
           for (var v = h + '', k, x = 0; x < v.length; )
             f[w & x] = w & ((k ^= f[w & x] * 19) + v.charCodeAt(x++));
           return a(f);
@@ -6354,7 +6354,7 @@ var Background_svelte_svelte_type_style_lang = '',
         function a(h) {
           return String.fromCharCode.apply(0, h);
         }
-        b(t.random(), e);
+        _(t.random(), e);
       })([], BMMath);
       var BezierFactory = (function () {
         var e = {};
@@ -6377,17 +6377,17 @@ var Background_svelte_svelte_type_style_lang = '',
         function w(a, h) {
           return 1 - 3 * h + 3 * a;
         }
-        function _(a, h) {
+        function b(a, h) {
           return 3 * h - 6 * a;
         }
         function m(a) {
           return 3 * a;
         }
         function g(a, h, f) {
-          return ((w(h, f) * a + _(h, f)) * a + m(h)) * a;
+          return ((w(h, f) * a + b(h, f)) * a + m(h)) * a;
         }
         function p(a, h, f) {
-          return 3 * w(h, f) * a * a + 2 * _(h, f) * a + m(h);
+          return 3 * w(h, f) * a * a + 2 * b(h, f) * a + m(h);
         }
         function c(a, h, f, v, k) {
           var x,
@@ -6400,7 +6400,7 @@ var Background_svelte_svelte_type_style_lang = '',
           while (Math.abs(x) > n && ++R < o);
           return C;
         }
-        function b(a, h, f, v) {
+        function _(a, h, f, v) {
           for (var k = 0; k < i; ++k) {
             var x = p(h, f, v);
             if (x === 0) return h;
@@ -6462,7 +6462,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 I = k + R * d,
                 A = p(I, h, f);
               return A >= s
-                ? b(a, I, h, f)
+                ? _(a, I, h, f)
                 : A === 0
                 ? I
                 : c(a, k, k + d, h, f);
@@ -6516,15 +6516,15 @@ var Background_svelte_svelte_type_style_lang = '',
       }
       function bezFunction() {
         var e = Math;
-        function t(m, g, p, c, b, l) {
-          var a = m * c + g * b + p * l - b * c - l * m - p * g;
+        function t(m, g, p, c, _, l) {
+          var a = m * c + g * _ + p * l - _ * c - l * m - p * g;
           return a > -0.001 && a < 0.001;
         }
-        function r(m, g, p, c, b, l, a, h, f) {
-          if (p === 0 && l === 0 && f === 0) return t(m, g, c, b, a, h);
-          var v = e.sqrt(e.pow(c - m, 2) + e.pow(b - g, 2) + e.pow(l - p, 2)),
+        function r(m, g, p, c, _, l, a, h, f) {
+          if (p === 0 && l === 0 && f === 0) return t(m, g, c, _, a, h);
+          var v = e.sqrt(e.pow(c - m, 2) + e.pow(_ - g, 2) + e.pow(l - p, 2)),
             k = e.sqrt(e.pow(a - m, 2) + e.pow(h - g, 2) + e.pow(f - p, 2)),
-            x = e.sqrt(e.pow(a - c, 2) + e.pow(h - b, 2) + e.pow(f - l, 2)),
+            x = e.sqrt(e.pow(a - c, 2) + e.pow(h - _, 2) + e.pow(f - l, 2)),
             C;
           return (
             v > k
@@ -6539,7 +6539,7 @@ var Background_svelte_svelte_type_style_lang = '',
         }
         var i = (function () {
           return function (m, g, p, c) {
-            var b = defaultCurveSegments,
+            var _ = defaultCurveSegments,
               l,
               a,
               h,
@@ -6550,8 +6550,8 @@ var Background_svelte_svelte_type_style_lang = '',
               C = [],
               R = [],
               I = bezierLengthPool.newElement();
-            for (h = p.length, l = 0; l < b; l += 1) {
-              for (v = l / (b - 1), x = 0, a = 0; a < h; a += 1)
+            for (h = p.length, l = 0; l < _; l += 1) {
+              for (v = l / (_ - 1), x = 0, a = 0; a < h; a += 1)
                 (f =
                   bmPow(1 - v, 3) * m[a] +
                   3 * bmPow(1 - v, 2) * v * p[a] +
@@ -6571,18 +6571,18 @@ var Background_svelte_svelte_type_style_lang = '',
           var g = segmentsLengthPool.newElement(),
             p = m.c,
             c = m.v,
-            b = m.o,
+            _ = m.o,
             l = m.i,
             a,
             h = m._length,
             f = g.lengths,
             v = 0;
           for (a = 0; a < h - 1; a += 1)
-            (f[a] = i(c[a], c[a + 1], b[a], l[a + 1])), (v += f[a].addedLength);
+            (f[a] = i(c[a], c[a + 1], _[a], l[a + 1])), (v += f[a].addedLength);
           return (
             p &&
               h &&
-              ((f[a] = i(c[a], c[0], b[a], l[0])), (v += f[a].addedLength)),
+              ((f[a] = i(c[a], c[0], _[a], l[0])), (v += f[a].addedLength)),
             (g.totalLength = v),
             g
           );
@@ -6595,7 +6595,7 @@ var Background_svelte_svelte_type_style_lang = '',
         }
         var u = (function () {
           var m = {};
-          return function (g, p, c, b) {
+          return function (g, p, c, _) {
             var l = (
               g[0] +
               '_' +
@@ -6609,9 +6609,9 @@ var Background_svelte_svelte_type_style_lang = '',
               '_' +
               c[1] +
               '_' +
-              b[0] +
+              _[0] +
               '_' +
-              b[1]
+              _[1]
             ).replace(/\./g, 'p');
             if (!m[l]) {
               var a = defaultCurveSegments,
@@ -6627,7 +6627,7 @@ var Background_svelte_svelte_type_style_lang = '',
               g.length === 2 &&
                 (g[0] !== p[0] || g[1] !== p[1]) &&
                 t(g[0], g[1], p[0], p[1], g[0] + c[0], g[1] + c[1]) &&
-                t(g[0], g[1], p[0], p[1], p[0] + b[0], p[1] + b[1]) &&
+                t(g[0], g[1], p[0], p[1], p[0] + _[0], p[1] + _[1]) &&
                 (a = 2);
               var V = new n(a);
               for (v = c.length, h = 0; h < a; h += 1) {
@@ -6639,7 +6639,7 @@ var Background_svelte_svelte_type_style_lang = '',
                   (k =
                     bmPow(1 - x, 3) * g[f] +
                     3 * bmPow(1 - x, 2) * x * (g[f] + c[f]) +
-                    3 * (1 - x) * bmPow(x, 2) * (p[f] + b[f]) +
+                    3 * (1 - x) * bmPow(x, 2) * (p[f] + _[f]) +
                     bmPow(x, 3) * p[f]),
                     (I[f] = k),
                     A !== null && (R += bmPow(I[f] - A[f], 2));
@@ -6653,25 +6653,25 @@ var Background_svelte_svelte_type_style_lang = '',
         function d(m, g) {
           var p = g.percents,
             c = g.lengths,
-            b = p.length,
-            l = bmFloor((b - 1) * m),
+            _ = p.length,
+            l = bmFloor((_ - 1) * m),
             a = m * g.addedLength,
             h = 0;
-          if (l === b - 1 || l === 0 || a === c[l]) return p[l];
+          if (l === _ - 1 || l === 0 || a === c[l]) return p[l];
           for (var f = c[l] > a ? -1 : 1, v = !0; v; )
             if (
               (c[l] <= a && c[l + 1] > a
                 ? ((h = (a - c[l]) / (c[l + 1] - c[l])), (v = !1))
                 : (l += f),
-              l < 0 || l >= b - 1)
+              l < 0 || l >= _ - 1)
             ) {
-              if (l === b - 1) return p[l];
+              if (l === _ - 1) return p[l];
               v = !1;
             }
           return p[l] + (p[l + 1] - p[l]) * h;
         }
-        function y(m, g, p, c, b, l) {
-          var a = d(b, l),
+        function y(m, g, p, c, _, l) {
+          var a = d(_, l),
             h = 1 - a,
             f =
               e.round(
@@ -6692,9 +6692,9 @@ var Background_svelte_svelte_type_style_lang = '',
           return [f, v];
         }
         var w = createTypedArray('float32', 8);
-        function _(m, g, p, c, b, l, a) {
-          b < 0 ? (b = 0) : b > 1 && (b = 1);
-          var h = d(b, a);
+        function b(m, g, p, c, _, l, a) {
+          _ < 0 ? (_ = 0) : _ > 1 && (_ = 1);
+          var h = d(_, a);
           l = l > 1 ? 1 : l;
           var f = d(l, a),
             v,
@@ -6733,7 +6733,7 @@ var Background_svelte_svelte_type_style_lang = '',
         }
         return {
           getSegmentsLength: s,
-          getNewSegment: _,
+          getNewSegment: b,
           getPointInSegment: y,
           buildBezierData: u,
           pointOnLine2D: t,
@@ -6772,7 +6772,7 @@ var Background_svelte_svelte_type_style_lang = '',
             i ||
               ((i = o(function (g) {
                 function p() {
-                  function b(M, D) {
+                  function _(M, D) {
                     var F,
                       P,
                       S = M.length,
@@ -6796,7 +6796,7 @@ var Background_svelte_svelte_type_style_lang = '',
                                   O[E].pt.k[L].e && h(O[E].pt.k[L].e[0]);
                         }
                         F.ty === 0
-                          ? ((F.layers = l(F.refId, D)), b(F.layers, D))
+                          ? ((F.layers = l(F.refId, D)), _(F.layers, D))
                           : F.ty === 4
                           ? a(F.shapes)
                           : F.ty === 5 && A(F);
@@ -7018,7 +7018,7 @@ var Background_svelte_svelte_type_style_lang = '',
                       k(M),
                       x(M),
                       R(M),
-                      b(M.layers, M.assets),
+                      _(M.layers, M.assets),
                       (M.__complete = !0));
                   }
                   function A(M) {
@@ -7033,7 +7033,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     (V.checkChars = k),
                     (V.checkPathProperties = x),
                     (V.checkShapes = R),
-                    (V.completeLayers = b),
+                    (V.completeLayers = _),
                     V
                   );
                 }
@@ -7041,7 +7041,7 @@ var Background_svelte_svelte_type_style_lang = '',
                   (n.dataManager || (n.dataManager = p()),
                   n.assetLoader ||
                     (n.assetLoader = (function () {
-                      function b(a) {
+                      function _(a) {
                         var h = a.getResponseHeader('content-type');
                         return (h &&
                           a.responseType === 'json' &&
@@ -7062,10 +7062,10 @@ var Background_svelte_svelte_type_style_lang = '',
                         } catch (C) {}
                         x.onreadystatechange = function () {
                           if (x.readyState === 4)
-                            if (x.status === 200) (k = b(x)), f(k);
+                            if (x.status === 200) (k = _(x)), f(k);
                             else
                               try {
-                                (k = b(x)), f(k);
+                                (k = _(x)), f(k);
                               } catch (C) {
                                 v && v(C);
                               }
@@ -7084,11 +7084,11 @@ var Background_svelte_svelte_type_style_lang = '',
                   n.assetLoader.load(
                     g.data.path,
                     g.data.fullPath,
-                    function (b) {
-                      n.dataManager.completeData(b),
+                    function (_) {
+                      n.dataManager.completeData(_),
                         n.postMessage({
                           id: g.data.id,
-                          payload: b,
+                          payload: _,
                           status: 'success',
                         });
                     },
@@ -7109,10 +7109,10 @@ var Background_svelte_svelte_type_style_lang = '',
                     n.assetLoader.load(
                       g.data.path,
                       g.data.fullPath,
-                      function (b) {
+                      function (_) {
                         n.postMessage({
                           id: g.data.id,
-                          payload: b,
+                          payload: _,
                           status: 'success',
                         });
                       },
@@ -7156,12 +7156,12 @@ var Background_svelte_svelte_type_style_lang = '',
               id: c,
             });
           }
-          function _(m, g, p) {
+          function b(m, g, p) {
             u();
             var c = d(g, p);
             i.postMessage({ type: 'complete', animation: m, id: c });
           }
-          return { loadAnimation: y, loadData: w, completeAnimation: _ };
+          return { loadAnimation: y, loadData: w, completeAnimation: b };
         })();
       function getFontProperties(e) {
         for (
@@ -7401,7 +7401,7 @@ var Background_svelte_svelte_type_style_lang = '',
               }
             }
           }
-          function _(f, v, k) {
+          function b(f, v, k) {
             for (var x = 0, C = this.chars.length; x < C; ) {
               if (
                 this.chars[x].ch === f &&
@@ -7457,7 +7457,7 @@ var Background_svelte_svelte_type_style_lang = '',
           function c(f, v) {
             return v ? f === s[0] && v === s[1] : f === s[1];
           }
-          function b(f) {
+          function _(f) {
             return r.indexOf(f) !== -1;
           }
           function l() {
@@ -7475,11 +7475,11 @@ var Background_svelte_svelte_type_style_lang = '',
           };
           (a.isModifier = p),
             (a.isZeroWidthJoiner = c),
-            (a.isCombinedCharacter = b);
+            (a.isCombinedCharacter = _);
           var h = {
             addChars: w,
             addFonts: y,
-            getCharData: _,
+            getCharData: b,
             getFontByName: g,
             measureText: m,
             checkLoadedFonts: u,
@@ -7490,7 +7490,7 @@ var Background_svelte_svelte_type_style_lang = '',
         PropertyFactory = (function () {
           var e = initialDefaultFrame,
             t = Math.abs;
-          function r(b, l) {
+          function r(_, l) {
             var a = this.offsetTime,
               h;
             this.propType === 'multidimensional' &&
@@ -7509,12 +7509,12 @@ var Background_svelte_svelte_type_style_lang = '',
               if (
                 ((C = this.keyframes[v]),
                 (R = this.keyframes[v + 1]),
-                v === k - 1 && b >= R.t - a)
+                v === k - 1 && _ >= R.t - a)
               ) {
                 C.h && (C = R), (f = 0);
                 break;
               }
-              if (R.t - a > b) {
+              if (R.t - a > _) {
                 f = v;
                 break;
               }
@@ -7539,8 +7539,8 @@ var Background_svelte_svelte_type_style_lang = '',
                   C.ti
                 ));
               var L = I.bezierData;
-              if (b >= S || b < E) {
-                var z = b >= S ? L.points.length - 1 : 0;
+              if (_ >= S || _ < E) {
+                var z = _ >= S ? L.points.length - 1 : 0;
                 for (V = L.points[z].point.length, A = 0; A < V; A += 1)
                   h[A] = L.points[z].point[A];
               } else {
@@ -7554,16 +7554,16 @@ var Background_svelte_svelte_type_style_lang = '',
                       C.n
                     ).get),
                     (I.__fnct = P)),
-                  (M = P((b - E) / (S - E)));
+                  (M = P((_ - E) / (S - E)));
                 var O = L.segmentLength * M,
                   G,
                   N =
-                    l.lastFrame < b && l._lastKeyframeIndex === v
+                    l.lastFrame < _ && l._lastKeyframeIndex === v
                       ? l._lastAddedLength
                       : 0;
                 for (
                   F =
-                    l.lastFrame < b && l._lastKeyframeIndex === v
+                    l.lastFrame < _ && l._lastKeyframeIndex === v
                       ? l._lastPoint
                       : 0,
                     x = !0,
@@ -7598,68 +7598,68 @@ var Background_svelte_svelte_type_style_lang = '',
                   (l._lastKeyframeIndex = v);
               }
             } else {
-              var Y, $, ee, te, U;
+              var $, U, ee, te, Y;
               if (((k = C.s.length), (T = R.s || C.e), this.sh && C.h !== 1))
-                if (b >= S) (h[0] = T[0]), (h[1] = T[1]), (h[2] = T[2]);
-                else if (b <= E)
+                if (_ >= S) (h[0] = T[0]), (h[1] = T[1]), (h[2] = T[2]);
+                else if (_ <= E)
                   (h[0] = C.s[0]), (h[1] = C.s[1]), (h[2] = C.s[2]);
                 else {
                   var Q = n(C.s),
                     K = n(T),
-                    re = (b - E) / (S - E);
+                    re = (_ - E) / (S - E);
                   s(h, i(Q, K, re));
                 }
               else
                 for (v = 0; v < k; v += 1)
                   C.h !== 1 &&
-                    (b >= S
+                    (_ >= S
                       ? (M = 1)
-                      : b < E
+                      : _ < E
                       ? (M = 0)
                       : (C.o.x.constructor === Array
                           ? (I.__fnct || (I.__fnct = []),
                             I.__fnct[v]
                               ? (P = I.__fnct[v])
-                              : ((Y =
+                              : (($ =
                                   C.o.x[v] === void 0 ? C.o.x[0] : C.o.x[v]),
-                                ($ = C.o.y[v] === void 0 ? C.o.y[0] : C.o.y[v]),
+                                (U = C.o.y[v] === void 0 ? C.o.y[0] : C.o.y[v]),
                                 (ee =
                                   C.i.x[v] === void 0 ? C.i.x[0] : C.i.x[v]),
                                 (te =
                                   C.i.y[v] === void 0 ? C.i.y[0] : C.i.y[v]),
                                 (P = BezierFactory.getBezierEasing(
-                                  Y,
                                   $,
+                                  U,
                                   ee,
                                   te
                                 ).get),
                                 (I.__fnct[v] = P)))
                           : I.__fnct
                           ? (P = I.__fnct)
-                          : ((Y = C.o.x),
-                            ($ = C.o.y),
+                          : (($ = C.o.x),
+                            (U = C.o.y),
                             (ee = C.i.x),
                             (te = C.i.y),
                             (P = BezierFactory.getBezierEasing(
-                              Y,
                               $,
+                              U,
                               ee,
                               te
                             ).get),
                             (C.keyframeMetadata = P)),
-                        (M = P((b - E) / (S - E))))),
+                        (M = P((_ - E) / (S - E))))),
                     (T = R.s || C.e),
-                    (U = C.h === 1 ? C.s[v] : C.s[v] + (T[v] - C.s[v]) * M),
-                    this.propType === 'multidimensional' ? (h[v] = U) : (h = U);
+                    (Y = C.h === 1 ? C.s[v] : C.s[v] + (T[v] - C.s[v]) * M),
+                    this.propType === 'multidimensional' ? (h[v] = Y) : (h = Y);
             }
             return (l.lastIndex = f), h;
           }
-          function i(b, l, a) {
+          function i(_, l, a) {
             var h = [],
-              f = b[0],
-              v = b[1],
-              k = b[2],
-              x = b[3],
+              f = _[0],
+              v = _[1],
+              k = _[2],
+              x = _[3],
               C = l[0],
               R = l[1],
               I = l[2],
@@ -7685,7 +7685,7 @@ var Background_svelte_svelte_type_style_lang = '',
               h
             );
           }
-          function s(b, l) {
+          function s(_, l) {
             var a = l[0],
               h = l[1],
               f = l[2],
@@ -7693,14 +7693,14 @@ var Background_svelte_svelte_type_style_lang = '',
               k = Math.atan2(2 * h * v - 2 * a * f, 1 - 2 * h * h - 2 * f * f),
               x = Math.asin(2 * a * h + 2 * f * v),
               C = Math.atan2(2 * a * v - 2 * h * f, 1 - 2 * a * a - 2 * f * f);
-            (b[0] = k / degToRads),
-              (b[1] = x / degToRads),
-              (b[2] = C / degToRads);
+            (_[0] = k / degToRads),
+              (_[1] = x / degToRads),
+              (_[2] = C / degToRads);
           }
-          function n(b) {
-            var l = b[0] * degToRads,
-              a = b[1] * degToRads,
-              h = b[2] * degToRads,
+          function n(_) {
+            var l = _[0] * degToRads,
+              a = _[1] * degToRads,
+              h = _[2] * degToRads,
               f = Math.cos(l / 2),
               v = Math.cos(a / 2),
               k = Math.cos(h / 2),
@@ -7714,33 +7714,33 @@ var Background_svelte_svelte_type_style_lang = '',
             return [A, V, M, I];
           }
           function o() {
-            var b = this.comp.renderedFrame - this.offsetTime,
+            var _ = this.comp.renderedFrame - this.offsetTime,
               l = this.keyframes[0].t - this.offsetTime,
               a = this.keyframes[this.keyframes.length - 1].t - this.offsetTime;
             if (
               !(
-                b === this._caching.lastFrame ||
+                _ === this._caching.lastFrame ||
                 (this._caching.lastFrame !== e &&
-                  ((this._caching.lastFrame >= a && b >= a) ||
-                    (this._caching.lastFrame < l && b < l)))
+                  ((this._caching.lastFrame >= a && _ >= a) ||
+                    (this._caching.lastFrame < l && _ < l)))
               )
             ) {
-              this._caching.lastFrame >= b &&
+              this._caching.lastFrame >= _ &&
                 ((this._caching._lastKeyframeIndex = -1),
                 (this._caching.lastIndex = 0));
-              var h = this.interpolateValue(b, this._caching);
+              var h = this.interpolateValue(_, this._caching);
               this.pv = h;
             }
-            return (this._caching.lastFrame = b), this.pv;
+            return (this._caching.lastFrame = _), this.pv;
           }
-          function u(b) {
+          function u(_) {
             var l;
             if (this.propType === 'unidimensional')
-              (l = b * this.mult),
+              (l = _ * this.mult),
                 t(this.v - l) > 1e-5 && ((this.v = l), (this._mdf = !0));
             else
               for (var a = 0, h = this.v.length; a < h; )
-                (l = b[a] * this.mult),
+                (l = _[a] * this.mult),
                   t(this.v[a] - l) > 1e-5 &&
                     ((this.v[a] = l), (this._mdf = !0)),
                   (a += 1);
@@ -7757,30 +7757,30 @@ var Background_svelte_svelte_type_style_lang = '',
                 return;
               }
               (this.lock = !0), (this._mdf = this._isFirstFrame);
-              var b,
+              var _,
                 l = this.effectsSequence.length,
                 a = this.kf ? this.pv : this.data.k;
-              for (b = 0; b < l; b += 1) a = this.effectsSequence[b](a);
+              for (_ = 0; _ < l; _ += 1) a = this.effectsSequence[_](a);
               this.setVValue(a),
                 (this._isFirstFrame = !1),
                 (this.lock = !1),
                 (this.frameId = this.elem.globalData.frameId);
             }
           }
-          function y(b) {
-            this.effectsSequence.push(b),
+          function y(_) {
+            this.effectsSequence.push(_),
               this.container.addDynamicProperty(this);
           }
-          function w(b, l, a, h) {
+          function w(_, l, a, h) {
             (this.propType = 'unidimensional'),
               (this.mult = a || 1),
               (this.data = l),
               (this.v = a ? l.k * a : l.k),
               (this.pv = l.k),
               (this._mdf = !1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.k = !1),
               (this.kf = !1),
               (this.vel = 0),
@@ -7790,14 +7790,14 @@ var Background_svelte_svelte_type_style_lang = '',
               (this.setVValue = u),
               (this.addEffect = y);
           }
-          function _(b, l, a, h) {
+          function b(_, l, a, h) {
             (this.propType = 'multidimensional'),
               (this.mult = a || 1),
               (this.data = l),
               (this._mdf = !1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.k = !1),
               (this.kf = !1),
               (this.frameId = -1);
@@ -7818,11 +7818,11 @@ var Background_svelte_svelte_type_style_lang = '',
               (this.setVValue = u),
               (this.addEffect = y);
           }
-          function m(b, l, a, h) {
+          function m(_, l, a, h) {
             (this.propType = 'unidimensional'),
               (this.keyframes = l.k),
               (this.keyframesMetadata = []),
-              (this.offsetTime = b.data.st),
+              (this.offsetTime = _.data.st),
               (this.frameId = -1),
               (this._caching = {
                 lastFrame: e,
@@ -7834,9 +7834,9 @@ var Background_svelte_svelte_type_style_lang = '',
               (this.kf = !0),
               (this.data = l),
               (this.mult = a || 1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.v = e),
               (this.pv = e),
               (this._isFirstFrame = !0),
@@ -7846,7 +7846,7 @@ var Background_svelte_svelte_type_style_lang = '',
               (this.effectsSequence = [o.bind(this)]),
               (this.addEffect = y);
           }
-          function g(b, l, a, h) {
+          function g(_, l, a, h) {
             this.propType = 'multidimensional';
             var f,
               v = l.k.length,
@@ -7919,14 +7919,14 @@ var Background_svelte_svelte_type_style_lang = '',
               (this.data = l),
               (this.keyframes = l.k),
               (this.keyframesMetadata = []),
-              (this.offsetTime = b.data.st),
+              (this.offsetTime = _.data.st),
               (this.k = !0),
               (this.kf = !0),
               (this._isFirstFrame = !0),
               (this.mult = a || 1),
-              (this.elem = b),
+              (this.elem = _),
               (this.container = h),
-              (this.comp = b.comp),
+              (this.comp = _.comp),
               (this.getValue = d),
               (this.setVValue = u),
               (this.interpolateValue = r),
@@ -7947,17 +7947,17 @@ var Background_svelte_svelte_type_style_lang = '',
             }),
               (this.addEffect = y);
           }
-          function p(b, l, a, h, f) {
+          function p(_, l, a, h, f) {
             var v;
-            if (!l.k.length) v = new w(b, l, h, f);
-            else if (typeof l.k[0] == 'number') v = new _(b, l, h, f);
+            if (!l.k.length) v = new w(_, l, h, f);
+            else if (typeof l.k[0] == 'number') v = new b(_, l, h, f);
             else
               switch (a) {
                 case 0:
-                  v = new m(b, l, h, f);
+                  v = new m(_, l, h, f);
                   break;
                 case 1:
-                  v = new g(b, l, h, f);
+                  v = new g(_, l, h, f);
                   break;
               }
             return v.effectsSequence.length && f.addDynamicProperty(v), v;
@@ -8020,7 +8020,7 @@ var Background_svelte_svelte_type_style_lang = '',
                         .rotateX(this.or.v[0]),
                   this.autoOriented)
                 ) {
-                  var w, _;
+                  var w, b;
                   if (
                     ((y = this.elem.globalData.frameRate),
                     this.p && this.p.keyframes && this.p.getValueAtTime)
@@ -8031,7 +8031,7 @@ var Background_svelte_svelte_type_style_lang = '',
                           (this.p.keyframes[0].t + 0.01) / y,
                           0
                         )),
-                        (_ = this.p.getValueAtTime(
+                        (b = this.p.getValueAtTime(
                           this.p.keyframes[0].t / y,
                           0
                         )))
@@ -8041,14 +8041,14 @@ var Background_svelte_svelte_type_style_lang = '',
                           this.p.keyframes[this.p.keyframes.length - 1].t / y,
                           0
                         )),
-                        (_ = this.p.getValueAtTime(
+                        (b = this.p.getValueAtTime(
                           (this.p.keyframes[this.p.keyframes.length - 1].t -
                             0.05) /
                             y,
                           0
                         )))
                       : ((w = this.p.pv),
-                        (_ = this.p.getValueAtTime(
+                        (b = this.p.getValueAtTime(
                           (this.p._caching.lastFrame +
                             this.p.offsetTime -
                             0.01) /
@@ -8062,7 +8062,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     this.px.getValueAtTime &&
                     this.py.getValueAtTime
                   ) {
-                    (w = []), (_ = []);
+                    (w = []), (b = []);
                     var m = this.px,
                       g = this.py;
                     m._caching.lastFrame + m.offsetTime <= m.keyframes[0].t
@@ -8074,8 +8074,8 @@ var Background_svelte_svelte_type_style_lang = '',
                           (g.keyframes[0].t + 0.01) / y,
                           0
                         )),
-                        (_[0] = m.getValueAtTime(m.keyframes[0].t / y, 0)),
-                        (_[1] = g.getValueAtTime(g.keyframes[0].t / y, 0)))
+                        (b[0] = m.getValueAtTime(m.keyframes[0].t / y, 0)),
+                        (b[1] = g.getValueAtTime(g.keyframes[0].t / y, 0)))
                       : m._caching.lastFrame + m.offsetTime >=
                         m.keyframes[m.keyframes.length - 1].t
                       ? ((w[0] = m.getValueAtTime(
@@ -8086,25 +8086,25 @@ var Background_svelte_svelte_type_style_lang = '',
                           g.keyframes[g.keyframes.length - 1].t / y,
                           0
                         )),
-                        (_[0] = m.getValueAtTime(
+                        (b[0] = m.getValueAtTime(
                           (m.keyframes[m.keyframes.length - 1].t - 0.01) / y,
                           0
                         )),
-                        (_[1] = g.getValueAtTime(
+                        (b[1] = g.getValueAtTime(
                           (g.keyframes[g.keyframes.length - 1].t - 0.01) / y,
                           0
                         )))
                       : ((w = [m.pv, g.pv]),
-                        (_[0] = m.getValueAtTime(
+                        (b[0] = m.getValueAtTime(
                           (m._caching.lastFrame + m.offsetTime - 0.01) / y,
                           m.offsetTime
                         )),
-                        (_[1] = g.getValueAtTime(
+                        (b[1] = g.getValueAtTime(
                           (g._caching.lastFrame + g.offsetTime - 0.01) / y,
                           g.offsetTime
                         )));
-                  } else (_ = e), (w = _);
-                  this.v.rotate(-Math.atan2(w[1] - _[1], w[0] - _[0]));
+                  } else (b = e), (w = b);
+                  this.v.rotate(-Math.atan2(w[1] - b[1], w[0] - b[0]));
                 }
                 this.data.p && this.data.p.s
                   ? this.data.p.z
@@ -8202,10 +8202,10 @@ var Background_svelte_svelte_type_style_lang = '',
                 )),
                 y.or.k[0].ti)
               ) {
-                var _,
+                var b,
                   m = y.or.k.length;
-                for (_ = 0; _ < m; _ += 1)
-                  (y.or.k[_].to = null), (y.or.k[_].ti = null);
+                for (b = 0; b < m; b += 1)
+                  (y.or.k[b].to = null), (y.or.k[b].ti = null);
               }
               (this.or = PropertyFactory.getProp(d, y.or, 1, degToRads, this)),
                 (this.or.sh = !0);
@@ -8601,7 +8601,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 a
               );
             })(),
-            _ = (function () {
+            b = (function () {
               function l(a, h) {
                 (this.v = shapePool.newElement()),
                   this.v.setPathData(!0, 0),
@@ -9001,7 +9001,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 ? (f = new m(l, a))
                 : h === 6
                 ? (f = new w(l, a))
-                : h === 7 && (f = new _(l, a));
+                : h === 7 && (f = new b(l, a));
             return f.k && l.addDynamicProperty(f), f;
           }
           function p() {
@@ -9010,12 +9010,12 @@ var Background_svelte_svelte_type_style_lang = '',
           function c() {
             return y;
           }
-          var b = {};
+          var _ = {};
           return (
-            (b.getShapeProp = g),
-            (b.getConstructorFunction = p),
-            (b.getKeyframedConstructorFunction = c),
-            b
+            (_.getShapeProp = g),
+            (_.getConstructorFunction = p),
+            (_.getKeyframedConstructorFunction = c),
+            _
           );
         })(),
         ShapeModifiers = (function () {
@@ -9093,10 +9093,10 @@ var Background_svelte_svelte_type_style_lang = '',
             y;
           for (u = 0; u < d; u += 1)
             if (((y = n[u]), !(y.e * s < i || y.s * s > i + r))) {
-              var w, _;
+              var w, b;
               y.s * s <= i ? (w = 0) : (w = (y.s * s - i) / r),
-                y.e * s >= i + r ? (_ = 1) : (_ = (y.e * s - i) / r),
-                o.push([w, _]);
+                y.e * s >= i + r ? (b = 1) : (b = (y.e * s - i) / r),
+                o.push([w, b]);
             }
           return o.length || o.push([0, 0]), o;
         }),
@@ -9138,7 +9138,7 @@ var Background_svelte_svelte_type_style_lang = '',
             d,
             y,
             w,
-            _,
+            b,
             m,
             g = 0;
           if (r === t)
@@ -9156,7 +9156,7 @@ var Background_svelte_svelte_type_style_lang = '',
           } else {
             var p = [],
               c,
-              b;
+              _;
             for (o = 0; o < u; o += 1)
               if (
                 ((c = this.shapes[o]),
@@ -9177,9 +9177,9 @@ var Background_svelte_svelte_type_style_lang = '',
                     d < y;
                     d += 1
                   )
-                    (_ = bez.getSegmentsLength(n.shapes[d])),
-                      w.push(_),
-                      (m += _.totalLength);
+                    (b = bez.getSegmentsLength(n.shapes[d])),
+                      w.push(b),
+                      (m += b.totalLength);
                   (c.totalShapeLength = m), (c.pathsData = w);
                 }
                 (g += m), (c.shape._mdf = !0);
@@ -9191,8 +9191,8 @@ var Background_svelte_svelte_type_style_lang = '',
             for (o = u - 1; o >= 0; o -= 1)
               if (((c = this.shapes[o]), c.shape._mdf)) {
                 for (
-                  b = c.localShapeCollection,
-                    b.releaseShapes(),
+                  _ = c.localShapeCollection,
+                    _.releaseShapes(),
                     this.m === 2 && u > 1
                       ? ((f = this.calculateShapeEdges(
                           t,
@@ -9232,13 +9232,13 @@ var Background_svelte_svelte_type_style_lang = '',
                       var k = c.shape.paths.shapes[c.shape.paths._length - 1];
                       if (k.c) {
                         var x = v.pop();
-                        this.addPaths(v, b), (v = this.addShapes(c, p[1], x));
-                      } else this.addPaths(v, b), (v = this.addShapes(c, p[1]));
+                        this.addPaths(v, _), (v = this.addShapes(c, p[1], x));
+                      } else this.addPaths(v, _), (v = this.addShapes(c, p[1]));
                     }
-                    this.addPaths(v, b);
+                    this.addPaths(v, _);
                   }
                 }
-                c.shape.paths = b;
+                c.shape.paths = _;
               }
           }
         }),
@@ -9268,16 +9268,16 @@ var Background_svelte_svelte_type_style_lang = '',
             d,
             y = 0,
             w,
-            _,
+            b,
             m,
             g,
             p = [],
             c,
-            b = !0;
+            _ = !0;
           for (
             r
-              ? ((_ = r._length), (c = r._length))
-              : ((r = shapePool.newElement()), (_ = 0), (c = 0)),
+              ? ((b = r._length), (c = r._length))
+              : ((r = shapePool.newElement()), (b = 0), (c = 0)),
               p.push(r),
               n = 0;
             n < o;
@@ -9304,10 +9304,10 @@ var Background_svelte_svelte_type_style_lang = '',
                       s[n].i[u],
                       s[n].v[u],
                       r,
-                      _,
-                      b
+                      b,
+                      _
                     ),
-                    (b = !1))
+                    (_ = !1))
                   : ((g = bez.getNewSegment(
                       s[n].v[u - 1],
                       s[n].v[u],
@@ -9317,11 +9317,11 @@ var Background_svelte_svelte_type_style_lang = '',
                       (t.e - y) / w.addedLength,
                       m[u - 1]
                     )),
-                    this.addSegmentFromArray(g, r, _, b),
-                    (b = !1),
+                    this.addSegmentFromArray(g, r, b, _),
+                    (_ = !1),
                     (r.c = !1)),
                   (y += w.addedLength),
-                  (_ += 1);
+                  (b += 1);
             if (s[n].c && m.length) {
               if (((w = m[u - 1]), y <= t.e)) {
                 var l = m[u - 1].addedLength;
@@ -9332,10 +9332,10 @@ var Background_svelte_svelte_type_style_lang = '',
                       s[n].i[0],
                       s[n].v[0],
                       r,
-                      _,
-                      b
+                      b,
+                      _
                     ),
-                    (b = !1))
+                    (_ = !1))
                   : ((g = bez.getNewSegment(
                       s[n].v[u - 1],
                       s[n].v[0],
@@ -9345,11 +9345,11 @@ var Background_svelte_svelte_type_style_lang = '',
                       (t.e - y) / l,
                       m[u - 1]
                     )),
-                    this.addSegmentFromArray(g, r, _, b),
-                    (b = !1),
+                    this.addSegmentFromArray(g, r, b, _),
+                    (_ = !1),
                     (r.c = !1));
               } else r.c = !1;
-              (y += w.addedLength), (_ += 1);
+              (y += w.addedLength), (b += 1);
             }
             if (
               (r._length &&
@@ -9364,7 +9364,7 @@ var Background_svelte_svelte_type_style_lang = '',
             )
               break;
             n < o - 1 &&
-              ((r = shapePool.newElement()), (b = !0), p.push(r), (_ = 0));
+              ((r = shapePool.newElement()), (_ = !0), p.push(r), (b = 0));
           }
           return p;
         }),
@@ -9390,12 +9390,12 @@ var Background_svelte_svelte_type_style_lang = '',
             d,
             y,
             w,
-            _ = 0,
+            b = 0,
             m,
             g,
             p,
             c,
-            b,
+            _,
             l;
           for (i = 0; i < s; i += 1)
             (n = e.v[i]),
@@ -9403,21 +9403,21 @@ var Background_svelte_svelte_type_style_lang = '',
               (o = e.i[i]),
               n[0] === u[0] && n[1] === u[1] && n[0] === o[0] && n[1] === o[1]
                 ? (i === 0 || i === s - 1) && !e.c
-                  ? (r.setTripleAt(n[0], n[1], u[0], u[1], o[0], o[1], _),
-                    (_ += 1))
+                  ? (r.setTripleAt(n[0], n[1], u[0], u[1], o[0], o[1], b),
+                    (b += 1))
                   : (i === 0 ? (d = e.v[s - 1]) : (d = e.v[i - 1]),
                     (y = Math.sqrt(
                       Math.pow(n[0] - d[0], 2) + Math.pow(n[1] - d[1], 2)
                     )),
                     (w = y ? Math.min(y / 2, t) / y : 0),
-                    (b = n[0] + (d[0] - n[0]) * w),
-                    (m = b),
+                    (_ = n[0] + (d[0] - n[0]) * w),
+                    (m = _),
                     (l = n[1] - (n[1] - d[1]) * w),
                     (g = l),
                     (p = m - (m - n[0]) * roundCorner),
                     (c = g - (g - n[1]) * roundCorner),
-                    r.setTripleAt(m, g, p, c, b, l, _),
-                    (_ += 1),
+                    r.setTripleAt(m, g, p, c, _, l, b),
+                    (b += 1),
                     i === s - 1 ? (d = e.v[0]) : (d = e.v[i + 1]),
                     (y = Math.sqrt(
                       Math.pow(n[0] - d[0], 2) + Math.pow(n[1] - d[1], 2)
@@ -9427,10 +9427,10 @@ var Background_svelte_svelte_type_style_lang = '',
                     (m = p),
                     (c = n[1] + (d[1] - n[1]) * w),
                     (g = c),
-                    (b = m - (m - n[0]) * roundCorner),
+                    (_ = m - (m - n[0]) * roundCorner),
                     (l = g - (g - n[1]) * roundCorner),
-                    r.setTripleAt(m, g, p, c, b, l, _),
-                    (_ += 1))
+                    r.setTripleAt(m, g, p, c, _, l, b),
+                    (b += 1))
                 : (r.setTripleAt(
                     e.v[i][0],
                     e.v[i][1],
@@ -9438,9 +9438,9 @@ var Background_svelte_svelte_type_style_lang = '',
                     e.o[i][1],
                     e.i[i][0],
                     e.i[i][1],
-                    _
+                    b
                   ),
-                  (_ += 1));
+                  (b += 1));
           return r;
         }),
         (RoundCornersModifier.prototype.processShapes = function (e) {
@@ -9493,15 +9493,15 @@ var Background_svelte_svelte_type_style_lang = '',
           (i[0] /= s), (i[1] /= s);
           var o = shapePool.newElement();
           o.c = e.c;
-          var u, d, y, w, _, m;
+          var u, d, y, w, b, m;
           for (n = 0; n < s; n += 1)
             (u = e.v[n][0] + (i[0] - e.v[n][0]) * r),
               (d = e.v[n][1] + (i[1] - e.v[n][1]) * r),
               (y = e.o[n][0] + (i[0] - e.o[n][0]) * -r),
               (w = e.o[n][1] + (i[1] - e.o[n][1]) * -r),
-              (_ = e.i[n][0] + (i[0] - e.i[n][0]) * -r),
+              (b = e.i[n][0] + (i[0] - e.i[n][0]) * -r),
               (m = e.i[n][1] + (i[1] - e.i[n][1]) * -r),
-              o.setTripleAt(u, d, y, w, _, m, n);
+              o.setTripleAt(u, d, y, w, b, m, n);
           return o;
         }),
         (PuckerAndBloatModifier.prototype.processShapes = function (e) {
@@ -9658,10 +9658,10 @@ var Background_svelte_svelte_type_style_lang = '',
                 !y)
               ) {
                 var w = this.elemsData[i].it,
-                  _ = w[w.length - 1];
-                _.transform.op.v !== 0
-                  ? ((_.transform.op._mdf = !0), (_.transform.op.v = 0))
-                  : (_.transform.op._mdf = !1);
+                  b = w[w.length - 1];
+                b.transform.op.v !== 0
+                  ? ((b.transform.op._mdf = !0), (b.transform.op.v = 0))
+                  : (b.transform.op._mdf = !1);
               }
               n += 1;
             }
@@ -9670,7 +9670,7 @@ var Background_svelte_svelte_type_style_lang = '',
               g = m % 1,
               p = m > 0 ? Math.floor(m) : Math.ceil(m),
               c = this.pMatrix.props,
-              b = this.rMatrix.props,
+              _ = this.rMatrix.props,
               l = this.sMatrix.props;
             this.pMatrix.reset(),
               this.rMatrix.reset(),
@@ -9751,22 +9751,22 @@ var Background_svelte_svelte_type_style_lang = '',
                       !1
                     ),
                     this.matrix.transform(
-                      b[0],
-                      b[1],
-                      b[2],
-                      b[3],
-                      b[4],
-                      b[5],
-                      b[6],
-                      b[7],
-                      b[8],
-                      b[9],
-                      b[10],
-                      b[11],
-                      b[12],
-                      b[13],
-                      b[14],
-                      b[15]
+                      _[0],
+                      _[1],
+                      _[2],
+                      _[3],
+                      _[4],
+                      _[5],
+                      _[6],
+                      _[7],
+                      _[8],
+                      _[9],
+                      _[10],
+                      _[11],
+                      _[12],
+                      _[13],
+                      _[14],
+                      _[15]
                     ),
                     this.matrix.transform(
                       l[0],
@@ -10169,7 +10169,7 @@ var Background_svelte_svelte_type_style_lang = '',
           function w(l) {
             this.assetsPath = l || '';
           }
-          function _(l) {
+          function b(l) {
             for (var a = 0, h = this.images.length; a < h; ) {
               if (this.images[a].assetData === l) return this.images[a].img;
               a += 1;
@@ -10191,7 +10191,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 (this._createImageData = this.createImageData.bind(this)))
               : (this._createImageData = this.createImgData.bind(this));
           }
-          function b() {
+          function _() {
             (this._imageLoaded = t.bind(this)),
               (this._footageLoaded = r.bind(this)),
               (this.testImageLoaded = s.bind(this)),
@@ -10206,21 +10206,21 @@ var Background_svelte_svelte_type_style_lang = '',
               (this.images = []);
           }
           return (
-            (b.prototype = {
+            (_.prototype = {
               loadAssets: d,
               setAssetsPath: w,
               setPath: y,
               loadedImages: g,
               loadedFootages: p,
               destroy: m,
-              getAsset: _,
+              getAsset: b,
               createImgData: o,
               createImageData: n,
               imageLoaded: t,
               footageLoaded: r,
               setCacheType: c,
             }),
-            b
+            _
           );
         })(),
         featureSupport = (function () {
@@ -10329,12 +10329,12 @@ var Background_svelte_svelte_type_style_lang = '',
               d,
               y,
               w,
-              _,
+              b,
               m = e.l,
               g,
               p,
               c,
-              b,
+              _,
               l,
               a,
               h,
@@ -10354,9 +10354,9 @@ var Background_svelte_svelte_type_style_lang = '',
                 var V = A.v;
                 this._pathData.r.v && (V = V.reverse()),
                   (g = { tLength: 0, segments: [] }),
-                  (_ = V._length - 1);
+                  (b = V._length - 1);
                 var M;
-                for (C = 0, w = 0; w < _; w += 1)
+                for (C = 0, w = 0; w < b; w += 1)
                   (M = bez.buildBezierData(
                     V.v[w],
                     V.v[w + 1],
@@ -10369,7 +10369,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     (g.tLength += M.segmentLength),
                     g.segments.push(M),
                     (C += M.segmentLength);
-                (w = _),
+                (w = b),
                   A.v.c &&
                     ((M = bez.buildBezierData(
                       V.v[w],
@@ -10387,7 +10387,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 (p = this._pathData.f.v),
                 (h = 0),
                 (a = 1),
-                (b = 0),
+                (_ = 0),
                 (l = !0),
                 (k = g.segments),
                 p < 0 && A.v.c)
@@ -10408,7 +10408,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 (c = v[a]),
                 (x = c.partialLength);
             }
-            (_ = m.length), (d = 0), (y = 0);
+            (b = m.length), (d = 0), (y = 0);
             var D = e.finalSize * 1.2 * 0.714,
               F = !0,
               P,
@@ -10421,11 +10421,11 @@ var Background_svelte_svelte_type_style_lang = '',
               O = -1,
               G,
               N,
-              Y,
-              $ = p,
+              $,
+              U = p,
               ee = h,
               te = a,
-              U = -1,
+              Y = -1,
               Q,
               K,
               re,
@@ -10443,7 +10443,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 W = e.j === 2 ? -0.5 : -1,
                 H = 0,
                 Z = !0;
-              for (w = 0; w < _; w += 1)
+              for (w = 0; w < b; w += 1)
                 if (m[w].n) {
                   for (se && (se += q); H < w; )
                     (m[H].animatorJustifyOffset = se), (H += 1);
@@ -10463,12 +10463,12 @@ var Background_svelte_svelte_type_style_lang = '',
               for (se && (se += q); H < w; )
                 (m[H].animatorJustifyOffset = se), (H += 1);
             }
-            for (w = 0; w < _; w += 1) {
+            for (w = 0; w < b; w += 1) {
               if ((n.reset(), (Q = 1), m[w].n))
                 (d = 0),
                   (y += e.yOffset),
                   (y += F ? 1 : 0),
-                  (p = $),
+                  (p = U),
                   (F = !1),
                   this._hasMaskedPath &&
                     ((h = ee),
@@ -10477,7 +10477,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     (f = v[a - 1]),
                     (c = v[a]),
                     (x = c.partialLength),
-                    (b = 0)),
+                    (_ = 0)),
                   (oe = ''),
                   (le = ''),
                   (ae = ''),
@@ -10485,7 +10485,7 @@ var Background_svelte_svelte_type_style_lang = '',
                   (ie = this.defaultPropsArray);
               else {
                 if (this._hasMaskedPath) {
-                  if (U !== m[w].line) {
+                  if (Y !== m[w].line) {
                     switch (e.j) {
                       case 1:
                         p += C - e.lineWidths[m[w].line];
@@ -10494,7 +10494,7 @@ var Background_svelte_svelte_type_style_lang = '',
                         p += (C - e.lineWidths[m[w].line]) / 2;
                         break;
                     }
-                    U = m[w].line;
+                    Y = m[w].line;
                   }
                   O !== m[w].ind &&
                     (m[O] && (p += m[O].extra),
@@ -10526,22 +10526,22 @@ var Background_svelte_svelte_type_style_lang = '',
                             m[0].an * 0.5 -
                             m[m.length - 1].an * 0.5) *
                             O) /
-                            (_ - 1)),
+                            (b - 1)),
                         (p += this._pathData.f.v));
                     l;
 
                   )
-                    b + x >= p + j || !v
-                      ? ((R = (p + j - b) / c.partialLength),
+                    _ + x >= p + j || !v
+                      ? ((R = (p + j - _) / c.partialLength),
                         (N = f.point[0] + (c.point[0] - f.point[0]) * R),
-                        (Y = f.point[1] + (c.point[1] - f.point[1]) * R),
+                        ($ = f.point[1] + (c.point[1] - f.point[1]) * R),
                         n.translate(
                           -r[0] * m[w].an * 0.005,
                           -(r[1] * D) * 0.01
                         ),
                         (l = !1))
                       : v &&
-                        ((b += c.partialLength),
+                        ((_ += c.partialLength),
                         (a += 1),
                         a >= v.length &&
                           ((a = 0),
@@ -10550,7 +10550,7 @@ var Background_svelte_svelte_type_style_lang = '',
                             ? (v = k[h].points)
                             : A.v.c
                             ? ((a = 0), (h = 0), (v = k[h].points))
-                            : ((b -= c.partialLength), (v = null))),
+                            : ((_ -= c.partialLength), (v = null))),
                         v && ((f = c), (c = v[a]), (x = c.partialLength)));
                   (G = m[w].an / 2 - m[w].add), n.translate(-G, 0, 0);
                 } else
@@ -10721,7 +10721,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     c.point[0] < f.point[0] && (he += 180),
                       n.rotate((-he * Math.PI) / 180);
                   }
-                  n.translate(N, Y, 0),
+                  n.translate(N, $, 0),
                     (p -= r[0] * m[w].an * 0.005),
                     m[w + 1] &&
                       O !== m[w + 1].ind &&
@@ -11013,12 +11013,12 @@ var Background_svelte_svelte_type_style_lang = '',
             d,
             y = r.m.g,
             w = 0,
-            _ = 0,
+            b = 0,
             m = 0,
             g = [],
             p = 0,
             c = 0,
-            b,
+            _,
             l,
             a = t.getFontByName(e.f),
             h,
@@ -11105,14 +11105,14 @@ var Background_svelte_svelte_type_style_lang = '',
               y == 2)
             ) {
               if (((w += f), d === '' || d === ' ' || s === n - 1)) {
-                for ((d === '' || d === ' ') && (w -= f); _ <= s; )
-                  (i[_].an = w), (i[_].ind = u), (i[_].extra = f), (_ += 1);
+                for ((d === '' || d === ' ') && (w -= f); b <= s; )
+                  (i[b].an = w), (i[b].ind = u), (i[b].extra = f), (b += 1);
                 (u += 1), (w = 0);
               }
             } else if (y == 3) {
               if (((w += f), d === '' || s === n - 1)) {
-                for (d === '' && (w -= f); _ <= s; )
-                  (i[_].an = w), (i[_].ind = u), (i[_].extra = f), (_ += 1);
+                for (d === '' && (w -= f); b <= s; )
+                  (i[b].an = w), (i[b].ind = u), (i[b].extra = f), (b += 1);
                 (w = 0), (u += 1);
               }
             } else (i[u].ind = u), (i[u].extra = 0), (u += 1);
@@ -11137,9 +11137,9 @@ var Background_svelte_svelte_type_style_lang = '',
           var T,
             L,
             z = [];
-          for (b = 0; b < l; b += 1) {
+          for (_ = 0; _ < l; _ += 1) {
             for (
-              S = P[b],
+              S = P[_],
                 S.a.sc && (e.strokeColorAnim = !0),
                 S.a.sw && (e.strokeWidthAnim = !0),
                 (S.a.fc || S.a.fh || S.a.fs || S.a.fb) &&
@@ -11151,22 +11151,22 @@ var Background_svelte_svelte_type_style_lang = '',
               s += 1
             )
               (E = i[s]),
-                (E.anIndexes[b] = L),
+                (E.anIndexes[_] = L),
                 ((T == 1 && E.val !== '') ||
                   (T == 2 && E.val !== '' && E.val !== ' ') ||
                   (T == 3 && (E.n || E.val == ' ' || s == n - 1)) ||
                   (T == 4 && (E.n || s == n - 1))) &&
                   (S.s.rn === 1 && z.push(L), (L += 1));
-            r.a[b].s.totalChars = L;
+            r.a[_].s.totalChars = L;
             var O = -1,
               G;
             if (S.s.rn === 1)
               for (s = 0; s < n; s += 1)
                 (E = i[s]),
-                  O != E.anIndexes[b] &&
-                    ((O = E.anIndexes[b]),
+                  O != E.anIndexes[_] &&
+                    ((O = E.anIndexes[_]),
                     (G = z.splice(Math.floor(Math.random() * z.length), 1)[0])),
-                  (E.anIndexes[b] = G);
+                  (E.anIndexes[_] = G);
           }
           (e.yOffset = e.finalLineHeight || e.finalSize * 1.2),
             (e.ls = e.ls || 0),
@@ -11264,58 +11264,58 @@ var Background_svelte_svelte_type_style_lang = '',
                   ? (d = 1 - this.xe.v / 100)
                   : (y = 1 + this.xe.v / 100);
               var w = BezierFactory.getBezierEasing(o, u, d, y).get,
-                _ = 0,
+                b = 0,
                 m = this.finalS,
                 g = this.finalE,
                 p = this.data.sh;
               if (p === 2)
                 g === m
-                  ? (_ = n >= g ? 1 : 0)
-                  : (_ = e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
-                  (_ = w(_));
+                  ? (b = n >= g ? 1 : 0)
+                  : (b = e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
+                  (b = w(b));
               else if (p === 3)
                 g === m
-                  ? (_ = n >= g ? 0 : 1)
-                  : (_ = 1 - e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
-                  (_ = w(_));
+                  ? (b = n >= g ? 0 : 1)
+                  : (b = 1 - e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
+                  (b = w(b));
               else if (p === 4)
                 g === m
-                  ? (_ = 0)
-                  : ((_ = e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
-                    _ < 0.5 ? (_ *= 2) : (_ = 1 - 2 * (_ - 0.5))),
-                  (_ = w(_));
+                  ? (b = 0)
+                  : ((b = e(0, t(0.5 / (g - m) + (n - m) / (g - m), 1))),
+                    b < 0.5 ? (b *= 2) : (b = 1 - 2 * (b - 0.5))),
+                  (b = w(b));
               else if (p === 5) {
-                if (g === m) _ = 0;
+                if (g === m) b = 0;
                 else {
                   var c = g - m;
                   n = t(e(0, n + 0.5 - m), g - m);
-                  var b = -c / 2 + n,
+                  var _ = -c / 2 + n,
                     l = c / 2;
-                  _ = Math.sqrt(1 - (b * b) / (l * l));
+                  b = Math.sqrt(1 - (_ * _) / (l * l));
                 }
-                _ = w(_);
+                b = w(b);
               } else
                 p === 6
                   ? (g === m
-                      ? (_ = 0)
+                      ? (b = 0)
                       : ((n = t(e(0, n + 0.5 - m), g - m)),
-                        (_ =
+                        (b =
                           (1 +
                             Math.cos(Math.PI + (Math.PI * 2 * n) / (g - m))) /
                           2)),
-                    (_ = w(_)))
+                    (b = w(b)))
                   : (n >= r(m) &&
                       (n - m < 0
-                        ? (_ = e(0, t(t(g, 1) - (m - n), 1)))
-                        : (_ = e(0, t(g - n, 1)))),
-                    (_ = w(_)));
+                        ? (b = e(0, t(t(g, 1) - (m - n), 1)))
+                        : (b = e(0, t(g - n, 1)))),
+                    (b = w(b)));
               if (this.sm.v !== 100) {
                 var a = this.sm.v * 0.01;
                 a === 0 && (a = 1e-8);
                 var h = 0.5 - a * 0.5;
-                _ < h ? (_ = 0) : ((_ = (_ - h) / a), _ > 1 && (_ = 1));
+                b < h ? (b = 0) : ((b = (b - h) / a), b > 1 && (b = 1));
               }
-              return _ * this.a.v;
+              return b * this.a.v;
             },
             getValue: function (n) {
               this.iterateDynamicProperties(),
@@ -12512,12 +12512,12 @@ var Background_svelte_svelte_type_style_lang = '',
           d = 0,
           y = [],
           w,
-          _,
+          b,
           m = createElementID(),
           g,
           p,
           c,
-          b,
+          _,
           l = 'clipPath',
           a = 'clip-path';
         for (s = 0; s < n; s += 1)
@@ -12559,7 +12559,7 @@ var Background_svelte_svelte_type_style_lang = '',
               (u[s].x.k !== 0
                 ? ((l = 'mask'),
                   (a = 'mask'),
-                  (b = PropertyFactory.getProp(
+                  (_ = PropertyFactory.getProp(
                     this.element,
                     u[s].x,
                     0,
@@ -12579,10 +12579,10 @@ var Background_svelte_svelte_type_style_lang = '',
                     'stroke',
                     u[s].mode === 's' ? '#000000' : '#ffffff'
                   ))
-                : ((c = null), (b = null)),
+                : ((c = null), (_ = null)),
               (this.storedData[s] = {
                 elem: o,
-                x: b,
+                x: _,
                 expan: c,
                 lastPath: '',
                 lastOperator: '',
@@ -12591,9 +12591,9 @@ var Background_svelte_svelte_type_style_lang = '',
               }),
               u[s].mode === 'i')
             ) {
-              _ = y.length;
+              b = y.length;
               var f = createNS('g');
-              for (w = 0; w < _; w += 1) f.appendChild(y[w]);
+              for (w = 0; w < b; w += 1) f.appendChild(y[w]);
               var v = createNS('mask');
               v.setAttribute('mask-type', 'alpha'),
                 v.setAttribute('id', m + '_' + d),
@@ -13172,46 +13172,46 @@ var Background_svelte_svelte_type_style_lang = '',
               return null;
           }
         }
-        function s(w, _, m) {
-          (m || _.transform.op._mdf) &&
-            _.transform.container.setAttribute('opacity', _.transform.op.v),
-            (m || _.transform.mProps._mdf) &&
-              _.transform.container.setAttribute(
+        function s(w, b, m) {
+          (m || b.transform.op._mdf) &&
+            b.transform.container.setAttribute('opacity', b.transform.op.v),
+            (m || b.transform.mProps._mdf) &&
+              b.transform.container.setAttribute(
                 'transform',
-                _.transform.mProps.v.to2dCSS()
+                b.transform.mProps.v.to2dCSS()
               );
         }
-        function n(w, _, m) {
+        function n(w, b, m) {
           var g,
             p,
             c,
-            b,
+            _,
             l,
             a,
-            h = _.styles.length,
-            f = _.lvl,
+            h = b.styles.length,
+            f = b.lvl,
             v,
             k,
             x,
             C,
             R;
           for (a = 0; a < h; a += 1) {
-            if (((b = _.sh._mdf || m), _.styles[a].lvl < f)) {
+            if (((_ = b.sh._mdf || m), b.styles[a].lvl < f)) {
               for (
                 k = t.reset(),
-                  C = f - _.styles[a].lvl,
-                  R = _.transformers.length - 1;
-                !b && C > 0;
+                  C = f - b.styles[a].lvl,
+                  R = b.transformers.length - 1;
+                !_ && C > 0;
 
               )
-                (b = _.transformers[R].mProps._mdf || b), (C -= 1), (R -= 1);
-              if (b)
+                (_ = b.transformers[R].mProps._mdf || _), (C -= 1), (R -= 1);
+              if (_)
                 for (
-                  C = f - _.styles[a].lvl, R = _.transformers.length - 1;
+                  C = f - b.styles[a].lvl, R = b.transformers.length - 1;
                   C > 0;
 
                 )
-                  (x = _.transformers[R].mProps.v.props),
+                  (x = b.transformers[R].mProps.v.props),
                     k.transform(
                       x[0],
                       x[1],
@@ -13233,58 +13233,58 @@ var Background_svelte_svelte_type_style_lang = '',
                     (C -= 1),
                     (R -= 1);
             } else k = e;
-            if (((v = _.sh.paths), (p = v._length), b)) {
+            if (((v = b.sh.paths), (p = v._length), _)) {
               for (c = '', g = 0; g < p; g += 1)
                 (l = v.shapes[g]),
                   l &&
                     l._length &&
                     (c += buildShapeString(l, l._length, l.c, k));
-              _.caches[a] = c;
-            } else c = _.caches[a];
-            (_.styles[a].d += w.hd === !0 ? '' : c),
-              (_.styles[a]._mdf = b || _.styles[a]._mdf);
+              b.caches[a] = c;
+            } else c = b.caches[a];
+            (b.styles[a].d += w.hd === !0 ? '' : c),
+              (b.styles[a]._mdf = _ || b.styles[a]._mdf);
           }
         }
-        function o(w, _, m) {
-          var g = _.style;
-          (_.c._mdf || m) &&
+        function o(w, b, m) {
+          var g = b.style;
+          (b.c._mdf || m) &&
             g.pElem.setAttribute(
               'fill',
               'rgb(' +
-                bmFloor(_.c.v[0]) +
+                bmFloor(b.c.v[0]) +
                 ',' +
-                bmFloor(_.c.v[1]) +
+                bmFloor(b.c.v[1]) +
                 ',' +
-                bmFloor(_.c.v[2]) +
+                bmFloor(b.c.v[2]) +
                 ')'
             ),
-            (_.o._mdf || m) && g.pElem.setAttribute('fill-opacity', _.o.v);
+            (b.o._mdf || m) && g.pElem.setAttribute('fill-opacity', b.o.v);
         }
-        function u(w, _, m) {
-          d(w, _, m), y(w, _, m);
+        function u(w, b, m) {
+          d(w, b, m), y(w, b, m);
         }
-        function d(w, _, m) {
-          var g = _.gf,
-            p = _.g._hasOpacity,
-            c = _.s.v,
-            b = _.e.v;
-          if (_.o._mdf || m) {
+        function d(w, b, m) {
+          var g = b.gf,
+            p = b.g._hasOpacity,
+            c = b.s.v,
+            _ = b.e.v;
+          if (b.o._mdf || m) {
             var l = w.ty === 'gf' ? 'fill-opacity' : 'stroke-opacity';
-            _.style.pElem.setAttribute(l, _.o.v);
+            b.style.pElem.setAttribute(l, b.o.v);
           }
-          if (_.s._mdf || m) {
+          if (b.s._mdf || m) {
             var a = w.t === 1 ? 'x1' : 'cx',
               h = a === 'x1' ? 'y1' : 'cy';
             g.setAttribute(a, c[0]),
               g.setAttribute(h, c[1]),
               p &&
-                !_.g._collapsable &&
-                (_.of.setAttribute(a, c[0]), _.of.setAttribute(h, c[1]));
+                !b.g._collapsable &&
+                (b.of.setAttribute(a, c[0]), b.of.setAttribute(h, c[1]));
           }
           var f, v, k, x;
-          if (_.g._cmdf || m) {
-            f = _.cst;
-            var C = _.g.c;
+          if (b.g._cmdf || m) {
+            f = b.cst;
+            var C = b.g.c;
             for (k = f.length, v = 0; v < k; v += 1)
               (x = f[v]),
                 x.setAttribute('offset', C[v * 4] + '%'),
@@ -13299,77 +13299,77 @@ var Background_svelte_svelte_type_style_lang = '',
                     ')'
                 );
           }
-          if (p && (_.g._omdf || m)) {
-            var R = _.g.o;
+          if (p && (b.g._omdf || m)) {
+            var R = b.g.o;
             for (
-              _.g._collapsable ? (f = _.cst) : (f = _.ost), k = f.length, v = 0;
+              b.g._collapsable ? (f = b.cst) : (f = b.ost), k = f.length, v = 0;
               v < k;
               v += 1
             )
               (x = f[v]),
-                _.g._collapsable || x.setAttribute('offset', R[v * 2] + '%'),
+                b.g._collapsable || x.setAttribute('offset', R[v * 2] + '%'),
                 x.setAttribute('stop-opacity', R[v * 2 + 1]);
           }
           if (w.t === 1)
-            (_.e._mdf || m) &&
-              (g.setAttribute('x2', b[0]),
-              g.setAttribute('y2', b[1]),
+            (b.e._mdf || m) &&
+              (g.setAttribute('x2', _[0]),
+              g.setAttribute('y2', _[1]),
               p &&
-                !_.g._collapsable &&
-                (_.of.setAttribute('x2', b[0]), _.of.setAttribute('y2', b[1])));
+                !b.g._collapsable &&
+                (b.of.setAttribute('x2', _[0]), b.of.setAttribute('y2', _[1])));
           else {
             var I;
             if (
-              ((_.s._mdf || _.e._mdf || m) &&
+              ((b.s._mdf || b.e._mdf || m) &&
                 ((I = Math.sqrt(
-                  Math.pow(c[0] - b[0], 2) + Math.pow(c[1] - b[1], 2)
+                  Math.pow(c[0] - _[0], 2) + Math.pow(c[1] - _[1], 2)
                 )),
                 g.setAttribute('r', I),
-                p && !_.g._collapsable && _.of.setAttribute('r', I)),
-              _.e._mdf || _.h._mdf || _.a._mdf || m)
+                p && !b.g._collapsable && b.of.setAttribute('r', I)),
+              b.e._mdf || b.h._mdf || b.a._mdf || m)
             ) {
               I ||
                 (I = Math.sqrt(
-                  Math.pow(c[0] - b[0], 2) + Math.pow(c[1] - b[1], 2)
+                  Math.pow(c[0] - _[0], 2) + Math.pow(c[1] - _[1], 2)
                 ));
-              var A = Math.atan2(b[1] - c[1], b[0] - c[0]),
-                V = _.h.v;
+              var A = Math.atan2(_[1] - c[1], _[0] - c[0]),
+                V = b.h.v;
               V >= 1 ? (V = 0.99) : V <= -1 && (V = -0.99);
               var M = I * V,
-                D = Math.cos(A + _.a.v) * M + c[0],
-                F = Math.sin(A + _.a.v) * M + c[1];
+                D = Math.cos(A + b.a.v) * M + c[0],
+                F = Math.sin(A + b.a.v) * M + c[1];
               g.setAttribute('fx', D),
                 g.setAttribute('fy', F),
                 p &&
-                  !_.g._collapsable &&
-                  (_.of.setAttribute('fx', D), _.of.setAttribute('fy', F));
+                  !b.g._collapsable &&
+                  (b.of.setAttribute('fx', D), b.of.setAttribute('fy', F));
             }
           }
         }
-        function y(w, _, m) {
-          var g = _.style,
-            p = _.d;
+        function y(w, b, m) {
+          var g = b.style,
+            p = b.d;
           p &&
             (p._mdf || m) &&
             p.dashStr &&
             (g.pElem.setAttribute('stroke-dasharray', p.dashStr),
             g.pElem.setAttribute('stroke-dashoffset', p.dashoffset[0])),
-            _.c &&
-              (_.c._mdf || m) &&
+            b.c &&
+              (b.c._mdf || m) &&
               g.pElem.setAttribute(
                 'stroke',
                 'rgb(' +
-                  bmFloor(_.c.v[0]) +
+                  bmFloor(b.c.v[0]) +
                   ',' +
-                  bmFloor(_.c.v[1]) +
+                  bmFloor(b.c.v[1]) +
                   ',' +
-                  bmFloor(_.c.v[2]) +
+                  bmFloor(b.c.v[2]) +
                   ')'
               ),
-            (_.o._mdf || m) && g.pElem.setAttribute('stroke-opacity', _.o.v),
-            (_.w._mdf || m) &&
-              (g.pElem.setAttribute('stroke-width', _.w.v),
-              g.msElem && g.msElem.setAttribute('stroke-width', _.w.v));
+            (b.o._mdf || m) && g.pElem.setAttribute('stroke-opacity', b.o.v),
+            (b.w._mdf || m) &&
+              (g.pElem.setAttribute('stroke-width', b.w.v),
+              g.msElem && g.msElem.setAttribute('stroke-width', b.w.v));
         }
         return r;
       })();
@@ -13636,8 +13636,8 @@ var Background_svelte_svelte_type_style_lang = '',
             this.data.ty === 0 && !this.data.hd)
           ) {
             var w = createNS('clipPath'),
-              _ = createNS('path');
-            _.setAttribute(
+              b = createNS('path');
+            b.setAttribute(
               'd',
               'M0,0 L' +
                 this.data.w +
@@ -13652,7 +13652,7 @@ var Background_svelte_svelte_type_style_lang = '',
             var m = createElementID();
             if (
               (w.setAttribute('id', m),
-              w.appendChild(_),
+              w.appendChild(b),
               this.globalData.defs.appendChild(w),
               this.checkMasks())
             ) {
@@ -14142,12 +14142,12 @@ var Background_svelte_svelte_type_style_lang = '',
           var d,
             y = this.mHelper,
             w,
-            _ = '',
+            b = '',
             m = this.data.singleShape,
             g = 0,
             p = 0,
             c = !0,
-            b = r.tr * 0.001 * r.finalSize;
+            _ = r.tr * 0.001 * r.finalSize;
           if (m && !u && !r.sz) {
             var l = this.textContainer,
               a = 'start';
@@ -14163,7 +14163,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 break;
             }
             l.setAttribute('text-anchor', a),
-              l.setAttribute('letter-spacing', b);
+              l.setAttribute('letter-spacing', _);
             var h = this.buildTextContents(r.finalText);
             for (
               t = h.length, p = r.ps ? r.ps[1] + r.ascent : 0, e = 0;
@@ -14198,10 +14198,10 @@ var Background_svelte_svelte_type_style_lang = '',
                 y.scale(r.finalSize / 100, r.finalSize / 100),
                 m &&
                   (o[e].n &&
-                    ((g = -b), (p += r.yOffset), (p += c ? 1 : 0), (c = !1)),
+                    ((g = -_), (p += r.yOffset), (p += c ? 1 : 0), (c = !1)),
                   this.applyTextPropertiesToMatrix(r, y, o[e].line, g, p),
                   (g += o[e].l || 0),
-                  (g += b)),
+                  (g += _)),
                 u
                   ? ((k = this.globalData.fontManager.getCharData(
                       r.finalText[e],
@@ -14211,7 +14211,7 @@ var Background_svelte_svelte_type_style_lang = '',
                     (v = (k && k.data) || {}),
                     (w = v.shapes ? v.shapes[0].it : []),
                     m
-                      ? (_ += this.createPathShape(y, w))
+                      ? (b += this.createPathShape(y, w))
                       : d.setAttribute('d', this.createPathShape(y, w)))
                   : (m &&
                       d.setAttribute(
@@ -14224,7 +14224,7 @@ var Background_svelte_svelte_type_style_lang = '',
                       'xml:space',
                       'preserve'
                     ));
-            m && d && d.setAttribute('d', _);
+            m && d && d.setAttribute('d', b);
           }
           for (; e < this.textSpans.length; )
             (this.textSpans[e].style.display = 'none'), (e += 1);
@@ -14459,22 +14459,22 @@ var Background_svelte_svelte_type_style_lang = '',
             d,
             y = e.length - 1,
             w,
-            _,
+            b,
             m = [],
             g = [],
             p,
             c,
-            b;
+            _;
           for (d = y; d >= 0; d -= 1) {
             if (
-              ((b = this.searchProcessedElement(e[d])),
-              b ? (t[d] = r[b - 1]) : (e[d]._render = o),
+              ((_ = this.searchProcessedElement(e[d])),
+              _ ? (t[d] = r[_ - 1]) : (e[d]._render = o),
               e[d].ty === 'fl' ||
                 e[d].ty === 'st' ||
                 e[d].ty === 'gf' ||
                 e[d].ty === 'gs')
             )
-              b
+              _
                 ? (t[d].style.closed = !1)
                 : (t[d] = this.createStyleElement(e[d], s)),
                 e[d]._render &&
@@ -14482,9 +14482,9 @@ var Background_svelte_svelte_type_style_lang = '',
                   i.appendChild(t[d].style.pElem),
                 m.push(t[d].style);
             else if (e[d].ty === 'gr') {
-              if (!b) t[d] = this.createGroupElement(e[d]);
+              if (!_) t[d] = this.createGroupElement(e[d]);
               else
-                for (_ = t[d].it.length, w = 0; w < _; w += 1)
+                for (b = t[d].it.length, w = 0; w < b; w += 1)
                   t[d].prevViewData[w] = t[d].it[w];
               this.searchShapes(
                 e[d].it,
@@ -14500,20 +14500,20 @@ var Background_svelte_svelte_type_style_lang = '',
                   i.appendChild(t[d].gr);
             } else
               e[d].ty === 'tr'
-                ? (b || (t[d] = this.createTransformElement(e[d], i)),
+                ? (_ || (t[d] = this.createTransformElement(e[d], i)),
                   (p = t[d].transform),
                   u.push(p))
                 : e[d].ty === 'sh' ||
                   e[d].ty === 'rc' ||
                   e[d].ty === 'el' ||
                   e[d].ty === 'sr'
-                ? (b || (t[d] = this.createShapeElement(e[d], u, s)),
+                ? (_ || (t[d] = this.createShapeElement(e[d], u, s)),
                   this.setElementStyles(t[d]))
                 : e[d].ty === 'tm' ||
                   e[d].ty === 'rd' ||
                   e[d].ty === 'ms' ||
                   e[d].ty === 'pb'
-                ? (b
+                ? (_
                     ? ((c = t[d]), (c.closed = !1))
                     : ((c = ShapeModifiers.getModifier(e[d].ty)),
                       c.init(this, e[d]),
@@ -14521,7 +14521,7 @@ var Background_svelte_svelte_type_style_lang = '',
                       this.shapeModifiers.push(c)),
                   g.push(c))
                 : e[d].ty === 'rp' &&
-                  (b
+                  (_
                     ? ((c = t[d]), (c.closed = !0))
                     : ((c = ShapeModifiers.getModifier(e[d].ty)),
                       (t[d] = c),
@@ -14784,9 +14784,9 @@ var Background_svelte_svelte_type_style_lang = '',
                       2 *
                       this.filterManager.effectElements[9].p.v *
                       0.01,
-                  _ = Math.floor(y / w),
+                  b = Math.floor(y / w),
                   m;
-                for (m = 0; m < _; m += 1)
+                for (m = 0; m < b; m += 1)
                   n +=
                     '1 ' +
                     this.filterManager.effectElements[4].p.v *
@@ -14947,7 +14947,7 @@ var Background_svelte_svelte_type_style_lang = '',
               d = Math.min(e, t),
               y = Math.max(e, t),
               w = Array.call(null, { length: o }),
-              _,
+              b,
               m = 0,
               g = s - i,
               p = t - e;
@@ -14956,11 +14956,11 @@ var Background_svelte_svelte_type_style_lang = '',
           )
             (u = n / 256),
               u <= d
-                ? (_ = p < 0 ? s : i)
+                ? (b = p < 0 ? s : i)
                 : u >= y
-                ? (_ = p < 0 ? i : s)
-                : (_ = i + g * Math.pow((u - e) / p, 1 / r)),
-              (w[m] = _),
+                ? (b = p < 0 ? i : s)
+                : (b = i + g * Math.pow((u - e) / p, 1 / r)),
+              (w[m] = b),
               (m += 1),
               (n += 256 / (o - 1));
           return w.join(' ');
@@ -15678,41 +15678,41 @@ var Background_svelte_svelte_type_style_lang = '',
             d,
             y = [],
             w = [],
-            _,
+            b,
             m,
             g,
             p = [].concat(s);
           for (n = o; n >= 0; n -= 1) {
             if (
-              ((_ = this.searchProcessedElement(e[n])),
-              _ ? (t[n] = r[_ - 1]) : (e[n]._shouldRender = i),
+              ((b = this.searchProcessedElement(e[n])),
+              b ? (t[n] = r[b - 1]) : (e[n]._shouldRender = i),
               e[n].ty === 'fl' ||
                 e[n].ty === 'st' ||
                 e[n].ty === 'gf' ||
                 e[n].ty === 'gs')
             )
-              _
+              b
                 ? (t[n].style.closed = !1)
                 : (t[n] = this.createStyleElement(e[n], p)),
                 y.push(t[n].style);
             else if (e[n].ty === 'gr') {
-              if (!_) t[n] = this.createGroupElement(e[n]);
+              if (!b) t[n] = this.createGroupElement(e[n]);
               else
                 for (d = t[n].it.length, u = 0; u < d; u += 1)
                   t[n].prevViewData[u] = t[n].it[u];
               this.searchShapes(e[n].it, t[n].it, t[n].prevViewData, i, p);
             } else
               e[n].ty === 'tr'
-                ? (_ || ((g = this.createTransformElement(e[n])), (t[n] = g)),
+                ? (b || ((g = this.createTransformElement(e[n])), (t[n] = g)),
                   p.push(t[n]),
                   this.addTransformToStyleList(t[n]))
                 : e[n].ty === 'sh' ||
                   e[n].ty === 'rc' ||
                   e[n].ty === 'el' ||
                   e[n].ty === 'sr'
-                ? _ || (t[n] = this.createShapeElement(e[n]))
+                ? b || (t[n] = this.createShapeElement(e[n]))
                 : e[n].ty === 'tm' || e[n].ty === 'rd' || e[n].ty === 'pb'
-                ? (_
+                ? (b
                     ? ((m = t[n]), (m.closed = !1))
                     : ((m = ShapeModifiers.getModifier(e[n].ty)),
                       m.init(this, e[n]),
@@ -15720,7 +15720,7 @@ var Background_svelte_svelte_type_style_lang = '',
                       this.shapeModifiers.push(m)),
                   w.push(m))
                 : e[n].ty === 'rp' &&
-                  (_
+                  (b
                     ? ((m = t[n]), (m.closed = !0))
                     : ((m = ShapeModifiers.getModifier(e[n].ty)),
                       (t[n] = m),
@@ -15768,31 +15768,31 @@ var Background_svelte_svelte_type_style_lang = '',
             d = this.globalData.renderer,
             y = this.globalData.canvasContext,
             w,
-            _;
+            b;
           for (e = 0; e < t; e += 1)
             if (
-              ((_ = this.stylesList[e]),
-              (w = _.type),
+              ((b = this.stylesList[e]),
+              (w = b.type),
               !(
-                ((w === 'st' || w === 'gs') && _.wi === 0) ||
-                !_.data._shouldRender ||
-                _.coOp === 0 ||
+                ((w === 'st' || w === 'gs') && b.wi === 0) ||
+                !b.data._shouldRender ||
+                b.coOp === 0 ||
                 this.globalData.currentGlobalAlpha === 0
               ))
             ) {
               for (
                 d.save(),
-                  o = _.elements,
+                  o = b.elements,
                   w === 'st' || w === 'gs'
-                    ? ((y.strokeStyle = w === 'st' ? _.co : _.grd),
-                      (y.lineWidth = _.wi),
-                      (y.lineCap = _.lc),
-                      (y.lineJoin = _.lj),
-                      (y.miterLimit = _.ml || 0))
-                    : (y.fillStyle = w === 'fl' ? _.co : _.grd),
-                  d.ctxOpacity(_.coOp),
+                    ? ((y.strokeStyle = w === 'st' ? b.co : b.grd),
+                      (y.lineWidth = b.wi),
+                      (y.lineCap = b.lc),
+                      (y.lineJoin = b.lj),
+                      (y.miterLimit = b.ml || 0))
+                    : (y.fillStyle = w === 'fl' ? b.co : b.grd),
+                  d.ctxOpacity(b.coOp),
                   w !== 'st' && w !== 'gs' && y.beginPath(),
-                  d.ctxTransform(_.preTransforms.finalTransform.props),
+                  d.ctxTransform(b.preTransforms.finalTransform.props),
                   i = o.length,
                   r = 0;
                 r < i;
@@ -15801,7 +15801,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 for (
                   (w === 'st' || w === 'gs') &&
                     (y.beginPath(),
-                    _.da && (y.setLineDash(_.da), (y.lineDashOffset = _.do))),
+                    b.da && (y.setLineDash(b.da), (y.lineDashOffset = b.do))),
                     u = o[r].trNodes,
                     n = u.length,
                     s = 0;
@@ -15821,9 +15821,9 @@ var Background_svelte_svelte_type_style_lang = '',
                       )
                     : y.closePath();
                 (w === 'st' || w === 'gs') &&
-                  (y.stroke(), _.da && y.setLineDash(this.dashResetter));
+                  (y.stroke(), b.da && y.setLineDash(this.dashResetter));
               }
-              w !== 'st' && w !== 'gs' && y.fill(_.r), d.restore();
+              w !== 'st' && w !== 'gs' && y.fill(b.r), d.restore();
             }
         }),
         (CVShapeElement.prototype.renderShape = function (e, t, r, i) {
@@ -15932,25 +15932,25 @@ var Background_svelte_svelte_type_style_lang = '',
                 y = Math.atan2(u[1] - o[1], u[0] - o[0]),
                 w = t.h.v;
               w >= 1 ? (w = 0.99) : w <= -1 && (w = -0.99);
-              var _ = d * w,
-                m = Math.cos(y + t.a.v) * _ + o[0],
-                g = Math.sin(y + t.a.v) * _ + o[1];
+              var b = d * w,
+                m = Math.cos(y + t.a.v) * b + o[0],
+                g = Math.sin(y + t.a.v) * b + o[1];
               s = n.createRadialGradient(m, g, 0, o[0], o[1], d);
             }
             var p,
               c = e.g.p,
-              b = t.g.c,
+              _ = t.g.c,
               l = 1;
             for (p = 0; p < c; p += 1)
               t.g._hasOpacity && t.g._collapsable && (l = t.g.o[p * 2 + 1]),
                 s.addColorStop(
-                  b[p * 4] / 100,
+                  _[p * 4] / 100,
                   'rgba(' +
-                    b[p * 4 + 1] +
+                    _[p * 4 + 1] +
                     ',' +
-                    b[p * 4 + 2] +
+                    _[p * 4 + 2] +
                     ',' +
-                    b[p * 4 + 3] +
+                    _[p * 4 + 3] +
                     ',' +
                     l +
                     ')'
@@ -16068,12 +16068,12 @@ var Background_svelte_svelte_type_style_lang = '',
           var d,
             y,
             w,
-            _,
+            b,
             m,
             g,
             p,
             c,
-            b,
+            _,
             l,
             a = this.data.singleShape,
             h = e.tr * 0.001 * e.finalSize,
@@ -16097,14 +16097,14 @@ var Background_svelte_svelte_type_style_lang = '',
                 p = m.length,
                 u.scale(e.finalSize / 100, e.finalSize / 100),
                 a && this.applyTextPropertiesToMatrix(e, u, o[s].line, f, v),
-                b = createSizedArray(p),
+                _ = createSizedArray(p),
                 g = 0;
               g < p;
               g += 1
             ) {
               for (
-                _ = m[g].ks.k.i.length, c = m[g].ks.k, l = [], w = 1;
-                w < _;
+                b = m[g].ks.k.i.length, c = m[g].ks.k, l = [], w = 1;
+                w < b;
                 w += 1
               )
                 w === 1 &&
@@ -16128,12 +16128,12 @@ var Background_svelte_svelte_type_style_lang = '',
                 u.applyToX(c.v[0][0], c.v[0][1], 0),
                 u.applyToY(c.v[0][0], c.v[0][1], 0)
               ),
-                (b[g] = l);
+                (_[g] = l);
             }
             a && ((f += o[s].l), (f += h)),
               this.textSpans[x]
-                ? (this.textSpans[x].elem = b)
-                : (this.textSpans[x] = { elem: b }),
+                ? (this.textSpans[x].elem = _)
+                : (this.textSpans[x] = { elem: _ }),
               (x += 1);
           }
         }),
@@ -16159,7 +16159,7 @@ var Background_svelte_svelte_type_style_lang = '',
           r = d.length;
           var y,
             w = null,
-            _ = null,
+            b = null,
             m = null,
             g,
             p;
@@ -16213,9 +16213,9 @@ var Background_svelte_svelte_type_style_lang = '',
                       ((m = this.values.sWidth),
                       (e.lineWidth = this.values.sWidth)),
                     y && y.sc
-                      ? _ !== y.sc && ((_ = y.sc), (e.strokeStyle = y.sc))
-                      : _ !== this.values.stroke &&
-                        ((_ = this.values.stroke),
+                      ? b !== y.sc && ((b = y.sc), (e.strokeStyle = y.sc))
+                      : b !== this.values.stroke &&
+                        ((b = this.values.stroke),
                         (e.strokeStyle = this.values.stroke)),
                     g = this.textSpans[t].elem,
                     s = g.length,
@@ -16492,7 +16492,7 @@ var Background_svelte_svelte_type_style_lang = '',
               d,
               y,
               w,
-              _,
+              b,
               m = 0;
             m < 2;
             ++m
@@ -16515,10 +16515,10 @@ var Background_svelte_svelte_type_style_lang = '',
                       w > 0 &&
                         w < 1 &&
                         s[m].push(this.calculateF(w, e, t, r, i, m)),
-                      (_ = (-o - bmSqrt(y)) / (2 * n)),
-                      _ > 0 &&
-                        _ < 1 &&
-                        s[m].push(this.calculateF(_, e, t, r, i, m)))));
+                      (b = (-o - bmSqrt(y)) / (2 * n)),
+                      b > 0 &&
+                        b < 1 &&
+                        s[m].push(this.calculateF(b, e, t, r, i, m)))));
           (this.shapeBoundingBox.left = bmMin.apply(null, s[0])),
             (this.shapeBoundingBox.top = bmMin.apply(null, s[1])),
             (this.shapeBoundingBox.right = bmMax.apply(null, s[0])),
@@ -16666,7 +16666,7 @@ var Background_svelte_svelte_type_style_lang = '',
           u = d.length;
           var y,
             w,
-            _,
+            b,
             m = this.mHelper,
             g,
             p = '',
@@ -16682,11 +16682,11 @@ var Background_svelte_svelte_type_style_lang = '',
                       y.setAttribute('stroke-miterlimit', '4')),
                   this.isMasked ||
                     (this.textSpans[c]
-                      ? ((w = this.textSpans[c]), (_ = w.children[0]))
+                      ? ((w = this.textSpans[c]), (b = w.children[0]))
                       : ((w = createTag('div')),
                         (w.style.lineHeight = 0),
-                        (_ = createNS('svg')),
-                        _.appendChild(y),
+                        (b = createNS('svg')),
+                        b.appendChild(y),
                         styleDiv(w))))
                 : this.isMasked
                 ? (y = this.textPaths[c] ? this.textPaths[c] : createNS('text'))
@@ -16699,14 +16699,14 @@ var Background_svelte_svelte_type_style_lang = '',
                   w.appendChild(y)),
               this.globalData.fontManager.chars)
             ) {
-              var b = this.globalData.fontManager.getCharData(
+              var _ = this.globalData.fontManager.getCharData(
                   e.finalText[o],
                   i.fStyle,
                   this.globalData.fontManager.getFontByName(e.f).fFamily
                 ),
                 l;
               if (
-                (b ? (l = b.data) : (l = null),
+                (_ ? (l = _.data) : (l = null),
                 m.reset(),
                 l &&
                   l.shapes &&
@@ -16719,11 +16719,11 @@ var Background_svelte_svelte_type_style_lang = '',
                 this.innerElem.appendChild(y);
               else {
                 if ((this.innerElem.appendChild(w), l && l.shapes)) {
-                  document.body.appendChild(_);
-                  var a = _.getBBox();
-                  _.setAttribute('width', a.width + 2),
-                    _.setAttribute('height', a.height + 2),
-                    _.setAttribute(
+                  document.body.appendChild(b);
+                  var a = b.getBBox();
+                  b.setAttribute('width', a.width + 2),
+                    b.setAttribute('height', a.height + 2),
+                    b.setAttribute(
                       'viewBox',
                       a.x -
                         1 +
@@ -16734,13 +16734,13 @@ var Background_svelte_svelte_type_style_lang = '',
                         ' ' +
                         (a.height + 2)
                     );
-                  var h = _.style,
+                  var h = b.style,
                     f = 'translate(' + (a.x - 1) + 'px,' + (a.y - 1) + 'px)';
                   (h.transform = f),
                     (h.webkitTransform = f),
                     (d[o].yOffset = a.y - 1);
-                } else _.setAttribute('width', 1), _.setAttribute('height', 1);
-                w.appendChild(_);
+                } else b.setAttribute('width', 1), b.setAttribute('height', 1);
+                w.appendChild(b);
               }
             } else if (
               ((y.textContent = d[o].val),
@@ -16837,17 +16837,17 @@ var Background_svelte_svelte_type_style_lang = '',
                 this.currentBBox.h !== w.height &&
                   ((this.currentBBox.h = w.height),
                   this.svgElement.setAttribute('height', w.height));
-              var _ = 1;
+              var b = 1;
               if (
-                this.currentBBox.w !== w.width + _ * 2 ||
-                this.currentBBox.h !== w.height + _ * 2 ||
-                this.currentBBox.x !== w.x - _ ||
-                this.currentBBox.y !== w.y - _
+                this.currentBBox.w !== w.width + b * 2 ||
+                this.currentBBox.h !== w.height + b * 2 ||
+                this.currentBBox.x !== w.x - b ||
+                this.currentBBox.y !== w.y - b
               ) {
-                (this.currentBBox.w = w.width + _ * 2),
-                  (this.currentBBox.h = w.height + _ * 2),
-                  (this.currentBBox.x = w.x - _),
-                  (this.currentBBox.y = w.y - _),
+                (this.currentBBox.w = w.width + b * 2),
+                  (this.currentBBox.h = w.height + b * 2),
+                  (this.currentBBox.x = w.x - b),
+                  (this.currentBBox.y = w.y - b),
                   this.svgElement.setAttribute(
                     'viewBox',
                     this.currentBBox.x +
@@ -17031,17 +17031,17 @@ var Background_svelte_svelte_type_style_lang = '',
             var w = !this._prevMat.equals(this.mat);
             if ((w || this.pe._mdf) && this.comp.threeDElements) {
               r = this.comp.threeDElements.length;
-              var _, m, g;
+              var b, m, g;
               for (t = 0; t < r; t += 1)
-                if (((_ = this.comp.threeDElements[t]), _.type === '3d')) {
+                if (((b = this.comp.threeDElements[t]), b.type === '3d')) {
                   if (w) {
                     var p = this.mat.toCSS();
-                    (g = _.container.style),
+                    (g = b.container.style),
                       (g.transform = p),
                       (g.webkitTransform = p);
                   }
                   this.pe._mdf &&
-                    ((m = _.perspectiveElem.style),
+                    ((m = b.perspectiveElem.style),
                     (m.perspective = this.pe.v + 'px'),
                     (m.webkitPerspective = this.pe.v + 'px'));
                 }
@@ -17068,7 +17068,7 @@ var Background_svelte_svelte_type_style_lang = '',
           function u(P) {
             for (var S = 0, E = P.target; S < i; )
               t[S].animation === E &&
-                (t.splice(S, 1), (S -= 1), (i -= 1), E.isPaused || _()),
+                (t.splice(S, 1), (S -= 1), (i -= 1), E.isPaused || b()),
                 (S += 1);
           }
           function d(P, S) {
@@ -17090,13 +17090,13 @@ var Background_svelte_svelte_type_style_lang = '',
           function w() {
             (s += 1), I();
           }
-          function _() {
+          function b() {
             s -= 1;
           }
           function m(P, S) {
             P.addEventListener('destroy', u),
               P.addEventListener('_active', w),
-              P.addEventListener('_idle', _),
+              P.addEventListener('_idle', b),
               t.push({ elem: S, animation: P }),
               (i += 1);
           }
@@ -17112,7 +17112,7 @@ var Background_svelte_svelte_type_style_lang = '',
             var E;
             for (E = 0; E < i; E += 1) t[E].animation.setDirection(P, S);
           }
-          function b(P) {
+          function _(P) {
             var S;
             for (S = 0; S < i; S += 1) t[S].animation.play(P);
           }
@@ -17196,7 +17196,7 @@ var Background_svelte_svelte_type_style_lang = '',
             (e.loadAnimation = g),
             (e.setSpeed = p),
             (e.setDirection = c),
-            (e.play = b),
+            (e.play = _),
             (e.pause = h),
             (e.stop = v),
             (e.togglePause = k),
@@ -18012,8 +18012,8 @@ var Background_svelte_svelte_type_style_lang = '',
               y = this.getValueAtTime(o + u),
               w = 0;
             if (d.length) {
-              var _;
-              for (_ = 0; _ < d.length; _ += 1) w += Math.pow(y[_] - d[_], 2);
+              var b;
+              for (b = 0; b < d.length; b += 1) w += Math.pow(y[b] - d[b], 2);
               w = Math.sqrt(w) * 100;
             } else w = 0;
             return w;
@@ -18026,8 +18026,8 @@ var Background_svelte_svelte_type_style_lang = '',
               w;
             if (d.length) {
               w = createTypedArray('float32', d.length);
-              var _;
-              for (_ = 0; _ < d.length; _ += 1) w[_] = (y[_] - d[_]) / u;
+              var b;
+              for (b = 0; b < d.length; b += 1) w[b] = (y[b] - d[b]) / u;
             } else w = (y - d) / u;
             return w;
           }
@@ -18050,10 +18050,10 @@ var Background_svelte_svelte_type_style_lang = '',
         function t(g, p, c) {
           if (!this.k || !this.keyframes) return this.pv;
           g = g ? g.toLowerCase() : '';
-          var b = this.comp.renderedFrame,
+          var _ = this.comp.renderedFrame,
             l = this.keyframes,
             a = l[l.length - 1].t;
-          if (b <= a) return this.pv;
+          if (_ <= a) return this.pv;
           var h, f;
           c
             ? (p
@@ -18065,20 +18065,20 @@ var Background_svelte_svelte_type_style_lang = '',
               (h = a - f));
           var v, k, x;
           if (g === 'pingpong') {
-            var C = Math.floor((b - f) / h);
+            var C = Math.floor((_ - f) / h);
             if (C % 2 !== 0)
               return this.getValueAtTime(
-                (h - ((b - f) % h) + f) / this.comp.globalData.frameRate,
+                (h - ((_ - f) % h) + f) / this.comp.globalData.frameRate,
                 0
               );
           } else if (g === 'offset') {
             var R = this.getValueAtTime(f / this.comp.globalData.frameRate, 0),
               I = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
               A = this.getValueAtTime(
-                (((b - f) % h) + f) / this.comp.globalData.frameRate,
+                (((_ - f) % h) + f) / this.comp.globalData.frameRate,
                 0
               ),
-              V = Math.floor((b - f) / h);
+              V = Math.floor((_ - f) / h);
             if (this.pv.length) {
               for (x = new Array(R.length), k = x.length, v = 0; v < k; v += 1)
                 x[v] = (I[v] - R[v]) * V + A[v];
@@ -18095,24 +18095,24 @@ var Background_svelte_svelte_type_style_lang = '',
               for (x = new Array(M.length), k = x.length, v = 0; v < k; v += 1)
                 x[v] =
                   M[v] +
-                  ((M[v] - D[v]) * ((b - a) / this.comp.globalData.frameRate)) /
+                  ((M[v] - D[v]) * ((_ - a) / this.comp.globalData.frameRate)) /
                     5e-4;
               return x;
             }
-            return M + (M - D) * ((b - a) / 0.001);
+            return M + (M - D) * ((_ - a) / 0.001);
           }
           return this.getValueAtTime(
-            (((b - f) % h) + f) / this.comp.globalData.frameRate,
+            (((_ - f) % h) + f) / this.comp.globalData.frameRate,
             0
           );
         }
         function r(g, p, c) {
           if (!this.k) return this.pv;
           g = g ? g.toLowerCase() : '';
-          var b = this.comp.renderedFrame,
+          var _ = this.comp.renderedFrame,
             l = this.keyframes,
             a = l[0].t;
-          if (b >= a) return this.pv;
+          if (_ >= a) return this.pv;
           var h, f;
           c
             ? (p
@@ -18124,20 +18124,20 @@ var Background_svelte_svelte_type_style_lang = '',
               (h = f - a));
           var v, k, x;
           if (g === 'pingpong') {
-            var C = Math.floor((a - b) / h);
+            var C = Math.floor((a - _) / h);
             if (C % 2 === 0)
               return this.getValueAtTime(
-                (((a - b) % h) + a) / this.comp.globalData.frameRate,
+                (((a - _) % h) + a) / this.comp.globalData.frameRate,
                 0
               );
           } else if (g === 'offset') {
             var R = this.getValueAtTime(a / this.comp.globalData.frameRate, 0),
               I = this.getValueAtTime(f / this.comp.globalData.frameRate, 0),
               A = this.getValueAtTime(
-                (h - ((a - b) % h) + a) / this.comp.globalData.frameRate,
+                (h - ((a - _) % h) + a) / this.comp.globalData.frameRate,
                 0
               ),
-              V = Math.floor((a - b) / h) + 1;
+              V = Math.floor((a - _) / h) + 1;
             if (this.pv.length) {
               for (x = new Array(R.length), k = x.length, v = 0; v < k; v += 1)
                 x[v] = A[v] - (I[v] - R[v]) * V;
@@ -18152,13 +18152,13 @@ var Background_svelte_svelte_type_style_lang = '',
               );
             if (this.pv.length) {
               for (x = new Array(M.length), k = x.length, v = 0; v < k; v += 1)
-                x[v] = M[v] + ((M[v] - D[v]) * (a - b)) / 0.001;
+                x[v] = M[v] + ((M[v] - D[v]) * (a - _)) / 0.001;
               return x;
             }
-            return M + ((M - D) * (a - b)) / 0.001;
+            return M + ((M - D) * (a - _)) / 0.001;
           }
           return this.getValueAtTime(
-            (h - (((a - b) % h) + a)) / this.comp.globalData.frameRate,
+            (h - (((a - _) % h) + a)) / this.comp.globalData.frameRate,
             0
           );
         }
@@ -18167,9 +18167,9 @@ var Background_svelte_svelte_type_style_lang = '',
           if (((g = (g || 0.4) * 0.5), (p = Math.floor(p || 5)), p <= 1))
             return this.pv;
           var c = this.comp.renderedFrame / this.comp.globalData.frameRate,
-            b = c - g,
+            _ = c - g,
             l = c + g,
-            a = p > 1 ? (l - b) / (p - 1) : 1,
+            a = p > 1 ? (l - _) / (p - 1) : 1,
             h = 0,
             f = 0,
             v;
@@ -18177,7 +18177,7 @@ var Background_svelte_svelte_type_style_lang = '',
             ? (v = createTypedArray('float32', this.pv.length))
             : (v = 0);
           for (var k; h < p; ) {
-            if (((k = this.getValueAtTime(b + h * a)), this.pv.length))
+            if (((k = this.getValueAtTime(_ + h * a)), this.pv.length))
               for (f = 0; f < this.pv.length; f += 1) v[f] += k[f];
             else v += k;
             h += 1;
@@ -18201,8 +18201,8 @@ var Background_svelte_svelte_type_style_lang = '',
             );
           }
           if (this.appliedTransformations < 2) {
-            var b = this.s.getValueAtTime(g);
-            p.scale(b[0] * this.s.mult, b[1] * this.s.mult, b[2] * this.s.mult);
+            var _ = this.s.getValueAtTime(g);
+            p.scale(_[0] * this.s.mult, _[1] * this.s.mult, _[2] * this.s.mult);
           }
           if (this.sk && this.appliedTransformations < 3) {
             var l = this.sk.getValueAtTime(g),
@@ -18250,18 +18250,18 @@ var Background_svelte_svelte_type_style_lang = '',
         }
         var o = TransformPropertyFactory.getTransformProperty;
         TransformPropertyFactory.getTransformProperty = function (g, p, c) {
-          var b = o(g, p, c);
+          var _ = o(g, p, c);
           return (
-            b.dynamicProperties.length
-              ? (b.getValueAtTime = s.bind(b))
-              : (b.getValueAtTime = n.bind(b)),
-            (b.setGroupProperty = expressionHelpers.setGroupProperty),
-            b
+            _.dynamicProperties.length
+              ? (_.getValueAtTime = s.bind(_))
+              : (_.getValueAtTime = n.bind(_)),
+            (_.setGroupProperty = expressionHelpers.setGroupProperty),
+            _
           );
         };
         var u = PropertyFactory.getProp;
-        PropertyFactory.getProp = function (g, p, c, b, l) {
-          var a = u(g, p, c, b, l);
+        PropertyFactory.getProp = function (g, p, c, _, l) {
+          var a = u(g, p, c, _, l);
           a.kf
             ? (a.getValueAtTime = expressionHelpers.getValueAtTime.bind(a))
             : (a.getValueAtTime =
@@ -18315,21 +18315,21 @@ var Background_svelte_svelte_type_style_lang = '',
         }
         var y = ShapePropertyFactory.getConstructorFunction(),
           w = ShapePropertyFactory.getKeyframedConstructorFunction();
-        function _() {}
-        (_.prototype = {
+        function b() {}
+        (b.prototype = {
           vertices: function (g, p) {
             this.k && this.getValue();
             var c = this.v;
             p !== void 0 && (c = this.getValueAtTime(p, 0));
-            var b,
+            var _,
               l = c._length,
               a = c[g],
               h = c.v,
               f = createSizedArray(l);
-            for (b = 0; b < l; b += 1)
+            for (_ = 0; _ < l; _ += 1)
               g === 'i' || g === 'o'
-                ? (f[b] = [a[b][0] - h[b][0], a[b][1] - h[b][1]])
-                : (f[b] = [a[b][0], a[b][1]]);
+                ? (f[_] = [a[_][0] - h[_][0], a[_][1] - h[_][1]])
+                : (f[_] = [a[_][0], a[_][1]]);
             return f;
           },
           points: function (g) {
@@ -18350,9 +18350,9 @@ var Background_svelte_svelte_type_style_lang = '',
               this._segmentsLength ||
                 (this._segmentsLength = bez.getSegmentsLength(c));
             for (
-              var b = this._segmentsLength,
-                l = b.lengths,
-                a = b.totalLength * g,
+              var _ = this._segmentsLength,
+                l = _.lengths,
+                a = _.totalLength * g,
                 h = 0,
                 f = l.length,
                 v = 0,
@@ -18386,10 +18386,10 @@ var Background_svelte_svelte_type_style_lang = '',
           },
           vectorOnPath: function (g, p, c) {
             g == 1 ? (g = this.v.c) : g == 0 && (g = 0.999);
-            var b = this.pointOnPath(g, p),
+            var _ = this.pointOnPath(g, p),
               l = this.pointOnPath(g + 0.001, p),
-              a = l[0] - b[0],
-              h = l[1] - b[1],
+              a = l[0] - _[0],
+              h = l[1] - _[1],
               f = Math.sqrt(Math.pow(a, 2) + Math.pow(h, 2));
             if (f === 0) return [0, 0];
             var v = c === 'tangent' ? [a / f, h / f] : [-h / f, a / f];
@@ -18404,14 +18404,14 @@ var Background_svelte_svelte_type_style_lang = '',
           setGroupProperty: expressionHelpers.setGroupProperty,
           getValueAtTime: expressionHelpers.getStaticValueAtTime,
         }),
-          extendPrototype([_], y),
-          extendPrototype([_], w),
+          extendPrototype([b], y),
+          extendPrototype([b], w),
           (w.prototype.getValueAtTime = d),
           (w.prototype.initiateExpression =
             ExpressionManager.initiateExpression);
         var m = ShapePropertyFactory.getShapeProp;
-        ShapePropertyFactory.getShapeProp = function (g, p, c, b, l) {
-          var a = m(g, p, c, b, l);
+        ShapePropertyFactory.getShapeProp = function (g, p, c, _, l) {
+          var a = m(g, p, c, _, l);
           return (
             (a.propertyIndex = p.ix),
             (a.lock = !1),
@@ -18510,38 +18510,38 @@ var Background_svelte_svelte_type_style_lang = '',
           };
         })(),
         ShapeExpressionInterface = (function () {
-          function e(p, c, b) {
+          function e(p, c, _) {
             var l = [],
               a,
               h = p ? p.length : 0;
             for (a = 0; a < h; a += 1)
               p[a].ty === 'gr'
-                ? l.push(r(p[a], c[a], b))
+                ? l.push(r(p[a], c[a], _))
                 : p[a].ty === 'fl'
-                ? l.push(i(p[a], c[a], b))
+                ? l.push(i(p[a], c[a], _))
                 : p[a].ty === 'st'
-                ? l.push(o(p[a], c[a], b))
+                ? l.push(o(p[a], c[a], _))
                 : p[a].ty === 'tm'
-                ? l.push(u(p[a], c[a], b))
+                ? l.push(u(p[a], c[a], _))
                 : p[a].ty === 'tr' ||
                   (p[a].ty === 'el'
-                    ? l.push(y(p[a], c[a], b))
+                    ? l.push(y(p[a], c[a], _))
                     : p[a].ty === 'sr'
-                    ? l.push(w(p[a], c[a], b))
+                    ? l.push(w(p[a], c[a], _))
                     : p[a].ty === 'sh'
-                    ? l.push(ShapePathInterface(p[a], c[a], b))
+                    ? l.push(ShapePathInterface(p[a], c[a], _))
                     : p[a].ty === 'rc'
-                    ? l.push(_(p[a], c[a], b))
+                    ? l.push(b(p[a], c[a], _))
                     : p[a].ty === 'rd'
-                    ? l.push(m(p[a], c[a], b))
+                    ? l.push(m(p[a], c[a], _))
                     : p[a].ty === 'rp'
-                    ? l.push(g(p[a], c[a], b))
+                    ? l.push(g(p[a], c[a], _))
                     : p[a].ty === 'gf'
-                    ? l.push(s(p[a], c[a], b))
+                    ? l.push(s(p[a], c[a], _))
                     : l.push(n(p[a], c[a])));
             return l;
           }
-          function t(p, c, b) {
+          function t(p, c, _) {
             var l,
               a = function (v) {
                 for (var k = 0, x = l.length; k < x; ) {
@@ -18557,7 +18557,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 }
                 return typeof v == 'number' ? l[v - 1] : null;
               };
-            (a.propertyGroup = propertyGroupFactory(a, b)),
+            (a.propertyGroup = propertyGroupFactory(a, _)),
               (l = e(p.it, c.it, a.propertyGroup)),
               (a.numProperties = l.length);
             var h = d(
@@ -18569,7 +18569,7 @@ var Background_svelte_svelte_type_style_lang = '',
               (a.transform = h), (a.propertyIndex = p.cix), (a._name = p.nm), a
             );
           }
-          function r(p, c, b) {
+          function r(p, c, _) {
             var l = function (v) {
               switch (v) {
                 case 'ADBE Vectors Group':
@@ -18580,7 +18580,7 @@ var Background_svelte_svelte_type_style_lang = '',
                   return l.transform;
               }
             };
-            l.propertyGroup = propertyGroupFactory(l, b);
+            l.propertyGroup = propertyGroupFactory(l, _);
             var a = t(p, c, l.propertyGroup),
               h = d(
                 p.it[p.it.length - 1],
@@ -18602,7 +18602,7 @@ var Background_svelte_svelte_type_style_lang = '',
               l
             );
           }
-          function i(p, c, b) {
+          function i(p, c, _) {
             function l(a) {
               return a === 'Color' || a === 'color'
                 ? l.color
@@ -18617,12 +18617,12 @@ var Background_svelte_svelte_type_style_lang = '',
                 _name: { value: p.nm },
                 mn: { value: p.mn },
               }),
-              c.c.setGroupProperty(PropertyInterface('Color', b)),
-              c.o.setGroupProperty(PropertyInterface('Opacity', b)),
+              c.c.setGroupProperty(PropertyInterface('Color', _)),
+              c.o.setGroupProperty(PropertyInterface('Opacity', _)),
               l
             );
           }
-          function s(p, c, b) {
+          function s(p, c, _) {
             function l(a) {
               return a === 'Start Point' || a === 'start point'
                 ? l.startPoint
@@ -18645,9 +18645,9 @@ var Background_svelte_svelte_type_style_lang = '',
                 _name: { value: p.nm },
                 mn: { value: p.mn },
               }),
-              c.s.setGroupProperty(PropertyInterface('Start Point', b)),
-              c.e.setGroupProperty(PropertyInterface('End Point', b)),
-              c.o.setGroupProperty(PropertyInterface('Opacity', b)),
+              c.s.setGroupProperty(PropertyInterface('Start Point', _)),
+              c.e.setGroupProperty(PropertyInterface('End Point', _)),
+              c.o.setGroupProperty(PropertyInterface('Opacity', _)),
               l
             );
           }
@@ -18657,8 +18657,8 @@ var Background_svelte_svelte_type_style_lang = '',
             }
             return p;
           }
-          function o(p, c, b) {
-            var l = propertyGroupFactory(x, b),
+          function o(p, c, _) {
+            var l = propertyGroupFactory(x, _),
               a = propertyGroupFactory(k, l);
             function h(C) {
               Object.defineProperty(k, p.d[C].nm, {
@@ -18698,7 +18698,7 @@ var Background_svelte_svelte_type_style_lang = '',
               x
             );
           }
-          function u(p, c, b) {
+          function u(p, c, _) {
             function l(h) {
               return h === p.e.ix || h === 'End' || h === 'end'
                 ? l.end
@@ -18708,14 +18708,14 @@ var Background_svelte_svelte_type_style_lang = '',
                 ? l.offset
                 : null;
             }
-            var a = propertyGroupFactory(l, b);
+            var a = propertyGroupFactory(l, _);
             return (
               (l.propertyIndex = p.ix),
               c.s.setGroupProperty(PropertyInterface('Start', a)),
               c.e.setGroupProperty(PropertyInterface('End', a)),
               c.o.setGroupProperty(PropertyInterface('Offset', a)),
               (l.propertyIndex = p.ix),
-              (l.propertyGroup = b),
+              (l.propertyGroup = _),
               Object.defineProperties(l, {
                 start: { get: ExpressionPropertyInterface(c.s) },
                 end: { get: ExpressionPropertyInterface(c.e) },
@@ -18726,7 +18726,7 @@ var Background_svelte_svelte_type_style_lang = '',
               l
             );
           }
-          function d(p, c, b) {
+          function d(p, c, _) {
             function l(h) {
               return p.a.ix === h || h === 'Anchor Point'
                 ? l.anchorPoint
@@ -18746,7 +18746,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 ? l.skewAxis
                 : null;
             }
-            var a = propertyGroupFactory(l, b);
+            var a = propertyGroupFactory(l, _);
             return (
               c.transform.mProps.o.setGroupProperty(
                 PropertyInterface('Opacity', a)
@@ -18797,15 +18797,15 @@ var Background_svelte_svelte_type_style_lang = '',
               }),
               (l.ty = 'tr'),
               (l.mn = p.mn),
-              (l.propertyGroup = b),
+              (l.propertyGroup = _),
               l
             );
           }
-          function y(p, c, b) {
+          function y(p, c, _) {
             function l(f) {
               return p.p.ix === f ? l.position : p.s.ix === f ? l.size : null;
             }
-            var a = propertyGroupFactory(l, b);
+            var a = propertyGroupFactory(l, _);
             l.propertyIndex = p.ix;
             var h = c.sh.ty === 'tm' ? c.sh.prop : c.sh;
             return (
@@ -18820,7 +18820,7 @@ var Background_svelte_svelte_type_style_lang = '',
               l
             );
           }
-          function w(p, c, b) {
+          function w(p, c, _) {
             function l(f) {
               return p.p.ix === f
                 ? l.position
@@ -18839,7 +18839,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 ? l.innerRoundness
                 : null;
             }
-            var a = propertyGroupFactory(l, b),
+            var a = propertyGroupFactory(l, _),
               h = c.sh.ty === 'tm' ? c.sh.prop : c.sh;
             return (
               (l.propertyIndex = p.ix),
@@ -18865,7 +18865,7 @@ var Background_svelte_svelte_type_style_lang = '',
               l
             );
           }
-          function _(p, c, b) {
+          function b(p, c, _) {
             function l(f) {
               return p.p.ix === f
                 ? l.position
@@ -18875,7 +18875,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 ? l.size
                 : null;
             }
-            var a = propertyGroupFactory(l, b),
+            var a = propertyGroupFactory(l, _),
               h = c.sh.ty === 'tm' ? c.sh.prop : c.sh;
             return (
               (l.propertyIndex = p.ix),
@@ -18892,11 +18892,11 @@ var Background_svelte_svelte_type_style_lang = '',
               l
             );
           }
-          function m(p, c, b) {
+          function m(p, c, _) {
             function l(f) {
               return p.r.ix === f || f === 'Round Corners 1' ? l.radius : null;
             }
-            var a = propertyGroupFactory(l, b),
+            var a = propertyGroupFactory(l, _),
               h = c;
             return (
               (l.propertyIndex = p.ix),
@@ -18909,7 +18909,7 @@ var Background_svelte_svelte_type_style_lang = '',
               l
             );
           }
-          function g(p, c, b) {
+          function g(p, c, _) {
             function l(f) {
               return p.c.ix === f || f === 'Copies'
                 ? l.copies
@@ -18917,7 +18917,7 @@ var Background_svelte_svelte_type_style_lang = '',
                 ? l.offset
                 : null;
             }
-            var a = propertyGroupFactory(l, b),
+            var a = propertyGroupFactory(l, _),
               h = c;
             return (
               (l.propertyIndex = p.ix),
@@ -18932,11 +18932,11 @@ var Background_svelte_svelte_type_style_lang = '',
               l
             );
           }
-          return function (p, c, b) {
+          return function (p, c, _) {
             var l;
             function a(f) {
               if (typeof f == 'number')
-                return (f = f === void 0 ? 1 : f), f === 0 ? b : l[f - 1];
+                return (f = f === void 0 ? 1 : f), f === 0 ? _ : l[f - 1];
               for (var v = 0, k = l.length; v < k; ) {
                 if (l[v]._name === f) return l[v];
                 v += 1;
@@ -18944,7 +18944,7 @@ var Background_svelte_svelte_type_style_lang = '',
               return null;
             }
             function h() {
-              return b;
+              return _;
             }
             return (
               (a.propertyGroup = propertyGroupFactory(a, h)),
@@ -18988,8 +18988,8 @@ var Background_svelte_svelte_type_style_lang = '',
           function e(y) {
             var w = new Matrix();
             if (y !== void 0) {
-              var _ = this._elem.finalTransform.mProp.getValueAtTime(y);
-              _.clone(w);
+              var b = this._elem.finalTransform.mProp.getValueAtTime(y);
+              b.clone(w);
             } else {
               var m = this._elem.finalTransform.mProp;
               m.applyToMatrix(w);
@@ -18997,46 +18997,46 @@ var Background_svelte_svelte_type_style_lang = '',
             return w;
           }
           function t(y, w) {
-            var _ = this.getMatrix(w);
+            var b = this.getMatrix(w);
             return (
-              (_.props[12] = 0),
-              (_.props[13] = 0),
-              (_.props[14] = 0),
-              this.applyPoint(_, y)
+              (b.props[12] = 0),
+              (b.props[13] = 0),
+              (b.props[14] = 0),
+              this.applyPoint(b, y)
             );
           }
           function r(y, w) {
-            var _ = this.getMatrix(w);
-            return this.applyPoint(_, y);
+            var b = this.getMatrix(w);
+            return this.applyPoint(b, y);
           }
           function i(y, w) {
-            var _ = this.getMatrix(w);
+            var b = this.getMatrix(w);
             return (
-              (_.props[12] = 0),
-              (_.props[13] = 0),
-              (_.props[14] = 0),
-              this.invertPoint(_, y)
+              (b.props[12] = 0),
+              (b.props[13] = 0),
+              (b.props[14] = 0),
+              this.invertPoint(b, y)
             );
           }
           function s(y, w) {
-            var _ = this.getMatrix(w);
-            return this.invertPoint(_, y);
+            var b = this.getMatrix(w);
+            return this.invertPoint(b, y);
           }
           function n(y, w) {
             if (this._elem.hierarchy && this._elem.hierarchy.length) {
-              var _,
+              var b,
                 m = this._elem.hierarchy.length;
-              for (_ = 0; _ < m; _ += 1)
-                this._elem.hierarchy[_].finalTransform.mProp.applyToMatrix(y);
+              for (b = 0; b < m; b += 1)
+                this._elem.hierarchy[b].finalTransform.mProp.applyToMatrix(y);
             }
             return y.applyToPointArray(w[0], w[1], w[2] || 0);
           }
           function o(y, w) {
             if (this._elem.hierarchy && this._elem.hierarchy.length) {
-              var _,
+              var b,
                 m = this._elem.hierarchy.length;
-              for (_ = 0; _ < m; _ += 1)
-                this._elem.hierarchy[_].finalTransform.mProp.applyToMatrix(y);
+              for (b = 0; b < m; b += 1)
+                this._elem.hierarchy[b].finalTransform.mProp.applyToMatrix(y);
             }
             return y.inversePoint(w);
           }
@@ -19047,10 +19047,10 @@ var Background_svelte_svelte_type_style_lang = '',
               this._elem.finalTransform.mProp.applyToMatrix(w),
               this._elem.hierarchy && this._elem.hierarchy.length)
             ) {
-              var _,
+              var b,
                 m = this._elem.hierarchy.length;
-              for (_ = 0; _ < m; _ += 1)
-                this._elem.hierarchy[_].finalTransform.mProp.applyToMatrix(w);
+              for (b = 0; b < m; b += 1)
+                this._elem.hierarchy[b].finalTransform.mProp.applyToMatrix(w);
               return w.inversePoint(y);
             }
             return w.inversePoint(y);
@@ -19060,7 +19060,7 @@ var Background_svelte_svelte_type_style_lang = '',
           }
           return function (y) {
             var w;
-            function _(c) {
+            function b(c) {
               g.mask = new MaskManagerInterface(c, y);
             }
             function m(c) {
@@ -19140,7 +19140,7 @@ var Background_svelte_svelte_type_style_lang = '',
               (g.inPoint = y.data.ip / y.comp.globalData.frameRate),
               (g.outPoint = y.data.op / y.comp.globalData.frameRate),
               (g._name = y.data.nm),
-              (g.registerMaskInterface = _),
+              (g.registerMaskInterface = b),
               (g.registerEffectsInterface = m),
               g
             );
@@ -19341,7 +19341,7 @@ var Background_svelte_svelte_type_style_lang = '',
               for (d = 0; d < y; d += 1)
                 o.push(r(u[d], s.effectsManager.effectElements[d], n, s));
               var w = s.data.ef || [],
-                _ = function (m) {
+                b = function (m) {
                   for (d = 0, y = w.length; d < y; ) {
                     if (m === w[d].nm || m === w[d].mn || m === w[d].ix)
                       return o[d];
@@ -19350,19 +19350,19 @@ var Background_svelte_svelte_type_style_lang = '',
                   return null;
                 };
               return (
-                Object.defineProperty(_, 'numProperties', {
+                Object.defineProperty(b, 'numProperties', {
                   get: function () {
                     return w.length;
                   },
                 }),
-                _
+                b
               );
             }
             return null;
           }
           function r(s, n, o, u) {
             function d(g) {
-              for (var p = s.ef, c = 0, b = p.length; c < b; ) {
+              for (var p = s.ef, c = 0, _ = p.length; c < _; ) {
                 if (g === p[c].nm || g === p[c].mn || g === p[c].ix)
                   return p[c].ty === 5 ? w[c] : w[c]();
                 c += 1;
@@ -19371,19 +19371,19 @@ var Background_svelte_svelte_type_style_lang = '',
             }
             var y = propertyGroupFactory(d, o),
               w = [],
-              _,
+              b,
               m = s.ef.length;
-            for (_ = 0; _ < m; _ += 1)
-              s.ef[_].ty === 5
+            for (b = 0; b < m; b += 1)
+              s.ef[b].ty === 5
                 ? w.push(
                     r(
-                      s.ef[_],
-                      n.effectElements[_],
-                      n.effectElements[_].propertyGroup,
+                      s.ef[b],
+                      n.effectElements[b],
+                      n.effectElements[b].propertyGroup,
                       u
                     )
                   )
-                : w.push(i(n.effectElements[_], s.ef[_].ty, u, y));
+                : w.push(i(n.effectElements[b], s.ef[b].ty, u, y));
             return (
               s.mn === 'ADBE Color Control' &&
                 Object.defineProperty(d, 'color', {
@@ -19472,13 +19472,13 @@ var Background_svelte_svelte_type_style_lang = '',
                   : 'e' in u.keyframes[y - 2]
                   ? (w = u.keyframes[y - 2].e)
                   : (w = u.keyframes[y - 2].s);
-                var _ =
+                var b =
                   d === 'unidimensional' ? new Number(w) : Object.assign({}, w);
                 return (
-                  (_.time =
+                  (b.time =
                     u.keyframes[y - 1].t / u.elem.comp.globalData.frameRate),
-                  (_.value = d === 'unidimensional' ? w[0] : w),
-                  _
+                  (b.value = d === 'unidimensional' ? w[0] : w),
+                  b
                 );
               }),
               (o.valueAtTime = u.getValueAtTime),
@@ -19518,8 +19518,8 @@ var Background_svelte_svelte_type_style_lang = '',
               r(y, o, 'multidimensional'),
               function () {
                 o.k && o.getValue();
-                for (var _ = 0; _ < d; _ += 1)
-                  (w[_] = o.v[_] * u), (y[_] = w[_]);
+                for (var b = 0; b < d; b += 1)
+                  (w[b] = o.v[b] * u), (y[b] = w[b]);
                 return y;
               }
             );
@@ -19756,9 +19756,9 @@ var Background_svelte_svelte_type_style_lang = '',
       return lottie;
     });
 })(lottie);
-var index_svelte_svelte_type_style_lang$e = '',
+var index_svelte_svelte_type_style_lang$f = '',
+  index_svelte_svelte_type_style_lang$e = '',
   index_svelte_svelte_type_style_lang$d = '',
-  index_svelte_svelte_type_style_lang$c = '',
   DownArrow_svelte_svelte_type_style_lang = '',
   advancedFormat$1 = { exports: {} };
 (function (e, t) {
@@ -19778,7 +19778,7 @@ var index_svelte_svelte_type_style_lang$e = '',
             y = this.$locale();
           if (!this.isValid()) return o.bind(this)(u);
           var w = this.$utils(),
-            _ = (u || 'YYYY-MM-DDTHH:mm:ssZ').replace(
+            b = (u || 'YYYY-MM-DDTHH:mm:ssZ').replace(
               /\[([^\]]+)]|Q|wo|ww|w|WW|W|zzz|z|gggg|GGGG|Do|X|x|k{1,2}|S/g,
               function (m) {
                 switch (m) {
@@ -19818,7 +19818,7 @@ var index_svelte_svelte_type_style_lang$e = '',
                 }
               }
             );
-          return o.bind(this)(_);
+          return o.bind(this)(b);
         });
     };
   });
@@ -19838,12 +19838,12 @@ var advancedFormat = advancedFormat$1.exports,
       d = 'hour',
       y = 'day',
       w = 'week',
-      _ = 'month',
+      b = 'month',
       m = 'quarter',
       g = 'year',
       p = 'date',
       c = 'Invalid Date',
-      b =
+      _ =
         /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/,
       l =
         /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,
@@ -19874,9 +19874,9 @@ var advancedFormat = advancedFormat$1.exports,
         m: function M(D, F) {
           if (D.date() < F.date()) return -M(F, D);
           var P = 12 * (F.year() - D.year()) + (F.month() - D.month()),
-            S = D.clone().add(P, _),
+            S = D.clone().add(P, b),
             E = F - S < 0,
-            T = D.clone().add(P + (E ? -1 : 1), _);
+            T = D.clone().add(P + (E ? -1 : 1), b);
           return +(-(P + (F - S) / (E ? S - T : T - S)) || 0);
         },
         a: function (M) {
@@ -19884,7 +19884,7 @@ var advancedFormat = advancedFormat$1.exports,
         },
         p: function (M) {
           return (
-            { M: _, y: g, w, d: y, D: p, h: d, m: u, s: o, ms: n, Q: m }[M] ||
+            { M: b, y: g, w, d: y, D: p, h: d, m: u, s: o, ms: n, Q: m }[M] ||
             String(M || '')
               .toLowerCase()
               .replace(/s$/, '')
@@ -19939,7 +19939,7 @@ var advancedFormat = advancedFormat$1.exports,
               if (I.u(S)) return new Date();
               if (S instanceof Date) return new Date(S);
               if (typeof S == 'string' && !/Z$/i.test(S)) {
-                var T = S.match(b);
+                var T = S.match(_);
                 if (T) {
                   var L = T[2] - 1 || 0,
                     z = (T[7] || '0').substring(0, 3);
@@ -20011,18 +20011,18 @@ var advancedFormat = advancedFormat$1.exports,
             var S = this,
               E = !!I.u(P) || P,
               T = I.p(F),
-              L = function (te, U) {
+              L = function (te, Y) {
                 var Q = I.w(
-                  S.$u ? Date.UTC(S.$y, U, te) : new Date(S.$y, U, te),
+                  S.$u ? Date.UTC(S.$y, Y, te) : new Date(S.$y, Y, te),
                   S
                 );
                 return E ? Q : Q.endOf(y);
               },
-              z = function (te, U) {
+              z = function (te, Y) {
                 return I.w(
                   S.toDate()[te].apply(
                     S.toDate('s'),
-                    (E ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(U)
+                    (E ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(Y)
                   ),
                   S
                 );
@@ -20030,25 +20030,25 @@ var advancedFormat = advancedFormat$1.exports,
               O = this.$W,
               G = this.$M,
               N = this.$D,
-              Y = 'set' + (this.$u ? 'UTC' : '');
+              $ = 'set' + (this.$u ? 'UTC' : '');
             switch (T) {
               case g:
                 return E ? L(1, 0) : L(31, 11);
-              case _:
+              case b:
                 return E ? L(1, G) : L(0, G + 1);
               case w:
-                var $ = this.$locale().weekStart || 0,
-                  ee = (O < $ ? O + 7 : O) - $;
+                var U = this.$locale().weekStart || 0,
+                  ee = (O < U ? O + 7 : O) - U;
                 return L(E ? N - ee : N + (6 - ee), G);
               case y:
               case p:
-                return z(Y + 'Hours', 0);
+                return z($ + 'Hours', 0);
               case d:
-                return z(Y + 'Minutes', 1);
+                return z($ + 'Minutes', 1);
               case u:
-                return z(Y + 'Seconds', 2);
+                return z($ + 'Seconds', 2);
               case o:
-                return z(Y + 'Milliseconds', 3);
+                return z($ + 'Milliseconds', 3);
               default:
                 return this.clone();
             }
@@ -20063,7 +20063,7 @@ var advancedFormat = advancedFormat$1.exports,
               L = ((S = {}),
               (S[y] = T + 'Date'),
               (S[p] = T + 'Date'),
-              (S[_] = T + 'Month'),
+              (S[b] = T + 'Month'),
               (S[g] = T + 'FullYear'),
               (S[d] = T + 'Hours'),
               (S[u] = T + 'Minutes'),
@@ -20071,7 +20071,7 @@ var advancedFormat = advancedFormat$1.exports,
               (S[n] = T + 'Milliseconds'),
               S)[E],
               z = E === y ? this.$D + (P - this.$W) : P;
-            if (E === _ || E === g) {
+            if (E === b || E === g) {
               var O = this.clone().set(p, 1);
               O.$d[L](z),
                 O.init(),
@@ -20094,7 +20094,7 @@ var advancedFormat = advancedFormat$1.exports,
                 var N = R(E);
                 return I.w(N.date(N.date() + Math.round(G * F)), E);
               };
-            if (T === _) return this.set(_, this.$M + F);
+            if (T === b) return this.set(b, this.$M + F);
             if (T === g) return this.set(g, this.$y + F);
             if (T === y) return L(1);
             if (T === w) return L(7);
@@ -20116,16 +20116,16 @@ var advancedFormat = advancedFormat$1.exports,
               O = this.$M,
               G = S.weekdays,
               N = S.months,
-              Y = function (U, Q, K, re) {
-                return (U && (U[Q] || U(P, E))) || K[Q].slice(0, re);
+              $ = function (Y, Q, K, re) {
+                return (Y && (Y[Q] || Y(P, E))) || K[Q].slice(0, re);
               },
-              $ = function (U) {
-                return I.s(L % 12 || 12, U, '0');
+              U = function (Y) {
+                return I.s(L % 12 || 12, Y, '0');
               },
               ee =
                 S.meridiem ||
-                function (U, Q, K) {
-                  var re = U < 12 ? 'AM' : 'PM';
+                function (Y, Q, K) {
+                  var re = Y < 12 ? 'AM' : 'PM';
                   return K ? re.toLowerCase() : re;
                 },
               te = {
@@ -20133,18 +20133,18 @@ var advancedFormat = advancedFormat$1.exports,
                 YYYY: this.$y,
                 M: O + 1,
                 MM: I.s(O + 1, 2, '0'),
-                MMM: Y(S.monthsShort, O, N, 3),
-                MMMM: Y(N, O),
+                MMM: $(S.monthsShort, O, N, 3),
+                MMMM: $(N, O),
                 D: this.$D,
                 DD: I.s(this.$D, 2, '0'),
                 d: String(this.$W),
-                dd: Y(S.weekdaysMin, this.$W, G, 2),
-                ddd: Y(S.weekdaysShort, this.$W, G, 3),
+                dd: $(S.weekdaysMin, this.$W, G, 2),
+                ddd: $(S.weekdaysShort, this.$W, G, 3),
                 dddd: G[this.$W],
                 H: String(L),
                 HH: I.s(L, 2, '0'),
-                h: $(1),
-                hh: $(2),
+                h: U(1),
+                hh: U(2),
                 a: ee(L, z, !0),
                 A: ee(L, z, !1),
                 m: String(z),
@@ -20154,8 +20154,8 @@ var advancedFormat = advancedFormat$1.exports,
                 SSS: I.s(this.$ms, 3, '0'),
                 Z: T,
               };
-            return E.replace(l, function (U, Q) {
-              return Q || te[U] || T.replace(':', '');
+            return E.replace(l, function (Y, Q) {
+              return Q || te[Y] || T.replace(':', '');
             });
           }),
           (D.utcOffset = function () {
@@ -20172,7 +20172,7 @@ var advancedFormat = advancedFormat$1.exports,
               (G =
                 ((E = {}),
                 (E[g] = G / 12),
-                (E[_] = G),
+                (E[b] = G),
                 (E[m] = G / 3),
                 (E[w] = (O - z) / 6048e5),
                 (E[y] = (O - z) / 864e5),
@@ -20184,7 +20184,7 @@ var advancedFormat = advancedFormat$1.exports,
             );
           }),
           (D.daysInMonth = function () {
-            return this.endOf(_).$D;
+            return this.endOf(b).$D;
           }),
           (D.$locale = function () {
             return k[this.$L];
@@ -20222,7 +20222,7 @@ var advancedFormat = advancedFormat$1.exports,
         ['$m', u],
         ['$H', d],
         ['$W', y],
-        ['$M', _],
+        ['$M', b],
         ['$y', g],
         ['$D', p],
       ].forEach(function (M) {
@@ -20266,16 +20266,16 @@ var dayjs = dayjs_min.exports,
         (o.format = function (d) {
           d === void 0 && (d = 'YYYY-MM-DDTHH:mm:ssZ');
           var y = this.$locale().formats,
-            w = (function (_, m) {
-              return _.replace(
+            w = (function (b, m) {
+              return b.replace(
                 /(\[[^\]]+])|(LTS?|l{1,4}|L{1,4})/g,
                 function (g, p, c) {
-                  var b = c && c.toUpperCase();
+                  var _ = c && c.toUpperCase();
                   return (
                     p ||
                     m[c] ||
                     r[c] ||
-                    m[b].replace(
+                    m[_].replace(
                       /(\[[^\]]+])|(MMMM|MM|DD|dddd)/g,
                       function (l, a, h) {
                         return a || h.slice(1);
@@ -20314,16 +20314,16 @@ var localizedFormat = localizedFormat$1.exports,
           y: 'a year',
           yy: '%d years',
         };
-      function u(y, w, _, m) {
-        return n.fromToBase(y, w, _, m);
+      function u(y, w, b, m) {
+        return n.fromToBase(y, w, b, m);
       }
       (s.en.relativeTime = o),
-        (n.fromToBase = function (y, w, _, m, g) {
+        (n.fromToBase = function (y, w, b, m, g) {
           for (
             var p,
               c,
-              b,
-              l = _.$locale().relativeTime || o,
+              _,
+              l = b.$locale().relativeTime || o,
               a = r.thresholds || [
                 { l: 's', r: 44, d: 'second' },
                 { l: 'm', r: 89 },
@@ -20343,19 +20343,19 @@ var localizedFormat = localizedFormat$1.exports,
             f += 1
           ) {
             var v = a[f];
-            v.d && (p = m ? s(y).diff(_, v.d, !0) : _.diff(y, v.d, !0));
+            v.d && (p = m ? s(y).diff(b, v.d, !0) : b.diff(y, v.d, !0));
             var k = (r.rounding || Math.round)(Math.abs(p));
-            if (((b = p > 0), k <= v.r || !v.r)) {
+            if (((_ = p > 0), k <= v.r || !v.r)) {
               k <= 1 && f > 0 && (v = a[f - 1]);
               var x = l[v.l];
               g && (k = g('' + k)),
                 (c =
-                  typeof x == 'string' ? x.replace('%d', k) : x(k, w, v.l, b));
+                  typeof x == 'string' ? x.replace('%d', k) : x(k, w, v.l, _));
               break;
             }
           }
           if (w) return c;
-          var C = b ? l.future : l.past;
+          var C = _ ? l.future : l.past;
           return typeof C == 'function' ? C(c) : C.replace('%s', c);
         }),
         (n.to = function (y, w) {
@@ -20389,7 +20389,7 @@ var relativeTime = relativeTime$1.exports,
         d = function (m, g, p) {
           p === void 0 && (p = {});
           var c = new Date(m),
-            b = (function (l, a) {
+            _ = (function (l, a) {
               a === void 0 && (a = {});
               var h = a.timeZoneName || 'short',
                 f = l + '|' + h,
@@ -20411,11 +20411,11 @@ var relativeTime = relativeTime$1.exports,
                 v
               );
             })(g, p);
-          return b.formatToParts(c);
+          return _.formatToParts(c);
         },
         y = function (m, g) {
-          for (var p = d(m, g), c = [], b = 0; b < p.length; b += 1) {
-            var l = p[b],
+          for (var p = d(m, g), c = [], _ = 0; _ < p.length; _ += 1) {
+            var l = p[_],
               a = l.type,
               h = l.value,
               f = r[a];
@@ -20444,9 +20444,9 @@ var relativeTime = relativeTime$1.exports,
         m === void 0 && (m = u);
         var p = this.utcOffset(),
           c = this.toDate(),
-          b = c.toLocaleString('en-US', { timeZone: m }),
-          l = Math.round((c - new Date(b)) / 1e3 / 60),
-          a = o(b)
+          _ = c.toLocaleString('en-US', { timeZone: m }),
+          l = Math.round((c - new Date(_)) / 1e3 / 60),
+          a = o(_)
             .$set('millisecond', this.$ms)
             .utcOffset(15 * -Math.round(c.getTimezoneOffset() / 15) - l, !0);
         if (g) {
@@ -20462,17 +20462,17 @@ var relativeTime = relativeTime$1.exports,
             });
           return p && p.value;
         });
-      var _ = w.startOf;
+      var b = w.startOf;
       (w.startOf = function (m, g) {
-        if (!this.$x || !this.$x.$timezone) return _.call(this, m, g);
+        if (!this.$x || !this.$x.$timezone) return b.call(this, m, g);
         var p = o(this.format('YYYY-MM-DD HH:mm:ss:SSS'));
-        return _.call(p, m, g).tz(this.$x.$timezone, !0);
+        return b.call(p, m, g).tz(this.$x.$timezone, !0);
       }),
         (o.tz = function (m, g, p) {
           var c = p && g,
-            b = p || g || u,
-            l = y(+o(), b);
-          if (typeof m != 'string') return o(m).tz(b);
+            _ = p || g || u,
+            l = y(+o(), _);
+          if (typeof m != 'string') return o(m).tz(_);
           var a = (function (k, x, C) {
               var R = k - 60 * x * 1e3,
                 I = y(R, C);
@@ -20481,11 +20481,11 @@ var relativeTime = relativeTime$1.exports,
               return I === A
                 ? [R, I]
                 : [k - 60 * Math.min(I, A) * 1e3, Math.max(I, A)];
-            })(o.utc(m, c).valueOf(), l, b),
+            })(o.utc(m, c).valueOf(), l, _),
             h = a[0],
             f = a[1],
             v = o(h).utcOffset(f);
-          return (v.$x.$timezone = b), v;
+          return (v.$x.$timezone = _), v;
         }),
         (o.tz.guess = function () {
           return Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -20528,12 +20528,12 @@ var updateLocale = updateLocale$1.exports,
     return function (n, o, u) {
       var d = o.prototype;
       (u.utc = function (c) {
-        var b = { date: c, utc: !0, args: arguments };
-        return new o(b);
+        var _ = { date: c, utc: !0, args: arguments };
+        return new o(_);
       }),
         (d.utc = function (c) {
-          var b = u(this.toDate(), { locale: this.$L, utc: !0 });
-          return c ? b.add(this.utcOffset(), r) : b;
+          var _ = u(this.toDate(), { locale: this.$L, utc: !0 });
+          return c ? _.add(this.utcOffset(), r) : _;
         }),
         (d.local = function () {
           return u(this.toDate(), { locale: this.$L, utc: !1 });
@@ -20558,11 +20558,11 @@ var updateLocale = updateLocale$1.exports,
             (this.$ms = c.getUTCMilliseconds());
         } else w.call(this);
       };
-      var _ = d.utcOffset;
-      d.utcOffset = function (c, b) {
+      var b = d.utcOffset;
+      d.utcOffset = function (c, _) {
         var l = this.$utils().u;
         if (l(c))
-          return this.$u ? 0 : l(this.$offset) ? _.call(this) : this.$offset;
+          return this.$u ? 0 : l(this.$offset) ? b.call(this) : this.$offset;
         if (
           typeof c == 'string' &&
           ((c = (function (v) {
@@ -20579,7 +20579,7 @@ var updateLocale = updateLocale$1.exports,
           return this;
         var a = Math.abs(c) <= 16 ? 60 * c : c,
           h = this;
-        if (b) return (h.$offset = a), (h.$u = c === 0), h;
+        if (_) return (h.$offset = a), (h.$u = c === 0), h;
         if (c !== 0) {
           var f = this.$u
             ? this.toDate().getTimezoneOffset()
@@ -20591,8 +20591,8 @@ var updateLocale = updateLocale$1.exports,
       };
       var m = d.format;
       (d.format = function (c) {
-        var b = c || (this.$u ? 'YYYY-MM-DDTHH:mm:ss[Z]' : '');
-        return m.call(this, b);
+        var _ = c || (this.$u ? 'YYYY-MM-DDTHH:mm:ss[Z]' : '');
+        return m.call(this, _);
       }),
         (d.valueOf = function () {
           var c = this.$utils().u(this.$offset)
@@ -20617,11 +20617,11 @@ var updateLocale = updateLocale$1.exports,
           : g.call(this);
       };
       var p = d.diff;
-      d.diff = function (c, b, l) {
-        if (c && this.$u === c.$u) return p.call(this, c, b, l);
+      d.diff = function (c, _, l) {
+        if (c && this.$u === c.$u) return p.call(this, c, _, l);
         var a = this.local(),
           h = u(c).local();
-        return p.call(a, h, b, l);
+        return p.call(a, h, _, l);
       };
     };
   });
@@ -20673,16 +20673,16 @@ const getTimeZone = (e) => (e ? dayjs.tz.guess() : 'UTC'),
       ? dayjs(e).tz(s).format('h:mm A z')
       : t.format('MMMM D, YYYY');
   };
-var index_svelte_svelte_type_style_lang$b = '',
+var index_svelte_svelte_type_style_lang$c = '',
+  index_svelte_svelte_type_style_lang$b = '',
   index_svelte_svelte_type_style_lang$a = '',
-  index_svelte_svelte_type_style_lang$9 = '',
   SectionDrowdown_svelte_svelte_type_style_lang = '',
   MoreDropdown_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$8 = '',
+  index_svelte_svelte_type_style_lang$9 = '',
   Menu_svelte_svelte_type_style_lang = '',
   Close_svelte_svelte_type_style_lang = '',
+  index_svelte_svelte_type_style_lang$8 = '',
   index_svelte_svelte_type_style_lang$7 = '',
-  index_svelte_svelte_type_style_lang$6 = '',
   Graphics_svelte_svelte_type_style_lang = '',
   Pictures_svelte_svelte_type_style_lang = '',
   Videos_svelte_svelte_type_style_lang = '',
@@ -20696,13 +20696,13 @@ var index_svelte_svelte_type_style_lang$b = '',
   LegalLinks_svelte_svelte_type_style_lang = '',
   Link_svelte_svelte_type_style_lang = '',
   Referrals_svelte_svelte_type_style_lang = '',
+  index_svelte_svelte_type_style_lang$6 = '',
   index_svelte_svelte_type_style_lang$5 = '',
   index_svelte_svelte_type_style_lang$4 = '',
-  index_svelte_svelte_type_style_lang$3 = '',
   Controls_svelte_svelte_type_style_lang = '',
-  index_svelte_svelte_type_style_lang$2 = '',
-  index_svelte_svelte_type_style_lang$1 = '';
-function create_fragment$1(e) {
+  index_svelte_svelte_type_style_lang$3 = '',
+  index_svelte_svelte_type_style_lang$2 = '';
+function create_fragment$2(e) {
   let t, r, i, s, n, o, u, d;
   const y = e[1].default,
     w = create_slot(y, e, e[0], null);
@@ -20717,8 +20717,8 @@ function create_fragment$1(e) {
         w && w.c(),
         this.h();
     },
-    l(_) {
-      t = claim_element(_, 'NAV', { class: !0 });
+    l(b) {
+      t = claim_element(b, 'NAV', { class: !0 });
       var m = children(t);
       r = claim_element(m, 'DIV', { class: !0 });
       var g = children(r);
@@ -20748,8 +20748,8 @@ function create_fragment$1(e) {
         attr(r, 'class', 'logo-container'),
         attr(t, 'class', 'nav svelte-ca3v86');
     },
-    m(_, m) {
-      insert_hydration(_, t, m),
+    m(b, m) {
+      insert_hydration(b, t, m),
         append_hydration(t, r),
         append_hydration(r, i),
         append_hydration(i, s),
@@ -20758,29 +20758,29 @@ function create_fragment$1(e) {
         w && w.m(t, null),
         (d = !0);
     },
-    p(_, [m]) {
+    p(b, [m]) {
       w &&
         w.p &&
         (!d || m & 1) &&
         update_slot_base(
           w,
           y,
-          _,
-          _[0],
+          b,
+          b[0],
           d
-            ? get_slot_changes(y, _[0], m, null)
-            : get_all_dirty_from_scope(_[0]),
+            ? get_slot_changes(y, b[0], m, null)
+            : get_all_dirty_from_scope(b[0]),
           null
         );
     },
-    i(_) {
-      d || (transition_in(w, _), (d = !0));
+    i(b) {
+      d || (transition_in(w, b), (d = !0));
     },
-    o(_) {
-      transition_out(w, _), (d = !1);
+    o(b) {
+      transition_out(w, b), (d = !1);
     },
-    d(_) {
-      _ && detach(t), w && w.d(_);
+    d(b) {
+      b && detach(t), w && w.d(b);
     },
   };
 }
@@ -20795,7 +20795,7 @@ function instance$1(e, t, r) {
 }
 class Nav extends SvelteComponent {
   constructor(t) {
-    super(), init(this, t, instance$1, create_fragment$1, safe_not_equal, {});
+    super(), init(this, t, instance$1, create_fragment$2, safe_not_equal, {});
   }
 }
 var faCog = {};
@@ -20861,7 +20861,7 @@ var faGithubAlt = {};
     (e.unicode = o),
     (e.svgPathData = u);
 })(faGithubAlt);
-var index_svelte_svelte_type_style_lang = '';
+var index_svelte_svelte_type_style_lang$1 = '';
 function get_each_context(e, t, r) {
   const i = e.slice();
   return (i[4] = t[r]), i;
@@ -20951,7 +20951,7 @@ function create_each_block(e) {
     },
   };
 }
-function create_fragment(e) {
+function create_fragment$1(e) {
   let t,
     r,
     i,
@@ -20962,12 +20962,12 @@ function create_fragment(e) {
     d,
     y,
     w,
-    _,
+    b,
     m,
     g,
     p,
     c,
-    b,
+    _,
     l,
     a,
     h,
@@ -20995,12 +20995,12 @@ function create_fragment(e) {
         (d = element('li')),
         (y = element('a')),
         create_component(w.$$.fragment),
-        (_ = text(' Home')),
+        (b = text(' Home')),
         (m = space()),
         (g = element('li')),
         (p = element('a')),
         create_component(c.$$.fragment),
-        (b = text(' Repo')),
+        (_ = text(' Repo')),
         (l = space()),
         (a = element('hr')),
         (h = space());
@@ -21026,7 +21026,7 @@ function create_fragment(e) {
       y = claim_element(F, 'A', { href: !0, rel: !0, class: !0 });
       var P = children(y);
       claim_component(w.$$.fragment, P),
-        (_ = claim_text(P, ' Home')),
+        (b = claim_text(P, ' Home')),
         P.forEach(detach),
         F.forEach(detach),
         (m = claim_space(D)),
@@ -21035,7 +21035,7 @@ function create_fragment(e) {
       p = claim_element(S, 'A', { href: !0, rel: !0, class: !0 });
       var E = children(p);
       claim_component(c.$$.fragment, E),
-        (b = claim_text(E, ' Repo')),
+        (_ = claim_text(E, ' Repo')),
         E.forEach(detach),
         S.forEach(detach),
         (l = claim_space(D)),
@@ -21076,12 +21076,12 @@ function create_fragment(e) {
         append_hydration(u, d),
         append_hydration(d, y),
         mount_component(w, y, null),
-        append_hydration(y, _),
+        append_hydration(y, b),
         append_hydration(u, m),
         append_hydration(u, g),
         append_hydration(g, p),
         mount_component(c, p, null),
-        append_hydration(p, b),
+        append_hydration(p, _),
         append_hydration(u, l),
         append_hydration(u, a),
         append_hydration(u, h);
@@ -21155,13 +21155,77 @@ function instance(e, t, r) {
 class Menu extends SvelteComponent {
   constructor(t) {
     super(),
-      init(this, t, instance, create_fragment, safe_not_equal, {
+      init(this, t, instance, create_fragment$1, safe_not_equal, {
         components: 0,
       });
   }
 }
+var index_svelte_svelte_type_style_lang = '';
+function create_fragment(e) {
+  let t, r, i, s, n, o, u;
+  return {
+    c() {
+      (t = element('div')),
+        (r = element('div')),
+        (i = element('p')),
+        (s = text('\u{1F6A8} Graphics components have ')),
+        (n = element('a')),
+        (o = text('a new home')),
+        (u = text(". Don't use these docs for new projects.")),
+        this.h();
+    },
+    l(d) {
+      t = claim_element(d, 'DIV', { class: !0 });
+      var y = children(t);
+      r = claim_element(y, 'DIV', {});
+      var w = children(r);
+      i = claim_element(w, 'P', { class: !0 });
+      var b = children(i);
+      (s = claim_text(b, '\u{1F6A8} Graphics components have ')),
+        (n = claim_element(b, 'A', { href: !0 }));
+      var m = children(n);
+      (o = claim_text(m, 'a new home')),
+        m.forEach(detach),
+        (u = claim_text(b, ". Don't use these docs for new projects.")),
+        b.forEach(detach),
+        w.forEach(detach),
+        y.forEach(detach),
+        this.h();
+    },
+    h() {
+      attr(
+        n,
+        'href',
+        'https://reuters-graphics.github.io/graphics-components/'
+      ),
+        attr(i, 'class', 'svelte-kwzezr'),
+        attr(t, 'class', 'announcement svelte-kwzezr');
+    },
+    m(d, y) {
+      insert_hydration(d, t, y),
+        append_hydration(t, r),
+        append_hydration(r, i),
+        append_hydration(i, s),
+        append_hydration(i, n),
+        append_hydration(n, o),
+        append_hydration(i, u);
+    },
+    p: noop,
+    i: noop,
+    o: noop,
+    d(d) {
+      d && detach(t);
+    },
+  };
+}
+class Announcement extends SvelteComponent {
+  constructor(t) {
+    super(), init(this, t, null, create_fragment, safe_not_equal, {});
+  }
+}
 var main = '';
 export {
+  Announcement as A,
   Fa$1 as F,
   Menu as M,
   Nav as N,
