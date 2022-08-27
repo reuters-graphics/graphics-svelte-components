@@ -4,7 +4,7 @@
       🚨 Graphics components have <a
         href="https://reuters-graphics.github.io/graphics-components/"
         >a new home</a
-      >. Don't use these docs for new projects.
+      >. These docs are likely outdated if you're starting a new project.
     </p>
   </div>
 </div>
@@ -15,6 +15,7 @@
     margin: 0 auto 1rem;
     background-color: #ccc;
     padding: 15px 25px;
+    text-align: center;
 
     p {
       margin-bottom: 0;
